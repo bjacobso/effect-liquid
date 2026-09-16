@@ -35,6 +35,8 @@ Parsing, local analysis, and local checking need no services. Rendering requires
 
 Implemented tags: `assign`, `capture`, `if`/`elsif`/`else`, `unless`, `case`/`when`, `for`, `break`, `continue`, `raw`, `comment`, `echo`, and basic `render`/`include`. Filters cover the initial numeric and string operations plus `split`, `join`, `map`, `first`, `last`, and `reverse`. See the inventory for exact coverage.
 
+Pass `{ groupedExpressions: true }` to `Liquid.parse` to enable parenthesized conditions and filter pipelines, such as `{% if (name | upcase) == "BAR" %}` and `{% for i in (1..(items | size)) %}`. Grouping is disabled by default; ordinary ranges remain supported. The document records the enabled syntax so rendering, loaded partials, embedded filter predicates, project analysis, and typechecking use the same rules. Ungrouped `and`/`or` conditions retain Liquid's right-associative evaluation.
+
 Defaults use Liquid truthiness, permissive missing variables, strict unknown filters, and unescaped output. Use `escape` when HTML escaping is appropriate. Plain records and arrays are accepted; accessors, class instances, cyclic data, and non-finite numbers are rejected. Context data is copied into request-local state.
 
 The preview supports `increment`, `decrement`, and `cycle`. Counters use request-local input state independently of `assign` and `capture`; numeric input values seed counters. `include` shares counter/cycle state, while `render` gets isolated state. Rendering never mutates the caller's context.

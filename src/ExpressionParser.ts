@@ -16,6 +16,7 @@ export class Expressions {
   constructor(
     readonly token: Token,
     readonly maxDepth: number,
+    readonly groupedExpressions = false,
   ) {
     const s = token.text;
     let i = 0;
@@ -114,11 +115,16 @@ export class Expressions {
     else if (w.text === "empty" || w.text === "blank")
       result = { _tag: "Special", value: w.text, span: this.position(w.start) };
     else if (w.text === "(") {
-      const from = this.atom();
-      this.need("..");
-      const to = this.atom();
-      this.need(")");
-      result = { _tag: "Range", from, to, span: this.position(w.start) };
+      const from = this.groupedExpressions ? this.pipeline(true) : this.atom();
+      if (this.take("..")) {
+        const to = this.atom();
+        this.need(")");
+        result = { _tag: "Range", from, to, span: this.position(w.start) };
+      } else {
+        if (!this.groupedExpressions) this.fail("Expected '..'");
+        this.need(")");
+        result = from;
+      }
     } else {
       if (!/^[a-zA-Z_][\w-]*$/.test(w.text)) this.fail("Expected variable or literal", w.start);
       const segments: Expression[] = [];
@@ -192,7 +198,7 @@ export class Expressions {
   }
 }
 /** Parse an expression string without executing it or rewriting it as a template. */
-export function readExpression(source: Source): Expression {
+export function readExpression(source: Source, groupedExpressions = false): Expression {
   if (source.text.length > 1_000_000)
     throw new ParseError({
       message: "Expression source limit exceeded",
@@ -201,6 +207,7 @@ export function readExpression(source: Source): Expression {
   const parser = new Expressions(
     { kind: "output", text: source.text, offset: 0, span: span(source.id, 0, source.text.length) },
     128,
+    groupedExpressions,
   );
   const expression = parser.pipeline(true);
   parser.done();

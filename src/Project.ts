@@ -63,7 +63,9 @@ export const analyzeProject = <E = never, R = never>(
             reasons.add(`Cyclic dependency: ${source.id}`);
             continue;
           }
-          const child = yield* parse(source);
+          const child = yield* parse(source, {
+            groupedExpressions: doc.groupedExpressions ?? false,
+          });
           const childAnalysis = yield* analyze(child, registry);
           const childResolve = (p: string): readonly string[] => {
             const root = /^[^.[]+/.exec(p)?.[0] ?? p;

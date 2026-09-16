@@ -48,6 +48,7 @@ export class RenderConfig extends Context.Tag("effect-liquid/RenderConfig")<
 export const layer = (config: Partial<Config> = {}) =>
   Layer.succeed(RenderConfig, { ...defaults, ...config });
 interface State {
+  groupedExpressions: boolean;
   scopes: Record<string, Value>[];
   cycles: Map<string, number>;
   continuations: Map<string, number>;
@@ -212,7 +213,11 @@ function evaluate<E, R>(
           yield* tick(state, expression.span);
           const predicate = yield* Effect.try({
             try: () =>
-              embeddedExpression(predicateText, expression.args[1]?.span ?? expression.span),
+              embeddedExpression(
+                predicateText,
+                expression.args[1]?.span ?? expression.span,
+                state.groupedExpressions,
+              ),
             catch: (cause) => {
               if (cause instanceof ParseError)
                 return new FilterFailure({
@@ -477,7 +482,9 @@ function nodes<E, R>(
                     if (!items.length) return Stream.empty;
                     const loader = yield* TemplateLoader;
                     const source = yield* loader.load(name, node.span.sourceId, node.mode);
-                    const document = yield* parse(source);
+                    const document = yield* parse(source, {
+                      groupedExpressions: state.groupedExpressions,
+                    });
                     const old = state.scopes;
                     const oldCycles = state.cycles;
                     const oldContinuations = state.continuations;
@@ -597,6 +604,7 @@ export function renderStream<E = never, R = never>(
         control: undefined,
         depth: 0,
         filterDepth: 0,
+        groupedExpressions: document.groupedExpressions ?? false,
         config,
       };
       return nodes(document.body, state, registry);

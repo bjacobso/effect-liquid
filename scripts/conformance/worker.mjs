@@ -58,7 +58,14 @@ if (engineName === "liquidjs") {
   const Liquid = await import("../../dist/Liquid.js");
   const Render = await import("../../dist/Render.js");
   const Loader = await import("../../dist/TemplateLoader.js");
-  const allowed = new Set(["strictFilters", "strictVariables", "globals", "templates", "cache"]);
+  const allowed = new Set([
+    "strictFilters",
+    "strictVariables",
+    "globals",
+    "templates",
+    "cache",
+    "groupedExpressions",
+  ]);
   const equivalentDefaults = {
     jsTruthy: false,
     ownPropertyOnly: true,
@@ -75,7 +82,11 @@ if (engineName === "liquidjs") {
         !(Object.hasOwn(equivalentDefaults, k) && options[k] === equivalentDefaults[k]),
     );
     if (unsupported.length) return { kind: "unsupported-configuration", options: unsupported };
-    const parsed = await Effect.runPromise(Effect.either(Liquid.parse(fixture.source)));
+    const parsed = await Effect.runPromise(
+      Effect.either(
+        Liquid.parse(fixture.source, { groupedExpressions: options.groupedExpressions ?? false }),
+      ),
+    );
     if (parsed._tag === "Left") return failure(parsed.left, "parse");
     if (fixture.operation === "parse") return { kind: "parsed" };
     const services = Layer.merge(

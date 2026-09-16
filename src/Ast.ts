@@ -117,6 +117,7 @@ export type Node =
       readonly span: Span;
     };
 export interface Document {
+  readonly groupedExpressions?: boolean;
   readonly _tag: "Document";
   readonly source: Source;
   readonly body: readonly Node[];

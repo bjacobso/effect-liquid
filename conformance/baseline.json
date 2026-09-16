@@ -22836,34 +22836,6 @@
       },
       "reason": "Tag not implemented"
     },
-    "liquidjs:test/integration/tags/assign.spec.ts:105:19": {
-      "fixtureHash": "ed55ab54b1d71a8ae2807a74cf302a5fe422ec1f5a46f00d8fd3656895096cab",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "a96bc1a1c6493a5758bdb4a44587f480ee81b48b1d78a732ebe691e7a6c1c60c"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/tags/assign.spec.ts:108:19": {
-      "fixtureHash": "27045d38bbbc98ae8f181861d14915ca3a4a29d1df584229180358a8630ebc62",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "26d6a8ad97c75ffc548f6873e5e93ce475479e3e1a1097381e54221fb53ec1d2"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
     "liquidjs:test/integration/tags/assign.spec.ts:56:23": {
       "fixtureHash": "34b2a47f782f521a6d50cfb28cad2cac19911ce450a43226e4bfae65f51d0c9f",
       "liquidjs": {
@@ -22962,66 +22934,6 @@
       },
       "reason": "Tag not implemented"
     },
-    "liquidjs:test/integration/tags/case.spec.ts:140:21": {
-      "fixtureHash": "0adf58e4c8704ae97f1d4de517adc0e253d65e802e79d241eff3e00a0f1c0bba",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "d3c185069b7a752a4b994d721ae98942034622d4adac2fddb19e5586f3151f3e"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/tags/case.spec.ts:145:21": {
-      "fixtureHash": "9b66093421f51c572b0e2ca66d0f527c2ee0e9fd520e785352d23b6932d22ad9",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "7cfd6a81e633804e39944f6cb0aba145bda588c3b22b22dd5102d9a7c38996d1"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/tags/case.spec.ts:153:21": {
-      "fixtureHash": "c6628b8b654fb95d71d447c5812dd599aa1ffe8fdaf62afcff08a4f1bb0b9639",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "invalid range syntax, line:1, col:17"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/tags/case.spec.ts:157:21": {
-      "fixtureHash": "15afcdca5c3b4a4697a73ed5eba5e3556ef5e0351478b2e7e831f626acadb7f8",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "invalid range syntax, line:1, col:36"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
     "liquidjs:test/integration/tags/case.spec.ts:20:23": {
       "fixtureHash": "3627171cb724047360c0d52332a4b3e86c13de0f710bbcb8787aafe73eef0ba8",
       "liquidjs": {
@@ -23086,34 +22998,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquidjs:test/integration/tags/echo.spec.ts:43:19": {
-      "fixtureHash": "bc9c604fb1d8230eae4b0c500ba76ff30f1f93b62fb2eb2ce60afaf1f9a1f1d7",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "a96bc1a1c6493a5758bdb4a44587f480ee81b48b1d78a732ebe691e7a6c1c60c"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/tags/echo.spec.ts:46:19": {
-      "fixtureHash": "28812f4ed128c0e305b749713e3f2494a24c11745151d537f0a3a0b83fc93ce0",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "2b696772d9b34c0c8871e04fcdddc84a6cdcb831f7b20fd94fe8d34bf38a5ed6"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
     "liquidjs:test/integration/tags/for.spec.ts:336:25": {
       "fixtureHash": "5a80122d9f7eaba5132f0b5ddcbdd30d534d3839954cf88aad605757a83c16d4",
       "liquidjs": {
@@ -23124,36 +23008,6 @@
         "kind": "unsupported-configuration",
         "options": [
           "orderedFilterParameters"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/tags/for.spec.ts:434:21": {
-      "fixtureHash": "7cac7ba6b89b7b9884c973ec96738ad12bf082d4a0d9d66d76697cbd4e307257",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "0e2f28a29d88ad1d9b62300412fe87c73e59fc2074c99e34246e801dd19ef47f"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/tags/for.spec.ts:442:21": {
-      "fixtureHash": "a9a24956e6422684743420a7b361ad19fb9c3c8030ce0c3a2c3727d35f98abd2",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "invalid range syntax, line:1, col:24"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
         ]
       },
       "reason": "Unsupported engine option"
@@ -23189,148 +23043,6 @@
         "message": "Unsupported tag 'elsif'"
       },
       "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/if.spec.ts:177:27": {
-      "fixtureHash": "47bc25aec5c8e5cf1daa7355ca1f76b7d9e6e64f5fc66320cc7cb97662841a72",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "8c9bb43a3ce54410f825d73d8492c48341dd699fd57f202665869ca5ec2bed41"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/tags/if.spec.ts:182:27": {
-      "fixtureHash": "d7b6969256397e2dea022b816e9a420917a0785bb78e1890d4481116b3c4b6f2",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "8c9bb43a3ce54410f825d73d8492c48341dd699fd57f202665869ca5ec2bed41"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/tags/if.spec.ts:187:27": {
-      "fixtureHash": "ab2be577259347cd756676954f1e5c55792366d20baab3ee60a316ba7960bed2",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "8c9bb43a3ce54410f825d73d8492c48341dd699fd57f202665869ca5ec2bed41"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/tags/if.spec.ts:204:27": {
-      "fixtureHash": "82a17cb819f3c9df90c33e5f8e2ba082f322518b3c925e36257fe9a261364225",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "a55621164f0da8a5bc03adb7c48bba6c45d4368af9f147fb30cb03657c457da9"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/tags/if.spec.ts:209:27": {
-      "fixtureHash": "d2778388e29fbd255fd191fcce464b1ec9524fa6566df030da99b60e2c217ddc",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "a55621164f0da8a5bc03adb7c48bba6c45d4368af9f147fb30cb03657c457da9"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/tags/if.spec.ts:214:27": {
-      "fixtureHash": "319b241cbca0acecbcd8b42b3cbfc2b4624579dc1608d66d91b1b98ea586b7ab",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "7cfd6a81e633804e39944f6cb0aba145bda588c3b22b22dd5102d9a7c38996d1"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/tags/if.spec.ts:219:21": {
-      "fixtureHash": "291ac864383fa7456ffbd19748ef049c8f41979bc9036f04997e6c3495923682",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "8c9bb43a3ce54410f825d73d8492c48341dd699fd57f202665869ca5ec2bed41"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/tags/if.spec.ts:223:21": {
-      "fixtureHash": "e8ce84df46bfc85db5f8ce35e469219717cc20497cabcbe82b652c92d73d53d9",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "8c9bb43a3ce54410f825d73d8492c48341dd699fd57f202665869ca5ec2bed41"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/tags/if.spec.ts:227:21": {
-      "fixtureHash": "4701a55c9ce835f6a4c4fd08697a56213402455a080c056c35ee780ca04fb2f4",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "8c9bb43a3ce54410f825d73d8492c48341dd699fd57f202665869ca5ec2bed41"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/tags/if.spec.ts:245:21": {
-      "fixtureHash": "0a0f9c6a40d7a4d7ea431decc7b7033d35e96903faa65737d4d054bd008cb83f",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "invalid range syntax, line:1, col:12"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
     },
     "liquidjs:test/integration/tags/inline-comment.spec.ts:12:23": {
       "fixtureHash": "b411308b62c380e8793c49017c763c5f7ca2d3ad672f6e9c7fa9fcb83fc7dc04",
@@ -23402,36 +23114,6 @@
         "message": "Unsupported tag 'elsif'"
       },
       "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/unless.spec.ts:91:21": {
-      "fixtureHash": "cb259333b565fa08b70d0831c81acc1195ed8b621a55a85223940df6e07ac655",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e54d0461a827a64e6d96e7558ba92f62f4cf3751660473e5927cc9ce374ecaff"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/tags/unless.spec.ts:99:21": {
-      "fixtureHash": "af3812b4c50a7233d95c1baa1022f2d14e512a6e1b9af14e92f4a57ad1ee7846",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "invalid range syntax, line:1, col:20"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "groupedExpressions"
-        ]
-      },
-      "reason": "Unsupported engine option"
     },
     "local:raw-trim": {
       "fixtureHash": "a9269f6a27c3005b7307db2509dea8934eccf47ca43f8d8b777eacd4802439aa",

@@ -8,6 +8,7 @@ export interface Token {
   readonly span: Span;
 }
 export interface ParseOptions {
+  readonly groupedExpressions?: boolean;
   readonly maxSourceLength?: number;
   readonly maxTokens?: number;
   readonly maxDepth?: number;
@@ -19,6 +20,7 @@ export const lex = (
   Effect.gen(function* () {
     const text = source.text;
     for (const [key, value] of Object.entries(options)) {
+      if (key === "groupedExpressions" && typeof value === "boolean") continue;
       if (
         !["maxSourceLength", "maxTokens", "maxDepth"].includes(key) ||
         !Number.isSafeInteger(value) ||

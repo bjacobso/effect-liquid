@@ -160,10 +160,11 @@ export const analyze = <E, R>(
               );
               embeddedDepth++;
               try {
-                expression(embeddedExpression(predicate.value, predicate.span), next, [
-                  ...control,
-                  `filter:${e.span.start}`,
-                ]);
+                expression(
+                  embeddedExpression(predicate.value, predicate.span, document.groupedExpressions),
+                  next,
+                  [...control, `filter:${e.span.start}`],
+                );
               } catch (error) {
                 if (!(error instanceof ParseError)) throw error;
                 reasons.push(`Invalid expression filter at ${e.span.start}: ${error.message}`);

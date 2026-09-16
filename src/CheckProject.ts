@@ -73,7 +73,9 @@ export const checkProject = <E = never, R = never>(
             incomplete(`Cyclic partial contract: ${source.id}`, doc);
             continue;
           }
-          const child = yield* parse(source);
+          const child = yield* parse(source, {
+            groupedExpressions: doc.groupedExpressions ?? false,
+          });
           if (dep.mode === "include") {
             incomplete("Shared include contract requires a flow summary", doc);
             continue;

@@ -31,7 +31,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "for": {
@@ -46,7 +47,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "capture": {
@@ -61,7 +63,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "case": {
@@ -76,7 +79,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "comment": {
@@ -91,7 +95,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "include": {
@@ -106,7 +111,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "render": {
@@ -121,7 +127,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "decrement": {
@@ -136,7 +143,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "increment": {
@@ -151,7 +159,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "cycle": {
@@ -166,7 +175,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "if": {
@@ -181,7 +191,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "layout": {
@@ -202,7 +213,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "tablerow": {
@@ -217,7 +229,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "unless": {
@@ -232,7 +245,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "break": {
@@ -247,7 +261,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "continue": {
@@ -262,7 +277,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "echo": {
@@ -277,7 +293,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "liquid": {
@@ -292,7 +309,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "#": {
@@ -307,7 +325,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     }
   },
@@ -324,7 +343,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "xml_escape": {
@@ -339,7 +359,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "escape_once": {
@@ -354,7 +375,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "newline_to_br": {
@@ -369,7 +391,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "strip_html": {
@@ -384,7 +407,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "abs": {
@@ -399,7 +423,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "at_least": {
@@ -414,7 +439,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "at_most": {
@@ -429,7 +455,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "ceil": {
@@ -444,7 +471,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "divided_by": {
@@ -459,7 +487,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "floor": {
@@ -474,7 +503,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "minus": {
@@ -489,7 +519,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "plus": {
@@ -504,7 +535,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "modulo": {
@@ -519,7 +551,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "times": {
@@ -534,7 +567,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "round": {
@@ -549,7 +583,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "url_decode": {
@@ -564,7 +599,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "url_encode": {
@@ -579,7 +615,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "cgi_escape": {
@@ -594,7 +631,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "uri_escape": {
@@ -609,7 +647,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "slugify": {
@@ -624,7 +663,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "join": {
@@ -639,7 +679,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "last": {
@@ -654,7 +695,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "first": {
@@ -669,7 +711,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "reverse": {
@@ -684,7 +727,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "sort": {
@@ -699,7 +743,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "sort_natural": {
@@ -714,7 +759,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "size": {
@@ -729,7 +775,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "map": {
@@ -744,7 +791,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "sum": {
@@ -759,7 +807,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "compact": {
@@ -774,7 +823,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "concat": {
@@ -789,7 +839,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "push": {
@@ -804,7 +855,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "unshift": {
@@ -819,7 +871,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "pop": {
@@ -834,7 +887,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "shift": {
@@ -849,7 +903,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "slice": {
@@ -864,7 +919,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "where": {
@@ -879,7 +935,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "reject": {
@@ -894,7 +951,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "where_exp": {
@@ -909,7 +967,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "reject_exp": {
@@ -924,7 +983,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "group_by": {
@@ -942,7 +1002,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "has": {
@@ -957,7 +1018,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "has_exp": {
@@ -972,7 +1034,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "find_index": {
@@ -987,7 +1050,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "find_index_exp": {
@@ -1002,7 +1066,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "find": {
@@ -1017,7 +1082,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "find_exp": {
@@ -1032,7 +1098,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "uniq": {
@@ -1047,7 +1114,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "sample": {
@@ -1080,7 +1148,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "prepend": {
@@ -1095,7 +1164,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "lstrip": {
@@ -1110,7 +1180,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "downcase": {
@@ -1125,7 +1196,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "upcase": {
@@ -1140,7 +1212,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "remove": {
@@ -1155,7 +1228,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "remove_first": {
@@ -1170,7 +1244,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "remove_last": {
@@ -1185,7 +1260,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "rstrip": {
@@ -1200,7 +1276,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "split": {
@@ -1215,7 +1292,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "strip": {
@@ -1230,7 +1308,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "strip_newlines": {
@@ -1245,7 +1324,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "squish": {
@@ -1260,7 +1340,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "capitalize": {
@@ -1275,7 +1356,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "replace": {
@@ -1290,7 +1372,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "replace_first": {
@@ -1305,7 +1388,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "replace_last": {
@@ -1320,7 +1404,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "truncate": {
@@ -1335,7 +1420,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "truncatewords": {
@@ -1350,7 +1436,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "normalize_whitespace": {
@@ -1365,7 +1452,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "number_of_words": {
@@ -1380,7 +1468,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "array_to_sentence_string": {
@@ -1398,7 +1487,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "base64_decode": {
@@ -1413,7 +1503,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "sha256": {
@@ -1434,7 +1525,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "raw": {
@@ -1455,7 +1547,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "json": {
@@ -1470,7 +1563,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "inspect": {
@@ -1559,7 +1653,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "strictVariables": {
@@ -1574,7 +1669,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "ownPropertyOnly": {
@@ -1589,7 +1685,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "lenientIf": {
@@ -1607,7 +1704,8 @@
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
-        "test/base64-filters.test.ts"
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
       ]
     },
     "keepOutputType": {
@@ -1617,7 +1715,20 @@
       "status": "deferred"
     },
     "groupedExpressions": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts"
+      ]
     },
     "memoryLimit": {
       "status": "deferred"
@@ -1635,7 +1746,7 @@
   "syntax": {
     "identifiers": "ASCII letter/underscore followed by word characters or hyphens",
     "lookups": "Variable-rooted dot and bracket access; computed lookup indices; literal receiver indexing deferred",
-    "expressions": "Literals, ranges, comparisons, contains, not, right-associated and/or, filter pipelines",
+    "expressions": "Literals, ranges, comparisons, contains, not, right-associated and/or, filter pipelines; opt-in parenthesized conditions and pipelines",
     "partials": "Literal or variable template names and comma-separated named arguments. with/for/as and interpolated filenames deferred.",
     "loops": "limit, numeric offset, reversed, else; offset:continue deferred"
   },

@@ -217,3 +217,9 @@ Filter signatures now optionally declare positional argument kinds, falling back
 ### Base64 text filters
 
 `base64_encode` and `base64_decode` are Effect-native filters with string output metadata. An independent byte codec uses `TextEncoder`/`TextDecoder` so browser bundles need no Node globals. Encoding emits standard padded Base64. Decoding follows the pinned Node oracle, including its low-byte interpretation of UTF-16 code units, acceptance of the URL-safe alphabet, skipped invalid characters, termination at the first padding character, and discarded incomplete trailing bits. UTF-8 decoding replaces malformed sequences and preserves BOM characters. This intentionally provides the same behavior in both environments; it does not claim parity with every upstream browser-specific implementation. Existing input normalization and output limits remain in force, and streaming emits the same text as buffered rendering.
+
+### Opt-in grouped expressions
+
+`ParseOptions.groupedExpressions` enables parentheses around conditions and filter pipelines. Ranges retain their existing syntax, and grouped pipelines can supply their endpoints. Without the option, parentheses are reserved for ranges. Grouping preserves the existing expression node types and original inner spans, so variable extraction and checking traverse the same AST without reparsing template text. Nested groups count toward the existing expression-depth limit. Ungrouped logical operators remain right-associative.
+
+A parsed document records `groupedExpressions: true` when enabled; absence means false, preserving compatibility with existing document values. Rendering and project traversal pass this syntax setting to loaded partials. Embedded predicate compilation, static extraction, and typechecking also read it from the containing document. The conformance adapter now exercises both enabled and explicitly disabled fixtures instead of treating the option as unsupported configuration.

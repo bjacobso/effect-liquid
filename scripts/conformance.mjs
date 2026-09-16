@@ -29,6 +29,7 @@ const implementedOptions = new Set([
   "strictFilters",
   "globals",
   "ownPropertyOnly",
+  "groupedExpressions",
 ]);
 const inventory = (names, implemented) =>
   Object.fromEntries(
@@ -49,6 +50,7 @@ const inventory = (names, implemented) =>
                 "test/expression-filters.test.ts",
                 "test/numeric-filters.test.ts",
                 "test/base64-filters.test.ts",
+                "test/grouped-expressions.test.ts",
               ],
             }
           : {}),
@@ -85,7 +87,7 @@ const manifest = {
     lookups:
       "Variable-rooted dot and bracket access; computed lookup indices; literal receiver indexing deferred",
     expressions:
-      "Literals, ranges, comparisons, contains, not, right-associated and/or, filter pipelines",
+      "Literals, ranges, comparisons, contains, not, right-associated and/or, filter pipelines; opt-in parenthesized conditions and pipelines",
     partials:
       "Literal or variable template names and comma-separated named arguments. with/for/as and interpolated filenames deferred.",
     loops: "limit, numeric offset, reversed, else; offset:continue deferred",

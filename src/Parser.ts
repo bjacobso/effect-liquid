@@ -11,6 +11,7 @@ class Templates {
     readonly tokens: readonly Token[],
     readonly maxDepth: number,
     readonly budget: { remaining: number },
+    readonly groupedExpressions = false,
   ) {}
   tag() {
     const t = this.tokens[this.pos];
@@ -44,11 +45,12 @@ class Templates {
           }
           start = end + 1;
         }
-        const nested = yield* new Templates(lines, this.maxDepth, this.budget).body(
-          [],
-          depth + 1,
-          loop,
-        );
+        const nested = yield* new Templates(
+          lines,
+          this.maxDepth,
+          this.budget,
+          this.groupedExpressions,
+        ).body([], depth + 1, loop);
         for (const node of nested) nodes.push(node);
         continue;
       }
@@ -70,7 +72,7 @@ class Templates {
         this.pos++;
         continue;
       }
-      const e = new Expressions(t, this.maxDepth);
+      const e = new Expressions(t, this.maxDepth, this.groupedExpressions);
       if (depth > this.maxDepth) e.fail("Template nesting limit exceeded");
       if (t.kind === "output") {
         const expression = e.pipeline();
@@ -128,7 +130,11 @@ class Templates {
           { condition, body: yield* this.body(["elsif", "else", `end${tag}`], depth + 1, loop) },
         ];
         while (this.tag() === "elsif") {
-          const b = new Expressions(this.tokens[this.pos++]!, this.maxDepth);
+          const b = new Expressions(
+            this.tokens[this.pos++]!,
+            this.maxDepth,
+            this.groupedExpressions,
+          );
           b.need("elsif");
           const condition = b.condition();
           b.done();
@@ -139,7 +145,11 @@ class Templates {
         }
         let otherwise: Node[] = [];
         if (this.tag() === "else") {
-          const b = new Expressions(this.tokens[this.pos++]!, this.maxDepth);
+          const b = new Expressions(
+            this.tokens[this.pos++]!,
+            this.maxDepth,
+            this.groupedExpressions,
+          );
           b.need("else");
           b.done();
           otherwise = yield* this.body([`end${tag}`], depth + 1, loop);
@@ -198,7 +208,11 @@ class Templates {
         const body = yield* this.body(["else", "endfor"], depth + 1, true);
         let otherwise: Node[] = [];
         if (this.tag() === "else") {
-          const b = new Expressions(this.tokens[this.pos++]!, this.maxDepth);
+          const b = new Expressions(
+            this.tokens[this.pos++]!,
+            this.maxDepth,
+            this.groupedExpressions,
+          );
           b.need("else");
           b.done();
           otherwise = yield* this.body(["endfor"], depth + 1, loop);
@@ -227,7 +241,11 @@ class Templates {
           e.fail("Only whitespace is allowed before when");
         const branches: { values: Expression[]; body: Node[] }[] = [];
         while (this.tag() === "when") {
-          const b = new Expressions(this.tokens[this.pos++]!, this.maxDepth);
+          const b = new Expressions(
+            this.tokens[this.pos++]!,
+            this.maxDepth,
+            this.groupedExpressions,
+          );
           b.need("when");
           const values = [b.atom()];
           while (b.take(",") || b.take("or")) values.push(b.atom());
@@ -239,7 +257,11 @@ class Templates {
         }
         let otherwise: Node[] = [];
         if (this.tag() === "else") {
-          const b = new Expressions(this.tokens[this.pos++]!, this.maxDepth);
+          const b = new Expressions(
+            this.tokens[this.pos++]!,
+            this.maxDepth,
+            this.groupedExpressions,
+          );
           b.need("else");
           b.done();
           otherwise = yield* this.body(["endcase"], depth + 1, loop);
@@ -302,9 +324,14 @@ export const parse = (
   Effect.gen(function* () {
     const source = typeof input === "string" ? make(input) : input;
     const tokens = yield* lex(source, options);
-    const iterator = new Templates(tokens, Math.min(options.maxDepth ?? 128, 256), {
-      remaining: (options.maxTokens ?? 100_000) - tokens.length,
-    }).body();
+    const iterator = new Templates(
+      tokens,
+      Math.min(options.maxDepth ?? 128, 256),
+      {
+        remaining: (options.maxTokens ?? 100_000) - tokens.length,
+      },
+      options.groupedExpressions,
+    ).body();
     let result: IteratorResult<void, Node[]>;
     do {
       result = yield* Effect.try({
@@ -321,6 +348,11 @@ export const parse = (
       if (!result.done) yield* Effect.yieldNow();
     } while (!result.done);
     const body = result.value;
-    return { _tag: "Document" as const, source, body };
+    return {
+      _tag: "Document" as const,
+      source,
+      body,
+      ...(options.groupedExpressions ? { groupedExpressions: true } : {}),
+    };
   }).pipe(Effect.withSpan("liquid.parse"));
 export type { ParseOptions } from "./Lexer.js";

@@ -4,7 +4,7 @@ import { make, type Span } from "./Source.js";
 
 // Decoded expression strings can have escaped characters. Locate their diagnostics at the
 // containing argument instead of inventing precise offsets into the original literal.
-export function embeddedExpression(text: string, at: Span): Expression {
+export function embeddedExpression(text: string, at: Span, groupedExpressions = false): Expression {
   const visit = (expression: Expression): Expression => {
     const base = { ...expression, span: at };
     switch (expression._tag) {
@@ -42,5 +42,5 @@ export function embeddedExpression(text: string, at: Span): Expression {
         return base;
     }
   };
-  return visit(readExpression(make(text, at.sourceId)));
+  return visit(readExpression(make(text, at.sourceId), groupedExpressions));
 }

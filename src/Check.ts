@@ -220,7 +220,10 @@ export const check = <E = never, R = never>(
             let key: T.Type;
             embeddedDepth++;
             try {
-              key = infer(embeddedExpression(predicate.value, predicate.span), next);
+              key = infer(
+                embeddedExpression(predicate.value, predicate.span, document.groupedExpressions),
+                next,
+              );
             } catch (error) {
               if (!(error instanceof ParseError)) throw error;
               return unknown(`Invalid filter predicate: ${error.message}`, predicate.span);
