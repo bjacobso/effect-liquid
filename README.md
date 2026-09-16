@@ -54,6 +54,8 @@ Collection filters include `sort`, `sort_natural`, `map`, `sum`, `compact`, `con
 
 Raw blocks inside `liquid`, table-row control-flow quirks, and permissive malformed-syntax compatibility remain gaps.
 
+String filters include first/last replacement and removal, custom strip character sets, `truncate`, `truncatewords`, `strip_newlines`, `newline_to_br`, `squish`, `normalize_whitespace`, `number_of_words`, `strip_html`, `escape_once`, and `xml_escape`. Replacement strings are literal; CJK word counting is supported. Truncation and entity handling follow the pinned LiquidJS behavior, including documented conformance differences from Ruby expectations.
+
 ## Extract variables
 
 ```liquid

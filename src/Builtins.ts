@@ -1,34 +1,15 @@
 import { Effect } from "effect";
 import type { Filter, Registry, Signature } from "./Filter.js";
+import { filters as stringFilters } from "./StringFilters.js";
 import { empty, isArray, lookup, stringify, truthy, type Value } from "./Value.js";
 
 const number = (v: Value | undefined) => Number.parseFloat(stringify(v)) || 0;
-const entries: [string, Filter][] = [];
+const entries: [string, Filter][] = stringFilters.map(([name, filter]) => [name, filter]);
 const define = (
   name: string,
   signature: Signature,
   run: (v: Value, a: readonly Value[], n: Readonly<Record<string, Value>>) => Value,
 ) => entries.push([name, { signature, run: (v, a, n) => Effect.sync(() => run(v, a, n)) }]);
-const string = (name: string, fn: (s: string, a: readonly Value[]) => string, min = 0, max = min) =>
-  define(name, { input: "any", output: "string", minArgs: min, maxArgs: max }, (v, a) =>
-    fn(stringify(v), a),
-  );
-string("upcase", (s) => s.toUpperCase());
-string("downcase", (s) => s.toLowerCase());
-string("capitalize", (s) => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase());
-string("append", (s, a) => s + stringify(a[0]), 1);
-string("prepend", (s, a) => stringify(a[0]) + s, 1);
-string("strip", (s) => s.trim());
-string("lstrip", (s) => s.trimStart());
-string("rstrip", (s) => s.trimEnd());
-string("escape", (s) =>
-  s.replace(
-    /[&<>"']/g,
-    (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&#34;", "'": "&#39;" })[c]!,
-  ),
-);
-string("replace", (s, a) => s.split(stringify(a[0])).join(stringify(a[1])), 2);
-string("remove", (s, a) => s.split(stringify(a[0])).join(""), 1);
 define("join", { input: "any", output: "string", minArgs: 0, maxArgs: 1 }, (v, a) =>
   array(v)
     .map(hostString)
