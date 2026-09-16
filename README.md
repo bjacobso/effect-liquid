@@ -56,6 +56,8 @@ Raw blocks inside `liquid`, table-row control-flow quirks, and permissive malfor
 
 String filters include first/last replacement and removal, custom strip character sets, `truncate`, `truncatewords`, `strip_newlines`, `newline_to_br`, `squish`, `normalize_whitespace`, `number_of_words`, `strip_html`, `escape_once`, and `xml_escape`. Replacement strings are literal; CJK word counting is supported. Truncation and entity handling follow the pinned LiquidJS behavior, including documented conformance differences from Ruby expectations.
 
+URL filters include `url_encode`, `url_decode`, `cgi_escape`, `uri_escape`, and `slugify` modes (`default`, `raw`, `pretty`, `ascii`, `latin`, `none`). They follow the pinned LiquidJS behavior: URL decoding replaces plus signs after percent-decoding, and Latin slugification uses its specific transliteration set. Malformed percent encodings and invalid UTF-16 become located `FilterFailure<BuiltinFilterError>` values in the Effect error channel, also during streaming.
+
 ## Extract variables
 
 ```liquid

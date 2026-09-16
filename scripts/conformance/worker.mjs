@@ -22,7 +22,7 @@ function failure(error, phase) {
     phase,
     category: category(error),
     name: error._tag ?? error.name ?? "Error",
-    message: String(error.message ?? error).slice(0, 2000),
+    message: String(error.message || error.cause?.message || error).slice(0, 2000),
   };
 }
 function output(value) {

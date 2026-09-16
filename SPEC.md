@@ -197,3 +197,7 @@ Partial AST nodes carry optional `with` and `for` bindings. Include supports `wi
 ### String filter expansion
 
 String built-ins now live in an internal `StringFilters` module composed into the default registry. The batch includes truncation, first/last replacement/removal, optional strip character sets, newline/whitespace transforms, CJK-aware word counts, and HTML/text escaping/stripping. Literal replacement text is never interpreted as JavaScript replacement syntax. Unshortened `truncate` results preserve the input value type, so its checker output remains conservatively unknown. `truncatewords` boundary behavior and `escape_once` entity recognition follow the pinned LiquidJS release. HTML stripping uses forward searches with precomputed final closer positions to avoid repeated scans on unmatched openers.
+
+### URL filters and typed built-in failures
+
+The internal `UrlFilters` module implements component/form/URI encodings and pinned slugification modes. Expected JavaScript `URIError` exceptions become `BuiltinFilterError` values, wrapped with the filter name and source span by rendering. The built-in registry now declares this error type; default buffered and streaming render signatures include it in `FilterFailure`. Custom registry error/service types remain preserved, and unexpected exceptions remain defects. Conformance reports include wrapped cause messages. The decoding order and Latin transliteration intentionally follow the pinned LiquidJS release rather than claiming universal URL or slugification semantics.

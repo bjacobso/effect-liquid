@@ -1,10 +1,14 @@
 import { Effect } from "effect";
+import type { BuiltinFilterError } from "./Diagnostic.js";
 import type { Filter, Registry, Signature } from "./Filter.js";
 import { filters as stringFilters } from "./StringFilters.js";
+import { filters as urlFilters } from "./UrlFilters.js";
 import { empty, isArray, lookup, stringify, truthy, type Value } from "./Value.js";
 
 const number = (v: Value | undefined) => Number.parseFloat(stringify(v)) || 0;
-const entries: [string, Filter][] = stringFilters.map(([name, filter]) => [name, filter]);
+const entries: [string, Filter<BuiltinFilterError>][] = [...stringFilters, ...urlFilters].map(
+  ([name, filter]) => [name, filter],
+);
 const define = (
   name: string,
   signature: Signature,
@@ -189,4 +193,4 @@ define("json", { input: "any", output: "string", minArgs: 0, maxArgs: 1 }, (v, a
   JSON.stringify(v, null, numeric(a[0])),
 );
 define("to_integer", { input: "any", output: "number", minArgs: 0, maxArgs: 0 }, (v) => numeric(v));
-export const registry: Registry = { filters: new Map(entries) };
+export const registry: Registry<BuiltinFilterError> = { filters: new Map(entries) };

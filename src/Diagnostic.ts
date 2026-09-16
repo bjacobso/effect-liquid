@@ -30,3 +30,7 @@ export class LoadError extends Data.TaggedError("LoadError")<{
   readonly name: string;
   readonly message: string;
 }> {}
+
+export class BuiltinFilterError extends Data.TaggedError("BuiltinFilterError")<{
+  readonly message: string;
+}> {}

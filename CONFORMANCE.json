@@ -27,7 +27,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "for": {
@@ -38,7 +39,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "capture": {
@@ -49,7 +51,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "case": {
@@ -60,7 +63,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "comment": {
@@ -71,7 +75,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "include": {
@@ -82,7 +87,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "render": {
@@ -93,7 +99,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "decrement": {
@@ -104,7 +111,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "increment": {
@@ -115,7 +123,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "cycle": {
@@ -126,7 +135,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "if": {
@@ -137,7 +147,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "layout": {
@@ -154,7 +165,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "tablerow": {
@@ -165,7 +177,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "unless": {
@@ -176,7 +189,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "break": {
@@ -187,7 +201,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "continue": {
@@ -198,7 +213,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "echo": {
@@ -209,7 +225,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "liquid": {
@@ -220,7 +237,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "#": {
@@ -231,7 +249,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     }
   },
@@ -244,7 +263,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "xml_escape": {
@@ -255,7 +275,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "escape_once": {
@@ -266,7 +287,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "newline_to_br": {
@@ -277,7 +299,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "strip_html": {
@@ -288,7 +311,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "abs": {
@@ -299,7 +323,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "at_least": {
@@ -310,7 +335,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "at_most": {
@@ -321,7 +347,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "ceil": {
@@ -332,7 +359,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "divided_by": {
@@ -343,7 +371,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "floor": {
@@ -354,7 +383,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "minus": {
@@ -365,7 +395,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "plus": {
@@ -376,7 +407,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "modulo": {
@@ -387,7 +419,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "times": {
@@ -398,7 +431,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "round": {
@@ -409,23 +443,69 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "url_decode": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
+      ]
     },
     "url_encode": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
+      ]
     },
     "cgi_escape": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
+      ]
     },
     "uri_escape": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
+      ]
     },
     "slugify": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
+      ]
     },
     "join": {
       "status": "partial",
@@ -435,7 +515,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "last": {
@@ -446,7 +527,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "first": {
@@ -457,7 +539,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "reverse": {
@@ -468,7 +551,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "sort": {
@@ -479,7 +563,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "sort_natural": {
@@ -490,7 +575,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "size": {
@@ -501,7 +587,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "map": {
@@ -512,7 +599,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "sum": {
@@ -523,7 +611,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "compact": {
@@ -534,7 +623,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "concat": {
@@ -545,7 +635,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "push": {
@@ -556,7 +647,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "unshift": {
@@ -567,7 +659,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "pop": {
@@ -578,7 +671,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "shift": {
@@ -589,7 +683,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "slice": {
@@ -600,7 +695,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "where": {
@@ -611,7 +707,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "reject": {
@@ -622,7 +719,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "where_exp": {
@@ -645,7 +743,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "has_exp": {
@@ -659,7 +758,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "find_index_exp": {
@@ -673,7 +773,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "find_exp": {
@@ -687,7 +788,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "sample": {
@@ -716,7 +818,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "prepend": {
@@ -727,7 +830,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "lstrip": {
@@ -738,7 +842,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "downcase": {
@@ -749,7 +854,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "upcase": {
@@ -760,7 +866,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "remove": {
@@ -771,7 +878,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "remove_first": {
@@ -782,7 +890,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "remove_last": {
@@ -793,7 +902,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "rstrip": {
@@ -804,7 +914,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "split": {
@@ -815,7 +926,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "strip": {
@@ -826,7 +938,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "strip_newlines": {
@@ -837,7 +950,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "squish": {
@@ -848,7 +962,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "capitalize": {
@@ -859,7 +974,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "replace": {
@@ -870,7 +986,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "replace_first": {
@@ -881,7 +998,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "replace_last": {
@@ -892,7 +1010,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "truncate": {
@@ -903,7 +1022,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "truncatewords": {
@@ -914,7 +1034,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "normalize_whitespace": {
@@ -925,7 +1046,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "number_of_words": {
@@ -936,7 +1058,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "array_to_sentence_string": {
@@ -962,7 +1085,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "raw": {
@@ -979,7 +1103,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "json": {
@@ -990,7 +1115,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "inspect": {
@@ -1075,7 +1201,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "strictVariables": {
@@ -1086,7 +1213,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "ownPropertyOnly": {
@@ -1097,7 +1225,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "lenientIf": {
@@ -1111,7 +1240,8 @@
         "test/compatibility-expansion.test.ts",
         "test/blocks.test.ts",
         "test/partial-bindings.test.ts",
-        "test/string-filters.test.ts"
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts"
       ]
     },
     "keepOutputType": {

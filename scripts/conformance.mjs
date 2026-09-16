@@ -45,6 +45,7 @@ const inventory = (names, implemented) =>
                 "test/blocks.test.ts",
                 "test/partial-bindings.test.ts",
                 "test/string-filters.test.ts",
+                "test/url-filters.test.ts",
               ],
             }
           : {}),

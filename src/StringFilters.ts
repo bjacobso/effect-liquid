@@ -58,12 +58,13 @@ const entities: Record<string, string> = {
   '"': "&#34;",
   "'": "&#39;",
 };
-const escape = (value: string) => value.replace(/[&<>"']/g, (character) => entities[character]!);
-text("escape", escape);
-text("xml_escape", escape);
+const escapeHtml = (value: string) =>
+  value.replace(/[&<>"']/g, (character) => entities[character]!);
+text("escape", escapeHtml);
+text("xml_escape", escapeHtml);
 const decoded = new Map(Object.entries(entities).map(([character, entity]) => [entity, character]));
 text("escape_once", (value) =>
-  escape(value.replace(/&(amp|lt|gt|#34|#39);/g, (entity) => decoded.get(entity)!)),
+  escapeHtml(value.replace(/&(amp|lt|gt|#34|#39);/g, (entity) => decoded.get(entity)!)),
 );
 text("replace", (value, args) => value.split(stringify(args[0])).join(stringify(args[1])), 2);
 text("remove", (value, args) => value.split(stringify(args[0])).join(""), 1);

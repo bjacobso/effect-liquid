@@ -78,6 +78,7 @@ Exit: multi-file rendering and analysis agree about scopes. A changed child inva
 - [x] Add the initial collection-filter batch: sorting, mapping, summing, compacting, concatenation, uniqueness, sequence operations, slicing, property matching/searching; validate coercion and nonmutation.
 - [ ] Complete collection-filter expression variants, bracket-property strings, and missing-versus-nil semantics.
 - [x] Add string truncation, first/last replacement/removal, custom trim sets, whitespace/word-count, and HTML/text filters with coercion and malformed-input tests.
+- [x] Add URL encoding/decoding, CGI/URI escaping, and slugify modes with typed malformed-input failures and checker metadata.
 - [ ] Expand remaining filters by family, with runtime semantics, analysis/type metadata hooks, and conformance fixtures in each batch.
 - [x] Implement or explicitly defer each remaining option and host adapter. Keep platform commerce features outside the core.
 - [ ] Add bounded fuzz/differential runs and initial parse/render/analysis/stream benchmarks; establish measured regression budgets.

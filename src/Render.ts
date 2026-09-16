@@ -1,7 +1,13 @@
 import { Context, Effect, Layer, Stream } from "effect";
 import type { Document, Expression, Node } from "./Ast.js";
 import { registry as builtins } from "./Builtins.js";
-import { FilterFailure, type LoadError, type ParseError, RenderError } from "./Diagnostic.js";
+import {
+  type BuiltinFilterError,
+  FilterFailure,
+  type LoadError,
+  type ParseError,
+  RenderError,
+} from "./Diagnostic.js";
 import type { Registry } from "./Filter.js";
 import { parse } from "./Parser.js";
 import type { Span } from "./Source.js";
@@ -51,7 +57,7 @@ interface State {
   depth: number;
   config: Config;
 }
-type Failure<E> = RenderError | ParseError | LoadError | FilterFailure<E>;
+type Failure<E> = RenderError | ParseError | LoadError | FilterFailure<E | BuiltinFilterError>;
 function tick(state: State, at: Span): Effect.Effect<void, RenderError> {
   if (++state.steps > state.config.maxSteps)
     return Effect.fail(
@@ -449,7 +455,7 @@ export function renderStream<E, R>(
 export function renderStream<E = never, R = never>(
   document: Document,
   context: unknown = {},
-  registry: Registry<E, R> = builtins as Registry<E, R>,
+  registry: Registry<E | BuiltinFilterError, R> = builtins,
 ): Stream.Stream<string, Failure<E>, R | RenderConfig | TemplateLoader> {
   return Stream.unwrap(
     Effect.gen(function* () {
@@ -522,7 +528,7 @@ export function render<E, R>(
 export function render<E = never, R = never>(
   document: Document,
   context: unknown = {},
-  registry: Registry<E, R> = builtins as Registry<E, R>,
+  registry: Registry<E | BuiltinFilterError, R> = builtins,
 ) {
   return Stream.runFold(renderStream(document, context, registry), "", (a, b) => a + b).pipe(
     Effect.withSpan("liquid.render"),

@@ -3,7 +3,7 @@ import { path } from "./Analyze.js";
 import type { Document, Expression, Node } from "./Ast.js";
 import * as Binding from "./Binding.js";
 import { registry as builtins } from "./Builtins.js";
-import type { Diagnostic } from "./Diagnostic.js";
+import type { BuiltinFilterError, Diagnostic } from "./Diagnostic.js";
 import type { Registry } from "./Filter.js";
 import type { Span } from "./Source.js";
 import * as T from "./Type.js";
@@ -21,7 +21,7 @@ export const check = <E = never, R = never>(
   document: Document,
   contract: T.Type,
   options: CheckOptions = {},
-  registry: Registry<E, R> = builtins as Registry<E, R>,
+  registry: Registry<E | BuiltinFilterError, R> = builtins,
 ): Effect.Effect<CheckResult> =>
   Effect.sync((): CheckResult => {
     const expressionTypes: Record<string, T.Type> = Object.create(null);

@@ -3,7 +3,7 @@ import { analyze } from "./Analyze.js";
 import type { Document } from "./Ast.js";
 import { registry as builtins } from "./Builtins.js";
 import { type CheckOptions, check } from "./Check.js";
-import type { Diagnostic, LoadError, ParseError } from "./Diagnostic.js";
+import type { BuiltinFilterError, Diagnostic, LoadError, ParseError } from "./Diagnostic.js";
 import type { Registry } from "./Filter.js";
 import { parse } from "./Parser.js";
 import { TemplateLoader } from "./TemplateLoader.js";
@@ -24,7 +24,7 @@ export const checkProject = <E = never, R = never>(
   document: Document,
   contract: T.Type,
   options: ProjectCheckOptions = {},
-  registry: Registry<E, R> = builtins as Registry<E, R>,
+  registry: Registry<E | BuiltinFilterError, R> = builtins,
 ): Effect.Effect<ProjectCheckResult, LoadError | ParseError, TemplateLoader> =>
   Effect.gen(function* () {
     const loader = yield* TemplateLoader;
