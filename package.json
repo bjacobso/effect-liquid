@@ -1,0 +1,136 @@
+{
+  "name": "effect-liquid",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Effect-native Liquid rendering and static analysis",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "SPEC.md",
+    "CONFORMANCE.json"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/Liquid.d.ts",
+      "import": "./dist/Liquid.js"
+    },
+    "./Analyze": {
+      "types": "./dist/Analyze.d.ts",
+      "import": "./dist/Analyze.js"
+    },
+    "./Ast": {
+      "types": "./dist/Ast.d.ts",
+      "import": "./dist/Ast.js"
+    },
+    "./Binding": {
+      "types": "./dist/Binding.d.ts",
+      "import": "./dist/Binding.js"
+    },
+    "./Builtins": {
+      "types": "./dist/Builtins.d.ts",
+      "import": "./dist/Builtins.js"
+    },
+    "./Check": {
+      "types": "./dist/Check.d.ts",
+      "import": "./dist/Check.js"
+    },
+    "./CheckProject": {
+      "types": "./dist/CheckProject.d.ts",
+      "import": "./dist/CheckProject.js"
+    },
+    "./Diagnostic": {
+      "types": "./dist/Diagnostic.d.ts",
+      "import": "./dist/Diagnostic.js"
+    },
+    "./Filter": {
+      "types": "./dist/Filter.d.ts",
+      "import": "./dist/Filter.js"
+    },
+    "./Lexer": {
+      "types": "./dist/Lexer.d.ts",
+      "import": "./dist/Lexer.js"
+    },
+    "./Liquid": {
+      "types": "./dist/Liquid.d.ts",
+      "import": "./dist/Liquid.js"
+    },
+    "./Parser": {
+      "types": "./dist/Parser.d.ts",
+      "import": "./dist/Parser.js"
+    },
+    "./Project": {
+      "types": "./dist/Project.d.ts",
+      "import": "./dist/Project.js"
+    },
+    "./Render": {
+      "types": "./dist/Render.d.ts",
+      "import": "./dist/Render.js"
+    },
+    "./Schema": {
+      "types": "./dist/Schema.d.ts",
+      "import": "./dist/Schema.js"
+    },
+    "./Source": {
+      "types": "./dist/Source.d.ts",
+      "import": "./dist/Source.js"
+    },
+    "./TemplateLoader": {
+      "types": "./dist/TemplateLoader.d.ts",
+      "import": "./dist/TemplateLoader.js"
+    },
+    "./Type": {
+      "types": "./dist/Type.d.ts",
+      "import": "./dist/Type.js"
+    },
+    "./Value": {
+      "types": "./dist/Value.d.ts",
+      "import": "./dist/Value.js"
+    },
+    "./node": {
+      "types": "./dist/node.d.ts",
+      "import": "./dist/node.js"
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@10.20.0",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "pnpm build && vitest run",
+    "format": "biome format --write src test scripts package.json",
+    "lint": "biome check src test scripts package.json",
+    "check": "pnpm typecheck && pnpm test && pnpm lint",
+    "benchmark": "pnpm build && node scripts/benchmark.mjs",
+    "conformance:inventory": "pnpm build && node scripts/conformance.mjs",
+    "conformance": "pnpm build && node scripts/conformance/run.mjs",
+    "conformance:check": "pnpm conformance --check",
+    "conformance:strict": "pnpm conformance --strict",
+    "conformance:baseline": "pnpm conformance --update-baseline",
+    "conformance:fetch": "node scripts/conformance/fetch.mjs",
+    "conformance:import": "node scripts/conformance/import.mjs"
+  },
+  "peerDependencies": {
+    "effect": "^3.22.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.14",
+    "@effect/platform-node": "0.108.2",
+    "@types/node": "22.15.30",
+    "effect": "3.22.2",
+    "esbuild": "0.25.5",
+    "liquidjs": "10.29.0",
+    "typescript": "5.9.3",
+    "vitest": "3.2.4",
+    "yaml": "2.8.1"
+  },
+  "dependencies": {
+    "@effect/platform": "0.97.2"
+  },
+  "bin": {
+    "effect-liquid": "./dist/cli.js"
+  }
+}

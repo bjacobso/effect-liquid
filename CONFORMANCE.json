@@ -1,0 +1,704 @@
+{
+  "baseline": {
+    "package": "liquidjs",
+    "version": "10.29.0",
+    "commit": "747bdbdbee171c7bab56c597a34f6fa5925b4a58",
+    "options": {
+      "strictFilters": true,
+      "strictVariables": false,
+      "jsTruthy": false,
+      "ownPropertyOnly": true
+    },
+    "runtime": "Node.js 24.13.0",
+    "effect": "3.22.2",
+    "source": "https://github.com/harttle/liquidjs/tree/747bdbdbee171c7bab56c597a34f6fa5925b4a58"
+  },
+  "provenance": "Production implementation is independent. Development conformance includes original cases and statically imported upstream fixtures. See conformance/upstreams.json, import-inventory.json, and NOTICE.md for pinned provenance, exclusions, and retained licenses.",
+  "statusMeaning": {
+    "partial": "Implemented for the documented subset, with tests; complete parity is not claimed.",
+    "deferred": "Not implemented; unsupported syntax is rejected. Options absent from our API are not accepted as configuration."
+  },
+  "tags": {
+    "assign": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "for": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "capture": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "case": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "comment": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "include": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "render": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "decrement": {
+      "status": "deferred"
+    },
+    "increment": {
+      "status": "deferred"
+    },
+    "cycle": {
+      "status": "deferred"
+    },
+    "if": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "layout": {
+      "status": "deferred"
+    },
+    "block": {
+      "status": "deferred"
+    },
+    "raw": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "tablerow": {
+      "status": "deferred"
+    },
+    "unless": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "break": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "continue": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "echo": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "liquid": {
+      "status": "deferred"
+    },
+    "#": {
+      "status": "deferred"
+    }
+  },
+  "filters": {
+    "escape": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "xml_escape": {
+      "status": "deferred"
+    },
+    "escape_once": {
+      "status": "deferred"
+    },
+    "newline_to_br": {
+      "status": "deferred"
+    },
+    "strip_html": {
+      "status": "deferred"
+    },
+    "abs": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "at_least": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "at_most": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "ceil": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "divided_by": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "floor": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "minus": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "plus": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "modulo": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "times": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "round": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "url_decode": {
+      "status": "deferred"
+    },
+    "url_encode": {
+      "status": "deferred"
+    },
+    "cgi_escape": {
+      "status": "deferred"
+    },
+    "uri_escape": {
+      "status": "deferred"
+    },
+    "slugify": {
+      "status": "deferred"
+    },
+    "join": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "last": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "first": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "reverse": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "sort": {
+      "status": "deferred"
+    },
+    "sort_natural": {
+      "status": "deferred"
+    },
+    "size": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "map": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "sum": {
+      "status": "deferred"
+    },
+    "compact": {
+      "status": "deferred"
+    },
+    "concat": {
+      "status": "deferred"
+    },
+    "push": {
+      "status": "deferred"
+    },
+    "unshift": {
+      "status": "deferred"
+    },
+    "pop": {
+      "status": "deferred"
+    },
+    "shift": {
+      "status": "deferred"
+    },
+    "slice": {
+      "status": "deferred"
+    },
+    "where": {
+      "status": "deferred"
+    },
+    "reject": {
+      "status": "deferred"
+    },
+    "where_exp": {
+      "status": "deferred"
+    },
+    "reject_exp": {
+      "status": "deferred"
+    },
+    "group_by": {
+      "status": "deferred"
+    },
+    "group_by_exp": {
+      "status": "deferred"
+    },
+    "has": {
+      "status": "deferred"
+    },
+    "has_exp": {
+      "status": "deferred"
+    },
+    "find_index": {
+      "status": "deferred"
+    },
+    "find_index_exp": {
+      "status": "deferred"
+    },
+    "find": {
+      "status": "deferred"
+    },
+    "find_exp": {
+      "status": "deferred"
+    },
+    "uniq": {
+      "status": "deferred"
+    },
+    "sample": {
+      "status": "deferred"
+    },
+    "date": {
+      "status": "deferred"
+    },
+    "date_to_xmlschema": {
+      "status": "deferred"
+    },
+    "date_to_rfc822": {
+      "status": "deferred"
+    },
+    "date_to_string": {
+      "status": "deferred"
+    },
+    "date_to_long_string": {
+      "status": "deferred"
+    },
+    "append": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "prepend": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "lstrip": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "downcase": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "upcase": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "remove": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "remove_first": {
+      "status": "deferred"
+    },
+    "remove_last": {
+      "status": "deferred"
+    },
+    "rstrip": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "split": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "strip": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "strip_newlines": {
+      "status": "deferred"
+    },
+    "squish": {
+      "status": "deferred"
+    },
+    "capitalize": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "replace": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "replace_first": {
+      "status": "deferred"
+    },
+    "replace_last": {
+      "status": "deferred"
+    },
+    "truncate": {
+      "status": "deferred"
+    },
+    "truncatewords": {
+      "status": "deferred"
+    },
+    "normalize_whitespace": {
+      "status": "deferred"
+    },
+    "number_of_words": {
+      "status": "deferred"
+    },
+    "array_to_sentence_string": {
+      "status": "deferred"
+    },
+    "base64_encode": {
+      "status": "deferred"
+    },
+    "base64_decode": {
+      "status": "deferred"
+    },
+    "sha256": {
+      "status": "deferred"
+    },
+    "hmac_sha256": {
+      "status": "deferred"
+    },
+    "default": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "raw": {
+      "status": "deferred"
+    },
+    "jsonify": {
+      "status": "deferred"
+    },
+    "to_integer": {
+      "status": "deferred"
+    },
+    "json": {
+      "status": "deferred"
+    },
+    "inspect": {
+      "status": "deferred"
+    }
+  },
+  "options": {
+    "root": {
+      "status": "deferred"
+    },
+    "layouts": {
+      "status": "deferred"
+    },
+    "partials": {
+      "status": "deferred"
+    },
+    "relativeReference": {
+      "status": "deferred"
+    },
+    "jekyllInclude": {
+      "status": "deferred"
+    },
+    "keyValueSeparator": {
+      "status": "deferred"
+    },
+    "cache": {
+      "status": "deferred"
+    },
+    "extname": {
+      "status": "deferred"
+    },
+    "fs": {
+      "status": "deferred"
+    },
+    "dynamicPartials": {
+      "status": "deferred"
+    },
+    "jsTruthy": {
+      "status": "deferred"
+    },
+    "dateFormat": {
+      "status": "deferred"
+    },
+    "locale": {
+      "status": "deferred"
+    },
+    "trimTagRight": {
+      "status": "deferred"
+    },
+    "trimTagLeft": {
+      "status": "deferred"
+    },
+    "trimOutputRight": {
+      "status": "deferred"
+    },
+    "trimOutputLeft": {
+      "status": "deferred"
+    },
+    "greedy": {
+      "status": "deferred"
+    },
+    "tagDelimiterLeft": {
+      "status": "deferred"
+    },
+    "tagDelimiterRight": {
+      "status": "deferred"
+    },
+    "outputDelimiterLeft": {
+      "status": "deferred"
+    },
+    "outputDelimiterRight": {
+      "status": "deferred"
+    },
+    "preserveTimezones": {
+      "status": "deferred"
+    },
+    "strictFilters": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "strictVariables": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "ownPropertyOnly": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "lenientIf": {
+      "status": "deferred"
+    },
+    "globals": {
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts"
+      ]
+    },
+    "keepOutputType": {
+      "status": "deferred"
+    },
+    "operators": {
+      "status": "deferred"
+    },
+    "groupedExpressions": {
+      "status": "deferred"
+    },
+    "memoryLimit": {
+      "status": "deferred"
+    },
+    "parseLimit": {
+      "status": "deferred"
+    },
+    "renderLimit": {
+      "status": "deferred"
+    },
+    "outputEscape": {
+      "status": "deferred"
+    }
+  },
+  "syntax": {
+    "identifiers": "ASCII letter/underscore followed by word characters or hyphens",
+    "lookups": "Variable-rooted dot and bracket access; computed lookup indices; literal receiver indexing deferred",
+    "expressions": "Literals, ranges, comparisons, contains, not, right-associated and/or, filter pipelines",
+    "partials": "Literal or variable template names and comma-separated named arguments. with/for/as and interpolated filenames deferred.",
+    "loops": "limit, numeric offset, reversed, else; offset:continue deferred"
+  },
+  "hostValues": {
+    "plainRecords": "supported with own data properties only",
+    "arrays": "supported, including nil-normalized holes",
+    "getters": "rejected without invocation",
+    "classInstances": "rejected",
+    "nonFiniteNumbers": "rejected, including non-finite filter results",
+    "prototypeKeys": "excluded from context normalization"
+  },
+  "differences": [
+    {
+      "feature": "strictFilters",
+      "behavior": "Defaults true; unknown filter failures occur during rendering rather than parsing."
+    },
+    {
+      "feature": "raw trim delimiters",
+      "behavior": "Accepts trimmed endraw delimiters that the pinned oracle rejects.",
+      "tests": [
+        "test/conformance.test.ts"
+      ]
+    },
+    {
+      "feature": "resource limits",
+      "behavior": "Finite limits with typed errors and cancellation checkpoints; units/defaults are independent of LiquidJS."
+    },
+    {
+      "feature": "duplicate named arguments",
+      "behavior": "Rejected rather than silently overwriting an earlier expression."
+    },
+    {
+      "feature": "numeric non-finite results",
+      "behavior": "Rejected by the finite Liquid value boundary instead of printing Infinity/NaN."
+    }
+  ],
+  "api": {
+    "parse": "implemented",
+    "render": "implemented",
+    "renderStream": "implemented as Effect Stream",
+    "analyze": "implemented with explicit conservative-flow coverage",
+    "analyzeProject": "implemented for bounded render dependencies; include summaries are partial",
+    "check": "experimental gradual checker",
+    "checkProject": "experimental render-contract checking",
+    "schema": "decoded structural projection; recursive/opaque shapes are partial",
+    "customFilters": "Effect registry preserves typed errors and service requirements",
+    "customTags": "deferred",
+    "cache": "deferred",
+    "dropInLiquidClass": "out of scope",
+    "syncPromiseFacades": "out of scope",
+    "browser": "core bundle verified; no Node adapters imported by parser",
+    "cli": "local parse/analyze/render/check; filesystem project CLI deferred"
+  }
+}

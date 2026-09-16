@@ -1,6 +1,16 @@
 # effect-liquid specification
 
-Status: proposed. Written 2026-09-16. Normative terms describe the intended implementation, not existing functionality. This document owns behavior and architecture; PLAN.md owns sequencing.
+Status: target specification with a working development preview. Written 2026-09-16. Normative terms describe the intended implementation, not existing functionality. This document owns behavior and architecture; PLAN.md owns sequencing.
+
+## Implementation status and adjustments
+
+The implemented surface is documented in README.md and CONFORMANCE.json; unchecked PLAN.md items remain future work. Target requirements below are not claims of completed parity.
+
+The first implementation uses an explicit generic `Registry<E, R>` argument for rendering/checking extensions. `RenderConfig` and `TemplateLoader` are Effect services. Parsing, local analysis, and local checking have no service requirement; a `Language` service and custom tag parser registration are deferred. This avoids erasing extension types behind a nongeneric global service. The public APIs in source and their generated declarations are authoritative for the preview.
+
+Project checking handles bounded literal render dependencies and explicit/inferred parameter contracts. Cycles, dynamic calls, shared includes, and loop-carried state have explicit conservative coverage rather than fixed-point summaries. Runtime resources are bounded, while local analysis/checking run bounded synchronous AST traversals; further cooperative checkpoints in these traversals remain future work.
+
+Generated-output accounting includes captured content when generated and again when output. AST parsing yields between token batches. Parser depth has a hard ceiling of 256. The compatibility inventory uses `partial` for tested implemented subsets and records deliberate differences, including strict filter failure timing, raw trim support, and rejection of non-finite filter results.
 
 ## 1. Objective and boundaries
 
@@ -161,3 +171,7 @@ Diagnostics carry stable code, severity, message, primary span, related location
 Validation includes parser/span fixtures, semantic unit tests, reference conformance with explicit options, analysis flow fixtures, checker positive/negative cases, malformed-input fuzzing, cancellation/resource tests, and ESM/browser import tests. Differential mismatches are triaged rather than automatically copied into semantics. Reference crashes or hangs must be bounded by a separate-process timeout.
 
 Benchmark cold parsing, warm rendering, local/project analysis, checking, peak memory, streaming first chunk, and repeated concurrent requests. Record runtime and fixture sizes. Set regression thresholds after measuring the first implementation; no unsupported speed claims. No release may advertise a feature without a matrix entry and acceptance tests.
+
+### Executable upstream corpus
+
+The correctness harness in `scripts/conformance/` compares pinned LiquidJS and effect-liquid in isolated workers using the generated `conformance/fixtures/` corpus. It checks exact output and normalized error category/phase, independently evaluates upstream expectations, and gates new or changed gaps against an explicit baseline. Imported source provenance, licenses, and non-executable candidate reasons are retained. Ruby tests supply expectations rather than live Ruby execution. Timing comparison is deferred; see `conformance/README.md` for the implemented contract and limits.
