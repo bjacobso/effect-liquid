@@ -10,6 +10,7 @@ import {
 } from "./Diagnostic.js";
 import { embeddedExpression } from "./EmbeddedExpression.js";
 import type { Registry } from "./Filter.js";
+import type { WhitespaceOptions } from "./Lexer.js";
 import { parse } from "./Parser.js";
 import type { Span } from "./Source.js";
 import { TemplateLoader } from "./TemplateLoader.js";
@@ -48,6 +49,7 @@ export class RenderConfig extends Context.Tag("effect-liquid/RenderConfig")<
 export const layer = (config: Partial<Config> = {}) =>
   Layer.succeed(RenderConfig, { ...defaults, ...config });
 interface State {
+  whitespace: WhitespaceOptions;
   groupedExpressions: boolean;
   scopes: Record<string, Value>[];
   cycles: Map<string, number>;
@@ -483,6 +485,7 @@ function nodes<E, R>(
                     const loader = yield* TemplateLoader;
                     const source = yield* loader.load(name, node.span.sourceId, node.mode);
                     const document = yield* parse(source, {
+                      ...state.whitespace,
                       groupedExpressions: state.groupedExpressions,
                     });
                     const old = state.scopes;
@@ -605,6 +608,7 @@ export function renderStream<E = never, R = never>(
         depth: 0,
         filterDepth: 0,
         groupedExpressions: document.groupedExpressions ?? false,
+        whitespace: document.whitespace ?? {},
         config,
       };
       return nodes(document.body, state, registry);

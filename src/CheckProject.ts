@@ -74,6 +74,7 @@ export const checkProject = <E = never, R = never>(
             continue;
           }
           const child = yield* parse(source, {
+            ...doc.whitespace,
             groupedExpressions: doc.groupedExpressions ?? false,
           });
           if (dep.mode === "include") {

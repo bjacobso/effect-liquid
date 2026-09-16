@@ -34,7 +34,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "for": {
@@ -52,7 +53,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "capture": {
@@ -70,7 +72,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "case": {
@@ -88,7 +91,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "comment": {
@@ -106,7 +110,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "include": {
@@ -124,7 +129,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "render": {
@@ -142,7 +148,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "decrement": {
@@ -160,7 +167,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "increment": {
@@ -178,7 +186,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "cycle": {
@@ -196,7 +205,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "if": {
@@ -214,7 +224,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "layout": {
@@ -238,7 +249,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "tablerow": {
@@ -256,7 +268,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "unless": {
@@ -274,7 +287,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "break": {
@@ -292,7 +306,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "continue": {
@@ -310,7 +325,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "echo": {
@@ -328,7 +344,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "liquid": {
@@ -346,7 +363,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "#": {
@@ -364,7 +382,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     }
   },
@@ -384,7 +403,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "xml_escape": {
@@ -402,7 +422,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "escape_once": {
@@ -420,7 +441,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "newline_to_br": {
@@ -438,7 +460,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "strip_html": {
@@ -456,7 +479,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "abs": {
@@ -474,7 +498,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "at_least": {
@@ -492,7 +517,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "at_most": {
@@ -510,7 +536,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "ceil": {
@@ -528,7 +555,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "divided_by": {
@@ -546,7 +574,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "floor": {
@@ -564,7 +593,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "minus": {
@@ -582,7 +612,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "plus": {
@@ -600,7 +631,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "modulo": {
@@ -618,7 +650,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "times": {
@@ -636,7 +669,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "round": {
@@ -654,7 +688,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "url_decode": {
@@ -672,7 +707,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "url_encode": {
@@ -690,7 +726,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "cgi_escape": {
@@ -708,7 +745,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "uri_escape": {
@@ -726,7 +764,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "slugify": {
@@ -744,7 +783,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "join": {
@@ -762,7 +802,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "last": {
@@ -780,7 +821,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "first": {
@@ -798,7 +840,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "reverse": {
@@ -816,7 +859,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "sort": {
@@ -834,7 +878,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "sort_natural": {
@@ -852,7 +897,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "size": {
@@ -870,7 +916,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "map": {
@@ -888,7 +935,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "sum": {
@@ -906,7 +954,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "compact": {
@@ -924,7 +973,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "concat": {
@@ -942,7 +992,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "push": {
@@ -960,7 +1011,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "unshift": {
@@ -978,7 +1030,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "pop": {
@@ -996,7 +1049,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "shift": {
@@ -1014,7 +1068,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "slice": {
@@ -1032,7 +1087,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "where": {
@@ -1050,7 +1106,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "reject": {
@@ -1068,7 +1125,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "where_exp": {
@@ -1086,7 +1144,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "reject_exp": {
@@ -1104,7 +1163,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "group_by": {
@@ -1125,7 +1185,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "has": {
@@ -1143,7 +1204,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "has_exp": {
@@ -1161,7 +1223,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "find_index": {
@@ -1179,7 +1242,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "find_index_exp": {
@@ -1197,7 +1261,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "find": {
@@ -1215,7 +1280,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "find_exp": {
@@ -1233,7 +1299,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "uniq": {
@@ -1251,7 +1318,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "sample": {
@@ -1287,7 +1355,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "prepend": {
@@ -1305,7 +1374,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "lstrip": {
@@ -1323,7 +1393,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "downcase": {
@@ -1341,7 +1412,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "upcase": {
@@ -1359,7 +1431,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "remove": {
@@ -1377,7 +1450,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "remove_first": {
@@ -1395,7 +1469,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "remove_last": {
@@ -1413,7 +1488,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "rstrip": {
@@ -1431,7 +1507,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "split": {
@@ -1449,7 +1526,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "strip": {
@@ -1467,7 +1545,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "strip_newlines": {
@@ -1485,7 +1564,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "squish": {
@@ -1503,7 +1583,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "capitalize": {
@@ -1521,7 +1602,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "replace": {
@@ -1539,7 +1621,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "replace_first": {
@@ -1557,7 +1640,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "replace_last": {
@@ -1575,7 +1659,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "truncate": {
@@ -1593,7 +1678,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "truncatewords": {
@@ -1611,7 +1697,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "normalize_whitespace": {
@@ -1629,7 +1716,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "number_of_words": {
@@ -1647,7 +1735,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "array_to_sentence_string": {
@@ -1665,7 +1754,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "base64_encode": {
@@ -1683,7 +1773,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "base64_decode": {
@@ -1701,7 +1792,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "sha256": {
@@ -1725,7 +1817,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "raw": {
@@ -1749,7 +1842,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "json": {
@@ -1767,7 +1861,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "inspect": {
@@ -1815,19 +1910,99 @@
       "status": "deferred"
     },
     "trimTagRight": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
+      ]
     },
     "trimTagLeft": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
+      ]
     },
     "trimOutputRight": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
+      ]
     },
     "trimOutputLeft": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
+      ]
     },
     "greedy": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
+      ]
     },
     "tagDelimiterLeft": {
       "status": "deferred"
@@ -1859,7 +2034,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "strictVariables": {
@@ -1877,7 +2053,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "ownPropertyOnly": {
@@ -1895,7 +2072,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "lenientIf": {
@@ -1916,7 +2094,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "keepOutputType": {
@@ -1940,7 +2119,8 @@
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
-        "test/sentence-filters.test.ts"
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts"
       ]
     },
     "memoryLimit": {

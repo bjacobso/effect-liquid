@@ -2,7 +2,7 @@ import { Effect } from "effect";
 import type { Document, Expression, Node, PartialBinding } from "./Ast.js";
 import { ParseError } from "./Diagnostic.js";
 import { Expressions } from "./ExpressionParser.js";
-import { lex, type ParseOptions, type Token } from "./Lexer.js";
+import { lex, type ParseOptions, type Token, whitespaceKeys } from "./Lexer.js";
 import { make, type Source, span } from "./Source.js";
 
 class Templates {
@@ -353,6 +353,15 @@ export const parse = (
       source,
       body,
       ...(options.groupedExpressions ? { groupedExpressions: true } : {}),
+      ...(whitespaceKeys.some((key) => options[key] !== undefined)
+        ? {
+            whitespace: Object.fromEntries(
+              whitespaceKeys
+                .filter((key) => options[key] !== undefined)
+                .map((key) => [key, options[key]]),
+            ),
+          }
+        : {}),
     };
   }).pipe(Effect.withSpan("liquid.parse"));
 export type { ParseOptions } from "./Lexer.js";

@@ -21892,9 +21892,7 @@
         "kind": "unsupported-configuration",
         "options": [
           "tagDelimiterLeft",
-          "tagDelimiterRight",
-          "trimTagLeft",
-          "trimTagRight"
+          "tagDelimiterRight"
         ]
       },
       "reason": "Unsupported engine option"
@@ -22428,106 +22426,6 @@
           "root",
           "extname",
           "lenientIf"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/liquid/trimming.spec.ts:14:25": {
-      "fixtureHash": "a2acc0661331d0a0145f2e32aebd63a3d6be7a6f074162a8910020ef11c15c1e",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "0556f8f71dbfc646edc1de773510022f57b201e9adb06c20c48f35a6580c4691"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "trimTagRight"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/liquid/trimming.spec.ts:19:25": {
-      "fixtureHash": "cb3cbcfa5b7473603151bb4fb767c3ac192aaca70a976380ad9d410b70895129",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "3fe6274a79bfade6cb22995f005614da838afa482e55d47f87f70eceb2ab9f4e"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "trimTagLeft",
-          "trimTagRight"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/liquid/trimming.spec.ts:26:25": {
-      "fixtureHash": "faced10828094fa9bed8fdc08251a97f27c74091e025b0eb6f7d9b8247b74ed7",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "a0e58101ca0503811c80ee740869dc12fd44cc44fea856b4fa3afbbed3909afe"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "trimOutputLeft"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/liquid/trimming.spec.ts:31:25": {
-      "fixtureHash": "86a848358dbe734a0378b20a392495ee4f5560a5c07d8dfc443b31e5d40dfb72",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "b3163556de4fca92d6b902d341fd0c9dcc65be5cf806e309fcebf5ed1ddf3f79"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "trimOutputRight"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/liquid/trimming.spec.ts:36:25": {
-      "fixtureHash": "8ea7af62a2ff880a35d66907ab82c6d457de24900e27cdd54f03df36d84fdbec",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "73633d019ea26ff861c6af2e7518c589f6e8dc51d3fdade938fe205f1795f666"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "trimOutputLeft",
-          "trimOutputRight"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/liquid/trimming.spec.ts:49:25": {
-      "fixtureHash": "7bcd8f6b141745b2529e986ba542aaeca4226e24ad476273a74acda0d502243a",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "82c033ce5dc8e647e80783881fd33f0d836cb76e8b816352f7dc16b784dc8829"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "greedy"
-        ]
-      },
-      "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/liquid/trimming.spec.ts:9:25": {
-      "fixtureHash": "5fb9773f8bf70866b4cb9ca61fbb375ddeab634ee05e7ab14585f4445ff46cae",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "7e9c5ffbcb1f2d069dfcf55ffd86f5fc0528d69a9c43ea67bea9460110d48b81"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "trimTagLeft"
         ]
       },
       "reason": "Unsupported engine option"

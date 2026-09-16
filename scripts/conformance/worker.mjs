@@ -65,6 +65,11 @@ if (engineName === "liquidjs") {
     "templates",
     "cache",
     "groupedExpressions",
+    "trimTagLeft",
+    "trimTagRight",
+    "trimOutputLeft",
+    "trimOutputRight",
+    "greedy",
   ]);
   const equivalentDefaults = {
     jsTruthy: false,
@@ -84,7 +89,14 @@ if (engineName === "liquidjs") {
     if (unsupported.length) return { kind: "unsupported-configuration", options: unsupported };
     const parsed = await Effect.runPromise(
       Effect.either(
-        Liquid.parse(fixture.source, { groupedExpressions: options.groupedExpressions ?? false }),
+        Liquid.parse(fixture.source, {
+          groupedExpressions: options.groupedExpressions ?? false,
+          ...Object.fromEntries(
+            ["trimTagLeft", "trimTagRight", "trimOutputLeft", "trimOutputRight", "greedy"]
+              .filter((key) => options[key] !== undefined)
+              .map((key) => [key, options[key]]),
+          ),
+        }),
       ),
     );
     if (parsed._tag === "Left") return failure(parsed.left, "parse");

@@ -7,7 +7,21 @@ export interface Token {
   readonly offset: number;
   readonly span: Span;
 }
-export interface ParseOptions {
+export interface WhitespaceOptions {
+  readonly trimTagLeft?: boolean;
+  readonly trimTagRight?: boolean;
+  readonly trimOutputLeft?: boolean;
+  readonly trimOutputRight?: boolean;
+  readonly greedy?: boolean;
+}
+export const whitespaceKeys = [
+  "trimTagLeft",
+  "trimTagRight",
+  "trimOutputLeft",
+  "trimOutputRight",
+  "greedy",
+] as const;
+export interface ParseOptions extends WhitespaceOptions {
   readonly groupedExpressions?: boolean;
   readonly maxSourceLength?: number;
   readonly maxTokens?: number;
@@ -20,7 +34,8 @@ export const lex = (
   Effect.gen(function* () {
     const text = source.text;
     for (const [key, value] of Object.entries(options)) {
-      if (key === "groupedExpressions" && typeof value === "boolean") continue;
+      if (["groupedExpressions", ...whitespaceKeys].includes(key) && typeof value === "boolean")
+        continue;
       if (
         !["maxSourceLength", "maxTokens", "maxDepth"].includes(key) ||
         !Number.isSafeInteger(value) ||
@@ -37,13 +52,17 @@ export const lex = (
           span: span(source.id, 0, text.length),
         }),
       );
+    const trimLeft = (value: string) =>
+      options.greedy === false ? value.replace(/[ \t\r]+$/, "") : value.trimEnd();
+    const trimRight = (value: string) =>
+      options.greedy === false ? value.replace(/^[ \t\r]*\n?/, "") : value.trimStart();
     const tokens: Token[] = [];
     let i = 0;
     let trimNext = false;
     let work = 0;
     const addText = (start: number, end: number) => {
       let value = text.slice(start, end);
-      if (trimNext) value = value.trimStart();
+      if (trimNext) value = trimRight(value);
       trimNext = false;
       if (value)
         tokens.push({
@@ -73,12 +92,13 @@ export const lex = (
       const kind = text[i + 1] === "{" ? "output" : "tag";
       const close = kind === "output" ? "}}" : "%}";
       i += 2;
-      if (text[i] === "-") {
+      const markedLeft = text[i] === "-";
+      if (markedLeft || (kind === "tag" ? options.trimTagLeft : options.trimOutputLeft)) {
         const last = tokens[tokens.length - 1];
         if (last?.kind === "text")
-          tokens[tokens.length - 1] = { ...last, text: last.text.trimEnd() };
-        i++;
+          tokens[tokens.length - 1] = { ...last, text: trimLeft(last.text) };
       }
+      if (markedLeft) i++;
       const offset = i;
       const lineSyntax = kind === "tag" && /^\s*(?:liquid\b|#)/.test(text.slice(offset));
       let quote = "";
@@ -103,7 +123,7 @@ export const lex = (
       const trim = text[i - 1] === "-";
       const content = text.slice(offset, trim ? i - 1 : i);
       i += 2;
-      trimNext = trim;
+      trimNext = trim || !!(kind === "tag" ? options.trimTagRight : options.trimOutputRight);
       const tag = content.trim();
       if (kind === "tag" && (tag === "raw" || tag === "comment")) {
         const bodyStart = i;
@@ -115,14 +135,15 @@ export const lex = (
             new ParseError({ message: `Unclosed ${tag}`, span: span(source.id, open, i) }),
           );
         if (tag === "raw") {
+          trimNext = trim;
           addText(bodyStart, match.index);
           if (match[1]) {
             const last = tokens[tokens.length - 1];
             if (last?.kind === "text")
-              tokens[tokens.length - 1] = { ...last, text: last.text.trimEnd() };
+              tokens[tokens.length - 1] = { ...last, text: trimLeft(last.text) };
           }
         }
-        trimNext = !!match[2];
+        trimNext = !!match[2] || !!options.trimTagRight;
         i = match.index + match[0].length;
       } else tokens.push({ kind, text: content, offset, span: span(source.id, open, i) });
     }

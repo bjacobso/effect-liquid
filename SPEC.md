@@ -233,3 +233,9 @@ Negative numeric array keys count from the end; negative string offsets do not. 
 ### Sentence formatting and concatenation errors
 
 `array_to_sentence_string` accepts arrays, returns the original element for singleton arrays and strings otherwise, and uses an optional conjunction with `and` as the default. Nested arrays use comma-separated host string conversion; nil elements become empty strings. Non-array inputs and omitted append/prepend arguments produce `BuiltinFilterError` in the Effect error channel, wrapped by rendering with filter name and source span. Explicit nil concatenation arguments are accepted. The checker declares array input and infers singleton tuple elements or a string/element union for general arrays. Non-array rejection is intentional, including short strings and array-like records that the oracle happens to accept.
+
+### Whitespace parse options
+
+`ParseOptions` includes independent boolean tag/output left/right trimming switches (default false) and `greedy` (default true). Hyphen markers and enabled switches request trimming. Greedy trimming removes surrounding JavaScript whitespace; non-greedy left trimming removes spaces, tabs, and carriage returns, while non-greedy right trimming also consumes at most one LF. Global tag switches trim outside raw blocks without trimming their literal body. Existing explicit raw-marker deviations remain documented in the capability inventory.
+
+`Document.whitespace` stores a copy of supplied whitespace settings; absence preserves defaults. Rendering, project analysis, and project checking pass that snapshot to partial parsing. Source spans retain original offsets despite text trimming. Whitespace options are validated as booleans; source, token, and depth limits keep their existing validation and defaults.

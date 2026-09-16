@@ -27,6 +27,7 @@ Exit: package import/build checks pass; a small Effect program demonstrates the 
 - [x] Implement text/output scanning, literals, dot/bracket/computed paths, filters, and whitespace trim markers.
 - [x] Add the first-release block grammar, raw/comment handling, ranges, and the pinned logical precedence rules.
 - [x] Implement bounded parsing with interruption checkpoints and located failures for malformed or unsupported constructs.
+- [x] Add independent tag/output whitespace trimming and non-greedy line handling, with document snapshots and partial propagation.
 - [x] Add opt-in grouped expressions, including pipelines and range endpoints, with syntax propagation through partials, embedded predicates, analysis, and checking.
 - [x] Add a traversal reporting all reads/writes and straightforward assignment/loop bindings; keep flow uncertainty explicit until M3.
 - [x] Add the README's parse/extraction example as a fixture and mark the exact supported subset.

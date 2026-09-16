@@ -30,6 +30,11 @@ const implementedOptions = new Set([
   "globals",
   "ownPropertyOnly",
   "groupedExpressions",
+  "trimTagLeft",
+  "trimTagRight",
+  "trimOutputLeft",
+  "trimOutputRight",
+  "greedy",
 ]);
 const inventory = (names, implemented) =>
   Object.fromEntries(
@@ -53,6 +58,7 @@ const inventory = (names, implemented) =>
                 "test/grouped-expressions.test.ts",
                 "test/property-lookup.test.ts",
                 "test/sentence-filters.test.ts",
+                "test/whitespace-options.test.ts",
               ],
             }
           : {}),
