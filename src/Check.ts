@@ -245,6 +245,22 @@ export const check = <E = never, R = never>(
           case "Output":
             infer(n.expression, env);
             break;
+          case "Counter":
+            if (!env.values.has(n.name)) {
+              env.values.set(n.name, T.number);
+              for (const key of env.locals.keys())
+                if (
+                  key === `@${n.name}` ||
+                  key.startsWith(`@${n.name}.`) ||
+                  key.startsWith(`@${n.name}[`)
+                )
+                  env.locals.delete(key);
+            }
+            break;
+          case "Cycle":
+            if (n.group) infer(n.group, env);
+            for (const value of n.values) infer(value, env);
+            break;
           case "Assign": {
             const type = infer(n.expression, env);
             env.values.set(n.name, type);

@@ -42,6 +42,7 @@ export const layer = (config: Partial<Config> = {}) =>
   Layer.succeed(RenderConfig, { ...defaults, ...config });
 interface State {
   scopes: Record<string, Value>[];
+  cycles: Map<string, number>;
   steps: number;
   iterations: number;
   outputBytes: number;
@@ -216,8 +217,22 @@ function nodes<E, R>(
                     return output(node.value);
                   case "Output":
                     return output(stringify(yield* ev(node.expression)));
+                  case "Counter": {
+                    const environment = state.scopes[1]!;
+                    const previous = Object.getOwnPropertyDescriptor(environment, node.name)?.value;
+                    const current = typeof previous === "number" ? previous : 0;
+                    environment[node.name] = current + node.direction;
+                    return output(String(node.direction === 1 ? current : current - 1));
+                  }
+                  case "Cycle": {
+                    const group = node.group ? yield* ev(node.group) : undefined;
+                    const key = JSON.stringify([String(group), node.key]);
+                    const index = state.cycles.get(key) ?? 0;
+                    state.cycles.set(key, (index + 1) % node.values.length);
+                    return output(stringify(yield* ev(node.values[index]!)));
+                  }
                   case "Assign":
-                    state.scopes[1]![node.name] = (yield* ev(node.expression)) ?? null;
+                    state.scopes[2]![node.name] = (yield* ev(node.expression)) ?? null;
                     return Stream.empty;
                   case "Capture": {
                     const value = yield* Stream.runFold(
@@ -225,7 +240,7 @@ function nodes<E, R>(
                       "",
                       (a, b) => a + b,
                     );
-                    state.scopes[1]![node.name] = value;
+                    state.scopes[2]![node.name] = value;
                     return Stream.empty;
                   }
                   case "Break":
@@ -320,12 +335,18 @@ function nodes<E, R>(
                     const source = yield* loader.load(name, node.span.sourceId, node.mode);
                     const document = yield* parse(source);
                     const old = state.scopes;
-                    state.scopes = node.mode === "render" ? [old[0]!, args] : [...old, args];
+                    const oldCycles = state.cycles;
+                    state.scopes =
+                      node.mode === "render"
+                        ? [old[0]!, args, Object.create(null)]
+                        : [...old, args];
+                    if (node.mode === "render") state.cycles = new Map();
                     state.depth++;
                     return nodes(document.body, state, registry).pipe(
                       Stream.ensuring(
                         Effect.sync(() => {
                           state.scopes = old;
+                          state.cycles = oldCycles;
                           state.depth--;
                         }),
                       ),
@@ -393,7 +414,12 @@ export function renderStream<E = never, R = never>(
           }),
         );
       const state: State = {
-        scopes: [globals as Record<string, Value>, value as Record<string, Value>],
+        scopes: [
+          globals as Record<string, Value>,
+          value as Record<string, Value>,
+          Object.create(null),
+        ],
+        cycles: new Map(),
         steps: 0,
         iterations: 0,
         outputBytes: 0,

@@ -32,6 +32,20 @@ export type Expression =
       readonly span: Span;
     };
 export type Node =
+  | {
+      readonly _tag: "Counter";
+      readonly name: string;
+      readonly direction: 1 | -1;
+      readonly nameSpan: Span;
+      readonly span: Span;
+    }
+  | {
+      readonly _tag: "Cycle";
+      readonly group?: Expression;
+      readonly values: readonly Expression[];
+      readonly key: string;
+      readonly span: Span;
+    }
   | { readonly _tag: "Text"; readonly value: string; readonly span: Span }
   | { readonly _tag: "Output"; readonly expression: Expression; readonly span: Span }
   | {

@@ -225,7 +225,28 @@ class Templates {
         if (!close || close.text.trim() !== name) e.fail(`Expected ${name}`);
         return { ...t.span, end: close!.span.end };
       };
-      if (tag === "assign") {
+      if (tag === "increment" || tag === "decrement") {
+        const start = e.words[e.pos]?.start ?? t.text.length;
+        const name = e.name();
+        e.done();
+        nodes.push({
+          _tag: "Counter",
+          name,
+          direction: tag === "increment" ? 1 : -1,
+          nameSpan: e.position(start),
+          span: t.span,
+        });
+      } else if (tag === "cycle") {
+        const first = e.atom();
+        const group = e.take(":") ? first : undefined;
+        const values = group ? [e.atom()] : [first];
+        while (e.take(",")) values.push(e.atom());
+        e.done();
+        const key = values
+          .map((value) => t.text.slice(value.span.start - t.offset, value.span.end - t.offset))
+          .join(",");
+        nodes.push({ _tag: "Cycle", ...(group ? { group } : {}), values, key, span: t.span });
+      } else if (tag === "assign") {
         const name = e.name();
         e.need("=");
         const expression = e.pipeline();

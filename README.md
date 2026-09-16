@@ -37,6 +37,10 @@ Implemented tags: `assign`, `capture`, `if`/`elsif`/`else`, `unless`, `case`/`wh
 
 Defaults use Liquid truthiness, permissive missing variables, strict unknown filters, and unescaped output. Use `escape` when HTML escaping is appropriate. Plain records and arrays are accepted; accessors, class instances, cyclic data, and non-finite numbers are rejected. Context data is copied into request-local state.
 
+The preview supports `increment`, `decrement`, and `cycle`. Counters use request-local input state independently of `assign` and `capture`; numeric input values seed counters. `include` shares counter/cycle state, while `render` gets isolated state. Rendering never mutates the caller's context.
+
+Collection filters include `sort`, `sort_natural`, `map`, `sum`, `compact`, `concat`, `uniq`, `push`, `pop`, `shift`, `unshift`, `slice`, `where`, `reject`, `find`, `find_index`, and `has`. Scalar/nil coercion, dot-separated property paths, and nonmutating operations are supported. Expression-based filters, bracket paths inside filter property strings, and some Ruby/JavaScript missing-value differences remain compatibility gaps. `json` and `to_integer` support typed output comparisons.
+
 ## Extract variables
 
 ```liquid
@@ -53,14 +57,14 @@ Defaults use Liquid truthiness, permissive missing variables, strict unknown fil
 | `externalRoots` | Possible application inputs: `user`, `catalog`, `labels`, `locale` |
 | `externalPaths` | Paths such as `user.name`, `catalog.products`, and `labels[locale]` |
 | `occurrences` | Every read, its original expression/span, bindings, and control context |
-| `bindings` | Assignment, capture, loop, and built-in declarations |
+| `bindings` | Assignment, capture, counter, loop, and built-in declarations |
 | `derivedInputPaths` | Simple alias/loop provenance such as `catalog.products[*].title` |
 | `dependencies` | Partial calls, expressions, and arguments |
 | `coverage`, `coverageReasons` | Explicit gaps in analysis |
 
 Spans use zero-based UTF-16 offsets into the original source. Repeated occurrences remain separate. Reads before assignments and assignments in only one branch remain possible external dependencies. A variable being read does not mean its value must always be present.
 
-Loop-carried assignments, control transfers, and shared includes currently produce conservative analysis with partial coverage. These cases need fixed-point summaries before stronger claims are possible.
+Counter seed dependencies, loop-carried assignments, control transfers, and shared includes currently produce conservative analysis with partial coverage. These cases need fixed-point summaries before stronger claims are possible.
 
 ## Partials and streaming
 

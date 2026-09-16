@@ -23,65 +23,88 @@
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "for": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "capture": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "case": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "comment": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "include": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "render": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "decrement": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "increment": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "cycle": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "if": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "layout": {
@@ -94,7 +117,8 @@
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "tablerow": {
@@ -104,28 +128,32 @@
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "break": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "continue": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "echo": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "liquid": {
@@ -140,7 +168,8 @@
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "xml_escape": {
@@ -159,77 +188,88 @@
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "at_least": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "at_most": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "ceil": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "divided_by": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "floor": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "minus": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "plus": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "modulo": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "times": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "round": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "url_decode": {
@@ -251,79 +291,145 @@
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "last": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "first": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "reverse": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "sort": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "sort_natural": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "size": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "map": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "sum": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "compact": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "concat": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "push": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "unshift": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "pop": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "shift": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "slice": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "where": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "reject": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "where_exp": {
       "status": "deferred"
@@ -338,25 +444,45 @@
       "status": "deferred"
     },
     "has": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "has_exp": {
       "status": "deferred"
     },
     "find_index": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "find_index_exp": {
       "status": "deferred"
     },
     "find": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "find_exp": {
       "status": "deferred"
     },
     "uniq": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "sample": {
       "status": "deferred"
@@ -380,42 +506,48 @@
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "prepend": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "lstrip": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "downcase": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "upcase": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "remove": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "remove_first": {
@@ -428,21 +560,24 @@
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "split": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "strip": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "strip_newlines": {
@@ -455,14 +590,16 @@
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "replace": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "replace_first": {
@@ -502,7 +639,8 @@
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "raw": {
@@ -512,10 +650,20 @@
       "status": "deferred"
     },
     "to_integer": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "json": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
+      ]
     },
     "inspect": {
       "status": "deferred"
@@ -595,21 +743,24 @@
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "strictVariables": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "ownPropertyOnly": {
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "lenientIf": {
@@ -619,7 +770,8 @@
       "status": "partial",
       "tests": [
         "test/conformance.test.ts",
-        "test/engine.test.ts"
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts"
       ]
     },
     "keepOutputType": {

@@ -6,7 +6,7 @@ import type { Span } from "./Source.js";
 export interface Declaration {
   readonly id: string;
   readonly name: string;
-  readonly kind: "assign" | "capture" | "loop" | "builtin";
+  readonly kind: "assign" | "capture" | "loop" | "builtin" | "counter";
   readonly span: Span;
 }
 export interface Occurrence {
@@ -151,6 +151,23 @@ export const analyze = (document: Document): Effect.Effect<Analysis> =>
             break;
           case "Output":
             expression(n.expression, env, control);
+            break;
+          case "Counter": {
+            // A numeric caller input seeds the register even if an assignment shadows it.
+            expression(
+              { _tag: "Lookup", root: n.name, segments: [], span: n.nameSpan },
+              Binding.make(),
+              control,
+            );
+            const slot = declare(n.name, "counter", n.span);
+            if (!env.values.has(n.name)) env.values.set(n.name, slot);
+            reasons.push(`Counter seed dependencies are conservative at ${n.span.start}`);
+            break;
+          }
+          case "Cycle":
+            if (n.group) expression(n.group, env, control);
+            for (const value of n.values)
+              expression(value, env, [...control, `cycle:${n.span.start}`]);
             break;
           case "Assign":
             expression(n.expression, env, control);

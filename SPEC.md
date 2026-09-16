@@ -175,3 +175,9 @@ Benchmark cold parsing, warm rendering, local/project analysis, checking, peak m
 ### Executable upstream corpus
 
 The correctness harness in `scripts/conformance/` compares pinned LiquidJS and effect-liquid in isolated workers using the generated `conformance/fixtures/` corpus. It checks exact output and normalized error category/phase, independently evaluates upstream expectations, and gates new or changed gaps against an explicit baseline. Imported source provenance, licenses, and non-executable candidate reasons are retained. Ruby tests supply expectations rather than live Ruby execution. Timing comparison is deferred; see `conformance/README.md` for the implemented contract and limits.
+
+### Counter, cycle, and collection-filter expansion
+
+The implemented AST now includes `Counter` and `Cycle`. Counter operations read/write a request-local environment below assignment bindings, seeded by numeric input where present (the pinned LiquidJS behavior). Cycle keys combine the evaluated group and candidate source syntax; only the selected candidate is evaluated. Includes share state; isolated renders get fresh cycle state and their own parameter environment. Input contexts remain immutable to callers. Analysis records counter declarations, conservative optional input-seed dependencies, and cycle expression reads; checking treats unshadowed counters as numbers.
+
+The initial array-filter batch includes sorting, mapping, summing, compaction, concatenation, uniqueness, push/pop/shift/unshift, slicing, and property-based matching/search. Scalar inputs are singleton sequences and nil inputs empty sequences where applicable. Operations do not mutate input arrays. Type signatures conservatively mark value-dependent results unknown. Expression-based filters and full property-string/missing-value compatibility remain deferred.

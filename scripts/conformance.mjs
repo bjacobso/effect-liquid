@@ -5,6 +5,9 @@ import { registry } from "../dist/Builtins.js";
 const reference = new Liquid();
 const tags = new Set([
   "assign",
+  "increment",
+  "decrement",
+  "cycle",
   "for",
   "capture",
   "case",
@@ -31,7 +34,13 @@ const inventory = (names, implemented) =>
       {
         status: implemented.has(name) ? "partial" : "deferred",
         ...(implemented.has(name)
-          ? { tests: ["test/conformance.test.ts", "test/engine.test.ts"] }
+          ? {
+              tests: [
+                "test/conformance.test.ts",
+                "test/engine.test.ts",
+                "test/compatibility-expansion.test.ts",
+              ],
+            }
           : {}),
       },
     ]),

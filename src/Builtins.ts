@@ -1,6 +1,6 @@
 import { Effect } from "effect";
 import type { Filter, Registry, Signature } from "./Filter.js";
-import { empty, isArray, lookup, stringify, type Value } from "./Value.js";
+import { empty, isArray, lookup, stringify, truthy, type Value } from "./Value.js";
 
 const number = (v: Value | undefined) => Number.parseFloat(stringify(v)) || 0;
 const entries: [string, Filter][] = [];
@@ -29,11 +29,13 @@ string("escape", (s) =>
 );
 string("replace", (s, a) => s.split(stringify(a[0])).join(stringify(a[1])), 2);
 string("remove", (s, a) => s.split(stringify(a[0])).join(""), 1);
-define("join", { input: "array", output: "string", minArgs: 0, maxArgs: 1 }, (v, a) =>
-  (isArray(v) ? v : [v]).map(stringify).join(a[0] === undefined ? " " : stringify(a[0])),
+define("join", { input: "any", output: "string", minArgs: 0, maxArgs: 1 }, (v, a) =>
+  array(v)
+    .map(hostString)
+    .join(a[0] == null ? " " : stringify(a[0])),
 );
 define("split", { input: "any", output: "array", minArgs: 1, maxArgs: 1 }, (v, a) =>
-  stringify(v).split(stringify(a[0])),
+  split(v, a[0]),
 );
 define("size", { input: "any", output: "number", minArgs: 0, maxArgs: 0 }, (v) =>
   typeof v === "string" || isArray(v) ? v.length : 0,
@@ -73,16 +75,137 @@ define(
     return Math.round(number(v) * scale) / scale;
   },
 );
-define("first", { input: "array", output: "unknown", minArgs: 0, maxArgs: 0 }, (v) =>
-  isArray(v) ? (v[0] ?? null) : null,
+define("first", { input: "any", output: "unknown", minArgs: 0, maxArgs: 0 }, (v) =>
+  isArray(v) || typeof v === "string" ? (v[0] ?? null) : null,
 );
-define("last", { input: "array", output: "unknown", minArgs: 0, maxArgs: 0 }, (v) =>
-  isArray(v) ? (v[v.length - 1] ?? null) : null,
+define("last", { input: "any", output: "unknown", minArgs: 0, maxArgs: 0 }, (v) =>
+  isArray(v) || typeof v === "string" ? (v[v.length - 1] ?? null) : null,
 );
-define("reverse", { input: "array", output: "array", minArgs: 0, maxArgs: 0 }, (v) =>
-  isArray(v) ? [...v].reverse() : [],
+define("reverse", { input: "any", output: "array", minArgs: 0, maxArgs: 0 }, (v) =>
+  [...array(v)].reverse(),
 );
-define("map", { input: "array", output: "array", minArgs: 1, maxArgs: 1 }, (v, a) =>
-  isArray(v) ? v.map((x) => lookup(x, a[0]) ?? null) : [],
+define("map", { input: "any", output: "array", minArgs: 1, maxArgs: 1 }, (v, a) =>
+  array(v).map((x) => property(x, a[0]) ?? null),
 );
+// These filters coerce nil to an empty sequence and scalars to one item.
+function array(value: Value | undefined): readonly Value[] {
+  return value == null ? [] : isArray(value) ? value : [value];
+}
+function hostString(value: Value): string {
+  return isArray(value) ? value.map(hostString).join(",") : stringify(value);
+}
+function property(value: Value, path: Value | undefined): Value | undefined {
+  return stringify(path)
+    .split(".")
+    .reduce<Value | undefined>((item, key) => lookup(item, key), value);
+}
+function split(value: Value, separator: Value | undefined): readonly Value[] {
+  const text = stringify(value);
+  if (!text) return [];
+  const result = text.split(stringify(separator));
+  while (result.at(-1) === "") result.pop();
+  return result;
+}
+const numeric = (value: Value | undefined): number => {
+  if (value == null) return 0;
+  if (typeof value === "object" && !isArray(value)) return Number.NaN;
+  return Number(isArray(value) ? hostString(value) : value);
+};
+function same(left: Value | undefined, right: Value | undefined): boolean {
+  if (left == null && right == null) return true;
+  if (isArray(left) && isArray(right))
+    return left.length === right.length && left.every((value, i) => same(value, right[i]));
+  return left === right;
+}
+for (const name of ["sort", "sort_natural"] as const)
+  define(name, { input: "any", output: "array", minArgs: 0, maxArgs: 1 }, (v, a) => {
+    const key = (item: Value) => (a[0] ? property(item, a[0]) : item);
+    return [...array(v)].sort((left, right) => {
+      const x = key(left),
+        y = key(right);
+      if (x == null || y == null) return x == null ? (y == null ? 0 : 1) : -1;
+      const l =
+        name === "sort_natural"
+          ? hostString(x).toLowerCase()
+          : typeof x === "object"
+            ? hostString(x)
+            : x;
+      const r =
+        name === "sort_natural"
+          ? hostString(y).toLowerCase()
+          : typeof y === "object"
+            ? hostString(y)
+            : y;
+      return l < r ? -1 : l > r ? 1 : 0;
+    });
+  });
+define("sum", { input: "any", output: "number", minArgs: 0, maxArgs: 1 }, (v, a) =>
+  array(v).reduce<number>((total, item) => {
+    const value = numeric(a[0] ? property(item, a[0]) : item);
+    return total + (Number.isNaN(value) ? 0 : value);
+  }, 0),
+);
+define("compact", { input: "any", output: "array", minArgs: 0, maxArgs: 0 }, (v) =>
+  array(v).filter((item) => item !== null),
+);
+define("concat", { input: "any", output: "array", minArgs: 0, maxArgs: 1 }, (v, a) => [
+  ...array(v),
+  ...array(a[0]),
+]);
+define("uniq", { input: "any", output: "array", minArgs: 0, maxArgs: 0 }, (v) => [
+  ...new Set(array(v)),
+]);
+define("push", { input: "any", output: "array", minArgs: 0, maxArgs: 1 }, (v, a) => [
+  ...array(v),
+  a[0] ?? null,
+]);
+define("unshift", { input: "any", output: "array", minArgs: 0, maxArgs: 1 }, (v, a) => [
+  a[0] ?? null,
+  ...array(v),
+]);
+define("pop", { input: "any", output: "array", minArgs: 0, maxArgs: 0 }, (v) =>
+  array(v).slice(0, -1),
+);
+define("shift", { input: "any", output: "array", minArgs: 0, maxArgs: 0 }, (v) =>
+  array(v).slice(1),
+);
+define("slice", { input: "any", output: "unknown", minArgs: 1, maxArgs: 2 }, (v, a) => {
+  if (v === null) return [];
+  const value = isArray(v) ? v : stringify(v);
+  let start = Math.trunc(numeric(a[0])) || 0;
+  const length = a.length < 2 ? 1 : Math.trunc(numeric(a[1])) || 0;
+  if (start < 0) start += value.length;
+  return start < 0 || length < 0 ? (isArray(value) ? [] : "") : value.slice(start, start + length);
+});
+for (const name of ["where", "reject", "find", "find_index", "has"] as const)
+  define(
+    name,
+    {
+      input: "any",
+      output: name === "where" || name === "reject" ? "array" : "unknown",
+      minArgs: 1,
+      maxArgs: 2,
+    },
+    (v, a) => {
+      const values = array(v);
+      const matches = (item: Value) => {
+        const value = property(item, a[0]);
+        return a.length < 2 ? truthy(value) : same(value, a[1]);
+      };
+      if (name === "where" || name === "reject")
+        return values.filter((item) => matches(item) === (name === "where"));
+      const index = values.findIndex(matches);
+      return name === "has"
+        ? index >= 0
+        : name === "find_index"
+          ? index < 0
+            ? null
+            : index
+          : (values[index] ?? null);
+    },
+  );
+define("json", { input: "any", output: "string", minArgs: 0, maxArgs: 1 }, (v, a) =>
+  JSON.stringify(v, null, numeric(a[0])),
+);
+define("to_integer", { input: "any", output: "number", minArgs: 0, maxArgs: 0 }, (v) => numeric(v));
 export const registry: Registry = { filters: new Map(entries) };
