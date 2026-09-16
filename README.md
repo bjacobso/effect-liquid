@@ -58,6 +58,8 @@ String filters include first/last replacement and removal, custom strip characte
 
 URL filters include `url_encode`, `url_decode`, `cgi_escape`, `uri_escape`, and `slugify` modes (`default`, `raw`, `pretty`, `ascii`, `latin`, `none`). They follow the pinned LiquidJS behavior: URL decoding replaces plus signs after percent-decoding, and Latin slugification uses its specific transliteration set. Malformed percent encodings and invalid UTF-16 become located `FilterFailure<BuiltinFilterError>` values in the Effect error channel, also during streaming.
 
+Numeric filters follow LiquidJS whole-value coercion: `true` becomes one, and invalid numeric strings become zero. This differs from Ruby Liquid's treatment of booleans and numeric string prefixes. `round` handles negative ties away from zero, decimal multiplication error, and negative or fractional precision. `divided_by` accepts an optional integer-division flag; a flag that coerces to a nonzero number floors the quotient, including negative quotients. Strict checking expects a numeric divisor and a boolean flag. Non-finite results remain rejected by the finite Liquid value boundary.
+
 Expression filters include `where_exp`, `reject_exp`, `find_exp`, `find_index_exp`, `has_exp`, and `group_by_exp`. Predicates run as Liquid expressions with a local item alias, caller variables, and registered filters. They share iteration, work, and nesting budgets with the render. Native overrides of these names are respected.
 
 ```liquid
@@ -146,6 +148,8 @@ const result = await Effect.runPromise(Effect.gen(function* () {
 ```
 
 The checker handles records, optional fields, arrays, tuples, unions, local bindings, basic truthiness guards, and filter signatures. Strict mode is the default; `{ mode: "compatibility" }` relaxes selected coercion and presence findings. Unknown filter signatures and unresolved control/dependency analysis remain visible. Strict checks cannot pass with partial coverage.
+
+Filter signatures can declare `positionalArguments`, such as `["number", "boolean"]` for `divided_by`. Each entry overrides the shared `argument` type for that position; `"any"` permits any type. Argument diagnostics point to the individual argument expression.
 
 `checkProject(document, contract, { contracts: { card: cardContract } })` checks literal render dependencies and explicit callee contracts. It reports mismatched arguments at the call and references the callee. Without an explicit callee contract, it derives one from supplied argument types. Shared include contracts and cyclic/dynamic calls remain partial.
 

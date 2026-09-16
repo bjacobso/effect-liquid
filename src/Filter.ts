@@ -6,6 +6,7 @@ export interface Signature {
   readonly input: "any" | "string" | "number" | "array";
   readonly output: "string" | "number" | "array" | "input" | "unknown";
   readonly argument?: "string" | "number";
+  readonly positionalArguments?: readonly ("string" | "number" | "boolean" | "any")[];
 }
 export interface NativeFilter<E = never, R = never> {
   readonly run: (

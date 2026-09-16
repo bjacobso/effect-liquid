@@ -165,16 +165,20 @@ export const check = <E = never, R = never>(
             !T.members(input).every((t) => T.kind(t) === signature.input)
           )
             report("FilterInput", `'${e.name}' expects ${signature.input}`, e.input.span);
-          if (
-            signature.argument &&
-            args.some((a) => !T.members(a).every((t) => T.kind(t) === signature.argument))
-          )
-            report(
-              "FilterArgument",
-              `'${e.name}' expects ${signature.argument} arguments`,
-              e.span,
-              strict ? "error" : "warning",
-            );
+          args.forEach((argument, index) => {
+            const expected = signature.positionalArguments?.[index] ?? signature.argument;
+            if (
+              expected &&
+              expected !== "any" &&
+              !T.members(argument).every((t) => T.kind(t) === expected)
+            )
+              report(
+                "FilterArgument",
+                `'${e.name}' expects ${expected} at argument ${index + 1}`,
+                e.args[index]!.span,
+                strict ? "error" : "warning",
+              );
+          });
           const filter = registry.filters.get(e.name);
           if (filter && "expression" in filter) {
             const item = T.union(

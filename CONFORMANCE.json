@@ -29,7 +29,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "for": {
@@ -42,7 +43,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "capture": {
@@ -55,7 +57,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "case": {
@@ -68,7 +71,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "comment": {
@@ -81,7 +85,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "include": {
@@ -94,7 +99,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "render": {
@@ -107,7 +113,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "decrement": {
@@ -120,7 +127,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "increment": {
@@ -133,7 +141,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "cycle": {
@@ -146,7 +155,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "if": {
@@ -159,7 +169,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "layout": {
@@ -178,7 +189,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "tablerow": {
@@ -191,7 +203,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "unless": {
@@ -204,7 +217,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "break": {
@@ -217,7 +231,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "continue": {
@@ -230,7 +245,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "echo": {
@@ -243,7 +259,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "liquid": {
@@ -256,7 +273,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "#": {
@@ -269,7 +287,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     }
   },
@@ -284,7 +303,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "xml_escape": {
@@ -297,7 +317,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "escape_once": {
@@ -310,7 +331,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "newline_to_br": {
@@ -323,7 +345,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "strip_html": {
@@ -336,7 +359,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "abs": {
@@ -349,7 +373,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "at_least": {
@@ -362,7 +387,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "at_most": {
@@ -375,7 +401,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "ceil": {
@@ -388,7 +415,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "divided_by": {
@@ -401,7 +429,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "floor": {
@@ -414,7 +443,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "minus": {
@@ -427,7 +457,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "plus": {
@@ -440,7 +471,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "modulo": {
@@ -453,7 +485,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "times": {
@@ -466,7 +499,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "round": {
@@ -479,7 +513,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "url_decode": {
@@ -492,7 +527,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "url_encode": {
@@ -505,7 +541,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "cgi_escape": {
@@ -518,7 +555,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "uri_escape": {
@@ -531,7 +569,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "slugify": {
@@ -544,7 +583,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "join": {
@@ -557,7 +597,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "last": {
@@ -570,7 +611,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "first": {
@@ -583,7 +625,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "reverse": {
@@ -596,7 +639,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "sort": {
@@ -609,7 +653,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "sort_natural": {
@@ -622,7 +667,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "size": {
@@ -635,7 +681,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "map": {
@@ -648,7 +695,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "sum": {
@@ -661,7 +709,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "compact": {
@@ -674,7 +723,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "concat": {
@@ -687,7 +737,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "push": {
@@ -700,7 +751,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "unshift": {
@@ -713,7 +765,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "pop": {
@@ -726,7 +779,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "shift": {
@@ -739,7 +793,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "slice": {
@@ -752,7 +807,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "where": {
@@ -765,7 +821,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "reject": {
@@ -778,7 +835,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "where_exp": {
@@ -791,7 +849,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "reject_exp": {
@@ -804,7 +863,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "group_by": {
@@ -820,7 +880,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "has": {
@@ -833,7 +894,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "has_exp": {
@@ -846,7 +908,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "find_index": {
@@ -859,7 +922,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "find_index_exp": {
@@ -872,7 +936,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "find": {
@@ -885,7 +950,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "find_exp": {
@@ -898,7 +964,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "uniq": {
@@ -911,7 +978,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "sample": {
@@ -942,7 +1010,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "prepend": {
@@ -955,7 +1024,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "lstrip": {
@@ -968,7 +1038,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "downcase": {
@@ -981,7 +1052,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "upcase": {
@@ -994,7 +1066,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "remove": {
@@ -1007,7 +1080,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "remove_first": {
@@ -1020,7 +1094,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "remove_last": {
@@ -1033,7 +1108,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "rstrip": {
@@ -1046,7 +1122,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "split": {
@@ -1059,7 +1136,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "strip": {
@@ -1072,7 +1150,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "strip_newlines": {
@@ -1085,7 +1164,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "squish": {
@@ -1098,7 +1178,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "capitalize": {
@@ -1111,7 +1192,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "replace": {
@@ -1124,7 +1206,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "replace_first": {
@@ -1137,7 +1220,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "replace_last": {
@@ -1150,7 +1234,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "truncate": {
@@ -1163,7 +1248,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "truncatewords": {
@@ -1176,7 +1262,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "normalize_whitespace": {
@@ -1189,7 +1276,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "number_of_words": {
@@ -1202,7 +1290,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "array_to_sentence_string": {
@@ -1230,7 +1319,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "raw": {
@@ -1249,7 +1339,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "json": {
@@ -1262,7 +1353,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "inspect": {
@@ -1349,7 +1441,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "strictVariables": {
@@ -1362,7 +1455,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "ownPropertyOnly": {
@@ -1375,7 +1469,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "lenientIf": {
@@ -1391,7 +1486,8 @@
         "test/partial-bindings.test.ts",
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
-        "test/expression-filters.test.ts"
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts"
       ]
     },
     "keepOutputType": {

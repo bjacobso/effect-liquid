@@ -6,7 +6,7 @@ import { filters as stringFilters } from "./StringFilters.js";
 import { filters as urlFilters } from "./UrlFilters.js";
 import { empty, isArray, lookup, stringify, truthy, type Value } from "./Value.js";
 
-const number = (v: Value | undefined) => Number.parseFloat(stringify(v)) || 0;
+const number = (v: Value | undefined) => numeric(v) || 0;
 const entries: [string, Filter<BuiltinFilterError>][] = [...stringFilters, ...urlFilters].map(
   ([name, filter]) => [name, filter],
 );
@@ -37,7 +37,6 @@ for (const [name, fn] of Object.entries({
   plus: (a: number, b: number) => a + b,
   minus: (a: number, b: number) => a - b,
   times: (a: number, b: number) => a * b,
-  divided_by: (a: number, b: number) => a / b,
   modulo: (a: number, b: number) => ((a % b) + b) % b,
   at_least: Math.max,
   at_most: Math.min,
@@ -47,6 +46,20 @@ for (const [name, fn] of Object.entries({
     { input: "number", output: "number", argument: "number", minArgs: 1, maxArgs: 1 },
     (v, a) => fn(number(v), number(a[0])),
   );
+define(
+  "divided_by",
+  {
+    input: "number",
+    output: "number",
+    positionalArguments: ["number", "boolean"],
+    minArgs: 1,
+    maxArgs: 2,
+  },
+  (v, a) => {
+    const quotient = number(v) / number(a[0]);
+    return number(a[1]) ? Math.floor(quotient) : quotient;
+  },
+);
 for (const [name, fn] of Object.entries({
   abs: Math.abs,
   ceil: Math.ceil,
@@ -57,8 +70,11 @@ define(
   "round",
   { input: "number", output: "number", argument: "number", minArgs: 0, maxArgs: 1 },
   (v, a) => {
-    const scale = 10 ** Math.trunc(number(a[0]));
-    return Math.round(number(v) * scale) / scale;
+    const scale = 10 ** number(a[0]);
+    const scaled = number(v) * scale;
+    // Compensate for binary multiplication error at decimal ties, then round
+    // the magnitude so negative ties also round away from zero.
+    return (Math.sign(scaled) * Math.round(Math.abs(scaled) * (1 + Number.EPSILON))) / scale;
   },
 );
 define("first", { input: "any", output: "unknown", minArgs: 0, maxArgs: 0 }, (v) =>

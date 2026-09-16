@@ -80,6 +80,7 @@ Exit: multi-file rendering and analysis agree about scopes. A changed child inva
 - [ ] Complete dynamic bracket-property evaluation, property-based grouping, and missing-versus-nil semantics.
 - [x] Add string truncation, first/last replacement/removal, custom trim sets, whitespace/word-count, and HTML/text filters with coercion and malformed-input tests.
 - [x] Add URL encoding/decoding, CGI/URI escaping, and slugify modes with typed malformed-input failures and checker metadata.
+- [x] Correct arithmetic coercion, decimal/negative rounding, and optional floored division; add positional argument types and differential numeric boundary tests.
 - [ ] Expand remaining filters by family, with runtime semantics, analysis/type metadata hooks, and conformance fixtures in each batch.
 - [x] Implement or explicitly defer each remaining option and host adapter. Keep platform commerce features outside the core.
 - [ ] Add bounded fuzz/differential runs and initial parse/render/analysis/stream benchmarks; establish measured regression budgets.
