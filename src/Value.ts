@@ -38,17 +38,22 @@ export function lookup(value: Value | undefined, key: Value | undefined): Value 
   const name = stringify(key);
   if (forbidden(name)) return undefined;
   if (isArray(value) || typeof value === "string") {
-    if (name === "size") return value.length;
+    if (name === "size" || name === "length") return value.length;
     if (name === "first" && isArray(value)) return value[0];
     if (name === "last" && isArray(value)) return value[value.length - 1];
-    if (/^-?\d+$/.test(name)) {
-      const index = Number(name);
-      return value[index < 0 ? value.length + index : index];
+    if (typeof key === "number" || /^(?:0|[1-9]\d*)$/.test(name)) {
+      let index = Number(key);
+      if (!Number.isInteger(index)) return undefined;
+      if (index < 0 && isArray(value) && typeof key === "number") index += value.length;
+      return value[index];
     }
     return undefined;
   }
-  if (typeof value === "object")
-    return Object.getOwnPropertyDescriptor(value, name)?.value as Value | undefined;
+  if (typeof value === "object") {
+    const property = Object.getOwnPropertyDescriptor(value, name);
+    if (property) return property.value as Value | undefined;
+    if (name === "size") return Object.keys(value).length;
+  }
   return undefined;
 }
 export function normalize(

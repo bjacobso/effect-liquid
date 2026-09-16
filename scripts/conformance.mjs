@@ -51,6 +51,7 @@ const inventory = (names, implemented) =>
                 "test/numeric-filters.test.ts",
                 "test/base64-filters.test.ts",
                 "test/grouped-expressions.test.ts",
+                "test/property-lookup.test.ts",
               ],
             }
           : {}),
@@ -85,7 +86,7 @@ const manifest = {
   syntax: {
     identifiers: "ASCII letter/underscore followed by word characters or hyphens",
     lookups:
-      "Variable-rooted dot and bracket access; computed lookup indices; literal receiver indexing deferred",
+      "Variable-rooted dot and bracket access; computed lookup indices; sequence length/size and record size fallback; literal receiver indexing deferred",
     expressions:
       "Literals, ranges, comparisons, contains, not, right-associated and/or, filter pipelines; opt-in parenthesized conditions and pipelines",
     partials:

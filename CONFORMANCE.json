@@ -32,7 +32,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "for": {
@@ -48,7 +49,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "capture": {
@@ -64,7 +66,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "case": {
@@ -80,7 +83,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "comment": {
@@ -96,7 +100,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "include": {
@@ -112,7 +117,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "render": {
@@ -128,7 +134,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "decrement": {
@@ -144,7 +151,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "increment": {
@@ -160,7 +168,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "cycle": {
@@ -176,7 +185,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "if": {
@@ -192,7 +202,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "layout": {
@@ -214,7 +225,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "tablerow": {
@@ -230,7 +242,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "unless": {
@@ -246,7 +259,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "break": {
@@ -262,7 +276,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "continue": {
@@ -278,7 +293,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "echo": {
@@ -294,7 +310,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "liquid": {
@@ -310,7 +327,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "#": {
@@ -326,7 +344,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     }
   },
@@ -344,7 +363,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "xml_escape": {
@@ -360,7 +380,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "escape_once": {
@@ -376,7 +397,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "newline_to_br": {
@@ -392,7 +414,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "strip_html": {
@@ -408,7 +431,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "abs": {
@@ -424,7 +448,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "at_least": {
@@ -440,7 +465,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "at_most": {
@@ -456,7 +482,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "ceil": {
@@ -472,7 +499,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "divided_by": {
@@ -488,7 +516,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "floor": {
@@ -504,7 +533,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "minus": {
@@ -520,7 +550,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "plus": {
@@ -536,7 +567,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "modulo": {
@@ -552,7 +584,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "times": {
@@ -568,7 +601,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "round": {
@@ -584,7 +618,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "url_decode": {
@@ -600,7 +635,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "url_encode": {
@@ -616,7 +652,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "cgi_escape": {
@@ -632,7 +669,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "uri_escape": {
@@ -648,7 +686,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "slugify": {
@@ -664,7 +703,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "join": {
@@ -680,7 +720,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "last": {
@@ -696,7 +737,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "first": {
@@ -712,7 +754,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "reverse": {
@@ -728,7 +771,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "sort": {
@@ -744,7 +788,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "sort_natural": {
@@ -760,7 +805,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "size": {
@@ -776,7 +822,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "map": {
@@ -792,7 +839,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "sum": {
@@ -808,7 +856,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "compact": {
@@ -824,7 +873,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "concat": {
@@ -840,7 +890,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "push": {
@@ -856,7 +907,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "unshift": {
@@ -872,7 +924,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "pop": {
@@ -888,7 +941,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "shift": {
@@ -904,7 +958,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "slice": {
@@ -920,7 +975,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "where": {
@@ -936,7 +992,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "reject": {
@@ -952,7 +1009,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "where_exp": {
@@ -968,7 +1026,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "reject_exp": {
@@ -984,7 +1043,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "group_by": {
@@ -1003,7 +1063,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "has": {
@@ -1019,7 +1080,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "has_exp": {
@@ -1035,7 +1097,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "find_index": {
@@ -1051,7 +1114,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "find_index_exp": {
@@ -1067,7 +1131,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "find": {
@@ -1083,7 +1148,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "find_exp": {
@@ -1099,7 +1165,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "uniq": {
@@ -1115,7 +1182,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "sample": {
@@ -1149,7 +1217,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "prepend": {
@@ -1165,7 +1234,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "lstrip": {
@@ -1181,7 +1251,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "downcase": {
@@ -1197,7 +1268,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "upcase": {
@@ -1213,7 +1285,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "remove": {
@@ -1229,7 +1302,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "remove_first": {
@@ -1245,7 +1319,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "remove_last": {
@@ -1261,7 +1336,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "rstrip": {
@@ -1277,7 +1353,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "split": {
@@ -1293,7 +1370,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "strip": {
@@ -1309,7 +1387,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "strip_newlines": {
@@ -1325,7 +1404,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "squish": {
@@ -1341,7 +1421,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "capitalize": {
@@ -1357,7 +1438,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "replace": {
@@ -1373,7 +1455,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "replace_first": {
@@ -1389,7 +1472,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "replace_last": {
@@ -1405,7 +1489,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "truncate": {
@@ -1421,7 +1506,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "truncatewords": {
@@ -1437,7 +1523,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "normalize_whitespace": {
@@ -1453,7 +1540,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "number_of_words": {
@@ -1469,7 +1557,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "array_to_sentence_string": {
@@ -1488,7 +1577,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "base64_decode": {
@@ -1504,7 +1594,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "sha256": {
@@ -1526,7 +1617,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "raw": {
@@ -1548,7 +1640,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "json": {
@@ -1564,7 +1657,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "inspect": {
@@ -1654,7 +1748,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "strictVariables": {
@@ -1670,7 +1765,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "ownPropertyOnly": {
@@ -1686,7 +1782,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "lenientIf": {
@@ -1705,7 +1802,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "keepOutputType": {
@@ -1727,7 +1825,8 @@
         "test/expression-filters.test.ts",
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
-        "test/grouped-expressions.test.ts"
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts"
       ]
     },
     "memoryLimit": {
@@ -1745,7 +1844,7 @@
   },
   "syntax": {
     "identifiers": "ASCII letter/underscore followed by word characters or hyphens",
-    "lookups": "Variable-rooted dot and bracket access; computed lookup indices; literal receiver indexing deferred",
+    "lookups": "Variable-rooted dot and bracket access; computed lookup indices; sequence length/size and record size fallback; literal receiver indexing deferred",
     "expressions": "Literals, ranges, comparisons, contains, not, right-associated and/or, filter pipelines; opt-in parenthesized conditions and pipelines",
     "partials": "Literal or variable template names and comma-separated named arguments. with/for/as and interpolated filenames deferred.",
     "loops": "limit, numeric offset, reversed, else; offset:continue deferred"

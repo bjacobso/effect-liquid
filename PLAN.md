@@ -41,6 +41,7 @@ Exit: fixtures cover quoted delimiters, CRLF/Unicode spans, nested blocks, dynam
 - [x] Choose finite documented limits for input, parsing, work, nesting, iterations, and output; enforce them before excessive allocation.
 - [x] Differential-test each supported construct and option against the pin, including assignment/capture and loop scope boundaries.
 - [x] Check extension failures, no context mutation, independent concurrent renders, and interruption during large loops.
+- [x] Add sequence length, record size fallback, canonical index keys, and negative numeric tuple-index checking while retaining own-property safety.
 
 Exit: the README render example runs; every claimed subset feature has passing conformance cases or an explicit divergence. Empty strings and zero follow Liquid truthiness. Missing/strict behavior, prototype/getter restrictions, shadowing, and failure locations have regression tests. No `any` escape in the public extension contract.
 

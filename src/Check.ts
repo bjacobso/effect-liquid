@@ -57,7 +57,15 @@ export const check = <E = never, R = never>(
               const field = Object.getOwnPropertyDescriptor(t.fields, k)?.value as
                 | T.Type
                 | undefined;
-              if (field) return field;
+              if (field)
+                return k === "size"
+                  ? T.union(
+                      ...T.members(field).map((member) =>
+                        member._tag === "Missing" ? T.number : member,
+                      ),
+                    )
+                  : field;
+              if (k === "size") return t.index ? T.union(t.index, T.number) : T.number;
               if (t.index) return t.index;
               report("UnknownProperty", `Unknown property '${k}'`, at);
               return T.unknown;
@@ -71,14 +79,20 @@ export const check = <E = never, R = never>(
             t._tag === "String" ||
             (t._tag === "Literal" && typeof t.value === "string")
           ) {
-            if (key._tag === "Literal" && key.value === "size") return T.number;
+            if (key._tag === "Literal" && (key.value === "size" || key.value === "length"))
+              return T.number;
             if (key._tag === "Literal" && (key.value === "first" || key.value === "last"))
               return t._tag === "Array"
                 ? T.optional(t.item)
                 : t._tag === "Tuple"
                   ? T.optional(T.union(...t.items))
                   : T.unknown;
-            if (!T.members(key).every((k) => T.kind(k) === "number")) {
+            const indexKey = (k: T.Type) =>
+              T.kind(k) === "number" ||
+              (k._tag === "Literal" &&
+                typeof k.value === "string" &&
+                /^(?:0|[1-9]\d*)$/.test(k.value));
+            if (!T.members(key).every(indexKey)) {
               report("InvalidIndex", "Expected numeric index", at);
               return T.unknown;
             }
@@ -87,7 +101,11 @@ export const check = <E = never, R = never>(
               : t._tag === "Tuple"
                 ? T.optional(
                     key._tag === "Literal"
-                      ? (t.items[Number(key.value)] ?? T.missing)
+                      ? (t.items[
+                          typeof key.value === "number" && key.value < 0
+                            ? t.items.length + key.value
+                            : Number(key.value)
+                        ] ?? T.missing)
                       : T.union(...t.items),
                   )
                 : T.optional(T.string);
