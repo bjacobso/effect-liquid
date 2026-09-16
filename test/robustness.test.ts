@@ -87,7 +87,7 @@ it("does not certify unmodeled loop-carried assignments", async () => {
 });
 it("rejects unsupported and duplicate argument constructs explicitly", async () => {
   for (const source of [
-    "{% for p in ps offset:continue %}{% endfor %}",
+    "{% for p in ps offset:continue offset:1 %}{% endfor %}",
     '{% render "p", x: a, x: b %}',
     "{{ x | default: y, allow_false: a, allow_false: b }}",
     '{% render "prefix/{{name}}" %}',

@@ -1,5 +1,5 @@
 import { Effect } from "effect";
-import type { Document, Expression, Node } from "./Ast.js";
+import type { Document, Expression, Node, PartialBinding } from "./Ast.js";
 import { ParseError } from "./Diagnostic.js";
 import { lex, type ParseOptions, type Token } from "./Lexer.js";
 import { make, type Source, span } from "./Source.js";
@@ -339,6 +339,7 @@ class Templates {
         let limit: Expression | undefined;
         let offset: Expression | undefined;
         let reversed = false;
+        let offsetContinue = false;
         let cols: Expression | undefined;
         while (e.pos < e.words.length) {
           if (tag === "tablerow" && e.take("cols")) {
@@ -353,15 +354,18 @@ class Templates {
             e.need(":");
             limit = e.atom();
           } else if (e.take("offset")) {
-            if (offset) e.fail("Duplicate offset");
+            if (offset || offsetContinue) e.fail("Duplicate offset");
             e.need(":");
             offset = e.atom();
             if (
               offset._tag === "Lookup" &&
               offset.root === "continue" &&
               offset.segments.length === 0
-            )
-              e.fail("offset:continue is not supported yet");
+            ) {
+              if (tag === "tablerow") e.fail("offset:continue is only supported for for loops");
+              offsetContinue = true;
+              offset = undefined;
+            }
           } else e.fail("Unsupported loop option");
         }
         if (tag === "tablerow") {
@@ -388,6 +392,11 @@ class Templates {
         }
         nodes.push({
           _tag: "For",
+          key: JSON.stringify([
+            name,
+            t.text.slice(collection.span.start - t.offset, collection.span.end - t.offset),
+          ]),
+          ...(offsetContinue ? { offsetContinue } : {}),
           name,
           collection,
           ...(limit ? { limit } : {}),
@@ -436,14 +445,38 @@ class Templates {
         )
           e.fail("Interpolated template filenames are not supported yet");
         const args: Record<string, Expression> = Object.create(null);
-        while (e.take(",")) {
+        let withBinding: PartialBinding | undefined;
+        let forBinding: PartialBinding | undefined;
+        while (e.pos < e.words.length) {
+          e.take(",");
           const name = e.name();
-          e.need(":");
-          if (Object.hasOwn(args, name)) e.fail(`Duplicate partial argument: ${name}`);
-          args[name] = e.atom();
+          if ((name === "with" || (name === "for" && tag === "render")) && !e.peek(":")) {
+            const value = e.atom();
+            const alias = tag === "render" && e.take("as") ? e.name() : undefined;
+            const binding = { value, ...(alias ? { alias } : {}) };
+            if (name === "with") {
+              if (withBinding) e.fail("Duplicate with binding");
+              withBinding = binding;
+            } else {
+              if (forBinding) e.fail("Duplicate for binding");
+              forBinding = binding;
+            }
+          } else {
+            e.need(":");
+            if (Object.hasOwn(args, name)) e.fail(`Duplicate partial argument: ${name}`);
+            args[name] = e.atom();
+          }
         }
         e.done();
-        nodes.push({ _tag: "Partial", mode: tag, template, args, span: t.span });
+        nodes.push({
+          _tag: "Partial",
+          mode: tag,
+          template,
+          args,
+          ...(withBinding ? { with: withBinding } : {}),
+          ...(forBinding ? { for: forBinding } : {}),
+          span: t.span,
+        });
       } else e.fail(`Unsupported tag '${tag}'`);
     }
     return nodes;

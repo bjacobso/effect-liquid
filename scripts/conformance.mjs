@@ -43,6 +43,7 @@ const inventory = (names, implemented) =>
                 "test/engine.test.ts",
                 "test/compatibility-expansion.test.ts",
                 "test/blocks.test.ts",
+                "test/partial-bindings.test.ts",
               ],
             }
           : {}),

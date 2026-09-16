@@ -31,6 +31,10 @@ export type Expression =
       readonly named: Readonly<Record<string, Expression>>;
       readonly span: Span;
     };
+export interface PartialBinding {
+  readonly value: Expression;
+  readonly alias?: string;
+}
 export type Node =
   | {
       readonly _tag: "Counter";
@@ -81,6 +85,8 @@ export type Node =
     }
   | {
       readonly _tag: "For";
+      readonly key: string;
+      readonly offsetContinue?: boolean;
       readonly name: string;
       readonly collection: Expression;
       readonly limit?: Expression;
@@ -104,6 +110,8 @@ export type Node =
   | {
       readonly _tag: "Partial";
       readonly mode: "render" | "include";
+      readonly with?: PartialBinding;
+      readonly for?: PartialBinding;
       readonly template: Expression;
       readonly args: Readonly<Record<string, Expression>>;
       readonly span: Span;

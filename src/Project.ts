@@ -65,6 +65,7 @@ export const analyzeProject = (
           const childResolve = (p: string): readonly string[] => {
             const root = /^[^.[]+/.exec(p)?.[0] ?? p;
             const suffix = p.slice(root.length);
+            if (dep.iteration && root === "forloop") return [];
             const argument = Object.getOwnPropertyDescriptor(dep.args, root)?.value as
               | Dependency["args"][string]
               | undefined;
@@ -76,7 +77,9 @@ export const analyzeProject = (
                 const origins = occurrence?.external
                   ? [path(argument)]
                   : (occurrence?.derivedPaths ?? []);
-                return origins.flatMap((origin) => resolve(origin + suffix));
+                return origins.flatMap((origin) =>
+                  resolve(origin + (dep.iteration?.name === root ? "[*]" : "") + suffix),
+                );
               }
               return [];
             }

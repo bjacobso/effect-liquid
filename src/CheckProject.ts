@@ -78,9 +78,37 @@ export const checkProject = <E = never, R = never>(
             incomplete("Shared include contract requires a flow summary", doc);
             continue;
           }
-          const fields: Record<string, T.Type> = { ...options.globals };
-          for (const [name, arg] of Object.entries(dep.args))
-            fields[name] = result.expressionTypes[`${arg.span.start}:${arg.span.end}`] ?? T.unknown;
+          const fields: Record<string, T.Type> = Object.assign(
+            Object.create(null),
+            options.globals,
+          );
+          for (const [name, arg] of Object.entries(dep.args)) {
+            const type = result.expressionTypes[`${arg.span.start}:${arg.span.end}`] ?? T.unknown;
+            fields[name] =
+              dep.iteration?.name === name
+                ? T.union(
+                    ...T.members(type).map((member) =>
+                      member._tag === "Array"
+                        ? member.item
+                        : member._tag === "Tuple"
+                          ? T.union(...member.items)
+                          : member._tag === "String"
+                            ? T.string
+                            : T.unknown,
+                    ),
+                  )
+                : type;
+          }
+          if (dep.iteration)
+            fields.forloop = T.record({
+              index: T.number,
+              index0: T.number,
+              rindex: T.number,
+              rindex0: T.number,
+              first: T.boolean,
+              last: T.boolean,
+              length: T.number,
+            });
           const actual = T.record(fields);
           const expected =
             options.contracts?.[source.id] ?? options.contracts?.[dep.target] ?? actual;

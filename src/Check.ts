@@ -347,6 +347,8 @@ export const check = <E = never, R = never>(
           case "Partial":
             infer(n.template, env);
             for (const e of Object.values(n.args)) infer(e, env);
+            if (n.with) infer(n.with.value, env);
+            if (n.for) infer(n.for.value, env);
             unknown("Partial contract has not been checked", n.span);
             break;
         }

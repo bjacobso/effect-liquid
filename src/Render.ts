@@ -43,6 +43,7 @@ export const layer = (config: Partial<Config> = {}) =>
 interface State {
   scopes: Record<string, Value>[];
   cycles: Map<string, number>;
+  continuations: Map<string, number>;
   steps: number;
   iterations: number;
   outputBytes: number;
@@ -66,6 +67,24 @@ function get(state: State, name: string): Value | undefined {
     if (value !== undefined) return value;
   }
   return undefined;
+}
+function enumerable(value: Value | undefined): readonly Value[] {
+  if (isArray(value)) return value;
+  if (typeof value === "string") return value ? [value] : [];
+  if (value && typeof value === "object")
+    return Object.entries(value).map(([key, item]) => [key, item]);
+  return [];
+}
+function loopInfo(index: number, length: number): Record<string, Value> {
+  return {
+    index: index + 1,
+    index0: index,
+    rindex: length - index,
+    rindex0: length - index - 1,
+    first: index === 0,
+    last: index === length - 1,
+    length,
+  };
 }
 function equal(a: Value | undefined, b: Value | undefined): boolean {
   if (a == null && b == null) return true;
@@ -266,29 +285,28 @@ function nodes<E, R>(
                   case "For":
                   case "TableRow": {
                     const collection = yield* ev(node.collection);
-                    let values: readonly Value[] = isArray(collection)
-                      ? collection
-                      : collection && typeof collection === "object"
-                        ? Object.entries(collection).map(([k, v]) => [k, v])
-                        : node._tag === "TableRow" && typeof collection === "string" && collection
-                          ? [collection]
-                          : [];
-                    const offset = node.offset ? Number(yield* ev(node.offset)) : 0;
+                    let values = enumerable(collection);
+                    if (node._tag === "For" && !values.length)
+                      return nodes(node.otherwise, state, registry);
+                    const offset =
+                      node._tag === "For" && node.offsetContinue
+                        ? (state.continuations.get(node.key) ?? 0)
+                        : node.offset
+                          ? Number(yield* ev(node.offset))
+                          : 0;
                     const limit = node.limit ? Number(yield* ev(node.limit)) : values.length;
-                    const start = node._tag === "TableRow" ? offset : Math.max(0, offset);
-                    values = values.slice(
-                      start,
-                      start + (node._tag === "TableRow" ? limit : Math.max(0, limit)),
-                    );
+                    values =
+                      node._tag === "For"
+                        ? values.slice(offset).slice(0, limit)
+                        : values.slice(offset, offset + limit);
+                    if (node._tag === "For")
+                      state.continuations.set(node.key, offset + values.length);
                     if (node._tag === "For" && node.reversed) values = [...values].reverse();
                     const cols =
                       node._tag === "TableRow" && node.cols
                         ? Number(stringify(yield* ev(node.cols))) || values.length
                         : values.length;
-                    if (!values.length)
-                      return node._tag === "For"
-                        ? nodes(node.otherwise, state, registry)
-                        : Stream.empty;
+                    if (!values.length) return Stream.empty;
                     let stopped = false;
                     return Stream.fromIterable(
                       values.map((value, index) => ({ value, index })),
@@ -307,13 +325,7 @@ function nodes<E, R>(
                           state.scopes.push({
                             [node.name]: value,
                             [node._tag === "TableRow" ? "tablerowloop" : "forloop"]: {
-                              index: index + 1,
-                              index0: index,
-                              rindex: values.length - index,
-                              rindex0: values.length - index - 1,
-                              first: index === 0,
-                              last: index === values.length - 1,
-                              length: values.length,
+                              ...loopInfo(index, values.length),
                               ...(node._tag === "TableRow"
                                 ? {
                                     row: Math.floor(index / cols) + 1,
@@ -367,22 +379,52 @@ function nodes<E, R>(
                     const args: Record<string, Value> = Object.create(null);
                     for (const [key, value] of Object.entries(node.args))
                       args[key] = (yield* ev(value)) ?? null;
+                    if (node.with)
+                      args[node.with.alias ?? name] = (yield* ev(node.with.value)) ?? null;
+                    const items = node.for ? enumerable(yield* ev(node.for.value)) : [null];
+                    if (!items.length) return Stream.empty;
                     const loader = yield* TemplateLoader;
                     const source = yield* loader.load(name, node.span.sourceId, node.mode);
                     const document = yield* parse(source);
                     const old = state.scopes;
                     const oldCycles = state.cycles;
+                    const oldContinuations = state.continuations;
                     state.scopes =
                       node.mode === "render"
-                        ? [old[0]!, args, Object.create(null)]
+                        ? [old[0]!, Object.create(null), args]
                         : [...old, args];
-                    if (node.mode === "render") state.cycles = new Map();
+                    if (node.mode === "render") {
+                      state.cycles = new Map();
+                      state.continuations = new Map();
+                    }
                     state.depth++;
-                    return nodes(document.body, state, registry).pipe(
+                    return Stream.fromIterable(
+                      items.map((value, index) => ({ value, index })),
+                    ).pipe(
+                      Stream.flatMap(({ value, index }) =>
+                        Stream.suspend(() => {
+                          if (node.for) {
+                            if (++state.iterations > state.config.maxIterations)
+                              return Stream.fail(
+                                new RenderError({
+                                  code: "ResourceLimitExceeded",
+                                  message: "Iteration limit exceeded",
+                                  span: node.span,
+                                }),
+                              );
+                            // The pinned oracle binds an omitted for-alias to the literal key "undefined".
+                            const alias = node.for.alias ?? "undefined";
+                            args[alias] = value;
+                            args.forloop = loopInfo(index, items.length);
+                          }
+                          return nodes(document.body, state, registry);
+                        }),
+                      ),
                       Stream.ensuring(
                         Effect.sync(() => {
                           state.scopes = old;
                           state.cycles = oldCycles;
+                          state.continuations = oldContinuations;
                           state.depth--;
                         }),
                       ),
@@ -456,6 +498,7 @@ export function renderStream<E = never, R = never>(
           Object.create(null),
         ],
         cycles: new Map(),
+        continuations: new Map(),
         steps: 0,
         iterations: 0,
         outputBytes: 0,

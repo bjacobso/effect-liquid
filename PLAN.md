@@ -58,7 +58,8 @@ Release gate A remains closed: M3 fixed-point/control-flow work and licensing re
 ## M4 — Partial templates and project analysis
 
 - [x] Define canonical loader identity, source revision, referrer/kind resolution, and in-memory loader composition.
-- [ ] Implement `render` and `include`, covering parameters, `with`/`for`, globals, isolation versus shared scope, and dynamic names.
+- [x] Implement `render with/for` and `include with`, named arguments, isolated/shared state, per-item metadata, and project binding/type propagation.
+- [ ] Complete interpolated filenames, include dialect differences, and remaining partial edge cases.
 - [ ] Add project analysis with dependency edges, caller/callee provenance, isolated-parameter diagnostics, unresolved edges, and bounded cyclic summaries.
 - [x] Add Node filesystem adapter with canonical-root checks, including symlinks and relative paths.
 - [ ] Add a bounded parsed-template cache keyed by source/registry/options revisions; track transitive summary invalidation.
@@ -72,6 +73,7 @@ Exit: multi-file rendering and analysis agree about scopes. A changed child inva
 - [x] Verify string/stream equivalence, late failure behavior, cancellation cleanup, slow-consumer backpressure, and global output/work accounting.
 - [x] Implement `increment`, `decrement`, and `cycle`, including partial scope isolation, stream replay, analysis, and checker support.
 - [x] Implement `liquid` blocks, inline comments, and `tablerow`, preserving source offsets and integrating streaming budgets, analysis, and checking.
+- [x] Implement `offset:continue`, loop cursor scope/isolation, and pinned slicing/empty-collection behavior.
 - [ ] Complete remaining `liquid`/`tablerow` syntax and control-flow quirks; implement `layout`/`block`.
 - [x] Add the initial collection-filter batch: sorting, mapping, summing, compacting, concatenation, uniqueness, sequence operations, slicing, property matching/searching; validate coercion and nonmutation.
 - [ ] Complete collection-filter expression variants, bracket-property strings, and missing-versus-nil semantics.

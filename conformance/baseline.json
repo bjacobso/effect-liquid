@@ -950,21 +950,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/dynamic-partials.yml:109:0": {
-      "fixtureHash": "0fab00b0a6f1201a8e2ce3242c006da50cac719753151b9e5ceb42bdca6ea563",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "c5b187715674dec5e59f26f6137f5bd709c87c36e6542532505598b3944534a5"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'with'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -978,7 +964,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'with'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -992,7 +978,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -1006,7 +992,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -1172,62 +1158,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/basics/for-loops.yml:114:0": {
-      "fixtureHash": "8561d03fe9453d05cadb0cdc50a0332cdb049ec354f2915760c5f5bfe02347e4",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "2791baf96f01254663bb98dbe9f91174ac2c326e9ad4d62ce4a15071e3dfd9e7"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "offset:continue is not supported yet"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/for-loops.yml:123:0": {
-      "fixtureHash": "3914713bf9fb56046fb654596b13da7fbb4dfc514bfb515bc1cf5f08ffc3a531",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "6cbfa64800baff030c475233511c842e6ca8815a8bcb83d77d5e2228c9e25ffd"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "offset:continue is not supported yet"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/for-loops.yml:153:0": {
-      "fixtureHash": "be20b9b2294da4d66211e29d1f41a851290728594bf1398ed8e608cd476c73c8",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "a3a961fa9a51cf4c850e03e283d624733cfc0b681b43ee26ffd4309b995877ad"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "offset:continue is not supported yet"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/for-loops.yml:166:0": {
-      "fixtureHash": "90fde95f604716f5024c7a692346ee007bbba39fbf4f83cd3bda5b7f5efead71",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "32471bcc8d96fed01a4b837a98d0d46c1ae5a48c38a70215aecf33c6cf565fa4"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "offset:continue is not supported yet"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/basics/for-loops.yml:188:0": {
       "fixtureHash": "c9b2ec4b1090ecfd36d9feca4525440941b0ede42c93d0d98288955eb1b204f4",
       "liquidjs": {
@@ -1237,48 +1167,6 @@
       "effectLiquid": {
         "kind": "output",
         "sha256": "44a7c27085a237e51aad68b4420d5ea47c1488260a12a0b229c7f9367f2d9f4b"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/for-loops.yml:23:0": {
-      "fixtureHash": "9d8bf5b3830e51a684e81f7366efe2a2d244fc125b3d96ba6d883703ad56ee31",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "6151bd4419d710b7877e3fdc97d131a18bfe8c3e6d1375f8b3d2061a298ba199"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "offset:continue is not supported yet"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/for-loops.yml:33:0": {
-      "fixtureHash": "2e9d1bda65f1e2559e5f9a306e9b738c0858eb0d7fac30e248720ddaddee647a",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "c532025184d7994c7c1b2c34f13b94f7904334de3cf04b3fc70cb892453c5d19"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "offset:continue is not supported yet"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/for-loops.yml:42:0": {
-      "fixtureHash": "489b6097c5739b34143f753d483da57374bede578a29a8d5fe39a5c5e214f939",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "d090c9ce401c12210eae21aa49e878e3dc518d1a10d76151ef8729393507ba6b"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "offset:continue is not supported yet"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -1458,20 +1346,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/basics/nested-parameters.yml:172:0": {
-      "fixtureHash": "de5ded226a07a5474296fe360c396512e0ebf87283aaa5a5d6368a1c42f37b08",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "19f9d964c501c9cbd2ab517f6d6b7fa12bbfa04a3be835a02e207f9a191047a6"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'with'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/basics/nested-parameters.yml:184:0": {
       "fixtureHash": "81140664ef7288da66090eb026dfae58f8d25f6513ae79e8122886f4b4a41e60",
       "liquidjs": {
@@ -1479,24 +1353,8 @@
         "sha256": "5ca0e6bbe953d0c00e3321bf2913fcbd935f0156004641532257c1bc90f1e4cf"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/nested-parameters.yml:210:0": {
-      "fixtureHash": "9433e997f812f8ab7cdab09a265e0a845e587938a26b618682615ebaa40997b3",
-      "liquidjs": {
         "kind": "output",
-        "sha256": "026e4a0fb767f0cf9e522d4f87e00c88bfd87a774b0b4fc0da6445cac3700cc3"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'with'"
+        "sha256": "5ca0e6bbe953d0c00e3321bf2913fcbd935f0156004641532257c1bc90f1e4cf"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -1597,38 +1455,8 @@
         "sha256": "99afb28982bfe749f18ab48f7892c724e0262f2c2ce7c6c08ce947b1b69f0bdf"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/partials.yml:121:0": {
-      "fixtureHash": "4916a703e8800dbef119ebe98012d7568670e547b271237b53476344767b73df",
-      "liquidjs": {
         "kind": "output",
-        "sha256": "7734653f29938c55a59be1e20adc523b2a3665927081c1cf020599bfb4489874"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/partials.yml:134:0": {
-      "fixtureHash": "516227e846507fb2546f595fe0048d97d9e37805b39ed081c18d953f53ccd54b",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "26d6a8ad97c75ffc548f6873e5e93ce475479e3e1a1097381e54221fb53ec1d2"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
+        "sha256": "99afb28982bfe749f18ab48f7892c724e0262f2c2ce7c6c08ce947b1b69f0bdf"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -1639,52 +1467,8 @@
         "sha256": "5ee9173b1b564e61afd2359a897c180b5ea83875a91a28537df4202aad4b3aa7"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/partials.yml:163:0": {
-      "fixtureHash": "d58fad2a57cd5ce83996624e654f4f9d4778ebe5888fbcbf297f9da9c0bcc5d2",
-      "liquidjs": {
         "kind": "output",
-        "sha256": "9b9a3cbf2b718a8f94ce348cb95246738a3a9871c6236f4da0a7cc126f03a8b4"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/partials.yml:177:0": {
-      "fixtureHash": "da3591b6680b368d13a0ba04be03697f7f8595ca69fb4e02cefc8e13d84afeb5",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "2c89aba322427ad4eeac77934268a242a2d54522fb056e8176a3eeaec3aff115"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/partials.yml:191:0": {
-      "fixtureHash": "e6c72f6538b953c35951b63d904869479a0c513309102461cd6fe8effcb17420",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "464438671fd3db7b9cac51ec06cefbb3fd09033610d8086dd003b948fd14a6cd"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
+        "sha256": "5ee9173b1b564e61afd2359a897c180b5ea83875a91a28537df4202aad4b3aa7"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -1695,24 +1479,8 @@
         "sha256": "125e984fed2f66fcca0b9f5a4cd3b2b4fd03726a6f366dbfdc2af95945c441cf"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/partials.yml:218:0": {
-      "fixtureHash": "5debdbd2ee2f9a0483ce2e790f75101d442233923668a355186278726efee610",
-      "liquidjs": {
         "kind": "output",
-        "sha256": "5ee9173b1b564e61afd2359a897c180b5ea83875a91a28537df4202aad4b3aa7"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
+        "sha256": "125e984fed2f66fcca0b9f5a4cd3b2b4fd03726a6f366dbfdc2af95945c441cf"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -1723,10 +1491,8 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
+        "kind": "output",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -1765,38 +1531,8 @@
         "sha256": "1207c2e94ff180dd6e85755c09394e238821d1c47314cd88893ad5dbb9c255b5"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'a'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/partials.yml:332:0": {
-      "fixtureHash": "de0ad11696a5d335ffbf226462f9d56730e5deb89c4d77970765cb0c9578e695",
-      "liquidjs": {
         "kind": "output",
         "sha256": "1207c2e94ff180dd6e85755c09394e238821d1c47314cd88893ad5dbb9c255b5"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'a'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/partials.yml:406:0": {
-      "fixtureHash": "7ef58344bc3385b0b0f187f2f0ae38ec53820703b180dda679ef58c733acc73e",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "c5b187715674dec5e59f26f6137f5bd709c87c36e6542532505598b3944534a5"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'with'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -1810,7 +1546,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'with'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -1824,7 +1560,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -1838,7 +1574,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -1852,7 +1588,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -1898,34 +1634,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/basics/partials.yml:597:0": {
-      "fixtureHash": "9ef8501e609363388916a932b8bb4749dca8930e211b18884a5e37ad753bd633",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "5ee9173b1b564e61afd2359a897c180b5ea83875a91a28537df4202aad4b3aa7"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'with'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/partials.yml:616:0": {
-      "fixtureHash": "e5c42fcff2029eaba2e90f1b8a0f5958aa64e93a4072b80fb9e43096d54bc199",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "d76213d78d05b0d8b20e64622d0927480d9c8cf7ddb66a6b248cb967cef3beea"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/basics/partials.yml:655:0": {
       "fixtureHash": "7446e84639e5f3b423d1ba85d63bc2b8b2328251dffd01b60bf11823631e7316",
       "liquidjs": {
@@ -1933,20 +1641,6 @@
       },
       "effectLiquid": {
         "kind": "parsed"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/partials.yml:669:0": {
-      "fixtureHash": "873724f24e2b6ceee7584b8130e45a89db85ade33be9352d0df62497ae31a4ec",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "5ee9173b1b564e61afd2359a897c180b5ea83875a91a28537df4202aad4b3aa7"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -1960,49 +1654,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/partials.yml:76:0": {
-      "fixtureHash": "bf3e88f3ca7044576e93848eb083dc4f3a9975c969f1402f1211e455ef54926a",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "c5b187715674dec5e59f26f6137f5bd709c87c36e6542532505598b3944534a5"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'with'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/partials.yml:87:0": {
-      "fixtureHash": "5c81030692f984b735c2f864f804633bb2c71b6ce9f3b7fba1fce9745b67b672",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "0ae5aa351fab3477432b6a9f48dec528d3eda5ff4884783b9a5a70c76a4352bc"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'with'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/partials.yml:98:0": {
-      "fixtureHash": "9fe26c1b878e5ad3be7e08eaebe6aa9be7b59f3428c8dc844d7fbfece9836c8c",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "d3fe418365672d58c5ed10700b37a420adee392cb638d139273685b2e7e42050"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'with'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3854,52 +3506,8 @@
         "sha256": "0534e7ee87253b417daf96bd123a215634b1237c895f4e68f894f301e9f9e40e"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/manual.yml:397:0": {
-      "fixtureHash": "dbb40b74df2edcb695f7111bc062dfb130738d0cb6d8fdbac5c7b0bd494ac2ca",
-      "liquidjs": {
         "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/manual.yml:406:0": {
-      "fixtureHash": "35e0ada3cf38de89ad1d4aa4376d096a2765afcbe32f51a789956606361019bf",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/manual.yml:416:0": {
-      "fixtureHash": "37b8fdc29622d71f45fb89cf6e48d8a080a5b56f34264abde21b3f478c0afc23",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "26d6a8ad97c75ffc548f6873e5e93ce475479e3e1a1097381e54221fb53ec1d2"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
+        "sha256": "0534e7ee87253b417daf96bd123a215634b1237c895f4e68f894f301e9f9e40e"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3910,10 +3518,8 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
+        "kind": "output",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3924,52 +3530,8 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/manual.yml:441:0": {
-      "fixtureHash": "7791a9cb764c7b89269132efd3e0832ade1ba4f8161832430e206399d883fd57",
-      "liquidjs": {
         "kind": "output",
-        "sha256": "26d6a8ad97c75ffc548f6873e5e93ce475479e3e1a1097381e54221fb53ec1d2"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/manual.yml:450:0": {
-      "fixtureHash": "49418c9fa90f2fadd1594fb71bae00c0ed3035da4cf38376cdbed2fb3ebee20b",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "ea10200ee37040254ab5944f0bb7dddd2786967efb2e835db27141ccd0549eef"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/manual.yml:459:0": {
-      "fixtureHash": "56bfcfe89363790508c19da70edf5bd22c9208a26ff6632b6a424b25b767580e",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "2214b6495616e517b836e1be147129302d8881b3c88fb5c6a903366e6c8cbcba"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'a'"
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3982,18 +3544,6 @@
       "effectLiquid": {
         "kind": "output",
         "sha256": "5ab869b5672ff287855accc26b943cb42a6ff4a91011b14c17ec142a65cbfe57"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/scalar_and_iteration_semantics.yml:33:0": {
-      "fixtureHash": "d38199fbae56bd576727310f4463e9e6d78eaa220fed53cf65d1335cbb90a4dd",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "5fe43833db95062dbe90f0752bce0e843338be6a11d4954af8524ed1c672a0ab"
-      },
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -4847,18 +4397,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/specs.yml:2316:0": {
-      "fixtureHash": "5288dc43bcb53cb06e71087f4245626dbb2d9fcf5785f4cf1826bde61345d5cc",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "bdb5a12b473383674d31c9068d13896278ca7979cf99cdd592c64b3994fcb5ce"
-      },
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/specs.yml:232:0": {
       "fixtureHash": "223f5245b606e20c8bdffb445d790b60e8d1cf38ea4640ea29ea6dc18838533b",
       "liquidjs": {
@@ -4873,18 +4411,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/specs.yml:2324:0": {
-      "fixtureHash": "640548f44fa98da129faf009b5f80079da55294ca0f7e532cea4eb6cb38e42cc",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "bdb5a12b473383674d31c9068d13896278ca7979cf99cdd592c64b3994fcb5ce"
-      },
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/specs.yml:2332:0": {
       "fixtureHash": "19975dc4a453433158fe200a722f6c20a94215fa28da5b2cfc7ee5fff90cc9ab",
       "liquidjs": {
@@ -4893,7 +4419,7 @@
       },
       "effectLiquid": {
         "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "sha256": "876ae99c6b44054bc919eb622631409d9764e3fdf91f065939b609bbc6370ee8"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -4925,34 +4451,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/specs.yml:2886:0": {
-      "fixtureHash": "71b3911f270c144d41fe195fbc32b5f9bb26a9ea88c17b3d57f4fc8d716ec1ba",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "fbc080f6b2edfb9280de5149bf2b3abd03acbb88421af5963eb6b191e4c59971"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "offset:continue is not supported yet"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:2915:0": {
-      "fixtureHash": "25973677ed79c33d88b6dcdf920c8943df8d5b1b88829e50c7f63b8c502de866",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "4d29015f2ed349f36f5dfd1502d8c394a509aab0663430323d66fb0a22db19f0"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "offset:continue is not supported yet"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/specs.yml:2944:0": {
       "fixtureHash": "f8008642173af01837b299955d764ab62d3c40bca2db2ff0cf0682b5984b4955",
       "liquidjs": {
@@ -4963,21 +4461,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "offset:continue is not supported yet"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:2968:0": {
-      "fixtureHash": "c7bfb376cf895721f2044a4129b1228b4740acc3f4f40f0dc7e47374b5a9e014",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "743cba9027c055473086fd8f00252e7318b0aa3632328ef68073643af9046a4e"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "offset:continue is not supported yet"
+        "message": "Duplicate offset"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -5233,7 +4717,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -5247,7 +4731,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -5261,21 +4745,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:3990:0": {
-      "fixtureHash": "a6bcc9f1b50c53e410c524d871c889d3f1527cb9cfd4c212531b093631373d1d",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "106c559bb630a0177886bf441f6fa12f319e35cc877636350ca5bcc1ccaadc3b"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'with'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -5289,49 +4759,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'with'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4025:0": {
-      "fixtureHash": "2f4f243e139e7680fcc9496ae94755656bbdd65caeaf73ce0022d6f66e95cc87",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "c6dcf947432102fcf25643e8440c90db6297673d222f703e791658337502d04b"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'echo1'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4033:0": {
-      "fixtureHash": "5d2e4286c1703104adc6edc5330f675eae83f24366d1b29665ba61fb9f713b34",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "10d77910e09f18c7c91f8341bfb3ee8207c549141d62cb1ffb189be156af26e5"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'echo1'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4041:0": {
-      "fixtureHash": "b2e71f602fd4bde5fcd79daaaf6fef011f14cf0e3828d2df8b5aee7a0ee0ef83",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "10d77910e09f18c7c91f8341bfb3ee8207c549141d62cb1ffb189be156af26e5"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'echo1'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -5345,7 +4773,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -5359,49 +4787,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4135:0": {
-      "fixtureHash": "c3c6df3c0e1ace62e7b0f078cefaa3048bcd1d1b11e43179523bbc2a8c5a88a2",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "d5b54208b43516a04badceb3347273c63bcffa6884db7d3586b10ae79b4a63bd"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'with'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4148:0": {
-      "fixtureHash": "df50b6e29bb9cd39593485f409dfee38a826b4e8bcf24e15bad7f75f0bb8b9c5",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "036ad4671b90964a071ad3343ce588b8ec0228ff124ab5b4853c6e0133ed8501"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'arg1'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4156:0": {
-      "fixtureHash": "365cd616d64fed932274af9f28e83a93499dfa09800f0aa80d1b8edfdd2c19f2",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "036ad4671b90964a071ad3343ce588b8ec0228ff124ab5b4853c6e0133ed8501"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'arg1'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -5529,34 +4915,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4880:0": {
-      "fixtureHash": "aab6b48d3500e79a97d5276f2f375a4433bfbd796f071d55eaf1752ed3e068f2",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "036ad4671b90964a071ad3343ce588b8ec0228ff124ab5b4853c6e0133ed8501"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'arg1'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4888:0": {
-      "fixtureHash": "5881967f11fc30b4b8a7f991b30442e4dd88b19804a583452af1cca8a0f5af2e",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "036ad4671b90964a071ad3343ce588b8ec0228ff124ab5b4853c6e0133ed8501"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'arg1'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/specs.yml:4948:0": {
       "fixtureHash": "57f9c00482b86e4725c1eedad801c98af0edbbfae9ffe1ac85a699d03f79bff9",
       "liquidjs": {
@@ -5564,24 +4922,8 @@
         "sha256": "240a85352a4db679bd1222c2a919decd6f72c15319cc8dddeaab096c4849bcbb"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4961:0": {
-      "fixtureHash": "b4d1f91bacde80256683ce8027b63903f6dd46d17ce9f8faa88e18fa5412c383",
-      "liquidjs": {
         "kind": "output",
-        "sha256": "93559909281db3a09ccf13b78ad0d1ae0ab8a82882c6466f444f4fae356286e8"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
+        "sha256": "240a85352a4db679bd1222c2a919decd6f72c15319cc8dddeaab096c4849bcbb"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -5592,38 +4934,8 @@
         "sha256": "26a00709478a23b3f46f9335d52fb7795a62b91d0de8fa36022cf1b600448745"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:5037:0": {
-      "fixtureHash": "9544d3f136780c17e57afd6acfc2460f973c86e274305bc709fbc927c6ca0cca",
-      "liquidjs": {
         "kind": "output",
-        "sha256": "106c559bb630a0177886bf441f6fa12f319e35cc877636350ca5bcc1ccaadc3b"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'with'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:5050:0": {
-      "fixtureHash": "b1f3dc3d62cf11b68cce24591590f10e2d85e0a6000334c8988df8c3fd211794",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "106c559bb630a0177886bf441f6fa12f319e35cc877636350ca5bcc1ccaadc3b"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'with'"
+        "sha256": "26a00709478a23b3f46f9335d52fb7795a62b91d0de8fa36022cf1b600448745"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -15897,7 +15209,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -15910,7 +15222,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected expression"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -15923,7 +15235,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -15936,7 +15248,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -15949,7 +15261,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -15962,7 +15274,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -15975,7 +15287,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -15988,7 +15300,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16001,7 +15313,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16014,7 +15326,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16027,7 +15339,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16040,7 +15352,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16053,7 +15365,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16066,7 +15378,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16079,7 +15391,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16092,7 +15404,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16105,7 +15417,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16118,7 +15430,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16131,7 +15443,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16144,7 +15456,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16157,7 +15469,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16170,7 +15482,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16183,7 +15495,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16196,7 +15508,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16209,7 +15521,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16222,7 +15534,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16235,7 +15547,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16274,7 +15586,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16287,7 +15599,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16300,7 +15612,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16313,7 +15625,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16326,7 +15638,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16339,7 +15651,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16352,7 +15664,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16365,7 +15677,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16378,7 +15690,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16391,7 +15703,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16404,7 +15716,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16417,7 +15729,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16430,7 +15742,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected ')'"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16443,7 +15755,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected ']'"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16456,7 +15768,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected ':'"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16469,7 +15781,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected '=='"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16482,7 +15794,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected '-'"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16508,7 +15820,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'extra'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16521,7 +15833,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected '42'"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16534,7 +15846,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected '('"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16560,7 +15872,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16573,7 +15885,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected '|'"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16586,7 +15898,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected '?'"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16599,7 +15911,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'hi'"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16612,7 +15924,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16625,7 +15937,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16638,7 +15950,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16651,7 +15963,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16664,7 +15976,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16677,7 +15989,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16690,7 +16002,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16703,7 +16015,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16716,7 +16028,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16729,7 +16041,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16742,7 +16054,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16755,7 +16067,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16768,7 +16080,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16781,7 +16093,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16820,7 +16132,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16833,7 +16145,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16846,7 +16158,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16859,7 +16171,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16872,7 +16184,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16885,7 +16197,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16898,7 +16210,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16911,7 +16223,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16924,7 +16236,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16937,7 +16249,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16950,7 +16262,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16963,7 +16275,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16976,7 +16288,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -16989,7 +16301,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17002,7 +16314,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17015,7 +16327,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17028,7 +16340,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17041,7 +16353,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17054,7 +16366,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17067,7 +16379,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17080,7 +16392,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17093,7 +16405,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17106,7 +16418,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17119,7 +16431,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17132,7 +16444,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17145,7 +16457,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17158,7 +16470,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17171,7 +16483,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17184,7 +16496,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17197,7 +16509,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17236,7 +16548,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17249,7 +16561,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17262,7 +16574,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17288,7 +16600,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17301,7 +16613,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17314,7 +16626,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17376,7 +16688,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17389,7 +16701,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17402,7 +16714,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'with'"
+        "message": "Expected expression"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17477,7 +16789,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -17516,7 +16828,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18055,7 +17367,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18068,7 +17380,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected expression"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18081,7 +17393,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18094,7 +17406,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18107,7 +17419,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18120,7 +17432,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18133,7 +17445,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18146,7 +17458,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18159,7 +17471,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18172,7 +17484,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18182,10 +17494,7 @@
         "kind": "parsed"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
+        "kind": "parsed"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18198,7 +17507,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18211,7 +17520,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18224,7 +17533,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18237,7 +17546,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected expression"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18250,7 +17559,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18263,7 +17572,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18276,7 +17585,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18289,7 +17598,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18302,7 +17611,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18315,7 +17624,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18328,7 +17637,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18341,7 +17650,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18354,7 +17663,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18367,7 +17676,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18380,7 +17689,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18393,7 +17702,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18432,7 +17741,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18445,7 +17754,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18455,10 +17764,7 @@
         "kind": "parsed"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
+        "kind": "parsed"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18471,7 +17777,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected property"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18484,7 +17790,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected property"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18497,7 +17803,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18510,7 +17816,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18523,7 +17829,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18536,7 +17842,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected ')'"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18549,7 +17855,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected ']'"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18562,7 +17868,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected ':'"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18575,7 +17881,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected '=='"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18588,7 +17894,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected '-'"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18601,7 +17907,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected '.'"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18614,7 +17920,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'extra'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18627,7 +17933,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected '42'"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18640,7 +17946,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected '('"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18653,7 +17959,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected '['"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18666,7 +17972,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18679,7 +17985,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected '|'"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18692,7 +17998,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected '?'"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18705,7 +18011,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'hi'"
+        "message": "Expected identifier"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18718,7 +18024,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18731,7 +18037,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18744,7 +18050,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18757,7 +18063,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18770,7 +18076,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18783,7 +18089,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18796,7 +18102,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18809,7 +18115,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18822,7 +18128,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18835,7 +18141,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18848,7 +18154,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18861,7 +18167,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18874,7 +18180,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18887,7 +18193,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18926,7 +18232,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18939,7 +18245,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18952,7 +18258,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18965,7 +18271,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18978,7 +18284,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18991,7 +18297,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19004,7 +18310,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19017,7 +18323,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19030,7 +18336,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19043,7 +18349,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19056,7 +18362,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19069,7 +18375,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19082,7 +18388,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19095,7 +18401,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19108,7 +18414,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19121,7 +18427,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19134,7 +18440,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19147,7 +18453,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19160,7 +18466,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19173,7 +18479,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19186,7 +18492,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19199,7 +18505,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19212,7 +18518,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19225,7 +18531,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19238,7 +18544,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19251,7 +18557,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19264,7 +18570,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19277,7 +18583,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19290,7 +18596,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19303,7 +18609,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19342,7 +18648,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19355,7 +18661,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19368,7 +18674,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19394,7 +18700,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19407,7 +18713,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19420,7 +18726,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'step'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19446,7 +18752,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19459,7 +18765,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'as'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19472,7 +18778,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'with'"
+        "message": "Expected expression"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19485,7 +18791,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19498,7 +18804,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected variable or literal"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -22262,21 +21568,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/partials/partials.yml:20:0": {
-      "fixtureHash": "958de6d7a06a17514ad9bbb87cfa2192024b5c0dfd28c5f09f76c6fff0576ba9",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "43846f461cc2ffde574963d4a4444f64a6a6938b455d13e93d36e1317535e21c"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'with'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -22301,20 +21593,6 @@
       "effectLiquid": {
         "kind": "output",
         "sha256": "19ea26b54fbdec440729d45df4449d2066864b7c4644442cebf39d0bb5c1dc56"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/partials/partials.yml:94:0": {
-      "fixtureHash": "38cb1a538608be3ee2bc2d2f290bddd4c402a270fb8e3d434d8e63ed123f0ee4",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "03189928f1ac460ccb0d544e1b64b6c47ef66bc6f3a8ad075b028f6c8ffbfc3d"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -25686,32 +24964,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquidjs:test/integration/static_analysis/variables.spec.ts:1059:21": {
-      "fixtureHash": "c51704f8ca8fb23faeb2d49a1cd2ec835c0085f07fdb9cb96cabbc0e3ca84b9a",
-      "liquidjs": {
-        "kind": "parsed"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'with'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/static_analysis/variables.spec.ts:1075:21": {
-      "fixtureHash": "e4bc745017cc0695122ec5c7a6cd990c94dcfc83ec93ebdb074352f959c5b33e",
-      "liquidjs": {
-        "kind": "parsed"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'with'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquidjs:test/integration/static_analysis/variables.spec.ts:131:21": {
       "fixtureHash": "c8cb0498c6fe6039c35cb0e597c9a7f8598bbdaf55cd32c9263fb3856a4e4abd",
       "liquidjs": {
@@ -25751,32 +25003,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquidjs:test/integration/static_analysis/variables.spec.ts:655:21": {
-      "fixtureHash": "010d2b2ead39609842ddcbdc570e9ee602e47945d9881ea435bc1052ecf86006",
-      "liquidjs": {
-        "kind": "parsed"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'with'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/static_analysis/variables.spec.ts:676:21": {
-      "fixtureHash": "03fe3ffb7a917c47281d55da888c3507ab2e187eea501c50f48947690055d2ef",
-      "liquidjs": {
-        "kind": "parsed"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'x'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquidjs:test/integration/static_analysis/variables.spec.ts:698:21": {
       "fixtureHash": "e9b9bfb1f339078f86d7c56317872854464ee4e0058377d2a2ff75b6689657fc",
       "liquidjs": {
@@ -25789,71 +25015,6 @@
         ]
       },
       "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/static_analysis/variables.spec.ts:794:21": {
-      "fixtureHash": "7d3baeae97edcb991446eb1df0c375dfd22b23ffb7327e79d0345ffe3137459a",
-      "liquidjs": {
-        "kind": "parsed"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'with'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/static_analysis/variables.spec.ts:815:21": {
-      "fixtureHash": "bf8e58eaa711b5ccd7f3c826efc5458883510417f3944ef8d53cf14ef8e3d919",
-      "liquidjs": {
-        "kind": "parsed"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'with'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/static_analysis/variables.spec.ts:835:21": {
-      "fixtureHash": "caa28293591ae52d6dadfdbc584e459f5a6327e2c509e88a4b5253540bae7be4",
-      "liquidjs": {
-        "kind": "parsed"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/static_analysis/variables.spec.ts:851:21": {
-      "fixtureHash": "30e670d648b24a2a878e8572657a3f42b6fac22274002f7b13b7c66063c9d3ad",
-      "liquidjs": {
-        "kind": "parsed"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'for'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/static_analysis/variables.spec.ts:871:21": {
-      "fixtureHash": "d8781343d1625c6e097fa351ffb7ec14f4f9b4bbfa8d759f3cfdbbd80457afa1",
-      "liquidjs": {
-        "kind": "parsed"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'x'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquidjs:test/integration/static_analysis/variables.spec.ts:908:21": {
       "fixtureHash": "b7c53a5a1ce3d4b2cf96c06f67a77aa94301be9f0380c9fc7b06a525a1e5ad55",
@@ -26742,48 +25903,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "ruby-liquid:test/integration/tags/for_tag_test.rb:140:4": {
-      "fixtureHash": "29187cf08bd7a8b94f4c56787be453714dc7209efb6371e4d823497a66c162ae",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "fbc080f6b2edfb9280de5149bf2b3abd03acbb88421af5963eb6b191e4c59971"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "offset:continue is not supported yet"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "ruby-liquid:test/integration/tags/for_tag_test.rb:159:4": {
-      "fixtureHash": "870e06953e16cd0e661c5866acce5b522ec8a3e97cde3e13c1bef0d225b0b21d",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "743cba9027c055473086fd8f00252e7318b0aa3632328ef68073643af9046a4e"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "offset:continue is not supported yet"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "ruby-liquid:test/integration/tags/for_tag_test.rb:178:4": {
-      "fixtureHash": "b41f9d95040697222204df96f12ad30214e7f733d128d757d1d00a078590c37c",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "4d29015f2ed349f36f5dfd1502d8c394a509aab0663430323d66fb0a22db19f0"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "offset:continue is not supported yet"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "ruby-liquid:test/integration/tags/for_tag_test.rb:193:4": {
       "fixtureHash": "29da31e75dea2cc93f061a2b20140e6331067985eec0da055d27107ca1b823e0",
       "liquidjs": {
@@ -26794,31 +25913,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "offset:continue is not supported yet"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "ruby-liquid:test/integration/tags/for_tag_test.rb:284:4": {
-      "fixtureHash": "bf7ecd0470aa8854011cbb671e4b35dec59d8ced6915ee2e95e7330cbcebbca8",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "bdb5a12b473383674d31c9068d13896278ca7979cf99cdd592c64b3994fcb5ce"
-      },
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "ruby-liquid:test/integration/tags/for_tag_test.rb:288:4": {
-      "fixtureHash": "990f9be7a0bb4690cdb9040e71d178855bf93df923a5136fecea315bf735f9ed",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "bdb5a12b473383674d31c9068d13896278ca7979cf99cdd592c64b3994fcb5ce"
-      },
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "message": "Duplicate offset"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -26830,7 +25925,7 @@
       },
       "effectLiquid": {
         "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "sha256": "876ae99c6b44054bc919eb622631409d9764e3fdf91f065939b609bbc6370ee8"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -26870,9 +25965,9 @@
       },
       "effectLiquid": {
         "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'echo1'"
+        "phase": "render",
+        "category": "load",
+        "message": "Template not found: locale_variables"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -26886,9 +25981,9 @@
       },
       "effectLiquid": {
         "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'echo1'"
+        "phase": "render",
+        "category": "load",
+        "message": "Template not found: locale_variables"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -26902,9 +25997,9 @@
       },
       "effectLiquid": {
         "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'echo1'"
+        "phase": "render",
+        "category": "load",
+        "message": "Template not found: locale_variables"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -26966,9 +26061,9 @@
       },
       "effectLiquid": {
         "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'with'"
+        "phase": "render",
+        "category": "load",
+        "message": "Template not found: nested_product_template"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -26984,7 +26079,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -27032,7 +26127,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -27096,7 +26191,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -27126,9 +26221,9 @@
       },
       "effectLiquid": {
         "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'with'"
+        "phase": "render",
+        "category": "load",
+        "message": "Template not found: product"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -27160,7 +26255,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Unexpected 'for'"
+        "message": "Expected ':'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -28116,48 +27211,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "shopify-liquid:test/integration/tags/for_tag_test.rb:175:4": {
-      "fixtureHash": "1e3d2865b61789699dc46d52a10e9cfab3d4218404ce945efdaca2043d54ea6c",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "fbc080f6b2edfb9280de5149bf2b3abd03acbb88421af5963eb6b191e4c59971"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "offset:continue is not supported yet"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/tags/for_tag_test.rb:194:4": {
-      "fixtureHash": "d8923e972cc2c61a64c42aeae02b3a02fc07f7edd37d7578de49e7257f8f6aa7",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "743cba9027c055473086fd8f00252e7318b0aa3632328ef68073643af9046a4e"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "offset:continue is not supported yet"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/tags/for_tag_test.rb:213:4": {
-      "fixtureHash": "4d3a3b49cea67545ff55750f6a5804494575e5ff627ac770e1f7bf81be55a57d",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "4d29015f2ed349f36f5dfd1502d8c394a509aab0663430323d66fb0a22db19f0"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "offset:continue is not supported yet"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "shopify-liquid:test/integration/tags/for_tag_test.rb:228:4": {
       "fixtureHash": "27f3a9bbc568c99ee75b13f51a471fbcb3b54de90f828e09be339d43dd1762b4",
       "liquidjs": {
@@ -28168,7 +27221,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "offset:continue is not supported yet"
+        "message": "Duplicate offset"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -28228,9 +27281,9 @@
       },
       "effectLiquid": {
         "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'arg1'"
+        "phase": "render",
+        "category": "load",
+        "message": "Template not found: snippet"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -28244,9 +27297,9 @@
       },
       "effectLiquid": {
         "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'arg1'"
+        "phase": "render",
+        "category": "load",
+        "message": "Template not found: snippet"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -28342,9 +27395,9 @@
       },
       "effectLiquid": {
         "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'arg1'"
+        "phase": "render",
+        "category": "load",
+        "message": "Template not found: snippet"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -28358,9 +27411,9 @@
       },
       "effectLiquid": {
         "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected 'arg1'"
+        "phase": "render",
+        "category": "load",
+        "message": "Template not found: snippet"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },

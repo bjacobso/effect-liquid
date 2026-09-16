@@ -24,6 +24,7 @@ export interface Dependency {
   readonly target: string | undefined;
   readonly span: Span;
   readonly args: Readonly<Record<string, Expression>>;
+  readonly iteration?: { readonly name: string; readonly collection: Expression };
 }
 export interface Analysis {
   readonly occurrences: readonly Occurrence[];
@@ -234,13 +235,32 @@ export const analyze = (document: Document): Effect.Effect<Analysis> =>
           case "Partial": {
             expression(n.template, env, control);
             for (const e of Object.values(n.args)) expression(e, env, control);
+            if (n.with) expression(n.with.value, env, control);
+            if (n.for) expression(n.for.value, env, control);
             const target =
               n.template._tag === "Literal" &&
               typeof n.template.value === "string" &&
               !n.template.value.includes("{{")
                 ? n.template.value
                 : undefined;
-            dependencies.push({ mode: n.mode, target, span: n.span, args: n.args });
+            const args: Record<string, Expression> = Object.assign(Object.create(null), n.args);
+            if (n.with && (n.with.alias ?? target) !== undefined)
+              args[n.with.alias ?? target!] = n.with.value;
+            const iteration = n.for
+              ? { name: n.for.alias ?? "undefined", collection: n.for.value }
+              : undefined;
+            if (iteration) {
+              args[iteration.name] = iteration.collection;
+              if (iteration.collection._tag !== "Lookup")
+                reasons.push(`Render collection provenance is conservative at ${n.span.start}`);
+            }
+            dependencies.push({
+              mode: n.mode,
+              target,
+              span: n.span,
+              args,
+              ...(iteration ? { iteration } : {}),
+            });
             reasons.push(`Unanalyzed ${n.mode} dependency at ${n.span.start}`);
             if (n.mode === "include") {
               for (const [name, slot] of env.values)

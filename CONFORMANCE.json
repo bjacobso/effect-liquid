@@ -25,7 +25,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "for": {
@@ -34,7 +35,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "capture": {
@@ -43,7 +45,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "case": {
@@ -52,7 +55,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "comment": {
@@ -61,7 +65,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "include": {
@@ -70,7 +75,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "render": {
@@ -79,7 +85,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "decrement": {
@@ -88,7 +95,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "increment": {
@@ -97,7 +105,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "cycle": {
@@ -106,7 +115,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "if": {
@@ -115,7 +125,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "layout": {
@@ -130,7 +141,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "tablerow": {
@@ -139,7 +151,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "unless": {
@@ -148,7 +161,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "break": {
@@ -157,7 +171,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "continue": {
@@ -166,7 +181,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "echo": {
@@ -175,7 +191,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "liquid": {
@@ -184,7 +201,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "#": {
@@ -193,7 +211,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     }
   },
@@ -204,7 +223,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "xml_escape": {
@@ -225,7 +245,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "at_least": {
@@ -234,7 +255,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "at_most": {
@@ -243,7 +265,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "ceil": {
@@ -252,7 +275,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "divided_by": {
@@ -261,7 +285,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "floor": {
@@ -270,7 +295,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "minus": {
@@ -279,7 +305,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "plus": {
@@ -288,7 +315,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "modulo": {
@@ -297,7 +325,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "times": {
@@ -306,7 +335,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "round": {
@@ -315,7 +345,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "url_decode": {
@@ -339,7 +370,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "last": {
@@ -348,7 +380,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "first": {
@@ -357,7 +390,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "reverse": {
@@ -366,7 +400,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "sort": {
@@ -375,7 +410,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "sort_natural": {
@@ -384,7 +420,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "size": {
@@ -393,7 +430,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "map": {
@@ -402,7 +440,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "sum": {
@@ -411,7 +450,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "compact": {
@@ -420,7 +460,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "concat": {
@@ -429,7 +470,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "push": {
@@ -438,7 +480,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "unshift": {
@@ -447,7 +490,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "pop": {
@@ -456,7 +500,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "shift": {
@@ -465,7 +510,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "slice": {
@@ -474,7 +520,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "where": {
@@ -483,7 +530,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "reject": {
@@ -492,7 +540,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "where_exp": {
@@ -513,7 +562,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "has_exp": {
@@ -525,7 +575,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "find_index_exp": {
@@ -537,7 +588,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "find_exp": {
@@ -549,7 +601,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "sample": {
@@ -576,7 +629,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "prepend": {
@@ -585,7 +639,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "lstrip": {
@@ -594,7 +649,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "downcase": {
@@ -603,7 +659,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "upcase": {
@@ -612,7 +669,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "remove": {
@@ -621,7 +679,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "remove_first": {
@@ -636,7 +695,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "split": {
@@ -645,7 +705,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "strip": {
@@ -654,7 +715,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "strip_newlines": {
@@ -669,7 +731,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "replace": {
@@ -678,7 +741,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "replace_first": {
@@ -720,7 +784,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "raw": {
@@ -735,7 +800,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "json": {
@@ -744,7 +810,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "inspect": {
@@ -827,7 +894,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "strictVariables": {
@@ -836,7 +904,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "ownPropertyOnly": {
@@ -845,7 +914,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "lenientIf": {
@@ -857,7 +927,8 @@
         "test/conformance.test.ts",
         "test/engine.test.ts",
         "test/compatibility-expansion.test.ts",
-        "test/blocks.test.ts"
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts"
       ]
     },
     "keepOutputType": {
