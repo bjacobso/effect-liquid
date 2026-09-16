@@ -298,10 +298,12 @@ export const check = <E = never, R = never>(
             Binding.join(env, [...branches, otherwise], merge);
             break;
           }
-          case "For": {
+          case "For":
+          case "TableRow": {
             const type = infer(n.collection, env);
             if (n.limit) infer(n.limit, env);
             if (n.offset) infer(n.offset, env);
+            if (n._tag === "TableRow" && n.cols) infer(n.cols, env);
             const next = Binding.fork(env);
             const item = T.union(
               ...T.members(type).map((t) =>
@@ -314,7 +316,7 @@ export const check = <E = never, R = never>(
             );
             next.locals.set(n.name, item);
             next.locals.set(
-              "forloop",
+              n._tag === "TableRow" ? "tablerowloop" : "forloop",
               T.record({
                 index: T.number,
                 index0: T.number,
@@ -323,14 +325,22 @@ export const check = <E = never, R = never>(
                 first: T.boolean,
                 last: T.boolean,
                 length: T.number,
-                parentloop: T.unknown,
+                ...(n._tag === "TableRow"
+                  ? {
+                      col: T.number,
+                      col0: T.number,
+                      row: T.number,
+                      col_first: T.boolean,
+                      col_last: T.boolean,
+                    }
+                  : { parentloop: T.unknown }),
               }),
             );
             body(n.body, next);
             if ([...next.values].some(([name, type]) => type !== env.values.get(name)))
               unknown("Loop-carried assignment types require a fixed-point summary", n.span);
             const otherwise = Binding.fork(env);
-            body(n.otherwise, otherwise);
+            if (n._tag === "For") body(n.otherwise, otherwise);
             Binding.join(env, [next, otherwise], merge);
             break;
           }

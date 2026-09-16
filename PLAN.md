@@ -71,7 +71,8 @@ Exit: multi-file rendering and analysis agree about scopes. A changed child inva
 - [ ] Add pull-driven Effect Stream rendering, bounded buffering for capture/layout, and Node/Web stream adapters as needed.
 - [x] Verify string/stream equivalence, late failure behavior, cancellation cleanup, slow-consumer backpressure, and global output/work accounting.
 - [x] Implement `increment`, `decrement`, and `cycle`, including partial scope isolation, stream replay, analysis, and checker support.
-- [ ] Implement remaining tags in explicit matrix batches: `liquid`/inline comments; `tablerow`; `layout`/`block` (`echo` already supported).
+- [x] Implement `liquid` blocks, inline comments, and `tablerow`, preserving source offsets and integrating streaming budgets, analysis, and checking.
+- [ ] Complete remaining `liquid`/`tablerow` syntax and control-flow quirks; implement `layout`/`block`.
 - [x] Add the initial collection-filter batch: sorting, mapping, summing, compacting, concatenation, uniqueness, sequence operations, slicing, property matching/searching; validate coercion and nonmutation.
 - [ ] Complete collection-filter expression variants, bracket-property strings, and missing-versus-nil semantics.
 - [ ] Expand filters by family, with runtime semantics, analysis/type metadata hooks, and conformance fixtures in each batch.

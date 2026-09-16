@@ -1383,10 +1383,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "break outside loop"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/interrupts.yml:155:0": {
       "fixtureHash": "918a80b081230a79d97a5f194d667b107e1bf4246a00fc017fbd9400e5586c5f",
@@ -1397,10 +1397,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "continue outside loop"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/interrupts.yml:71:0": {
       "fixtureHash": "8b3b5c298a497bf882adf7b59a99f96cec7f32bfaebc0e9ffc6993d32038290e",
@@ -1535,48 +1535,6 @@
         "sha256": "986d6ccf8083c7f8936815673e4e7810dc522afa3833681e52c9d8d7ca0bfa7a"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/nested-parameters.yml:408:0": {
-      "fixtureHash": "8c4a01ee4554f70913a32c40988f2a068e3abf85c443f671d568f84945a0db45",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "13e228567e8249fce53337f25d7970de3bd68ab2653424c7b8f9fd05e33caedf"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/basics/nested-parameters.yml:425:0": {
-      "fixtureHash": "e0cd28c252b1a1cf3575951b5faaac3d0e7e531c994203af01748656cbeb343b",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "f6c6e57cc3dac1d6a2349701056ff5a3e48134efe4496a8c0f5cb9fc9e6dfc12"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/basics/nested-parameters.yml:443:0": {
-      "fixtureHash": "f9ca407a6629a10be4dca97877aeb133c084338b946dbb0dffc8beecab222c59",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "0fff86057dcfb3975c8bc44459740ba5ffb43551931163538df3f39a6bb991bc"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
     },
     "liquid-spec:specs/basics/nil-handling.yml:117:0": {
       "fixtureHash": "6fd32d7ffb591d962b3fa9528bbb4f0a0a754744a36b24f45ae9e5ef3578dabd",
@@ -2067,12 +2025,10 @@
         "sha256": "82c3410e7fa74e2adf28743b5ff0fbfb00bb794cd7beeaf796cab0427b04522a"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "82c3410e7fa74e2adf28743b5ff0fbfb00bb794cd7beeaf796cab0427b04522a"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/scopes.yml:170:0": {
       "fixtureHash": "3c2fa61e561a39929ef02ab9319f29d872364f26b0e8d1603f20bc77789ddcc8",
@@ -2081,12 +2037,10 @@
         "sha256": "ae83ff2304e81b8cb24b32e3de3cd27e482eaeb526a331fedced93e486858a51"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "ae83ff2304e81b8cb24b32e3de3cd27e482eaeb526a331fedced93e486858a51"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/specs.yml:1005:0": {
       "fixtureHash": "3cb6c5c10e35c8bfb7e3ccdcb700c43ef852bd9c1b242fcbd29233d02e91d6d1",
@@ -2256,188 +2210,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/basics/specs.yml:1229:0": {
-      "fixtureHash": "7688c6e121c2b0b3dd0c57f493a74636ce9051727b3c07f9913e576e7b6e4902",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "693f051de7cbd16f286969e6723bfae7bdc047685d0384eade3dd25f8ca09684"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/specs.yml:1236:0": {
-      "fixtureHash": "ebad94080634c3ed3f6c39a0c7ffa6b43ffdba2dd349848850c5c31828d9db8f",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "693f051de7cbd16f286969e6723bfae7bdc047685d0384eade3dd25f8ca09684"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/specs.yml:1247:0": {
-      "fixtureHash": "353804e5e28b911bcd18e517fe9f8634f85a2d8a6ccc737065e9c9f8a35ec683",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "693f051de7cbd16f286969e6723bfae7bdc047685d0384eade3dd25f8ca09684"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/specs.yml:1292:0": {
-      "fixtureHash": "11fa7b29933c663820e567f8142ba61e115cbffba0b21b1c0af094192616f4e3",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "ffe3017ad2485bea3fdc3910b428da15acb74543ad31ae69138eb4e11a3dea94"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/basics/specs.yml:1306:0": {
-      "fixtureHash": "d1ebfdad2f144e7aa8fd9134317f857b2f36330eeb8175799a6a641f54e7608d",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "52488c8f2a03b84da6d0e26109a2a9e84301c28813dcae820a68bd8ae20e9628"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/basics/specs.yml:1320:0": {
-      "fixtureHash": "ee156c1f310ecfbe1e16bcc3c1b374178a5ebf1a958f3c63c2f973bd4091c6a9",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "26d6a8ad97c75ffc548f6873e5e93ce475479e3e1a1097381e54221fb53ec1d2"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/basics/specs.yml:1332:0": {
-      "fixtureHash": "5afa07796c0a3d4c02efaffadaa011a055e037c6c388fefc8e9e765217362ed7",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "ffe3017ad2485bea3fdc3910b428da15acb74543ad31ae69138eb4e11a3dea94"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/basics/specs.yml:1346:0": {
-      "fixtureHash": "b3cc311fb3a16999287937a44a82cdc48ad93308c576f809014025c398a57678",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "b7c9aacfab280545e8e5ef6a3af2e30aded51aee1abc12a55dc2e3716c4c7f76"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/basics/specs.yml:1360:0": {
-      "fixtureHash": "7cf6dc291c050a6ab44d8adb209b599ea1798c5135136c974256594942fe261f",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "069b22d04194e941c6689f0128c291fa409aa0e7330c217ba5ac4e6ba01b51eb"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/basics/specs.yml:1375:0": {
-      "fixtureHash": "a625cb71e48e6f3c1ce49531d8c1ff32e9c57064ea74ca580b147988a8bbbfe5",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "305e9e7cdb84ba0b5965d6c90e837fdfd1506b8e721bfb3915df0140790b056a"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/basics/specs.yml:1400:0": {
-      "fixtureHash": "5fcf796be035c57cfec121d830a893ac978eebffaeba2d7e59da09dfcd5c27cd",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "8b10ca5d9d7e4cc81dce5779d5030a06ff7a5780741b72374619f70b18797fb9"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/basics/specs.yml:1433:0": {
-      "fixtureHash": "ac62f1948c267a54e30a9294977e7efd2167574eb58cde5fb30e4aa1576ae558",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "61477581366630c1cda8162792322de194552009b46c84267814713755c56a7b"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/basics/specs.yml:1462:0": {
-      "fixtureHash": "4f01e24296033ad8b351794b6696e4cbc3ceba05e38d14ed3063b2c9405dc834",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "d9622f8eb9ab00addc98438fa3279ac55866cf7fb43f499000f7da829bcb588e"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
     "liquid-spec:specs/basics/specs.yml:1489:0": {
       "fixtureHash": "eea5d4d687028b3132fd62f8d5f79d495d54e84047ea3905d2211f700e58f834",
       "liquidjs": {
@@ -2445,12 +2217,10 @@
         "sha256": "caff59e89e119639eea1d0fd2a28cef88edd6bb118923f4bd3e818a2d52e384c"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
+        "kind": "output",
+        "sha256": "caff59e89e119639eea1d0fd2a28cef88edd6bb118923f4bd3e818a2d52e384c"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/specs.yml:1518:0": {
       "fixtureHash": "eaecf8380ed08f05010bfc9ebd410c724a176a141ef3184069d3b4eaf08ba1e4",
@@ -2459,66 +2229,8 @@
         "sha256": "2c7d19bd7992db3638d8ec462014fd3da9121527f6f5cf0df4be33849ffbd477"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/basics/specs.yml:1547:0": {
-      "fixtureHash": "9faf30152fc7d4f80a725fea903f495102d428ca33d64fbaa71d75e578860b54",
-      "liquidjs": {
         "kind": "output",
-        "sha256": "4ff838dc8c4e7f07c4d0667bcba930dbd226d03e70d0b46cc82f767638b239f7"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/specs.yml:1558:0": {
-      "fixtureHash": "16bc7ed9950bc06db950ee41c6767157d42e785ef94adea63b9cc4087556ab2c",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "7fe63d4f5cdb7d94fc8c9d51c372aa4a104bbdd42082ac1866a16dc399fe3d4f"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/specs.yml:1566:0": {
-      "fixtureHash": "ee9b8825214e4fa37431fe9a66680acf392960627d786387c8bbc0faedd0ef50",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "31641e81a596de050fb5892f54bcc64235744c761618b91ded409b2f4eabb4b5"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/basics/specs.yml:1582:0": {
-      "fixtureHash": "d20f1581e5e8ce23560dbc658b1e6cd9e6a04e9e7fb55e57c44e9734cabef3ba",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "b234e27b1eae8b2d8817c8a28d059da9fce82d1a9e6f4e9b25b79232a8eebc7f"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
+        "sha256": "2c7d19bd7992db3638d8ec462014fd3da9121527f6f5cf0df4be33849ffbd477"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2529,12 +2241,10 @@
         "sha256": "da2215f9feae0825585716d98bbdf87d7994dcea647a0e6051f40dfcc0fc09cc"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "da2215f9feae0825585716d98bbdf87d7994dcea647a0e6051f40dfcc0fc09cc"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/specs.yml:1929:0": {
       "fixtureHash": "de750fd2950fa2f858c751a73fbcc4c70df867de4e924aae5729a82dac0ae149",
@@ -2543,12 +2253,10 @@
         "sha256": "2954e5ad1d771028b4d054d802b5d5c5a8eb0868f3b4dde24477bf1e6b818829"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "2954e5ad1d771028b4d054d802b5d5c5a8eb0868f3b4dde24477bf1e6b818829"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/specs.yml:716:0": {
       "fixtureHash": "7de6d8d0cb1ecb87eb4048320922dffd97b6a022eea40b499ab9bd8ba8f630e9",
@@ -2761,12 +2469,10 @@
         "sha256": "abd5583ec009088453ed9e839e09186a91967fa48c1003114849cf3c234045f2"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "abd5583ec009088453ed9e839e09186a91967fa48c1003114849cf3c234045f2"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:131:0": {
       "fixtureHash": "ddf5ae1bcd1c7b891e2d847a02bc3ee4bf86e5dfb28830c4f22da5f3f4016f5b",
@@ -2775,12 +2481,10 @@
         "sha256": "82c3410e7fa74e2adf28743b5ff0fbfb00bb794cd7beeaf796cab0427b04522a"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "82c3410e7fa74e2adf28743b5ff0fbfb00bb794cd7beeaf796cab0427b04522a"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:142:0": {
       "fixtureHash": "9573826f7d2633e92c14d2d96f7464edd976e6875554c5135cef1dde03a2e2b0",
@@ -2789,12 +2493,10 @@
         "sha256": "8eeabd1c79fece95923ed737a1d9c4bc6fce3c4ebcf24e5b7f875a569b036aa2"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "8eeabd1c79fece95923ed737a1d9c4bc6fce3c4ebcf24e5b7f875a569b036aa2"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:153:0": {
       "fixtureHash": "f247a64eca2c97a5a7c777e5dac7182d2b7b76963104ed026c5a72e4c54c8f8c",
@@ -2803,12 +2505,10 @@
         "sha256": "e0e83a07a5b2874c65c2c52fc657a75d1c09e5ffc9c1792f33d9c9e458706ce3"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "e0e83a07a5b2874c65c2c52fc657a75d1c09e5ffc9c1792f33d9c9e458706ce3"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:164:0": {
       "fixtureHash": "23a3dbbff44b837ab85937e8335698ab30f5ba47f6e55058ec0b74104b5f4527",
@@ -2817,12 +2517,10 @@
         "sha256": "ea88a63f4806f7c226fd55e156dd1968a73398c2c50935ac1cc06235a2f46fa6"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "ea88a63f4806f7c226fd55e156dd1968a73398c2c50935ac1cc06235a2f46fa6"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:180:0": {
       "fixtureHash": "b54e41768e96c200fbac7e1b74d47c18e72aa02157d521e42b4250f3ff664a3a",
@@ -2831,12 +2529,10 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:192:0": {
       "fixtureHash": "eecc15f27d9a54c8226517a07ada0353df60364780365ae4be6acec7e0c8d924",
@@ -2845,12 +2541,10 @@
         "sha256": "faea68fc3c129baa707d1c799c1600cd7695fb615aff2aa0a8c733fa3eee70ee"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "faea68fc3c129baa707d1c799c1600cd7695fb615aff2aa0a8c733fa3eee70ee"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:203:0": {
       "fixtureHash": "896c112b22f2afd576049137defe1a1904f499e5de8c7740553fd3992918c932",
@@ -2859,12 +2553,10 @@
         "sha256": "34e237a82408bb6c623630cecb998fd52761272f6e3bded2d66c03ea84cb52a0"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "34e237a82408bb6c623630cecb998fd52761272f6e3bded2d66c03ea84cb52a0"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:215:0": {
       "fixtureHash": "39f60ea2f7d7d26782dea2424220b6b890124b09de6076a4499027d9c888ae29",
@@ -2873,12 +2565,10 @@
         "sha256": "b79b59fe8853ee52c95187692e39c5f474740ba17f69a9e916909b7a8150a796"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "b79b59fe8853ee52c95187692e39c5f474740ba17f69a9e916909b7a8150a796"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:228:0": {
       "fixtureHash": "26fc1683b6145576ff7baafeac6cf2b62bdfc35f7a1c2fa6a356dab7031637fc",
@@ -2887,12 +2577,10 @@
         "sha256": "79fe78007fa10e0d7ff3a42515ccec28fd8cd95dadf3e5b94bbea68d26d19e36"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "79fe78007fa10e0d7ff3a42515ccec28fd8cd95dadf3e5b94bbea68d26d19e36"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:241:0": {
       "fixtureHash": "0616b87f1cd56adb91e7b63058eaacb448f753f6f016ad383c57449cd058ff86",
@@ -2901,12 +2589,10 @@
         "sha256": "2c2aad61d5f2e09fc0a9217835c8bb1ef97ca4ef90549c61c0953e7034279fa5"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "2c2aad61d5f2e09fc0a9217835c8bb1ef97ca4ef90549c61c0953e7034279fa5"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:252:0": {
       "fixtureHash": "d54611916b81e3eb135339df16050418a090f4e80b79f8d4e27ca97348daed91",
@@ -2915,12 +2601,10 @@
         "sha256": "0b8829fc72f2d997b697259cb8271197e77791ab2095c29e7dabab1ff6b5888d"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "0b8829fc72f2d997b697259cb8271197e77791ab2095c29e7dabab1ff6b5888d"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:263:0": {
       "fixtureHash": "5cd11c8ce71c9daf7340c4074a36acb9b573c74153159dd6e1973a046e068f69",
@@ -2929,12 +2613,10 @@
         "sha256": "d03827572920c7e861dd1a7ff1e4a4991fbb7493d8ee43f855a63eb4e833affc"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "d03827572920c7e861dd1a7ff1e4a4991fbb7493d8ee43f855a63eb4e833affc"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:279:0": {
       "fixtureHash": "cbe5ddd627cb71f06141367b0c42bd67762a305708d8510ccf68705cd4458a63",
@@ -2943,12 +2625,10 @@
         "sha256": "d1bd368589a89f1ce81d2073c9276fabcaaa1e9f1302a50afe6d619bd4d09d4d"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "d1bd368589a89f1ce81d2073c9276fabcaaa1e9f1302a50afe6d619bd4d09d4d"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:294:0": {
       "fixtureHash": "e2617ad9030e713e2f2fc687a726a20e86d4ee87a63b51abcf2909f0f2f5aff6",
@@ -2957,12 +2637,10 @@
         "sha256": "21b7672f79331207e9f8a7441165170a673cd1a14f01117b95730905ceb0a5a8"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "21b7672f79331207e9f8a7441165170a673cd1a14f01117b95730905ceb0a5a8"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:305:0": {
       "fixtureHash": "fe5dbb0ea8a2bcef80a61672b75044f2ef5b7988d34b16eba4dd24375e35d70c",
@@ -2971,12 +2649,10 @@
         "sha256": "8d323ace354550ab41734582ef1c2cf7372842a7716e5c7fbecf9a178eedd0ee"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "8d323ace354550ab41734582ef1c2cf7372842a7716e5c7fbecf9a178eedd0ee"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:31:0": {
       "fixtureHash": "2f8a9845e875c6bd3436aed11ed0dc44ab61cbd282b40d69d346aede92ebbc01",
@@ -2985,12 +2661,10 @@
         "sha256": "17ffc66bc62426dd29e3a42361fa94ac16db7a1fdc0aacfb361302ac82db1073"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "17ffc66bc62426dd29e3a42361fa94ac16db7a1fdc0aacfb361302ac82db1073"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:316:0": {
       "fixtureHash": "8f39ab495646cb9bac4b9af605f0223952eb50af18078282beb161c5af25cda2",
@@ -2999,12 +2673,10 @@
         "sha256": "a8f2c3ac4b4227551ebdeaff31c2b029eee31ee6c122ecc67c157cdbbd66d84e"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "a8f2c3ac4b4227551ebdeaff31c2b029eee31ee6c122ecc67c157cdbbd66d84e"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:327:0": {
       "fixtureHash": "bda777fb34377ed4244f5d0ef97b18dc3089cf3d5781225fe52000ae24afa69d",
@@ -3013,12 +2685,10 @@
         "sha256": "da7ee809d5b57988b93f262422a5621fba3c343c773086ad0ffd9b39e0815580"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "da7ee809d5b57988b93f262422a5621fba3c343c773086ad0ffd9b39e0815580"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:42:0": {
       "fixtureHash": "c2db1c914a420319f9e8b1a84aff77f4ea5b251a8e2d99877851ac50564838ff",
@@ -3027,12 +2697,10 @@
         "sha256": "c88fd3a752caea6dc0c07e8a317ea3d4e40d172493b11f95aa9f98c383abb354"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "c88fd3a752caea6dc0c07e8a317ea3d4e40d172493b11f95aa9f98c383abb354"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:53:0": {
       "fixtureHash": "8e9416307c13b1e5af83f6a12bc063854b1fe5a88d352f7816055310fb2059ab",
@@ -3041,12 +2709,10 @@
         "sha256": "b9c165c9586ba296ee9dcc7e8be6e3891c8eb4cf3a5d03eb5c66e6470fdbf5ea"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "b9c165c9586ba296ee9dcc7e8be6e3891c8eb4cf3a5d03eb5c66e6470fdbf5ea"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:64:0": {
       "fixtureHash": "82b8612f55de2edda139cec9023670d841ed28d30e44b31181dba2589002bd87",
@@ -3055,12 +2721,10 @@
         "sha256": "ec86ddda2851803679a483d59fa8ea490502f1336636578cdac016682aa0dc6b"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "ec86ddda2851803679a483d59fa8ea490502f1336636578cdac016682aa0dc6b"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:75:0": {
       "fixtureHash": "6caebbf0a6ad6dc78032dac09b9d54ef95c5fdbea7ddfac276ef2b19945f4eea",
@@ -3069,12 +2733,10 @@
         "sha256": "22c4a506566977cd54f714b02687db4bce99e2a37d3dc421521194497a80a13b"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "22c4a506566977cd54f714b02687db4bce99e2a37d3dc421521194497a80a13b"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:87:0": {
       "fixtureHash": "66f32841bc1c1bd8e3a7da52f5cc00c15a51f01927f2f4c44eaf4ec1df34d2c2",
@@ -3083,12 +2745,10 @@
         "sha256": "8c625df883756637b1e39d84f576ee1df0ba2bd00d878ae3cf047ecd0992fe9f"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "8c625df883756637b1e39d84f576ee1df0ba2bd00d878ae3cf047ecd0992fe9f"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/tablerow.yml:99:0": {
       "fixtureHash": "fe0311eab24f72f4fc975cebb0fcd5bc84e787a330d1d80c535f2a703e7927e2",
@@ -3097,12 +2757,10 @@
         "sha256": "f34b1ec79ef5953af642cd68d89b901aea2c792879ce234da4a119a59d7a7f20"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "f34b1ec79ef5953af642cd68d89b901aea2c792879ce234da4a119a59d7a7f20"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/basics/type-coercion.yml:183:0": {
       "fixtureHash": "2513d105c9893ddb8a5d5a977d68f4c260d4d1c796b9115d14f1ffe8f9d767be",
@@ -3128,20 +2786,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/benchmarks/liquid_tag_programs.yml:17:0": {
-      "fixtureHash": "e1d8da8ad651d07eb9e176fbdcb652397845cc4b7fe49696e964f78feb67f3fe",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "ccdc8487774d111c47f440cd5e995560715178531ac7f29575bbcf9dca2fdcca"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
     "liquid-spec:specs/benchmarks/liquid_tag_programs.yml:87:0": {
       "fixtureHash": "e733221aed9ffa837bd2fdc48f325e78600cc5ca0d4bf315723f62d1f134fc04",
       "liquidjs": {
@@ -3149,12 +2793,10 @@
         "sha256": "e820edd4e656538195e5bb3c14aa12bd024172060bc3922940d52868ed3aba20"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
+        "kind": "output",
+        "sha256": "e820edd4e656538195e5bb3c14aa12bd024172060bc3922940d52868ed3aba20"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/array_to_s.yml:1:0": {
       "fixtureHash": "8a11d8ad33f8219986193faa69ea1ac25fdec4ab58cda70ee027f2f1d47a1bea",
@@ -3905,188 +3547,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:109:0": {
-      "fixtureHash": "969cbc9eef41a04d2dc139beb88d0d1791b058c3df5532af4dc01eaa00968d99",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "f6c6e57cc3dac1d6a2349701056ff5a3e48134efe4496a8c0f5cb9fc9e6dfc12"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:129:0": {
-      "fixtureHash": "609def844520b5071d680c791b61b302fa7bdeb9fc246e3c19a1f766b4fa13d6",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "86792b7845941ce8970c2b28fd9118239b1783ba6d401e809ba2c7c1da397dfa"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:146:0": {
-      "fixtureHash": "acc6a9961e5b2a388689bcebcdafb0d2e273fd5b13fd83573fd641d0b9f83d80",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e61c21ca716b3b1aefb7d1198f83679c4ca4d596e5792275dd6203b49216237d"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:163:0": {
-      "fixtureHash": "1b136fdc063553e67d8d1df1dfd8bef90737d8b0c37b9aabc06ad92842a8ed3d",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "7a18734763c28f925995a5afb73c968ac11d79488d5efbecfdcf1a537de736b2"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:180:0": {
-      "fixtureHash": "6a73b437cf7c356b044b60917829ccc861efc30d0dea98e2e0bd684770c751f2",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e61c21ca716b3b1aefb7d1198f83679c4ca4d596e5792275dd6203b49216237d"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:197:0": {
-      "fixtureHash": "18da2dbdb5002a8e0f590cbdb6e2fca2240ff4bc70f95406da89b46085a8123a",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "f6c6e57cc3dac1d6a2349701056ff5a3e48134efe4496a8c0f5cb9fc9e6dfc12"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:2:0": {
-      "fixtureHash": "bc2b75b5aa400da5d0a68c01bfb5fc79150aafb8a99891221b8bd3d2bac728ca",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "a8cfa6d3d6c5be41ead002ab77d4d1206d58d953c5d41757306aea7389ed4a36"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:20:0": {
-      "fixtureHash": "45e4e0f02788dbcf052c42f3c50d4ea6eb452122740e349a021ac1e8a3954fd6",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "4eaee99c775d4db7ef9220b53c9d1988287346c2698e1ba46a6065b3d84d0abb"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:214:0": {
-      "fixtureHash": "196acacd73a63196068ed2733284a9ec49e784c3bdb71c99d18eabd08e30a917",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:231:0": {
-      "fixtureHash": "5b2768e697109572f33c9146efdf471fc271dfe0021e0b89c8733a74f38d89fa",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "595a39eaad0b6c5b8dbf1daf571d325bab110d15e7d8033919e0f1e5ee4bc907"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:248:0": {
-      "fixtureHash": "c6dd76c0f25631fba4fba60e6006ddb473b519cc384cd03ec5e0bc0a2b4655bd",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "0e2f28a29d88ad1d9b62300412fe87c73e59fc2074c99e34246e801dd19ef47f"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:272:0": {
-      "fixtureHash": "b419731c59ee65257436ea917e64fa3d82618c376633b0ac81e4f3bb06ed85d5",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "86792b7845941ce8970c2b28fd9118239b1783ba6d401e809ba2c7c1da397dfa"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:287:0": {
-      "fixtureHash": "fc734dc7ea01a5b46b73c5aa962418851d90b4a200db8d5d3ab8201bea824c6d",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "2c5535bb8304b978e35899815d4f8939a39edfa6d90ab4e5114980010e8be15a"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
     "liquid-spec:specs/liquid_ruby/liquid_tag.yml:306:0": {
       "fixtureHash": "22fbfa2ff3b10a9e68da20593bbdb9d9104df0703b61e2d09ba223190ef4e6b2",
       "liquidjs": {
@@ -4094,208 +3554,10 @@
         "sha256": "357dba348dce0bf05a3161cca3313c3a17e28075a9a9a240553808062be6f2cf"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:319:0": {
-      "fixtureHash": "207f7f8b91720054f4da27db22dea505904ddbfb2a504bb150bf606310e8b22f",
-      "liquidjs": {
         "kind": "output",
-        "sha256": "7a18734763c28f925995a5afb73c968ac11d79488d5efbecfdcf1a537de736b2"
+        "sha256": "357dba348dce0bf05a3161cca3313c3a17e28075a9a9a240553808062be6f2cf"
       },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:341:0": {
-      "fixtureHash": "ada2bc88b51ca4518a9643d9d337db733a3a15374d817ad72df3f6c8b3d8c42d",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "fd17a9530bbcb64215fc1a52a0b1f3734cb43c2c4acba392a9cf93df66da89c3"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:363:0": {
-      "fixtureHash": "8ba60e06c9f19decd59aaff38bb0d7560ec1562fb8af43b4844095151ac633fb",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "016e2fc37b50b624f83e5c105bd56182a235526713c881ba8a22ab1d9e374bcd"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:385:0": {
-      "fixtureHash": "d0eda45bd5db6b7e2751d1cd617fa484cf1cfe7c21864626c6d604fd0cb4f44b",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "5ca74209dbf158336a314e549833d854a1e9a2dd1a4f3e7c60a705e12a068de9"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:407:0": {
-      "fixtureHash": "f0c79cda09158efee19187ce1b515851a0c7b2e470b4e20c0f187b53de2d1f5b",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "125daa8a0ef88ff7851179a4028c75e7e7bcf3b6f670a93b4f14ae1063f156fb"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:429:0": {
-      "fixtureHash": "83a3759d53d9dea28e3060db0c226bad984ecdb4df19afd2b04e53f7ed93eba3",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "125daa8a0ef88ff7851179a4028c75e7e7bcf3b6f670a93b4f14ae1063f156fb"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:449:0": {
-      "fixtureHash": "76b003806faff4c9f68a7bba858af753982e245012dbb5517bae17d968413438",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "7a18734763c28f925995a5afb73c968ac11d79488d5efbecfdcf1a537de736b2"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:45:0": {
-      "fixtureHash": "761726da9849a79ebe723cc3d3ebdb292da6ecfce77cd13d0e42fa29badd966d",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "06e44dc1b95c469f43aaccb49e93c36827626266eed5575eced74af9a016c9cd"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:469:0": {
-      "fixtureHash": "503f92e5824e3e50998c9e7bd24fc017f1203ee40059d822b7b0da8fc0accd59",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "016e2fc37b50b624f83e5c105bd56182a235526713c881ba8a22ab1d9e374bcd"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:489:0": {
-      "fixtureHash": "784dfc7190dea1f82fcb0d8eb9478dd63b5cf38a9968e1619b41d3b135f42421",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "5ca74209dbf158336a314e549833d854a1e9a2dd1a4f3e7c60a705e12a068de9"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:509:0": {
-      "fixtureHash": "2342afa04d0601562ca1eff0c65a8be68e23354dab577497a026003d446c7fb8",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "15262c1702ab0fdd77f231ced1018ee6c6cdf76b4a36dd31aa876b06efb3d533"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:525:0": {
-      "fixtureHash": "0b201b1b16df30c9ef5b3e22bf353fb7ce1b8ed72159912846628a2d0c0fa046",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "7fe63d4f5cdb7d94fc8c9d51c372aa4a104bbdd42082ac1866a16dc399fe3d4f"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:543:0": {
-      "fixtureHash": "a1b7de4cc4f881d902f86467ceca12c23e166a3ed611923e0eb0d8dc135d5b21",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "875f94eccceea3e7a7149d42579962b52d26e0e584d91513a14baf55a78baef0"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:56:0": {
-      "fixtureHash": "135125ac12ae3ec1ae8ad3c00b4c9846841b81c9639c159961f9ff4496628bb9",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "7fe63d4f5cdb7d94fc8c9d51c372aa4a104bbdd42082ac1866a16dc399fe3d4f"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/liquid_tag.yml:568:0": {
       "fixtureHash": "87d4179222f6b93812bf293b1f5ee209dce3121ce22ad5b5ccbdcc270e1ffe5f",
@@ -4309,35 +3571,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:596:0": {
-      "fixtureHash": "bc14e12eb320b66b7fa45375273b5d9b75dbb9c6a5a6a42cd614c6ed471dee74",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "8c9bb43a3ce54410f825d73d8492c48341dd699fd57f202665869ca5ec2bed41"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:612:0": {
-      "fixtureHash": "d9cb84dac047d4cdccec576a0680141d41c77db8a4ebb032bd4cfe3dd59bbb95",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "29db70aa4d42514875290f949ef5589617265e4616d2d50ef066e477c29aa9d1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
+        "message": "Unsupported tag 'ifchanged'"
       },
       "reason": "Tag not implemented"
     },
@@ -4348,12 +3582,10 @@
         "sha256": "5b3b87546c56a2cbb8257c6c431eb5a85e0f4577ab6fb9eee1b4d177dfe7f8d4"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
+        "kind": "output",
+        "sha256": "5b3b87546c56a2cbb8257c6c431eb5a85e0f4577ab6fb9eee1b4d177dfe7f8d4"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/liquid_tag.yml:649:0": {
       "fixtureHash": "7aa4cc2a26b36d10d50d5d6cd70af577a5fef91801d22395862c97a3b746a834",
@@ -4367,7 +3599,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
+        "message": "Unsupported tag 'ifchanged'"
       },
       "reason": "Tag not implemented"
     },
@@ -4383,7 +3615,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
+        "message": "Unsupported tag 'ifchanged'"
       },
       "reason": "Tag not implemented"
     },
@@ -4399,7 +3631,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
+        "message": "Unsupported tag 'ifchanged'"
       },
       "reason": "Tag not implemented"
     },
@@ -4410,26 +3642,10 @@
         "sha256": "dc580139d148637e2db70fe21f0072a0b199ea2532145c01ff80e210b059fb58"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:722:0": {
-      "fixtureHash": "b2b2a259ddcf27f435b3e0e77d5a78f304b4e4fd122a49f882ac51a1318c7045",
-      "liquidjs": {
         "kind": "output",
-        "sha256": "86792b7845941ce8970c2b28fd9118239b1783ba6d401e809ba2c7c1da397dfa"
+        "sha256": "dc580139d148637e2db70fe21f0072a0b199ea2532145c01ff80e210b059fb58"
       },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/liquid_tag.yml:734:0": {
       "fixtureHash": "7910039850721663460e865cd8f25c269a64c753dd1fc7924617fdc30d78c57c",
@@ -4443,21 +3659,7 @@
         "kind": "error",
         "phase": "parse",
         "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:751:0": {
-      "fixtureHash": "f00986cceb76c2dc7a9b495fa36a9632a6f36ea1b7a9e12fbb538f766aa22d84",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "979ab6536128ee79bcbb8d0386f29429d09b706b5ca77bfa5497968187e304c3"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
+        "message": "Unsupported tag 'still'"
       },
       "reason": "Tag not implemented"
     },
@@ -4468,12 +3670,10 @@
         "sha256": "17ffc66bc62426dd29e3a42361fa94ac16db7a1fdc0aacfb361302ac82db1073"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
+        "kind": "output",
+        "sha256": "17ffc66bc62426dd29e3a42361fa94ac16db7a1fdc0aacfb361302ac82db1073"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/liquid_tag.yml:780:0": {
       "fixtureHash": "36c8320bd480a7dbdd0a75f4c6cd1c25e0db58456e5da95082fa0426c7620038",
@@ -4482,12 +3682,10 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
+        "kind": "output",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/liquid_tag.yml:796:0": {
       "fixtureHash": "eafdfb7c9feccdfead599c246eb5bb83ccd284ad80e23ff4e90a1350415ab957",
@@ -4496,26 +3694,10 @@
         "sha256": "ecb79f7160803a7883f24dcc3216e6c951a1bff784069793b03f620928b6044a"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:80:0": {
-      "fixtureHash": "c3d0b148066139aba76d0d57b51c1edbd8ea96e9ef4f5d1e27ff06d439219ee8",
-      "liquidjs": {
         "kind": "output",
-        "sha256": "06e44dc1b95c469f43aaccb49e93c36827626266eed5575eced74af9a016c9cd"
+        "sha256": "ecb79f7160803a7883f24dcc3216e6c951a1bff784069793b03f620928b6044a"
       },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/liquid_tag.yml:817:0": {
       "fixtureHash": "1fb14e7a2f33f65f1ed4dd9767f6cb4713cb42afa208940cb81568df4150c747",
@@ -4524,12 +3706,10 @@
         "sha256": "5b3b87546c56a2cbb8257c6c431eb5a85e0f4577ab6fb9eee1b4d177dfe7f8d4"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
+        "kind": "output",
+        "sha256": "5b3b87546c56a2cbb8257c6c431eb5a85e0f4577ab6fb9eee1b4d177dfe7f8d4"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/liquid_tag.yml:837:0": {
       "fixtureHash": "645f5e5c4be045ba21afe9cc07f5683406cc4fe5b2cc53226e507f9cf009fb43",
@@ -4538,40 +3718,10 @@
         "sha256": "f9ac60f377b0e953edac66b4cb1029643c352c2cb603e5ac10512085eb7c1e0b"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:857:0": {
-      "fixtureHash": "8355c44d985e4c3839d90bdbcd4ac18d096ff18db36b618c4a0ad27b7f2e4235",
-      "liquidjs": {
         "kind": "output",
-        "sha256": "8c9bb43a3ce54410f825d73d8492c48341dd699fd57f202665869ca5ec2bed41"
+        "sha256": "f9ac60f377b0e953edac66b4cb1029643c352c2cb603e5ac10512085eb7c1e0b"
       },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/liquid_tag.yml:873:0": {
-      "fixtureHash": "6f326c99e0739ade74e6f69acfa84285a766e2a3f1efda33f62239a463269265",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "29db70aa4d42514875290f949ef5589617265e4616d2d50ef066e477c29aa9d1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/manual.yml:130:0": {
       "fixtureHash": "2d2de804c8140c8912cfdcdcb0e2837e0689af00962fa46acadf47cd76a774a4",
@@ -4585,20 +3735,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/manual.yml:189:0": {
-      "fixtureHash": "2a13c637bc39715b9e0d4ad74eb781f6b74f39ed1ba9e8c5509f22ddbac058a1",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
     "liquid-spec:specs/liquid_ruby/manual.yml:194:0": {
       "fixtureHash": "fa17e1b2fffa2ac559920bbe78180a9e995e3fbc11933a6adf9a6010338f8bef",
       "liquidjs": {
@@ -4606,12 +3742,10 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/manual.yml:2:0": {
       "fixtureHash": "0d6204a264b7284f8cdd75ee025c46541874cc2144f403ac25322bec5973f93c",
@@ -4632,40 +3766,10 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/manual.yml:218:0": {
-      "fixtureHash": "336a5c1b5edd475dda5ca43bbadda19c563eb3aa1307ee1f8f0e8c6a142a0295",
-      "liquidjs": {
         "kind": "output",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/manual.yml:223:0": {
-      "fixtureHash": "379fdd3b77d09b84c4c34dd35448867f099757a16d1599b46002d271c39056d3",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "7c636d9a1379ca10b7d14790cac85ef382ace3efa2252e22126cbe126a5dd73a"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/manual.yml:238:0": {
       "fixtureHash": "20e53a5c40d8cb8247c6dbff550b58fb3da1ebc2b78e63b78af2c37f70801b2c",
@@ -4702,20 +3806,6 @@
         "sha256": "2a4e10836f2ec29a97114705fa550a7dc2a4300865e127eac12c64f6bbe8d845"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/manual.yml:264:0": {
-      "fixtureHash": "645515e8ff29c5dc390ddc78cac64004be260b3bd8ce85bd25064f3c2be5c635",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
     },
     "liquid-spec:specs/liquid_ruby/manual.yml:271:0": {
       "fixtureHash": "5678ef0ec6d8f067cf38caece8ca40fa60092cd29ec995767dc9a597a35782c1",
@@ -6327,244 +5417,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4282:0": {
-      "fixtureHash": "04fec1e1d4d3217c75614a51afedff1e8ee6fa83159ac4a0d2d77cb57d85d8a8",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unclosed tag"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4295:0": {
-      "fixtureHash": "a059489c7767e8e887b8a7657d94c3d68317880cdf11023b67d0ce29f0ec0510",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4301:0": {
-      "fixtureHash": "e1c46d5876bc2537880ace3f3fae65ce7015dcb06e5a1df687694be7019b45d9",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "8dee402a88965cb3495bc84b26cab6fb173e24549ed06893348bfd2d5b1fedeb"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4307:0": {
-      "fixtureHash": "45c79efa64d33f018186de3e71522cc2ba991f1666535a926fbfe02e450f3416",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4318:0": {
-      "fixtureHash": "1ca9d2766e63e5b08989edbf3c37d5f7a7895c32e1aba0c5d26639bd0f987e8f",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4324:0": {
-      "fixtureHash": "558a62a1e135a44b3ddc93bd04144e02398038327bf0e77c9bbabe25ebc0ee48",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4330:0": {
-      "fixtureHash": "1b425a9989427a0107b573aac32e067aab33f79ce09014ea9713fd41e5b1a9ff",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4336:0": {
-      "fixtureHash": "6d220a2bdfd651cc38c0c2c433053f5fc0050c3b33334055d995edcfda51321b",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4342:0": {
-      "fixtureHash": "9e044d7cf37879d42263db45ae8060ae0e2ff0347358d06e6a80463787d1bca3",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "a04a3751383827a25425e5efc388b112aafe587b3b5ed44e455e2aa18c45d88f"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4359:0": {
-      "fixtureHash": "97c7e8ad4ccc1ea8d7761fc944fbbb18256b99d6257b0e61a096e5df55b316ad",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "8e55a4f944be15054c04572400df3be06644a7fd8661ae3c4aadb4c3b2f7dd2a"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4382:0": {
-      "fixtureHash": "fff250fe2fe7b694f89be38f4288a9f3072e28e77f06e98eb5b44b0a4bf913d3",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "18ea778ca2b1a6049ecd4bbf993e416dc76709f31911d679d9424d0fa1e1ebe9"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4401:0": {
-      "fixtureHash": "f5f384623528eeeb0c9102bbe103fb88cb40f1f622389f2a33ddca5810a8d847",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "13e228567e8249fce53337f25d7970de3bd68ab2653424c7b8f9fd05e33caedf"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4410:0": {
-      "fixtureHash": "786851354ed01cce2e5bd35264d8c8a9e5e595bcc9fb35d3e1cc7b60c4d54b88",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "18ea778ca2b1a6049ecd4bbf993e416dc76709f31911d679d9424d0fa1e1ebe9"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4430:0": {
-      "fixtureHash": "8a24eaa258a52c3f51dc1a3c832948fe03a569ebda3ede233181639c8e233868",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "0a1c41acdab8b31ae29c1ed34dfa782893b4d2563942276463a174977e277303"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4438:0": {
-      "fixtureHash": "321312f697dc2cb165c9caad24ff62fc4daa116dadfbf6f373bd0f117afc99b3",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "23498b4f5ac5ff645bc77b26e3645248baa4b0a074e219fa98734d424c40bdf0"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4451:0": {
-      "fixtureHash": "19f2e815b583317d6cf471a4f691664b65e9422a6ff628740db7aeb2e4484e98",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "23498b4f5ac5ff645bc77b26e3645248baa4b0a074e219fa98734d424c40bdf0"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:4463:0": {
-      "fixtureHash": "40fe582067d7d011ac20f3d7bd55a64a22728b328143ad2c1ed666b02365c9c8",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "23498b4f5ac5ff645bc77b26e3645248baa4b0a074e219fa98734d424c40bdf0"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
     "liquid-spec:specs/liquid_ruby/specs.yml:4504:0": {
       "fixtureHash": "d273a359df397cce37314cdbdc8294d49d95a061c82aeb75a1af1d34890e336c",
       "liquidjs": {
@@ -7174,12 +6026,10 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:7313:0": {
       "fixtureHash": "8a2b2e0910e2910a2dd5606b3f3e339c1ec5ca259573b29a2e68d2c2cf65f6d4",
@@ -7188,12 +6038,10 @@
         "sha256": "4b26bed4ad6d7f9587d0ced080c2b51245aadc84f5fd54a8cc4b0d8a30343c5b"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "e22d1634082ab178ef02e255bac5b98dd998ed2e5a81d22461fd9da05ac520b9"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:7322:0": {
       "fixtureHash": "fb5cba7d81207495f96c5dcb5b1dda2047574c79ce03ec63915ba981b24e0e26",
@@ -7202,12 +6050,10 @@
         "sha256": "e22d1634082ab178ef02e255bac5b98dd998ed2e5a81d22461fd9da05ac520b9"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "e22d1634082ab178ef02e255bac5b98dd998ed2e5a81d22461fd9da05ac520b9"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:7354:0": {
       "fixtureHash": "f541acf5d5a434b7cbd8bafec19b90424a08a1262fc9444b89e1cde1e9c456b7",
@@ -7216,12 +6062,10 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:7362:0": {
       "fixtureHash": "50983d4f5d2b70a718628cdfe3a6cb764099ba4643245a5005de5707df7a0c0d",
@@ -7230,12 +6074,10 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:7372:0": {
       "fixtureHash": "a834faad059fece57bf6a049e8abdb5efee7557d2d5a39d95c49c35e6a4e7f09",
@@ -7244,12 +6086,10 @@
         "sha256": "a4b0d01e9e54cf3fee8857d02e801c4c8b014d8106ee5b1f67e3bb6ae2fc8863"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "a4b0d01e9e54cf3fee8857d02e801c4c8b014d8106ee5b1f67e3bb6ae2fc8863"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:7383:0": {
       "fixtureHash": "3fc47f5ae6ea47953a15e3d7bd587372bc689c46e64cc00c55b6cd4977a12642",
@@ -7258,12 +6098,10 @@
         "sha256": "a4b0d01e9e54cf3fee8857d02e801c4c8b014d8106ee5b1f67e3bb6ae2fc8863"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "a4b0d01e9e54cf3fee8857d02e801c4c8b014d8106ee5b1f67e3bb6ae2fc8863"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:7392:0": {
       "fixtureHash": "26750dcc1c8432266a80564ed301415f304a855ecc65af9484c3442ef6349c05",
@@ -7272,12 +6110,10 @@
         "sha256": "c458e758b3888a4e4cc547798d4ac96bcddeb04183e009dc4bb718a2b27d2680"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "c458e758b3888a4e4cc547798d4ac96bcddeb04183e009dc4bb718a2b27d2680"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:74:0": {
       "fixtureHash": "dbc4034a05669f9cbad93098f5de4f83b61c5275a92c0fdd145fcd53f0fa699e",
@@ -7298,12 +6134,10 @@
         "sha256": "c458e758b3888a4e4cc547798d4ac96bcddeb04183e009dc4bb718a2b27d2680"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "c458e758b3888a4e4cc547798d4ac96bcddeb04183e009dc4bb718a2b27d2680"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:7431:0": {
       "fixtureHash": "2cd4d6aa9acb0c47b1ebbe591e9f7b9eb0df02e7e94ad2370d0b5b72c37f0e08",
@@ -7312,12 +6146,10 @@
         "sha256": "c458e758b3888a4e4cc547798d4ac96bcddeb04183e009dc4bb718a2b27d2680"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "c458e758b3888a4e4cc547798d4ac96bcddeb04183e009dc4bb718a2b27d2680"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:7450:0": {
       "fixtureHash": "e8bcb2880be7557ce6a7c8dbde4fab154ed3aad7eec0e2a1c3461e46dd4e7ab5",
@@ -7326,12 +6158,10 @@
         "sha256": "f1239c2385dfac1725544d4ac25a456b59c7b50e0641bcdb491fc25bda01787c"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "f1239c2385dfac1725544d4ac25a456b59c7b50e0641bcdb491fc25bda01787c"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:7468:0": {
       "fixtureHash": "7b5a76678ef4951130e2e37ee4f87aaa0ac855bc3c209ce1ce2c56c55bed4e71",
@@ -7340,12 +6170,10 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:7478:0": {
       "fixtureHash": "41775008b70a298f5372d3880d04eab10449e1e1b8b17658c77f31bdc747943c",
@@ -7354,12 +6182,10 @@
         "sha256": "c458e758b3888a4e4cc547798d4ac96bcddeb04183e009dc4bb718a2b27d2680"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "c458e758b3888a4e4cc547798d4ac96bcddeb04183e009dc4bb718a2b27d2680"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:7495:0": {
       "fixtureHash": "167bbaf1b03f401530f497ddf47c83ac6049244020c0a056c08f27e4002f9a07",
@@ -7368,12 +6194,10 @@
         "sha256": "751a6dcd299dbaf1ed51ac27ebb7acaa3695d0173c7a256d9bdbf51912dfed06"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "2b98e87fe508b46781641e1977b7bec9fd5739f3dc9683b0924434f465915bfb"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:7524:0": {
       "fixtureHash": "b1cbe541dc24f9ac7583cf9380f152a65fa42aab89fca6f69bb6be971b00f951",
@@ -7384,10 +6208,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "continue outside loop"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:753:0": {
       "fixtureHash": "d928451cf19c8432f74ecefc0555fe254771322f1887f2e19e0093b74a3fa94d",
@@ -7414,10 +6238,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "break outside loop"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:7564:0": {
       "fixtureHash": "77952a09c1f19b9cc0b6c979bb4a8f8954ec57dd2e429278feb369d07ede957e",
@@ -7426,12 +6250,10 @@
         "sha256": "dea4bd5ed6bc82609b279165bb1b3b1f404984d39d17e3e66dbde02a758da79c"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "dea4bd5ed6bc82609b279165bb1b3b1f404984d39d17e3e66dbde02a758da79c"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:7581:0": {
       "fixtureHash": "6ce3421211fcef9f541e7f9ee6d16e327122591af681018b4aa8aa26ed520c0f",
@@ -7440,12 +6262,10 @@
         "sha256": "db603663adb338a1c21b3a65b1309dca0fb980845780b25c7625a48c8b7ebc03"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "db603663adb338a1c21b3a65b1309dca0fb980845780b25c7625a48c8b7ebc03"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:764:0": {
       "fixtureHash": "a04f5269be8e586d75ad13128c53d536e9b4c137eaed2698242bdf4fe391ea84",
@@ -7458,20 +6278,6 @@
         "phase": "parse",
         "category": "unknown-tag",
         "message": "Unsupported tag 'endraw'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:775:0": {
-      "fixtureHash": "29f01403d6a9151b6cb38e9da7aaeef2b1de82b654d4e06db7a3b3efb48372b3",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
       },
       "reason": "Tag not implemented"
     },
@@ -7666,20 +6472,6 @@
         "sha256": "a703a2e910dd2bf419333700e689574f4d6745242ab73c09e16c569d1d1527e0"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:851:0": {
-      "fixtureHash": "ed9799dbc81c8a47e0d18b15a20d25d1f0d817077a6240811b5d5fc93c8f9fcb",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "d004f5121764ca1f6d5fa61cb38247630b73dcd337a0132ba0a0439f81c091c8"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:864:0": {
       "fixtureHash": "94f8b77bdd21e16b6874d58c39dddf3e57ed75b1a5ea94293d133ad0ac0d7bbf",
@@ -10596,12 +9388,10 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/tablerow_attribute_coercion.yml:27:0": {
       "fixtureHash": "859d41aed09ec7be7f407082335963c89cd8acf0479b045ebb359559a38422d4",
@@ -10610,12 +9400,10 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/tablerow_attribute_coercion.yml:38:0": {
       "fixtureHash": "90f29ceb2de67110cbe4f996096b89eaf9a0ed4d1c3809273ee4a91ab4903a93",
@@ -10624,12 +9412,10 @@
         "sha256": "8f8299750494b841fa9808b7044540b4cde1d2e49881c737d224efafbcac567d"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "79fe78007fa10e0d7ff3a42515ccec28fd8cd95dadf3e5b94bbea68d26d19e36"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/liquid_ruby/variable_type_filters.yml:130:0": {
       "fixtureHash": "7b3c6fa9632c020c3ad51598bb4120e7a4cfcfa701268223a1d6574c3f0fbe26",
@@ -19098,70 +17884,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/parser_errors/liquid.yml:29:0": {
-      "fixtureHash": "7a92289aff1513124b408b2c2255445d01b46f69b09a17669751d18c69e02194",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "expected variable name, line:2, col:7"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/liquid.yml:38:0": {
-      "fixtureHash": "7fc656be2370e8645dcc15c3a7a414cd35b3458c664730ed6feb6c403dccbd0b",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "expected variable name, line:3, col:7"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/liquid.yml:48:0": {
-      "fixtureHash": "dd121fd52f6cbc81973de40442413f35fae164e0fc6507dee8286d73e18997fc",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: for i, line:2, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/liquid.yml:57:0": {
-      "fixtureHash": "cb3beb9204009e719fda0a05c1f8bdcba6dde228f3006170caf61ca03e7f0bd9",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "tag for i in (1..3)\n not closed, line:2, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
     "liquid-spec:specs/parser_errors/raw.yml:14:0": {
       "fixtureHash": "65471c8edf1d0d5a82cb66be00f9e2cc6f75f0d597f5cde62da4abc5ce657ec2",
       "liquidjs": {
@@ -20788,10 +19510,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:107:0": {
       "fixtureHash": "7390a651e5ecb3bf26c6e9d646803d168e53d3543f0c78873b0494414261f13f",
@@ -20801,10 +19523,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:114:0": {
       "fixtureHash": "57d3bfc50a187cb766070001b1ecf2596e303146e3847b195fd4f5aa239b54f3",
@@ -20814,10 +19536,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:121:0": {
       "fixtureHash": "ff2458f7d565e4fdec2ec00f9493907fa808d1bac00896d7d75813fb2e5af66b",
@@ -20827,10 +19549,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:128:0": {
       "fixtureHash": "23cf12a070c215d779bfd36be3b58846f967a49551bbea59e6a065d68796f569",
@@ -20840,10 +19562,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:134:0": {
       "fixtureHash": "5caf9e55d5af9ca75a653bd86cbf9eb549665beb6892a23c25433d4ad10833ee",
@@ -20853,10 +19575,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:140:0": {
       "fixtureHash": "934c056a105aa17ee2a66482035b88185bc84168c2d91770e289daebd666c741",
@@ -20866,10 +19588,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:146:0": {
       "fixtureHash": "af63ecbb35e89217dea7e87870646de2ad93da1b306a895a32b46f97bdd79224",
@@ -20879,10 +19601,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:152:0": {
       "fixtureHash": "19f75a7bdb9ccd021b5ee3b2e6d75e895f34cfe6ce6b69fc528df858c8c3300b",
@@ -20892,10 +19614,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:158:0": {
       "fixtureHash": "d834080c2858a5abcda5004ba0e939b9a6637626bd6d876cec2b911920fbe243",
@@ -20905,10 +19627,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:16:0": {
       "fixtureHash": "e08308bc47829d80990fbe258bd0723338ea56ba3839c45f80338e955083ef2d",
@@ -20918,10 +19640,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:164:0": {
       "fixtureHash": "10fe293d6e5aa0db987fbb7405df709ea19b6c1a84a4dea7039443102f164b9e",
@@ -20931,10 +19653,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:170:0": {
       "fixtureHash": "77bb35a9c297cc18cb191b40e19ffb617c6306128a59cbf5a17521915fbfbb78",
@@ -20944,10 +19666,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:176:0": {
       "fixtureHash": "6ef3593047414fe16d41a4309de7f8e50571fd74f3bbb8c4fb7d0878bac2299c",
@@ -20957,10 +19679,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:182:0": {
       "fixtureHash": "6e0707be63cc29f75d79e27a6bfeaf07ad0c91e10548326e2854fa6d7e2be658",
@@ -20970,10 +19692,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:188:0": {
       "fixtureHash": "a9273d81e1d6d39040c3484a1f7ac19f6c5ce44a689842c963fe54e78e834b81",
@@ -21009,10 +19731,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:200:0": {
       "fixtureHash": "690f61b047b456e5cbb077d2292c6046604e38e1f6095f8681ad796b458835bb",
@@ -21022,10 +19744,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:207:0": {
       "fixtureHash": "f3a3fcc04a106c824bc9769ba4fc7ee87ea2850035f69d15271b54ab8a6049a3",
@@ -21035,10 +19757,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:214:0": {
       "fixtureHash": "97a9d996cbd1b2d3ebb4483ea99227367362c358d7b3d0440b77529f8fb17d34",
@@ -21048,10 +19770,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:221:0": {
       "fixtureHash": "dca9c21031550bfefff0fa0e3161894d55e876a89cdccbdeb27791cc539f1e2e",
@@ -21061,10 +19783,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:228:0": {
       "fixtureHash": "2672851ed7924391337ea78d757c3ed9a9ab0961ec30d62cca806919b0de3cb2",
@@ -21074,10 +19796,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:23:0": {
       "fixtureHash": "c587e015f90eb638597f43629e1ebb2a73a95cffbb7e32ac716f3d22f00ff303",
@@ -21087,10 +19809,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:235:0": {
       "fixtureHash": "a297e66062f14111d134c0eaa5c8277da76bea6842bb92e70fe6863179578620",
@@ -21100,10 +19822,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:242:0": {
       "fixtureHash": "c190739236bdda702f124c5842608d80d17383f2c013d4f5d82bb9fb3a6d88a8",
@@ -21113,10 +19835,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:249:0": {
       "fixtureHash": "69318e56baa9376f39dc9da4c7514d3d1b60d2ed108dcddf17d2ae59ac469660",
@@ -21126,10 +19848,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:256:0": {
       "fixtureHash": "104ff884c2d15c8fab72e5fb4db2e6809f1551bdedbc67eb98475b320cafc77f",
@@ -21139,10 +19861,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:263:0": {
       "fixtureHash": "240e9f8ce146d5e7861ede149f2b96d417146eb4415034f815d70708202d0420",
@@ -21152,10 +19874,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:270:0": {
       "fixtureHash": "dd7a83bee838e330d2fa5d86e337e3e5c66a39119fe7e47b8ddf90e6a79d29eb",
@@ -21165,74 +19887,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:276:0": {
-      "fixtureHash": "0db77111b38ae718d035d4d6602ff58525361fd3c02331e7b396dc87b23a88eb",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
         "category": "syntax",
-        "message": "illegal tag: {% tablerow x in ) %}, line:1, col:1"
+        "message": "Expected variable or literal"
       },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:282:0": {
-      "fixtureHash": "a2a699a65df7e35e69d572bdc232831d181a7964fb7029b26e5b1b3016aff2a6",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow x in ] %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:288:0": {
-      "fixtureHash": "e7367c23e3740111f521138775412d1b5b5036b0d597c12dd8d729d0661214cc",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow x in : %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:294:0": {
-      "fixtureHash": "5e4a7b16b88253117b41bc37a2ba250ea2d3f8b814cb729b9866c4696bcaf640",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow x in , %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:30:0": {
       "fixtureHash": "46b01d9969c537d035d97926cff96f18809396e1d925d4b96b9528c77ad1f3ae",
@@ -21242,106 +19900,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:300:0": {
-      "fixtureHash": "5e0f0f3bccbc5a175dbb494e7517363eadee838f19307a3ecbe8857e7fc00c05",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
         "category": "syntax",
-        "message": "illegal tag: {% tablerow x in == %}, line:1, col:1"
+        "message": "Unsupported loop option"
       },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:306:0": {
-      "fixtureHash": "5e4f0dfd0048a91c3c0db757abde10c5f4ae564c68dd20f2fd48618e3af22c37",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow x in != %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:312:0": {
-      "fixtureHash": "bc6fc1f2fab8ce4b1769e91948037e54545e06a5ac211f6b8032e5db87a4a47e",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow x in < %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:318:0": {
-      "fixtureHash": "4ebf2a44dd23c65963725e0686298a9de333e2c4fa926e4fe4add24a561f6e78",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow x in > %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:324:0": {
-      "fixtureHash": "3c65a7c441dbff30aec95d9773d7c22d629c60f41967f6159f7708be05e9508b",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow x in <= %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:330:0": {
-      "fixtureHash": "6989bb710322cf4a4b24602d955c4cbf00a49c22b9c96c38a81c4df27e9c4a6a",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow x in >= %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:336:0": {
       "fixtureHash": "fdf27b913bcab4d48970cf121d090ddc1417fcf3ccfd82f75c5f25744ebed475",
@@ -21349,12 +19911,9 @@
         "kind": "parsed"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "parsed"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:342:0": {
       "fixtureHash": "c87857e2dccbbba50afc1f9944d546c1cee637e452461d881df61b215dc66ea3",
@@ -21364,74 +19923,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:348:0": {
-      "fixtureHash": "45a960fdfb0bd9855a61a5c703fd7d0f3076c5ce042c973c3868de43d107255c",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
         "category": "syntax",
-        "message": "illegal tag: {% tablerow x in . %}, line:1, col:1"
+        "message": "Expected variable or literal"
       },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:354:0": {
-      "fixtureHash": "d19d505cdf60664528e39735ddf165e6d01470af8b225eb26f0625047596d33c",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow x in .. %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:360:0": {
-      "fixtureHash": "20a049b43573286e4ea8e05c885589007b4f60ed0e211684cc0ab968a60c0597",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow x in %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:366:0": {
-      "fixtureHash": "8bd3a04dc51963bd27851e20245b49b0ab62f1ecf94286d0dd3c133fa9fedc7b",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow x in & %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:37:0": {
       "fixtureHash": "ce126c6714752fc2e83f621edf36bbc630b3815254f34345ae86f376dde4c62f",
@@ -21441,154 +19936,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:372:0": {
-      "fixtureHash": "4049ebb025d461288a85070dc2d22b3e2b8ac5b8ff772ec73e4dc8e46e65108e",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
         "category": "syntax",
-        "message": "illegal tag: {% tablerow x in * %}, line:1, col:1"
+        "message": "Unsupported loop option"
       },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:378:0": {
-      "fixtureHash": "267f01d1dda61f8259b3f24fec2bfa1116ed914e198d5948513e6f6672f49604",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow x in @ %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:384:0": {
-      "fixtureHash": "c9da10d6a12cdd6f671e697ea893186f4d391dee34fdab38e19af2c2c4e427bb",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow x in \\ %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:390:0": {
-      "fixtureHash": "24549436c9a1ab703dbcd7436c132680403b949d5ac5430680e4b71425e7cfce",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow x in ` %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:396:0": {
-      "fixtureHash": "465983f9cd43dcf27bd87014c98c21909fe78791a462aebdb18e52ad0b8daf60",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow x in ^ %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:402:0": {
-      "fixtureHash": "4d874e057b8e81cf1277733e01f92352981352a7d4ff87e71b03bd65f10aaf2b",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow x in $ %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:408:0": {
-      "fixtureHash": "5c4bef3375bdd8b6e9d0a8ad5eb9457a1e40bcce186e35bad2fd0da8247c796f",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow x in # %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:414:0": {
-      "fixtureHash": "6441fb2867b423d4d45c629bf1531284d9d2dcb6dbbc3a4f6422bddd3efeae3d",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow x in ; %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:420:0": {
-      "fixtureHash": "b003f2f99e7f3e3b73c2e9e1f2dd25d790c468d09463045de244f04dcbd46561",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow x in ~ %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:426:0": {
       "fixtureHash": "7e655b28c5077ac02fc0c0722786f5b89e4064217cd9ef96efa7d57e36bb4173",
@@ -21624,10 +19975,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Expected variable or literal"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:44:0": {
       "fixtureHash": "0d51800506aba033b1c02ef79004f590a882bfa677f8713b1f0f0e128320599c",
@@ -21637,10 +19988,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:444:0": {
       "fixtureHash": "09834403a2819f9c232529d96f500d944e8b5bd49055c48d6d36f55acf88bf56",
@@ -21648,12 +19999,9 @@
         "kind": "parsed"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "parsed"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:450:0": {
       "fixtureHash": "50c0a99605ab53275e9c10ed91cade557d6b3b3d7b181f577e244d7078a7e5a4",
@@ -21663,42 +20011,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:456:0": {
-      "fixtureHash": "f65ab642b353c46b2ea3e679266bfbcaf4763e09e80af248ab080fea84353fe6",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
         "category": "syntax",
-        "message": "invalid range syntax, line:1, col:20"
+        "message": "Expected property"
       },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:462:0": {
-      "fixtureHash": "61208b7b9e8defe5e3a18fc003c07c16a3971c9a206b5543324e0c7b383d8662",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "unexpected token \")\", value expected, line:1, col:22"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:468:0": {
       "fixtureHash": "ca8a75c9bb04851b992df217609da9c896ad02dc9bda3e7bee6ccce0607aca22",
@@ -21708,58 +20024,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:474:0": {
-      "fixtureHash": "c406ab5756a8f01e42593d281c21439d5d8c9f8b0d2481a4ac0142d5acd222d8",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
         "category": "syntax",
-        "message": "[ not closed, line:1, col:21"
+        "message": "Expected property"
       },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:480:0": {
-      "fixtureHash": "4ec34f13429d48204adbdfe3043cd231cbd02387711f6119f95911923f5de3e7",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "invalid range syntax, line:1, col:24"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:486:0": {
-      "fixtureHash": "4b55a58688c306d0d295ac9639cd5276642f6a463990eb2300c9e2ec183d2652",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow x in | %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:492:0": {
       "fixtureHash": "ad4283f25d9f77941da303ef1402a4f6a15f686d66ac8669f716640dcf3e79a1",
@@ -21769,10 +20037,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Expected variable or literal"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:498:0": {
       "fixtureHash": "9a47da802f5977b5a9cb29d4c33be22a03a1f6c7531cc562f9286e31158f480f",
@@ -21782,10 +20050,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:504:0": {
       "fixtureHash": "abdad91fdf07ad977466bb11ca8b2be1d20eda911d0e6ff8eb22ec9d6b8a4878",
@@ -21795,10 +20063,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:51:0": {
       "fixtureHash": "0049bd84e4fb0375ef411161cd43772fd6d8558e758ff30a4e157d5bc00237c8",
@@ -21808,10 +20076,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:510:0": {
       "fixtureHash": "c76b76e78b2200962260bb6ae6008bc9f7f86da49e7ae7d7867f714c6016cc55",
@@ -21821,10 +20089,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:516:0": {
       "fixtureHash": "cccb5978cd7af584f1c30b6e1c1f66b37bc34ad8fecdfa0a933b3b95c6414172",
@@ -21834,10 +20102,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:522:0": {
       "fixtureHash": "21be2734165c04ddf161c6ad2a3823cf37ea00a85137c73178b88bf4b12c9947",
@@ -21847,10 +20115,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:528:0": {
       "fixtureHash": "6db4c449e1371bcf35669b55b640d01e7c2919eb7f34565fc32e663771100175",
@@ -21860,10 +20128,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Expected property"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:534:0": {
       "fixtureHash": "bf49207e0d49e4faa58e69bf986af6dca9e2f5221c4aa5c1d97517320aab7c58",
@@ -21873,10 +20141,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:541:0": {
       "fixtureHash": "8254abc8df6d7dd36824a46ac8a88019b684748180591eeaa54191e13828ecca",
@@ -21886,10 +20154,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:547:0": {
       "fixtureHash": "57f81efc045b0964475c4c0e9df756dae93333300c74ce4f13c81d26057097d6",
@@ -21899,10 +20167,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:553:0": {
       "fixtureHash": "d05c1e22fb5c69ec16fe54575aa6ed8f94c21172dba1edb90152a2e209222e09",
@@ -21912,10 +20180,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Expected expression"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:559:0": {
       "fixtureHash": "3376d86923f71dbca78854c7c270392d159d76e3d5816649390934b9d632d8bc",
@@ -21925,10 +20193,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:565:0": {
       "fixtureHash": "e14e84b55f3b4952ad19fbe1fa9909a64e31fe59d0471539886254d1f54f939a",
@@ -21938,10 +20206,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:571:0": {
       "fixtureHash": "d0bb6600b3d61cb8a8706352165e5c862269bd221d251947bce27dccc4adce10",
@@ -21951,26 +20219,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:577:0": {
-      "fixtureHash": "08bc27b76968e2c1f1f70c0d7644173bdb631196744c083357c41801e60e2bed",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
         "category": "syntax",
-        "message": "illegal tag: {% tablerow x %}, line:1, col:1"
+        "message": "Unsupported loop option"
       },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:58:0": {
       "fixtureHash": "8a37f9fc99b5cafc6c53ba6cd77d2fa1d4202da59e380960c959c301849704bb",
@@ -21980,26 +20232,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:583:0": {
-      "fixtureHash": "93a487617b0c89dc8e0de001d48f15d39cd276592fd5f98c96341f40199d1c1c",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
         "category": "syntax",
-        "message": "illegal tag: {% tablerow x of %}, line:1, col:1"
+        "message": "Unsupported loop option"
       },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:589:0": {
       "fixtureHash": "ac4978c91c1e82db77c92af2f4203a9821380b6cdfc6be1ae7a1fdff3c3bc317",
@@ -22009,154 +20245,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:596:0": {
-      "fixtureHash": "7b1ea07d0fbc8a0962ce05e6de306834a020cfbf08202fe63379a10922cf3bd1",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
         "category": "syntax",
-        "message": "illegal tag: {% tablerow  %}, line:1, col:1"
+        "message": "Unsupported loop option"
       },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:602:0": {
-      "fixtureHash": "6e0f53e39486480affe60ce9d9f84b188a5ac4b8a0e1b4e07635ffe5a5d9f264",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow & %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:608:0": {
-      "fixtureHash": "f72ab05d599268387086c99695c47a6f9304308bf49a230f22f2063e64797837",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow * %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:614:0": {
-      "fixtureHash": "baf7106dadf3b9118aa8f41e0a9799f6a5eb99ff6e3038d97df604841ba3e66c",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow @ %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:620:0": {
-      "fixtureHash": "039022b97d57274a123a24b3e74ce6ee1271b513275d0015a2acc565beca6fb7",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow \\ %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:626:0": {
-      "fixtureHash": "8ae786a995ee927c6f2d1893536d9b15027b2eb76a543e4e251811c38e95e654",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow ` %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:632:0": {
-      "fixtureHash": "de82954d79b572458c0c800905f3fb3cb7365bb71f94322d9620ac861f0c68c3",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow ^ %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:638:0": {
-      "fixtureHash": "708ac3f74657b6361b1f64393e95978cb84f5b4b687c736c5567c25c2a898c0f",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow $ %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:644:0": {
-      "fixtureHash": "f97cfc0fc31c881c57840552c553177f6c63a2d9ee5cea3bc973f6af03a8ad63",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow # %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:65:0": {
       "fixtureHash": "e88b64ff1e51442dc066f12a45d21509fb3e9e0ec658f7b5262e7f445f02b9a8",
@@ -22166,58 +20258,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:650:0": {
-      "fixtureHash": "0851c244b36590cc29d43af81baffaa1aef8ffa7f6a2655a498e7e0439ca70cb",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
         "category": "syntax",
-        "message": "illegal tag: {% tablerow ; %}, line:1, col:1"
+        "message": "Unsupported loop option"
       },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:656:0": {
-      "fixtureHash": "97faa37ec1560b50ddec952868cffdb56352f95c52a171efc0ddec5a523461d4",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow ~ %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquid-spec:specs/parser_errors/table_row.yml:674:0": {
-      "fixtureHash": "93f4d114a012506024766f17f05f21b0c5c8e61975d18c1529d270e048a7389a",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow 42 %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:72:0": {
       "fixtureHash": "f027c419967cf71084b371c69e47056751a3f98d30e265cf751964eefa22c67b",
@@ -22227,10 +20271,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:79:0": {
       "fixtureHash": "66e46202acec90e3536723f69a6eedb42f4a5d2b3446036dfe624b250f1920e1",
@@ -22240,10 +20284,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:86:0": {
       "fixtureHash": "9075941a657aeae73cd7edab7c3236401b41fac0226cc70ad1816054ac32317c",
@@ -22253,10 +20297,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:9:0": {
       "fixtureHash": "f868d23bd5abaa38abbb3cbcf4d905850c631191c9641ffd30327ef99a8ece4f",
@@ -22266,10 +20310,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/table_row.yml:93:0": {
       "fixtureHash": "ae38483425a984d06415b4672ed861ebae543ba252a768de39470833095c6073",
@@ -22279,10 +20323,10 @@
       "effectLiquid": {
         "kind": "error",
         "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "category": "syntax",
+        "message": "Unsupported loop option"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquid-spec:specs/parser_errors/unless.yml:1004:0": {
       "fixtureHash": "ec0d16d08f1d5120109588583b0b1e0b39d0733a78035df18bbc01c4876ac6fa",
@@ -24329,20 +22373,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquidjs:test/e2e/issues.spec.ts:210:17": {
-      "fixtureHash": "849d3117580690f173ee96fcbce845bf53572078f575af6fcaae2ad8ee7155c5",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "1091f1ce5284e9e453d6878fc9719685677694809c2c0318969943a373e60629"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
     "liquidjs:test/e2e/issues.spec.ts:22:17": {
       "fixtureHash": "075dae99cb2362ca2cc2b0c26f344135e9bdec83b29207a39dd6742bc06f7754",
       "liquidjs": {
@@ -24406,20 +22436,6 @@
         ]
       },
       "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/e2e/issues.spec.ts:474:19": {
-      "fixtureHash": "4a74ed93400d5d49578d0fa30e6a17cef913cace941e348cc0e50ce641ac2b4f",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "63a04c056fb058988460595cb826b75f8fc63f198abc028483074e1055c43c4b"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unclosed tag"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquidjs:test/e2e/issues.spec.ts:485:11": {
       "fixtureHash": "b4409947e48e79396b719467c310aa562be07d76f49dde212462c111104ad3eb",
@@ -27735,32 +25751,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquidjs:test/integration/static_analysis/variables.spec.ts:462:21": {
-      "fixtureHash": "9d8d7b1fdb887ad2737164b3ae3b3707f61cd99d3a541f6369b9200edd7e276d",
-      "liquidjs": {
-        "kind": "parsed"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/static_analysis/variables.spec.ts:480:21": {
-      "fixtureHash": "5d62948172765b491fbbc07ace723c8d540ebcea0ffdf56efb8036b8bd1abeea",
-      "liquidjs": {
-        "kind": "parsed"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
     "liquidjs:test/integration/static_analysis/variables.spec.ts:655:21": {
       "fixtureHash": "010d2b2ead39609842ddcbdc570e9ee602e47945d9881ea435bc1052ecf86006",
       "liquidjs": {
@@ -28449,163 +26439,9 @@
         "kind": "error",
         "phase": "parse",
         "category": "syntax",
-        "message": "Expected identifier"
+        "message": "Every inline comment line must start with #"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/tags/inline-comment.spec.ts:17:23": {
-      "fixtureHash": "c6e6bb126c7fdabba2a71d86580b483a2e9f680ca3dd161ed3c1b823e1fb3662",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "3faeafc28d3c31e6d7bf628a53438e7d24a86816f15d10f6ba54e18f8fec26c2"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/tags/inline-comment.spec.ts:22:23": {
-      "fixtureHash": "1c52a1fdde6f161f0decafe2b9fecef7b26c527c59cbca02129e4a7dbf783dba",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "fa80776e284d9b75a0a7c3f070dd4da4fc457ed7c097460deb7e69051d6fd87b"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unclosed tag"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/tags/inline-comment.spec.ts:27:23": {
-      "fixtureHash": "06951ab76b271f1ea86328144ef4c01364dad7e355751e123c7c4fa3998fe361",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "fa80776e284d9b75a0a7c3f070dd4da4fc457ed7c097460deb7e69051d6fd87b"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unclosed tag"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/tags/inline-comment.spec.ts:32:23": {
-      "fixtureHash": "7369bdcf5782865958a66d71be7338b67e1932d8e734f790a41e555e735c1735",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/tags/inline-comment.spec.ts:37:23": {
-      "fixtureHash": "8480c0a2b7f54d912df97dc8e0492633da7bca87b17b9f134b73698b759fb291",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/tags/inline-comment.spec.ts:42:23": {
-      "fixtureHash": "16881e00131e6faf468968c1c674f74deafdfefa833d05c8614189b2677b2563",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/tags/inline-comment.spec.ts:52:23": {
-      "fixtureHash": "20235322720f1bd4fd33a515955967f5d0854d9df7262b8f6659c719df39cf86",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/tags/inline-comment.spec.ts:68:19": {
-      "fixtureHash": "e7d678bca5007813ac32cf53ff40b7bad79275eb0f87b116977f4f5c2a48b242",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "10349bf452e206bf7e99f40a3925960ea57652385710ade0fb115e8cd58c1f27"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/tags/inline-comment.spec.ts:7:23": {
-      "fixtureHash": "c584c8e7a3624f7fa945a4fd24f38a0f921eba4e622d49ae50dabf823855b96a",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "10349bf452e206bf7e99f40a3925960ea57652385710ade0fb115e8cd58c1f27"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/tags/inline-comment.spec.ts:86:25": {
-      "fixtureHash": "7698c1d4f27e15cd2b81fc14f8c7887c7ae7a6873a5b1fea3b39a5b813b1e5cb",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e7f1cef9f86888efc6aaad3ffe2ffea84374b2416b122796c10174de1b5a9e85"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/inline-comment.spec.ts:97:25": {
-      "fixtureHash": "7972b5e6a8304cc9da9845c30cc81f001fd8964049c449e5a33c3aea5ce76862",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
     },
     "liquidjs:test/integration/tags/layout.spec.ts:43:23": {
       "fixtureHash": "02f4c001477b7e1435d31dc8206612d1ea9f6d427fad7318159c64eff4f07017",
@@ -28621,320 +26457,6 @@
         ]
       },
       "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/tags/liquid.spec.ts:17:23": {
-      "fixtureHash": "fb55b18cc9be3047d751486eb34254ba1eb0152e938c4b0bc1a57b3d0b68d3ad",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "8a8221ddd15b0777304435b35ad3c8dfa26f75cafeac836ff3b930cedf97bb73"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/liquid.spec.ts:36:23": {
-      "fixtureHash": "2efbb2ce62663dfa9734e5ae04c7a9129c7033f8c9ad6c88b4661e7fedd2fbf7",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "1091f1ce5284e9e453d6878fc9719685677694809c2c0318969943a373e60629"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/liquid.spec.ts:42:23": {
-      "fixtureHash": "78a02a1545652deb2ff676dee19294bb75fcf697d2adf8b7d280b7a2be8345f5",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/liquid.spec.ts:54:23": {
-      "fixtureHash": "c952894c563944c8b2fd2f33db3fc56be1ddbdb3c1a7d62ab5b6ebfe938f26eb",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "ff5fa8eb3c79f904f253bb160debe8a121e6ec985af12b7481a570a11fc358d5"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/liquid.spec.ts:69:18": {
-      "fixtureHash": "be7b33ae73c3e22a8751a921979587048436ce27a9a174c6c794cb39ce62cb5f",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "tag for value in array\r    echo value\r    unless forloop.last\r      echo \"#\"\r    endunless\rendfor not closed, line:1, col:14"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/tablerow.spec.ts:100:23": {
-      "fixtureHash": "8429434e6c9cd14a5d42a449c8c93857a9c7a1cbd71996c34cf16b882bc50d69",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "ae83ff2304e81b8cb24b32e3de3cd27e482eaeb526a331fedced93e486858a51"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/tablerow.spec.ts:107:23": {
-      "fixtureHash": "96b2fedca45f0c901c131267f6930b70a0d9d2051b8dbaa132afcb2985f5f5ff",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "9ce6b0be0b7dc37c210f6b4d281af513356f4e15aa18b37759b3d40d7f42addb"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/tablerow.spec.ts:113:23": {
-      "fixtureHash": "f9a556ed978a398020d51362986869a36934c07836b452141fbf075ea1517149",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "d8634c0d98ca76323b8e3a2396fe4424f8e2ec6db382a21955fbe2e9ee914368"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/tablerow.spec.ts:119:23": {
-      "fixtureHash": "7cd865193102efc023e70014d5b2a7257e8c13f8999df69f3d0281615daf767a",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "a3319431275e31ecbf64a51c89808cf0233d232bdac90bdceb762eb181de3c30"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/tablerow.spec.ts:126:25": {
-      "fixtureHash": "9fcf7d824edaf4fe142e926bc3d40aca9e5d716adb61067c2a43ad53798efef3",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "d2375a60b569335bb102e3d187be54db2154b4aae633c20879106b2f8726858d"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/tablerow.spec.ts:132:25": {
-      "fixtureHash": "ea03c22327917cd4ea53dc6460c820aa8d53f6edfc04d05ef5a3f9271d3d5817",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "5b3b87546c56a2cbb8257c6c431eb5a85e0f4577ab6fb9eee1b4d177dfe7f8d4"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/tablerow.spec.ts:138:25": {
-      "fixtureHash": "08cb6796e5e8cca1fa625d429f0155e9fafa6aa19fe950d5a78cd5c0a0265b6a",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "bd14e0fecb1a87d857d426e8e829dc8dc77935fd9f06545365cbc414722502ad"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/tablerow.spec.ts:146:19": {
-      "fixtureHash": "4a48827c35a5aac1ea8c241f8efd02a74033acb19bfdb833ab8779a3622c5999",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "17ffc66bc62426dd29e3a42361fa94ac16db7a1fdc0aacfb361302ac82db1073"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/tablerow.spec.ts:152:19": {
-      "fixtureHash": "58cb342509c64a30ccb59a362b10029e3a37a7572dcf05690a54c13bcee69361",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/tablerow.spec.ts:48:23": {
-      "fixtureHash": "a3a4fe6777452607f69a92164de75c90619e7c5e9300a44e2754a4df5ef59544",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "ea88a63f4806f7c226fd55e156dd1968a73398c2c50935ac1cc06235a2f46fa6"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/tablerow.spec.ts:55:23": {
-      "fixtureHash": "47fc08cc9236ea48f51a3c64cfd5c3731f844b8132bc6a759ef22c7ec86f7555",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "17ffc66bc62426dd29e3a42361fa94ac16db7a1fdc0aacfb361302ac82db1073"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/tablerow.spec.ts:62:23": {
-      "fixtureHash": "dd93a075d869e6f04df94c9ec1cc6ced2d0a6ea606de5b21f7f79161ce9cc918",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/tablerow.spec.ts:69:23": {
-      "fixtureHash": "90f5a64f15415f6b1d0815c128323d38ae01a6aca654c65d4578d8fb231248ea",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/tablerow.spec.ts:75:18": {
-      "fixtureHash": "24b8972159a368ed4cbbd7a00223f563cd6ca216920e7d786e661f5e840ed307",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "tag {% tablerow i in (1..0) cols:2 %} not closed, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/tablerow.spec.ts:81:18": {
-      "fixtureHash": "50cb002370b41bb90dc46314aed359f24ac3dc96f049a796a7a8480098ad034d",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "illegal tag: {% tablerow i (1..3) %}, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/tablerow.spec.ts:9:23": {
-      "fixtureHash": "5f9d1f46383ef2671d07b76e768d24ebb7bb61fb50e3929fe61072a167297b6f",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "17ffc66bc62426dd29e3a42361fa94ac16db7a1fdc0aacfb361302ac82db1073"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/tablerow.spec.ts:91:23": {
-      "fixtureHash": "d314e20fd9510c5f4b929ca9148043bfaaa16385c6eb9cd7b971ae983d062be4",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "4e3fe6cdbfd66394cf93ead624410f0f76cb275ecd9d6fb8f0b174c267b52e04"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
-      },
-      "reason": "Tag not implemented"
     },
     "liquidjs:test/integration/tags/unless.spec.ts:51:23": {
       "fixtureHash": "f57483f30cff3316e1471ba6e8a100f8835e946798a910fd2333b6d1518f36f8",
@@ -29749,12 +27271,10 @@
         "sha256": "c458e758b3888a4e4cc547798d4ac96bcddeb04183e009dc4bb718a2b27d2680"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "c458e758b3888a4e4cc547798d4ac96bcddeb04183e009dc4bb718a2b27d2680"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "ruby-liquid:test/integration/tags/table_row_test.rb:23:4": {
       "fixtureHash": "fca26cec41632d9a0c1e6ec297d3ff326d3879c5d2c93e783b797572a7892be7",
@@ -29763,12 +27283,10 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "ruby-liquid:test/integration/tags/table_row_test.rb:29:4": {
       "fixtureHash": "2bf50ce9515148e30d18f8ad3d5eda33ca581f16e52a4f9f49a07473bc7919fa",
@@ -29777,12 +27295,10 @@
         "sha256": "dea4bd5ed6bc82609b279165bb1b3b1f404984d39d17e3e66dbde02a758da79c"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "dea4bd5ed6bc82609b279165bb1b3b1f404984d39d17e3e66dbde02a758da79c"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "ruby-liquid:test/integration/tags/table_row_test.rb:35:4": {
       "fixtureHash": "3429c872aa1c51bc45a3cebbcba8d83fa21e36bfc3dc7b643306520f19864b01",
@@ -29791,12 +27307,10 @@
         "sha256": "f1239c2385dfac1725544d4ac25a456b59c7b50e0641bcdb491fc25bda01787c"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "f1239c2385dfac1725544d4ac25a456b59c7b50e0641bcdb491fc25bda01787c"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "ruby-liquid:test/integration/tags/table_row_test.rb:41:4": {
       "fixtureHash": "728faaa96adc675866f2b6abf7b4468527b0f657a5150e6c7e55c3c084a2538b",
@@ -29805,12 +27319,10 @@
         "sha256": "c458e758b3888a4e4cc547798d4ac96bcddeb04183e009dc4bb718a2b27d2680"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "c458e758b3888a4e4cc547798d4ac96bcddeb04183e009dc4bb718a2b27d2680"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "ruby-liquid:test/integration/tags/table_row_test.rb:44:4": {
       "fixtureHash": "48f0ae1248b793db4290114d4997da9d6c297d531a702079c75cb0364dbe1425",
@@ -29819,12 +27331,10 @@
         "sha256": "c458e758b3888a4e4cc547798d4ac96bcddeb04183e009dc4bb718a2b27d2680"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "c458e758b3888a4e4cc547798d4ac96bcddeb04183e009dc4bb718a2b27d2680"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "ruby-liquid:test/integration/tags/table_row_test.rb:56:4": {
       "fixtureHash": "9655b218839cc5f2dd02ae63f01943333b88466214ad43b020c4e57c06a6b591",
@@ -29833,12 +27343,10 @@
         "sha256": "c458e758b3888a4e4cc547798d4ac96bcddeb04183e009dc4bb718a2b27d2680"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "c458e758b3888a4e4cc547798d4ac96bcddeb04183e009dc4bb718a2b27d2680"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "ruby-liquid:test/integration/tags/table_row_test.rb:62:4": {
       "fixtureHash": "207fcd35186abd54b57e7945ce30338ec8809208346f3b37fc3287a57dcf105d",
@@ -29847,12 +27355,10 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'tablerow'"
+        "kind": "output",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
-      "reason": "Tag not implemented"
+      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "shopify-liquid:test/integration/assign_test.rb:133:4": {
       "fixtureHash": "d9f00890af1c63e24248a9e3055d5e7edf4f220f87f0ab915ee77101ccc8e7be",
@@ -30755,244 +28261,6 @@
         "sha256": "a408d4b366e329cb58894cac1bc58d39ed5170e585c8ebd4fa3ec5fb347dbf57"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/tags/inline_comment_test.rb:10:4": {
-      "fixtureHash": "dd315ad368f177ac91d8072596e4a63bc64eba708ad02915de3a001c7700ff56",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/tags/inline_comment_test.rb:11:4": {
-      "fixtureHash": "c5f187d6cb33b191ccb085d01da64f208c0c2306a512b0e7264df8475baaf629",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/tags/inline_comment_test.rb:12:4": {
-      "fixtureHash": "2f622037179415d81b1071eac656f6511a0a0b9d7837aeb645d1e83f90015f2e",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/tags/inline_comment_test.rb:16:4": {
-      "fixtureHash": "05adbb827564b2e5fad01b98c6474ccef927b5fea1d0b31c9d26c2b0afce8878",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/tags/inline_comment_test.rb:20:4": {
-      "fixtureHash": "9627ec20df0f4a3e6a8fe2ab2cb66e8c00cc2c3e244ff3ba59e4a26f0c8ebcc4",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "a04a3751383827a25425e5efc388b112aafe587b3b5ed44e455e2aa18c45d88f"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "shopify-liquid:test/integration/tags/inline_comment_test.rb:36:4": {
-      "fixtureHash": "f7827dc1baa61cf14cc3c0b2569a5de2332ea92647553ca95bff0bb95ee42108",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unclosed tag"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/tags/inline_comment_test.rb:48:4": {
-      "fixtureHash": "8b0656a2b3e8824e4eeacab6593d4135ea45f653f5c2f28c808c30879350a5e4",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "shopify-liquid:test/integration/tags/inline_comment_test.rb:67:4": {
-      "fixtureHash": "ec84f34d9a222122f9b5e48f41e551503797a072e3a5a289cceebf7f417190d6",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "8dee402a88965cb3495bc84b26cab6fb173e24549ed06893348bfd2d5b1fedeb"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/tags/inline_comment_test.rb:9:4": {
-      "fixtureHash": "03ee9a77408c915f4df1a263436acad9b71d874a1aa70bb26b92e80b1a9e12ae",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/tags/liquid_tag_test.rb:118:4": {
-      "fixtureHash": "ed690ae217b7bc706afb99cff788a8cd6c447f65fde1b7c8e6f6a554e90dfa72",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "23498b4f5ac5ff645bc77b26e3645248baa4b0a074e219fa98734d424c40bdf0"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "shopify-liquid:test/integration/tags/liquid_tag_test.rb:129:4": {
-      "fixtureHash": "f61a11f71e77ad6a08162ce5cda61e2a2f733f7b087fd5b24bc7d1f13c62b068",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "23498b4f5ac5ff645bc77b26e3645248baa4b0a074e219fa98734d424c40bdf0"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "shopify-liquid:test/integration/tags/liquid_tag_test.rb:135:4": {
-      "fixtureHash": "88676586b2ab1b28529327009569a802e3beca40022fbf535f58c362c74dc704",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "0a1c41acdab8b31ae29c1ed34dfa782893b4d2563942276463a174977e277303"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "shopify-liquid:test/integration/tags/liquid_tag_test.rb:15:4": {
-      "fixtureHash": "d3a40f7229758ecc66cc22792ad2f8dc72c717f1d08e006c2bf2a8a58e7598b8",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "18ea778ca2b1a6049ecd4bbf993e416dc76709f31911d679d9424d0fa1e1ebe9"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "shopify-liquid:test/integration/tags/liquid_tag_test.rb:26:4": {
-      "fixtureHash": "feb9ce10bd3d7550483296001015339839c78ea7c29ee571dd72a230674421e5",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "8e55a4f944be15054c04572400df3be06644a7fd8661ae3c4aadb4c3b2f7dd2a"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "shopify-liquid:test/integration/tags/liquid_tag_test.rb:41:4": {
-      "fixtureHash": "05fba63a69c3ce220bc5abe20bcca560cf49a3ddd3d98301fdbd2872925c5851",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "13e228567e8249fce53337f25d7970de3bd68ab2653424c7b8f9fd05e33caedf"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "shopify-liquid:test/integration/tags/liquid_tag_test.rb:85:4": {
-      "fixtureHash": "8ae1a6b1556e2b498b1eb1a683cb415831cc72c0235722d3123499e556bbf305",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "23498b4f5ac5ff645bc77b26e3645248baa4b0a074e219fa98734d424c40bdf0"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "shopify-liquid:test/integration/tags/liquid_tag_test.rb:9:4": {
-      "fixtureHash": "5b77369cbf5ce50bd631aa9eb45b563ec426d894ea7021befdae062c51937f16",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "18ea778ca2b1a6049ecd4bbf993e416dc76709f31911d679d9424d0fa1e1ebe9"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'liquid'"
-      },
-      "reason": "Tag not implemented"
     },
     "shopify-liquid:test/integration/tags/raw_tag_test.rb:16:4": {
       "fixtureHash": "2f0e397c4f550a60e3831259220f1a90860b54e2841b2648a6a688c837d567ce",

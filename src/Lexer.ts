@@ -78,9 +78,15 @@ export const lex = (
         i++;
       }
       const offset = i;
+      const lineSyntax = kind === "tag" && /^\s*(?:liquid\b|#)/.test(text.slice(offset));
       let quote = "";
       while (i < text.length) {
         if (i % 8192 === 0) yield* Effect.yieldNow();
+        if (lineSyntax && text.startsWith(close, i)) break;
+        if (lineSyntax) {
+          i++;
+          continue;
+        }
         if (quote) {
           if (text[i] === "\\") i++;
           else if (text[i] === quote) quote = "";

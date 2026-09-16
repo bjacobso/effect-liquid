@@ -197,6 +197,7 @@ class Templates {
   constructor(
     readonly tokens: readonly Token[],
     readonly maxDepth: number,
+    readonly budget: { remaining: number },
   ) {}
   tag() {
     const t = this.tokens[this.pos];
@@ -209,6 +210,51 @@ class Templates {
       const t = this.tokens[this.pos++]!;
       if (t.kind === "text") {
         nodes.push({ _tag: "Text", value: t.text, span: t.span });
+        continue;
+      }
+      if (depth > this.maxDepth)
+        throw new ParseError({ message: "Template nesting limit exceeded", span: t.span });
+      const liquid = t.kind === "tag" ? /^\s*liquid(?=\s|$)/.exec(t.text) : null;
+      if (liquid) {
+        const lines: Token[] = [];
+        let start = liquid[0].length;
+        while (start < t.text.length) {
+          yield;
+          const newline = t.text.indexOf("\n", start);
+          const end = newline < 0 ? t.text.length : newline;
+          const text = t.text.slice(start, end);
+          const at = span(t.span.sourceId, t.offset + start, t.offset + end);
+          if (text.trim()) {
+            if (--this.budget.remaining < 0)
+              throw new ParseError({ message: "Token limit exceeded", span: at });
+            lines.push({ kind: "tag", text, offset: t.offset + start, span: at });
+          }
+          start = end + 1;
+        }
+        const nested = yield* new Templates(lines, this.maxDepth, this.budget).body(
+          [],
+          depth + 1,
+          loop,
+        );
+        for (const node of nested) nodes.push(node);
+        continue;
+      }
+      if (t.kind === "tag" && t.text.trimStart().startsWith("#")) {
+        if (/\n\s*[^#\s]/.test(t.text))
+          throw new ParseError({
+            message: "Every inline comment line must start with #",
+            span: t.span,
+          });
+        continue;
+      }
+      if (t.kind === "tag" && t.text.trim() === "comment") {
+        while (this.pos < this.tokens.length && this.tag() !== "endcomment") {
+          this.pos++;
+          yield;
+        }
+        if (this.pos === this.tokens.length)
+          throw new ParseError({ message: "Unclosed comment", span: t.span });
+        this.pos++;
         continue;
       }
       const e = new Expressions(t, this.maxDepth);
@@ -286,15 +332,20 @@ class Templates {
           otherwise = yield* this.body([`end${tag}`], depth + 1, loop);
         }
         nodes.push({ _tag: "If", branches, otherwise, span: end(`end${tag}`) });
-      } else if (tag === "for") {
+      } else if (tag === "for" || tag === "tablerow") {
         const name = e.name();
         e.need("in");
         const collection = e.atom();
         let limit: Expression | undefined;
         let offset: Expression | undefined;
         let reversed = false;
+        let cols: Expression | undefined;
         while (e.pos < e.words.length) {
-          if (e.take("reversed")) {
+          if (tag === "tablerow" && e.take("cols")) {
+            if (cols) e.fail("Duplicate cols");
+            e.need(":");
+            cols = e.atom();
+          } else if (tag === "for" && e.take("reversed")) {
             if (reversed) e.fail("Duplicate reversed");
             reversed = true;
           } else if (e.take("limit")) {
@@ -312,6 +363,20 @@ class Templates {
             )
               e.fail("offset:continue is not supported yet");
           } else e.fail("Unsupported loop option");
+        }
+        if (tag === "tablerow") {
+          const body = yield* this.body(["endtablerow"], depth + 1, loop);
+          nodes.push({
+            _tag: "TableRow",
+            name,
+            collection,
+            ...(limit ? { limit } : {}),
+            ...(offset ? { offset } : {}),
+            ...(cols ? { cols } : {}),
+            body,
+            span: end("endtablerow"),
+          });
+          continue;
         }
         const body = yield* this.body(["else", "endfor"], depth + 1, true);
         let otherwise: Node[] = [];
@@ -391,7 +456,9 @@ export const parse = (
   Effect.gen(function* () {
     const source = typeof input === "string" ? make(input) : input;
     const tokens = yield* lex(source, options);
-    const iterator = new Templates(tokens, Math.min(options.maxDepth ?? 128, 256)).body();
+    const iterator = new Templates(tokens, Math.min(options.maxDepth ?? 128, 256), {
+      remaining: (options.maxTokens ?? 100_000) - tokens.length,
+    }).body();
     let result: IteratorResult<void, Node[]>;
     do {
       result = yield* Effect.try({

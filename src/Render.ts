@@ -263,21 +263,32 @@ function nodes<E, R>(
                           return nodes(branch.body, state, registry);
                     return nodes(node.otherwise, state, registry);
                   }
-                  case "For": {
+                  case "For":
+                  case "TableRow": {
                     const collection = yield* ev(node.collection);
                     let values: readonly Value[] = isArray(collection)
                       ? collection
                       : collection && typeof collection === "object"
                         ? Object.entries(collection).map(([k, v]) => [k, v])
-                        : [];
+                        : node._tag === "TableRow" && typeof collection === "string" && collection
+                          ? [collection]
+                          : [];
                     const offset = node.offset ? Number(yield* ev(node.offset)) : 0;
                     const limit = node.limit ? Number(yield* ev(node.limit)) : values.length;
+                    const start = node._tag === "TableRow" ? offset : Math.max(0, offset);
                     values = values.slice(
-                      Math.max(0, offset),
-                      Math.max(0, offset) + Math.max(0, limit),
+                      start,
+                      start + (node._tag === "TableRow" ? limit : Math.max(0, limit)),
                     );
-                    if (node.reversed) values = [...values].reverse();
-                    if (!values.length) return nodes(node.otherwise, state, registry);
+                    if (node._tag === "For" && node.reversed) values = [...values].reverse();
+                    const cols =
+                      node._tag === "TableRow" && node.cols
+                        ? Number(stringify(yield* ev(node.cols))) || values.length
+                        : values.length;
+                    if (!values.length)
+                      return node._tag === "For"
+                        ? nodes(node.otherwise, state, registry)
+                        : Stream.empty;
                     let stopped = false;
                     return Stream.fromIterable(
                       values.map((value, index) => ({ value, index })),
@@ -295,7 +306,7 @@ function nodes<E, R>(
                             );
                           state.scopes.push({
                             [node.name]: value,
-                            forloop: {
+                            [node._tag === "TableRow" ? "tablerowloop" : "forloop"]: {
                               index: index + 1,
                               index0: index,
                               rindex: values.length - index,
@@ -303,9 +314,34 @@ function nodes<E, R>(
                               first: index === 0,
                               last: index === values.length - 1,
                               length: values.length,
+                              ...(node._tag === "TableRow"
+                                ? {
+                                    row: Math.floor(index / cols) + 1,
+                                    col: (index % cols) + 1,
+                                    col0: index % cols,
+                                    col_first: index % cols === 0,
+                                    col_last: (index % cols) + 1 === cols,
+                                  }
+                                : {}),
                             },
                           });
-                          return nodes(node.body, state, registry).pipe(
+                          let content = nodes(node.body, state, registry);
+                          if (node._tag === "TableRow") {
+                            const prefix =
+                              (index % cols === 0
+                                ? `<tr class="row${Math.floor(index / cols) + 1}">`
+                                : "") + `<td class="col${(index % cols) + 1}">`;
+                            const suffix =
+                              "</td>" +
+                              ((index + 1) % cols === 0 || index === values.length - 1
+                                ? "</tr>"
+                                : "");
+                            content = Stream.concat(
+                              Stream.concat(output(prefix), content),
+                              output(suffix),
+                            );
+                          }
+                          return content.pipe(
                             Stream.ensuring(
                               Effect.sync(() => {
                                 state.scopes.pop();

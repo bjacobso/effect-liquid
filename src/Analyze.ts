@@ -205,10 +205,12 @@ export const analyze = (document: Document): Effect.Effect<Analysis> =>
             Binding.join(env, [...branches, otherwise], merge);
             break;
           }
-          case "For": {
+          case "For":
+          case "TableRow": {
             expression(n.collection, env, control);
             if (n.limit) expression(n.limit, env, control);
             if (n.offset) expression(n.offset, env, control);
+            if (n._tag === "TableRow" && n.cols) expression(n.cols, env, control);
             const next = Binding.fork(env);
             next.locals.set(
               n.name,
@@ -219,12 +221,13 @@ export const analyze = (document: Document): Effect.Effect<Analysis> =>
                 provenance(n.collection, env).map((p) => `${p}[*]`),
               ),
             );
-            next.locals.set("forloop", declare("forloop", "builtin", n.span));
+            const loopName = n._tag === "TableRow" ? "tablerowloop" : "forloop";
+            next.locals.set(loopName, declare(loopName, "builtin", n.span));
             body(n.body, next, [...control, `for:${n.span.start}`]);
             if ([...next.values].some(([name, slot]) => slot !== env.values.get(name)))
               reasons.push(`Loop-carried assignment provenance is conservative at ${n.span.start}`);
             const otherwise = Binding.fork(env);
-            body(n.otherwise, otherwise, control);
+            if (n._tag === "For") body(n.otherwise, otherwise, control);
             Binding.join(env, [next, otherwise], merge);
             break;
           }

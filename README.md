@@ -41,6 +41,19 @@ The preview supports `increment`, `decrement`, and `cycle`. Counters use request
 
 Collection filters include `sort`, `sort_natural`, `map`, `sum`, `compact`, `concat`, `uniq`, `push`, `pop`, `shift`, `unshift`, `slice`, `where`, `reject`, `find`, `find_index`, and `has`. Scalar/nil coercion, dot-separated property paths, and nonmutating operations are supported. Expression-based filters, bracket paths inside filter property strings, and some Ruby/JavaScript missing-value differences remain compatibility gaps. `json` and `to_integer` support typed output comparisons.
 
+`liquid` blocks support newline-separated tags, nested control flow, `echo`, and comments while preserving original source spans. `tablerow` generates row/cell HTML with `cols`, `offset`, `limit`, and scoped `tablerowloop` metadata. Generated markup counts toward the output budget.
+
+```liquid
+{% liquid
+  # Render two products per row
+  tablerow product in products cols:2
+    echo product.title | escape
+  endtablerow
+%}
+```
+
+Raw blocks inside `liquid`, table-row control-flow quirks, and permissive malformed-syntax compatibility remain gaps.
+
 ## Extract variables
 
 ```liquid

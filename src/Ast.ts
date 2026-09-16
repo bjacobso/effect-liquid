@@ -90,6 +90,16 @@ export type Node =
       readonly otherwise: readonly Node[];
       readonly span: Span;
     }
+  | {
+      readonly _tag: "TableRow";
+      readonly name: string;
+      readonly collection: Expression;
+      readonly limit?: Expression;
+      readonly offset?: Expression;
+      readonly cols?: Expression;
+      readonly body: readonly Node[];
+      readonly span: Span;
+    }
   | { readonly _tag: "Break" | "Continue"; readonly span: Span }
   | {
       readonly _tag: "Partial";

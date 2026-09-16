@@ -5,6 +5,9 @@ import { registry } from "../dist/Builtins.js";
 const reference = new Liquid();
 const tags = new Set([
   "assign",
+  "liquid",
+  "tablerow",
+  "#",
   "increment",
   "decrement",
   "cycle",
@@ -39,6 +42,7 @@ const inventory = (names, implemented) =>
                 "test/conformance.test.ts",
                 "test/engine.test.ts",
                 "test/compatibility-expansion.test.ts",
+                "test/blocks.test.ts",
               ],
             }
           : {}),
