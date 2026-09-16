@@ -39,7 +39,7 @@ Defaults use Liquid truthiness, permissive missing variables, strict unknown fil
 
 The preview supports `increment`, `decrement`, and `cycle`. Counters use request-local input state independently of `assign` and `capture`; numeric input values seed counters. `include` shares counter/cycle state, while `render` gets isolated state. Rendering never mutates the caller's context.
 
-Collection filters include `sort`, `sort_natural`, `map`, `sum`, `compact`, `concat`, `uniq`, `push`, `pop`, `shift`, `unshift`, `slice`, `where`, `reject`, `find`, `find_index`, and `has`. Scalar/nil coercion, dot-separated property paths, and nonmutating operations are supported. Expression-based filters, bracket paths inside filter property strings, and some Ruby/JavaScript missing-value differences remain compatibility gaps. `json` and `to_integer` support typed output comparisons.
+Collection filters include `sort`, `sort_natural`, `map`, `sum`, `compact`, `concat`, `uniq`, `push`, `pop`, `shift`, `unshift`, `slice`, `where`, `reject`, `find`, `find_index`, and `has`. Scalar/nil coercion, dot-separated property paths, and nonmutating operations are supported. Selectors (`where`, `reject`, `find`, `find_index`, `has`) also accept static bracket keys. `map`, `sort`, and `sum` retain the pinned dotted-path behavior. Dynamic bracket keys and some Ruby/JavaScript missing-value differences remain compatibility gaps. `json` and `to_integer` support typed output comparisons.
 
 `liquid` blocks support newline-separated tags, nested control flow, `echo`, and comments while preserving original source spans. `tablerow` generates row/cell HTML with `cols`, `offset`, `limit`, and scoped `tablerowloop` metadata. Generated markup counts toward the output budget.
 
@@ -58,6 +58,14 @@ String filters include first/last replacement and removal, custom strip characte
 
 URL filters include `url_encode`, `url_decode`, `cgi_escape`, `uri_escape`, and `slugify` modes (`default`, `raw`, `pretty`, `ascii`, `latin`, `none`). They follow the pinned LiquidJS behavior: URL decoding replaces plus signs after percent-decoding, and Latin slugification uses its specific transliteration set. Malformed percent encodings and invalid UTF-16 become located `FilterFailure<BuiltinFilterError>` values in the Effect error channel, also during streaming.
 
+Expression filters include `where_exp`, `reject_exp`, `find_exp`, `find_index_exp`, `has_exp`, and `group_by_exp`. Predicates run as Liquid expressions with a local item alias, caller variables, and registered filters. They share iteration, work, and nesting budgets with the render. Native overrides of these names are respected.
+
+```liquid
+{{ products | where_exp: "product", "product.price > minimum" | map: "title" | join: ", " }}
+```
+
+Literal predicates participate in variable extraction and checking. Their locations point to the containing string argument, so analysis reports conservative location coverage. Dynamic predicate strings report partial static coverage. `analyze(document, registry)` and `analyzeProject(document, options, registry)` accept the active registry for extension-aware analysis. Filter registry entries are either native callbacks or declarative expression-filter entries; callers inspecting entries should narrow with `"expression" in filter` before accessing `.run`.
+
 ## Extract variables
 
 ```liquid
@@ -74,7 +82,7 @@ URL filters include `url_encode`, `url_decode`, `cgi_escape`, `uri_escape`, and 
 | `externalRoots` | Possible application inputs: `user`, `catalog`, `labels`, `locale` |
 | `externalPaths` | Paths such as `user.name`, `catalog.products`, and `labels[locale]` |
 | `occurrences` | Every read, its original expression/span, bindings, and control context |
-| `bindings` | Assignment, capture, counter, loop, and built-in declarations |
+| `bindings` | Assignment, capture, counter, loop, filter item, and built-in declarations |
 | `derivedInputPaths` | Simple alias/loop provenance such as `catalog.products[*].title` |
 | `dependencies` | Partial calls, expressions, and arguments |
 | `coverage`, `coverageReasons` | Explicit gaps in analysis |

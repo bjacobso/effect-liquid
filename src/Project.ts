@@ -1,7 +1,9 @@
 import { Effect } from "effect";
 import { type Analysis, analyze, type Dependency, path } from "./Analyze.js";
 import type { Document } from "./Ast.js";
-import type { Diagnostic, LoadError, ParseError } from "./Diagnostic.js";
+import { registry as builtins } from "./Builtins.js";
+import type { BuiltinFilterError, Diagnostic, LoadError, ParseError } from "./Diagnostic.js";
+import type { Registry } from "./Filter.js";
 import { parse } from "./Parser.js";
 import { TemplateLoader } from "./TemplateLoader.js";
 export interface ProjectAnalysis {
@@ -18,9 +20,10 @@ export interface ProjectOptions {
   readonly globals?: readonly string[];
 }
 /** A bounded dependency traversal. Dynamic calls and shared-state include analysis remain explicit gaps. */
-export const analyzeProject = (
+export const analyzeProject = <E = never, R = never>(
   document: Document,
   options: ProjectOptions = {},
+  registry: Registry<E | BuiltinFilterError, R> = builtins,
 ): Effect.Effect<ProjectAnalysis, LoadError | ParseError, TemplateLoader> =>
   Effect.gen(function* () {
     const loader = yield* TemplateLoader;
@@ -29,7 +32,7 @@ export const analyzeProject = (
     const reasons = new Set<string>();
     const externalPaths = new Set<string>();
     let visited = 0;
-    const entry = yield* analyze(document);
+    const entry = yield* analyze(document, registry);
     const visit = (
       doc: Document,
       analysis: Analysis,
@@ -61,7 +64,7 @@ export const analyzeProject = (
             continue;
           }
           const child = yield* parse(source);
-          const childAnalysis = yield* analyze(child);
+          const childAnalysis = yield* analyze(child, registry);
           const childResolve = (p: string): readonly string[] => {
             const root = /^[^.[]+/.exec(p)?.[0] ?? p;
             const suffix = p.slice(root.length);

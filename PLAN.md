@@ -76,7 +76,8 @@ Exit: multi-file rendering and analysis agree about scopes. A changed child inva
 - [x] Implement `offset:continue`, loop cursor scope/isolation, and pinned slicing/empty-collection behavior.
 - [ ] Complete remaining `liquid`/`tablerow` syntax and control-flow quirks; implement `layout`/`block`.
 - [x] Add the initial collection-filter batch: sorting, mapping, summing, compacting, concatenation, uniqueness, sequence operations, slicing, property matching/searching; validate coercion and nonmutation.
-- [ ] Complete collection-filter expression variants, bracket-property strings, and missing-versus-nil semantics.
+- [x] Add collection expression variants, static bracket keys for selector filters, predicate resource accounting, and literal predicate analysis/checking.
+- [ ] Complete dynamic bracket-property evaluation, property-based grouping, and missing-versus-nil semantics.
 - [x] Add string truncation, first/last replacement/removal, custom trim sets, whitespace/word-count, and HTML/text filters with coercion and malformed-input tests.
 - [x] Add URL encoding/decoding, CGI/URI escaping, and slugify modes with typed malformed-input failures and checker metadata.
 - [ ] Expand remaining filters by family, with runtime semantics, analysis/type metadata hooks, and conformance fixtures in each batch.

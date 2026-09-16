@@ -7,7 +7,7 @@ export interface Signature {
   readonly output: "string" | "number" | "array" | "input" | "unknown";
   readonly argument?: "string" | "number";
 }
-export interface Filter<E = never, R = never> {
+export interface NativeFilter<E = never, R = never> {
   readonly run: (
     input: Value,
     args: readonly Value[],
@@ -15,6 +15,11 @@ export interface Filter<E = never, R = never> {
   ) => Effect.Effect<Value, E, R>;
   readonly signature?: Signature;
 }
+export interface ExpressionFilter {
+  readonly expression: "where" | "reject" | "find" | "find_index" | "has" | "group_by";
+  readonly signature: Signature;
+}
+export type Filter<E = never, R = never> = NativeFilter<E, R> | ExpressionFilter;
 export interface Registry<E = never, R = never> {
   readonly filters: ReadonlyMap<string, Filter<E, R>>;
 }

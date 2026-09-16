@@ -48,7 +48,7 @@ export const checkProject = <E = never, R = never>(
       Effect.gen(function* () {
         yield* Effect.yieldNow();
         const result = yield* check(doc, context, options, registry);
-        const analysis = yield* analyze(doc);
+        const analysis = yield* analyze(doc, registry);
         diagnostics.push(
           ...result.diagnostics.filter(
             (d) => d.message !== "Partial contract has not been checked",

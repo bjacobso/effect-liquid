@@ -4,6 +4,8 @@ import type { Document, Expression, Node } from "./Ast.js";
 import * as Binding from "./Binding.js";
 import { registry as builtins } from "./Builtins.js";
 import type { BuiltinFilterError, Diagnostic } from "./Diagnostic.js";
+import { ParseError } from "./Diagnostic.js";
+import { embeddedExpression } from "./EmbeddedExpression.js";
 import type { Registry } from "./Filter.js";
 import type { Span } from "./Source.js";
 import * as T from "./Type.js";
@@ -27,6 +29,7 @@ export const check = <E = never, R = never>(
     const expressionTypes: Record<string, T.Type> = Object.create(null);
     const diagnostics: Diagnostic[] = [];
     const reasons = new Set<string>();
+    let embeddedDepth = 0;
     const strict = options.mode !== "compatibility";
     const report = (
       code: string,
@@ -172,22 +175,84 @@ export const check = <E = never, R = never>(
               e.span,
               strict ? "error" : "warning",
             );
+          const filter = registry.filters.get(e.name);
+          if (filter && "expression" in filter) {
+            const item = T.union(
+              ...T.members(input).map((t) => {
+                if (t._tag === "Array") return t.item;
+                if (t._tag === "Tuple") return T.union(...t.items);
+                if (t._tag === "Nil" || t._tag === "Missing") return T.never;
+                if (filter.expression === "group_by") {
+                  if (t._tag === "Record")
+                    return T.tuple(
+                      T.string,
+                      T.union(...Object.values(t.fields), t.index ?? T.never),
+                    );
+                  if (t._tag !== "String" && !(t._tag === "Literal" && typeof t.value === "string"))
+                    return T.unknown;
+                }
+                return t;
+              }),
+            );
+            const alias = e.args[0],
+              predicate = e.args[1];
+            if (
+              embeddedDepth >= 32 ||
+              alias?._tag !== "Literal" ||
+              typeof alias.value !== "string" ||
+              predicate?._tag !== "Literal" ||
+              typeof predicate.value !== "string"
+            )
+              return unknown("Dynamic or deeply nested filter predicate", e.span);
+            const next = Binding.fork(env);
+            next.locals.set(alias.value, item);
+            for (const name of next.locals.keys())
+              if (
+                name === `@${alias.value}` ||
+                name.startsWith(`@${alias.value}.`) ||
+                name.startsWith(`@${alias.value}[`)
+              )
+                next.locals.delete(name);
+            let key: T.Type;
+            embeddedDepth++;
+            try {
+              key = infer(embeddedExpression(predicate.value, predicate.span), next);
+            } catch (error) {
+              if (!(error instanceof ParseError)) throw error;
+              return unknown(`Invalid filter predicate: ${error.message}`, predicate.span);
+            } finally {
+              embeddedDepth--;
+            }
+            if (filter.expression === "where" || filter.expression === "reject")
+              return T.array(item);
+            if (filter.expression === "find") return T.optional(item);
+            if (filter.expression === "has") return T.boolean;
+            if (filter.expression === "find_index") return T.optional(T.number);
+            return T.array(T.record({ name: key, items: T.array(item) }));
+          }
           if (e.name === "default")
             return T.union(
               T.present(input),
               ...(e.named.allow_false ? [input] : []),
               args[0] ?? T.nil,
             );
-          if (e.name === "map")
+          if (e.name === "map") {
+            const name = e.args[0];
+            const keys =
+              name?._tag === "Literal" && typeof name.value === "string"
+                ? name.value.split(".")
+                : undefined;
+            if (!keys) return unknown("Dynamic or unsupported map property path", e.span);
             return T.array(
               T.union(
-                ...T.members(input).map((t) =>
-                  t._tag === "Array"
-                    ? property(t.item, args[0] ?? T.unknown, e.span)
-                    : unknown("Unknown map element type", e.span),
-                ),
+                ...T.members(input).map((t) => {
+                  const item =
+                    t._tag === "Array" ? t.item : t._tag === "Tuple" ? T.union(...t.items) : t;
+                  return keys.reduce((value, key) => property(value, T.literal(key), e.span), item);
+                }),
               ),
             );
+          }
           if (e.name === "first" || e.name === "last")
             return T.optional(
               T.union(

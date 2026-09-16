@@ -20891,18 +20891,6 @@
       },
       "reason": "Unsupported engine option"
     },
-    "liquidjs:test/e2e/issues.spec.ts:574:17": {
-      "fixtureHash": "f6e3d6e7e1a84690cba8194c27deeef6076252e7a5826ec83cd66b8f5c694622",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "b8144140cc4c31b2d7d20b500a637575791cc90acce35b843758348e5915f0a6"
-      },
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquidjs:test/e2e/parse-and-render.spec.ts:28:18": {
       "fixtureHash": "60303d1952c651ee788217ca7471188c6a5bc578568a5591d6c37778dcb1d096",
       "liquidjs": {
@@ -20928,30 +20916,6 @@
       "effectLiquid": {
         "kind": "output",
         "sha256": "5b7551f7884bccbeae553d12b1e72350c22220b3095d387a31641742995ad248"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/filters/array.spec.ts:516:13": {
-      "fixtureHash": "86ee4fe8cafa58cc2684a90eb4b1662b6480335bc183ebbda84ab9c5b3ba7a04",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "4b27d9b5ac83f088fa13e090c03c73e55aba9c7a78f183acbf3a803e3d5d9b96"
-      },
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "4f1596cce080d5115ed0965f1127b859b8455f1d4acf0d32f96ada291a25d78a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/filters/array.spec.ts:530:13": {
-      "fixtureHash": "0dca45d0b56b0e9cef254f2c6c0fd775fd303a5eaa11572f695d4a6401446ea0",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "dc2f723e3c961a32e2f1b3a2fb3d364917d5213182023d86665e2ab05cb23420"
-      },
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "4f1596cce080d5115ed0965f1127b859b8455f1d4acf0d32f96ada291a25d78a"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -21023,30 +20987,6 @@
       },
       "reason": "Unsupported engine option"
     },
-    "liquidjs:test/integration/filters/array.spec.ts:589:13": {
-      "fixtureHash": "e990883ce3100675149582f0a0e8c17e96c9b9ef38c52c8a35a4630af54c93f5",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "5c2579df43301fd9ba848a9b58667f1b954d020ffcf3d5327ab26b8862adf657"
-      },
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "cbff9b33ee7ec166f84e83aa8fb1675de4facefd050ca4be4563dc8d0b98bb13"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/filters/array.spec.ts:611:13": {
-      "fixtureHash": "607a9b4dc43ab8383b3c836a0539f5cdd629dd4477c7c70f6c1232bf38cbdb52",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "5c2579df43301fd9ba848a9b58667f1b954d020ffcf3d5327ab26b8862adf657"
-      },
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "cbff9b33ee7ec166f84e83aa8fb1675de4facefd050ca4be4563dc8d0b98bb13"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquidjs:test/integration/filters/array.spec.ts:667:14": {
       "fixtureHash": "6d28842ce9352bab4ddea2ec5981076cb3d19971f217380c4b233a8e54134ece",
       "liquidjs": {
@@ -21074,18 +21014,6 @@
         ]
       },
       "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/filters/array.spec.ts:686:13": {
-      "fixtureHash": "e1758a08344da36469e6b39edf1d1de75abd78dac90876eeeafaa9106b5ea034",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "5c2579df43301fd9ba848a9b58667f1b954d020ffcf3d5327ab26b8862adf657"
-      },
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "cbff9b33ee7ec166f84e83aa8fb1675de4facefd050ca4be4563dc8d0b98bb13"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquidjs:test/integration/filters/array.spec.ts:803:14": {
       "fixtureHash": "7f1790eaad8b723b9e5554df39379517dd4f41964a451abaa016bca95c1ed7dc",
@@ -21142,30 +21070,6 @@
         ]
       },
       "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/filters/array.spec.ts:822:13": {
-      "fixtureHash": "b6ccef2b8b31cfc520869100744e2db78841f9368cb1459922a9fec235a7ec17",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "3989cb8a0a610e3f2903964ebfee6f6dea1ea35703a1cb1346053203efe781fb"
-      },
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "bb19a79f3db652cd30eff725f73fe5d37fa1ede0877f028f0914cdcc2197ca3a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/filters/array.spec.ts:828:13": {
-      "fixtureHash": "6ee27983ed79e46ccfa3d40bca27ef6e1b963793e3d734baff7d8b7f2c3381e4",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "9c105a750cd76609b4b27cbdc530b49603f7253a176f15289119178390af0542"
-      },
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "bb19a79f3db652cd30eff725f73fe5d37fa1ede0877f028f0914cdcc2197ca3a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "liquidjs:test/integration/filters/array.spec.ts:853:13": {
       "fixtureHash": "c109929f68f4d3091453343f01476486dd8385ccf572760df6ac689b2f37e1e1",
@@ -21235,18 +21139,6 @@
       },
       "reason": "Unsupported engine option"
     },
-    "liquidjs:test/integration/filters/array.spec.ts:884:13": {
-      "fixtureHash": "3bbe75ca55888fb09c5c6d9b42ba2ad64061ab88cc591fb667a9e76447043e31",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "2077eba8b59a6547ed21d01fa07fe8c96921534a792647e32d2a03bc6ed9850b"
-      },
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "bb19a79f3db652cd30eff725f73fe5d37fa1ede0877f028f0914cdcc2197ca3a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquidjs:test/integration/filters/array.spec.ts:890:13": {
       "fixtureHash": "635b10c96b207288ee7bda7f8c4447e599b05d8bb030a9928e93b2b8356be84a",
       "liquidjs": {
@@ -21255,7 +21147,7 @@
       },
       "effectLiquid": {
         "kind": "output",
-        "sha256": "bb19a79f3db652cd30eff725f73fe5d37fa1ede0877f028f0914cdcc2197ca3a"
+        "sha256": "3aa2a12c53406feaf4db8f74d866d8685d7669ed214d493193172ffba3cdae93"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -21327,18 +21219,6 @@
       },
       "reason": "Unsupported engine option"
     },
-    "liquidjs:test/integration/filters/array.spec.ts:942:13": {
-      "fixtureHash": "d1067aad02b6574d62deee0beb4ba54cdb28d7a081afe3169b319d6714d6d56c",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e79e418e48623569d75e2a7b09ae88ed9b77b126a445b9ff9dc6989a08efa079"
-      },
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "bb19a79f3db652cd30eff725f73fe5d37fa1ede0877f028f0914cdcc2197ca3a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquidjs:test/integration/filters/array.spec.ts:948:13": {
       "fixtureHash": "af438362b7e3813b3b926f12cd48bf92be1a5380f23a67f690443053236e88d9",
       "liquidjs": {
@@ -21347,7 +21227,7 @@
       },
       "effectLiquid": {
         "kind": "output",
-        "sha256": "bb19a79f3db652cd30eff725f73fe5d37fa1ede0877f028f0914cdcc2197ca3a"
+        "sha256": "3aa2a12c53406feaf4db8f74d866d8685d7669ed214d493193172ffba3cdae93"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },

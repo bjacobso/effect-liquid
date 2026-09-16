@@ -2,12 +2,13 @@ import { Context, Effect, Layer, Stream } from "effect";
 import type { Document, Expression, Node } from "./Ast.js";
 import { registry as builtins } from "./Builtins.js";
 import {
-  type BuiltinFilterError,
+  BuiltinFilterError,
   FilterFailure,
   type LoadError,
-  type ParseError,
+  ParseError,
   RenderError,
 } from "./Diagnostic.js";
+import { embeddedExpression } from "./EmbeddedExpression.js";
 import type { Registry } from "./Filter.js";
 import { parse } from "./Parser.js";
 import type { Span } from "./Source.js";
@@ -55,6 +56,7 @@ interface State {
   outputBytes: number;
   control: "break" | "continue" | undefined;
   depth: number;
+  filterDepth: number;
   config: Config;
 }
 type Failure<E> = RenderError | ParseError | LoadError | FilterFailure<E | BuiltinFilterError>;
@@ -101,7 +103,7 @@ function evaluate<E, R>(
   expression: Expression,
   state: State,
   registry: Registry<E, R>,
-): Effect.Effect<Value | undefined, RenderError | FilterFailure<E>, R> {
+): Effect.Effect<Value | undefined, RenderError | FilterFailure<E | BuiltinFilterError>, R> {
   return Effect.gen(function* () {
     yield* tick(state, expression.span);
     switch (expression._tag) {
@@ -194,6 +196,90 @@ function evaluate<E, R>(
               message: `Unknown filter: ${expression.name}`,
               span: expression.span,
             }),
+          );
+        }
+        if ("expression" in filter) {
+          if (state.filterDepth >= state.config.maxDepth)
+            return yield* Effect.fail(
+              new RenderError({
+                code: "ResourceLimitExceeded",
+                message: "Expression filter nesting limit exceeded",
+                span: expression.span,
+              }),
+            );
+          const predicateText = stringify(args[1]);
+          state.steps += predicateText.length;
+          yield* tick(state, expression.span);
+          const predicate = yield* Effect.try({
+            try: () =>
+              embeddedExpression(predicateText, expression.args[1]?.span ?? expression.span),
+            catch: (cause) => {
+              if (cause instanceof ParseError)
+                return new FilterFailure({
+                  name: expression.name,
+                  cause: new BuiltinFilterError({ message: cause.message }),
+                  span: expression.span,
+                });
+              throw cause;
+            },
+          });
+          const alias = stringify(args[0]);
+          const values =
+            filter.expression === "group_by"
+              ? enumerable(input)
+              : input === null
+                ? []
+                : isArray(input)
+                  ? input
+                  : [input];
+          const result: Value[] = [];
+          const groups = new Map<Value | undefined, Value[]>();
+          state.filterDepth++;
+          return yield* Effect.gen(function* () {
+            for (let index = 0; index < values.length; index++) {
+              if (++state.iterations > state.config.maxIterations)
+                return yield* Effect.fail(
+                  new RenderError({
+                    code: "ResourceLimitExceeded",
+                    message: "Iteration limit exceeded",
+                    span: expression.span,
+                  }),
+                );
+              state.scopes.push({ [alias]: values[index]! });
+              const selected = yield* evaluate(predicate, state, registry).pipe(
+                Effect.ensuring(
+                  Effect.sync(() => {
+                    state.scopes.pop();
+                  }),
+                ),
+              );
+              if (filter.expression === "group_by") {
+                const bucket = groups.get(selected);
+                if (bucket) bucket.push(values[index]!);
+                else groups.set(selected, [values[index]!]);
+              } else if (filter.expression === "where" || filter.expression === "reject") {
+                if (selected === (filter.expression === "where")) result.push(values[index]!);
+              } else if (selected) {
+                return filter.expression === "has"
+                  ? true
+                  : filter.expression === "find_index"
+                    ? index
+                    : values[index];
+              }
+            }
+            if (filter.expression === "group_by")
+              return [...groups].map(([name, items]) => ({
+                ...(name !== undefined ? { name } : {}),
+                items,
+              }));
+            if (filter.expression === "where" || filter.expression === "reject") return result;
+            return filter.expression === "has" ? false : undefined;
+          }).pipe(
+            Effect.ensuring(
+              Effect.sync(() => {
+                state.filterDepth--;
+              }),
+            ),
           );
         }
         const result = yield* filter
@@ -510,6 +596,7 @@ export function renderStream<E = never, R = never>(
         outputBytes: 0,
         control: undefined,
         depth: 0,
+        filterDepth: 0,
         config,
       };
       return nodes(document.body, state, registry);

@@ -1,12 +1,16 @@
 import { Effect } from "effect";
 import type { Document, Expression, Node } from "./Ast.js";
 import * as Binding from "./Binding.js";
+import { registry as builtins } from "./Builtins.js";
 import type { Diagnostic } from "./Diagnostic.js";
+import { type BuiltinFilterError, ParseError } from "./Diagnostic.js";
+import { embeddedExpression } from "./EmbeddedExpression.js";
+import type { Registry } from "./Filter.js";
 import type { Span } from "./Source.js";
 export interface Declaration {
   readonly id: string;
   readonly name: string;
-  readonly kind: "assign" | "capture" | "loop" | "builtin" | "counter";
+  readonly kind: "assign" | "capture" | "loop" | "builtin" | "counter" | "filter";
   readonly span: Span;
 }
 export interface Occurrence {
@@ -72,13 +76,17 @@ export function path(e: Expression): string {
   }
 }
 const unique = <T>(values: readonly T[]) => [...new Set(values)];
-export const analyze = (document: Document): Effect.Effect<Analysis> =>
+export const analyze = <E, R>(
+  document: Document,
+  registry: Registry<E | BuiltinFilterError, R> = builtins,
+): Effect.Effect<Analysis> =>
   Effect.sync((): Analysis => {
     const occurrences: Occurrence[] = [];
     const bindings: Declaration[] = [];
     const dependencies: Dependency[] = [];
     const diagnostics: Diagnostic[] = [];
     const reasons: string[] = [];
+    let embeddedDepth = 0;
     const merge = (slots: readonly (Slot | undefined)[]): Slot => ({
       ids: unique(slots.flatMap((s) => s?.ids ?? [])),
       external: slots.some((s) => !s || s.external),
@@ -124,10 +132,51 @@ export const analyze = (document: Document): Effect.Effect<Analysis> =>
           for (const s of e.segments) expression(s, env, control);
           break;
         }
-        case "Filter":
+        case "Filter": {
           expression(e.input, env, control);
           for (const arg of [...e.args, ...Object.values(e.named)]) expression(arg, env, control);
+          const filter = registry.filters.get(e.name);
+          if (filter && "expression" in filter) {
+            const alias = e.args[0],
+              predicate = e.args[1];
+            if (
+              embeddedDepth >= 32 ||
+              alias?._tag !== "Literal" ||
+              typeof alias.value !== "string" ||
+              predicate?._tag !== "Literal" ||
+              typeof predicate.value !== "string"
+            ) {
+              reasons.push(`Dynamic or deeply nested expression filter at ${e.span.start}`);
+            } else {
+              const next = Binding.fork(env);
+              next.locals.set(
+                alias.value,
+                declare(
+                  alias.value,
+                  "filter",
+                  alias.span,
+                  provenance(e.input, env).map((p) => `${p}[*]`),
+                ),
+              );
+              embeddedDepth++;
+              try {
+                expression(embeddedExpression(predicate.value, predicate.span), next, [
+                  ...control,
+                  `filter:${e.span.start}`,
+                ]);
+              } catch (error) {
+                if (!(error instanceof ParseError)) throw error;
+                reasons.push(`Invalid expression filter at ${e.span.start}: ${error.message}`);
+              } finally {
+                embeddedDepth--;
+              }
+              reasons.push(
+                `Embedded expression locations use the containing argument span at ${predicate.span.start}`,
+              );
+            }
+          }
           break;
+        }
         case "Binary":
           expression(e.left, env, control);
           expression(e.right, env, control);

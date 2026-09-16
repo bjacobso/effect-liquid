@@ -1,6 +1,7 @@
 import { Effect } from "effect";
 import type { BuiltinFilterError } from "./Diagnostic.js";
 import type { Filter, Registry, Signature } from "./Filter.js";
+import { propertyKeys } from "./PropertyPath.js";
 import { filters as stringFilters } from "./StringFilters.js";
 import { filters as urlFilters } from "./UrlFilters.js";
 import { empty, isArray, lookup, stringify, truthy, type Value } from "./Value.js";
@@ -69,9 +70,10 @@ define("last", { input: "any", output: "unknown", minArgs: 0, maxArgs: 0 }, (v) 
 define("reverse", { input: "any", output: "array", minArgs: 0, maxArgs: 0 }, (v) =>
   [...array(v)].reverse(),
 );
-define("map", { input: "any", output: "array", minArgs: 1, maxArgs: 1 }, (v, a) =>
-  array(v).map((x) => property(x, a[0]) ?? null),
-);
+define("map", { input: "any", output: "array", minArgs: 1, maxArgs: 1 }, (v, a) => {
+  const read = propertyReader(a[0]);
+  return array(v).map((item) => read(item) ?? null);
+});
 // These filters coerce nil to an empty sequence and scalars to one item.
 function array(value: Value | undefined): readonly Value[] {
   return value == null ? [] : isArray(value) ? value : [value];
@@ -79,10 +81,12 @@ function array(value: Value | undefined): readonly Value[] {
 function hostString(value: Value): string {
   return isArray(value) ? value.map(hostString).join(",") : stringify(value);
 }
-function property(value: Value, path: Value | undefined): Value | undefined {
-  return stringify(path)
-    .split(".")
-    .reduce<Value | undefined>((item, key) => lookup(item, key), value);
+function propertyReader(
+  path: Value | undefined,
+  brackets = false,
+): (value: Value) => Value | undefined {
+  const keys = brackets ? propertyKeys(stringify(path)) : stringify(path).split(".");
+  return (value) => keys?.reduce<Value | undefined>((item, key) => lookup(item, key), value);
 }
 function split(value: Value, separator: Value | undefined): readonly Value[] {
   const text = stringify(value);
@@ -104,7 +108,7 @@ function same(left: Value | undefined, right: Value | undefined): boolean {
 }
 for (const name of ["sort", "sort_natural"] as const)
   define(name, { input: "any", output: "array", minArgs: 0, maxArgs: 1 }, (v, a) => {
-    const key = (item: Value) => (a[0] ? property(item, a[0]) : item);
+    const key = a[0] ? propertyReader(a[0]) : (item: Value) => item;
     return [...array(v)].sort((left, right) => {
       const x = key(left),
         y = key(right);
@@ -124,12 +128,13 @@ for (const name of ["sort", "sort_natural"] as const)
       return l < r ? -1 : l > r ? 1 : 0;
     });
   });
-define("sum", { input: "any", output: "number", minArgs: 0, maxArgs: 1 }, (v, a) =>
-  array(v).reduce<number>((total, item) => {
-    const value = numeric(a[0] ? property(item, a[0]) : item);
+define("sum", { input: "any", output: "number", minArgs: 0, maxArgs: 1 }, (v, a) => {
+  const read = a[0] ? propertyReader(a[0]) : (item: Value) => item;
+  return array(v).reduce<number>((total, item) => {
+    const value = numeric(read(item));
     return total + (Number.isNaN(value) ? 0 : value);
-  }, 0),
-);
+  }, 0);
+});
 define("compact", { input: "any", output: "array", minArgs: 0, maxArgs: 0 }, (v) =>
   array(v).filter((item) => item !== null),
 );
@@ -173,8 +178,9 @@ for (const name of ["where", "reject", "find", "find_index", "has"] as const)
     },
     (v, a) => {
       const values = array(v);
+      const read = propertyReader(a[0], true);
       const matches = (item: Value) => {
-        const value = property(item, a[0]);
+        const value = read(item);
         return a.length < 2 ? truthy(value) : same(value, a[1]);
       };
       if (name === "where" || name === "reject")
@@ -193,4 +199,20 @@ define("json", { input: "any", output: "string", minArgs: 0, maxArgs: 1 }, (v, a
   JSON.stringify(v, null, numeric(a[0])),
 );
 define("to_integer", { input: "any", output: "number", minArgs: 0, maxArgs: 0 }, (v) => numeric(v));
+for (const operation of ["where", "reject", "find", "find_index", "has", "group_by"] as const)
+  entries.push([
+    `${operation}_exp`,
+    {
+      expression: operation,
+      signature: {
+        input: "any",
+        output:
+          operation === "where" || operation === "reject" || operation === "group_by"
+            ? "array"
+            : "unknown",
+        minArgs: 2,
+        maxArgs: 2,
+      },
+    },
+  ]);
 export const registry: Registry<BuiltinFilterError> = { filters: new Map(entries) };
