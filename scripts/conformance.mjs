@@ -48,6 +48,7 @@ const inventory = (names, implemented) =>
                 "test/url-filters.test.ts",
                 "test/expression-filters.test.ts",
                 "test/numeric-filters.test.ts",
+                "test/base64-filters.test.ts",
               ],
             }
           : {}),

@@ -60,6 +60,8 @@ URL filters include `url_encode`, `url_decode`, `cgi_escape`, `uri_escape`, and 
 
 Numeric filters follow LiquidJS whole-value coercion: `true` becomes one, and invalid numeric strings become zero. This differs from Ruby Liquid's treatment of booleans and numeric string prefixes. `round` handles negative ties away from zero, decimal multiplication error, and negative or fractional precision. `divided_by` accepts an optional integer-division flag; a flag that coerces to a nonzero number floors the quotient, including negative quotients. Strict checking expects a numeric divisor and a boolean flag. Non-finite results remain rejected by the finite Liquid value boundary.
 
+`base64_encode` and `base64_decode` handle UTF-8 text in Node and browser bundles without requiring `Buffer`. Decoding follows the pinned Node LiquidJS oracle: it accepts unpadded and URL-safe input, ignores invalid characters, stops at padding, preserves a leading BOM, and replaces malformed UTF-8. Encoding replaces lone UTF-16 surrogates. These are permissive text filters, not strict Base64 validators or binary-data APIs.
+
 Expression filters include `where_exp`, `reject_exp`, `find_exp`, `find_index_exp`, `has_exp`, and `group_by_exp`. Predicates run as Liquid expressions with a local item alias, caller variables, and registered filters. They share iteration, work, and nesting budgets with the render. Native overrides of these names are respected.
 
 ```liquid

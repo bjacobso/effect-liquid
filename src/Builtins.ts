@@ -1,4 +1,5 @@
 import { Effect } from "effect";
+import { filters as base64Filters } from "./Base64Filters.js";
 import type { BuiltinFilterError } from "./Diagnostic.js";
 import type { Filter, Registry, Signature } from "./Filter.js";
 import { propertyKeys } from "./PropertyPath.js";
@@ -7,9 +8,11 @@ import { filters as urlFilters } from "./UrlFilters.js";
 import { empty, isArray, lookup, stringify, truthy, type Value } from "./Value.js";
 
 const number = (v: Value | undefined) => numeric(v) || 0;
-const entries: [string, Filter<BuiltinFilterError>][] = [...stringFilters, ...urlFilters].map(
-  ([name, filter]) => [name, filter],
-);
+const entries: [string, Filter<BuiltinFilterError>][] = [
+  ...stringFilters,
+  ...urlFilters,
+  ...base64Filters,
+].map(([name, filter]) => [name, filter]);
 const define = (
   name: string,
   signature: Signature,

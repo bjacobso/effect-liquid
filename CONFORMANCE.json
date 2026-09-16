@@ -30,7 +30,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "for": {
@@ -44,7 +45,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "capture": {
@@ -58,7 +60,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "case": {
@@ -72,7 +75,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "comment": {
@@ -86,7 +90,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "include": {
@@ -100,7 +105,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "render": {
@@ -114,7 +120,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "decrement": {
@@ -128,7 +135,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "increment": {
@@ -142,7 +150,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "cycle": {
@@ -156,7 +165,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "if": {
@@ -170,7 +180,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "layout": {
@@ -190,7 +201,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "tablerow": {
@@ -204,7 +216,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "unless": {
@@ -218,7 +231,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "break": {
@@ -232,7 +246,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "continue": {
@@ -246,7 +261,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "echo": {
@@ -260,7 +276,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "liquid": {
@@ -274,7 +291,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "#": {
@@ -288,7 +306,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     }
   },
@@ -304,7 +323,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "xml_escape": {
@@ -318,7 +338,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "escape_once": {
@@ -332,7 +353,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "newline_to_br": {
@@ -346,7 +368,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "strip_html": {
@@ -360,7 +383,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "abs": {
@@ -374,7 +398,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "at_least": {
@@ -388,7 +413,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "at_most": {
@@ -402,7 +428,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "ceil": {
@@ -416,7 +443,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "divided_by": {
@@ -430,7 +458,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "floor": {
@@ -444,7 +473,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "minus": {
@@ -458,7 +488,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "plus": {
@@ -472,7 +503,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "modulo": {
@@ -486,7 +518,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "times": {
@@ -500,7 +533,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "round": {
@@ -514,7 +548,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "url_decode": {
@@ -528,7 +563,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "url_encode": {
@@ -542,7 +578,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "cgi_escape": {
@@ -556,7 +593,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "uri_escape": {
@@ -570,7 +608,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "slugify": {
@@ -584,7 +623,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "join": {
@@ -598,7 +638,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "last": {
@@ -612,7 +653,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "first": {
@@ -626,7 +668,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "reverse": {
@@ -640,7 +683,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "sort": {
@@ -654,7 +698,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "sort_natural": {
@@ -668,7 +713,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "size": {
@@ -682,7 +728,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "map": {
@@ -696,7 +743,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "sum": {
@@ -710,7 +758,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "compact": {
@@ -724,7 +773,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "concat": {
@@ -738,7 +788,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "push": {
@@ -752,7 +803,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "unshift": {
@@ -766,7 +818,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "pop": {
@@ -780,7 +833,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "shift": {
@@ -794,7 +848,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "slice": {
@@ -808,7 +863,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "where": {
@@ -822,7 +878,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "reject": {
@@ -836,7 +893,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "where_exp": {
@@ -850,7 +908,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "reject_exp": {
@@ -864,7 +923,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "group_by": {
@@ -881,7 +941,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "has": {
@@ -895,7 +956,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "has_exp": {
@@ -909,7 +971,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "find_index": {
@@ -923,7 +986,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "find_index_exp": {
@@ -937,7 +1001,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "find": {
@@ -951,7 +1016,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "find_exp": {
@@ -965,7 +1031,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "uniq": {
@@ -979,7 +1046,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "sample": {
@@ -1011,7 +1079,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "prepend": {
@@ -1025,7 +1094,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "lstrip": {
@@ -1039,7 +1109,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "downcase": {
@@ -1053,7 +1124,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "upcase": {
@@ -1067,7 +1139,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "remove": {
@@ -1081,7 +1154,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "remove_first": {
@@ -1095,7 +1169,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "remove_last": {
@@ -1109,7 +1184,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "rstrip": {
@@ -1123,7 +1199,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "split": {
@@ -1137,7 +1214,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "strip": {
@@ -1151,7 +1229,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "strip_newlines": {
@@ -1165,7 +1244,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "squish": {
@@ -1179,7 +1259,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "capitalize": {
@@ -1193,7 +1274,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "replace": {
@@ -1207,7 +1289,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "replace_first": {
@@ -1221,7 +1304,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "replace_last": {
@@ -1235,7 +1319,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "truncate": {
@@ -1249,7 +1334,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "truncatewords": {
@@ -1263,7 +1349,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "normalize_whitespace": {
@@ -1277,7 +1364,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "number_of_words": {
@@ -1291,17 +1379,42 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "array_to_sentence_string": {
       "status": "deferred"
     },
     "base64_encode": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
+      ]
     },
     "base64_decode": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
+      ]
     },
     "sha256": {
       "status": "deferred"
@@ -1320,7 +1433,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "raw": {
@@ -1340,7 +1454,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "json": {
@@ -1354,7 +1469,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "inspect": {
@@ -1442,7 +1558,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "strictVariables": {
@@ -1456,7 +1573,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "ownPropertyOnly": {
@@ -1470,7 +1588,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "lenientIf": {
@@ -1487,7 +1606,8 @@
         "test/string-filters.test.ts",
         "test/url-filters.test.ts",
         "test/expression-filters.test.ts",
-        "test/numeric-filters.test.ts"
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts"
       ]
     },
     "keepOutputType": {
