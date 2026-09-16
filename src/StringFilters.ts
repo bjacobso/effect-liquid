@@ -1,8 +1,9 @@
 import { Effect } from "effect";
+import { BuiltinFilterError } from "./Diagnostic.js";
 import type { Filter, Signature } from "./Filter.js";
 import { isArray, stringify, type Value } from "./Value.js";
 
-const entries: [string, Filter][] = [];
+const entries: [string, Filter<BuiltinFilterError>][] = [];
 const define = (
   name: string,
   run: (value: Value, args: readonly Value[]) => Value,
@@ -28,8 +29,21 @@ const text = (
 text("upcase", (value) => value.toUpperCase());
 text("downcase", (value) => value.toLowerCase());
 text("capitalize", (value) => value.charAt(0).toUpperCase() + value.slice(1).toLowerCase());
-text("append", (value, args) => value + stringify(args[0]), 1);
-text("prepend", (value, args) => stringify(args[0]) + value, 1);
+for (const name of ["append", "prepend"] as const)
+  entries.push([
+    name,
+    {
+      signature: { input: "any", output: "string", minArgs: 1, maxArgs: 1 },
+      run: (value, args) =>
+        args.length === 0
+          ? Effect.fail(new BuiltinFilterError({ message: `${name} expect 2 arguments` }))
+          : Effect.sync(() =>
+              name === "append"
+                ? stringify(value) + stringify(args[0])
+                : stringify(args[0]) + stringify(value),
+            ),
+    },
+  ]);
 for (const name of ["strip", "lstrip", "rstrip"] as const) {
   text(
     name,
@@ -87,6 +101,30 @@ text("normalize_whitespace", (value) => value.replace(/\s+/g, " "));
 text("squish", (value) => value.replace(/\s+/g, " ").trim());
 const hostString = (value: Value): string =>
   isArray(value) ? value.map(hostString).join(",") : stringify(value);
+entries.push([
+  "array_to_sentence_string",
+  {
+    signature: { input: "array", output: "unknown", minArgs: 0, maxArgs: 1 },
+    run: (value, args) =>
+      !isArray(value)
+        ? Effect.fail(
+            new BuiltinFilterError({ message: "array_to_sentence_string expects an array" }),
+          )
+        : Effect.sync(() => {
+            if (value.length === 0) return "";
+            if (value.length === 1) return value[0]!;
+            const items = value.map(hostString);
+            const conjunction = args.length ? stringify(args[0]) : "and";
+            return (
+              items.slice(0, -1).join(", ") +
+              (items.length > 2 ? ", " : " ") +
+              conjunction +
+              " " +
+              items[items.length - 1]
+            );
+          }),
+  },
+]);
 const numeric = (value: Value | undefined) =>
   Number(
     value == null
@@ -172,4 +210,4 @@ text("strip_html", (source) => {
   parts.push(source.slice(cursor));
   return parts.join("");
 });
-export const filters: readonly (readonly [string, Filter])[] = entries;
+export const filters: readonly (readonly [string, Filter<BuiltinFilterError>])[] = entries;

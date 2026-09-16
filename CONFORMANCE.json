@@ -33,7 +33,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "for": {
@@ -50,7 +51,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "capture": {
@@ -67,7 +69,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "case": {
@@ -84,7 +87,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "comment": {
@@ -101,7 +105,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "include": {
@@ -118,7 +123,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "render": {
@@ -135,7 +141,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "decrement": {
@@ -152,7 +159,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "increment": {
@@ -169,7 +177,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "cycle": {
@@ -186,7 +195,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "if": {
@@ -203,7 +213,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "layout": {
@@ -226,7 +237,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "tablerow": {
@@ -243,7 +255,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "unless": {
@@ -260,7 +273,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "break": {
@@ -277,7 +291,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "continue": {
@@ -294,7 +309,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "echo": {
@@ -311,7 +327,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "liquid": {
@@ -328,7 +345,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "#": {
@@ -345,7 +363,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     }
   },
@@ -364,7 +383,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "xml_escape": {
@@ -381,7 +401,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "escape_once": {
@@ -398,7 +419,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "newline_to_br": {
@@ -415,7 +437,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "strip_html": {
@@ -432,7 +455,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "abs": {
@@ -449,7 +473,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "at_least": {
@@ -466,7 +491,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "at_most": {
@@ -483,7 +509,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "ceil": {
@@ -500,7 +527,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "divided_by": {
@@ -517,7 +545,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "floor": {
@@ -534,7 +563,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "minus": {
@@ -551,7 +581,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "plus": {
@@ -568,7 +599,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "modulo": {
@@ -585,7 +617,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "times": {
@@ -602,7 +635,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "round": {
@@ -619,7 +653,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "url_decode": {
@@ -636,7 +671,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "url_encode": {
@@ -653,7 +689,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "cgi_escape": {
@@ -670,7 +707,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "uri_escape": {
@@ -687,7 +725,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "slugify": {
@@ -704,7 +743,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "join": {
@@ -721,7 +761,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "last": {
@@ -738,7 +779,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "first": {
@@ -755,7 +797,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "reverse": {
@@ -772,7 +815,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "sort": {
@@ -789,7 +833,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "sort_natural": {
@@ -806,7 +851,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "size": {
@@ -823,7 +869,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "map": {
@@ -840,7 +887,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "sum": {
@@ -857,7 +905,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "compact": {
@@ -874,7 +923,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "concat": {
@@ -891,7 +941,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "push": {
@@ -908,7 +959,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "unshift": {
@@ -925,7 +977,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "pop": {
@@ -942,7 +995,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "shift": {
@@ -959,7 +1013,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "slice": {
@@ -976,7 +1031,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "where": {
@@ -993,7 +1049,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "reject": {
@@ -1010,7 +1067,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "where_exp": {
@@ -1027,7 +1085,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "reject_exp": {
@@ -1044,7 +1103,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "group_by": {
@@ -1064,7 +1124,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "has": {
@@ -1081,7 +1142,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "has_exp": {
@@ -1098,7 +1160,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "find_index": {
@@ -1115,7 +1178,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "find_index_exp": {
@@ -1132,7 +1196,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "find": {
@@ -1149,7 +1214,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "find_exp": {
@@ -1166,7 +1232,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "uniq": {
@@ -1183,7 +1250,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "sample": {
@@ -1218,7 +1286,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "prepend": {
@@ -1235,7 +1304,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "lstrip": {
@@ -1252,7 +1322,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "downcase": {
@@ -1269,7 +1340,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "upcase": {
@@ -1286,7 +1358,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "remove": {
@@ -1303,7 +1376,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "remove_first": {
@@ -1320,7 +1394,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "remove_last": {
@@ -1337,7 +1412,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "rstrip": {
@@ -1354,7 +1430,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "split": {
@@ -1371,7 +1448,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "strip": {
@@ -1388,7 +1466,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "strip_newlines": {
@@ -1405,7 +1484,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "squish": {
@@ -1422,7 +1502,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "capitalize": {
@@ -1439,7 +1520,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "replace": {
@@ -1456,7 +1538,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "replace_first": {
@@ -1473,7 +1556,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "replace_last": {
@@ -1490,7 +1574,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "truncate": {
@@ -1507,7 +1592,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "truncatewords": {
@@ -1524,7 +1610,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "normalize_whitespace": {
@@ -1541,7 +1628,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "number_of_words": {
@@ -1558,11 +1646,27 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "array_to_sentence_string": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
+      ]
     },
     "base64_encode": {
       "status": "partial",
@@ -1578,7 +1682,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "base64_decode": {
@@ -1595,7 +1700,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "sha256": {
@@ -1618,7 +1724,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "raw": {
@@ -1641,7 +1748,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "json": {
@@ -1658,7 +1766,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "inspect": {
@@ -1749,7 +1858,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "strictVariables": {
@@ -1766,7 +1876,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "ownPropertyOnly": {
@@ -1783,7 +1894,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "lenientIf": {
@@ -1803,7 +1915,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "keepOutputType": {
@@ -1826,7 +1939,8 @@
         "test/numeric-filters.test.ts",
         "test/base64-filters.test.ts",
         "test/grouped-expressions.test.ts",
-        "test/property-lookup.test.ts"
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts"
       ]
     },
     "memoryLimit": {
@@ -1876,6 +1990,13 @@
     {
       "feature": "duplicate named arguments",
       "behavior": "Rejected rather than silently overwriting an earlier expression."
+    },
+    {
+      "feature": "sentence filter non-array inputs",
+      "behavior": "Rejects non-arrays, including short strings and array-like records accepted by the pinned oracle.",
+      "tests": [
+        "test/sentence-filters.test.ts"
+      ]
     },
     {
       "feature": "numeric non-finite results",

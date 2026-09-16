@@ -52,6 +52,7 @@ const inventory = (names, implemented) =>
                 "test/base64-filters.test.ts",
                 "test/grouped-expressions.test.ts",
                 "test/property-lookup.test.ts",
+                "test/sentence-filters.test.ts",
               ],
             }
           : {}),
@@ -120,6 +121,12 @@ const manifest = {
     {
       feature: "duplicate named arguments",
       behavior: "Rejected rather than silently overwriting an earlier expression.",
+    },
+    {
+      feature: "sentence filter non-array inputs",
+      behavior:
+        "Rejects non-arrays, including short strings and array-like records accepted by the pinned oracle.",
+      tests: ["test/sentence-filters.test.ts"],
     },
     {
       feature: "numeric non-finite results",

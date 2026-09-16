@@ -180,7 +180,11 @@ export const check = <E = never, R = never>(
           if (
             strict &&
             signature.input !== "any" &&
-            !T.members(input).every((t) => T.kind(t) === signature.input)
+            !T.members(input).every(
+              (t) =>
+                T.kind(t) === signature.input ||
+                (signature.input === "array" && t._tag === "Tuple"),
+            )
           )
             report("FilterInput", `'${e.name}' expects ${signature.input}`, e.input.span);
           args.forEach((argument, index) => {
@@ -260,6 +264,18 @@ export const check = <E = never, R = never>(
               T.present(input),
               ...(e.named.allow_false ? [input] : []),
               args[0] ?? T.nil,
+            );
+          if (e.name === "array_to_sentence_string")
+            return T.union(
+              ...T.members(input).map((t) =>
+                t._tag === "Tuple"
+                  ? t.items.length === 1
+                    ? t.items[0]!
+                    : T.string
+                  : t._tag === "Array"
+                    ? T.union(T.string, t.item)
+                    : T.unknown,
+              ),
             );
           if (e.name === "map") {
             const name = e.args[0];
