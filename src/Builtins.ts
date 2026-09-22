@@ -1,5 +1,6 @@
 import { Effect } from "effect";
 import { filters as base64Filters } from "./Base64Filters.js";
+import { filters as dateFilters } from "./DateFilters.js";
 import type { BuiltinFilterError } from "./Diagnostic.js";
 import type { Filter, Registry, Signature } from "./Filter.js";
 import { propertyKeys } from "./PropertyPath.js";
@@ -12,6 +13,7 @@ const entries: [string, Filter<BuiltinFilterError>][] = [
   ...stringFilters,
   ...urlFilters,
   ...base64Filters,
+  ...dateFilters,
 ].map(([name, filter]) => [name, filter]);
 const define = (
   name: string,

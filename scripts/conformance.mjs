@@ -59,6 +59,7 @@ const inventory = (names, implemented) =>
                 "test/property-lookup.test.ts",
                 "test/sentence-filters.test.ts",
                 "test/whitespace-options.test.ts",
+                "test/date-filters.test.ts",
               ],
             }
           : {}),

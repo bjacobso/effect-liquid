@@ -35,7 +35,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "for": {
@@ -54,7 +55,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "capture": {
@@ -73,7 +75,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "case": {
@@ -92,7 +95,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "comment": {
@@ -111,7 +115,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "include": {
@@ -130,7 +135,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "render": {
@@ -149,7 +155,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "decrement": {
@@ -168,7 +175,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "increment": {
@@ -187,7 +195,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "cycle": {
@@ -206,7 +215,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "if": {
@@ -225,7 +235,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "layout": {
@@ -250,7 +261,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "tablerow": {
@@ -269,7 +281,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "unless": {
@@ -288,7 +301,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "break": {
@@ -307,7 +321,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "continue": {
@@ -326,7 +341,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "echo": {
@@ -345,7 +361,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "liquid": {
@@ -364,7 +381,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "#": {
@@ -383,7 +401,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     }
   },
@@ -404,7 +423,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "xml_escape": {
@@ -423,7 +443,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "escape_once": {
@@ -442,7 +463,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "newline_to_br": {
@@ -461,7 +483,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "strip_html": {
@@ -480,7 +503,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "abs": {
@@ -499,7 +523,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "at_least": {
@@ -518,7 +543,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "at_most": {
@@ -537,7 +563,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "ceil": {
@@ -556,7 +583,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "divided_by": {
@@ -575,7 +603,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "floor": {
@@ -594,7 +623,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "minus": {
@@ -613,7 +643,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "plus": {
@@ -632,7 +663,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "modulo": {
@@ -651,7 +683,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "times": {
@@ -670,7 +703,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "round": {
@@ -689,7 +723,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "url_decode": {
@@ -708,7 +743,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "url_encode": {
@@ -727,7 +763,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "cgi_escape": {
@@ -746,7 +783,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "uri_escape": {
@@ -765,7 +803,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "slugify": {
@@ -784,7 +823,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "join": {
@@ -803,7 +843,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "last": {
@@ -822,7 +863,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "first": {
@@ -841,7 +883,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "reverse": {
@@ -860,7 +903,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "sort": {
@@ -879,7 +923,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "sort_natural": {
@@ -898,7 +943,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "size": {
@@ -917,7 +963,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "map": {
@@ -936,7 +983,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "sum": {
@@ -955,7 +1003,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "compact": {
@@ -974,7 +1023,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "concat": {
@@ -993,7 +1043,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "push": {
@@ -1012,7 +1063,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "unshift": {
@@ -1031,7 +1083,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "pop": {
@@ -1050,7 +1103,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "shift": {
@@ -1069,7 +1123,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "slice": {
@@ -1088,7 +1143,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "where": {
@@ -1107,7 +1163,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "reject": {
@@ -1126,7 +1183,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "where_exp": {
@@ -1145,7 +1203,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "reject_exp": {
@@ -1164,7 +1223,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "group_by": {
@@ -1186,7 +1246,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "has": {
@@ -1205,7 +1266,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "has_exp": {
@@ -1224,7 +1286,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "find_index": {
@@ -1243,7 +1306,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "find_index_exp": {
@@ -1262,7 +1326,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "find": {
@@ -1281,7 +1346,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "find_exp": {
@@ -1300,7 +1366,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "uniq": {
@@ -1319,26 +1386,112 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "sample": {
       "status": "deferred"
     },
     "date": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
+      ]
     },
     "date_to_xmlschema": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
+      ]
     },
     "date_to_rfc822": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
+      ]
     },
     "date_to_string": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
+      ]
     },
     "date_to_long_string": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
+      ]
     },
     "append": {
       "status": "partial",
@@ -1356,7 +1509,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "prepend": {
@@ -1375,7 +1529,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "lstrip": {
@@ -1394,7 +1549,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "downcase": {
@@ -1413,7 +1569,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "upcase": {
@@ -1432,7 +1589,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "remove": {
@@ -1451,7 +1609,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "remove_first": {
@@ -1470,7 +1629,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "remove_last": {
@@ -1489,7 +1649,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "rstrip": {
@@ -1508,7 +1669,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "split": {
@@ -1527,7 +1689,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "strip": {
@@ -1546,7 +1709,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "strip_newlines": {
@@ -1565,7 +1729,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "squish": {
@@ -1584,7 +1749,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "capitalize": {
@@ -1603,7 +1769,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "replace": {
@@ -1622,7 +1789,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "replace_first": {
@@ -1641,7 +1809,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "replace_last": {
@@ -1660,7 +1829,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "truncate": {
@@ -1679,7 +1849,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "truncatewords": {
@@ -1698,7 +1869,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "normalize_whitespace": {
@@ -1717,7 +1889,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "number_of_words": {
@@ -1736,7 +1909,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "array_to_sentence_string": {
@@ -1755,7 +1929,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "base64_encode": {
@@ -1774,7 +1949,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "base64_decode": {
@@ -1793,7 +1969,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "sha256": {
@@ -1818,7 +1995,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "raw": {
@@ -1843,7 +2021,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "json": {
@@ -1862,7 +2041,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "inspect": {
@@ -1925,7 +2105,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "trimTagLeft": {
@@ -1944,7 +2125,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "trimOutputRight": {
@@ -1963,7 +2145,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "trimOutputLeft": {
@@ -1982,7 +2165,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "greedy": {
@@ -2001,7 +2185,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "tagDelimiterLeft": {
@@ -2035,7 +2220,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "strictVariables": {
@@ -2054,7 +2240,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "ownPropertyOnly": {
@@ -2073,7 +2260,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "lenientIf": {
@@ -2095,7 +2283,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "keepOutputType": {
@@ -2120,7 +2309,8 @@
         "test/grouped-expressions.test.ts",
         "test/property-lookup.test.ts",
         "test/sentence-filters.test.ts",
-        "test/whitespace-options.test.ts"
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts"
       ]
     },
     "memoryLimit": {
