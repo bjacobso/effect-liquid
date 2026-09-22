@@ -9,3 +9,4 @@ export { render, renderStream } from "./Render.js";
 export const layer = Layer.merge(renderLayer(), memory());
 export { checkProject } from "./CheckProject.js";
 export { analyzeProject } from "./Project.js";
+export { liquid } from "./TypedLiquid.js";

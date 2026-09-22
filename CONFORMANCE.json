@@ -3151,6 +3151,7 @@
     "analyzeProject": "implemented for bounded render dependencies; include summaries are partial",
     "check": "experimental gradual checker",
     "checkProject": "experimental render-contract checking",
+    "typedTemplates": "tagged templates with typed external paths and render context; raw Liquid checked separately",
     "schema": "decoded structural projection; recursive/opaque shapes are partial",
     "customFilters": "Effect registry preserves typed errors and service requirements",
     "customTags": "deferred",

@@ -84,6 +84,10 @@
       "types": "./dist/Type.d.ts",
       "import": "./dist/Type.js"
     },
+    "./TypedLiquid": {
+      "types": "./dist/TypedLiquid.d.ts",
+      "import": "./dist/TypedLiquid.js"
+    },
     "./Value": {
       "types": "./dist/Value.d.ts",
       "import": "./dist/Value.js"

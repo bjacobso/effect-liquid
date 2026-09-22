@@ -82,6 +82,28 @@ Expression filters include `where_exp`, `reject_exp`, `find_exp`, `find_index_ex
 
 Literal predicates participate in variable extraction and checking. Their locations point to the containing string argument, so analysis reports conservative location coverage. Dynamic predicate strings report partial static coverage. `analyze(document, registry)` and `analyzeProject(document, options, registry)` accept the active registry for extension-aware analysis. Filter registry entries are either native callbacks or declarative expression-filter entries; callers inspecting entries should narrow with `"expression" in filter` before accessing `.run`.
 
+## Typed template expressions
+
+`Liquid.liquid<Context>()` creates a tagged template with typed external paths and a typed render context:
+
+```ts
+type Context = { user: { name: string; active: boolean } }
+const L = Liquid.liquid<Context>()
+
+const greeting = L.template`
+{% if ${L.path("user.active")} %}
+  Hello, {{ ${L.path("user.name").upcase().escape()} }}!
+{% endif %}`
+
+const output = await Effect.runPromise(
+  greeting.render({ user: { name: "Ada", active: true } }).pipe(
+    Effect.provide(Liquid.layer)
+  )
+)
+```
+
+TypeScript checks paths inserted through `L.path`, expression methods, and the render context. Paths descend through record fields up to six levels; array elements and Liquid locals remain in ordinary template text. Call `greeting.check(contract)` to check that text against an explicit `Type` contract. The tag constructs Liquid source and uses the existing parser and renderer; it does not turn arbitrary Liquid text into TypeScript compile errors.
+
 ## Extract variables
 
 ```liquid

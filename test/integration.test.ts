@@ -158,6 +158,17 @@ it("runs the packaged ESM API and CLI", () => {
       { encoding: "utf8" },
     ),
   ).toBe("");
+  expect(
+    execFileSync(
+      process.execPath,
+      [
+        "--input-type=module",
+        "-e",
+        'import { liquid } from "effect-liquid/TypedLiquid"; import { liquid as main } from "effect-liquid/Liquid"; if (typeof liquid !== "function" || liquid !== main) process.exit(1);',
+      ],
+      { encoding: "utf8" },
+    ),
+  ).toBe("");
   const output = JSON.parse(
     execFileSync(process.execPath, ["dist/cli.js", "analyze", "-"], {
       input: "{{ user.name }}",
