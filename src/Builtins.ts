@@ -2,7 +2,7 @@ import { Effect } from "effect";
 import { filters as base64Filters } from "./Base64Filters.js";
 import { filters as dateFilters } from "./DateFilters.js";
 import type { BuiltinFilterError } from "./Diagnostic.js";
-import type { Filter, Registry, Signature } from "./Filter.js";
+import type { Filter, FilterCallContext, Registry, Signature } from "./Filter.js";
 import { propertyKeys } from "./PropertyPath.js";
 import { filters as stringFilters } from "./StringFilters.js";
 import { filters as urlFilters } from "./UrlFilters.js";
@@ -18,8 +18,17 @@ const entries: [string, Filter<BuiltinFilterError>][] = [
 const define = (
   name: string,
   signature: Signature,
-  run: (v: Value, a: readonly Value[], n: Readonly<Record<string, Value>>) => Value,
-) => entries.push([name, { signature, run: (v, a, n) => Effect.sync(() => run(v, a, n)) }]);
+  run: (
+    v: Value,
+    a: readonly Value[],
+    n: Readonly<Record<string, Value>>,
+    context?: FilterCallContext,
+  ) => Value | undefined,
+) =>
+  entries.push([
+    name,
+    { signature, run: (v, a, n, context) => Effect.sync(() => run(v, a, n, context)) },
+  ]);
 define("join", { input: "any", output: "string", minArgs: 0, maxArgs: 1 }, (v, a) =>
   array(v)
     .map(hostString)
@@ -197,12 +206,23 @@ for (const name of ["where", "reject", "find", "find_index", "has"] as const)
       minArgs: 1,
       maxArgs: 2,
     },
-    (v, a) => {
+    (v, a, _named, context) => {
       const values = array(v);
       const read = propertyReader(a[0], true);
       const matches = (item: Value) => {
         const value = read(item);
-        return a.length < 2 ? truthy(value) : same(value, a[1]);
+        if (context?.specialArguments[1] === "empty") return empty(value);
+        if (context?.specialArguments[1] === "blank")
+          return (
+            !truthy(value) || empty(value) || (typeof value === "string" && value.trim() === "")
+          );
+        if (context?.jekyllWhere) {
+          const expected = context.missingArguments[1] ? undefined : a[1];
+          return isArray(value)
+            ? value.some((member) => same(member, expected))
+            : same(value, expected);
+        }
+        return a.length < 2 || context?.missingArguments[1] ? truthy(value) : same(value, a[1]);
       };
       if (name === "where" || name === "reject")
         return values.filter((item) => matches(item) === (name === "where"));
@@ -211,11 +231,31 @@ for (const name of ["where", "reject", "find", "find_index", "has"] as const)
         ? index >= 0
         : name === "find_index"
           ? index < 0
-            ? null
+            ? undefined
             : index
-          : (values[index] ?? null);
+          : values[index];
     },
   );
+define("group_by", { input: "any", output: "array", minArgs: 1, maxArgs: 1 }, (v, a) => {
+  const read = propertyReader(a[0], true);
+  const groups = new Map<Value | undefined, Value[]>();
+  const values: readonly Value[] = isArray(v)
+    ? v
+    : typeof v === "string"
+      ? v
+        ? [v]
+        : []
+      : v && typeof v === "object"
+        ? Object.entries(v).map(([key, item]) => [key, item])
+        : [];
+  for (const item of values) {
+    const key = read(item);
+    const members = groups.get(key);
+    if (members) members.push(item);
+    else groups.set(key, [item]);
+  }
+  return [...groups].map(([name, items]) => ({ ...(name === undefined ? {} : { name }), items }));
+});
 define("json", { input: "any", output: "string", minArgs: 0, maxArgs: 1 }, (v, a) =>
   JSON.stringify(v, null, numeric(a[0])),
 );

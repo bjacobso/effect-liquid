@@ -8,12 +8,18 @@ export interface Signature {
   readonly argument?: "string" | "number";
   readonly positionalArguments?: readonly ("string" | "number" | "boolean" | "any")[];
 }
+export interface FilterCallContext {
+  readonly missingArguments: readonly boolean[];
+  readonly specialArguments: readonly ("empty" | "blank" | undefined)[];
+  readonly jekyllWhere: boolean;
+}
 export interface NativeFilter<E = never, R = never> {
   readonly run: (
     input: Value,
     args: readonly Value[],
     named: Readonly<Record<string, Value>>,
-  ) => Effect.Effect<Value, E, R>;
+    context?: FilterCallContext,
+  ) => Effect.Effect<Value | undefined, E, R>;
   readonly signature?: Signature;
 }
 export interface ExpressionFilter {

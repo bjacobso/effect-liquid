@@ -27,6 +27,7 @@ import {
 export interface Config {
   readonly strictVariables: boolean;
   readonly strictFilters: boolean;
+  readonly jekyllWhere: boolean;
   readonly maxSteps: number;
   readonly maxIterations: number;
   readonly maxOutputBytes: number;
@@ -36,6 +37,7 @@ export interface Config {
 export const defaults: Config = {
   strictVariables: false,
   strictFilters: true,
+  jekyllWhere: false,
   maxSteps: 1_000_000,
   maxIterations: 100_000,
   maxOutputBytes: 10_000_000,
@@ -183,14 +185,27 @@ function evaluate<E, R>(
         }
       }
       case "Filter": {
-        const input = (yield* evaluate(expression.input, state, registry)) ?? null;
+        const rawInput = yield* evaluate(expression.input, state, registry);
+        const input = rawInput ?? null;
         const args: Value[] = [];
-        for (const arg of expression.args)
-          args.push((yield* evaluate(arg, state, registry)) ?? null);
+        const missingArguments: boolean[] = [];
+        const specialArguments: ("empty" | "blank" | undefined)[] = [];
+        for (const arg of expression.args) {
+          const value = yield* evaluate(arg, state, registry);
+          args.push(value ?? null);
+          missingArguments.push(value === undefined);
+          specialArguments.push(arg._tag === "Special" ? arg.value : undefined);
+        }
         const named: Record<string, Value> = Object.create(null);
         for (const [key, arg] of Object.entries(expression.named))
           named[key] = (yield* evaluate(arg, state, registry)) ?? null;
         const filter = registry.filters.get(expression.name);
+        if (
+          expression.name === "json" &&
+          rawInput === undefined &&
+          filter === builtins.filters.get("json")
+        )
+          return undefined;
         if (!filter) {
           if (!state.config.strictFilters) return input;
           return yield* Effect.fail(
@@ -290,13 +305,17 @@ function evaluate<E, R>(
           );
         }
         const result = yield* filter
-          .run(input, args, named)
+          .run(input, args, named, {
+            missingArguments,
+            specialArguments,
+            jekyllWhere: state.config.jekyllWhere,
+          })
           .pipe(
             Effect.mapError(
               (cause) => new FilterFailure({ name: expression.name, cause, span: expression.span }),
             ),
           );
-        return yield* normalize(result, expression.span);
+        return result === undefined ? undefined : yield* normalize(result, expression.span);
       }
     }
   });

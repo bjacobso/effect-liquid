@@ -61,6 +61,7 @@ if (engineName === "liquidjs") {
   const allowed = new Set([
     "strictFilters",
     "strictVariables",
+    "jekyllWhere",
     "globals",
     "templates",
     "cache",
@@ -105,6 +106,7 @@ if (engineName === "liquidjs") {
       Render.layer({
         strictFilters: options.strictFilters ?? false,
         strictVariables: options.strictVariables ?? false,
+        jekyllWhere: options.jekyllWhere ?? false,
         globals: options.globals ?? {},
         maxOutputBytes: maxBytes,
       }),

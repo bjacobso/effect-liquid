@@ -35,6 +35,7 @@ const implementedOptions = new Set([
   "trimOutputLeft",
   "trimOutputRight",
   "greedy",
+  "jekyllWhere",
 ]);
 const inventory = (names, implemented) =>
   Object.fromEntries(
@@ -60,6 +61,7 @@ const inventory = (names, implemented) =>
                 "test/sentence-filters.test.ts",
                 "test/whitespace-options.test.ts",
                 "test/date-filters.test.ts",
+                "test/collection-gaps.test.ts",
               ],
             }
           : {}),
