@@ -154,6 +154,21 @@ function evaluate<E, R>(
           );
         return value;
       }
+      case "SelfLookup": {
+        const [first, ...rest] = expression.segments;
+        let value = get(state, stringify(yield* evaluate(first!, state, registry)));
+        for (const segment of rest)
+          value = lookup(value, yield* evaluate(segment, state, registry));
+        if (value === undefined && state.config.strictVariables && state.lenientDepth === 0)
+          return yield* Effect.fail(
+            new RenderError({
+              code: "MissingVariable",
+              message: "Missing variable: context lookup",
+              span: expression.span,
+            }),
+          );
+        return value;
+      }
       case "Not":
         return !truthy(yield* evaluate(expression.value, state, registry));
       case "Range": {

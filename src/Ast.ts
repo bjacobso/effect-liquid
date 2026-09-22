@@ -4,6 +4,7 @@ export type LiteralValue = null | boolean | number | string;
 export type Expression =
   | { readonly _tag: "Literal"; readonly value: LiteralValue; readonly span: Span }
   | { readonly _tag: "Special"; readonly value: "empty" | "blank"; readonly span: Span }
+  | { readonly _tag: "SelfLookup"; readonly segments: readonly Expression[]; readonly span: Span }
   | {
       readonly _tag: "Lookup";
       readonly root: string;

@@ -120,6 +120,18 @@ export const check = <E = never, R = never>(
           return e.value === null ? T.nil : T.literal(e.value);
         case "Special":
           return T.unknown;
+        case "SelfLookup": {
+          const [first, ...rest] = e.segments;
+          if (first?._tag === "Literal" && typeof first.value === "string")
+            return inferRaw(
+              { _tag: "Lookup", root: first.value, segments: rest, span: e.span },
+              env,
+              guard,
+            );
+          for (const segment of e.segments) infer(segment, env);
+          unknown("Dynamic context-root lookup", e.span);
+          return T.unknown;
+        }
         case "Lookup": {
           const refined = env.locals.get(`@${path(e)}`);
           if (refined) return refined;

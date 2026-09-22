@@ -215,7 +215,7 @@ class Templates {
           );
           b.need("else");
           b.done();
-          otherwise = yield* this.body(["endfor"], depth + 1, loop);
+          otherwise = yield* this.body(["endfor"], depth + 1, true);
         }
         nodes.push({
           _tag: "For",
@@ -330,6 +330,8 @@ class Templates {
           ...(forBinding ? { for: forBinding } : {}),
           span: t.span,
         });
+      } else if (tag === "raw" || tag === "comment") {
+        e.fail(`Invalid ${tag} syntax`);
       } else e.fail(`Unsupported tag '${tag}'`);
     }
     return nodes;

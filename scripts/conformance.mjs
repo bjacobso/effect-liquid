@@ -73,6 +73,7 @@ const inventory = (names, implemented) =>
                 "test/render-options.test.ts",
                 "test/interpolated-partials.test.ts",
                 "test/layout.test.ts",
+                "test/parser-compat.test.ts",
               ],
             }
           : {}),
@@ -107,7 +108,7 @@ const manifest = {
   syntax: {
     identifiers: "ASCII letter/underscore followed by word characters or hyphens",
     lookups:
-      "Variable-rooted dot and bracket access; computed lookup indices; sequence length/size and record size fallback; literal receiver indexing deferred",
+      "Variable-rooted and bare context bracket access; computed lookup indices; sequence length/size and record size fallback; literal receiver indexing deferred",
     expressions:
       "Literals, ranges, comparisons, contains, not, right-associated and/or, filter pipelines; opt-in parenthesized conditions and pipelines",
     partials:

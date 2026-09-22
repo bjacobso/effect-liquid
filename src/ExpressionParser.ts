@@ -125,6 +125,21 @@ export class Expressions {
         this.need(")");
         result = from;
       }
+    } else if (w.text === "[") {
+      const segments: Expression[] = [this.atom()];
+      this.need("]");
+      while (this.peek(".") || this.peek("[")) {
+        if (this.take(".")) {
+          const key = this.words[this.pos++];
+          if (!key || key.quoted || !/^[\w-]+$/.test(key.text)) this.fail("Expected property");
+          segments.push({ _tag: "Literal", value: key.text, span: this.position(key.start) });
+        } else {
+          this.need("[");
+          segments.push(this.atom());
+          this.need("]");
+        }
+      }
+      result = { _tag: "SelfLookup", segments, span: this.position(w.start) };
     } else {
       if (!/^[a-zA-Z_][\w-]*$/.test(w.text)) this.fail("Expected variable or literal", w.start);
       const segments: Expression[] = [];

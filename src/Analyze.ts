@@ -48,6 +48,8 @@ interface Slot {
 }
 export function path(e: Expression): string {
   switch (e._tag) {
+    case "SelfLookup":
+      return e.segments.map((segment) => `[${path(segment)}]`).join("");
     case "Lookup":
       return (
         e.root +
@@ -117,6 +119,20 @@ export const analyze = <E, R>(
       control: readonly string[],
     ): void => {
       switch (e._tag) {
+        case "SelfLookup": {
+          const [first, ...rest] = e.segments;
+          if (first?._tag === "Literal" && typeof first.value === "string") {
+            expression(
+              { _tag: "Lookup", root: first.value, segments: rest, span: e.span },
+              env,
+              control,
+            );
+          } else {
+            for (const segment of e.segments) expression(segment, env, control);
+            reasons.push(`Dynamic context-root lookup at ${e.span.start}`);
+          }
+          break;
+        }
         case "Lookup": {
           const slot = Binding.read(env, e.root);
           occurrences.push({
