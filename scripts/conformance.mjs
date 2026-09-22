@@ -36,6 +36,12 @@ const implementedOptions = new Set([
   "trimOutputRight",
   "greedy",
   "jekyllWhere",
+  "lenientIf",
+  "outputEscape",
+  "tagDelimiterLeft",
+  "tagDelimiterRight",
+  "outputDelimiterLeft",
+  "outputDelimiterRight",
 ]);
 const inventory = (names, implemented) =>
   Object.fromEntries(
@@ -62,6 +68,7 @@ const inventory = (names, implemented) =>
                 "test/whitespace-options.test.ts",
                 "test/date-filters.test.ts",
                 "test/collection-gaps.test.ts",
+                "test/render-options.test.ts",
               ],
             }
           : {}),

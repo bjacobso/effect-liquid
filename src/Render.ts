@@ -10,7 +10,7 @@ import {
 } from "./Diagnostic.js";
 import { embeddedExpression } from "./EmbeddedExpression.js";
 import type { Registry } from "./Filter.js";
-import type { WhitespaceOptions } from "./Lexer.js";
+import type { DelimiterOptions, WhitespaceOptions } from "./Lexer.js";
 import { parse } from "./Parser.js";
 import type { Span } from "./Source.js";
 import { TemplateLoader } from "./TemplateLoader.js";
@@ -28,6 +28,8 @@ export interface Config {
   readonly strictVariables: boolean;
   readonly strictFilters: boolean;
   readonly jekyllWhere: boolean;
+  readonly lenientIf: boolean;
+  readonly outputEscape: "escape" | "json" | undefined;
   readonly maxSteps: number;
   readonly maxIterations: number;
   readonly maxOutputBytes: number;
@@ -38,6 +40,8 @@ export const defaults: Config = {
   strictVariables: false,
   strictFilters: true,
   jekyllWhere: false,
+  lenientIf: false,
+  outputEscape: undefined,
   maxSteps: 1_000_000,
   maxIterations: 100_000,
   maxOutputBytes: 10_000_000,
@@ -52,6 +56,7 @@ export const layer = (config: Partial<Config> = {}) =>
   Layer.succeed(RenderConfig, { ...defaults, ...config });
 interface State {
   whitespace: WhitespaceOptions;
+  delimiters: DelimiterOptions;
   groupedExpressions: boolean;
   scopes: Record<string, Value>[];
   cycles: Map<string, number>;
@@ -62,6 +67,7 @@ interface State {
   control: "break" | "continue" | undefined;
   depth: number;
   filterDepth: number;
+  lenientDepth: number;
   config: Config;
 }
 type Failure<E> = RenderError | ParseError | LoadError | FilterFailure<E | BuiltinFilterError>;
@@ -104,6 +110,22 @@ function equal(a: Value | undefined, b: Value | undefined): boolean {
   if (isArray(a) && isArray(b)) return a.length === b.length && a.every((v, i) => equal(v, b[i]));
   return a === b;
 }
+function evaluateLenient<E, R>(
+  expression: Expression,
+  state: State,
+  registry: Registry<E, R>,
+): Effect.Effect<Value | undefined, RenderError | FilterFailure<E | BuiltinFilterError>, R> {
+  return Effect.gen(function* () {
+    state.lenientDepth++;
+    return yield* evaluate(expression, state, registry).pipe(
+      Effect.ensuring(
+        Effect.sync(() => {
+          state.lenientDepth--;
+        }),
+      ),
+    );
+  });
+}
 function evaluate<E, R>(
   expression: Expression,
   state: State,
@@ -120,7 +142,7 @@ function evaluate<E, R>(
         let value = get(state, expression.root);
         for (const segment of expression.segments)
           value = lookup(value, yield* evaluate(segment, state, registry));
-        if (value === undefined && state.config.strictVariables)
+        if (value === undefined && state.config.strictVariables && state.lenientDepth === 0)
           return yield* Effect.fail(
             new RenderError({
               code: "MissingVariable",
@@ -185,7 +207,9 @@ function evaluate<E, R>(
         }
       }
       case "Filter": {
-        const rawInput = yield* evaluate(expression.input, state, registry);
+        const rawInput = yield* state.config.lenientIf && expression.name === "default"
+          ? evaluateLenient(expression.input, state, registry)
+          : evaluate(expression.input, state, registry);
         const input = rawInput ?? null;
         const args: Value[] = [];
         const missingArguments: boolean[] = [];
@@ -352,8 +376,29 @@ function nodes<E, R>(
                 switch (node._tag) {
                   case "Text":
                     return output(node.value);
-                  case "Output":
-                    return output(stringify(yield* ev(node.expression)));
+                  case "Output": {
+                    const value = yield* ev(node.expression);
+                    if (
+                      !state.config.outputEscape ||
+                      (node.expression._tag === "Filter" && node.expression.name === "raw")
+                    )
+                      return output(stringify(value));
+                    const escaped =
+                      state.config.outputEscape === "json"
+                        ? (JSON.stringify(value) ?? "")
+                        : stringify(value).replace(
+                            /[&<>"']/g,
+                            (character) =>
+                              ({
+                                "&": "&amp;",
+                                "<": "&lt;",
+                                ">": "&gt;",
+                                '"': "&#34;",
+                                "'": "&#39;",
+                              })[character]!,
+                          );
+                    return output(escaped);
+                  }
                   case "Counter": {
                     const environment = state.scopes[1]!;
                     const previous = Object.getOwnPropertyDescriptor(environment, node.name)?.value;
@@ -388,7 +433,13 @@ function nodes<E, R>(
                     return Stream.empty;
                   case "If": {
                     for (const branch of node.branches)
-                      if (truthy(yield* ev(branch.condition)))
+                      if (
+                        truthy(
+                          yield* state.config.lenientIf
+                            ? evaluateLenient(branch.condition, state, registry)
+                            : ev(branch.condition),
+                        )
+                      )
                         return nodes(branch.body, state, registry);
                     return nodes(node.otherwise, state, registry);
                   }
@@ -505,6 +556,7 @@ function nodes<E, R>(
                     const source = yield* loader.load(name, node.span.sourceId, node.mode);
                     const document = yield* parse(source, {
                       ...state.whitespace,
+                      ...state.delimiters,
                       groupedExpressions: state.groupedExpressions,
                     });
                     const old = state.scopes;
@@ -626,8 +678,10 @@ export function renderStream<E = never, R = never>(
         control: undefined,
         depth: 0,
         filterDepth: 0,
+        lenientDepth: 0,
         groupedExpressions: document.groupedExpressions ?? false,
         whitespace: document.whitespace ?? {},
+        delimiters: document.delimiters ?? {},
         config,
       };
       return nodes(document.body, state, registry);

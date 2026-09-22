@@ -256,6 +256,7 @@ define("group_by", { input: "any", output: "array", minArgs: 1, maxArgs: 1 }, (v
   }
   return [...groups].map(([name, items]) => ({ ...(name === undefined ? {} : { name }), items }));
 });
+define("raw", { input: "any", output: "input", minArgs: 0, maxArgs: 0 }, (v) => v);
 define("json", { input: "any", output: "string", minArgs: 0, maxArgs: 1 }, (v, a) =>
   JSON.stringify(v, null, numeric(a[0])),
 );

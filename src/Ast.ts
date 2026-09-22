@@ -1,4 +1,4 @@
-import type { WhitespaceOptions } from "./Lexer.js";
+import type { DelimiterOptions, WhitespaceOptions } from "./Lexer.js";
 import type { Source, Span } from "./Source.js";
 export type LiteralValue = null | boolean | number | string;
 export type Expression =
@@ -119,6 +119,7 @@ export type Node =
     };
 export interface Document {
   readonly whitespace?: WhitespaceOptions;
+  readonly delimiters?: DelimiterOptions;
   readonly groupedExpressions?: boolean;
   readonly _tag: "Document";
   readonly source: Source;

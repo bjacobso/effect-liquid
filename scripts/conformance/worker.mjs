@@ -62,6 +62,12 @@ if (engineName === "liquidjs") {
     "strictFilters",
     "strictVariables",
     "jekyllWhere",
+    "lenientIf",
+    "outputEscape",
+    "tagDelimiterLeft",
+    "tagDelimiterRight",
+    "outputDelimiterLeft",
+    "outputDelimiterRight",
     "globals",
     "templates",
     "cache",
@@ -82,8 +88,10 @@ if (engineName === "liquidjs") {
   };
   execute = async (fixture) => {
     const options = fixture.options ?? {};
+    const hasPartial = /{%\s*(?:render|include|layout)\b/.test(fixture.source);
     const unsupported = Object.keys(options).filter(
       (k) =>
+        !(!hasPartial && (k === "root" || k === "extname")) &&
         !allowed.has(k) &&
         !(Object.hasOwn(equivalentDefaults, k) && options[k] === equivalentDefaults[k]),
     );
@@ -93,7 +101,17 @@ if (engineName === "liquidjs") {
         Liquid.parse(fixture.source, {
           groupedExpressions: options.groupedExpressions ?? false,
           ...Object.fromEntries(
-            ["trimTagLeft", "trimTagRight", "trimOutputLeft", "trimOutputRight", "greedy"]
+            [
+              "trimTagLeft",
+              "trimTagRight",
+              "trimOutputLeft",
+              "trimOutputRight",
+              "greedy",
+              "tagDelimiterLeft",
+              "tagDelimiterRight",
+              "outputDelimiterLeft",
+              "outputDelimiterRight",
+            ]
               .filter((key) => options[key] !== undefined)
               .map((key) => [key, options[key]]),
           ),
@@ -107,6 +125,8 @@ if (engineName === "liquidjs") {
         strictFilters: options.strictFilters ?? false,
         strictVariables: options.strictVariables ?? false,
         jekyllWhere: options.jekyllWhere ?? false,
+        lenientIf: options.lenientIf ?? false,
+        ...(options.outputEscape ? { outputEscape: options.outputEscape } : {}),
         globals: options.globals ?? {},
         maxOutputBytes: maxBytes,
       }),

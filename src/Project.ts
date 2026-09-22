@@ -65,6 +65,7 @@ export const analyzeProject = <E = never, R = never>(
           }
           const child = yield* parse(source, {
             ...doc.whitespace,
+            ...doc.delimiters,
             groupedExpressions: doc.groupedExpressions ?? false,
           });
           const childAnalysis = yield* analyze(child, registry);

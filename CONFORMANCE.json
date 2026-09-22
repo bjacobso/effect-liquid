@@ -37,7 +37,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "for": {
@@ -58,7 +59,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "capture": {
@@ -79,7 +81,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "case": {
@@ -100,7 +103,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "comment": {
@@ -121,7 +125,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "include": {
@@ -142,7 +147,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "render": {
@@ -163,7 +169,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "decrement": {
@@ -184,7 +191,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "increment": {
@@ -205,7 +213,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "cycle": {
@@ -226,7 +235,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "if": {
@@ -247,7 +257,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "layout": {
@@ -274,7 +285,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "tablerow": {
@@ -295,7 +307,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "unless": {
@@ -316,7 +329,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "break": {
@@ -337,7 +351,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "continue": {
@@ -358,7 +373,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "echo": {
@@ -379,7 +395,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "liquid": {
@@ -400,7 +417,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "#": {
@@ -421,7 +439,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     }
   },
@@ -444,7 +463,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "xml_escape": {
@@ -465,7 +485,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "escape_once": {
@@ -486,7 +507,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "newline_to_br": {
@@ -507,7 +529,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "strip_html": {
@@ -528,7 +551,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "abs": {
@@ -549,7 +573,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "at_least": {
@@ -570,7 +595,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "at_most": {
@@ -591,7 +617,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "ceil": {
@@ -612,7 +639,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "divided_by": {
@@ -633,7 +661,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "floor": {
@@ -654,7 +683,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "minus": {
@@ -675,7 +705,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "plus": {
@@ -696,7 +727,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "modulo": {
@@ -717,7 +749,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "times": {
@@ -738,7 +771,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "round": {
@@ -759,7 +793,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "url_decode": {
@@ -780,7 +815,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "url_encode": {
@@ -801,7 +837,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "cgi_escape": {
@@ -822,7 +859,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "uri_escape": {
@@ -843,7 +881,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "slugify": {
@@ -864,7 +903,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "join": {
@@ -885,7 +925,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "last": {
@@ -906,7 +947,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "first": {
@@ -927,7 +969,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "reverse": {
@@ -948,7 +991,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "sort": {
@@ -969,7 +1013,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "sort_natural": {
@@ -990,7 +1035,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "size": {
@@ -1011,7 +1057,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "map": {
@@ -1032,7 +1079,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "sum": {
@@ -1053,7 +1101,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "compact": {
@@ -1074,7 +1123,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "concat": {
@@ -1095,7 +1145,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "push": {
@@ -1116,7 +1167,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "unshift": {
@@ -1137,7 +1189,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "pop": {
@@ -1158,7 +1211,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "shift": {
@@ -1179,7 +1233,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "slice": {
@@ -1200,7 +1255,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "where": {
@@ -1221,7 +1277,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "reject": {
@@ -1242,7 +1299,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "where_exp": {
@@ -1263,7 +1321,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "reject_exp": {
@@ -1284,7 +1343,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "group_by": {
@@ -1305,7 +1365,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "group_by_exp": {
@@ -1326,7 +1387,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "has": {
@@ -1347,7 +1409,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "has_exp": {
@@ -1368,7 +1431,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "find_index": {
@@ -1389,7 +1453,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "find_index_exp": {
@@ -1410,7 +1475,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "find": {
@@ -1431,7 +1497,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "find_exp": {
@@ -1452,7 +1519,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "uniq": {
@@ -1473,7 +1541,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "sample": {
@@ -1497,7 +1566,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "date_to_xmlschema": {
@@ -1518,7 +1588,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "date_to_rfc822": {
@@ -1539,7 +1610,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "date_to_string": {
@@ -1560,7 +1632,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "date_to_long_string": {
@@ -1581,7 +1654,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "append": {
@@ -1602,7 +1676,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "prepend": {
@@ -1623,7 +1698,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "lstrip": {
@@ -1644,7 +1720,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "downcase": {
@@ -1665,7 +1742,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "upcase": {
@@ -1686,7 +1764,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "remove": {
@@ -1707,7 +1786,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "remove_first": {
@@ -1728,7 +1808,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "remove_last": {
@@ -1749,7 +1830,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "rstrip": {
@@ -1770,7 +1852,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "split": {
@@ -1791,7 +1874,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "strip": {
@@ -1812,7 +1896,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "strip_newlines": {
@@ -1833,7 +1918,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "squish": {
@@ -1854,7 +1940,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "capitalize": {
@@ -1875,7 +1962,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "replace": {
@@ -1896,7 +1984,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "replace_first": {
@@ -1917,7 +2006,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "replace_last": {
@@ -1938,7 +2028,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "truncate": {
@@ -1959,7 +2050,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "truncatewords": {
@@ -1980,7 +2072,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "normalize_whitespace": {
@@ -2001,7 +2094,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "number_of_words": {
@@ -2022,7 +2116,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "array_to_sentence_string": {
@@ -2043,7 +2138,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "base64_encode": {
@@ -2064,7 +2160,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "base64_decode": {
@@ -2085,7 +2182,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "sha256": {
@@ -2112,11 +2210,31 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "raw": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts",
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
+      ]
     },
     "jsonify": {
       "status": "deferred"
@@ -2139,7 +2257,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "json": {
@@ -2160,7 +2279,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "inspect": {
@@ -2225,7 +2345,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "trimTagLeft": {
@@ -2246,7 +2367,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "trimOutputRight": {
@@ -2267,7 +2389,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "trimOutputLeft": {
@@ -2288,7 +2411,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "greedy": {
@@ -2309,20 +2433,97 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "tagDelimiterLeft": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts",
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
+      ]
     },
     "tagDelimiterRight": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts",
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
+      ]
     },
     "outputDelimiterLeft": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts",
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
+      ]
     },
     "outputDelimiterRight": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts",
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
+      ]
     },
     "preserveTimezones": {
       "status": "deferred"
@@ -2345,7 +2546,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "strictVariables": {
@@ -2366,7 +2568,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "ownPropertyOnly": {
@@ -2387,11 +2590,31 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "lenientIf": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts",
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
+      ]
     },
     "globals": {
       "status": "partial",
@@ -2411,7 +2634,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "keepOutputType": {
@@ -2438,7 +2662,8 @@
         "test/sentence-filters.test.ts",
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
-        "test/collection-gaps.test.ts"
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
       ]
     },
     "memoryLimit": {
@@ -2451,7 +2676,26 @@
       "status": "deferred"
     },
     "outputEscape": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts",
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts"
+      ]
     }
   },
   "syntax": {

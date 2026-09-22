@@ -21,7 +21,19 @@ export const whitespaceKeys = [
   "trimOutputRight",
   "greedy",
 ] as const;
-export interface ParseOptions extends WhitespaceOptions {
+export interface DelimiterOptions {
+  readonly tagDelimiterLeft?: string;
+  readonly tagDelimiterRight?: string;
+  readonly outputDelimiterLeft?: string;
+  readonly outputDelimiterRight?: string;
+}
+export const delimiterKeys = [
+  "tagDelimiterLeft",
+  "tagDelimiterRight",
+  "outputDelimiterLeft",
+  "outputDelimiterRight",
+] as const;
+export interface ParseOptions extends WhitespaceOptions, DelimiterOptions {
   readonly groupedExpressions?: boolean;
   readonly maxSourceLength?: number;
   readonly maxTokens?: number;
@@ -33,8 +45,24 @@ export const lex = (
 ): Effect.Effect<readonly Token[], ParseError> =>
   Effect.gen(function* () {
     const text = source.text;
+    const tagLeft = options.tagDelimiterLeft ?? "{%";
+    const tagRight = options.tagDelimiterRight ?? "%}";
+    const outputLeft = options.outputDelimiterLeft ?? "{{";
+    const outputRight = options.outputDelimiterRight ?? "}}";
+    if (
+      [tagLeft, tagRight, outputLeft, outputRight].some((value) => !value || value.length > 32) ||
+      tagLeft === outputLeft
+    )
+      return yield* Effect.fail(
+        new ParseError({ message: "Invalid delimiters", span: span(source.id, 0, 0) }),
+      );
     for (const [key, value] of Object.entries(options)) {
       if (["groupedExpressions", ...whitespaceKeys].includes(key) && typeof value === "boolean")
+        continue;
+      if (
+        delimiterKeys.includes(key as (typeof delimiterKeys)[number]) &&
+        typeof value === "string"
+      )
         continue;
       if (
         !["maxSourceLength", "maxTokens", "maxDepth"].includes(key) ||
@@ -79,19 +107,16 @@ export const lex = (
           new ParseError({ message: "Token limit exceeded", span: span(source.id, i, i) }),
         );
       const start = i;
-      while (
-        i < text.length &&
-        !(text[i] === "{" && (text[i + 1] === "{" || text[i + 1] === "%"))
-      ) {
+      while (i < text.length && !text.startsWith(tagLeft, i) && !text.startsWith(outputLeft, i)) {
         i++;
         if (i % 8192 === 0) yield* Effect.yieldNow();
       }
       addText(start, i);
       if (i === text.length) break;
       const open = i;
-      const kind = text[i + 1] === "{" ? "output" : "tag";
-      const close = kind === "output" ? "}}" : "%}";
-      i += 2;
+      const kind = text.startsWith(outputLeft, i) ? "output" : "tag";
+      const close = kind === "output" ? outputRight : tagRight;
+      i += kind === "output" ? outputLeft.length : tagLeft.length;
       const markedLeft = text[i] === "-";
       if (markedLeft || (kind === "tag" ? options.trimTagLeft : options.trimOutputLeft)) {
         const last = tokens[tokens.length - 1];
@@ -122,12 +147,16 @@ export const lex = (
         );
       const trim = text[i - 1] === "-";
       const content = text.slice(offset, trim ? i - 1 : i);
-      i += 2;
+      i += close.length;
       trimNext = trim || !!(kind === "tag" ? options.trimTagRight : options.trimOutputRight);
       const tag = content.trim();
       if (kind === "tag" && (tag === "raw" || tag === "comment")) {
         const bodyStart = i;
-        const endPattern = new RegExp(`{%(-)?\\s*end${tag}\\s*(-)?%}`, "g");
+        const escapeRegex = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const endPattern = new RegExp(
+          `${escapeRegex(tagLeft)}(-)?\\s*end${tag}\\s*(-)?${escapeRegex(tagRight)}`,
+          "g",
+        );
         endPattern.lastIndex = i;
         const match = endPattern.exec(text);
         if (!match)
