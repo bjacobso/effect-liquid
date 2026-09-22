@@ -450,6 +450,19 @@ export const check = <E = never, R = never>(
             Binding.join(env, [next, otherwise], merge);
             break;
           }
+          case "Block": {
+            const next = Binding.fork(env);
+            next.locals.set("block", T.record({ super: T.string }));
+            body(n.body, next);
+            unknown("Block inheritance requires project checking", n.span);
+            break;
+          }
+          case "Layout":
+            if (n.template) infer(n.template, env);
+            for (const value of Object.values(n.args)) infer(value, env);
+            body(n.body, env);
+            unknown("Layout contract has not been checked", n.span);
+            break;
           case "Partial":
             infer(n.template, env);
             for (const e of Object.values(n.args)) infer(e, env);

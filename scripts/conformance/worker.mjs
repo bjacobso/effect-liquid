@@ -88,7 +88,7 @@ if (engineName === "liquidjs") {
   };
   execute = async (fixture) => {
     const options = fixture.options ?? {};
-    const hasPartial = /{%\s*(?:render|include|layout)\b/.test(fixture.source);
+    const hasPartial = /{%\s*(?:render|include|layout(?!\s+none\b))\b/.test(fixture.source);
     const unsupported = Object.keys(options).filter(
       (k) =>
         !(!hasPartial && (k === "root" || k === "extname")) &&

@@ -137,7 +137,7 @@ Revisit architecture only when a milestone exposes a concrete constraint. Keep f
 
 - `src/` now contains the independent parser, value semantics, Effect/Stream renderer, flow analyzer, project traversal, gradual checker, Schema projection, filesystem adapter, and local CLI.
 - Typed extension registries are explicit function arguments. Configuration and loaders use services/layers. This preserves each custom filter's `E`/`R` types without a globally erased registry service; compile-time and runtime tests cover the decision.
-- Basic `render`/`include` supports named arguments; `with`/`for`/`as`, interpolated names, cache, and include flow summaries are still pending.
+- `render`/`include` supports named arguments and interpolated quoted names; render bindings and layout blocks are implemented. Cache and include flow summaries are still pending.
 - Static analysis reports partial coverage for loop-carried assignments and loop control. The checker refuses to certify these in strict mode. This is the remaining fixed-point work, not an inferred proof of safety.
 - Effect Stream output, Schema decoding/projection, bounded literal project checks, and CLI commands are tested. Project CLI and complete custom-tag contracts are pending.
 - `pnpm check` builds declarations and runs type, semantic, differential, robustness, integration, browser-bundle, package/CLI, and formatting checks. `pnpm benchmark` provides a reproducible local baseline; no performance regression threshold or cross-engine speed claim has been established.

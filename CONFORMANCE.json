@@ -38,7 +38,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "for": {
@@ -60,7 +62,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "capture": {
@@ -82,7 +86,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "case": {
@@ -104,7 +110,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "comment": {
@@ -126,7 +134,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "include": {
@@ -148,7 +158,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "render": {
@@ -170,7 +182,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "decrement": {
@@ -192,7 +206,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "increment": {
@@ -214,7 +230,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "cycle": {
@@ -236,7 +254,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "if": {
@@ -258,14 +278,58 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "layout": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts",
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
+      ]
     },
     "block": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/conformance.test.ts",
+        "test/engine.test.ts",
+        "test/compatibility-expansion.test.ts",
+        "test/blocks.test.ts",
+        "test/partial-bindings.test.ts",
+        "test/string-filters.test.ts",
+        "test/url-filters.test.ts",
+        "test/expression-filters.test.ts",
+        "test/numeric-filters.test.ts",
+        "test/base64-filters.test.ts",
+        "test/grouped-expressions.test.ts",
+        "test/property-lookup.test.ts",
+        "test/sentence-filters.test.ts",
+        "test/whitespace-options.test.ts",
+        "test/date-filters.test.ts",
+        "test/collection-gaps.test.ts",
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
+      ]
     },
     "raw": {
       "status": "partial",
@@ -286,7 +350,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "tablerow": {
@@ -308,7 +374,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "unless": {
@@ -330,7 +398,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "break": {
@@ -352,7 +422,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "continue": {
@@ -374,7 +446,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "echo": {
@@ -396,7 +470,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "liquid": {
@@ -418,7 +494,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "#": {
@@ -440,7 +518,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     }
   },
@@ -464,7 +544,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "xml_escape": {
@@ -486,7 +568,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "escape_once": {
@@ -508,7 +592,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "newline_to_br": {
@@ -530,7 +616,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "strip_html": {
@@ -552,7 +640,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "abs": {
@@ -574,7 +664,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "at_least": {
@@ -596,7 +688,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "at_most": {
@@ -618,7 +712,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "ceil": {
@@ -640,7 +736,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "divided_by": {
@@ -662,7 +760,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "floor": {
@@ -684,7 +784,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "minus": {
@@ -706,7 +808,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "plus": {
@@ -728,7 +832,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "modulo": {
@@ -750,7 +856,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "times": {
@@ -772,7 +880,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "round": {
@@ -794,7 +904,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "url_decode": {
@@ -816,7 +928,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "url_encode": {
@@ -838,7 +952,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "cgi_escape": {
@@ -860,7 +976,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "uri_escape": {
@@ -882,7 +1000,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "slugify": {
@@ -904,7 +1024,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "join": {
@@ -926,7 +1048,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "last": {
@@ -948,7 +1072,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "first": {
@@ -970,7 +1096,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "reverse": {
@@ -992,7 +1120,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "sort": {
@@ -1014,7 +1144,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "sort_natural": {
@@ -1036,7 +1168,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "size": {
@@ -1058,7 +1192,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "map": {
@@ -1080,7 +1216,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "sum": {
@@ -1102,7 +1240,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "compact": {
@@ -1124,7 +1264,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "concat": {
@@ -1146,7 +1288,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "push": {
@@ -1168,7 +1312,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "unshift": {
@@ -1190,7 +1336,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "pop": {
@@ -1212,7 +1360,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "shift": {
@@ -1234,7 +1384,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "slice": {
@@ -1256,7 +1408,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "where": {
@@ -1278,7 +1432,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "reject": {
@@ -1300,7 +1456,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "where_exp": {
@@ -1322,7 +1480,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "reject_exp": {
@@ -1344,7 +1504,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "group_by": {
@@ -1366,7 +1528,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "group_by_exp": {
@@ -1388,7 +1552,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "has": {
@@ -1410,7 +1576,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "has_exp": {
@@ -1432,7 +1600,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "find_index": {
@@ -1454,7 +1624,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "find_index_exp": {
@@ -1476,7 +1648,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "find": {
@@ -1498,7 +1672,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "find_exp": {
@@ -1520,7 +1696,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "uniq": {
@@ -1542,7 +1720,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "sample": {
@@ -1567,7 +1747,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "date_to_xmlschema": {
@@ -1589,7 +1771,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "date_to_rfc822": {
@@ -1611,7 +1795,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "date_to_string": {
@@ -1633,7 +1819,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "date_to_long_string": {
@@ -1655,7 +1843,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "append": {
@@ -1677,7 +1867,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "prepend": {
@@ -1699,7 +1891,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "lstrip": {
@@ -1721,7 +1915,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "downcase": {
@@ -1743,7 +1939,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "upcase": {
@@ -1765,7 +1963,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "remove": {
@@ -1787,7 +1987,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "remove_first": {
@@ -1809,7 +2011,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "remove_last": {
@@ -1831,7 +2035,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "rstrip": {
@@ -1853,7 +2059,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "split": {
@@ -1875,7 +2083,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "strip": {
@@ -1897,7 +2107,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "strip_newlines": {
@@ -1919,7 +2131,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "squish": {
@@ -1941,7 +2155,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "capitalize": {
@@ -1963,7 +2179,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "replace": {
@@ -1985,7 +2203,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "replace_first": {
@@ -2007,7 +2227,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "replace_last": {
@@ -2029,7 +2251,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "truncate": {
@@ -2051,7 +2275,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "truncatewords": {
@@ -2073,7 +2299,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "normalize_whitespace": {
@@ -2095,7 +2323,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "number_of_words": {
@@ -2117,7 +2347,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "array_to_sentence_string": {
@@ -2139,7 +2371,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "base64_encode": {
@@ -2161,7 +2395,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "base64_decode": {
@@ -2183,7 +2419,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "sha256": {
@@ -2211,7 +2449,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "raw": {
@@ -2233,7 +2473,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "jsonify": {
@@ -2258,7 +2500,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "json": {
@@ -2280,7 +2524,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "inspect": {
@@ -2346,7 +2592,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "trimTagLeft": {
@@ -2368,7 +2616,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "trimOutputRight": {
@@ -2390,7 +2640,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "trimOutputLeft": {
@@ -2412,7 +2664,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "greedy": {
@@ -2434,7 +2688,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "tagDelimiterLeft": {
@@ -2456,7 +2712,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "tagDelimiterRight": {
@@ -2478,7 +2736,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "outputDelimiterLeft": {
@@ -2500,7 +2760,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "outputDelimiterRight": {
@@ -2522,7 +2784,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "preserveTimezones": {
@@ -2547,7 +2811,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "strictVariables": {
@@ -2569,7 +2835,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "ownPropertyOnly": {
@@ -2591,7 +2859,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "lenientIf": {
@@ -2613,7 +2883,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "globals": {
@@ -2635,7 +2907,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "keepOutputType": {
@@ -2663,7 +2937,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     },
     "memoryLimit": {
@@ -2694,7 +2970,9 @@
         "test/whitespace-options.test.ts",
         "test/date-filters.test.ts",
         "test/collection-gaps.test.ts",
-        "test/render-options.test.ts"
+        "test/render-options.test.ts",
+        "test/interpolated-partials.test.ts",
+        "test/layout.test.ts"
       ]
     }
   },
@@ -2702,8 +2980,8 @@
     "identifiers": "ASCII letter/underscore followed by word characters or hyphens",
     "lookups": "Variable-rooted dot and bracket access; computed lookup indices; sequence length/size and record size fallback; literal receiver indexing deferred",
     "expressions": "Literals, ranges, comparisons, contains, not, right-associated and/or, filter pipelines; opt-in parenthesized conditions and pipelines",
-    "partials": "Literal or variable template names and comma-separated named arguments. with/for/as and interpolated filenames deferred.",
-    "loops": "limit, numeric offset, reversed, else; offset:continue deferred"
+    "partials": "Literal or variable template names, interpolated quoted filenames, with/for/as bindings, and comma-separated named arguments.",
+    "loops": "limit, numeric offset, reversed, else, and offset:continue"
   },
   "hostValues": {
     "plainRecords": "supported with own data properties only",

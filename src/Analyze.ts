@@ -282,6 +282,20 @@ export const analyze = <E, R>(
             Binding.join(env, [next, otherwise], merge);
             break;
           }
+          case "Block": {
+            const next = Binding.fork(env);
+            next.locals.set("block", declare("block", "builtin", n.span));
+            body(n.body, next, [...control, `block:${n.name}`]);
+            reasons.push(`Block inheritance analysis is partial at ${n.span.start}`);
+            break;
+          }
+          case "Layout": {
+            if (n.template) expression(n.template, env, control);
+            for (const value of Object.values(n.args)) expression(value, env, control);
+            body(n.body, env, [...control, `layout:${n.span.start}`]);
+            reasons.push(`Layout dependency analysis is partial at ${n.span.start}`);
+            break;
+          }
           case "Partial": {
             expression(n.template, env, control);
             for (const e of Object.values(n.args)) expression(e, env, control);

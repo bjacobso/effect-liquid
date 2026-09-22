@@ -5,7 +5,7 @@ export interface Loader {
   readonly load: (
     name: string,
     referrer: string,
-    kind: "render" | "include",
+    kind: "render" | "include" | "layout",
   ) => Effect.Effect<Source, LoadError>;
 }
 export class TemplateLoader extends Context.Tag("effect-liquid/TemplateLoader")<

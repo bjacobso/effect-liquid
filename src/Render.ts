@@ -68,6 +68,8 @@ interface State {
   depth: number;
   filterDepth: number;
   lenientDepth: number;
+  layoutStore: boolean;
+  layoutBlocks: Map<string, readonly Node[]>;
   config: Config;
 }
 type Failure<E> = RenderError | ParseError | LoadError | FilterFailure<E | BuiltinFilterError>;
@@ -535,7 +537,27 @@ function nodes<E, R>(
                       ),
                     );
                   }
-                  case "Partial": {
+                  case "Block": {
+                    if (state.layoutStore) {
+                      state.layoutBlocks.set(node.name, node.body);
+                      return Stream.empty;
+                    }
+                    const override = state.layoutBlocks.get(node.name);
+                    if (!override) return nodes(node.body, state, registry);
+                    const parent = Array.from(
+                      yield* Stream.runCollect(nodes(node.body, state, registry)),
+                    ).join("");
+                    state.scopes.push({ block: { super: parent } });
+                    return nodes(override, state, registry).pipe(
+                      Stream.ensuring(
+                        Effect.sync(() => {
+                          state.scopes.pop();
+                        }),
+                      ),
+                    );
+                  }
+                  case "Layout": {
+                    if (!node.template) return nodes(node.body, state, registry);
                     if (state.depth >= state.config.maxDepth)
                       return Stream.fail(
                         new RenderError({
@@ -545,6 +567,73 @@ function nodes<E, R>(
                         }),
                       );
                     const name = stringify(yield* ev(node.template));
+                    const previousStore = state.layoutStore;
+                    const previousBlocks = state.layoutBlocks;
+                    state.layoutStore = true;
+                    state.layoutBlocks = new Map();
+                    const html = yield* Stream.runCollect(nodes(node.body, state, registry)).pipe(
+                      Effect.ensuring(
+                        Effect.sync(() => {
+                          state.layoutStore = previousStore;
+                        }),
+                      ),
+                    );
+                    const blocks = state.layoutBlocks;
+                    if (!blocks.has(""))
+                      blocks.set("", [
+                        { _tag: "Text", value: Array.from(html).join(""), span: node.span },
+                      ]);
+                    for (const [key, value] of previousBlocks) blocks.set(key, value);
+                    state.layoutBlocks = blocks;
+                    const args: Record<string, Value> = Object.create(null);
+                    for (const [key, value] of Object.entries(node.args))
+                      args[key] = (yield* ev(value)) ?? null;
+                    const loader = yield* TemplateLoader;
+                    const source = yield* loader.load(name, node.span.sourceId, "layout");
+                    const document = yield* parse(source, {
+                      ...state.whitespace,
+                      ...state.delimiters,
+                      groupedExpressions: state.groupedExpressions,
+                    });
+                    state.scopes.push(args);
+                    state.depth++;
+                    return nodes(document.body, state, registry).pipe(
+                      Stream.ensuring(
+                        Effect.sync(() => {
+                          state.scopes.pop();
+                          state.depth--;
+                          state.layoutStore = previousStore;
+                          state.layoutBlocks = previousBlocks;
+                        }),
+                      ),
+                    );
+                  }
+                  case "Partial": {
+                    if (state.depth >= state.config.maxDepth)
+                      return Stream.fail(
+                        new RenderError({
+                          code: "ResourceLimitExceeded",
+                          message: "Template recursion limit exceeded",
+                          span: node.span,
+                        }),
+                      );
+                    let name = stringify(yield* ev(node.template));
+                    const interpolation = state.delimiters.outputDelimiterLeft ?? "{{";
+                    if (
+                      node.template._tag === "Literal" &&
+                      typeof node.template.value === "string" &&
+                      name.includes(interpolation)
+                    ) {
+                      const nameDocument = yield* parse(name, {
+                        ...state.whitespace,
+                        ...state.delimiters,
+                        groupedExpressions: state.groupedExpressions,
+                      });
+                      const chunks = yield* Stream.runCollect(
+                        nodes(nameDocument.body, state, registry),
+                      );
+                      name = Array.from(chunks).join("");
+                    }
                     const args: Record<string, Value> = Object.create(null);
                     for (const [key, value] of Object.entries(node.args))
                       args[key] = (yield* ev(value)) ?? null;
@@ -679,6 +768,8 @@ export function renderStream<E = never, R = never>(
         depth: 0,
         filterDepth: 0,
         lenientDepth: 0,
+        layoutStore: false,
+        layoutBlocks: new Map(),
         groupedExpressions: document.groupedExpressions ?? false,
         whitespace: document.whitespace ?? {},
         delimiters: document.delimiters ?? {},

@@ -271,14 +271,32 @@ class Templates {
         e.done();
         if (!loop) e.fail(`${tag} outside loop`);
         nodes.push({ _tag: tag === "break" ? "Break" : "Continue", span: t.span });
+      } else if (tag === "block") {
+        const name = e.pos < e.words.length ? e.name() : "";
+        e.done();
+        const body = yield* this.body(["endblock"], depth + 1, loop);
+        nodes.push({ _tag: "Block", name, body, span: end("endblock") });
+      } else if (tag === "layout") {
+        const template = e.take("none") ? undefined : e.atom();
+        const args: Record<string, Expression> = Object.create(null);
+        while (e.pos < e.words.length) {
+          e.take(",");
+          const name = e.name();
+          e.need(":");
+          if (Object.hasOwn(args, name)) e.fail(`Duplicate layout argument: ${name}`);
+          args[name] = e.atom();
+        }
+        e.done();
+        const body = yield* this.body([], depth + 1, loop);
+        nodes.push({
+          _tag: "Layout",
+          ...(template ? { template } : {}),
+          args,
+          body,
+          span: span(t.span.sourceId, t.span.start, body.at(-1)?.span.end ?? t.span.end),
+        });
       } else if (tag === "render" || tag === "include") {
         const template = e.atom();
-        if (
-          template._tag === "Literal" &&
-          typeof template.value === "string" &&
-          template.value.includes("{{")
-        )
-          e.fail("Interpolated template filenames are not supported yet");
         const args: Record<string, Expression> = Object.create(null);
         let withBinding: PartialBinding | undefined;
         let forBinding: PartialBinding | undefined;

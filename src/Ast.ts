@@ -109,6 +109,19 @@ export type Node =
     }
   | { readonly _tag: "Break" | "Continue"; readonly span: Span }
   | {
+      readonly _tag: "Block";
+      readonly name: string;
+      readonly body: readonly Node[];
+      readonly span: Span;
+    }
+  | {
+      readonly _tag: "Layout";
+      readonly template?: Expression;
+      readonly args: Readonly<Record<string, Expression>>;
+      readonly body: readonly Node[];
+      readonly span: Span;
+    }
+  | {
       readonly _tag: "Partial";
       readonly mode: "render" | "include";
       readonly with?: PartialBinding;

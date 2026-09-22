@@ -5,6 +5,8 @@ import { registry } from "../dist/Builtins.js";
 const reference = new Liquid();
 const tags = new Set([
   "assign",
+  "layout",
+  "block",
   "liquid",
   "tablerow",
   "#",
@@ -69,6 +71,8 @@ const inventory = (names, implemented) =>
                 "test/date-filters.test.ts",
                 "test/collection-gaps.test.ts",
                 "test/render-options.test.ts",
+                "test/interpolated-partials.test.ts",
+                "test/layout.test.ts",
               ],
             }
           : {}),
@@ -107,8 +111,8 @@ const manifest = {
     expressions:
       "Literals, ranges, comparisons, contains, not, right-associated and/or, filter pipelines; opt-in parenthesized conditions and pipelines",
     partials:
-      "Literal or variable template names and comma-separated named arguments. with/for/as and interpolated filenames deferred.",
-    loops: "limit, numeric offset, reversed, else; offset:continue deferred",
+      "Literal or variable template names, interpolated quoted filenames, with/for/as bindings, and comma-separated named arguments.",
+    loops: "limit, numeric offset, reversed, else, and offset:continue",
   },
   hostValues: {
     plainRecords: "supported with own data properties only",

@@ -85,12 +85,11 @@ it("does not certify unmodeled loop-carried assignments", async () => {
   expect(result.coverage).toBe("partial");
   expect(result.passed).toBe(false);
 });
-it("rejects unsupported and duplicate argument constructs explicitly", async () => {
+it("rejects duplicate argument constructs explicitly", async () => {
   for (const source of [
     "{% for p in ps offset:continue offset:1 %}{% endfor %}",
     '{% render "p", x: a, x: b %}',
     "{{ x | default: y, allow_false: a, allow_false: b }}",
-    '{% render "prefix/{{name}}" %}',
   ]) {
     const result = await Effect.runPromise(Effect.either(Liquid.parse(source)));
     expect(Either.isLeft(result)).toBe(true);

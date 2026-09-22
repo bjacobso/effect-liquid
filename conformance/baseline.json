@@ -20861,19 +20861,6 @@
       },
       "reason": "Unsupported engine option"
     },
-    "liquidjs:test/integration/static_analysis/variables.spec.ts:1006:21": {
-      "fixtureHash": "8d3ddab4b2a7935aabbdfa2129bb49a8f03d032a4272ac38c1a0671d989add0f",
-      "liquidjs": {
-        "kind": "parsed"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'layout'"
-      },
-      "reason": "Tag not implemented"
-    },
     "liquidjs:test/integration/static_analysis/variables.spec.ts:105:21": {
       "fixtureHash": "3194082d0ca9a1102f68e3fc32f7639ebaa78626e8ef738209ef9f4643b252e9",
       "liquidjs": {
@@ -20938,84 +20925,6 @@
         ]
       },
       "reason": "Unsupported engine option"
-    },
-    "liquidjs:test/integration/static_analysis/variables.spec.ts:908:21": {
-      "fixtureHash": "b7c53a5a1ce3d4b2cf96c06f67a77aa94301be9f0380c9fc7b06a525a1e5ad55",
-      "liquidjs": {
-        "kind": "parsed"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'layout'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/static_analysis/variables.spec.ts:924:21": {
-      "fixtureHash": "b55f27e9f9e8ac179407d0f6fcad3cff50a7e0313c96c6fe51f5130c653decf0",
-      "liquidjs": {
-        "kind": "parsed"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'layout'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/static_analysis/variables.spec.ts:941:21": {
-      "fixtureHash": "127d7d1138af266d30d447c85bcc7307b0eb1212268fa4742e26e38667e7f390",
-      "liquidjs": {
-        "kind": "parsed"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'layout'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/static_analysis/variables.spec.ts:955:21": {
-      "fixtureHash": "82d17978300e6abff3eaa321fb8af0c3b229151511a485d5768b807c946b05ad",
-      "liquidjs": {
-        "kind": "parsed"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'layout'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/static_analysis/variables.spec.ts:976:21": {
-      "fixtureHash": "8b114e3cc95410b0e6deb51093dd637d47a2206044490c493e72998b5b0043ac",
-      "liquidjs": {
-        "kind": "parsed"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'layout'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/static_analysis/variables.spec.ts:992:21": {
-      "fixtureHash": "d0e3e8ddecfab460a853a77b6aab5e56117e1be454f02a0ea782aa5c37e201e6",
-      "liquidjs": {
-        "kind": "parsed"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'layout'"
-      },
-      "reason": "Tag not implemented"
     },
     "liquidjs:test/integration/tags/assign.spec.ts:56:23": {
       "fixtureHash": "34b2a47f782f521a6d50cfb28cad2cac19911ce450a43226e4bfae65f51d0c9f",
@@ -21238,21 +21147,6 @@
         "message": "Every inline comment line must start with #"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/tags/layout.spec.ts:43:23": {
-      "fixtureHash": "02f4c001477b7e1435d31dc8206612d1ea9f6d427fad7318159c64eff4f07017",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "86792b7845941ce8970c2b28fd9118239b1783ba6d401e809ba2c7c1da397dfa"
-      },
-      "effectLiquid": {
-        "kind": "unsupported-configuration",
-        "options": [
-          "root",
-          "extname"
-        ]
-      },
-      "reason": "Unsupported engine option"
     },
     "liquidjs:test/integration/tags/unless.spec.ts:51:23": {
       "fixtureHash": "f57483f30cff3316e1471ba6e8a100f8835e946798a910fd2333b6d1518f36f8",

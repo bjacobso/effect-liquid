@@ -33,7 +33,7 @@ console.log(await Effect.runPromise(program))
 
 Parsing, local analysis, and local checking need no services. Rendering requires `RenderConfig` and `TemplateLoader`; `Liquid.layer` provides defaults and an empty in-memory loader. Run Effects at the application boundary. Core modules do not create runtimes.
 
-Implemented tags: `assign`, `capture`, `if`/`elsif`/`else`, `unless`, `case`/`when`, `for`, `break`, `continue`, `raw`, `comment`, `echo`, and basic `render`/`include`. Filters cover the initial numeric and string operations plus `split`, `join`, `map`, `first`, `last`, and `reverse`. See the inventory for exact coverage.
+Implemented tags: `layout`/`block`, `assign`, `capture`, `if`/`elsif`/`else`, `unless`, `case`/`when`, `for`, `break`, `continue`, `raw`, `comment`, `echo`, and basic `render`/`include`. Filters cover the initial numeric and string operations plus `split`, `join`, `map`, `first`, `last`, and `reverse`. See the inventory for exact coverage.
 
 Pass `{ groupedExpressions: true }` to `Liquid.parse` to enable parenthesized conditions and filter pipelines, such as `{% if (name | upcase) == "BAR" %}` and `{% for i in (1..(items | size)) %}`. Grouping is disabled by default; ordinary ranges remain supported. The document records the enabled syntax so rendering, loaded partials, embedded filter predicates, project analysis, and typechecking use the same rules. Ungrouped `and`/`or` conditions retain Liquid's right-associative evaluation.
 
@@ -109,7 +109,7 @@ Counter seed dependencies, loop-carried assignments, control transfers, and shar
 
 `render` accepts `with value as name` and `for collection as item`, including named arguments and `forloop` metadata. A render loop reuses its isolated child state across items. `include` supports `with value`, binding it under the template name while sharing caller state. Project analysis maps these bindings to caller paths (including `items[*].title`); project checking passes item types to the callee. Shared include flow summaries remain partial.
 
-Prefer an explicit `as` name for `render … for`. The pinned LiquidJS release binds omitted aliases under the literal key `undefined`; this engine preserves that behavior. `include … for` and interpolated filenames remain unsupported.
+Prefer an explicit `as` name for `render … for`. The pinned LiquidJS release binds omitted aliases under the literal key `undefined`; this engine preserves that behavior. `include … for` remains unsupported. Quoted interpolated filenames are rendered in the caller scope. Layouts support named and anonymous blocks, nested layouts, and `block.super`; static analysis reports partial coverage for inheritance.
 
 `for … offset:continue` resumes a cursor keyed by loop variable and collection source syntax. Includes share cursors; isolated renders get fresh cursors. The cursor advances by the selected slice length even when the body breaks early, matching LiquidJS. Empty-collection `else` tests the input before offset/limit slicing.
 
@@ -135,7 +135,7 @@ const program = Effect.gen(function* () {
 }).pipe(Effect.provide(services))
 ```
 
-`render` isolates partial locals; `include` shares the caller's assignment frame. Named arguments are supported. `with`/`for`/`as`, interpolated filenames, and `offset:continue` are not implemented and are rejected.
+`render` isolates partial locals; `include` shares the caller's assignment frame. Named arguments are supported. `with`/`for`/`as`, interpolated filenames, and `offset:continue` are supported as described above.
 
 Project analysis loads literal dependencies, maps render parameters to caller inputs, reports missing isolated arguments, and bounds cycles and document counts. Shared include summaries and dynamic targets report partial coverage. There is no implicit network loader or persistent cache.
 
