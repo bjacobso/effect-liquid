@@ -9,6 +9,8 @@ Run `pnpm conformance` to compare every executable fixture against the pinned Li
 
 The baseline records existing compatibility debt, including cases where both JavaScript engines disagree with a Ruby expectation. A passing regression gate does **not** mean full Liquid compatibility. Output is compared exactly by a hash of the complete UTF-16 string, including whitespace. Errors are compared by phase and normalized category, not identical messages; original messages remain in the report. Upstream error expectations assert failure and phase where specified, not Ruby exception-class equivalence.
 
+For malformed syntax, prefer rejecting a template that the upstream Liquid specification expects to fail over matching LiquidJS's more permissive parser. For example, liquid-spec expects `{% if x == %}{% endif %}` to fail during parsing; effect-liquid rejects it, while LiquidJS 10.29.0 parses it. The report calls this a LiquidJS `mismatch` and the regression gate tracks it as a `known-gap`, but relaxing our parser would violate the fixture's expected result. The parser and harness tests lock in this distinction. `conformance:strict` cannot pass every imported fixture while the upstream expectations and LiquidJS disagree; resolve such conflicts by an explicit compatibility policy, not by treating every mismatch as a bug in effect-liquid.
+
 Both engines run in separate processes with in-memory template files, UTC, a per-case timeout, and a memory limit. A crash or timeout is an infrastructure failure and cannot be accepted into the baseline. Unsupported effect-liquid options are explicit results. The harness runs JavaScript engines only; Ruby supplies expected fixtures, not a third live execution engine.
 
 ## Sources and refresh

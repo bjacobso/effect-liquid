@@ -61,3 +61,16 @@ it.each(["else", "elsif true"])("ignores later unless %s sections", async (extra
   const source = `{% unless true %}no{% else %}yes{% ${extra} %}no{% endunless %}`;
   expect(await run(source, {})).toBe(await new Reference().parseAndRender(source));
 });
+
+// These Shopify liquid-spec parser_errors fixtures require rejection. LiquidJS 10.29.0
+// accepts them, but matching that permissiveness would make invalid templates pass validation.
+it.each([
+  ["assign", "{% assign 42 = x %}"],
+  ["if", "{% if x == %}{% endif %}"],
+  ["cycle", "{% cycle x , , > %}"],
+] as const)("rejects malformed %s syntax that LiquidJS parses", async (_tag, source) => {
+  expect(() => new Reference().parse(source)).not.toThrow();
+  const result = await Effect.runPromise(Effect.either(Liquid.parse(source)));
+  expect(Either.isLeft(result)).toBe(true);
+  if (Either.isLeft(result)) expect(result.left._tag).toBe("ParseError");
+});

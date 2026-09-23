@@ -19,6 +19,27 @@ describe("conformance harness", () => {
     expect(regression(fixture, output("different"), wrong, baseline)).toBe("changed-gap");
     expect(regression(fixture, output("right"), output("right"), baseline)).toBe("improved");
   });
+  it("keeps an expected parse rejection when LiquidJS accepts malformed syntax", () => {
+    const fixture = {
+      id: "parser-errors/if",
+      source: "{% if x == %}{% endif %}",
+      operation: "parse",
+      expected: { kind: "error", phase: "parse" },
+    };
+    const accepted = { kind: "parsed" };
+    const rejected = {
+      kind: "error",
+      phase: "parse",
+      category: "syntax",
+      message: "Expected expression",
+    };
+    const baseline = { [fixture.id]: baselineEntry(fixture, accepted, rejected) };
+    expect(compare(accepted, rejected)).toBe("mismatch");
+    expect(expectation(accepted, fixture.expected)).toBe("different");
+    expect(expectation(rejected, fixture.expected)).toBe("match");
+    expect(regression(fixture, accepted, rejected, baseline)).toBe("known-gap");
+    expect(regression(fixture, accepted, accepted, baseline)).toBe("changed-gap");
+  });
   it("does not pin time-dependent oracle output for an unsupported configuration", () => {
     const fixture = { id: "unsupported", source: "{{ d | date: f }}", context: { d: "now" } };
     const unsupported = { kind: "unsupported-configuration", options: ["memoryLimit"] };
