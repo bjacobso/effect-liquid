@@ -108,7 +108,7 @@ class Templates {
           .join(",");
         nodes.push({ _tag: "Cycle", ...(group ? { group } : {}), values, key, span: t.span });
       } else if (tag === "assign") {
-        const name = e.name();
+        const name = e.bindingName();
         e.need("=");
         const expression = e.pipeline();
         e.done();

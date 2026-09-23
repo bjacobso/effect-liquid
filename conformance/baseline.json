@@ -19679,62 +19679,6 @@
       },
       "reason": "Unsupported engine option"
     },
-    "liquidjs:test/integration/tags/assign.spec.ts:56:23": {
-      "fixtureHash": "34b2a47f782f521a6d50cfb28cad2cac19911ce450a43226e4bfae65f51d0c9f",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "166f829e016f2315a8099e3a8d2dbec6d91572379ff02c760ba4e0335789d47f"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/tags/assign.spec.ts:61:23": {
-      "fixtureHash": "9b1eb9b2a99a552714138c83f73883c5e733149ee4018dbcb9ff4ac9da4355dd",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "166f829e016f2315a8099e3a8d2dbec6d91572379ff02c760ba4e0335789d47f"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/tags/assign.spec.ts:66:23": {
-      "fixtureHash": "cca3a9c247b3bcff3093a6e12ac2981d80a22320ea3dd37643befd0477fcd763",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "166f829e016f2315a8099e3a8d2dbec6d91572379ff02c760ba4e0335789d47f"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/tags/assign.spec.ts:71:23": {
-      "fixtureHash": "f4cf7d488905d72651546c97690bceff3f7202ab93442f22bd203e1e633f2b6a",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "9fbb3bec98a5e66045215a7a42f5e1c06b90ef88214ca68a622050123a0cb2cb"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected identifier"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquidjs:test/integration/tags/for.spec.ts:336:25": {
       "fixtureHash": "5a80122d9f7eaba5132f0b5ddcbdd30d534d3839954cf88aad605757a83c16d4",
       "liquidjs": {

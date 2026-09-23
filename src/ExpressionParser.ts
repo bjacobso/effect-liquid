@@ -11,6 +11,7 @@ interface Word {
 }
 const identifier = /^[\p{L}_][\p{L}\p{M}\p{N}_-]*$/u;
 const property = /^[\p{L}\p{M}\p{N}_-]+\??$/u;
+const variable = /^(?=.*[\p{L}\p{N}_])[\p{L}\p{M}\p{N}_-]+$/u;
 export class Expressions {
   readonly words: Word[] = [];
   pos = 0;
@@ -53,7 +54,7 @@ export class Expressions {
         continue;
       }
       const number = /^-?\d+(?:\.(?!\.)\d+)?/.exec(s.slice(i));
-      if (number) i += number[0].length;
+      if (number && !s[i + number[0].length]?.match(/[\p{L}\p{M}\p{N}_-]/u)) i += number[0].length;
       else while (i < s.length && !/[\s[\]().,:|=<>]/.test(s[i]!)) i++;
       if (i === start) this.fail("Unexpected character", i);
       this.words.push({ text: s.slice(start, i), start, end: i });
@@ -85,6 +86,16 @@ export class Expressions {
   name() {
     const w = this.words[this.pos++];
     if (!w || w.quoted || !identifier.test(w.text)) this.fail("Expected identifier", w?.start);
+    return w.text;
+  }
+  bindingName() {
+    const w = this.words[this.pos++];
+    if (
+      !w ||
+      w.quoted ||
+      (!identifier.test(w.text) && !(w.text.includes("-") && variable.test(w.text)))
+    )
+      this.fail("Expected identifier", w?.start);
     return w.text;
   }
   done() {
@@ -147,7 +158,7 @@ export class Expressions {
       segments.push(...this.suffix());
       result = { _tag: "SelfLookup", segments, span: this.position(w.start) };
     } else {
-      if (!identifier.test(w.text)) this.fail("Expected variable or literal", w.start);
+      if (!variable.test(w.text)) this.fail("Expected variable or literal", w.start);
       const segments = this.suffix();
       result = { _tag: "Lookup", root: w.text, segments, span: this.position(w.start) };
     }

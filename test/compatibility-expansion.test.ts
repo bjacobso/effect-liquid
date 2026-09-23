@@ -102,6 +102,13 @@ describe("tag argument compatibility", () => {
       ),
     ).toBe(true);
   });
+  it.each(["-let", "-5-5", "4-3", "-6"])("accepts the assignment name %s", async (name) => {
+    const source = `{% assign ${name} = 5 %}{{ ${name} }}`;
+    expect(await run(source)).toBe(await new Reference().parseAndRender(source));
+  });
+  it.each(["{{ - }}", "{% assign 42 = 5 %}"])("rejects malformed expression %s", async (source) => {
+    expect(await Effect.runPromise(Effect.isFailure(Liquid.parse(source)))).toBe(true);
+  });
 });
 
 describe("range compatibility", () => {
