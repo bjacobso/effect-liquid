@@ -78,6 +78,8 @@ Numeric filters follow LiquidJS whole-value coercion: `true` becomes one, and in
 
 `base64_encode` and `base64_decode` handle UTF-8 text in Node and browser bundles without requiring `Buffer`. Decoding follows the pinned Node LiquidJS oracle: it accepts unpadded and URL-safe input, ignores invalid characters, stops at padding, preserves a leading BOM, and replaces malformed UTF-8. Encoding replaces lone UTF-16 surrogates. These are permissive text filters, not strict Base64 validators or binary-data APIs.
 
+`sha256` and `hmac_sha256` hash the Liquid string representation of their inputs using Web Crypto in Node and browser bundles. HMAC accepts an empty key, matching LiquidJS.
+
 Expression filters include `where_exp`, `reject_exp`, `find_exp`, `find_index_exp`, `has_exp`, and `group_by_exp`. Predicates run as Liquid expressions with a local item alias, caller variables, and registered filters. They share iteration, work, and nesting budgets with the render. Native overrides of these names are respected.
 
 ```liquid
