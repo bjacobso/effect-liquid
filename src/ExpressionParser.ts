@@ -9,6 +9,8 @@ interface Word {
   end: number;
   quoted?: boolean;
 }
+const identifier = /^[\p{L}_][\p{L}\p{M}\p{N}_-]*$/u;
+const property = /^[\p{L}\p{M}\p{N}_-]+\??$/u;
 export class Expressions {
   readonly words: Word[] = [];
   pos = 0;
@@ -82,8 +84,7 @@ export class Expressions {
   }
   name() {
     const w = this.words[this.pos++];
-    if (!w || w.quoted || !/^[a-zA-Z_][\w-]*$/.test(w.text))
-      this.fail("Expected identifier", w?.start);
+    if (!w || w.quoted || !identifier.test(w.text)) this.fail("Expected identifier", w?.start);
     return w.text;
   }
   done() {
@@ -101,7 +102,7 @@ export class Expressions {
     while (this.peek(".") || this.peek("[")) {
       if (this.take(".")) {
         const key = this.words[this.pos++];
-        if (!key || key.quoted || !/^[\w-]+\??$/.test(key.text)) this.fail("Expected property");
+        if (!key || key.quoted || !property.test(key.text)) this.fail("Expected property");
         segments.push({ _tag: "Literal", value: key.text, span: this.position(key.start) });
       } else {
         this.need("[");
@@ -146,7 +147,7 @@ export class Expressions {
       segments.push(...this.suffix());
       result = { _tag: "SelfLookup", segments, span: this.position(w.start) };
     } else {
-      if (!/^[a-zA-Z_][\w-]*$/.test(w.text)) this.fail("Expected variable or literal", w.start);
+      if (!identifier.test(w.text)) this.fail("Expected variable or literal", w.start);
       const segments = this.suffix();
       result = { _tag: "Lookup", root: w.text, segments, span: this.position(w.start) };
     }

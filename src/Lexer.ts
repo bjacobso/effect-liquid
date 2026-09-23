@@ -153,8 +153,12 @@ export const lex = (
       if (kind === "tag" && (tag === "raw" || tag === "comment")) {
         const bodyStart = i;
         const escapeRegex = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const openPattern = escapeRegex(tagLeft);
+        const closePattern = escapeRegex(tagRight);
         const endPattern = new RegExp(
-          `${escapeRegex(tagLeft)}(-)?\\s*end${tag}\\s*(-)?${escapeRegex(tagRight)}`,
+          tag === "comment"
+            ? `${openPattern}(-)?\\s*endcomment\\b(?:(?!${openPattern}|-?${closePattern})[\\s\\S])*?(-)?${closePattern}`
+            : `${openPattern}(-)?\\s*endraw\\s*(-)?${closePattern}`,
           "g",
         );
         endPattern.lastIndex = i;

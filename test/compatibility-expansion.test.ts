@@ -136,6 +136,22 @@ describe("property compatibility", () => {
     const context = { d: { "respond_to?": "owned" }, a: { "empty?": true } };
     expect(await run(source, context)).toBe(await new Reference().parseAndRender(source, context));
   });
+  it("accepts Unicode variable and property names", async () => {
+    const source = "{{ ÜLKE }}|{{ user.état }}|{% assign café = 2 %}{{ café }}";
+    const context = { ÜLKE: "Türkiye", user: { état: "oui" } };
+    expect(await run(source, context)).toBe(await new Reference().parseAndRender(source, context));
+  });
+});
+
+describe("comment compatibility", () => {
+  it.each([
+    "{% comment %}123{% endcomment xyz %}after",
+    "{% comment %}123{% endcomment\txyz %}after",
+    "{% comment %}123{% endcomment\nxyz %}after",
+    "{% comment %}123{% endcomment\n   xyz  endcomment %}after",
+  ])("accepts closing comment tags with trailing text in %s", async (source) => {
+    expect(await run(source)).toBe(await new Reference().parseAndRender(source));
+  });
 });
 
 describe("array filters", () => {
