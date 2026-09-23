@@ -96,8 +96,9 @@ function enumerable(value: Value | undefined): readonly Value[] {
     return Object.entries(value).map(([key, item]) => [key, item]);
   return [];
 }
-function loopInfo(index: number, length: number): Record<string, Value> {
+function loopInfo(index: number, length: number, name?: string): Record<string, Value> {
   return {
+    ...(name === undefined ? {} : { name }),
     index: index + 1,
     index0: index,
     rindex: length - index,
@@ -250,9 +251,9 @@ function evaluate<E, R>(
           named[key] = (yield* evaluate(arg, state, registry)) ?? null;
         const filter = registry.filters.get(expression.name);
         if (
-          expression.name === "json" &&
+          ["json", "jsonify", "inspect"].includes(expression.name) &&
           rawInput === undefined &&
-          filter === builtins.filters.get("json")
+          filter === builtins.filters.get(expression.name)
         )
           return undefined;
         if (!filter) {
@@ -544,7 +545,7 @@ function nodes<E, R>(
                           state.scopes.push({
                             [node.name]: value,
                             [node._tag === "TableRow" ? "tablerowloop" : "forloop"]: {
-                              ...loopInfo(index, values.length),
+                              ...loopInfo(index, values.length, node.loopName),
                               ...(node._tag === "TableRow"
                                 ? {
                                     row: Math.floor(index / cols) + 1,

@@ -66,6 +66,7 @@ const inventory = (names, implemented) =>
                 "test/base64-filters.test.ts",
                 "test/crypto-filters.test.ts",
                 "test/case-compat.test.ts",
+                "test/misc-conformance.test.ts",
                 "test/grouped-expressions.test.ts",
                 "test/property-lookup.test.ts",
                 "test/sentence-filters.test.ts",

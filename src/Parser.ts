@@ -196,6 +196,7 @@ class Templates {
           nodes.push({
             _tag: "TableRow",
             name,
+            loopName: `${name}-${t.text.slice(collection.span.start - t.offset, collection.span.end - t.offset)}`,
             collection,
             ...(limit ? { limit } : {}),
             ...(offset ? { offset } : {}),
@@ -217,12 +218,14 @@ class Templates {
           b.done();
           otherwise = yield* this.body(["endfor"], depth + 1, true);
         }
+        const collectionText = t.text.slice(
+          collection.span.start - t.offset,
+          collection.span.end - t.offset,
+        );
         nodes.push({
           _tag: "For",
-          key: JSON.stringify([
-            name,
-            t.text.slice(collection.span.start - t.offset, collection.span.end - t.offset),
-          ]),
+          key: JSON.stringify([name, collectionText]),
+          loopName: `${name}-${collectionText}`,
           ...(offsetContinue ? { offsetContinue } : {}),
           name,
           collection,

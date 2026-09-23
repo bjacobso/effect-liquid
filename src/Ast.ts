@@ -94,6 +94,7 @@ export type Node =
   | {
       readonly _tag: "For";
       readonly key: string;
+      readonly loopName: string;
       readonly offsetContinue?: boolean;
       readonly name: string;
       readonly collection: Expression;
@@ -107,6 +108,7 @@ export type Node =
   | {
       readonly _tag: "TableRow";
       readonly name: string;
+      readonly loopName: string;
       readonly collection: Expression;
       readonly limit?: Expression;
       readonly offset?: Expression;
