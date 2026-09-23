@@ -72,7 +72,7 @@ String filters include first/last replacement and removal, custom strip characte
 
 `array_to_sentence_string` joins arrays with commas and a final conjunction (default `and`), including an Oxford comma for three or more items. Singleton arrays preserve their element type. This implementation rejects non-array inputs with a typed built-in filter failure, including short strings that the pinned oracle happens to accept. `append` and `prepend` likewise fail when their argument is omitted; explicit nil remains an empty string.
 
-Date filters support UTC date parsing and formatting, including `date_to_xmlschema`, `date_to_rfc822`, `date_to_string`, and `date_to_long_string`. Timezone, locale, and date-option parity remain open.
+Date filters support UTC date parsing and formatting, including `date_to_xmlschema`, `date_to_rfc822`, `date_to_string`, and `date_to_long_string`. The `date` filter accepts a numeric minute offset or an IANA timezone as its second argument; `%s` keeps the original instant. Locale and date-option parity remain open.
 
 URL filters include `url_encode`, `url_decode`, `cgi_escape`, `uri_escape`, and `slugify` modes (`default`, `raw`, `pretty`, `ascii`, `latin`, `none`). They follow the pinned LiquidJS behavior: URL decoding replaces plus signs after percent-decoding, and Latin slugification uses its specific transliteration set. Malformed percent encodings and invalid UTF-16 become located `FilterFailure<BuiltinFilterError>` values in the Effect error channel, also during streaming.
 

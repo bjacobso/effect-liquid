@@ -1,4 +1,4 @@
-import { Effect } from "effect";
+import { Effect, Either } from "effect";
 import { Liquid as Reference } from "liquidjs";
 import { describe, expect, it } from "vitest";
 import * as Liquid from "../src/Liquid.js";
@@ -30,5 +30,29 @@ describe("date filters", () => {
       Liquid.check(document, Type.record({ timestamp: Type.string })),
     );
     expect(result.diagnostics.map((diagnostic) => diagnostic.code)).toContain("UnknownCoverage");
+  });
+  it.each([
+    '{{ "1990-12-31T23:00:00Z" | date: "%Y-%m-%dT%H:%M:%S %z %s", 360 }}',
+    '{{ "1990-12-31T23:00:00Z" | date: "%Y-%m-%dT%H:%M:%S %Z", "Asia/Colombo" }}',
+    '{{ "2021-01-01T23:00:00Z" | date: "%Y-%m-%dT%H:%M:%S %z", "America/New_York" }}',
+    '{{ "2021-06-01T23:00:00Z" | date: "%Y-%m-%dT%H:%M:%S %z", "America/New_York" }}',
+    '{{ "2022-12-08T03:22:18.000Z" | date: nil, "America/Cayman" }}',
+  ])("formats the requested timezone for %s", async (source) => {
+    expect(await run(source)).toBe(
+      await new Reference({ timezoneOffset: 0 }).parseAndRender(source),
+    );
+  });
+  it("reports an invalid timezone as a located filter error", async () => {
+    const result = await Effect.runPromise(
+      Effect.either(
+        Effect.flatMap(
+          Liquid.parse('{{ "2021-01-01" | date: "%Y", "Invalid/Timezone" }}'),
+          (document) => Liquid.render(document, {}),
+        ).pipe(Effect.provide(Liquid.layer)),
+      ),
+    );
+    expect(Either.isLeft(result)).toBe(true);
+    if (Either.isLeft(result))
+      expect(result.left).toMatchObject({ _tag: "FilterFailure", name: "date" });
   });
 });

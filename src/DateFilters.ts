@@ -1,4 +1,5 @@
 import { Effect } from "effect";
+import { BuiltinFilterError } from "./Diagnostic.js";
 import type { Filter } from "./Filter.js";
 import { stringify, type Value } from "./Value.js";
 
@@ -32,7 +33,39 @@ function parse(value: Value): Date | undefined {
   return Number.isNaN(date.getTime()) ? undefined : date;
 }
 
-function format(date: Date, pattern: string): string {
+function timezoneOffset(date: Date, timezone: Value | undefined): number {
+  if (typeof timezone === "number") return timezone;
+  if (typeof timezone !== "string") return 0;
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: timezone,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hourCycle: "h23",
+  }).formatToParts(date);
+  const get = (type: string) => Number(parts.find((part) => part.type === type)?.value);
+  const local = Date.UTC(
+    get("year"),
+    get("month") - 1,
+    get("day"),
+    get("hour"),
+    get("minute"),
+    get("second"),
+    date.getUTCMilliseconds(),
+  );
+  return Math.round((date.getTime() - local) / 60_000);
+}
+
+function format(
+  date: Date,
+  pattern: string,
+  offset = 0,
+  timezoneName = "UTC",
+  instant = date,
+): string {
   const year = date.getUTCFullYear();
   const month = date.getUTCMonth();
   const day = date.getUTCDate();
@@ -75,7 +108,7 @@ function format(date: Date, pattern: string): string {
     p: hour < 12 ? "AM" : "PM",
     P: hour < 12 ? "am" : "pm",
     q: suffix,
-    s: String(Math.floor(date.getTime() / 1000)),
+    s: String(Math.floor(instant.getTime() / 1000)),
     S: String(date.getUTCSeconds()),
     u: String(weekday || 7),
     U: String(week(0)),
@@ -83,8 +116,8 @@ function format(date: Date, pattern: string): string {
     W: String(week(1)),
     y: String(year).slice(-2),
     Y: String(year),
-    z: "+0000",
-    Z: "UTC",
+    z: `${offset <= 0 ? "+" : "-"}${pad(Math.floor(Math.abs(offset) / 60))}${pad(Math.abs(offset) % 60)}`,
+    Z: timezoneName,
     t: "\t",
     n: "\n",
     "%": "%",
@@ -127,7 +160,7 @@ function format(date: Date, pattern: string): string {
         flags.includes("_") || ("e k l".split(" ").includes(code) && !flags.includes("0"))
           ? " "
           : "0";
-      if (code === "z" && flags.includes(":")) value = "+00:00";
+      if (code === "z" && flags.includes(":")) value = `${value.slice(0, 3)}:${value.slice(3)}`;
       return value.padStart(Math.min(size, 1000), fill);
     },
   );
@@ -136,8 +169,18 @@ function format(date: Date, pattern: string): string {
 function run(name: string, value: Value, args: readonly Value[]): Value {
   const date = parse(value);
   if (!date) return value;
-  if (name === "date")
-    return format(date, args[0] == null ? "%A, %B %-e, %Y at %-l:%M %P %z" : stringify(args[0]));
+  if (name === "date") {
+    const timezone = args[1];
+    const offset = timezoneOffset(date, timezone);
+    const display = new Date(date.getTime() - offset * 60_000);
+    return format(
+      display,
+      args[0] == null ? "%A, %B %-e, %Y at %-l:%M %P %z" : stringify(args[0]),
+      offset,
+      typeof timezone === "string" ? timezone : timezone === undefined ? "UTC" : "",
+      date,
+    );
+  }
   if (name === "date_to_xmlschema") return format(date, "%Y-%m-%dT%H:%M:%S%:z");
   if (name === "date_to_rfc822") return format(date, "%a, %d %b %Y %H:%M:%S %z");
   const monthCode = name === "date_to_string" ? "%b" : "%B";
@@ -148,7 +191,7 @@ function run(name: string, value: Value, args: readonly Value[]): Value {
       : format(date, `${day}%q ${monthCode} %Y`);
   return format(date, `%d ${monthCode} %Y`);
 }
-export const filters: readonly [string, Filter][] = [
+export const filters: readonly [string, Filter<BuiltinFilterError>][] = [
   "date",
   "date_to_xmlschema",
   "date_to_rfc822",
@@ -163,6 +206,10 @@ export const filters: readonly [string, Filter][] = [
       minArgs: 0,
       maxArgs: name === "date" ? 2 : name.endsWith("string") ? 2 : 0,
     },
-    run: (value, args) => Effect.sync(() => run(name, value, args)),
+    run: (value, args) =>
+      Effect.try({
+        try: () => run(name, value, args),
+        catch: (cause) => new BuiltinFilterError({ message: String(cause) }),
+      }),
   },
 ]);
