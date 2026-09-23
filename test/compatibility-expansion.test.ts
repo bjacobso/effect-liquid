@@ -46,6 +46,11 @@ describe("counter and cycle compatibility", () => {
     ).pipe(Effect.provide(Layer.merge(Render.layer({ strictVariables: true }), Loader.memory({}))));
     expect(await Effect.runPromise(strict)).toBe("a");
   });
+  it("accepts a trailing comma in cycle values", async () => {
+    const source =
+      '{%- cycle "1", "2", -%}{%- cycle "1", "2", -%}{%- cycle "1", "2", -%}{%- cycle "1", -%}';
+    expect(await run(source)).toBe(await new Reference().parseAndRender(source));
+  });
   it.each(["{% cycle %}", '{% cycle "group": %}', "{% increment %}", '{% decrement "n" %}'])(
     "rejects malformed state tag %s",
     async (source) => {
@@ -71,6 +76,31 @@ describe("counter and cycle compatibility", () => {
       ),
     );
     expect(checked.diagnostics).toEqual([]);
+  });
+});
+
+describe("tag argument compatibility", () => {
+  it("accepts an empty echo tag", async () => {
+    const source = "before{% echo %}after";
+    expect(await run(source)).toBe(await new Reference().parseAndRender(source));
+  });
+  it("accepts quoted capture names", async () => {
+    const source =
+      "{% capture \"form_classes\" %}wide{% endcapture %}{{ form_classes }}{% capture 'other' %}x{% endcapture %}{{ other }}";
+    expect(await run(source)).toBe(await new Reference().parseAndRender(source));
+  });
+  it("accepts comma-separated for options", async () => {
+    const source = "{% for i in items, limit: 2, offset: 1 %}{{ i }}{% endfor %}";
+    const context = { items: [1, 2, 3, 4] };
+    expect(await run(source, context)).toBe(await new Reference().parseAndRender(source, context));
+    expect(
+      await Effect.runPromise(Effect.isFailure(Liquid.parse("{% for i in items, %}{% endfor %}"))),
+    ).toBe(true);
+    expect(
+      await Effect.runPromise(
+        Effect.isFailure(Liquid.parse("{% for i in items,, limit: 2 %}{% endfor %}")),
+      ),
+    ).toBe(true);
   });
 });
 

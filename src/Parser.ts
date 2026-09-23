@@ -101,7 +101,7 @@ class Templates {
         const first = e.atom();
         const group = e.take(":") ? first : undefined;
         const values = group ? [e.atom()] : [first];
-        while (e.take(",")) values.push(e.atom());
+        while (e.take(",") && e.pos < e.words.length) values.push(e.atom());
         e.done();
         const key = values
           .map((value) => t.text.slice(value.span.start - t.offset, value.span.end - t.offset))
@@ -114,11 +114,13 @@ class Templates {
         e.done();
         nodes.push({ _tag: "Assign", name, expression, span: t.span });
       } else if (tag === "echo") {
-        const expression = e.pipeline();
-        e.done();
-        nodes.push({ _tag: "Output", expression, span: t.span });
+        if (e.pos < e.words.length) {
+          const expression = e.pipeline();
+          e.done();
+          nodes.push({ _tag: "Output", expression, span: t.span });
+        }
       } else if (tag === "capture") {
-        const name = e.name();
+        const name = e.words[e.pos]?.quoted ? e.words[e.pos++]!.text : e.name();
         e.done();
         const body = yield* this.body(["endcapture"], depth + 1, loop);
         nodes.push({ _tag: "Capture", name, body, span: end("endcapture") });
@@ -178,6 +180,10 @@ class Templates {
         let offsetContinue = false;
         let cols: Expression | undefined;
         while (e.pos < e.words.length) {
+          if (e.take(",")) {
+            if (e.pos === e.words.length || e.peek(",")) e.fail("Unsupported loop option");
+            continue;
+          }
           if (tag === "tablerow" && e.take("cols")) {
             if (cols) e.fail("Duplicate cols");
             e.need(":");
