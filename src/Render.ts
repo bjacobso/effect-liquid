@@ -181,7 +181,8 @@ function evaluate<E, R>(
       case "Range": {
         const from = Number(yield* evaluate(expression.from, state, registry));
         const to = Number(yield* evaluate(expression.to, state, registry));
-        const length = Math.max(0, Math.floor(to) - Math.floor(from) + 1);
+        if (Number.isNaN(from) || Number.isNaN(to)) return [];
+        const length = Math.max(0, Math.ceil(to + 1 - from));
         if (!Number.isFinite(length) || length > state.config.maxIterations)
           return yield* Effect.fail(
             new RenderError({
@@ -190,7 +191,7 @@ function evaluate<E, R>(
               span: expression.span,
             }),
           );
-        return Array.from({ length }, (_, i) => Math.floor(from) + i);
+        return Array.from({ length }, (_, i) => from + i);
       }
       case "Binary": {
         const left = yield* evaluate(expression.left, state, registry);

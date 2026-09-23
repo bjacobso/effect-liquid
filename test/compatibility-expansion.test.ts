@@ -104,6 +104,40 @@ describe("tag argument compatibility", () => {
   });
 });
 
+describe("range compatibility", () => {
+  it("treats missing or nonnumeric endpoints as empty ranges", async () => {
+    const source = "{% for item in (a..3) %}{{ item }}{% else %}empty{% endfor %}";
+    for (const context of [{}, { a: "not a number" }])
+      expect(await run(source, context)).toBe(
+        await new Reference().parseAndRender(source, context),
+      );
+  });
+  it("preserves fractional range endpoints", async () => {
+    const source = "{% for item in (a..b) %}{{ item }},{% endfor %}";
+    const context = { a: 1.5, b: 3 };
+    expect(await run(source, context)).toBe(await new Reference().parseAndRender(source, context));
+  });
+});
+
+describe("filter argument compatibility", () => {
+  it.each([
+    '{{ "test" | append: "x", | upcase: }}',
+    '{{ "test" | append: "x" | upcase: }}',
+    '{{ "hello" | append: "world", }}',
+    '{{ "hello" | append: "1", | append: "2", }}',
+  ])("accepts empty or trailing filter argument slots in %s", async (source) => {
+    expect(await run(source)).toBe(await new Reference().parseAndRender(source));
+  });
+});
+
+describe("property compatibility", () => {
+  it("reads question-mark property names as data keys", async () => {
+    const source = "{{ d.respond_to? }}|{% if a.empty? %}yes{% endif %}";
+    const context = { d: { "respond_to?": "owned" }, a: { "empty?": true } };
+    expect(await run(source, context)).toBe(await new Reference().parseAndRender(source, context));
+  });
+});
+
 describe("array filters", () => {
   it("supports stable natural and numeric sorting without mutating input", async () => {
     const items = [{ name: "b", n: 2 }, { name: "A", n: 10 }, { name: "a", n: 1 }, { n: 0 }];

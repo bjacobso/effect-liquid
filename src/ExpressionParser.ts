@@ -101,7 +101,7 @@ export class Expressions {
     while (this.peek(".") || this.peek("[")) {
       if (this.take(".")) {
         const key = this.words[this.pos++];
-        if (!key || key.quoted || !/^[\w-]+$/.test(key.text)) this.fail("Expected property");
+        if (!key || key.quoted || !/^[\w-]+\??$/.test(key.text)) this.fail("Expected property");
         segments.push({ _tag: "Literal", value: key.text, span: this.position(key.start) });
       } else {
         this.need("[");
@@ -190,7 +190,7 @@ export class Expressions {
       const name = this.name();
       const args: Expression[] = [];
       const named: Record<string, Expression> = Object.create(null);
-      if (this.take(":"))
+      if (this.take(":") && this.pos < this.words.length && !this.peek("|"))
         do {
           if (this.words[this.pos + 1]?.text === ":" && !this.words[this.pos]?.quoted) {
             const key = this.name();
@@ -198,7 +198,7 @@ export class Expressions {
             if (Object.hasOwn(named, key)) this.fail(`Duplicate filter argument: ${key}`);
             named[key] = this.atom();
           } else args.push(this.atom());
-        } while (this.take(","));
+        } while (this.take(",") && this.pos < this.words.length && !this.peek("|"));
       input = {
         _tag: "Filter",
         input,
