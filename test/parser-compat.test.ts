@@ -45,3 +45,19 @@ describe("bare bracket context lookup", () => {
     expect((await Effect.runPromise(Liquid.analyze(dynamicDocument))).coverage).toBe("partial");
   });
 });
+
+it.each([
+  ["if", "else", "Duplicated else"],
+  ["if", "elsif true", "Unexpected elsif after else"],
+] as const)("reports invalid %s branch after else", async (tag, extra, message) => {
+  const result = await Effect.runPromise(
+    Effect.either(Liquid.parse(`{% ${tag} false %}{% else %}{% ${extra} %}{% end${tag} %}`)),
+  );
+  expect(Either.isLeft(result)).toBe(true);
+  if (Either.isLeft(result)) expect(result.left.message).toBe(message);
+});
+
+it.each(["else", "elsif true"])("ignores later unless %s sections", async (extra) => {
+  const source = `{% unless true %}no{% else %}yes{% ${extra} %}no{% endunless %}`;
+  expect(await run(source, {})).toBe(await new Reference().parseAndRender(source));
+});

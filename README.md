@@ -35,6 +35,8 @@ Parsing, local analysis, and local checking need no services. Rendering requires
 
 Implemented tags: `layout`/`block`, `assign`, `capture`, `if`/`elsif`/`else`, `unless`, `case`/`when`, `for`, `break`, `continue`, `raw`, `comment`, `echo`, and basic `render`/`include`. Filters cover the initial numeric and string operations plus `split`, `join`, `map`, `first`, `last`, and `reverse`. See the inventory for exact coverage.
 
+Repeated `else` and `elsif` after `else` are syntax errors for `if`. LiquidJS accepts the same syntax in `unless` and ignores later sections; this parser follows that behavior.
+
 Pass `{ groupedExpressions: true }` to `Liquid.parse` to enable parenthesized conditions and filter pipelines, such as `{% if (name | upcase) == "BAR" %}` and `{% for i in (1..(items | size)) %}`. Grouping is disabled by default; ordinary ranges remain supported. The document records the enabled syntax so rendering, loaded partials, embedded filter predicates, project analysis, and typechecking use the same rules. Ungrouped `and`/`or` conditions retain Liquid's right-associative evaluation.
 
 Parsing also accepts `trimTagLeft`, `trimTagRight`, `trimOutputLeft`, and `trimOutputRight` (all default false), plus `greedy` (default true). With `greedy: false`, left trimming removes spaces, tabs, and carriage returns; right trimming additionally removes at most one following newline. Explicit hyphen markers still request trimming. Documents snapshot these whitespace settings and pass them to loaded partials. Global tag trimming affects the outside of raw blocks while preserving raw body whitespace. Custom tag and output delimiters are available through parse options and propagate to loaded partials.

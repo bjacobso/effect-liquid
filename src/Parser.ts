@@ -152,7 +152,20 @@ class Templates {
           );
           b.need("else");
           b.done();
-          otherwise = yield* this.body([`end${tag}`], depth + 1, loop);
+          otherwise = yield* this.body(["elsif", "else", `end${tag}`], depth + 1, loop);
+          if (tag === "unless") {
+            while (this.tag() === "else" || this.tag() === "elsif") {
+              this.pos++;
+              yield* this.body(["elsif", "else", "endunless"], depth + 1, loop);
+            }
+          } else {
+            const unexpected = this.tag();
+            if (unexpected === "else" || unexpected === "elsif")
+              throw new ParseError({
+                message: unexpected === "else" ? "Duplicated else" : "Unexpected elsif after else",
+                span: this.tokens[this.pos]!.span,
+              });
+          }
         }
         nodes.push({ _tag: "If", branches, otherwise, span: end(`end${tag}`) });
       } else if (tag === "for" || tag === "tablerow") {

@@ -19298,38 +19298,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquidjs:test/e2e/issues.spec.ts:494:17": {
-      "fixtureHash": "26a36288561fe3544d2ff54abefdfc6346627d8e3ada4dc5055fd97df54d60c9",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "duplicated else, line:1, col:28"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'else'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/e2e/issues.spec.ts:498:17": {
-      "fixtureHash": "c59289eb7926f9ba1198fc2c852107e82b5c863ddc74240a3c0acd1582e15816",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "unexpected elsif after else, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'elsif'"
-      },
-      "reason": "Tag not implemented"
-    },
     "liquidjs:test/e2e/issues.spec.ts:552:17": {
       "fixtureHash": "29967f3040b49127f0fcb7bfe19d2e8cf0c6c66b38d1c46d66d0504a96a88dbf",
       "liquidjs": {
@@ -20183,38 +20151,6 @@
       },
       "reason": "Unsupported engine option"
     },
-    "liquidjs:test/integration/tags/if.spec.ts:165:17": {
-      "fixtureHash": "83814023d66c76c1ecc67e0a6b3f1de72ac73ed2f41b8912c52faf700d9d0e2a",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "duplicated else, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'else'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/if.spec.ts:169:17": {
-      "fixtureHash": "546f709706be7b9737479af869a610984db59bc5582fbe1b5e764f88fa616433",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "unexpected elsif after else, line:1, col:1"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'elsif'"
-      },
-      "reason": "Tag not implemented"
-    },
     "liquidjs:test/integration/tags/inline-comment.spec.ts:12:23": {
       "fixtureHash": "b411308b62c380e8793c49017c763c5f7ca2d3ad672f6e9c7fa9fcb83fc7dc04",
       "liquidjs": {
@@ -20228,48 +20164,6 @@
         "message": "Every inline comment line must start with #"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquidjs:test/integration/tags/unless.spec.ts:51:23": {
-      "fixtureHash": "f57483f30cff3316e1471ba6e8a100f8835e946798a910fd2333b6d1518f36f8",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "fe018bc9e291924dc2a96c9618557e0be6809477b2046cd8938150d78e1a56a7"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'else'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/unless.spec.ts:59:23": {
-      "fixtureHash": "3336c09ce42061b17efcc0306ccd012ea4924a178380f8a2e5008222e2ff14aa",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'else'"
-      },
-      "reason": "Tag not implemented"
-    },
-    "liquidjs:test/integration/tags/unless.spec.ts:67:19": {
-      "fixtureHash": "6cd60561150a2026697be6e7d177e191c82500e9d7193055125b3117cc672310",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "1185275aa905ad4b05eb1a40141237b3cbca571d10c5661d1062e397584a7679"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'elsif'"
-      },
-      "reason": "Tag not implemented"
     },
     "local:raw-trim": {
       "fixtureHash": "a9269f6a27c3005b7307db2509dea8934eccf47ca43f8d8b777eacd4802439aa",
