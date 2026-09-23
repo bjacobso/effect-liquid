@@ -39,6 +39,16 @@ it("matches independent tag/output trimming in greedy and line-preserving modes"
 it("preserves CRLF on the left and removes at most one newline on the right when non-greedy", async () => {
   expect(await run("a\r\n \t{{- name -}} \r\n \n b", { greedy: false })).toBe("a\r\nX \n b");
 });
+it("does not trim across raw and comment boundaries", async () => {
+  const oracle = new Reference();
+  for (const source of [
+    "{% raw %}a {% endraw %}{%- assign v = 1 -%}",
+    "A\n{% comment %}{% endcomment %}{%- if nil -%}{% endif %}",
+    "{% raw %}  {% endraw %}{{- nil -}}",
+  ])
+    expect(await run(source, {})).toBe(await oracle.parseAndRender(source));
+  expect(await run("A  {%- assign v = 1 %}", {})).toBe("A");
+});
 it("retains original variable spans and checks the same AST after trimming", async () => {
   const source = " \n {{ name }} \n ";
   const doc = await Effect.runPromise(

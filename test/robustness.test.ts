@@ -85,9 +85,8 @@ it("does not certify unmodeled loop-carried assignments", async () => {
   expect(result.coverage).toBe("partial");
   expect(result.passed).toBe(false);
 });
-it("rejects duplicate argument constructs explicitly", async () => {
+it("rejects duplicate named arguments explicitly", async () => {
   for (const source of [
-    "{% for p in ps offset:continue offset:1 %}{% endfor %}",
     '{% render "p", x: a, x: b %}',
     "{{ x | default: y, allow_false: a, allow_false: b }}",
   ]) {

@@ -119,6 +119,20 @@ describe("range compatibility", () => {
   });
 });
 
+describe("loop option compatibility", () => {
+  it("uses the last repeated offset and limit", async () => {
+    const source =
+      "{% for i in items limit:3 %}{{i}}{% endfor %}|{% for i in items offset:continue limit:3 %}{{i}}{% endfor %}|{% for i in items offset:continue limit:3 offset:1000 %}{{i}}{% endfor %}|{% for i in items offset:2 offset:continue limit:2 limit:1 %}{{i}}{% endfor %}";
+    const context = { items: [1, 2, 3, 4, 5, 6, 7, 8] };
+    expect(await run(source, context)).toBe(await new Reference().parseAndRender(source, context));
+  });
+  it("uses the last repeated tablerow column count", async () => {
+    const source = "{% tablerow i in items cols:1 cols:2 %}{{i}}{% endtablerow %}";
+    const context = { items: [1, 2, 3] };
+    expect(await run(source, context)).toBe(await new Reference().parseAndRender(source, context));
+  });
+});
+
 describe("filter argument compatibility", () => {
   it.each([
     '{{ "test" | append: "x", | upcase: }}',

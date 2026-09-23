@@ -185,18 +185,14 @@ class Templates {
             continue;
           }
           if (tag === "tablerow" && e.take("cols")) {
-            if (cols) e.fail("Duplicate cols");
             e.need(":");
             cols = e.atom();
           } else if (tag === "for" && e.take("reversed")) {
-            if (reversed) e.fail("Duplicate reversed");
             reversed = true;
           } else if (e.take("limit")) {
-            if (limit) e.fail("Duplicate limit");
             e.need(":");
             limit = e.atom();
           } else if (e.take("offset")) {
-            if (offset || offsetContinue) e.fail("Duplicate offset");
             e.need(":");
             offset = e.atom();
             if (
@@ -207,7 +203,7 @@ class Templates {
               if (tag === "tablerow") e.fail("offset:continue is only supported for for loops");
               offsetContinue = true;
               offset = undefined;
-            }
+            } else offsetContinue = false;
           } else e.fail("Unsupported loop option");
         }
         if (tag === "tablerow") {

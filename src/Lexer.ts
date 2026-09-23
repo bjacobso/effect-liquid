@@ -87,18 +87,21 @@ export const lex = (
     const tokens: Token[] = [];
     let i = 0;
     let trimNext = false;
+    let trimBarrier = false;
     let work = 0;
     const addText = (start: number, end: number) => {
       let value = text.slice(start, end);
       if (trimNext) value = trimRight(value);
       trimNext = false;
-      if (value)
+      if (value) {
         tokens.push({
           kind: "text",
           text: value,
           offset: start,
           span: span(source.id, start, end),
         });
+        trimBarrier = false;
+      }
     };
     while (i < text.length) {
       if (++work % 128 === 0) yield* Effect.yieldNow();
@@ -118,7 +121,10 @@ export const lex = (
       const close = kind === "output" ? outputRight : tagRight;
       i += kind === "output" ? outputLeft.length : tagLeft.length;
       const markedLeft = text[i] === "-";
-      if (markedLeft || (kind === "tag" ? options.trimTagLeft : options.trimOutputLeft)) {
+      if (
+        !trimBarrier &&
+        (markedLeft || (kind === "tag" ? options.trimTagLeft : options.trimOutputLeft))
+      ) {
         const last = tokens[tokens.length - 1];
         if (last?.kind === "text")
           tokens[tokens.length - 1] = { ...last, text: trimLeft(last.text) };
@@ -178,6 +184,7 @@ export const lex = (
         }
         trimNext = !!match[2] || !!options.trimTagRight;
         i = match.index + match[0].length;
+        trimBarrier = true;
       } else tokens.push({ kind, text: content, offset, span: span(source.id, open, i) });
     }
     return tokens;
