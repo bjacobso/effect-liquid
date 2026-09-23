@@ -124,6 +124,37 @@ describe("partial bindings", () => {
   });
 });
 
+describe("interrupts outside loops", () => {
+  it.each(["break", "continue"])("stops the current template on %s", async (tag) => {
+    const source = `before{% ${tag} %}after`;
+    expect(await run(source)).toBe("before");
+    expect(await run(source)).toBe(await oracle(source));
+  });
+
+  it.each(["break", "continue"])("isolates %s inside render", async (tag) => {
+    const source = '{% for i in (1..3) %}{{ i }}{% render "p" %}{{ i }}{% endfor %}';
+    const templates = { p: `X{% ${tag} %}Y` };
+    expect(await run(source, {}, templates)).toBe("1X12X23X3");
+    expect(await run(source, {}, templates)).toBe(await oracle(source, {}, templates));
+  });
+
+  it.each([
+    ["break", "1X"],
+    ["continue", "1X2X3X"],
+  ])("propagates %s through include", async (tag, expected) => {
+    const source = '{% for i in (1..3) %}{{ i }}{% include "p" %}{{ i }}{% endfor %}';
+    const templates = { p: `X{% ${tag} %}Y` };
+    expect(await run(source, {}, templates)).toBe(expected);
+    expect(await run(source, {}, templates)).toBe(await oracle(source, {}, templates));
+  });
+
+  it("accepts break in tablerow bodies", async () => {
+    const source = "{% tablerow item in items cols:2 %}{{ item }}{% break %}{% endtablerow %}";
+    const context = { items: ["a", "b"] };
+    expect(await run(source, context)).toBe(await oracle(source, context));
+  });
+});
+
 it("treats prototype-named aliases as own data in dependency maps", async () => {
   const source = '{% render "p" with user as __proto__ %}';
   const doc = await Effect.runPromise(Liquid.parse(source));

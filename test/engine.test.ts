@@ -80,7 +80,6 @@ describe("syntax and rendering", () => {
     "{% for x in xs %}{% endif %}",
     "{{ x + y }}",
     "{% unknown %}",
-    "{% break %}",
     "{{ x | upcase junk }}",
     "{% if x %}{% else %}{% else %}{% endif %}",
   ])("rejects malformed/unsupported syntax %s", async (s) =>

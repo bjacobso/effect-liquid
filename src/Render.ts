@@ -365,11 +365,12 @@ function nodes<E, R>(
   body: readonly Node[],
   state: State,
   registry: Registry<E, R>,
+  allowInterruptedFirst = false,
 ): Stream.Stream<string, Failure<E>, R | TemplateLoader> {
-  return Stream.fromIterable(body).pipe(
-    Stream.flatMap((node) =>
+  return Stream.fromIterable(body.entries()).pipe(
+    Stream.flatMap(([index, node]) =>
       Stream.suspend(() =>
-        state.control
+        state.control && !(allowInterruptedFirst && index === 0)
           ? Stream.empty
           : Stream.unwrap(
               Effect.gen(function* () {
@@ -523,7 +524,7 @@ function nodes<E, R>(
                                 : {}),
                             },
                           });
-                          let content = nodes(node.body, state, registry);
+                          let content = nodes(node.body, state, registry, node._tag === "TableRow");
                           if (node._tag === "TableRow") {
                             const prefix =
                               (index % cols === 0
@@ -543,8 +544,9 @@ function nodes<E, R>(
                             Stream.ensuring(
                               Effect.sync(() => {
                                 state.scopes.pop();
-                                if (state.control === "break") stopped = true;
-                                state.control = undefined;
+                                if (node._tag === "For" && state.control === "break")
+                                  stopped = true;
+                                if (node._tag === "For") state.control = undefined;
                               }),
                             ),
                           );
@@ -666,6 +668,7 @@ function nodes<E, R>(
                     const old = state.scopes;
                     const oldCycles = state.cycles;
                     const oldContinuations = state.continuations;
+                    const oldControl = state.control;
                     state.scopes =
                       node.mode === "render"
                         ? [old[0]!, Object.create(null), args]
@@ -702,6 +705,7 @@ function nodes<E, R>(
                           state.scopes = old;
                           state.cycles = oldCycles;
                           state.continuations = oldContinuations;
+                          if (node.mode === "render") state.control = oldControl;
                           state.depth--;
                         }),
                       ),

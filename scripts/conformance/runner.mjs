@@ -173,8 +173,12 @@ export function regression(fixture, left, right, baseline) {
   if (!hasGap(fixture, left, right)) return entry ? "improved" : "pass";
   if (!entry) return "new-gap";
   const actual = baselineEntry(fixture, left, right);
+  const oracleMatches =
+    right.kind === "unsupported-configuration" && entry.effectLiquid.kind === right.kind
+      ? entry.liquidjs.kind === actual.liquidjs.kind
+      : JSON.stringify(entry.liquidjs) === JSON.stringify(actual.liquidjs);
   return entry.fixtureHash === actual.fixtureHash &&
-    JSON.stringify(entry.liquidjs) === JSON.stringify(actual.liquidjs) &&
+    oracleMatches &&
     JSON.stringify(entry.effectLiquid) === JSON.stringify(actual.effectLiquid)
     ? "known-gap"
     : "changed-gap";

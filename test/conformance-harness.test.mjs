@@ -19,6 +19,16 @@ describe("conformance harness", () => {
     expect(regression(fixture, output("different"), wrong, baseline)).toBe("changed-gap");
     expect(regression(fixture, output("right"), output("right"), baseline)).toBe("improved");
   });
+  it("does not pin time-dependent oracle output for an unsupported configuration", () => {
+    const fixture = { id: "unsupported", source: "{{ d | date: f }}", context: { d: "now" } };
+    const unsupported = { kind: "unsupported-configuration", options: ["memoryLimit"] };
+    const baseline = { unsupported: baselineEntry(fixture, output("yesterday"), unsupported) };
+    expect(regression(fixture, output("today"), unsupported, baseline)).toBe("known-gap");
+    expect(regression(fixture, { kind: "error", phase: "render" }, unsupported, baseline)).toBe(
+      "changed-gap",
+    );
+    expect(regression(fixture, output("today"), output("today"), baseline)).toBe("improved");
+  });
   it("does not equate error phases or infrastructure failures", () => {
     expect(
       compare(

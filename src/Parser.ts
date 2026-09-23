@@ -192,7 +192,7 @@ class Templates {
           } else e.fail("Unsupported loop option");
         }
         if (tag === "tablerow") {
-          const body = yield* this.body(["endtablerow"], depth + 1, loop);
+          const body = yield* this.body(["endtablerow"], depth + 1, true);
           nodes.push({
             _tag: "TableRow",
             name,
@@ -269,7 +269,6 @@ class Templates {
         nodes.push({ _tag: "Case", expression, branches, otherwise, span: end("endcase") });
       } else if (tag === "break" || tag === "continue") {
         e.done();
-        if (!loop) e.fail(`${tag} outside loop`);
         nodes.push({ _tag: tag === "break" ? "Break" : "Continue", span: t.span });
       } else if (tag === "block") {
         const name = e.pos < e.words.length ? e.name() : "";
