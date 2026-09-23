@@ -276,7 +276,7 @@ class Templates {
         const body = yield* this.body(["endblock"], depth + 1, loop);
         nodes.push({ _tag: "Block", name, body, span: end("endblock") });
       } else if (tag === "layout") {
-        const template = e.take("none") ? undefined : e.atom();
+        const template = e.take("none") ? undefined : e.atom(false);
         const args: Record<string, Expression> = Object.create(null);
         while (e.pos < e.words.length) {
           e.take(",");
@@ -295,7 +295,7 @@ class Templates {
           span: span(t.span.sourceId, t.span.start, body.at(-1)?.span.end ?? t.span.end),
         });
       } else if (tag === "render" || tag === "include") {
-        const template = e.atom();
+        const template = e.atom(false);
         const args: Record<string, Expression> = Object.create(null);
         let withBinding: PartialBinding | undefined;
         let forBinding: PartialBinding | undefined;

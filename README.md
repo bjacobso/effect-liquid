@@ -41,6 +41,8 @@ Parsing also accepts `trimTagLeft`, `trimTagRight`, `trimOutputLeft`, and `trimO
 
 Bare bracket context lookups such as `{{ ["user"].name }}` and `{{ [key] }}` are supported. Static keys participate in analysis and checking; dynamic context-root keys report partial coverage.
 
+Direct literal receivers also support property access, such as `{{ nil.foo }}`, `{{ blank["x"] }}`, and `{{ "abc".size }}`. Computed keys are evaluated and tracked as dependencies.
+
 Strings and arrays expose `.length` and `.size`; string lengths count UTF-16 code units. Records expose their own `size` field when present, otherwise `.size` counts their own enumerable keys. Numeric negative array indices count from the end, while negative string offsets and string keys such as `"-1"` or `"01"` do not resolve. The checker understands these virtual properties and numeric negative tuple indices. The `size` filter retains its separate pinned behavior: records yield zero.
 
 Defaults use Liquid truthiness, permissive missing variables, strict unknown filters, and unescaped output. `Render.layer({ lenientIf: true })` permits missing variables in condition expressions and before `default` in strict mode. `outputEscape` accepts `escape` or `json`; the `raw` filter opts out per output. Use `escape` when HTML escaping is appropriate. Plain records and arrays are accepted; accessors, class instances, cyclic data, and non-finite numbers are rejected. Context data is copied into request-local state.

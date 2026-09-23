@@ -28,6 +28,14 @@ it("supports length and size on strings, arrays, and records with own size overr
     expect(await run(source, { value })).toBe(await oracle.parseAndRender(source, { value }));
   }
 });
+it("resolves property access on literal receivers and analyzes computed keys", async () => {
+  const source =
+    '{{ nil.foo }}|{{ nil["key"] }}|{{ blank.x }}|{{ empty.size }}|{{ "abc".size }}|{{ nil[key] }}';
+  const context = { key: "x" };
+  expect(await run(source, context)).toBe(await new Reference().parseAndRender(source, context));
+  const analysis = await Effect.runPromise(Effect.flatMap(Liquid.parse(source), Liquid.analyze));
+  expect(analysis.externalPaths).toEqual(["key"]);
+});
 it("distinguishes numeric array indices from string property names and string offsets", async () => {
   const oracle = new Reference();
   for (const value of ["abc", ["a", "b", "c"]])

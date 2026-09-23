@@ -48,6 +48,17 @@ interface Slot {
 }
 export function path(e: Expression): string {
   switch (e._tag) {
+    case "Access":
+      return (
+        path(e.receiver) +
+        e.segments
+          .map((s) =>
+            s._tag === "Literal" && typeof s.value === "string" && /^[\w-]+$/.test(s.value)
+              ? `.${s.value}`
+              : `[${path(s)}]`,
+          )
+          .join("")
+      );
     case "SelfLookup":
       return e.segments.map((segment) => `[${path(segment)}]`).join("");
     case "Lookup":
@@ -119,6 +130,10 @@ export const analyze = <E, R>(
       control: readonly string[],
     ): void => {
       switch (e._tag) {
+        case "Access":
+          expression(e.receiver, env, control);
+          for (const segment of e.segments) expression(segment, env, control);
+          break;
         case "SelfLookup": {
           const [first, ...rest] = e.segments;
           if (first?._tag === "Literal" && typeof first.value === "string") {

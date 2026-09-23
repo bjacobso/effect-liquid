@@ -116,6 +116,12 @@ export const check = <E = never, R = never>(
       );
     const inferRaw = (e: Expression, env: Binding.Flow<T.Type>, guard = false): T.Type => {
       switch (e._tag) {
+        case "Access": {
+          let type = infer(e.receiver, env);
+          for (const segment of e.segments)
+            type = property(type, infer(segment, env), segment.span, guard);
+          return type;
+        }
         case "Literal":
           return e.value === null ? T.nil : T.literal(e.value);
         case "Special":

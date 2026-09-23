@@ -8,6 +8,13 @@ export function embeddedExpression(text: string, at: Span, groupedExpressions = 
   const visit = (expression: Expression): Expression => {
     const base = { ...expression, span: at };
     switch (expression._tag) {
+      case "Access":
+        return {
+          ...base,
+          _tag: "Access",
+          receiver: visit(expression.receiver),
+          segments: expression.segments.map(visit),
+        };
       case "Lookup":
         return {
           ...base,

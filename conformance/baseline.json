@@ -367,10 +367,8 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected '.'"
+        "kind": "output",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -503,48 +501,6 @@
       "effectLiquid": {
         "kind": "output",
         "sha256": "986d6ccf8083c7f8936815673e4e7810dc522afa3833681e52c9d8d7ca0bfa7a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/nil-handling.yml:117:0": {
-      "fixtureHash": "6fd32d7ffb591d962b3fa9528bbb4f0a0a754744a36b24f45ae9e5ef3578dabd",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected '.'"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/nil-handling.yml:131:0": {
-      "fixtureHash": "bce24d8b6b84ac010bbbd61e1ea1ae735b21cdcd28078c45d7cb2b5fcaa89c84",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected '['"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/nil-handling.yml:138:0": {
-      "fixtureHash": "b846c5f3d4d6e6cb5354a1be1ba635a0f53fca99911de681a7eeb314a792a251",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected '.'"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3421,10 +3377,8 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected '['"
+        "kind": "output",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3435,10 +3389,8 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected '.'"
+        "kind": "output",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -21732,10 +21684,8 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected '.'"
+        "kind": "output",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -21746,10 +21696,8 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Unexpected '['"
+        "kind": "output",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },

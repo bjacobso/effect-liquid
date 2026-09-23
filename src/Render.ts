@@ -140,6 +140,12 @@ function evaluate<E, R>(
         return expression.value;
       case "Special":
         return null;
+      case "Access": {
+        let value = yield* evaluate(expression.receiver, state, registry);
+        for (const segment of expression.segments)
+          value = lookup(value, yield* evaluate(segment, state, registry));
+        return value;
+      }
       case "Lookup": {
         let value = get(state, expression.root);
         for (const segment of expression.segments)

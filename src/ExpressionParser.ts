@@ -96,7 +96,22 @@ export class Expressions {
       this.token.offset + (this.words[this.pos - 1]?.end ?? start),
     );
   }
-  atom(): Expression {
+  suffix(): Expression[] {
+    const segments: Expression[] = [];
+    while (this.peek(".") || this.peek("[")) {
+      if (this.take(".")) {
+        const key = this.words[this.pos++];
+        if (!key || key.quoted || !/^[\w-]+$/.test(key.text)) this.fail("Expected property");
+        segments.push({ _tag: "Literal", value: key.text, span: this.position(key.start) });
+      } else {
+        this.need("[");
+        segments.push(this.atom());
+        this.need("]");
+      }
+    }
+    return segments;
+  }
+  atom(literalAccess = true): Expression {
     if (++this.depth > this.maxDepth) this.fail("Expression nesting limit exceeded");
     const w = this.words[this.pos++];
     if (!w) this.fail("Expected expression");
@@ -128,33 +143,17 @@ export class Expressions {
     } else if (w.text === "[") {
       const segments: Expression[] = [this.atom()];
       this.need("]");
-      while (this.peek(".") || this.peek("[")) {
-        if (this.take(".")) {
-          const key = this.words[this.pos++];
-          if (!key || key.quoted || !/^[\w-]+$/.test(key.text)) this.fail("Expected property");
-          segments.push({ _tag: "Literal", value: key.text, span: this.position(key.start) });
-        } else {
-          this.need("[");
-          segments.push(this.atom());
-          this.need("]");
-        }
-      }
+      segments.push(...this.suffix());
       result = { _tag: "SelfLookup", segments, span: this.position(w.start) };
     } else {
       if (!/^[a-zA-Z_][\w-]*$/.test(w.text)) this.fail("Expected variable or literal", w.start);
-      const segments: Expression[] = [];
-      while (this.peek(".") || this.peek("[")) {
-        if (this.take(".")) {
-          const key = this.words[this.pos++];
-          if (!key || key.quoted || !/^[\w-]+$/.test(key.text)) this.fail("Expected property");
-          segments.push({ _tag: "Literal", value: key.text, span: this.position(key.start) });
-        } else {
-          this.need("[");
-          segments.push(this.atom());
-          this.need("]");
-        }
-      }
+      const segments = this.suffix();
       result = { _tag: "Lookup", root: w.text, segments, span: this.position(w.start) };
+    }
+    if (literalAccess && (result._tag === "Literal" || result._tag === "Special")) {
+      const segments = this.suffix();
+      if (segments.length)
+        result = { _tag: "Access", receiver: result, segments, span: this.position(w.start) };
     }
     this.depth--;
     return result;

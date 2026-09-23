@@ -108,7 +108,7 @@ const manifest = {
   syntax: {
     identifiers: "ASCII letter/underscore followed by word characters or hyphens",
     lookups:
-      "Variable-rooted and bare context bracket access; computed lookup indices; sequence length/size and record size fallback; literal receiver indexing deferred",
+      "Variable-rooted and bare context bracket access; computed lookup indices; direct literal receiver access; sequence length/size and record size fallback",
     expressions:
       "Literals, ranges, comparisons, contains, not, right-associated and/or, filter pipelines; opt-in parenthesized conditions and pipelines",
     partials:
