@@ -53,6 +53,8 @@ Collection filters include `group_by`, `sort`, `sort_natural`, `map`, `sum`, `co
 
 `liquid` blocks support newline-separated tags, nested control flow, `echo`, and comments while preserving original source spans. `tablerow` generates row/cell HTML with `cols`, `offset`, `limit`, and scoped `tablerowloop` metadata. Generated markup counts toward the output budget.
 
+`case` renders every matching `when` branch. If none match, it renders the first `else` content; later `else` sections are ignored, matching LiquidJS.
+
 `break` and `continue` stop the current template when used outside a loop. Inside `include`, they can affect a caller loop; `render` isolates them in its child template. In `tablerow`, they stop the remaining cell body while the table markup continues.
 
 ```liquid

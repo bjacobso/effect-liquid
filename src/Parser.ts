@@ -264,7 +264,15 @@ class Templates {
           );
           b.need("else");
           b.done();
-          otherwise = yield* this.body(["endcase"], depth + 1, loop);
+          otherwise = yield* this.body(["else", "when", "endcase"], depth + 1, loop);
+          let elseCount = 1;
+          while (this.tag() === "else" || this.tag() === "when") {
+            const tag = this.tag();
+            this.pos++;
+            if (tag === "else") elseCount++;
+            const body = yield* this.body(["else", "when", "endcase"], depth + 1, loop);
+            if (tag === "when" && elseCount === 1) otherwise.push(...body);
+          }
         }
         nodes.push({ _tag: "Case", expression, branches, otherwise, span: end("endcase") });
       } else if (tag === "break" || tag === "continue") {

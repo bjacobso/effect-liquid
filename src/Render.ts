@@ -199,15 +199,17 @@ function evaluate<E, R>(
           return truthy(left) || truthy(yield* evaluate(expression.right, state, registry));
         const right = yield* evaluate(expression.right, state, registry);
         const eq =
-          expression.right._tag === "Special"
-            ? expression.right.value === "empty"
-              ? empty(left)
-              : blank(left)
-            : expression.left._tag === "Special"
-              ? expression.left.value === "empty"
-                ? empty(right)
-                : blank(right)
-              : equal(left, right);
+          expression.left._tag === "Special" && expression.right._tag === "Special"
+            ? false
+            : expression.right._tag === "Special"
+              ? expression.right.value === "empty"
+                ? empty(left)
+                : blank(left)
+              : expression.left._tag === "Special"
+                ? expression.left.value === "empty"
+                  ? empty(right)
+                  : blank(right)
+                : equal(left, right);
         switch (expression.operator) {
           case "==":
             return eq;
@@ -468,12 +470,36 @@ function nodes<E, R>(
                     return nodes(node.otherwise, state, registry);
                   }
                   case "Case": {
-                    const value = yield* ev(node.expression);
-                    for (const branch of node.branches)
-                      for (const test of branch.values)
-                        if (equal(value, yield* ev(test)))
-                          return nodes(branch.body, state, registry);
-                    return nodes(node.otherwise, state, registry);
+                    const value =
+                      node.expression._tag === "Special" ? "" : yield* ev(node.expression);
+                    let branchHit = false;
+                    const branches = Stream.fromIterable(node.branches).pipe(
+                      Stream.flatMap((branch) =>
+                        Stream.unwrap(
+                          Effect.gen(function* () {
+                            for (const test of branch.values) {
+                              const matched =
+                                test._tag === "Special"
+                                  ? test.value === "blank"
+                                    ? blank(value)
+                                    : empty(value)
+                                  : equal(value, yield* ev(test));
+                              if (matched) {
+                                branchHit = true;
+                                return nodes(branch.body, state, registry);
+                              }
+                            }
+                            return Stream.empty;
+                          }),
+                        ),
+                      ),
+                    );
+                    return Stream.concat(
+                      branches,
+                      Stream.suspend(() =>
+                        branchHit ? Stream.empty : nodes(node.otherwise, state, registry),
+                      ),
+                    );
                   }
                   case "For":
                   case "TableRow": {
