@@ -418,6 +418,7 @@ export const parse = (
     const body = result.value;
     return {
       _tag: "Document" as const,
+      ...(options.parseLimit === undefined ? {} : { parseLimit: options.parseLimit }),
       source,
       body,
       ...(options.groupedExpressions ? { groupedExpressions: true } : {}),

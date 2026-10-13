@@ -239,3 +239,11 @@ Negative numeric array keys count from the end; negative string offsets do not. 
 `ParseOptions` includes independent boolean tag/output left/right trimming switches (default false) and `greedy` (default true). Hyphen markers and enabled switches request trimming. Greedy trimming removes surrounding JavaScript whitespace; non-greedy left trimming removes spaces, tabs, and carriage returns, while non-greedy right trimming also consumes at most one LF. Global tag switches trim outside raw blocks without trimming their literal body. Existing explicit raw-marker deviations remain documented in the capability inventory.
 
 `Document.whitespace` stores a copy of supplied whitespace settings; absence preserves defaults. Rendering, project analysis, and project checking pass that snapshot to partial parsing. Source spans retain original offsets despite text trimming. Whitespace options are validated as booleans; source, token, and depth limits keep their existing validation and defaults.
+
+### Date configuration and compatibility limits
+
+All date aliases use render configuration for numeric/IANA timezone offsets, string-offset preservation, Intl month/weekday names, and default date format. Explicit date filter timezone arguments override preservation; `%s` uses the original instant. Defaults remain UTC and en-US. Padding widths and total estimated allocation are checked before string padding.
+
+`parseLimit` caps source code units under the existing source limit and is stored on documents for partial/project parsing. `renderLimit` maps to deterministic evaluation steps (`ceil(value * 1000)`, minimum one), under `maxSteps`; this intentionally does not promise LiquidJS wall-clock timing. `memoryLimit` caps conservative cumulative allocation units under a finite 10,000,000-unit ceiling; ranges, built-in transformations, and date widths reserve capacity before allocation. Units combine array elements and string code units, rather than claiming heap-byte equivalence. Trusted custom handlers can declare allocation forecasts; their runtime execution remains outside static analysis/checking.
+
+`keepOutputType` is explicitly deferred because the current buffered and streaming contracts are string-valued. A future typed-output API needs its own return and streaming semantics.

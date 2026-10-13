@@ -293,6 +293,54 @@ for (const operation of ["where", "reject", "find", "find_index", "has", "group_
       },
     },
   ]);
+const allocatingArrays = new Set([
+  "reverse",
+  "sort",
+  "sort_natural",
+  "uniq",
+  "compact",
+  "where",
+  "reject",
+  "map",
+  "concat",
+  "pop",
+  "shift",
+  "push",
+  "unshift",
+]);
+const lengthOf = (value: Value | undefined): number =>
+  isArray(value) ? value.length : value == null ? 0 : 1;
+function allocation(name: string, value: Value, args: readonly Value[]): number {
+  if (allocatingArrays.has(name)) {
+    const size = lengthOf(value);
+    return name === "concat"
+      ? size + lengthOf(args[0])
+      : name === "push" || name === "unshift"
+        ? size + args.length
+        : size;
+  }
+  if (name === "slice")
+    return Math.min(
+      isArray(value) ? value.length : stringify(value).length,
+      args.length < 2 || args[1] == null ? 1 : Math.max(0, numeric(args[1])),
+    );
+  const text = stringify(value);
+  if (name === "split") return text.length;
+  if (name === "replace") {
+    const pattern = stringify(args[0]),
+      replacement = stringify(args[1]);
+    const count = pattern ? Math.floor(text.length / pattern.length) : text.length;
+    return text.length + count * Math.max(0, replacement.length - pattern.length);
+  }
+  if (name === "append" || name === "prepend") return text.length + stringify(args[0]).length;
+  if (name === "join")
+    return isArray(value)
+      ? value.reduce<number>((sum, item) => sum + stringify(item).length, 0) +
+          Math.max(0, value.length - 1) * stringify(args[0] ?? " ").length
+      : text.length;
+  if (name === "escape" || name === "escape_once" || name === "xml_escape") return text.length * 6;
+  return text.length;
+}
 const preserveProvenance = new Set([
   "reverse",
   "sort",
@@ -310,6 +358,13 @@ export const registry: Registry<BuiltinFilterError> = {
       name,
       {
         ...filter,
+        ...("expression" in filter
+          ? {}
+          : {
+              allocation:
+                filter.allocation ??
+                ((value: Value, args: readonly Value[]) => allocation(name, value, args)),
+            }),
         analysis: {
           provenance: preserveProvenance.has(name)
             ? "input"

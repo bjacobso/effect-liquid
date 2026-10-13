@@ -9,7 +9,7 @@ import {
   RenderError,
 } from "./Diagnostic.js";
 import { embeddedExpression } from "./EmbeddedExpression.js";
-import type { Registry } from "./Filter.js";
+import type { DateOptions, FilterCallContext, Registry } from "./Filter.js";
 import type { DelimiterOptions, WhitespaceOptions } from "./Lexer.js";
 import { parse } from "./Parser.js";
 import type { Span } from "./Source.js";
@@ -24,7 +24,9 @@ import {
   truthy,
   type Value,
 } from "./Value.js";
-export interface Config {
+export interface Config extends DateOptions {
+  readonly memoryLimit?: number | undefined;
+  readonly renderLimit?: number | undefined;
   readonly strictVariables: boolean;
   readonly strictFilters: boolean;
   readonly jekyllWhere: boolean;
@@ -42,6 +44,12 @@ export const defaults: Config = {
   jekyllWhere: false,
   lenientIf: false,
   outputEscape: undefined,
+  timezoneOffset: undefined,
+  preserveTimezones: false,
+  locale: "en-US",
+  dateFormat: "%A, %B %-e, %Y at %-l:%M %P %z",
+  memoryLimit: undefined,
+  renderLimit: undefined,
   maxSteps: 1_000_000,
   maxIterations: 100_000,
   maxOutputBytes: 10_000_000,
@@ -55,7 +63,7 @@ export class RenderConfig extends Context.Tag("effect-liquid/RenderConfig")<
 export const layer = (config: Partial<Config> = {}) =>
   Layer.succeed(RenderConfig, { ...defaults, ...config });
 interface State {
-  whitespace: WhitespaceOptions;
+  whitespace: WhitespaceOptions & { readonly parseLimit?: number };
   delimiters: DelimiterOptions;
   groupedExpressions: boolean;
   scopes: Record<string, Value>[];
@@ -64,6 +72,7 @@ interface State {
   steps: number;
   iterations: number;
   outputBytes: number;
+  allocationUnits: number;
   control: "break" | "continue" | undefined;
   depth: number;
   filterDepth: number;
@@ -98,6 +107,23 @@ function* tick(state: State, at: Span): Evaluation<void, never, never> {
       ),
     );
   if (state.steps % 256 === 0) yield* perform(Effect.yieldNow());
+}
+function* allocate(state: State, units: number, at: Span): Evaluation<void, never, never> {
+  const budget = Math.min(
+    defaults.maxOutputBytes,
+    state.config.memoryLimit ?? defaults.maxOutputBytes,
+  );
+  if (!Number.isFinite(units) || units < 0 || units > budget - state.allocationUnits)
+    yield* perform(
+      Effect.fail(
+        new RenderError({
+          code: "ResourceLimitExceeded",
+          message: "Memory allocation limit exceeded",
+          span: at,
+        }),
+      ),
+    );
+  state.allocationUnits += units;
 }
 function get(state: State, name: string): Value | undefined {
   for (let i = state.scopes.length - 1; i >= 0; i--) {
@@ -210,6 +236,7 @@ function* evaluate<E, R>(
             }),
           ),
         );
+      yield* allocate(state, length, expression.span);
       return Array.from({ length }, (_, i) => from + i);
     }
     case "Binary": {
@@ -377,14 +404,26 @@ function* evaluate<E, R>(
           state.filterDepth--;
         }
       }
+      const callContext: FilterCallContext = {
+        missingArguments,
+        nilArguments: expression.args.map((arg) => arg._tag === "Literal" && arg.value === null),
+        specialArguments,
+        jekyllWhere: state.config.jekyllWhere,
+        date: state.config,
+        allocationLimit:
+          Math.min(defaults.maxOutputBytes, state.config.memoryLimit ?? defaults.maxOutputBytes) -
+          state.allocationUnits,
+      };
+      if (filter.allocation)
+        yield* allocate(
+          state,
+          filter.allocation(input ?? null, args, callContext),
+          expression.span,
+        );
       const result = yield* perform(
         Effect.suspend(() =>
           filter
-            .run(input, args, named, {
-              missingArguments,
-              specialArguments,
-              jekyllWhere: state.config.jekyllWhere,
-            })
+            .run(input, args, named, callContext)
             .pipe(
               Effect.mapError(
                 (cause) =>
@@ -800,7 +839,16 @@ function* nodes<E, R>(
 }
 function initialize(document: Document, context: unknown) {
   return Effect.gen(function* () {
-    const config = yield* RenderConfig;
+    const supplied = yield* RenderConfig;
+    const config = {
+      ...supplied,
+      maxSteps: Math.min(
+        supplied.maxSteps,
+        supplied.renderLimit === undefined
+          ? supplied.maxSteps
+          : Math.max(1, Math.ceil(supplied.renderLimit * 1000)),
+      ),
+    };
     const at = { sourceId: document.source.id, start: 0, end: document.source.text.length };
     for (const key of Object.keys(config))
       if (!Object.hasOwn(defaults, key))
@@ -821,6 +869,22 @@ function initialize(document: Document, context: unknown) {
           }),
         );
     }
+    for (const key of ["memoryLimit", "renderLimit"] as const)
+      if (config[key] !== undefined && (!Number.isFinite(config[key]) || config[key]! < 0))
+        return yield* Effect.fail(
+          new RenderError({ code: "InvalidOperation", message: `Invalid limit: ${key}`, span: at }),
+        );
+    if (
+      typeof config.preserveTimezones !== "boolean" ||
+      typeof config.locale !== "string" ||
+      typeof config.dateFormat !== "string" ||
+      (config.timezoneOffset !== undefined &&
+        typeof config.timezoneOffset !== "string" &&
+        (typeof config.timezoneOffset !== "number" || !Number.isFinite(config.timezoneOffset)))
+    )
+      return yield* Effect.fail(
+        new RenderError({ code: "InvalidOperation", message: "Invalid date options", span: at }),
+      );
     const value = yield* normalize(context, at);
     const globals = yield* normalize(config.globals, at);
     if (
@@ -849,6 +913,7 @@ function initialize(document: Document, context: unknown) {
       steps: 0,
       iterations: 0,
       outputBytes: 0,
+      allocationUnits: 0,
       control: undefined,
       depth: 0,
       filterDepth: 0,
@@ -856,7 +921,10 @@ function initialize(document: Document, context: unknown) {
       layoutStore: false,
       layoutBlocks: new Map(),
       groupedExpressions: document.groupedExpressions ?? false,
-      whitespace: document.whitespace ?? {},
+      whitespace: {
+        ...document.whitespace,
+        ...(document.parseLimit === undefined ? {} : { parseLimit: document.parseLimit }),
+      },
       delimiters: document.delimiters ?? {},
       config,
     };

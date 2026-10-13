@@ -64,6 +64,7 @@ export const analyzeProject = <E = never, R = never>(
             continue;
           }
           const child = yield* parse(source, {
+            ...(doc.parseLimit === undefined ? {} : { parseLimit: doc.parseLimit }),
             ...doc.whitespace,
             ...doc.delimiters,
             groupedExpressions: doc.groupedExpressions ?? false,

@@ -74,6 +74,7 @@ export const checkProject = <E = never, R = never>(
             continue;
           }
           const child = yield* parse(source, {
+            ...(doc.parseLimit === undefined ? {} : { parseLimit: doc.parseLimit }),
             ...doc.whitespace,
             groupedExpressions: doc.groupedExpressions ?? false,
           });

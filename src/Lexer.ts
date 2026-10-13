@@ -35,6 +35,7 @@ export const delimiterKeys = [
 ] as const;
 export interface ParseOptions extends WhitespaceOptions, DelimiterOptions {
   readonly groupedExpressions?: boolean;
+  readonly parseLimit?: number;
   readonly maxSourceLength?: number;
   readonly maxTokens?: number;
   readonly maxDepth?: number;
@@ -57,6 +58,8 @@ export const lex = (
         new ParseError({ message: "Invalid delimiters", span: span(source.id, 0, 0) }),
       );
     for (const [key, value] of Object.entries(options)) {
+      if (key === "parseLimit" && typeof value === "number" && Number.isFinite(value) && value >= 0)
+        continue;
       if (["groupedExpressions", ...whitespaceKeys].includes(key) && typeof value === "boolean")
         continue;
       if (
@@ -73,7 +76,9 @@ export const lex = (
           new ParseError({ message: `Invalid parse limit: ${key}`, span: span(source.id, 0, 0) }),
         );
     }
-    if (text.length > (options.maxSourceLength ?? 1_000_000))
+    if (
+      text.length > Math.min(options.maxSourceLength ?? 1_000_000, options.parseLimit ?? 1_000_000)
+    )
       return yield* Effect.fail(
         new ParseError({
           message: "Source length limit exceeded",

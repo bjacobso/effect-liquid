@@ -2043,7 +2043,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/date-options.test.ts"
       ]
     },
     "date_to_xmlschema": {
@@ -2071,7 +2072,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/date-options.test.ts"
       ]
     },
     "date_to_rfc822": {
@@ -2099,7 +2101,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/date-options.test.ts"
       ]
     },
     "date_to_string": {
@@ -2127,7 +2130,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/date-options.test.ts"
       ]
     },
     "date_to_long_string": {
@@ -2155,7 +2159,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/date-options.test.ts"
       ]
     },
     "append": {
@@ -3090,10 +3095,18 @@
       "status": "deferred"
     },
     "dateFormat": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/date-options.test.ts"
+      ],
+      "behavior": "Default date format when the filter format is nil or omitted."
     },
     "locale": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/date-options.test.ts"
+      ],
+      "behavior": "Intl month and weekday names; core defaults to en-US."
     },
     "trimTagRight": {
       "status": "partial",
@@ -3348,7 +3361,11 @@
       ]
     },
     "preserveTimezones": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/date-options.test.ts"
+      ],
+      "behavior": "Preserves offsets from date strings unless the filter supplies a timezone argument; applies to all date aliases."
     },
     "strictFilters": {
       "status": "partial",
@@ -3491,7 +3508,8 @@
       ]
     },
     "keepOutputType": {
-      "status": "deferred"
+      "status": "deferred",
+      "rationale": "Deferred: render returns Effect<string> and renderStream emits strings. A separate typed-output API needs an owner-approved contract; configuration cannot silently widen existing return types."
     },
     "operators": {
       "status": "deferred"
@@ -3525,13 +3543,25 @@
       ]
     },
     "memoryLimit": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/date-options.test.ts"
+      ],
+      "behavior": "Cumulative conservative allocation units, capped at 10,000,000; range/filter growth and date widths checked before allocation."
     },
     "parseLimit": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/date-options.test.ts"
+      ],
+      "behavior": "Source code units, capped by maxSourceLength; inherited by partials."
     },
     "renderLimit": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/date-options.test.ts"
+      ],
+      "behavior": "Deterministic work budget ceil(renderLimit * 1000), minimum one, capped by maxSteps; no wall-clock deadline."
     },
     "outputEscape": {
       "status": "partial",
@@ -3560,6 +3590,13 @@
         "test/layout.test.ts",
         "test/parser-compat.test.ts"
       ]
+    },
+    "timezoneOffset": {
+      "status": "partial",
+      "tests": [
+        "test/date-options.test.ts"
+      ],
+      "behavior": "Numeric minute offset or IANA timezone; explicit filter arguments override configuration."
     }
   },
   "syntax": {
@@ -3592,7 +3629,7 @@
     },
     {
       "feature": "resource limits",
-      "behavior": "Finite limits with typed errors and cancellation checkpoints; units/defaults are independent of LiquidJS."
+      "behavior": "Finite limits with typed errors and interruption checkpoints. parseLimit maps to source code units; renderLimit maps to bounded deterministic work rather than elapsed time; memoryLimit uses conservative cumulative allocation units. Existing finite defaults remain caps."
     },
     {
       "feature": "duplicate named arguments",

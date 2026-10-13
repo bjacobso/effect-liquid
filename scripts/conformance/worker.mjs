@@ -77,6 +77,13 @@ if (engineName === "liquidjs") {
     "trimOutputLeft",
     "trimOutputRight",
     "greedy",
+    "timezoneOffset",
+    "preserveTimezones",
+    "locale",
+    "dateFormat",
+    "renderLimit",
+    "parseLimit",
+    "memoryLimit",
   ]);
   const equivalentDefaults = {
     jsTruthy: false,
@@ -107,6 +114,7 @@ if (engineName === "liquidjs") {
               "trimOutputLeft",
               "trimOutputRight",
               "greedy",
+              "parseLimit",
               "tagDelimiterLeft",
               "tagDelimiterRight",
               "outputDelimiterLeft",
@@ -127,6 +135,18 @@ if (engineName === "liquidjs") {
         jekyllWhere: options.jekyllWhere ?? false,
         lenientIf: options.lenientIf ?? false,
         ...(options.outputEscape ? { outputEscape: options.outputEscape } : {}),
+        ...Object.fromEntries(
+          [
+            "timezoneOffset",
+            "preserveTimezones",
+            "locale",
+            "dateFormat",
+            "renderLimit",
+            "memoryLimit",
+          ]
+            .filter((key) => options[key] !== undefined)
+            .map((key) => [key, options[key]]),
+        ),
         globals: options.globals ?? {},
         maxOutputBytes: maxBytes,
       }),

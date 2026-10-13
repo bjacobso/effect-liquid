@@ -88,6 +88,7 @@ Exit: multi-file rendering and analysis agree about scopes. A changed child inva
 - [x] Add array-to-sentence formatting and typed missing-argument failures for append/prepend.
 - [ ] Expand remaining filters by family, with runtime semantics, analysis/type metadata hooks, and conformance fixtures in each batch.
 - [x] Implement or explicitly defer each remaining option and host adapter. Keep platform commerce features outside the core.
+- [x] Add browser-safe date options (`timezoneOffset`, `preserveTimezones`, `locale`, `dateFormat`), map LiquidJS finite-limit aliases, and explicitly defer typed output pending a separate API contract.
 - [x] Add bounded fuzz/differential runs and initial parse/render/analysis/stream benchmarks; establish measured regression budgets.
 
 Exit: every expanded feature has a tested row. Collected stream output equals buffered output, interrupted consumers release resources, and slow consumers do not cause unbounded queues. Publish the actual conformance report; remaining gaps prevent a full-compatibility claim but do not block an honestly scoped release.

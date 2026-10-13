@@ -5,7 +5,8 @@ import { registry } from "../src/Builtins.js";
 
 it("inventories every pinned reference tag, filter, and normalized option", () => {
   const manifest = JSON.parse(readFileSync("CONFORMANCE.json", "utf8"));
-  const engine = new Liquid();
+  // timezoneOffset is an optional recognized option absent from normalized defaults.
+  const engine = new Liquid({ timezoneOffset: 0 });
   expect(Object.keys(manifest.tags).sort()).toEqual(Object.keys(engine.tags).sort());
   expect(Object.keys(manifest.filters).sort()).toEqual(Object.keys(engine.filters).sort());
   expect(Object.keys(manifest.options).sort()).toEqual(Object.keys(engine.options).sort());
