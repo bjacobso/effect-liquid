@@ -61,7 +61,7 @@ Release gate A remains closed: M3 fixed-point/control-flow work and licensing re
 ## M4 — Partial templates and project analysis
 
 - [x] Define canonical loader identity, source revision, referrer/kind resolution, and in-memory loader composition.
-- [x] Implement `render with/for` and `include with`, named arguments, isolated/shared state, per-item metadata, and project binding/type propagation.
+- [x] Implement `render with/for` and Ruby `include with/for/as`, named arguments, isolated/shared state, per-item metadata, and project binding/type propagation.
 - [ ] Complete interpolated filenames, include dialect differences, and remaining partial edge cases.
 - [ ] Add project analysis with dependency edges, caller/callee provenance, isolated-parameter diagnostics, unresolved edges, and bounded cyclic summaries.
 - [x] Add Node filesystem adapter with canonical-root checks, including symlinks and relative paths.

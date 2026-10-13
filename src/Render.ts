@@ -499,7 +499,8 @@ function* nodes<E, R>(
         const key = JSON.stringify([String(group), node.key]);
         const index = state.cycles.get(key) ?? 0;
         state.cycles.set(key, (index + 1) % node.values.length);
-        yield* emit(stringify(yield* ev(node.values[index]!)));
+        const value = yield* ev(node.values[index]!);
+        yield* emit(value === false ? "" : stringify(value));
         break;
       }
       case "Assign":
@@ -574,7 +575,11 @@ function* nodes<E, R>(
         if (node._tag === "For" && node.reversed) values = [...values].reverse();
         const cols =
           node._tag === "TableRow" && node.cols
-            ? Number(stringify(yield* ev(node.cols))) || values.length
+            ? Number(
+                node.cols._tag === "Literal" && node.cols.value === null
+                  ? undefined
+                  : (yield* ev(node.cols)) || values.length,
+              )
             : values.length;
         for (let index = 0; index < values.length; index++) {
           if (++state.iterations > state.config.maxIterations)
@@ -774,10 +779,12 @@ function* nodes<E, R>(
                 );
               if (state.iterations % 256 === 0) yield* perform(Effect.yieldNow());
               // The pinned oracle binds an omitted for-alias to the literal key "undefined".
-              args[node.for.alias ?? "undefined"] = items[index]!;
-              args.forloop = loopInfo(index, items.length);
+              args[node.for.alias ?? (node.mode === "include" ? name : "undefined")] =
+                items[index]!;
+              if (node.mode === "render") args.forloop = loopInfo(index, items.length);
             }
             yield* nodes(document.body, state, registry);
+            if (state.control) break;
           }
         } finally {
           state.scopes = old;

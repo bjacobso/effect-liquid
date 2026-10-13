@@ -89,11 +89,12 @@ export const lex = (
     let trimNext = false;
     let trimBarrier = false;
     let work = 0;
+    let commentStart: number | undefined;
     const addText = (start: number, end: number) => {
       let value = text.slice(start, end);
       if (trimNext) value = trimRight(value);
       trimNext = false;
-      if (value) {
+      if (value && commentStart === undefined) {
         tokens.push({
           kind: "text",
           text: value,
@@ -156,36 +157,45 @@ export const lex = (
       i += close.length;
       trimNext = trim || !!(kind === "tag" ? options.trimTagRight : options.trimOutputRight);
       const tag = content.trim();
-      if (kind === "tag" && (tag === "raw" || tag === "comment")) {
+      if (kind === "tag" && commentStart !== undefined) {
+        if (!/^\s*[A-Za-z_#][\w-]*/.test(content))
+          return yield* Effect.fail(
+            new ParseError({ message: "Invalid comment-body tag", span: span(source.id, open, i) }),
+          );
+        if (/^endcomment\b/.test(tag)) {
+          commentStart = undefined;
+          trimBarrier = true;
+          continue;
+        }
+      }
+      if (kind === "tag" && tag === "comment" && commentStart === undefined) {
+        commentStart = open;
+        trimBarrier = true;
+      } else if (kind === "tag" && tag === "raw") {
         const bodyStart = i;
         const escapeRegex = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-        const openPattern = escapeRegex(tagLeft);
-        const closePattern = escapeRegex(tagRight);
         const endPattern = new RegExp(
-          tag === "comment"
-            ? `${openPattern}(-)?\\s*endcomment\\b(?:(?!${openPattern}|-?${closePattern})[\\s\\S])*?(-)?${closePattern}`
-            : `${openPattern}(-)?\\s*endraw\\s*(-)?${closePattern}`,
+          `${escapeRegex(tagLeft)}(-)?\\s*endraw\\s*(-)?${escapeRegex(tagRight)}`,
           "g",
         );
         endPattern.lastIndex = i;
         const match = endPattern.exec(text);
         if (!match)
           return yield* Effect.fail(
-            new ParseError({ message: `Unclosed ${tag}`, span: span(source.id, open, i) }),
+            new ParseError({ message: "Unclosed raw", span: span(source.id, open, i) }),
           );
-        if (tag === "raw") {
-          trimNext = trim;
-          addText(bodyStart, match.index);
-          if (match[1]) {
-            const last = tokens[tokens.length - 1];
-            if (last?.kind === "text")
-              tokens[tokens.length - 1] = { ...last, text: trimLeft(last.text) };
-          }
-        }
+        // Ruby accepts marked endraw delimiters. Both engines preserve literal body whitespace.
+        trimNext = false;
+        addText(bodyStart, match.index);
         trimNext = !!match[2] || !!options.trimTagRight;
         i = match.index + match[0].length;
         trimBarrier = true;
-      } else tokens.push({ kind, text: content, offset, span: span(source.id, open, i) });
+      } else if (commentStart === undefined)
+        tokens.push({ kind, text: content, offset, span: span(source.id, open, i) });
     }
+    if (commentStart !== undefined)
+      return yield* Effect.fail(
+        new ParseError({ message: "Unclosed comment", span: span(source.id, commentStart, i) }),
+      );
     return tokens;
   });

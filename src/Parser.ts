@@ -328,9 +328,32 @@ class Templates {
         while (e.pos < e.words.length) {
           e.take(",");
           const name = e.name();
-          if ((name === "with" || (name === "for" && tag === "render")) && !e.peek(":")) {
-            const value = e.atom();
-            const alias = tag === "render" && e.take("as") ? e.name() : undefined;
+          if ((name === "with" || name === "for") && !e.peek(":")) {
+            let value: Expression;
+            try {
+              value = e.atom();
+              if (
+                tag === "include" &&
+                name === "for" &&
+                ((value._tag === "Lookup" &&
+                  (value.root === "contains" ||
+                    value.segments.some(
+                      (segment) =>
+                        segment._tag === "Literal" &&
+                        typeof segment.value === "number" &&
+                        t.text[segment.span.start - t.offset - 1] === ".",
+                    ))) ||
+                  (value._tag === "SelfLookup" &&
+                    value.segments[0]?._tag === "Literal" &&
+                    typeof value.segments[0].value !== "string"))
+              )
+                e.fail("Invalid include collection");
+            } catch (error) {
+              if (tag === "include" && name === "for" && error instanceof ParseError)
+                e.fail("Expected ':'");
+              throw error;
+            }
+            const alias = e.take("as") ? e.name() : undefined;
             const binding = { value, ...(alias ? { alias } : {}) };
             if (name === "with") {
               if (withBinding) e.fail("Duplicate with binding");

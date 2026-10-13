@@ -191,14 +191,23 @@ define("pop", { input: "any", output: "array", minArgs: 0, maxArgs: 0 }, (v) =>
 define("shift", { input: "any", output: "array", minArgs: 0, maxArgs: 0 }, (v) =>
   array(v).slice(1),
 );
-define("slice", { input: "any", output: "unknown", minArgs: 1, maxArgs: 2 }, (v, a) => {
-  if (v === null) return [];
-  const value = isArray(v) ? v : stringify(v);
-  let start = Math.trunc(numeric(a[0])) || 0;
-  const length = a.length < 2 ? 1 : Math.trunc(numeric(a[1])) || 0;
-  if (start < 0) start += value.length;
-  return start < 0 || length < 0 ? (isArray(value) ? [] : "") : value.slice(start, start + length);
-});
+define(
+  "slice",
+  { input: "any", output: "unknown", minArgs: 1, maxArgs: 2 },
+  (v, a, _n, context) => {
+    if (v === null) return [];
+    const value = isArray(v) ? v : stringify(v);
+    let start = Math.trunc(numeric(a[0])) || 0;
+    const length =
+      a.length < 2 || context?.missingArguments[1] ? 1 : Math.trunc(numeric(a[1])) || 0;
+    if (start < 0) start += value.length;
+    return start < 0 || length < 0
+      ? isArray(value)
+        ? []
+        : ""
+      : value.slice(start, start + length);
+  },
+);
 for (const name of ["where", "reject", "find", "find_index", "has"] as const)
   define(
     name,

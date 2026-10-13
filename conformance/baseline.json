@@ -263,10 +263,8 @@
         "sha256": "5ee9173b1b564e61afd2359a897c180b5ea83875a91a28537df4202aad4b3aa7"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "kind": "output",
+        "sha256": "6b278c9dc898c484a33d3e0acc6395e75af3797a816ee7d3f2ec34dee3fbc850"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -277,10 +275,8 @@
         "sha256": "3ed532ca1dcb0a66936d5a38d96185704a116ee2a6bb9743194fb37fb7c0104b"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "kind": "output",
+        "sha256": "0e98646330138871ba177d7fcfcbbf0fefb8eba07a5b692bc8f3f6fa857482ea"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -291,10 +287,8 @@
         "sha256": "5ee9173b1b564e61afd2359a897c180b5ea83875a91a28537df4202aad4b3aa7"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "kind": "output",
+        "sha256": "e37b26de50639f43a2deecbffd7abe68edd93c3256b56dc1df5ffd12a1527a47"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -305,10 +299,8 @@
         "sha256": "7c1618e0d8ec7a3413ba26552698a8ac8491592e377faf83c670e23146a359fb"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "kind": "output",
+        "sha256": "7734653f29938c55a59be1e20adc523b2a3665927081c1cf020599bfb4489874"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -583,10 +575,8 @@
         "sha256": "221745784fb9d979e06392ddc75f4c3e1b5cec648493f2f750e3f71c24e2ced0"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "kind": "output",
+        "sha256": "0ae5aa351fab3477432b6a9f48dec528d3eda5ff4884783b9a5a70c76a4352bc"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -597,10 +587,8 @@
         "sha256": "5ee9173b1b564e61afd2359a897c180b5ea83875a91a28537df4202aad4b3aa7"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "kind": "output",
+        "sha256": "e37b26de50639f43a2deecbffd7abe68edd93c3256b56dc1df5ffd12a1527a47"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -611,10 +599,8 @@
         "sha256": "5ee9173b1b564e61afd2359a897c180b5ea83875a91a28537df4202aad4b3aa7"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "kind": "output",
+        "sha256": "99afb28982bfe749f18ab48f7892c724e0262f2c2ce7c6c08ce947b1b69f0bdf"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -625,10 +611,8 @@
         "sha256": "e79e418e48623569d75e2a7b09ae88ed9b77b126a445b9ff9dc6989a08efa079"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "kind": "output",
+        "sha256": "ac11339ffa8f270c4f781e0a3922bb1c80d9dee6e4b6911ca34538ed9ae03caa"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -649,10 +633,8 @@
         "sha256": "5edfdab5dc635fdd98a581044be6ac1eedf331ab9cad53e32c091421fd6f085a"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "kind": "output",
+        "sha256": "ffe9aaeaa2a2d5048174df0b80599ef0197ec024c4b051bc9860cff58ef7f9f3"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2132,7 +2114,7 @@
       },
       "effectLiquid": {
         "kind": "output",
-        "sha256": "2208d5250938e141ac16edfd32d37b7e5c3b979b3f85e9235f383bae93d95560"
+        "sha256": "3989cb8a0a610e3f2903964ebfee6f6dea1ea35703a1cb1346053203efe781fb"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2983,10 +2965,8 @@
         "sha256": "f391f240a6427c636fc949e1325209d6b8249c5d8cb8d936948578be4918ea98"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "kind": "output",
+        "sha256": "f391f240a6427c636fc949e1325209d6b8249c5d8cb8d936948578be4918ea98"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2997,10 +2977,8 @@
         "sha256": "f391f240a6427c636fc949e1325209d6b8249c5d8cb8d936948578be4918ea98"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "kind": "output",
+        "sha256": "93559909281db3a09ccf13b78ad0d1ae0ab8a82882c6466f444f4fae356286e8"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3011,10 +2989,8 @@
         "sha256": "f391f240a6427c636fc949e1325209d6b8249c5d8cb8d936948578be4918ea98"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "kind": "output",
+        "sha256": "93559909281db3a09ccf13b78ad0d1ae0ab8a82882c6466f444f4fae356286e8"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3025,10 +3001,8 @@
         "sha256": "f391f240a6427c636fc949e1325209d6b8249c5d8cb8d936948578be4918ea98"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "kind": "output",
+        "sha256": "106c559bb630a0177886bf441f6fa12f319e35cc877636350ca5bcc1ccaadc3b"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3039,10 +3013,8 @@
         "sha256": "f391f240a6427c636fc949e1325209d6b8249c5d8cb8d936948578be4918ea98"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "kind": "output",
+        "sha256": "f391f240a6427c636fc949e1325209d6b8249c5d8cb8d936948578be4918ea98"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3053,10 +3025,8 @@
         "sha256": "4f3b80b1c5e072aed2971ae579d2508952eb38c8a7f8fe47996a526c0daa5690"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "kind": "output",
+        "sha256": "5f7b80700205ad38028e459c86ffe5896f718247618175492b7e1471e50f91b1"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3148,7 +3118,7 @@
       },
       "effectLiquid": {
         "kind": "output",
-        "sha256": "4771b2bbd4c017e3f1b42fc634c10d3bd1dc96e828f1cc7742cdcee3aa312180"
+        "sha256": "be041fa7e6ac36a05c340a0b8464a4a6f25f3773f351ab2e99ab885075d71994"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3162,7 +3132,7 @@
       },
       "effectLiquid": {
         "kind": "output",
-        "sha256": "a9b8171553004efe1b6bfd9416938c89d589fd93e11f4e717b52d6e55f9f54c4"
+        "sha256": "8df2c60e309127c409bb7e728f9f3df1db9e03eb141c295c0c3740754e58e7ed"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3358,20 +3328,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/specs.yml:6858:0": {
-      "fixtureHash": "e155866f1f319864102d6e8b5488ca0cc527a41804c37f1d9a2081d2ab8cb870",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Invalid comment syntax"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/specs.yml:6865:0": {
       "fixtureHash": "910295df5ebe4b0b5dcd7f0fd9614970544917af31e08727910d612031911a74",
       "liquidjs": {
@@ -3397,8 +3353,10 @@
         "message": "illegal tag syntax, tag name expected, line:1, col:16"
       },
       "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "kind": "error",
+        "phase": "parse",
+        "category": "syntax",
+        "message": "Invalid comment-body tag"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3411,8 +3369,10 @@
         "message": "illegal tag syntax, tag name expected, line:1, col:17"
       },
       "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "kind": "error",
+        "phase": "parse",
+        "category": "syntax",
+        "message": "Unclosed tag"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3468,7 +3428,7 @@
       },
       "effectLiquid": {
         "kind": "output",
-        "sha256": "e22d1634082ab178ef02e255bac5b98dd998ed2e5a81d22461fd9da05ac520b9"
+        "sha256": "4b26bed4ad6d7f9587d0ced080c2b51245aadc84f5fd54a8cc4b0d8a30343c5b"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3692,20 +3652,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/specs.yml:764:0": {
-      "fixtureHash": "a04f5269be8e586d75ad13128c53d536e9b4c137eaed2698242bdf4fe391ea84",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "unknown-tag",
-        "message": "Unsupported tag 'endraw'"
-      },
-      "reason": "Tag not implemented"
-    },
     "liquid-spec:specs/liquid_ruby/specs.yml:7780:0": {
       "fixtureHash": "f54f8cd3971b2b6c85c2a37d3942d445ce836b6c7fb12c1077191039c7ffbadd",
       "liquidjs": {
@@ -3727,10 +3673,12 @@
         "message": "tag \"endif\" not found, line:5, col:3"
       },
       "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "kind": "error",
+        "phase": "parse",
+        "category": "unknown-tag",
+        "message": "Unsupported tag 'endif'"
       },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
+      "reason": "Tag not implemented"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:807:0": {
       "fixtureHash": "3acd5ad34a9618ffdda17cfc6734f7fe749acbd893eb02ed7971bcb543df2080",
@@ -3819,10 +3767,12 @@
         "message": "tag \"endcomment\" not found, line:6, col:1"
       },
       "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "kind": "error",
+        "phase": "parse",
+        "category": "unknown-tag",
+        "message": "Unsupported tag 'endcomment'"
       },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
+      "reason": "Tag not implemented"
     },
     "liquid-spec:specs/liquid_ruby/specs.yml:99:0": {
       "fixtureHash": "e3da1df23020e44ae35e4afd9b52808f1ccddf617b122f91cc6f6162c9b5f346",
@@ -6100,7 +6050,7 @@
       },
       "effectLiquid": {
         "kind": "output",
-        "sha256": "79fe78007fa10e0d7ff3a42515ccec28fd8cd95dadf3e5b94bbea68d26d19e36"
+        "sha256": "8f8299750494b841fa9808b7044540b4cde1d2e49881c737d224efafbcac567d"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -8059,32 +8009,6 @@
       "fixtureHash": "eeeb99645ce00ff63850057a620ad48cf8174b54cecb3431bc6a4aa9fc730dc3",
       "liquidjs": {
         "kind": "parsed"
-      },
-      "effectLiquid": {
-        "kind": "parsed"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/parser_errors/comment.yml:32:0": {
-      "fixtureHash": "d2d819201b1b6466ea5130f47a8c9f85a078e2726bd57d279e3b477f62f650ab",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "raw \"{% raw %}hello{% endcomment %}\" not closed, line:1, col:23"
-      },
-      "effectLiquid": {
-        "kind": "parsed"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/parser_errors/comment.yml:44:0": {
-      "fixtureHash": "9ca33f81787880111ea67e474e0a12d090060faa7fa6cb1b925b03b2d77dbf54",
-      "liquidjs": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "output \"{{ liquid{% endcomment %}\" not closed, line:1, col:39"
       },
       "effectLiquid": {
         "kind": "parsed"
@@ -12935,10 +12859,7 @@
         "kind": "parsed"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "kind": "parsed"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -18838,10 +18759,8 @@
         "sha256": "5ee9173b1b564e61afd2359a897c180b5ea83875a91a28537df4202aad4b3aa7"
       },
       "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "kind": "output",
+        "sha256": "8d7fce37738aee2223d7493f8edb27076e362b037dc9579b634f9d0f73f2d0fa"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19206,7 +19125,7 @@
       "fixtureHash": "aec991df6e801ece4788637dd669a366b5e4c46d136e09cae9bb9cfb25297059",
       "liquidjs": {
         "kind": "output",
-        "sha256": "6ebf09d3033e54c3f4cb6c478cfd79f8332887350ddc0b9ca1681682aa149b0c"
+        "sha256": "9fa9566ecc4aabc5b661c002c0c4b01b4945ce28640f3f1d1dba9b623f7058d9"
       },
       "effectLiquid": {
         "kind": "unsupported-configuration",
@@ -19717,7 +19636,7 @@
       },
       "effectLiquid": {
         "kind": "output",
-        "sha256": "e7a5296e7767c9ddce459c1e2b07366994408adf87c69ffddf7e3a287b6a2579"
+        "sha256": "0d65ccb913e32a373cdc3be6c03f519cf2d48e3b90e657fc9a6217de4e6a3158"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -19963,9 +19882,9 @@
       },
       "effectLiquid": {
         "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "phase": "render",
+        "category": "load",
+        "message": "Template not found: nested_product_template"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -20011,9 +19930,9 @@
       },
       "effectLiquid": {
         "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "phase": "render",
+        "category": "load",
+        "message": "Template not found: product"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -20075,9 +19994,9 @@
       },
       "effectLiquid": {
         "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "phase": "render",
+        "category": "load",
+        "message": "Template not found: product"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -20139,9 +20058,9 @@
       },
       "effectLiquid": {
         "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Expected ':'"
+        "phase": "render",
+        "category": "load",
+        "message": "Template not found: product"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -20204,20 +20123,6 @@
         "message": "Unsupported tag 'endcomment'"
       },
       "reason": "Tag not implemented"
-    },
-    "ruby-liquid:test/integration/tags/standard_tag_test.rb:36:4": {
-      "fixtureHash": "c0f89f7cc0323cce23d6b37b83dfeecb4e8f7db5eac10101e3ed1c0ae3c8a1a2",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Invalid comment syntax"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
     "ruby-liquid:test/integration/tags/table_row_test.rb:19:4": {
       "fixtureHash": "4bf1a508480a76f727c492389c100aef57d2ce252e052258b8ceeb1a9fd0a424",
@@ -21015,7 +20920,7 @@
       },
       "effectLiquid": {
         "kind": "output",
-        "sha256": "a9b8171553004efe1b6bfd9416938c89d589fd93e11f4e717b52d6e55f9f54c4"
+        "sha256": "8df2c60e309127c409bb7e728f9f3df1db9e03eb141c295c0c3740754e58e7ed"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -21029,7 +20934,7 @@
       },
       "effectLiquid": {
         "kind": "output",
-        "sha256": "4771b2bbd4c017e3f1b42fc634c10d3bd1dc96e828f1cc7742cdcee3aa312180"
+        "sha256": "be041fa7e6ac36a05c340a0b8464a4a6f25f3773f351ab2e99ab885075d71994"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -21153,20 +21058,6 @@
       },
       "reason": "Tag not implemented"
     },
-    "shopify-liquid:test/integration/tags/standard_tag_test.rb:42:4": {
-      "fixtureHash": "869d3a1c1af82293a153c97dcbdabfdf8b095e943e624ba7b7a103834c7e57d8",
-      "liquidjs": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "effectLiquid": {
-        "kind": "error",
-        "phase": "parse",
-        "category": "syntax",
-        "message": "Invalid comment syntax"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "shopify-liquid:test/integration/tags/standard_tag_test.rb:43:4": {
       "fixtureHash": "5ea5ef93887ecec6c5f72a880834eacff266f5b21d7e21bf25af19cf26aea670",
       "liquidjs": {
@@ -21176,8 +21067,10 @@
         "message": "illegal tag syntax, tag name expected, line:1, col:17"
       },
       "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "kind": "error",
+        "phase": "parse",
+        "category": "syntax",
+        "message": "Unclosed tag"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -21190,8 +21083,10 @@
         "message": "illegal tag syntax, tag name expected, line:1, col:16"
       },
       "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "kind": "error",
+        "phase": "parse",
+        "category": "syntax",
+        "message": "Invalid comment-body tag"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },

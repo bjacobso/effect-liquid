@@ -72,7 +72,7 @@ export const analyzeProject = <E = never, R = never>(
           const childResolve = (p: string): readonly string[] => {
             const root = /^[^.[]+/.exec(p)?.[0] ?? p;
             const suffix = p.slice(root.length);
-            if (dep.iteration && root === "forloop") return [];
+            if (dep.mode === "render" && dep.iteration && root === "forloop") return [];
             const argument = Object.getOwnPropertyDescriptor(dep.args, root)?.value as
               | Dependency["args"][string]
               | undefined;

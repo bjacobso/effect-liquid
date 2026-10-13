@@ -156,7 +156,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/roadmap-compat.test.ts"
       ]
     },
     "include": {
@@ -184,7 +185,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/roadmap-compat.test.ts"
       ]
     },
     "render": {
@@ -296,7 +298,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/roadmap-compat.test.ts"
       ]
     },
     "if": {
@@ -408,7 +411,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/roadmap-compat.test.ts"
       ]
     },
     "tablerow": {
@@ -436,7 +440,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/roadmap-compat.test.ts"
       ]
     },
     "unless": {
@@ -1642,7 +1647,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/roadmap-compat.test.ts"
       ]
     },
     "where": {
@@ -3578,9 +3584,10 @@
     },
     {
       "feature": "raw trim delimiters",
-      "behavior": "Accepts trimmed endraw delimiters that the pinned oracle rejects.",
+      "behavior": "Uses Ruby raw delimiters: accepts trimmed endraw, preserves literal body whitespace, and closes at a complete endraw tag rather than an earlier malformed opener.",
       "tests": [
-        "test/conformance.test.ts"
+        "test/conformance.test.ts",
+        "test/roadmap-compat.test.ts"
       ]
     },
     {
@@ -3601,6 +3608,13 @@
     {
       "feature": "numeric non-finite results",
       "behavior": "Rejected by the finite Liquid value boundary instead of printing Infinity/NaN."
+    },
+    {
+      "feature": "include iteration and aliases",
+      "behavior": "Ruby include for loops and with/as aliases; implicit item name is the evaluated template name, and forloop is inherited. LiquidJS 10.29.0 instead treats for/as words as boolean hash arguments and renders once.",
+      "tests": [
+        "test/roadmap-compat.test.ts"
+      ]
     }
   ],
   "api": {

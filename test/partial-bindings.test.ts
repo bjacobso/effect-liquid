@@ -118,7 +118,6 @@ describe("partial bindings", () => {
     '{% render "p" with %}',
     '{% render "p" for items as %}',
     '{% render "p" with one with two %}',
-    '{% include "p" for items as item %}',
   ])("rejects malformed or unsupported binding %s", async (source) => {
     expect(await Effect.runPromise(Effect.isFailure(Liquid.parse(source)))).toBe(true);
   });

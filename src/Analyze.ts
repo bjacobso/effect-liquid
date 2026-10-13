@@ -342,7 +342,11 @@ export const analyze = <E, R>(
             if (n.with && (n.with.alias ?? target) !== undefined)
               args[n.with.alias ?? target!] = n.with.value;
             const iteration = n.for
-              ? { name: n.for.alias ?? "undefined", collection: n.for.value }
+              ? {
+                  name:
+                    n.for.alias ?? (n.mode === "include" ? (target ?? "undefined") : "undefined"),
+                  collection: n.for.value,
+                }
               : undefined;
             if (iteration) {
               args[iteration.name] = iteration.collection;
