@@ -12,6 +12,8 @@ pnpm check
 pnpm benchmark
 ```
 
+`pnpm benchmark` reports warmed timings and checks local regression budgets: 20 ms for the 100-product render and 200 ms for each 10,000-output render mode. Unit tests allow 1,000 ms for the large loop to accommodate CI contention.
+
 Uses Node.js 22+, pnpm 10.20.0, TypeScript 5.9.3, and Effect 3.22.2. CI targets Node 22 and 24. The core bundles for browsers; platform filesystem code lives in a separate module. All exports are ESM with TypeScript declarations.
 
 ## Parse and render
@@ -177,7 +179,7 @@ Project analysis loads literal dependencies, maps render parameters to caller in
 
 `effect-liquid/node` exports `fileLoader(root, extension?)`, requiring Effect platform `FileSystem` and `Path` layers. It canonicalizes paths and confines resolved templates to the configured root, including symlinks.
 
-Streams produce chunks on demand, preserve order, and clean up interrupted extensions. An error may follow already-emitted output. Captures buffer their bodies. Default limits are 1,000,000 evaluation steps, 100,000 loop iterations, 64 partial levels, and 10,000,000 generated UTF-8 bytes; captured content counts when generated and again when output. Parsing defaults to 1,000,000 source code units, 100,000 template tokens, and depth 128 (hard ceiling 256). Normalization bounds input depth, node count, and total string length.
+Buffered rendering collects output directly from the shared AST interpreter. Streams pull bounded batches on demand, preserve order, flush prior output before later effects or failures, and clean up interrupted extensions. Both modes yield periodically so large loops remain interruptible. An error may follow already-emitted output. Captures buffer their bodies. Default limits are 1,000,000 evaluation steps, 100,000 loop iterations, 64 partial levels, and 10,000,000 generated UTF-8 bytes; captured content counts when generated and again when output. Parsing defaults to 1,000,000 source code units, 100,000 template tokens, and depth 128 (hard ceiling 256). Normalization bounds input depth, node count, and total string length.
 
 ## Check a document
 
