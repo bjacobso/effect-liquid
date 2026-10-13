@@ -42,6 +42,7 @@ export const analyzeProject = <E = never, R = never>(
       Effect.gen(function* () {
         yield* Effect.yieldNow();
         documents.push({ id: doc.source.id, analysis });
+        diagnostics.push(...analysis.diagnostics);
         for (const reason of analysis.coverageReasons)
           if (!reason.startsWith("Unanalyzed ")) reasons.add(reason);
         for (const p of [...analysis.externalPaths, ...analysis.derivedInputPaths])
@@ -64,6 +65,7 @@ export const analyzeProject = <E = never, R = never>(
             continue;
           }
           const child = yield* parse(source, {
+            ...(doc.parseLimit === undefined ? {} : { parseLimit: doc.parseLimit }),
             ...doc.whitespace,
             ...doc.delimiters,
             groupedExpressions: doc.groupedExpressions ?? false,
@@ -72,7 +74,7 @@ export const analyzeProject = <E = never, R = never>(
           const childResolve = (p: string): readonly string[] => {
             const root = /^[^.[]+/.exec(p)?.[0] ?? p;
             const suffix = p.slice(root.length);
-            if (dep.iteration && root === "forloop") return [];
+            if (dep.mode === "render" && dep.iteration && root === "forloop") return [];
             const argument = Object.getOwnPropertyDescriptor(dep.args, root)?.value as
               | Dependency["args"][string]
               | undefined;

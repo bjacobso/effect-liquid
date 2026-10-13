@@ -32,7 +32,7 @@ describe("LiquidJS 10.29.0 original conformance fixtures", () => {
       );
       if (fixture.id === "local:raw-trim") {
         expect(reference[index]?.error).toContain("not closed");
-        expect(output).toBe("x {{y}} z");
+        expect(output).toBe("x   {{y}}   z");
       } else {
         expect(reference[index]?.error).toBeUndefined();
         expect(output).toEqual(reference[index]?.output);

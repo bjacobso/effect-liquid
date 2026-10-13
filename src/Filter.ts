@@ -8,12 +8,30 @@ export interface Signature {
   readonly argument?: "string" | "number";
   readonly positionalArguments?: readonly ("string" | "number" | "boolean" | "any")[];
 }
+export interface DateOptions {
+  readonly timezoneOffset?: number | string | undefined;
+  readonly preserveTimezones?: boolean;
+  readonly locale?: string;
+  readonly dateFormat?: string;
+}
 export interface FilterCallContext {
+  readonly date?: DateOptions;
+  readonly allocationLimit?: number;
   readonly missingArguments: readonly boolean[];
+  readonly nilArguments?: readonly boolean[];
   readonly specialArguments: readonly ("empty" | "blank" | undefined)[];
   readonly jekyllWhere: boolean;
 }
+export interface AnalysisMetadata {
+  readonly provenance: "input" | "independent" | "unknown";
+}
 export interface NativeFilter<E = never, R = never> {
+  readonly analysis?: AnalysisMetadata;
+  readonly allocation?: (
+    input: Value,
+    args: readonly Value[],
+    context: FilterCallContext,
+  ) => number;
   readonly run: (
     input: Value,
     args: readonly Value[],
@@ -23,6 +41,7 @@ export interface NativeFilter<E = never, R = never> {
   readonly signature?: Signature;
 }
 export interface ExpressionFilter {
+  readonly analysis?: AnalysisMetadata;
   readonly expression: "where" | "reject" | "find" | "find_index" | "has" | "group_by";
   readonly signature: Signature;
 }

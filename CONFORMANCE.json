@@ -156,7 +156,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/roadmap-compat.test.ts"
       ]
     },
     "include": {
@@ -184,7 +185,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/roadmap-compat.test.ts"
       ]
     },
     "render": {
@@ -296,7 +298,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/roadmap-compat.test.ts"
       ]
     },
     "if": {
@@ -408,7 +411,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/roadmap-compat.test.ts"
       ]
     },
     "tablerow": {
@@ -436,7 +440,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/roadmap-compat.test.ts"
       ]
     },
     "unless": {
@@ -1642,7 +1647,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/roadmap-compat.test.ts"
       ]
     },
     "where": {
@@ -2037,7 +2043,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/date-options.test.ts"
       ]
     },
     "date_to_xmlschema": {
@@ -2065,7 +2072,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/date-options.test.ts"
       ]
     },
     "date_to_rfc822": {
@@ -2093,7 +2101,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/date-options.test.ts"
       ]
     },
     "date_to_string": {
@@ -2121,7 +2130,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/date-options.test.ts"
       ]
     },
     "date_to_long_string": {
@@ -2149,7 +2159,8 @@
         "test/render-options.test.ts",
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
-        "test/parser-compat.test.ts"
+        "test/parser-compat.test.ts",
+        "test/date-options.test.ts"
       ]
     },
     "append": {
@@ -3084,10 +3095,18 @@
       "status": "deferred"
     },
     "dateFormat": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/date-options.test.ts"
+      ],
+      "behavior": "Default date format when the filter format is nil or omitted."
     },
     "locale": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/date-options.test.ts"
+      ],
+      "behavior": "Intl month and weekday names; core defaults to en-US."
     },
     "trimTagRight": {
       "status": "partial",
@@ -3342,7 +3361,11 @@
       ]
     },
     "preserveTimezones": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/date-options.test.ts"
+      ],
+      "behavior": "Preserves offsets from date strings unless the filter supplies a timezone argument; applies to all date aliases."
     },
     "strictFilters": {
       "status": "partial",
@@ -3485,7 +3508,8 @@
       ]
     },
     "keepOutputType": {
-      "status": "deferred"
+      "status": "deferred",
+      "rationale": "Deferred: render returns Effect<string> and renderStream emits strings. A separate typed-output API needs an owner-approved contract; configuration cannot silently widen existing return types."
     },
     "operators": {
       "status": "deferred"
@@ -3519,13 +3543,25 @@
       ]
     },
     "memoryLimit": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/date-options.test.ts"
+      ],
+      "behavior": "Cumulative conservative allocation units, capped at 10,000,000; range/filter growth and date widths checked before allocation."
     },
     "parseLimit": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/date-options.test.ts"
+      ],
+      "behavior": "Source code units, capped by maxSourceLength; inherited by partials."
     },
     "renderLimit": {
-      "status": "deferred"
+      "status": "partial",
+      "tests": [
+        "test/date-options.test.ts"
+      ],
+      "behavior": "Deterministic work budget ceil(renderLimit * 1000), minimum one, capped by maxSteps; no wall-clock deadline."
     },
     "outputEscape": {
       "status": "partial",
@@ -3554,6 +3590,13 @@
         "test/layout.test.ts",
         "test/parser-compat.test.ts"
       ]
+    },
+    "timezoneOffset": {
+      "status": "partial",
+      "tests": [
+        "test/date-options.test.ts"
+      ],
+      "behavior": "Numeric minute offset or IANA timezone; explicit filter arguments override configuration."
     }
   },
   "syntax": {
@@ -3578,14 +3621,15 @@
     },
     {
       "feature": "raw trim delimiters",
-      "behavior": "Accepts trimmed endraw delimiters that the pinned oracle rejects.",
+      "behavior": "Uses Ruby raw delimiters: accepts trimmed endraw, preserves literal body whitespace, and closes at a complete endraw tag rather than an earlier malformed opener.",
       "tests": [
-        "test/conformance.test.ts"
+        "test/conformance.test.ts",
+        "test/roadmap-compat.test.ts"
       ]
     },
     {
       "feature": "resource limits",
-      "behavior": "Finite limits with typed errors and cancellation checkpoints; units/defaults are independent of LiquidJS."
+      "behavior": "Finite limits with typed errors and interruption checkpoints. parseLimit maps to source code units; renderLimit maps to bounded deterministic work rather than elapsed time; memoryLimit uses conservative cumulative allocation units. Existing finite defaults remain caps."
     },
     {
       "feature": "duplicate named arguments",
@@ -3601,15 +3645,22 @@
     {
       "feature": "numeric non-finite results",
       "behavior": "Rejected by the finite Liquid value boundary instead of printing Infinity/NaN."
+    },
+    {
+      "feature": "include iteration and aliases",
+      "behavior": "Ruby include for loops (scalar records render once) and with/as aliases; implicit item name is the evaluated template name, and forloop is inherited. LiquidJS 10.29.0 instead treats for/as words as boolean hash arguments and renders once.",
+      "tests": [
+        "test/roadmap-compat.test.ts"
+      ]
     }
   ],
   "api": {
     "parse": "implemented",
     "render": "implemented",
     "renderStream": "implemented as Effect Stream",
-    "analyze": "implemented with explicit conservative-flow coverage",
+    "analyze": "implemented with bounded fixed-point local flow and explicit partial coverage for unknown summaries",
     "analyzeProject": "implemented for bounded render dependencies; include summaries are partial",
-    "check": "experimental gradual checker",
+    "check": "experimental gradual checker sharing bounded control-flow transfer rules",
     "checkProject": "experimental render-contract checking",
     "typedTemplates": "tagged templates with typed external paths and render context; raw Liquid checked separately",
     "schema": "decoded structural projection; recursive/opaque shapes are partial",
@@ -3620,5 +3671,14 @@
     "syncPromiseFacades": "out of scope",
     "browser": "core bundle verified; no Node adapters imported by parser",
     "cli": "local parse/analyze/render/check; filesystem project CLI deferred"
+  },
+  "analysis": {
+    "flow": "Reads before writes, branch joins, zero iterations, shadow restoration, capture timing, scoped builtins, and normal/break/continue successors.",
+    "bounds": "16 fixed-point rounds and 100,000 node visits; widened/opaque results are partial.",
+    "tests": [
+      "test/flow-analysis.test.ts",
+      "test/robustness.test.ts"
+    ],
+    "remaining": "Shared include/project cycles, counter seeds, table-row control quirks, and unknown transformation provenance."
   }
 }

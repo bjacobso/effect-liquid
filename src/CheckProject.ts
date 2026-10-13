@@ -74,16 +74,17 @@ export const checkProject = <E = never, R = never>(
             continue;
           }
           const child = yield* parse(source, {
+            ...(doc.parseLimit === undefined ? {} : { parseLimit: doc.parseLimit }),
             ...doc.whitespace,
             groupedExpressions: doc.groupedExpressions ?? false,
           });
           if (dep.mode === "include") {
             incomplete("Shared include contract requires a flow summary", doc);
-            continue;
           }
           const fields: Record<string, T.Type> = Object.assign(
             Object.create(null),
             options.globals,
+            dep.mode === "include" && context._tag === "Record" ? context.fields : {},
           );
           for (const [name, arg] of Object.entries(dep.args)) {
             const type = result.expressionTypes[`${arg.span.start}:${arg.span.end}`] ?? T.unknown;
@@ -95,14 +96,18 @@ export const checkProject = <E = never, R = never>(
                         ? member.item
                         : member._tag === "Tuple"
                           ? T.union(...member.items)
-                          : member._tag === "String"
-                            ? T.string
-                            : T.unknown,
+                          : dep.mode === "include" &&
+                              member._tag !== "Nil" &&
+                              member._tag !== "Missing"
+                            ? member
+                            : member._tag === "String"
+                              ? T.string
+                              : T.unknown,
                     ),
                   )
                 : type;
           }
-          if (dep.iteration)
+          if (dep.mode === "render" && dep.iteration)
             fields.forloop = T.record({
               index: T.number,
               index0: T.number,

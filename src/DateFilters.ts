@@ -1,6 +1,6 @@
 import { Effect } from "effect";
 import { BuiltinFilterError } from "./Diagnostic.js";
-import type { Filter } from "./Filter.js";
+import type { DateOptions, Filter, FilterCallContext } from "./Filter.js";
 import { stringify, type Value } from "./Value.js";
 
 const months = [
@@ -34,7 +34,7 @@ function parse(value: Value): Date | undefined {
 }
 
 function timezoneOffset(date: Date, timezone: Value | undefined): number {
-  if (typeof timezone === "number") return timezone;
+  if (typeof timezone === "number" || typeof timezone === "boolean") return Number(timezone);
   if (typeof timezone !== "string") return 0;
   const parts = new Intl.DateTimeFormat("en-US", {
     timeZone: timezone,
@@ -65,6 +65,8 @@ function format(
   offset = 0,
   timezoneName = "UTC",
   instant = date,
+  locale = "en-US",
+  allocationLimit = 10_000_000,
 ): string {
   const year = date.getUTCFullYear();
   const month = date.getUTCMonth();
@@ -87,12 +89,14 @@ function format(
           : day % 10 === 3
             ? "rd"
             : "th";
+  const localize = (options: Intl.DateTimeFormatOptions) =>
+    new Intl.DateTimeFormat(locale, { ...options, timeZone: "UTC" }).format(date);
   const codes: Record<string, string> = {
-    a: weekdays[weekday]!.slice(0, 3),
-    A: weekdays[weekday]!,
-    b: months[month]!.slice(0, 3),
-    B: months[month]!,
-    h: months[month]!.slice(0, 3),
+    a: locale === "en-US" ? weekdays[weekday]!.slice(0, 3) : localize({ weekday: "short" }),
+    A: locale === "en-US" ? weekdays[weekday]! : localize({ weekday: "long" }),
+    b: locale === "en-US" ? months[month]!.slice(0, 3) : localize({ month: "short" }),
+    B: locale === "en-US" ? months[month]! : localize({ month: "long" }),
+    h: locale === "en-US" ? months[month]!.slice(0, 3) : localize({ month: "short" }),
     C: String(Math.floor(year / 100)),
     d: String(day),
     e: String(day),
@@ -117,7 +121,9 @@ function format(
     y: String(year).slice(-2),
     Y: String(year),
     z: `${offset <= 0 ? "+" : "-"}${pad(Math.floor(Math.abs(offset) / 60))}${pad(Math.abs(offset) % 60)}`,
-    Z: timezoneName,
+    Z:
+      timezoneName ||
+      `${offset <= 0 ? "+" : "-"}${pad(Math.floor(Math.abs(offset) / 60))}${pad(Math.abs(offset) % 60)}`,
     t: "\t",
     n: "\n",
     "%": "%",
@@ -136,7 +142,10 @@ function format(
     ) => {
       let value = codes[code];
       if (value === undefined) return matched;
-      if (code === "N" && width) value = value.slice(0, Number(width)).padEnd(Number(width), "0");
+      const requestedWidth = Number(width) || 0;
+      if (requestedWidth > allocationLimit || !Number.isSafeInteger(requestedWidth))
+        throw new Error("Date allocation limit exceeded");
+      if (code === "N" && width) value = value.slice(0, requestedWidth).padEnd(requestedWidth, "0");
       if (flags.includes("^")) value = value.toUpperCase();
       else if (flags.includes("#"))
         value = /[a-z]/.test(value) ? value.toUpperCase() : value.toLowerCase();
@@ -160,36 +169,84 @@ function format(
         flags.includes("_") || ("e k l".split(" ").includes(code) && !flags.includes("0"))
           ? " "
           : "0";
-      if (code === "z" && flags.includes(":")) value = `${value.slice(0, 3)}:${value.slice(3)}`;
-      return value.padStart(Math.min(size, 1000), fill);
+      if ((code === "z" || (code === "Z" && !timezoneName)) && flags.includes(":"))
+        value = `${value.slice(0, 3)}:${value.slice(3)}`;
+      return value.padStart(size, fill);
     },
   );
 }
 
-function run(name: string, value: Value, args: readonly Value[]): Value {
+function run(
+  name: string,
+  value: Value,
+  args: readonly Value[],
+  context?: FilterCallContext,
+): Value {
   const date = parse(value);
   if (!date) return value;
-  if (name === "date") {
-    const timezone = args[1];
-    const offset = timezoneOffset(date, timezone);
-    const display = new Date(date.getTime() - offset * 60_000);
-    return format(
-      display,
-      args[0] == null ? "%A, %B %-e, %Y at %-l:%M %P %z" : stringify(args[0]),
-      offset,
-      typeof timezone === "string" ? timezone : timezone === undefined ? "UTC" : "",
-      date,
-    );
+  const options: DateOptions = context?.date ?? {};
+  const explicit = name === "date" && args.length > 1 && !context?.missingArguments[1];
+  let timezone: Value | undefined = explicit
+    ? context?.nilArguments?.[1]
+      ? 0
+      : (args[1] ?? options.timezoneOffset)
+    : options.timezoneOffset;
+  if (options.preserveTimezones && !explicit && typeof value === "string" && !/^\d+$/.test(value)) {
+    const zone = /(?:([zZ])|([+-])(\d{2}):?(\d{2}))$/.exec(value);
+    timezone = zone?.[1]
+      ? 0
+      : zone
+        ? (zone[2] === "+" ? -1 : 1) * (Number(zone[3]) * 60 + Number(zone[4]))
+        : undefined;
   }
-  if (name === "date_to_xmlschema") return format(date, "%Y-%m-%dT%H:%M:%S%:z");
-  if (name === "date_to_rfc822") return format(date, "%a, %d %b %Y %H:%M:%S %z");
+  const offset = timezoneOffset(date, timezone);
+  const display = new Date(date.getTime() - offset * 60_000);
+  const timezoneName =
+    typeof timezone === "string" ? timezone : timezone === undefined ? "UTC" : "";
+  const fmt = (pattern: string) =>
+    format(
+      display,
+      pattern,
+      offset,
+      timezoneName,
+      date,
+      options.locale || "en-US",
+      context?.allocationLimit,
+    );
+  if (name === "date")
+    return fmt(
+      args[0] == null
+        ? (options.dateFormat ?? "%A, %B %-e, %Y at %-l:%M %P %z")
+        : stringify(args[0]),
+    );
+  if (name === "date_to_xmlschema") return fmt("%Y-%m-%dT%H:%M:%S%:z");
+  if (name === "date_to_rfc822") return fmt("%a, %d %b %Y %H:%M:%S %z");
   const monthCode = name === "date_to_string" ? "%b" : "%B";
-  const day = date.getUTCDate();
+  const day = display.getUTCDate();
   if (args[0] === "ordinal")
-    return args[1] === "US"
-      ? format(date, `${monthCode} ${day}%q, %Y`)
-      : format(date, `${day}%q ${monthCode} %Y`);
-  return format(date, `%d ${monthCode} %Y`);
+    return args[1] === "US" ? fmt(`${monthCode} ${day}%q, %Y`) : fmt(`${day}%q ${monthCode} %Y`);
+  return fmt(`%d ${monthCode} %Y`);
+}
+
+function allocation(
+  name: string,
+  value: Value,
+  args: readonly Value[],
+  context: FilterCallContext,
+): number {
+  if (!parse(value)) return typeof value === "string" ? value.length : 0;
+  const pattern =
+    name === "date"
+      ? args[0] == null
+        ? (context.date?.dateFormat ?? "%A, %B %-e, %Y at %-l:%M %P %z")
+        : stringify(args[0])
+      : "%Y-%m-%dT%H:%M:%S%:z";
+  let size = pattern.length + (typeof value === "string" ? value.length : 0);
+  for (const match of pattern.matchAll(/%([-_0^#:]+)?(\d+)?([EO])?(.)/g)) {
+    const width = Number(match[2]) || 0;
+    if (!match[1]?.includes("-") || match[4] === "N") size += width;
+  }
+  return size;
 }
 export const filters: readonly [string, Filter<BuiltinFilterError>][] = [
   "date",
@@ -206,9 +263,10 @@ export const filters: readonly [string, Filter<BuiltinFilterError>][] = [
       minArgs: 0,
       maxArgs: name === "date" ? 2 : name.endsWith("string") ? 2 : 0,
     },
-    run: (value, args) =>
+    allocation: (value, args, context) => allocation(name, value, args, context),
+    run: (value, args, _named, context) =>
       Effect.try({
-        try: () => run(name, value, args),
+        try: () => run(name, value, args, context),
         catch: (cause) => new BuiltinFilterError({ message: String(cause) }),
       }),
   },

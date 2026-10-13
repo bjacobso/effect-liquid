@@ -2,7 +2,7 @@ import { writeFileSync } from "node:fs";
 import { Liquid } from "liquidjs";
 import { registry } from "../dist/Builtins.js";
 
-const reference = new Liquid();
+const reference = new Liquid({ timezoneOffset: 0 });
 const tags = new Set([
   "assign",
   "layout",
@@ -44,6 +44,13 @@ const implementedOptions = new Set([
   "tagDelimiterRight",
   "outputDelimiterLeft",
   "outputDelimiterRight",
+  "timezoneOffset",
+  "preserveTimezones",
+  "locale",
+  "dateFormat",
+  "memoryLimit",
+  "parseLimit",
+  "renderLimit",
 ]);
 const inventory = (names, implemented) =>
   Object.fromEntries(

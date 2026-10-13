@@ -191,14 +191,23 @@ define("pop", { input: "any", output: "array", minArgs: 0, maxArgs: 0 }, (v) =>
 define("shift", { input: "any", output: "array", minArgs: 0, maxArgs: 0 }, (v) =>
   array(v).slice(1),
 );
-define("slice", { input: "any", output: "unknown", minArgs: 1, maxArgs: 2 }, (v, a) => {
-  if (v === null) return [];
-  const value = isArray(v) ? v : stringify(v);
-  let start = Math.trunc(numeric(a[0])) || 0;
-  const length = a.length < 2 ? 1 : Math.trunc(numeric(a[1])) || 0;
-  if (start < 0) start += value.length;
-  return start < 0 || length < 0 ? (isArray(value) ? [] : "") : value.slice(start, start + length);
-});
+define(
+  "slice",
+  { input: "any", output: "unknown", minArgs: 1, maxArgs: 2 },
+  (v, a, _n, context) => {
+    if (v === null) return [];
+    const value = isArray(v) ? v : stringify(v);
+    let start = Math.trunc(numeric(a[0])) || 0;
+    const length =
+      a.length < 2 || context?.missingArguments[1] ? 1 : Math.trunc(numeric(a[1])) || 0;
+    if (start < 0) start += value.length;
+    return start < 0 || length < 0
+      ? isArray(value)
+        ? []
+        : ""
+      : value.slice(start, start + length);
+  },
+);
 for (const name of ["where", "reject", "find", "find_index", "has"] as const)
   define(
     name,
@@ -284,4 +293,86 @@ for (const operation of ["where", "reject", "find", "find_index", "has", "group_
       },
     },
   ]);
-export const registry: Registry<BuiltinFilterError> = { filters: new Map(entries) };
+const allocatingArrays = new Set([
+  "reverse",
+  "sort",
+  "sort_natural",
+  "uniq",
+  "compact",
+  "where",
+  "reject",
+  "map",
+  "concat",
+  "pop",
+  "shift",
+  "push",
+  "unshift",
+]);
+const lengthOf = (value: Value | undefined): number =>
+  isArray(value) ? value.length : value == null ? 0 : 1;
+function allocation(name: string, value: Value, args: readonly Value[]): number {
+  if (allocatingArrays.has(name)) {
+    const size = lengthOf(value);
+    return name === "concat"
+      ? size + lengthOf(args[0])
+      : name === "push" || name === "unshift"
+        ? size + args.length
+        : size;
+  }
+  if (name === "slice")
+    return Math.min(
+      isArray(value) ? value.length : stringify(value).length,
+      args.length < 2 || args[1] == null ? 1 : Math.max(0, numeric(args[1])),
+    );
+  const text = stringify(value);
+  if (name === "split") return text.length;
+  if (name === "replace") {
+    const pattern = stringify(args[0]),
+      replacement = stringify(args[1]);
+    const count = pattern ? Math.floor(text.length / pattern.length) : text.length;
+    return text.length + count * Math.max(0, replacement.length - pattern.length);
+  }
+  if (name === "append" || name === "prepend") return text.length + stringify(args[0]).length;
+  if (name === "join")
+    return isArray(value)
+      ? value.reduce<number>((sum, item) => sum + stringify(item).length, 0) +
+          Math.max(0, value.length - 1) * stringify(args[0] ?? " ").length
+      : text.length;
+  if (name === "escape" || name === "escape_once" || name === "xml_escape") return text.length * 6;
+  return text.length;
+}
+const preserveProvenance = new Set([
+  "reverse",
+  "sort",
+  "sort_natural",
+  "uniq",
+  "compact",
+  "where",
+  "reject",
+  "where_exp",
+  "reject_exp",
+]);
+export const registry: Registry<BuiltinFilterError> = {
+  filters: new Map(
+    entries.map(([name, filter]) => [
+      name,
+      {
+        ...filter,
+        ...("expression" in filter
+          ? {}
+          : {
+              allocation:
+                filter.allocation ??
+                ((value: Value, args: readonly Value[]) => allocation(name, value, args)),
+            }),
+        analysis: {
+          provenance: preserveProvenance.has(name)
+            ? "input"
+            : filter.signature?.output === "string" || filter.signature?.output === "number"
+              ? "independent"
+              : "unknown",
+        },
+      },
+    ]),
+  ),
+};

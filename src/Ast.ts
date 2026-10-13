@@ -140,6 +140,7 @@ export type Node =
       readonly span: Span;
     };
 export interface Document {
+  readonly parseLimit?: number;
   readonly whitespace?: WhitespaceOptions;
   readonly delimiters?: DelimiterOptions;
   readonly groupedExpressions?: boolean;

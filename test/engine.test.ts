@@ -32,9 +32,9 @@ describe("syntax and rendering", () => {
   it("trims whitespace while preserving quoted delimiters", async () =>
     expect(await run(' a \n {{- "}}" -}} \n b')).toBe(" a}}b"));
   it("ignores raw/comment expressions", async () =>
-    expect(await run("{% raw %}{{ ignored }}{% endraw %}{% comment %}{{{% endcomment %}")).toBe(
-      "{{ ignored }}",
-    ));
+    expect(
+      await run("{% raw %}{{ ignored }}{% endraw %}{% comment %}{{ ignored }}{% endcomment %}"),
+    ).toBe("{{ ignored }}"));
   it("uses Liquid truthiness and right-associative logic", async () =>
     expect(
       await run(

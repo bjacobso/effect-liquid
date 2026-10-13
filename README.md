@@ -41,7 +41,7 @@ Repeated `else` and `elsif` after `else` are syntax errors for `if`. LiquidJS ac
 
 Pass `{ groupedExpressions: true }` to `Liquid.parse` to enable parenthesized conditions and filter pipelines, such as `{% if (name | upcase) == "BAR" %}` and `{% for i in (1..(items | size)) %}`. Grouping is disabled by default; ordinary ranges remain supported. The document records the enabled syntax so rendering, loaded partials, embedded filter predicates, project analysis, and typechecking use the same rules. Ungrouped `and`/`or` conditions retain Liquid's right-associative evaluation.
 
-Parsing also accepts `trimTagLeft`, `trimTagRight`, `trimOutputLeft`, and `trimOutputRight` (all default false), plus `greedy` (default true). With `greedy: false`, left trimming removes spaces, tabs, and carriage returns; right trimming additionally removes at most one following newline. Explicit hyphen markers still request trimming. Documents snapshot these whitespace settings and pass them to loaded partials. Global tag trimming affects the outside of raw blocks while preserving raw body whitespace. Custom tag and output delimiters are available through parse options and propagate to loaded partials.
+Parsing also accepts `trimTagLeft`, `trimTagRight`, `trimOutputLeft`, and `trimOutputRight` (all default false), plus `greedy` (default true). With `greedy: false`, left trimming removes spaces, tabs, and carriage returns; right trimming additionally removes at most one following newline. Explicit hyphen markers still request trimming. Documents snapshot these whitespace settings and pass them to loaded partials. Global tag trimming and raw/endraw hyphens affect the outside of raw blocks while preserving literal body whitespace. Trimmed endraw delimiters and early malformed endraw openers follow Ruby; their LiquidJS dialect gaps remain recorded. Comment bodies receive a bounded lexical scan for malformed delimiters, without interpreting expressions. Custom tag and output delimiters are available through parse options and propagate to loaded partials.
 
 Bare bracket context lookups such as `{{ ["user"].name }}` and `{{ [key] }}` are supported. Static keys participate in analysis and checking; dynamic context-root keys report partial coverage.
 
@@ -76,7 +76,7 @@ String filters include first/last replacement and removal, custom strip characte
 
 `array_to_sentence_string` joins arrays with commas and a final conjunction (default `and`), including an Oxford comma for three or more items. Singleton arrays preserve their element type. This implementation rejects non-array inputs with a typed built-in filter failure, including short strings that the pinned oracle happens to accept. `append` and `prepend` likewise fail when their argument is omitted; explicit nil remains an empty string.
 
-Date filters support UTC date parsing and formatting, including `date_to_xmlschema`, `date_to_rfc822`, `date_to_string`, and `date_to_long_string`. The `date` filter accepts a numeric minute offset or an IANA timezone as its second argument; `%s` keeps the original instant. Locale and date-option parity remain open.
+Date filters support UTC date parsing and formatting, including `date_to_xmlschema`, `date_to_rfc822`, `date_to_string`, and `date_to_long_string`. The `date` filter accepts a numeric minute offset or an IANA timezone as its second argument; `%s` keeps the original instant. `Render.layer` accepts `timezoneOffset` (numeric minutes or an IANA zone), `preserveTimezones`, `locale`, and `dateFormat`. Preservation keeps the offset written in a date string; an explicit filter timezone overrides it. All date aliases share these options. Locale uses Intl for month/weekday names, with `en-US` as the core default. The implementation remains browser-safe without runtime dependencies.
 
 URL filters include `url_encode`, `url_decode`, `cgi_escape`, `uri_escape`, and `slugify` modes (`default`, `raw`, `pretty`, `ascii`, `latin`, `none`). They follow the pinned LiquidJS behavior: URL decoding replaces plus signs after percent-decoding, and Latin slugification uses its specific transliteration set. Malformed percent encodings and invalid UTF-16 become located `FilterFailure<BuiltinFilterError>` values in the Effect error channel, also during streaming.
 
@@ -141,13 +141,13 @@ TypeScript checks paths inserted through `L.path`, expression methods, and the r
 
 Spans use zero-based UTF-16 offsets into the original source. Repeated occurrences remain separate. Reads before assignments and assignments in only one branch remain possible external dependencies. A variable being read does not mean its value must always be present.
 
-Counter seed dependencies, loop-carried assignments, control transfers, and shared includes currently produce conservative analysis with partial coverage. These cases need fixed-point summaries before stronger claims are possible.
+Analysis and checking share bounded fixed-point loop rules. Reads include both the first iteration and possible later iterations; conditional writes and zero iterations preserve external dependencies. Break/continue paths, shadow restoration, capture timing, branch joins, and scoped builtins are modeled. Known empty/single loops avoid impossible body/else paths. Nonconvergent provenance/types widen after 16 rounds, with a 100,000-node traversal budget. Counter seeds, table-row control quirks, unknown transformations, opaque tags, and shared includes still report partial coverage. Opaque tags and unknown transformation provenance also emit located diagnostics, including in project analysis.
 
 ## Partials and streaming
 
-`render` accepts `with value as name` and `for collection as item`, including named arguments and `forloop` metadata. A render loop reuses its isolated child state across items. `include` supports `with value`, binding it under the template name while sharing caller state. Project analysis maps these bindings to caller paths (including `items[*].title`); project checking passes item types to the callee. Shared include flow summaries remain partial.
+`render` accepts `with value as name` and `for collection as item`, including named arguments and `forloop` metadata. A render loop reuses its isolated child state across items. `include` supports `with value as name` and `for collection as item`, sharing caller assignments. Omitted aliases use the evaluated template name. Scalar records render once; arrays render per item. Include iterations inherit the caller’s `forloop`; they do not create one. Project analysis maps these bindings to caller paths (including `items[*].title`); project checking passes item types to the callee. Shared include flow summaries remain partial.
 
-Prefer an explicit `as` name for `render … for`. The pinned LiquidJS release binds omitted aliases under the literal key `undefined`; this engine preserves that behavior. `include … for` remains unsupported. Quoted interpolated filenames are rendered in the caller scope. Layouts support named and anonymous blocks, nested layouts, and `block.super`; static analysis reports partial coverage for inheritance.
+Prefer an explicit `as` name for `render … for`. The pinned LiquidJS release binds omitted aliases under the literal key `undefined`; this engine preserves that behavior. Include iteration and aliases follow Ruby Liquid, deliberately differing from LiquidJS 10.29.0’s single render with boolean hash arguments. Quoted interpolated filenames are rendered in the caller scope. Layouts support named and anonymous blocks, nested layouts, and `block.super`; static analysis reports partial coverage for inheritance.
 
 `for … offset:continue` resumes a cursor keyed by loop variable and collection source syntax. Includes share cursors; isolated renders get fresh cursors. The cursor advances by the selected slice length even when the body breaks early, matching LiquidJS. Empty-collection `else` tests the input before offset/limit slicing.
 
@@ -181,6 +181,10 @@ Project analysis loads literal dependencies, maps render parameters to caller in
 
 Buffered rendering collects output directly from the shared AST interpreter. Streams pull bounded batches on demand, preserve order, flush prior output before later effects or failures, and clean up interrupted extensions. Both modes yield periodically so large loops remain interruptible. An error may follow already-emitted output. Captures buffer their bodies. Default limits are 1,000,000 evaluation steps, 100,000 loop iterations, 64 partial levels, and 10,000,000 generated UTF-8 bytes; captured content counts when generated and again when output. Parsing defaults to 1,000,000 source code units, 100,000 template tokens, and depth 128 (hard ceiling 256). Normalization bounds input depth, node count, and total string length.
 
+LiquidJS limit aliases retain these finite caps: parse option `parseLimit` bounds source code units and propagates to partials; render option `renderLimit` maps to `ceil(value * 1000)` evaluation steps (at least one), capped by `maxSteps`, rather than elapsed milliseconds. `memoryLimit` bounds conservative cumulative allocation units, capped at 10,000,000: ranges, collection/filter growth, and date widths are checked before allocation. String code units and array elements are accounting units, not heap bytes. Captures, partials, and streams share request budgets. Large date padding is bounded and no longer silently truncated to 1,000 characters.
+
+`keepOutputType` remains deferred. The public renderer returns strings and the streaming API emits strings; retaining boolean/number output would require a separately typed output API. The four imported cases stay visible as unsupported configuration.
+
 ## Check a document
 
 ```ts
@@ -197,7 +201,7 @@ const result = await Effect.runPromise(Effect.gen(function* () {
 // result.passed === false; diagnostics include UnknownProperty
 ```
 
-The checker handles records, optional fields, arrays, tuples, unions, local bindings, basic truthiness guards, and filter signatures. Strict mode is the default; `{ mode: "compatibility" }` relaxes selected coercion and presence findings. Unknown filter signatures and unresolved control/dependency analysis remain visible. Strict checks cannot pass with partial coverage.
+The checker handles records, optional fields, arrays, tuples, unions, local bindings, truthiness, negation, and literal equality guards, and filter signatures. Strict mode is the default; `{ mode: "compatibility" }` relaxes selected coercion and presence findings. Unknown filter signatures and unresolved control/dependency analysis remain visible. Strict checks cannot pass with partial coverage.
 
 Filter signatures can declare `positionalArguments`, such as `["number", "boolean"]` for `divided_by`. Each entry overrides the shared `argument` type for that position; `"any"` permits any type. Argument diagnostics point to the individual argument expression.
 
@@ -262,3 +266,5 @@ Full filter/tag/options parity, custom tags, cache invalidation, precise include
 `pnpm conformance` compares the checked-in upstream corpus against LiquidJS and effect-liquid, including exact output and error behavior. `pnpm conformance:check` gates changes against explicit known gaps; `pnpm conformance:strict` requires complete agreement with both the oracle and supplied upstream expectations. These are correctness checks without timing measurements.
 
 Fixtures come from pinned LiquidJS, Deepin ruby-liquid, Shopify Liquid, and Shopify liquid-spec sources. [Conformance documentation](conformance/README.md) explains reports, adding cases, regenerating imports, exclusions, and [attribution](conformance/NOTICE.md). Passing the baseline gate is not a claim of full compatibility.
+
+Release gate A’s remaining owner decision is the package license. No license has been selected or added to package metadata.
