@@ -71,7 +71,7 @@ it("invalidates a guard after direct and branch assignment", async () => {
     expect(result.passed).toBe(false);
   }
 });
-it("does not certify unmodeled loop-carried assignments", async () => {
+it("rejects unsafe loop-carried assignments with complete coverage", async () => {
   const result = await Effect.runPromise(
     Effect.gen(function* () {
       return yield* Liquid.check(
@@ -82,7 +82,7 @@ it("does not certify unmodeled loop-carried assignments", async () => {
       );
     }),
   );
-  expect(result.coverage).toBe("partial");
+  expect(result.coverage).toBe("complete");
   expect(result.passed).toBe(false);
 });
 it("rejects duplicate named arguments explicitly", async () => {

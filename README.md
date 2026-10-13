@@ -141,7 +141,7 @@ TypeScript checks paths inserted through `L.path`, expression methods, and the r
 
 Spans use zero-based UTF-16 offsets into the original source. Repeated occurrences remain separate. Reads before assignments and assignments in only one branch remain possible external dependencies. A variable being read does not mean its value must always be present.
 
-Counter seed dependencies, loop-carried assignments, control transfers, and shared includes currently produce conservative analysis with partial coverage. These cases need fixed-point summaries before stronger claims are possible.
+Analysis and checking share bounded fixed-point loop rules. Reads include both the first iteration and possible later iterations; conditional writes and zero iterations preserve external dependencies. Break/continue paths, shadow restoration, capture timing, branch joins, and scoped builtins are modeled. Known empty/single loops avoid impossible body/else paths. Nonconvergent provenance/types widen after 16 rounds, with a 100,000-node traversal budget. Counter seeds, table-row control quirks, unknown transformations, opaque tags, and shared includes still report partial coverage.
 
 ## Partials and streaming
 
@@ -197,7 +197,7 @@ const result = await Effect.runPromise(Effect.gen(function* () {
 // result.passed === false; diagnostics include UnknownProperty
 ```
 
-The checker handles records, optional fields, arrays, tuples, unions, local bindings, basic truthiness guards, and filter signatures. Strict mode is the default; `{ mode: "compatibility" }` relaxes selected coercion and presence findings. Unknown filter signatures and unresolved control/dependency analysis remain visible. Strict checks cannot pass with partial coverage.
+The checker handles records, optional fields, arrays, tuples, unions, local bindings, truthiness, negation, and literal equality guards, and filter signatures. Strict mode is the default; `{ mode: "compatibility" }` relaxes selected coercion and presence findings. Unknown filter signatures and unresolved control/dependency analysis remain visible. Strict checks cannot pass with partial coverage.
 
 Filter signatures can declare `positionalArguments`, such as `["number", "boolean"]` for `divided_by`. Each entry overrides the shared `argument` type for that position; `"any"` permits any type. Argument diagnostics point to the individual argument expression.
 
@@ -262,3 +262,5 @@ Full filter/tag/options parity, custom tags, cache invalidation, precise include
 `pnpm conformance` compares the checked-in upstream corpus against LiquidJS and effect-liquid, including exact output and error behavior. `pnpm conformance:check` gates changes against explicit known gaps; `pnpm conformance:strict` requires complete agreement with both the oracle and supplied upstream expectations. These are correctness checks without timing measurements.
 
 Fixtures come from pinned LiquidJS, Deepin ruby-liquid, Shopify Liquid, and Shopify liquid-spec sources. [Conformance documentation](conformance/README.md) explains reports, adding cases, regenerating imports, exclusions, and [attribution](conformance/NOTICE.md). Passing the baseline gate is not a claim of full compatibility.
+
+Release gate A’s remaining owner decision is the package license. No license has been selected or added to package metadata.

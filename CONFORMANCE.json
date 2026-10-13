@@ -3621,9 +3621,9 @@
     "parse": "implemented",
     "render": "implemented",
     "renderStream": "implemented as Effect Stream",
-    "analyze": "implemented with explicit conservative-flow coverage",
+    "analyze": "implemented with bounded fixed-point local flow and explicit partial coverage for unknown summaries",
     "analyzeProject": "implemented for bounded render dependencies; include summaries are partial",
-    "check": "experimental gradual checker",
+    "check": "experimental gradual checker sharing bounded control-flow transfer rules",
     "checkProject": "experimental render-contract checking",
     "typedTemplates": "tagged templates with typed external paths and render context; raw Liquid checked separately",
     "schema": "decoded structural projection; recursive/opaque shapes are partial",
@@ -3634,5 +3634,14 @@
     "syncPromiseFacades": "out of scope",
     "browser": "core bundle verified; no Node adapters imported by parser",
     "cli": "local parse/analyze/render/check; filesystem project CLI deferred"
+  },
+  "analysis": {
+    "flow": "Reads before writes, branch joins, zero iterations, shadow restoration, capture timing, scoped builtins, and normal/break/continue successors.",
+    "bounds": "16 fixed-point rounds and 100,000 node visits; widened/opaque results are partial.",
+    "tests": [
+      "test/flow-analysis.test.ts",
+      "test/robustness.test.ts"
+    ],
+    "remaining": "Shared include/project cycles, counter seeds, table-row control quirks, and unknown transformation provenance."
   }
 }

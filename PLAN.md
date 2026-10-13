@@ -49,14 +49,14 @@ Exit: the README render example runs; every claimed subset feature has passing c
 ## M3 — Flow-aware variable analysis
 
 - [x] Implement stable occurrence and binding IDs, structured paths, external-root/path views, control-flow context, and coverage reasons.
-- [ ] Resolve reads before writes, branch joins, zero-iteration loops, shadow restoration, capture timing, and built-in scope.
+- [x] Resolve reads before writes, branch joins, zero-iteration loops, shadow restoration, capture timing, and built-in scope.
 - [x] Add alias and loop-element provenance without confusing derived input paths with syntactic reads.
-- [ ] Require traversal/scope metadata for built-ins; surface opaque custom tags and unknown transformations.
+- [x] Require traversal/scope metadata for built-ins; surface opaque custom tags and unknown transformations.
 - [x] Add all SPEC §8 examples and further nested loop/branch fixtures with exact occurrence spans.
 
 Exit: extraction accurately distinguishes locals from possible external inputs. Conditional assignments never incorrectly erase dependencies. Repeated reads remain separate occurrences. Analysis performs no runtime handler calls and makes no claim that every external read is required.
 
-Release gate A remains closed: M3 fixed-point/control-flow work and licensing remain unresolved. Publish a preview only after M0–M3 pass, with in-memory rendering and variable extraction advertised as the supported subset. Update README examples from illustrative to tested usage at that point.
+Release gate A remains closed only on the owner’s licensing decision; M3 local flow analysis and shared checker transfer rules are implemented. Publish a preview only after M0–M3 pass, with in-memory rendering and variable extraction advertised as the supported subset. Update README examples from illustrative to tested usage at that point.
 
 ## M4 — Partial templates and project analysis
 
@@ -95,7 +95,7 @@ Exit: every expanded feature has a tested row. Collected stream output equals bu
 ## M6 — Gradual document checker
 
 - [x] Implement the independent type algebra and programmatic context/global contract builder.
-- [ ] Reuse M3 binding/control-flow rules for assignment inference, branch joins, loop item types, supported guards, and bounded widening.
+- [x] Reuse M3 binding/control-flow rules for assignment inference, branch joins, loop item types, supported guards, and bounded widening.
 - [ ] Add filter signatures for all shipped built-ins, including coercions and `default` behavior.
 - [ ] Implement property/index, operator, filter-argument, optional-access, and partial-contract diagnostics.
 - [x] Implement local/project checking, compatibility/strict modes, deterministic diagnostic order, and explicit unknown/partial coverage.
@@ -138,7 +138,7 @@ Revisit architecture only when a milestone exposes a concrete constraint. Keep f
 - `src/` now contains the independent parser, value semantics, Effect/Stream renderer, flow analyzer, project traversal, gradual checker, Schema projection, filesystem adapter, and local CLI.
 - Typed extension registries are explicit function arguments. Configuration and loaders use services/layers. This preserves each custom filter's `E`/`R` types without a globally erased registry service; compile-time and runtime tests cover the decision.
 - `render`/`include` supports named arguments and interpolated quoted names; render bindings and layout blocks are implemented. Cache and include flow summaries are still pending.
-- Static analysis reports partial coverage for loop-carried assignments and loop control. The checker refuses to certify these in strict mode. This is the remaining fixed-point work, not an inferred proof of safety.
+- Analysis and checking share bounded fixed-point loop rules, separating normal, break, and continue paths. First-iteration reads, zero-iteration exits, shadow restoration, capture timing, branch joins, and supported guards are tested. Widening (16 rounds), traversal limits (100,000 node visits), opaque tags, unknown provenance, counters, table-row control quirks, and shared include summaries remain explicit partial coverage.
 - Buffered and streaming renders share a synchronous AST interpreter, entering Effect for extensions/loading and yielding every 256 evaluation steps or loop iterations. Buffered output bypasses stream channels; streams pull at most 128 output strings per batch and flush once a batch reaches 16,384 code units, before effects and failures. UTF-8 output accounting does not allocate encoded copies.
 - Effect Stream output, Schema decoding/projection, bounded literal project checks, and CLI commands are tested. Project CLI and complete custom-tag contracts are pending.
 - `pnpm check` builds declarations and runs type, semantic, differential, robustness, integration, browser-bundle, package/CLI, and formatting checks. `pnpm benchmark` measures warmed parse/render/analysis/check/stream cases and gates the 100-product render at 20 ms and both 10,000-output render modes at 200 ms per run. Unit tests use a generous 1,000 ms large-loop budget to tolerate CI contention. These are local regression budgets, not cross-engine speed claims.

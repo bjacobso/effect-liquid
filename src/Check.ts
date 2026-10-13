@@ -30,6 +30,7 @@ export const check = <E = never, R = never>(
     const diagnostics: Diagnostic[] = [];
     const reasons = new Set<string>();
     let embeddedDepth = 0;
+    let flowWork = 0;
     const strict = options.mode !== "compatibility";
     const report = (
       code: string,
@@ -343,29 +344,93 @@ export const check = <E = never, R = never>(
     };
     const infer = (e: Expression, env: Binding.Flow<T.Type>, guard = false): T.Type => {
       const type = inferRaw(e, env, guard);
-      expressionTypes[`${e.span.start}:${e.span.end}`] = type;
+      const key = `${e.span.start}:${e.span.end}`;
+      expressionTypes[key] = T.union(expressionTypes[key] ?? T.never, type);
       return type;
     };
-    const narrow = (e: Expression, env: Binding.Flow<T.Type>): void => {
+    const narrow = (e: Expression, env: Binding.Flow<T.Type>, truth = true): void => {
+      if (e._tag === "Not") {
+        narrow(e.value, env, !truth);
+        return;
+      }
       if (e._tag === "Lookup") {
-        const type = T.present(infer(e, env, true));
-        env.locals.set(`@${path(e)}`, type);
-      } else if (e._tag === "Binary" && e.operator === "and") {
-        narrow(e.left, env);
-        narrow(e.right, env);
+        const type = infer(e, env, true);
+        env.locals.set(
+          `@${path(e)}`,
+          T.union(
+            ...T.members(type).flatMap((t) => {
+              if (t._tag === "Boolean") return [T.literal(truth)];
+              const falsy =
+                t._tag === "Nil" ||
+                t._tag === "Missing" ||
+                (t._tag === "Literal" && t.value === false);
+              return falsy === !truth || t._tag === "Unknown" ? [t] : [];
+            }),
+          ),
+        );
+      } else if (e._tag === "Binary") {
+        if ((e.operator === "and" && truth) || (e.operator === "or" && !truth)) {
+          narrow(e.left, env, truth);
+          narrow(e.right, env, truth);
+        } else if (e.operator === "==" || e.operator === "!=") {
+          const lookup =
+            e.left._tag === "Lookup" ? e.left : e.right._tag === "Lookup" ? e.right : undefined;
+          const literal =
+            e.left._tag === "Literal" ? e.left : e.right._tag === "Literal" ? e.right : undefined;
+          if (!lookup || !literal) return;
+          const equal = truth === (e.operator === "==");
+          const target = literal.value === null ? T.nil : T.literal(literal.value);
+          const type = infer(lookup, env, true);
+          env.locals.set(
+            `@${path(lookup)}`,
+            T.union(
+              ...T.members(type).flatMap((t) => {
+                if (t._tag === "Unknown") return [t];
+                if (literal.value === null)
+                  return (t._tag === "Nil" || t._tag === "Missing") === equal ? [t] : [];
+                if (t._tag === "Literal") return (t.value === literal.value) === equal ? [t] : [];
+                if (T.kind(t) === T.kind(target)) return [equal ? target : t];
+                return equal ? [] : [t];
+              }),
+            ),
+          );
+        }
       }
     };
-    const merge = (types: readonly (T.Type | undefined)[]) =>
-      T.union(...types.map((t) => t ?? T.missing));
-    const body = (nodes: readonly Node[], env: Binding.Flow<T.Type>): void => {
-      for (const n of nodes)
+    const externalType = (name: string): T.Type =>
+      contract._tag === "Record"
+        ? (contract.fields[name] ?? contract.index ?? T.missing)
+        : T.unknown;
+    const merge = (types: readonly (T.Type | undefined)[], name: string) =>
+      T.union(...types.map((t) => t ?? externalType(name)));
+    const body = (
+      nodes: readonly Node[],
+      env: Binding.Flow<T.Type>,
+    ): Binding.Completion<T.Type> => {
+      const breaks: Binding.Flow<T.Type>[] = [];
+      const continues: Binding.Flow<T.Type>[] = [];
+      const absorb = (result: Binding.Completion<T.Type>) => {
+        breaks.push(...result.breaks);
+        continues.push(...result.continues);
+      };
+      for (const n of nodes) {
+        if (++flowWork > 100_000) {
+          unknown("Check traversal limit exceeded", n.span);
+          return { normal: env, breaks, continues };
+        }
+        if (!Object.hasOwn(Binding.tagMetadata, n._tag)) {
+          unknown("Opaque custom tag", n.span);
+          continue;
+        }
         switch (n._tag) {
           case "Text":
             break;
           case "Break":
+            breaks.push(Binding.fork(env));
+            return { normal: undefined, breaks, continues };
           case "Continue":
-            unknown("Loop control flow requires a fixed-point summary", n.span);
-            break;
+            continues.push(Binding.fork(env));
+            return { normal: undefined, breaks, continues };
           case "Output":
             infer(n.expression, env);
             break;
@@ -391,22 +456,35 @@ export const check = <E = never, R = never>(
             for (const key of env.locals.keys()) if (key.startsWith("@")) env.locals.delete(key);
             break;
           }
-          case "Capture":
-            body(n.body, env);
-            env.values.set(n.name, T.string);
-            for (const key of env.locals.keys()) if (key.startsWith("@")) env.locals.delete(key);
+          case "Capture": {
+            const result = body(n.body, env);
+            for (const next of [
+              ...(result.normal ? [result.normal] : []),
+              ...result.breaks,
+              ...result.continues,
+            ]) {
+              next.values.set(n.name, T.string);
+              for (const key of next.locals.keys())
+                if (key.startsWith("@")) next.locals.delete(key);
+            }
+            absorb(result);
+            if (!result.normal) return { normal: undefined, breaks, continues };
             break;
+          }
           case "If": {
-            const branches = n.branches.map((b) => {
-              infer(b.condition, env, true);
-              const next = Binding.fork(env);
-              narrow(b.condition, next);
-              body(b.body, next);
-              return next;
-            });
             const otherwise = Binding.fork(env);
-            body(n.otherwise, otherwise);
-            Binding.join(env, [...branches, otherwise], merge);
+            const branches = n.branches.map((b) => {
+              infer(b.condition, otherwise, true);
+              const next = Binding.fork(otherwise);
+              narrow(b.condition, next);
+              narrow(b.condition, otherwise, false);
+              return body(b.body, next);
+            });
+            branches.push(body(n.otherwise, otherwise));
+            for (const result of branches) absorb(result);
+            const normal = branches.flatMap((result) => (result.normal ? [result.normal] : []));
+            if (!normal.length) return { normal: undefined, breaks, continues };
+            Binding.join(env, normal, merge);
             break;
           }
           case "Case": {
@@ -414,12 +492,14 @@ export const check = <E = never, R = never>(
             const branches = n.branches.map((b) => {
               for (const e of b.values) infer(e, env);
               const next = Binding.fork(env);
-              body(b.body, next);
-              return next;
+              return body(b.body, next);
             });
             const otherwise = Binding.fork(env);
-            body(n.otherwise, otherwise);
-            Binding.join(env, [...branches, otherwise], merge);
+            branches.push(body(n.otherwise, otherwise));
+            for (const result of branches) absorb(result);
+            const normal = branches.flatMap((result) => (result.normal ? [result.normal] : []));
+            if (!normal.length) return { normal: undefined, breaks, continues };
+            Binding.join(env, normal, merge);
             break;
           }
           case "For":
@@ -428,19 +508,34 @@ export const check = <E = never, R = never>(
             if (n.limit) infer(n.limit, env);
             if (n.offset) infer(n.offset, env);
             if (n._tag === "TableRow" && n.cols) infer(n.cols, env);
-            const next = Binding.fork(env);
+            const initial = Binding.fork(env);
             const item = T.union(
               ...T.members(type).map((t) =>
                 t._tag === "Array"
                   ? t.item
                   : t._tag === "Tuple"
                     ? T.union(...t.items)
-                    : unknown("Unknown loop element type", n.span),
+                    : t._tag === "Record"
+                      ? T.tuple(T.string, T.union(...Object.values(t.fields), t.index ?? T.never))
+                      : t._tag === "Nil" || t._tag === "Missing"
+                        ? T.never
+                        : t._tag === "Unknown"
+                          ? unknown("Unknown loop element type", n.span)
+                          : t,
               ),
             );
-            next.locals.set(n.name, item);
-            next.locals.set(
-              n._tag === "TableRow" ? "tablerowloop" : "forloop",
+            initial.locals.set(n.name, item);
+            for (const key of initial.locals.keys())
+              if (
+                key === `@${n.name}` ||
+                key.startsWith(`@${n.name}.`) ||
+                key.startsWith(`@${n.name}[`) ||
+                key === "@forloop" ||
+                key.startsWith("@forloop.")
+              )
+                initial.locals.delete(key);
+            initial.locals.set(
+              Binding.tagMetadata[n._tag].builtin!,
               T.record({
                 index: T.number,
                 index0: T.number,
@@ -457,15 +552,57 @@ export const check = <E = never, R = never>(
                       col_first: T.boolean,
                       col_last: T.boolean,
                     }
-                  : { parentloop: T.unknown }),
+                  : { name: T.string, parentloop: T.missing }),
               }),
             );
-            body(n.body, next);
-            if ([...next.values].some(([name, type]) => type !== env.values.get(name)))
-              unknown("Loop-carried assignment types require a fixed-point summary", n.span);
-            const otherwise = Binding.fork(env);
-            if (n._tag === "For") body(n.otherwise, otherwise);
-            Binding.join(env, [next, otherwise], merge);
+            const shape = Binding.loopShape(n);
+            const single =
+              !shape.repeat && shape.body ? body(n.body, Binding.fork(initial)) : undefined;
+            const result = !shape.body
+              ? { exits: [initial], converged: true }
+              : single
+                ? {
+                    exits: [
+                      ...(single.normal ? [single.normal] : []),
+                      ...single.breaks,
+                      ...single.continues,
+                    ],
+                    converged: true,
+                  }
+                : Binding.fixedPoint(
+                    initial,
+                    (next) => {
+                      const result = body(n.body, next);
+                      if (
+                        n._tag === "TableRow" &&
+                        (result.breaks.length || result.continues.length)
+                      )
+                        unknown(
+                          "Table-row control propagation requires a runtime-specific summary",
+                          n.span,
+                        );
+                      return result;
+                    },
+                    merge,
+                    (a, b) => JSON.stringify(a) === JSON.stringify(b),
+                    () => T.unknown,
+                  );
+            if (!result.converged)
+              unknown("Loop type widening exceeded the precision bound", n.span);
+            const otherwise =
+              n._tag === "For"
+                ? shape.empty
+                  ? body(n.otherwise, Binding.fork(env))
+                  : Binding.completion<T.Type>(undefined)
+                : shape.empty
+                  ? Binding.completion(Binding.fork(env))
+                  : Binding.completion<T.Type>(undefined);
+            absorb(otherwise);
+            Binding.join(
+              env,
+              [...result.exits, ...(otherwise.normal ? [otherwise.normal] : [])],
+              merge,
+            );
             break;
           }
           case "Block": {
@@ -488,7 +625,11 @@ export const check = <E = never, R = never>(
             if (n.for) infer(n.for.value, env);
             unknown("Partial contract has not been checked", n.span);
             break;
+          default:
+            unknown("Opaque custom tag", (n as Node).span);
         }
+      }
+      return { normal: env, breaks, continues };
     };
     body(document.body, Binding.make());
     const sorted = [

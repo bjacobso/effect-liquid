@@ -100,6 +100,9 @@ export const analyze = <E, R>(
     const diagnostics: Diagnostic[] = [];
     const reasons: string[] = [];
     let embeddedDepth = 0;
+    let flowWork = 0;
+    const declarations = new Map<string, Slot>();
+    const reads = new Map<string, number>();
     const merge = (slots: readonly (Slot | undefined)[]): Slot => ({
       ids: unique(slots.flatMap((s) => s?.ids ?? [])),
       external: slots.some((s) => !s || s.external),
@@ -111,11 +114,24 @@ export const analyze = <E, R>(
       span: Span,
       origins: string[] = [],
     ): Slot => {
-      const id = `${document.source.id}:binding:${bindings.length}`;
-      bindings.push({ id, name, kind, span });
-      return { ids: [id], external: false, origins };
+      const key = `${kind}:${name}:${span.start}:${span.end}`;
+      let slot = declarations.get(key);
+      if (!slot) {
+        const id = `${document.source.id}:binding:${bindings.length}`;
+        bindings.push({ id, name, kind, span });
+        slot = { ids: [id], external: false, origins: [] };
+        declarations.set(key, slot);
+      }
+      return { ...slot, origins };
     };
     const provenance = (e: Expression, env: Binding.Flow<Slot>): string[] => {
+      if (e._tag === "Filter") {
+        const metadata = registry.filters.get(e.name)?.analysis;
+        if (metadata?.provenance === "input") return provenance(e.input, env);
+        if (!metadata || metadata.provenance === "unknown")
+          reasons.push(`Unknown transformation provenance: ${e.name} at ${e.span.start}`);
+        return [];
+      }
       if (e._tag !== "Lookup") return [];
       const slot = Binding.read(env, e.root);
       const suffix = path(e).slice(e.root.length);
@@ -150,16 +166,26 @@ export const analyze = <E, R>(
         }
         case "Lookup": {
           const slot = Binding.read(env, e.root);
-          occurrences.push({
-            id: `${document.source.id}:read:${occurrences.length}`,
+          const key = `${e.span.start}:${e.span.end}:${path(e)}:${control.join("/")}`;
+          const previousIndex = reads.get(key);
+          const previous = previousIndex === undefined ? undefined : occurrences[previousIndex];
+          const occurrence: Occurrence = {
+            id: previous?.id ?? `${document.source.id}:read:${occurrences.length}`,
             path: path(e),
             expression: e,
             span: e.span,
-            bindings: slot?.ids ?? [],
-            external: !slot || slot.external,
-            derivedPaths: slot ? provenance(e, env) : [],
+            bindings: unique([...(previous?.bindings ?? []), ...(slot?.ids ?? [])]),
+            external: !!previous?.external || !slot || slot.external,
+            derivedPaths: unique([
+              ...(previous?.derivedPaths ?? []),
+              ...(slot ? provenance(e, env) : []),
+            ]),
             control,
-          });
+          };
+          if (previousIndex === undefined) {
+            reads.set(key, occurrences.length);
+            occurrences.push(occurrence);
+          } else occurrences[previousIndex] = occurrence;
           for (const s of e.segments) expression(s, env, control);
           break;
         }
@@ -226,8 +252,22 @@ export const analyze = <E, R>(
       nodes: readonly Node[],
       env: Binding.Flow<Slot>,
       control: readonly string[],
-    ): void => {
-      for (const n of nodes)
+    ): Binding.Completion<Slot> => {
+      const breaks: Binding.Flow<Slot>[] = [];
+      const continues: Binding.Flow<Slot>[] = [];
+      const absorb = (result: Binding.Completion<Slot>) => {
+        breaks.push(...result.breaks);
+        continues.push(...result.continues);
+      };
+      for (const n of nodes) {
+        if (++flowWork > 100_000) {
+          reasons.push("Analysis traversal limit exceeded");
+          return { normal: env, breaks, continues };
+        }
+        if (!Object.hasOwn(Binding.tagMetadata, n._tag)) {
+          reasons.push(`Opaque custom tag at ${n.span.start}`);
+          continue;
+        }
         switch (n._tag) {
           case "Text":
             break;
@@ -258,20 +298,30 @@ export const analyze = <E, R>(
               declare(n.name, "assign", n.span, provenance(n.expression, env)),
             );
             break;
-          case "Capture":
-            body(n.body, env, control);
-            env.values.set(n.name, declare(n.name, "capture", n.span));
+          case "Capture": {
+            const result = body(n.body, env, control);
+            for (const next of [
+              ...(result.normal ? [result.normal] : []),
+              ...result.breaks,
+              ...result.continues,
+            ])
+              next.values.set(n.name, declare(n.name, "capture", n.span));
+            absorb(result);
+            if (!result.normal) return { normal: undefined, breaks, continues };
             break;
+          }
           case "If": {
             const branches = n.branches.map((b, i) => {
               expression(b.condition, env, control);
               const next = Binding.fork(env);
-              body(b.body, next, [...control, `if:${n.span.start}:${i}`]);
-              return next;
+              return body(b.body, next, [...control, `if:${n.span.start}:${i}`]);
             });
             const otherwise = Binding.fork(env);
-            body(n.otherwise, otherwise, [...control, `else:${n.span.start}`]);
-            Binding.join(env, [...branches, otherwise], merge);
+            branches.push(body(n.otherwise, otherwise, [...control, `else:${n.span.start}`]));
+            for (const result of branches) absorb(result);
+            const normal = branches.flatMap((result) => (result.normal ? [result.normal] : []));
+            if (!normal.length) return { normal: undefined, breaks, continues };
+            Binding.join(env, normal, merge);
             break;
           }
           case "Case": {
@@ -279,12 +329,14 @@ export const analyze = <E, R>(
             const branches = n.branches.map((b, i) => {
               for (const e of b.values) expression(e, env, control);
               const next = Binding.fork(env);
-              body(b.body, next, [...control, `when:${n.span.start}:${i}`]);
-              return next;
+              return body(b.body, next, [...control, `when:${n.span.start}:${i}`]);
             });
             const otherwise = Binding.fork(env);
-            body(n.otherwise, otherwise, control);
-            Binding.join(env, [...branches, otherwise], merge);
+            branches.push(body(n.otherwise, otherwise, control));
+            for (const result of branches) absorb(result);
+            const normal = branches.flatMap((result) => (result.normal ? [result.normal] : []));
+            if (!normal.length) return { normal: undefined, breaks, continues };
+            Binding.join(env, normal, merge);
             break;
           }
           case "For":
@@ -293,8 +345,8 @@ export const analyze = <E, R>(
             if (n.limit) expression(n.limit, env, control);
             if (n.offset) expression(n.offset, env, control);
             if (n._tag === "TableRow" && n.cols) expression(n.cols, env, control);
-            const next = Binding.fork(env);
-            next.locals.set(
+            const initial = Binding.fork(env);
+            initial.locals.set(
               n.name,
               declare(
                 n.name,
@@ -303,14 +355,56 @@ export const analyze = <E, R>(
                 provenance(n.collection, env).map((p) => `${p}[*]`),
               ),
             );
-            const loopName = n._tag === "TableRow" ? "tablerowloop" : "forloop";
-            next.locals.set(loopName, declare(loopName, "builtin", n.span));
-            body(n.body, next, [...control, `for:${n.span.start}`]);
-            if ([...next.values].some(([name, slot]) => slot !== env.values.get(name)))
-              reasons.push(`Loop-carried assignment provenance is conservative at ${n.span.start}`);
-            const otherwise = Binding.fork(env);
-            if (n._tag === "For") body(n.otherwise, otherwise, control);
-            Binding.join(env, [next, otherwise], merge);
+            const loopName = Binding.tagMetadata[n._tag].builtin!;
+            initial.locals.set(loopName, declare(loopName, "builtin", n.span));
+            const shape = Binding.loopShape(n);
+            const transfer = (next: Binding.Flow<Slot>) =>
+              body(n.body, next, [...control, `for:${n.span.start}`]);
+            const single =
+              !shape.repeat && shape.body ? transfer(Binding.fork(initial)) : undefined;
+            const result = !shape.body
+              ? { exits: [initial], converged: true }
+              : single
+                ? {
+                    exits: [
+                      ...(single.normal ? [single.normal] : []),
+                      ...single.breaks,
+                      ...single.continues,
+                    ],
+                    converged: true,
+                  }
+                : Binding.fixedPoint(
+                    initial,
+                    (next) => {
+                      const result = transfer(next);
+                      if (
+                        n._tag === "TableRow" &&
+                        (result.breaks.length || result.continues.length)
+                      )
+                        reasons.push(`Table-row control propagation is partial at ${n.span.start}`);
+                      return result;
+                    },
+                    (slots) => merge(slots),
+                    (a, b) => JSON.stringify(a) === JSON.stringify(b),
+                    (slot) => ({ ...slot, origins: [] }),
+                  );
+            if (!result.converged) reasons.push(`Loop provenance widening at ${n.span.start}`);
+            if (n._tag === "TableRow" && (single?.breaks.length || single?.continues.length))
+              reasons.push(`Table-row control propagation is partial at ${n.span.start}`);
+            const otherwise =
+              n._tag === "For"
+                ? shape.empty
+                  ? body(n.otherwise, Binding.fork(env), control)
+                  : Binding.completion<Slot>(undefined)
+                : shape.empty
+                  ? Binding.completion(Binding.fork(env))
+                  : Binding.completion<Slot>(undefined);
+            absorb(otherwise);
+            Binding.join(
+              env,
+              [...result.exits, ...(otherwise.normal ? [otherwise.normal] : [])],
+              merge,
+            );
             break;
           }
           case "Block": {
@@ -368,10 +462,16 @@ export const analyze = <E, R>(
             break;
           }
           case "Break":
+            breaks.push(Binding.fork(env));
+            return { normal: undefined, breaks, continues };
           case "Continue":
-            reasons.push(`Loop control flow is conservative at ${n.span.start}`);
-            return;
+            continues.push(Binding.fork(env));
+            return { normal: undefined, breaks, continues };
+          default:
+            reasons.push(`Opaque custom tag at ${(n as Node).span.start}`);
         }
+      }
+      return { normal: env, breaks, continues };
     };
     body(document.body, Binding.make(), []);
     const external = occurrences.filter((o) => o.external);
@@ -381,7 +481,9 @@ export const analyze = <E, R>(
       externalRoots: unique(external.map((o) => o.expression.root)),
       externalPaths: unique(external.map((o) => o.path)),
       derivedInputPaths: unique(occurrences.flatMap((o) => o.derivedPaths)),
-      dependencies,
+      dependencies: [
+        ...new Map(dependencies.map((d) => [`${d.span.start}:${d.span.end}`, d])).values(),
+      ],
       diagnostics,
       coverage: reasons.length ? "partial" : "complete",
       coverageReasons: unique(reasons),

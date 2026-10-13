@@ -293,4 +293,31 @@ for (const operation of ["where", "reject", "find", "find_index", "has", "group_
       },
     },
   ]);
-export const registry: Registry<BuiltinFilterError> = { filters: new Map(entries) };
+const preserveProvenance = new Set([
+  "reverse",
+  "sort",
+  "sort_natural",
+  "uniq",
+  "compact",
+  "where",
+  "reject",
+  "where_exp",
+  "reject_exp",
+]);
+export const registry: Registry<BuiltinFilterError> = {
+  filters: new Map(
+    entries.map(([name, filter]) => [
+      name,
+      {
+        ...filter,
+        analysis: {
+          provenance: preserveProvenance.has(name)
+            ? "input"
+            : filter.signature?.output === "string" || filter.signature?.output === "number"
+              ? "independent"
+              : "unknown",
+        },
+      },
+    ]),
+  ),
+};
