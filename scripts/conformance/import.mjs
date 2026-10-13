@@ -127,7 +127,7 @@ for (const [repo, pin] of Object.entries(pins)) {
   const scanned = all.filter((file) => {
     const path = relative(root, file);
     return repo === "liquid-spec"
-      ? path.startsWith("specs/") && /\.yml$/.test(path)
+      ? path.startsWith("specs/") && path.endsWith(".yml")
       : (/^(test|docs|demo|example|performance|benchmark)\//.test(path) &&
           /\.(ts|rb|md|liquid|html)$/.test(path)) ||
           path === "README.md";
@@ -158,7 +158,7 @@ for (const [repo, pin] of Object.entries(pins)) {
     );
     for (const { path, result } of extracted) {
       for (const f of result.fixtures) {
-        const { line, column, call, ...data } = f;
+        const { line, column, call: _call, ...data } = f;
         fixtures.push({
           ...data,
           id: id(repo, path, line, column),

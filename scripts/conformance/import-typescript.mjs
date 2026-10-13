@@ -44,7 +44,7 @@ export function extractTypeScript(text, path) {
   };
   const importedHelper = new Set();
   for (const s of sf.statements)
-    if (ts.isImportDeclaration(s) && /stub\/render$/.test(s.moduleSpecifier.text))
+    if (ts.isImportDeclaration(s) && s.moduleSpecifier.text.endsWith("stub/render"))
       for (const e of s.importClause?.namedBindings?.elements ?? [])
         importedHelper.add(e.name.text);
   const candidate = (n) =>
