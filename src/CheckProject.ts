@@ -96,9 +96,13 @@ export const checkProject = <E = never, R = never>(
                         ? member.item
                         : member._tag === "Tuple"
                           ? T.union(...member.items)
-                          : member._tag === "String"
-                            ? T.string
-                            : T.unknown,
+                          : dep.mode === "include" &&
+                              member._tag !== "Nil" &&
+                              member._tag !== "Missing"
+                            ? member
+                            : member._tag === "String"
+                              ? T.string
+                              : T.unknown,
                     ),
                   )
                 : type;

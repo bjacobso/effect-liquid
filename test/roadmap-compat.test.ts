@@ -102,3 +102,24 @@ it("matches pinned boolean cycles and distinguishes nil from missing slice lengt
   ])
     expect(await run(source)).toBe(await new Reference().parseAndRender(source));
 });
+
+it("includes scalar records once and passes their record type to child checking", async () => {
+  const source = "{% include 'p' for product as item %}";
+  const context = { product: { title: "Widget" } };
+  expect(await run(source, context, { p: "{{item.title}}" })).toBe("Widget");
+  expect(
+    await run(
+      "{% include tpl for product %}",
+      { ...context, tpl: "product" },
+      { product: "{{product.title}}" },
+    ),
+  ).toBe("Widget");
+  const doc = await Effect.runPromise(Liquid.parse(source));
+  const checked = await Effect.runPromise(
+    Liquid.checkProject(doc, T.record({ product: T.record({ title: T.string }) }), {
+      mode: "compatibility",
+    }).pipe(Effect.provide(Loader.memory({ p: "{{item.title}}" }))),
+  );
+  expect(checked.passed).toBe(true);
+  expect(checked.diagnostics.every((d) => d.code === "UnknownCoverage")).toBe(true);
+});

@@ -3648,7 +3648,7 @@
     },
     {
       "feature": "include iteration and aliases",
-      "behavior": "Ruby include for loops and with/as aliases; implicit item name is the evaluated template name, and forloop is inherited. LiquidJS 10.29.0 instead treats for/as words as boolean hash arguments and renders once.",
+      "behavior": "Ruby include for loops (scalar records render once) and with/as aliases; implicit item name is the evaluated template name, and forloop is inherited. LiquidJS 10.29.0 instead treats for/as words as boolean hash arguments and renders once.",
       "tests": [
         "test/roadmap-compat.test.ts"
       ]

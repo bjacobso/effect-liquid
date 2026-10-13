@@ -779,7 +779,12 @@ function* nodes<E, R>(
         for (const [key, value] of Object.entries(node.args))
           args[key] = (yield* ev(value)) ?? null;
         if (node.with) args[node.with.alias ?? name] = (yield* ev(node.with.value)) ?? null;
-        const items = node.for ? enumerable(yield* ev(node.for.value)) : [null];
+        const collection = node.for ? yield* ev(node.for.value) : null;
+        const items = node.for
+          ? node.mode === "include" && collection != null && !isArray(collection)
+            ? [collection]
+            : enumerable(collection)
+          : [null];
         if (!items.length) break;
         const loader = yield* perform(TemplateLoader);
         const source = yield* perform(
