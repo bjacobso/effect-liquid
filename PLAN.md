@@ -88,7 +88,7 @@ Exit: multi-file rendering and analysis agree about scopes. A changed child inva
 - [x] Add array-to-sentence formatting and typed missing-argument failures for append/prepend.
 - [ ] Expand remaining filters by family, with runtime semantics, analysis/type metadata hooks, and conformance fixtures in each batch.
 - [x] Implement or explicitly defer each remaining option and host adapter. Keep platform commerce features outside the core.
-- [ ] Add bounded fuzz/differential runs and initial parse/render/analysis/stream benchmarks; establish measured regression budgets.
+- [x] Add bounded fuzz/differential runs and initial parse/render/analysis/stream benchmarks; establish measured regression budgets.
 
 Exit: every expanded feature has a tested row. Collected stream output equals buffered output, interrupted consumers release resources, and slow consumers do not cause unbounded queues. Publish the actual conformance report; remaining gaps prevent a full-compatibility claim but do not block an honestly scoped release.
 
@@ -139,8 +139,11 @@ Revisit architecture only when a milestone exposes a concrete constraint. Keep f
 - Typed extension registries are explicit function arguments. Configuration and loaders use services/layers. This preserves each custom filter's `E`/`R` types without a globally erased registry service; compile-time and runtime tests cover the decision.
 - `render`/`include` supports named arguments and interpolated quoted names; render bindings and layout blocks are implemented. Cache and include flow summaries are still pending.
 - Static analysis reports partial coverage for loop-carried assignments and loop control. The checker refuses to certify these in strict mode. This is the remaining fixed-point work, not an inferred proof of safety.
+- Buffered and streaming renders share a synchronous AST interpreter, entering Effect for extensions/loading and yielding every 256 evaluation steps or loop iterations. Buffered output bypasses stream channels; streams pull at most 128 output strings per batch and flush once a batch reaches 16,384 code units, before effects and failures. UTF-8 output accounting does not allocate encoded copies.
 - Effect Stream output, Schema decoding/projection, bounded literal project checks, and CLI commands are tested. Project CLI and complete custom-tag contracts are pending.
-- `pnpm check` builds declarations and runs type, semantic, differential, robustness, integration, browser-bundle, package/CLI, and formatting checks. `pnpm benchmark` provides a reproducible local baseline; no performance regression threshold or cross-engine speed claim has been established.
+- `pnpm check` builds declarations and runs type, semantic, differential, robustness, integration, browser-bundle, package/CLI, and formatting checks. `pnpm benchmark` measures warmed parse/render/analysis/check/stream cases and gates the 100-product render at 20 ms and both 10,000-output render modes at 200 ms per run. Unit tests use a generous 1,000 ms large-loop budget to tolerate CI contention. These are local regression budgets, not cross-engine speed claims.
+
+- Measured on the development VM (Node 24.14.1, Linux x64): warmed 10,000-output rendering fell from 1,936.1 ms to 22.2 ms buffered and from 2,021.2 ms to 19.1 ms streaming. The 100-product render fell from 31.77 ms to 2.43 ms. The parse-and-render loop probe measured 49 ms at 10,000 iterations (previously 2,087 ms).
 
 ## Imported conformance follow-up
 
