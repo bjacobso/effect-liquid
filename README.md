@@ -141,7 +141,7 @@ TypeScript checks paths inserted through `L.path`, expression methods, and the r
 
 Spans use zero-based UTF-16 offsets into the original source. Repeated occurrences remain separate. Reads before assignments and assignments in only one branch remain possible external dependencies. A variable being read does not mean its value must always be present.
 
-Analysis and checking share bounded fixed-point loop rules. Reads include both the first iteration and possible later iterations; conditional writes and zero iterations preserve external dependencies. Break/continue paths, shadow restoration, capture timing, branch joins, and scoped builtins are modeled. Known empty/single loops avoid impossible body/else paths. Nonconvergent provenance/types widen after 16 rounds, with a 100,000-node traversal budget. Counter seeds, table-row control quirks, unknown transformations, opaque tags, and shared includes still report partial coverage.
+Analysis and checking share bounded fixed-point loop rules. Reads include both the first iteration and possible later iterations; conditional writes and zero iterations preserve external dependencies. Break/continue paths, shadow restoration, capture timing, branch joins, and scoped builtins are modeled. Known empty/single loops avoid impossible body/else paths. Nonconvergent provenance/types widen after 16 rounds, with a 100,000-node traversal budget. Counter seeds, table-row control quirks, unknown transformations, opaque tags, and shared includes still report partial coverage. Opaque tags and unknown transformation provenance also emit located diagnostics, including in project analysis.
 
 ## Partials and streaming
 

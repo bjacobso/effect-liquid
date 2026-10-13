@@ -524,19 +524,12 @@ export const check = <E = never, R = never>(
                           : t,
               ),
             );
-            initial.locals.set(n.name, item);
-            for (const key of initial.locals.keys())
-              if (
-                key === `@${n.name}` ||
-                key.startsWith(`@${n.name}.`) ||
-                key.startsWith(`@${n.name}[`) ||
-                key === "@forloop" ||
-                key.startsWith("@forloop.")
-              )
-                initial.locals.delete(key);
-            initial.locals.set(
+            Binding.shadow(initial, n.name, item);
+            Binding.shadow(
+              initial,
               Binding.tagMetadata[n._tag].builtin!,
               T.record({
+                name: T.string,
                 index: T.number,
                 index0: T.number,
                 rindex: T.number,
@@ -552,7 +545,7 @@ export const check = <E = never, R = never>(
                       col_first: T.boolean,
                       col_last: T.boolean,
                     }
-                  : { name: T.string, parentloop: T.missing }),
+                  : { parentloop: T.missing }),
               }),
             );
             const shape = Binding.loopShape(n);
@@ -589,6 +582,8 @@ export const check = <E = never, R = never>(
                   );
             if (!result.converged)
               unknown("Loop type widening exceeded the precision bound", n.span);
+            if (n._tag === "TableRow" && (single?.breaks.length || single?.continues.length))
+              unknown("Table-row control propagation requires a runtime-specific summary", n.span);
             const otherwise =
               n._tag === "For"
                 ? shape.empty
@@ -607,7 +602,7 @@ export const check = <E = never, R = never>(
           }
           case "Block": {
             const next = Binding.fork(env);
-            next.locals.set("block", T.record({ super: T.string }));
+            Binding.shadow(next, "block", T.record({ super: T.string }));
             body(n.body, next);
             unknown("Block inheritance requires project checking", n.span);
             break;

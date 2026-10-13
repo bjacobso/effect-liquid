@@ -142,6 +142,10 @@ it("exposes opaque tags and unknown transformations without running handlers", a
     Liquid.check(doc, T.record({ input: T.number }), {}, registry),
   );
   expect(analysis.coverageReasons).toContain("Unknown transformation provenance: opaque at 14");
+  expect(analysis.diagnostics[0]).toMatchObject({
+    code: "UnknownTransformation",
+    span: { start: 14 },
+  });
   expect(checked.passed).toBe(false);
   expect(calls).toBe(0);
   const opaque = {
@@ -150,7 +154,12 @@ it("exposes opaque tags and unknown transformations without running handlers", a
       { _tag: "Custom", span: { sourceId: doc.source.id, start: 0, end: 1 } } as unknown as Node,
     ],
   } satisfies Document;
-  expect((await Effect.runPromise(Liquid.analyze(opaque))).coverage).toBe("partial");
+  const opaqueAnalysis = await Effect.runPromise(Liquid.analyze(opaque));
+  expect(opaqueAnalysis.coverage).toBe("partial");
+  expect(opaqueAnalysis.diagnostics[0]).toMatchObject({
+    code: "OpaqueExtension",
+    span: { start: 0, end: 1 },
+  });
   expect((await Effect.runPromise(Liquid.check(opaque, T.record({})))).passed).toBe(false);
 });
 
@@ -170,3 +179,22 @@ it("analyzes known empty and single loops without fictitious back edges", async 
     (await check("{% for i in (1..1) %}{% assign x = 1 %}{% endfor %}{{x}}", T.record({}))).passed,
   ).toBe(true);
 });
+
+it.each(["for", "tablerow"])(
+  "invalidates caller guards when %s shadows builtin metadata",
+  async (tag) => {
+    const builtin = tag === "for" ? "forloop" : "tablerowloop";
+    const contract = T.record({
+      items: T.array(T.number),
+      [builtin]: T.record({ custom: T.string }),
+    });
+    const source = `{% if ${builtin} %}{% ${tag} item in items %}{{${builtin}.custom}}{% end${tag} %}{% endif %}`;
+    const result = await check(source, contract);
+    expect(result.passed).toBe(false);
+    expect(result.diagnostics.some((d) => d.code === "UnknownProperty")).toBe(true);
+    expect(
+      (await check(`{% ${tag} item in items %}{{${builtin}.name}}{% end${tag} %}`, contract))
+        .passed,
+    ).toBe(true);
+  },
+);

@@ -128,8 +128,16 @@ export const analyze = <E, R>(
       if (e._tag === "Filter") {
         const metadata = registry.filters.get(e.name)?.analysis;
         if (metadata?.provenance === "input") return provenance(e.input, env);
-        if (!metadata || metadata.provenance === "unknown")
-          reasons.push(`Unknown transformation provenance: ${e.name} at ${e.span.start}`);
+        if (!metadata || metadata.provenance === "unknown") {
+          const message = `Unknown transformation provenance: ${e.name} at ${e.span.start}`;
+          reasons.push(message);
+          diagnostics.push({
+            code: "UnknownTransformation",
+            severity: "warning",
+            message,
+            span: e.span,
+          });
+        }
         return [];
       }
       if (e._tag !== "Lookup") return [];
@@ -265,7 +273,9 @@ export const analyze = <E, R>(
           return { normal: env, breaks, continues };
         }
         if (!Object.hasOwn(Binding.tagMetadata, n._tag)) {
-          reasons.push(`Opaque custom tag at ${n.span.start}`);
+          const message = `Opaque custom tag at ${n.span.start}`;
+          reasons.push(message);
+          diagnostics.push({ code: "OpaqueExtension", severity: "warning", message, span: n.span });
           continue;
         }
         switch (n._tag) {
@@ -484,7 +494,9 @@ export const analyze = <E, R>(
       dependencies: [
         ...new Map(dependencies.map((d) => [`${d.span.start}:${d.span.end}`, d])).values(),
       ],
-      diagnostics,
+      diagnostics: [
+        ...new Map(diagnostics.map((d) => [`${d.code}:${d.span.start}:${d.message}`, d])).values(),
+      ],
       coverage: reasons.length ? "partial" : "complete",
       coverageReasons: unique(reasons),
     };

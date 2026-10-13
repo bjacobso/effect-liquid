@@ -170,3 +170,11 @@ export function loopShape(node: Extract<import("./Ast.js").Node, { _tag: "For" |
     repeat: length === undefined || length > 1,
   };
 }
+
+/** Shadow bindings invalidate caller refinements for that name and all its paths. */
+export function shadow<T>(flow: Flow<T>, name: string, value: T): void {
+  for (const key of flow.locals.keys())
+    if (key === `@${name}` || key.startsWith(`@${name}.`) || key.startsWith(`@${name}[`))
+      flow.locals.delete(key);
+  flow.locals.set(name, value);
+}

@@ -42,6 +42,7 @@ export const analyzeProject = <E = never, R = never>(
       Effect.gen(function* () {
         yield* Effect.yieldNow();
         documents.push({ id: doc.source.id, analysis });
+        diagnostics.push(...analysis.diagnostics);
         for (const reason of analysis.coverageReasons)
           if (!reason.startsWith("Unanalyzed ")) reasons.add(reason);
         for (const p of [...analysis.externalPaths, ...analysis.derivedInputPaths])
