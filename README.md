@@ -14,7 +14,9 @@ pnpm benchmark
 
 `pnpm benchmark` reports warmed timings and checks local regression budgets: 20 ms for the 100-product render and 200 ms for each 10,000-output render mode. Unit tests allow 1,000 ms for the large loop to accommodate CI contention.
 
-Uses Node.js 22+, pnpm 10.20.0, TypeScript 5.9.3, and Effect 3.22.2. CI targets Node 22 and 24. The core bundles for browsers; platform filesystem code lives in a separate module. All exports are ESM with TypeScript declarations.
+Uses Node.js 22.12+, pnpm 10.20.0, TypeScript 5.9.3, and Effect 3.22.2. CI runs tests on Node 22 and 24, plus separate typecheck, oxlint, and oxfmt checks. The core bundles for browsers; platform filesystem code lives in a separate module. All exports are ESM with TypeScript declarations.
+
+`pnpm check` runs typechecking, tests, linting, and the formatting check locally. Use `pnpm lint:fix` to apply lint fixes and `pnpm format` to format source, tests, scripts, and configuration. CI checks formatting with `pnpm format:check` without modifying files.
 
 ## Parse and render
 

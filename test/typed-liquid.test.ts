@@ -54,7 +54,7 @@ function typeChecks() {
   // @ts-expect-error A boolean cannot be uppercased
   L.path("user.active").upcase();
   // @ts-expect-error Template holes require typed expressions
-  L.template`{{ ${"user.name"} }}`;
+  L.template`{{ ${"user.name"} }}`; // oxlint-disable-line no-unused-expressions -- Compile-time rejection test.
   // @ts-expect-error Required product data is missing
   greeting.render({ user: { name: "Ada", active: true } });
 }
