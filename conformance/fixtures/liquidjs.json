@@ -17,7 +17,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/e2e/drop.spec.ts#L44",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:106:23",
@@ -37,7 +38,8 @@
     "expected": {
       "kind": "output",
       "output": "\r\ntrue\r\n"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:111:16",
@@ -55,7 +57,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/e2e/issues.spec.ts#L111",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:112:23",
@@ -79,7 +82,8 @@
     "expected": {
       "kind": "output",
       "output": "2021-10-06 17:31 PM +1000"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:158:16",
@@ -98,7 +102,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/e2e/issues.spec.ts#L158",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:17:23",
@@ -118,7 +123,8 @@
     "expected": {
       "kind": "output",
       "output": "foo"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:210:17",
@@ -144,7 +150,8 @@
     "expected": {
       "kind": "output",
       "output": "4#8#12#6"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:22:17",
@@ -166,7 +173,8 @@
     "expected": {
       "kind": "output",
       "output": "foo"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:220:17",
@@ -188,7 +196,8 @@
     "expected": {
       "kind": "output",
       "output": "1"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:227:16",
@@ -206,7 +215,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/e2e/issues.spec.ts#L227",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:233:16",
@@ -222,7 +232,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/e2e/issues.spec.ts#L233",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:248:23",
@@ -242,7 +253,8 @@
     "expected": {
       "kind": "output",
       "output": "[]"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:253:23",
@@ -262,7 +274,8 @@
     "expected": {
       "kind": "output",
       "output": "z x "
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:267:23",
@@ -278,7 +291,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/e2e/issues.spec.ts#L267",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:272:17",
@@ -294,7 +308,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/e2e/issues.spec.ts#L272",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:277:17",
@@ -313,7 +328,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:362:23",
@@ -329,7 +345,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/e2e/issues.spec.ts#L362",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:406:23",
@@ -348,7 +365,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/e2e/issues.spec.ts#L406",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:41:17",
@@ -368,7 +386,8 @@
     "expected": {
       "kind": "output",
       "output": "This is a code snippet showing how {% breaks the raw block."
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:416:23",
@@ -386,7 +405,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/e2e/issues.spec.ts#L416",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:426:23",
@@ -402,7 +422,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/e2e/issues.spec.ts#L426",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:434:17",
@@ -424,7 +445,8 @@
     "expected": {
       "kind": "output",
       "output": "2023-04-05T12:00:00+00002023-01-05T12:00:00+00002023-01-05T12:00:00+00002023-01-05T12:00:00+00002023-01-05T12:00:00+0000"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:451:21",
@@ -443,7 +465,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:474:19",
@@ -467,7 +490,8 @@
     "expected": {
       "kind": "output",
       "output": "This is a love potion!"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:485:11",
@@ -491,7 +515,8 @@
     "expected": {
       "kind": "output",
       "output": "FOO"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:489:19",
@@ -513,7 +538,8 @@
     "expected": {
       "kind": "output",
       "output": "Türkiye"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:494:17",
@@ -532,7 +558,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:498:17",
@@ -551,7 +578,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:522:11",
@@ -576,7 +604,8 @@
     "expected": {
       "kind": "output",
       "output": "a5b"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:526:11",
@@ -596,7 +625,8 @@
     "expected": {
       "kind": "output",
       "output": "113"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:527:11",
@@ -616,7 +646,8 @@
     "expected": {
       "kind": "output",
       "output": "113"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:53:17",
@@ -639,7 +670,8 @@
     "expected": {
       "kind": "output",
       "output": "<div>Y</div>"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:552:17",
@@ -660,7 +692,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:574:17",
@@ -701,7 +734,8 @@
     "expected": {
       "kind": "output",
       "output": "\n          JavaScript <sup>3</sup> Posts:page1,page2,page3,\n          PHP <sup>2</sup> Posts:page0,page2,\n          CSharp <sup>2</sup> Posts:page2,page4,\n          CPP <sup>1</sup> Posts:page0,"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:584:19",
@@ -717,7 +751,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/e2e/issues.spec.ts#L584",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:69:23",
@@ -737,7 +772,8 @@
     "expected": {
       "kind": "output",
       "output": "{{}}"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:74:23",
@@ -761,7 +797,8 @@
     "expected": {
       "kind": "output",
       "output": "BAR"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:9:17",
@@ -786,7 +823,8 @@
     "expected": {
       "kind": "output",
       "output": "fdsafdsa..."
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:90:23",
@@ -806,7 +844,8 @@
     "expected": {
       "kind": "output",
       "output": "falsefalse"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/issues.spec.ts:98:23",
@@ -826,7 +865,8 @@
     "expected": {
       "kind": "output",
       "output": "a \n b \n c"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/parse-and-analyze.spec.ts:63:21",
@@ -842,7 +882,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/e2e/parse-and-analyze.spec.ts#L63",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/parse-and-render.spec.ts:16:23",
@@ -867,7 +908,8 @@
     "expected": {
       "kind": "output",
       "output": "-2a"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/parse-and-render.spec.ts:20:23",
@@ -887,7 +929,8 @@
     "expected": {
       "kind": "output",
       "output": "foobar"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/parse-and-render.spec.ts:24:23",
@@ -907,7 +950,8 @@
     "expected": {
       "kind": "output",
       "output": "foo"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/parse-and-render.spec.ts:28:18",
@@ -928,7 +972,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/parse-and-render.spec.ts:32:6",
@@ -944,7 +989,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/e2e/parse-and-render.spec.ts#L32",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/parse-and-render.spec.ts:35:6",
@@ -960,7 +1006,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/e2e/parse-and-render.spec.ts#L35",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/parse-and-render.spec.ts:40:21",
@@ -976,7 +1023,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/e2e/parse-and-render.spec.ts#L40",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/parse-and-render.spec.ts:41:25",
@@ -1001,7 +1049,8 @@
     "expected": {
       "kind": "output",
       "output": "12"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/parse-and-render.spec.ts:43:26",
@@ -1026,7 +1075,8 @@
     "expected": {
       "kind": "output",
       "output": "12"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/parse-and-render.spec.ts:48:19",
@@ -1042,7 +1092,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/e2e/parse-and-render.spec.ts#L48",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/parse-and-render.spec.ts:49:23",
@@ -1067,7 +1118,8 @@
     "expected": {
       "kind": "output",
       "output": "<p>alice,bob</p>"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/parse-and-render.spec.ts:55:23",
@@ -1087,7 +1139,8 @@
     "expected": {
       "kind": "output",
       "output": "apples"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/e2e/parse-and-render.spec.ts:60:23",
@@ -1107,7 +1160,8 @@
     "expected": {
       "kind": "output",
       "output": "true"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:10:13",
@@ -1127,7 +1181,8 @@
       "kind": "output",
       "output": "Paul"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:101:13",
@@ -1156,7 +1211,8 @@
       "kind": "output",
       "output": "2"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:105:13",
@@ -1187,7 +1243,8 @@
       "kind": "output",
       "output": "1"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:111:13",
@@ -1219,7 +1276,8 @@
       "kind": "output",
       "output": "foobar"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:118:12",
@@ -1247,7 +1305,8 @@
       "kind": "output",
       "output": "hey,foo,bar"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:122:12",
@@ -1272,7 +1331,8 @@
       "kind": "output",
       "output": "foo,bar"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:131:12",
@@ -1294,7 +1354,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:132:12",
@@ -1316,7 +1377,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:139:12",
@@ -1341,7 +1403,8 @@
       "kind": "output",
       "output": "hey,foo"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:143:12",
@@ -1366,7 +1429,8 @@
       "kind": "output",
       "output": "hey,foo hey,foo"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:147:12",
@@ -1388,7 +1452,8 @@
       "kind": "output",
       "output": "foo"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:156:12",
@@ -1410,7 +1475,8 @@
       "kind": "output",
       "output": "1"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:157:12",
@@ -1432,7 +1498,8 @@
       "kind": "output",
       "output": "1"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:164:12",
@@ -1457,7 +1524,8 @@
       "kind": "output",
       "output": "hey"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:168:12",
@@ -1482,7 +1550,8 @@
       "kind": "output",
       "output": "hey hey,you"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:17:13",
@@ -1502,7 +1571,8 @@
       "kind": "output",
       "output": "John and Paul and George and Ringo"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:171:12",
@@ -1522,7 +1592,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:178:12",
@@ -1546,7 +1617,8 @@
       "kind": "output",
       "output": "hey, you"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:182:12",
@@ -1570,7 +1642,8 @@
       "kind": "output",
       "output": "hey,you you"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:186:12",
@@ -1592,7 +1665,8 @@
       "kind": "output",
       "output": "1"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:193:12",
@@ -1617,7 +1691,8 @@
       "kind": "output",
       "output": "you"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:197:12",
@@ -1642,7 +1717,8 @@
       "kind": "output",
       "output": "you hey,you"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:200:12",
@@ -1662,7 +1738,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:205:39",
@@ -1682,7 +1759,8 @@
       "kind": "output",
       "output": ".moT rojaM ot lortnoc dnuorG"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:211:12",
@@ -1704,7 +1782,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/filters/array.spec.ts#L211",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:212:25",
@@ -1730,7 +1809,8 @@
     "expected": {
       "kind": "output",
       "output": "abc"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:22:13",
@@ -1750,7 +1830,8 @@
       "kind": "output",
       "output": "John Paul George Ringo"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:240:44",
@@ -1770,7 +1851,8 @@
       "kind": "output",
       "output": "28"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:244:41",
@@ -1790,7 +1872,8 @@
       "kind": "output",
       "output": "4"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:248:64",
@@ -1810,7 +1893,8 @@
       "kind": "output",
       "output": "28"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:252:63",
@@ -1830,7 +1914,8 @@
       "kind": "output",
       "output": "4"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:256:42",
@@ -1850,7 +1935,8 @@
       "kind": "output",
       "output": "0"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:257:40",
@@ -1870,7 +1956,8 @@
       "kind": "output",
       "output": "0"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:258:46",
@@ -1890,7 +1977,8 @@
       "kind": "output",
       "output": "0"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:259:39",
@@ -1910,7 +1998,8 @@
       "kind": "output",
       "output": "3"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:262:37",
@@ -1935,7 +2024,8 @@
       "kind": "output",
       "output": "zebra"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:267:44",
@@ -1955,7 +2045,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:268:50",
@@ -1975,7 +2066,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:269:46",
@@ -1995,7 +2087,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:27:20",
@@ -2014,7 +2107,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:270:39",
@@ -2034,7 +2128,8 @@
       "kind": "output",
       "output": "f"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:273:36",
@@ -2059,7 +2154,8 @@
       "kind": "output",
       "output": "tiger"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:278:44",
@@ -2079,7 +2175,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:279:50",
@@ -2099,7 +2196,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:280:46",
@@ -2119,7 +2217,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:281:39",
@@ -2139,7 +2238,8 @@
       "kind": "output",
       "output": "o"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:284:45",
@@ -2159,7 +2259,8 @@
       "kind": "output",
       "output": "L"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:285:45",
@@ -2179,7 +2280,8 @@
       "kind": "output",
       "output": "q"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:286:43",
@@ -2199,7 +2301,8 @@
       "kind": "output",
       "output": "quid"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:287:44",
@@ -2219,7 +2322,8 @@
       "kind": "output",
       "output": "ui"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:288:44",
@@ -2239,7 +2343,8 @@
       "kind": "output",
       "output": "bc"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:289:37",
@@ -2259,7 +2364,8 @@
       "kind": "output",
       "output": "2 3"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:290:56",
@@ -2279,7 +2385,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:291:72",
@@ -2299,7 +2406,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:292:60",
@@ -2319,7 +2427,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:293:78",
@@ -2339,7 +2448,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:297:13",
@@ -2359,7 +2469,8 @@
       "kind": "output",
       "output": "Sally Snake, giraffe, octopus, zebra"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:305:13",
@@ -2391,7 +2502,8 @@
       "kind": "output",
       "output": "Alice Bob Carol"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:312:13",
@@ -2434,7 +2546,8 @@
       "kind": "output",
       "output": "Alice Bob Carol Carol"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:316:13",
@@ -2462,7 +2575,8 @@
       "kind": "output",
       "output": "fivefouronethreetwo onetwothreefourfive"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:319:13",
@@ -2482,7 +2596,8 @@
       "kind": "output",
       "output": "0"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:335:12",
@@ -2517,7 +2632,8 @@
       "kind": "output",
       "output": "[aa][bb][cc][]"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:34:13",
@@ -2537,7 +2653,8 @@
       "kind": "output",
       "output": "tiger"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:344:13",
@@ -2557,7 +2674,8 @@
       "kind": "output",
       "output": "giraffe, octopus, Sally Snake, zebra"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:349:52",
@@ -2589,7 +2707,8 @@
       "kind": "output",
       "output": "alice bob carol"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:354:33",
@@ -2624,7 +2743,8 @@
       "kind": "output",
       "output": "bob alice carol"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:359:66",
@@ -2666,7 +2786,8 @@
       "kind": "output",
       "output": "alice bob amber watson michael charlie"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:364:48",
@@ -2699,7 +2820,8 @@
       "kind": "output",
       "output": "alice bob carol"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:370:12",
@@ -2721,7 +2843,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:375:12",
@@ -2743,7 +2866,8 @@
       "kind": "output",
       "output": "1"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:38:13",
@@ -2763,7 +2887,8 @@
       "kind": "output",
       "output": "zebra, octopus"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:397:12",
@@ -2798,7 +2923,8 @@
       "kind": "output",
       "output": "[30][40][50][]"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:406:13",
@@ -2818,7 +2944,8 @@
       "kind": "output",
       "output": "ants, bugs, bees"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:41:12",
@@ -2838,7 +2965,8 @@
       "kind": "output",
       "output": "0"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:413:13",
@@ -2858,7 +2986,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:42:12",
@@ -2878,7 +3007,8 @@
       "kind": "output",
       "output": "0"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:427:13",
@@ -2929,7 +3059,8 @@
       "kind": "output",
       "output": "\n        Kitchen products:\n        - Spatula\n        - Garlic press\n        "
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:438:13",
@@ -2980,7 +3111,8 @@
       "kind": "output",
       "output": "\n        Available products:\n        - Coffee mug\n        - Boring sneakers\n        "
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:449:13",
@@ -3031,7 +3163,8 @@
       "kind": "output",
       "output": "\n        Untyped products:\n        - Coffee mug\n        - Limited edition sneakers\n        - Boring sneakers\n        "
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:461:13",
@@ -3082,7 +3215,8 @@
       "kind": "output",
       "output": "\n        Typed products:\n        - Vacuum\n        - Spatula\n        - Television\n        - Garlic press\n        "
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:474:13",
@@ -3133,7 +3267,8 @@
       "kind": "output",
       "output": "\n        Typed products:\n        - Vacuum\n        - Spatula\n        - Television\n        - Garlic press\n        "
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:48:13",
@@ -3162,7 +3297,8 @@
       "kind": "output",
       "output": "foobar"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:491:13",
@@ -3197,7 +3333,8 @@
       "kind": "output",
       "output": "\n        Recent Authors:\n          - Alice"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:502:12",
@@ -3217,7 +3354,8 @@
       "kind": "output",
       "output": "abc"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:503:12",
@@ -3237,7 +3375,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:507:12",
@@ -3261,7 +3400,8 @@
       "kind": "output",
       "output": "[object Object]"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:508:12",
@@ -3285,7 +3425,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:516:13",
@@ -3333,7 +3474,8 @@
       "kind": "output",
       "output": "\n        - 2\n        - 3\n        "
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:52:13",
@@ -3357,7 +3499,8 @@
       "kind": "output",
       "output": "foo"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:530:13",
@@ -3398,7 +3541,8 @@
       "kind": "output",
       "output": "\n        - 1\n        - 2\n        "
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:539:13",
@@ -3449,7 +3593,8 @@
       "kind": "output",
       "output": "\n        Kitchen products:\n        "
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:549:13",
@@ -3479,7 +3624,8 @@
       "kind": "output",
       "output": "[{\"foo\":\"FOO\"}]"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:553:12",
@@ -3513,7 +3659,8 @@
       "kind": "output",
       "output": "[{\"tags\":[]}]"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:557:12",
@@ -3542,7 +3689,8 @@
       "kind": "output",
       "output": "[]"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:562:14",
@@ -3573,7 +3721,8 @@
       "kind": "output",
       "output": "[{\"foo\":[\"FOO\",\"bar\"]}]"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:566:14",
@@ -3609,7 +3758,8 @@
       "kind": "output",
       "output": "[{\"tags\":[]}]"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:569:14",
@@ -3662,7 +3812,8 @@
       "kind": "output",
       "output": "Coffee mug,Limited edition sneakers,Boring sneakers"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:573:14",
@@ -3715,7 +3866,8 @@
       "kind": "output",
       "output": "Coffee mug,Limited edition sneakers,Boring sneakers"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:589:13",
@@ -3766,7 +3918,8 @@
       "kind": "output",
       "output": "\n        Kitchen products:\n        - Spatula\n        - Garlic press\n        "
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:59:21",
@@ -3797,7 +3950,8 @@
     "expected": {
       "kind": "output",
       "output": "[\"foo\",null]"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:611:13",
@@ -3849,7 +4003,8 @@
       "kind": "output",
       "output": "\n        Kitchen products:\n        - Spatula\n        - Garlic press\n        "
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:625:13",
@@ -3900,7 +4055,8 @@
       "kind": "output",
       "output": "\n        Kitchen products:\n        - Vacuum\n        - Television\n        - Coffee mug\n        - Limited edition sneakers\n        - Boring sneakers\n        "
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:639:13",
@@ -3951,7 +4107,8 @@
       "kind": "output",
       "output": "\n        Unavailable products:\n        - Vacuum\n        - Spatula\n        - Television\n        - Garlic press\n        - Limited edition sneakers\n        "
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:653:13",
@@ -4002,7 +4159,8 @@
       "kind": "output",
       "output": "\n        Untyped products:\n        - Coffee mug\n        - Limited edition sneakers\n        - Boring sneakers\n        "
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:667:14",
@@ -4044,7 +4202,8 @@
       "kind": "output",
       "output": "[{\"foo\":[\"bar\",\"baz\"]}]"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:67:13",
@@ -4082,7 +4241,8 @@
       "kind": "output",
       "output": "Alice Bob Carol"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:670:14",
@@ -4135,7 +4295,8 @@
       "kind": "output",
       "output": "Vacuum,Spatula,Television,Garlic press"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:686:13",
@@ -4186,7 +4347,8 @@
       "kind": "output",
       "output": "\n        Kitchen products:\n        - Spatula\n        - Garlic press\n        "
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:783:13",
@@ -4222,7 +4384,8 @@
       "kind": "output",
       "output": "true, false"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:789:13",
@@ -4258,7 +4421,8 @@
       "kind": "output",
       "output": "true"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:795:13",
@@ -4294,7 +4458,8 @@
       "kind": "output",
       "output": "false"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:803:14",
@@ -4325,7 +4490,8 @@
       "kind": "output",
       "output": "true"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:807:14",
@@ -4361,7 +4527,8 @@
       "kind": "output",
       "output": "true"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:810:14",
@@ -4399,7 +4566,8 @@
       "kind": "output",
       "output": "true"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:811:14",
@@ -4437,7 +4605,8 @@
       "kind": "output",
       "output": "false"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:822:13",
@@ -4472,7 +4641,8 @@
       "kind": "output",
       "output": "true"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:828:13",
@@ -4507,7 +4677,8 @@
       "kind": "output",
       "output": "false"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:841:13",
@@ -4543,7 +4714,8 @@
       "kind": "output",
       "output": "{\"graduation_year\":2014,\"name\":\"Jack\",\"age\":13}"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:847:13",
@@ -4579,7 +4751,8 @@
       "kind": "output",
       "output": "{\"graduation_year\":2014,\"name\":\"John\"}"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:85:13",
@@ -4601,7 +4774,8 @@
       "kind": "output",
       "output": "21.5"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:853:13",
@@ -4637,7 +4811,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:861:14",
@@ -4668,7 +4843,8 @@
       "kind": "output",
       "output": "{\"foo\":[\"FOO\",\"bar\"]}"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:865:14",
@@ -4704,7 +4880,8 @@
       "kind": "output",
       "output": "{\"tags\":[]}"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:868:14",
@@ -4742,7 +4919,8 @@
       "kind": "output",
       "output": "{\"graduation_year\":2013,\"name\":\"Jay\"}"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:873:14",
@@ -4780,7 +4958,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:884:13",
@@ -4815,7 +4994,8 @@
       "kind": "output",
       "output": "{\"graduation_year\":2014,\"name\":\"John\"}"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:89:13",
@@ -4848,7 +5028,8 @@
       "kind": "output",
       "output": "0 7 0"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:890:13",
@@ -4883,7 +5064,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:903:13",
@@ -4919,7 +5101,8 @@
       "kind": "output",
       "output": "2"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:909:13",
@@ -4955,7 +5138,8 @@
       "kind": "output",
       "output": "1"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:915:13",
@@ -4991,7 +5175,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:923:14",
@@ -5022,7 +5207,8 @@
       "kind": "output",
       "output": "0"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:927:14",
@@ -5058,7 +5244,8 @@
       "kind": "output",
       "output": "1"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:93:13",
@@ -5086,7 +5273,8 @@
       "kind": "output",
       "output": "1"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:930:14",
@@ -5124,7 +5312,8 @@
       "kind": "output",
       "output": "0"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:931:14",
@@ -5162,7 +5351,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:942:13",
@@ -5197,7 +5387,8 @@
       "kind": "output",
       "output": "1"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:948:13",
@@ -5232,7 +5423,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/array.spec.ts:97:13",
@@ -5260,7 +5452,8 @@
       "kind": "output",
       "output": "1"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/base64.spec.ts:10:13",
@@ -5280,7 +5473,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/base64.spec.ts:102:13",
@@ -5300,7 +5494,8 @@
       "kind": "output",
       "output": "Special chars: !@#$%^&*()_+-=[]{}|;:,.<>?"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/base64.spec.ts:14:13",
@@ -5320,7 +5515,8 @@
       "kind": "output",
       "output": "SGVsbG8sIFdvcmxkISBAIyQl"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/base64.spec.ts:18:13",
@@ -5340,7 +5536,8 @@
       "kind": "output",
       "output": "5L2g5aW95LiW55WM"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/base64.spec.ts:22:13",
@@ -5360,7 +5557,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/base64.spec.ts:26:13",
@@ -5380,7 +5578,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/base64.spec.ts:30:13",
@@ -5400,7 +5599,8 @@
       "kind": "output",
       "output": "MTIz"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/base64.spec.ts:34:13",
@@ -5420,7 +5620,8 @@
       "kind": "output",
       "output": "dHJ1ZQ=="
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/base64.spec.ts:40:13",
@@ -5440,7 +5641,8 @@
       "kind": "output",
       "output": "one two three"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/base64.spec.ts:44:13",
@@ -5460,7 +5662,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/base64.spec.ts:48:13",
@@ -5480,7 +5683,8 @@
       "kind": "output",
       "output": "Hello, World! @#$%"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/base64.spec.ts:52:13",
@@ -5500,7 +5704,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/base64.spec.ts:56:13",
@@ -5520,7 +5725,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/base64.spec.ts:6:13",
@@ -5540,7 +5746,8 @@
       "kind": "output",
       "output": "b25lIHR3byB0aHJlZQ=="
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/base64.spec.ts:60:13",
@@ -5560,7 +5767,8 @@
       "kind": "output",
       "output": "123"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/base64.spec.ts:64:13",
@@ -5580,7 +5788,8 @@
       "kind": "output",
       "output": "true"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/base64.spec.ts:97:13",
@@ -5600,7 +5809,8 @@
       "kind": "output",
       "output": "Hello, World!"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/crypto.spec.ts:15:13",
@@ -5620,7 +5830,8 @@
       "kind": "output",
       "output": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/crypto.spec.ts:19:13",
@@ -5640,7 +5851,8 @@
       "kind": "output",
       "output": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/crypto.spec.ts:23:13",
@@ -5660,7 +5872,8 @@
       "kind": "output",
       "output": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/crypto.spec.ts:27:13",
@@ -5680,7 +5893,8 @@
       "kind": "output",
       "output": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/crypto.spec.ts:34:13",
@@ -5700,7 +5914,8 @@
       "kind": "output",
       "output": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/crypto.spec.ts:43:13",
@@ -5720,7 +5935,8 @@
       "kind": "output",
       "output": "8e0d5d65cff1242a4af66c8f4a32854fd5fb80edcc8aabe9b302b29c7c71dc20"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/crypto.spec.ts:50:13",
@@ -5740,7 +5956,8 @@
       "kind": "output",
       "output": "3bdadea6ed0e95ededc15dc4421ce7654c970156843dfd997be3fef5358168ca"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/crypto.spec.ts:57:13",
@@ -5760,7 +5977,8 @@
       "kind": "output",
       "output": "b613679a0814d9ec772f95d778c35fc5ff1697c493715653c6c712144292c5ad"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/crypto.spec.ts:64:13",
@@ -5780,7 +5998,8 @@
       "kind": "output",
       "output": "b613679a0814d9ec772f95d778c35fc5ff1697c493715653c6c712144292c5ad"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/crypto.spec.ts:8:13",
@@ -5800,7 +6019,8 @@
       "kind": "output",
       "output": "44ac1d7a2936e30a5de07082fd65d6fe9b1fb658a1a98bfe65bc5959beac5dd0"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:102:12",
@@ -5823,7 +6043,8 @@
       "kind": "output",
       "output": "2025-01-02T03:04:05 -0100"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:103:12",
@@ -5846,7 +6067,8 @@
       "kind": "output",
       "output": "Thursday, January 2, 2025 at 3:04 am -0100"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:106:13",
@@ -5869,7 +6091,8 @@
       "kind": "output",
       "output": "1990-12-31T23:00:00"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:110:11",
@@ -5889,7 +6112,8 @@
       "kind": "output",
       "output": "foo"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:113:11",
@@ -5911,7 +6135,8 @@
       "kind": "output",
       "output": "[object Object]"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:126:13",
@@ -5933,7 +6158,8 @@
       "kind": "output",
       "output": "1990-12-31T17:00:00"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:129:13",
@@ -5953,7 +6179,8 @@
       "kind": "output",
       "output": "1990-12-31T17:00:00"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:132:13",
@@ -5973,7 +6200,8 @@
       "kind": "output",
       "output": "Wednesday, December 7, 2022 at 10:22 pm -0500"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:135:13",
@@ -5993,7 +6221,8 @@
       "kind": "output",
       "output": "1991-01-01T04:30:00"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:138:13",
@@ -6013,7 +6242,8 @@
       "kind": "output",
       "output": "2021-01-01T18:00:00"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:141:13",
@@ -6033,7 +6263,8 @@
       "kind": "output",
       "output": "2021-06-01T19:00:00"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:144:13",
@@ -6053,7 +6284,8 @@
       "kind": "output",
       "output": "1782853200"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:147:13",
@@ -6073,7 +6305,8 @@
       "kind": "output",
       "output": "1782853200"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:150:13",
@@ -6095,7 +6328,8 @@
       "kind": "output",
       "output": "1782853200"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:153:13",
@@ -6115,7 +6349,8 @@
       "kind": "output",
       "output": "1782838800"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:156:13",
@@ -6137,7 +6372,8 @@
       "kind": "output",
       "output": "1990-12-31T17:00:00"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:159:13",
@@ -6159,7 +6395,8 @@
       "kind": "output",
       "output": "1990-12-31T18:00:00"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:175:13",
@@ -6182,7 +6419,8 @@
       "kind": "output",
       "output": "1990-12-31T23:00:00"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:179:19",
@@ -6204,7 +6442,8 @@
     "expected": {
       "kind": "output",
       "output": "1991-01-01T04:30:00"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:184:19",
@@ -6220,7 +6459,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/filters/date.spec.ts#L184",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:189:19",
@@ -6242,7 +6482,8 @@
     "expected": {
       "kind": "output",
       "output": "1991-01-01T04:30:00 Asia/Colombo"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:194:13",
@@ -6264,7 +6505,8 @@
       "kind": "output",
       "output": "1991-01-01T10:00:00 Australia/Brisbane"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:198:13",
@@ -6286,7 +6528,8 @@
       "kind": "output",
       "output": "1990-12-31T23:00:00 +02:30"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:205:13",
@@ -6308,7 +6551,8 @@
       "kind": "output",
       "output": "Wednesday, December 7, 2022 at 9:22 pm -0600"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:208:13",
@@ -6330,7 +6574,8 @@
       "kind": "output",
       "output": "1990-12-31T17:00:00"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:213:13",
@@ -6353,7 +6598,8 @@
       "kind": "output",
       "output": "08th of Dec 2022 at 07:00 pm"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:216:13",
@@ -6376,7 +6622,8 @@
       "kind": "output",
       "output": "1991-01-01T04:30:00"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:222:19",
@@ -6400,7 +6647,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:239:18",
@@ -6421,7 +6669,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/filters/date.spec.ts#L239",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:250:19",
@@ -6437,7 +6686,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/filters/date.spec.ts#L250",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:255:19",
@@ -6459,7 +6709,8 @@
     "expected": {
       "kind": "output",
       "output": "2008-11-07T13:07:54-08:00"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:26:13",
@@ -6481,7 +6732,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:262:19",
@@ -6497,7 +6749,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/filters/date.spec.ts#L262",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:267:19",
@@ -6519,7 +6772,8 @@
     "expected": {
       "kind": "output",
       "output": "Fri, 07 Nov 2008 13:07:54 -0800"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:274:19",
@@ -6541,7 +6795,8 @@
     "expected": {
       "kind": "output",
       "output": "07 Nov 2008"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:278:19",
@@ -6563,7 +6818,8 @@
     "expected": {
       "kind": "output",
       "output": "Nov 7th, 2008"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:282:19",
@@ -6585,7 +6841,8 @@
     "expected": {
       "kind": "output",
       "output": "hello"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:29:13",
@@ -6607,7 +6864,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:290:19",
@@ -6629,7 +6887,8 @@
     "expected": {
       "kind": "output",
       "output": "07 November 2008"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:294:19",
@@ -6651,7 +6910,8 @@
     "expected": {
       "kind": "output",
       "output": "November 7th, 2008"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:298:19",
@@ -6673,7 +6933,8 @@
     "expected": {
       "kind": "output",
       "output": "7th November 2008"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:43:13",
@@ -6695,7 +6956,8 @@
     "expected": {
       "kind": "output",
       "output": "Mon"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:47:13",
@@ -6717,7 +6979,8 @@
     "expected": {
       "kind": "output",
       "output": "Sun"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:52:13",
@@ -6739,7 +7002,8 @@
     "expected": {
       "kind": "output",
       "output": "周日"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:58:13",
@@ -6761,7 +7025,8 @@
     "expected": {
       "kind": "output",
       "output": "Aug"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:63:13",
@@ -6783,7 +7048,8 @@
     "expected": {
       "kind": "output",
       "output": "8月"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:84:11",
@@ -6803,7 +7069,8 @@
       "kind": "output",
       "output": "1991-02-22T00:00:00"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:90:13",
@@ -6826,7 +7093,8 @@
       "kind": "output",
       "output": "1990-12-31T23:00:00"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:93:13",
@@ -6849,7 +7117,8 @@
       "kind": "output",
       "output": "1990-12-31T23:00:00 +0000"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:96:13",
@@ -6872,7 +7141,8 @@
       "kind": "output",
       "output": "1990-12-31T23:00:00 -0100"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/date.spec.ts:99:13",
@@ -6895,7 +7165,8 @@
       "kind": "output",
       "output": "1990-12-31T23:00:00 +0230"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:11:13",
@@ -6915,7 +7186,8 @@
       "kind": "output",
       "output": "Have you read &#39;James &amp; the Giant Peach&#39;?"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:15:13",
@@ -6935,7 +7207,8 @@
       "kind": "output",
       "output": "Tetsuro Takara"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:18:13",
@@ -6955,7 +7228,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:23:6",
@@ -6975,7 +7249,8 @@
       "kind": "output",
       "output": "1 &lt; 2 &amp; 3"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:25:12",
@@ -6995,7 +7270,8 @@
       "kind": "output",
       "output": "1 &lt; 2 &amp; 3"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:27:6",
@@ -7015,7 +7291,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:31:13",
@@ -7035,7 +7312,8 @@
       "kind": "output",
       "output": "Have you read &#39;James &amp; the Giant Peach&#39;?"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:45:13",
@@ -7055,7 +7333,8 @@
       "kind": "output",
       "output": "<br />\nHello<br />\nthere<br />\n"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:50:13",
@@ -7075,7 +7354,8 @@
       "kind": "output",
       "output": "Have you read Ulysses?"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:54:13",
@@ -7095,7 +7375,8 @@
       "kind": "output",
       "output": "Ulysses?"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:58:13",
@@ -7115,7 +7396,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:61:13",
@@ -7135,7 +7417,8 @@
     "expected": {
       "kind": "output",
       "output": "after"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:64:13",
@@ -7155,7 +7438,8 @@
       "kind": "output",
       "output": "Ulysses?"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:68:13",
@@ -7175,7 +7459,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:71:13",
@@ -7195,7 +7480,8 @@
       "kind": "output",
       "output": "Ulysses?"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:75:13",
@@ -7215,7 +7501,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:78:13",
@@ -7235,7 +7522,8 @@
     "expected": {
       "kind": "output",
       "output": "text"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:81:13",
@@ -7255,7 +7543,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:84:13",
@@ -7275,7 +7564,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:85:13",
@@ -7295,7 +7585,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:86:13",
@@ -7315,7 +7606,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:89:13",
@@ -7335,7 +7627,8 @@
     "expected": {
       "kind": "output",
       "output": "a<"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/html.spec.ts:90:13",
@@ -7355,7 +7648,8 @@
     "expected": {
       "kind": "output",
       "output": "hello<world<again"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:10:41",
@@ -7375,7 +7669,8 @@
       "kind": "output",
       "output": "5"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:11:41",
@@ -7395,7 +7690,8 @@
       "kind": "output",
       "output": "4"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:14:40",
@@ -7415,7 +7711,8 @@
       "kind": "output",
       "output": "4"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:15:40",
@@ -7435,7 +7732,8 @@
       "kind": "output",
       "output": "3"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:18:42",
@@ -7455,7 +7753,8 @@
       "kind": "output",
       "output": "2"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:19:42",
@@ -7475,7 +7774,8 @@
       "kind": "output",
       "output": "2"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:20:42",
@@ -7495,7 +7795,8 @@
       "kind": "output",
       "output": "4"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:21:48",
@@ -7515,7 +7816,8 @@
       "kind": "output",
       "output": "184"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:24:40",
@@ -7535,7 +7837,8 @@
       "kind": "output",
       "output": "2"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:25:41",
@@ -7555,7 +7858,8 @@
       "kind": "output",
       "output": "4"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:26:40",
@@ -7575,7 +7879,8 @@
       "kind": "output",
       "output": "1.6666666666666667"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:27:50",
@@ -7595,7 +7900,8 @@
       "kind": "output",
       "output": "1"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:28:62",
@@ -7615,7 +7921,8 @@
       "kind": "output",
       "output": "-2"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:29:48",
@@ -7635,7 +7942,8 @@
       "kind": "output",
       "output": "2"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:32:42",
@@ -7655,7 +7963,8 @@
       "kind": "output",
       "output": "1"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:33:42",
@@ -7675,7 +7984,8 @@
       "kind": "output",
       "output": "2"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:34:48",
@@ -7695,7 +8005,8 @@
       "kind": "output",
       "output": "183"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:35:42",
@@ -7715,7 +8026,8 @@
       "kind": "output",
       "output": "3"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:38:42",
@@ -7735,7 +8047,8 @@
       "kind": "output",
       "output": "2"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:39:44",
@@ -7755,7 +8068,8 @@
       "kind": "output",
       "output": "12"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:41:12",
@@ -7775,7 +8089,8 @@
       "kind": "output",
       "output": "171.357"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:42:51",
@@ -7795,7 +8110,8 @@
       "kind": "output",
       "output": "3"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:43:51",
@@ -7815,7 +8131,8 @@
       "kind": "output",
       "output": "3"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:46:42",
@@ -7835,7 +8152,8 @@
       "kind": "output",
       "output": "1"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:47:43",
@@ -7855,7 +8173,8 @@
       "kind": "output",
       "output": "3"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:5:39",
@@ -7875,7 +8194,8 @@
       "kind": "output",
       "output": "3"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:52:38",
@@ -7895,7 +8215,8 @@
       "kind": "output",
       "output": "3"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:53:65",
@@ -7915,7 +8236,8 @@
       "kind": "output",
       "output": "2"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:54:64",
@@ -7935,7 +8257,8 @@
       "kind": "output",
       "output": "-2"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:55:62",
@@ -7955,7 +8278,8 @@
       "kind": "output",
       "output": "1.5"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:58:42",
@@ -7975,7 +8299,8 @@
       "kind": "output",
       "output": "6"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:59:44",
@@ -7995,7 +8320,8 @@
       "kind": "output",
       "output": "20"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:6:43",
@@ -8020,7 +8346,8 @@
       "kind": "output",
       "output": "2"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:61:12",
@@ -8040,7 +8367,8 @@
       "kind": "output",
       "output": "195.357"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:62:51",
@@ -8060,7 +8388,8 @@
       "kind": "output",
       "output": "6"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:63:52",
@@ -8080,7 +8409,8 @@
       "kind": "output",
       "output": "6"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:64:51",
@@ -8100,7 +8430,8 @@
       "kind": "output",
       "output": "2"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:65:40",
@@ -8122,7 +8453,8 @@
       "kind": "output",
       "output": "6"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:69:42",
@@ -8142,7 +8474,8 @@
       "kind": "output",
       "output": "1"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:7:45",
@@ -8162,7 +8495,8 @@
       "kind": "output",
       "output": "3"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:70:42",
@@ -8182,7 +8516,8 @@
       "kind": "output",
       "output": "3"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:71:61",
@@ -8204,7 +8539,8 @@
       "kind": "output",
       "output": "-3"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:72:63",
@@ -8226,7 +8562,8 @@
       "kind": "output",
       "output": "-2"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:74:12",
@@ -8246,7 +8583,8 @@
       "kind": "output",
       "output": "183.36"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:75:48",
@@ -8266,7 +8604,8 @@
       "kind": "output",
       "output": "3"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:76:56",
@@ -8286,7 +8625,8 @@
       "kind": "output",
       "output": "1.01"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:77:57",
@@ -8308,7 +8648,8 @@
       "kind": "output",
       "output": "-1.01"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:78:56",
@@ -8328,7 +8669,8 @@
       "kind": "output",
       "output": "9.08"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:79:57",
@@ -8350,7 +8692,8 @@
       "kind": "output",
       "output": "-9.08"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:82:42",
@@ -8370,7 +8713,8 @@
       "kind": "output",
       "output": "6"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:83:45",
@@ -8390,7 +8734,8 @@
       "kind": "output",
       "output": "168"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:85:12",
@@ -8410,7 +8755,8 @@
       "kind": "output",
       "output": "2200.284"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/math.spec.ts:86:48",
@@ -8430,7 +8776,8 @@
       "kind": "output",
       "output": "168"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:10:58",
@@ -8450,7 +8797,8 @@
     "expected": {
       "kind": "output",
       "output": "a"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:11:64",
@@ -8470,7 +8818,8 @@
     "expected": {
       "kind": "output",
       "output": "a"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:12:63",
@@ -8490,7 +8839,8 @@
     "expected": {
       "kind": "output",
       "output": "true"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:13:60",
@@ -8510,7 +8860,8 @@
     "expected": {
       "kind": "output",
       "output": "0"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:14:77",
@@ -8530,7 +8881,8 @@
     "expected": {
       "kind": "output",
       "output": "false"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:15:77",
@@ -8550,7 +8902,8 @@
     "expected": {
       "kind": "output",
       "output": "true"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:16:80",
@@ -8570,7 +8923,8 @@
     "expected": {
       "kind": "output",
       "output": "true"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:19:20",
@@ -8589,7 +8943,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:23:59",
@@ -8609,7 +8964,8 @@
     "expected": {
       "kind": "output",
       "output": "\"foo\""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:24:59",
@@ -8629,7 +8985,8 @@
     "expected": {
       "kind": "output",
       "output": "2"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:25:59",
@@ -8653,7 +9010,8 @@
     "expected": {
       "kind": "output",
       "output": "{\"foo\":\"bar\"}"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:26:58",
@@ -8678,7 +9036,8 @@
     "expected": {
       "kind": "output",
       "output": "[-2,\"a\"]"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:30:13",
@@ -8703,7 +9062,8 @@
     "expected": {
       "kind": "output",
       "output": "{\n    \"foo\": \"foo\",\n    \"bar\": \"bar\"\n}"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:34:59",
@@ -8723,7 +9083,8 @@
     "expected": {
       "kind": "output",
       "output": "\"foo\""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:37:57",
@@ -8743,7 +9104,8 @@
     "expected": {
       "kind": "output",
       "output": "\"foo\""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:42:20",
@@ -8767,7 +9129,8 @@
     "expected": {
       "kind": "output",
       "output": "{\"bar\":\"bar\"}"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:6:60",
@@ -8787,7 +9150,8 @@
     "expected": {
       "kind": "output",
       "output": "a"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:60:47",
@@ -8807,7 +9171,8 @@
     "expected": {
       "kind": "output",
       "output": "123"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:7:67",
@@ -8827,7 +9192,8 @@
     "expected": {
       "kind": "output",
       "output": "a"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:8:66",
@@ -8849,7 +9215,8 @@
     "expected": {
       "kind": "output",
       "output": "a"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/misc.spec.ts:9:75",
@@ -8869,7 +9236,8 @@
     "expected": {
       "kind": "output",
       "output": " "
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:102:50",
@@ -8889,7 +9257,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:105:44",
@@ -8909,7 +9278,8 @@
       "kind": "output",
       "output": "I sted to see the train through the rain"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:106:50",
@@ -8929,7 +9299,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:109:11",
@@ -8949,7 +9320,8 @@
       "kind": "output",
       "output": "Take your protein pills and put your helmet on"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:11:20",
@@ -8968,7 +9340,8 @@
     "expected": {
       "kind": "error"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:113:11",
@@ -8988,7 +9361,8 @@
       "kind": "output",
       "output": "Take  protein pills and put  helmet on"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:117:11",
@@ -9008,7 +9382,8 @@
       "kind": "output",
       "output": "Take  protein pills and put  helmet on"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:121:11",
@@ -9028,7 +9403,8 @@
       "kind": "output",
       "output": "\nTake your protein pills and put my helmet on"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:126:10",
@@ -9048,7 +9424,8 @@
       "kind": "output",
       "output": "          So much room for activities!"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:128:10",
@@ -9068,7 +9445,8 @@
       "kind": "output",
       "output": "foobar"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:13:58",
@@ -9088,7 +9466,8 @@
       "kind": "output",
       "output": "abcfalse"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:131:11",
@@ -9108,7 +9487,8 @@
       "kind": "output",
       "output": "John Paul George Ringo "
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:138:10",
@@ -9128,7 +9508,8 @@
       "kind": "output",
       "output": "So much room for activities!"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:140:10",
@@ -9148,7 +9529,8 @@
       "kind": "output",
       "output": "much room for activities!"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:142:10",
@@ -9168,7 +9550,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:145:11",
@@ -9188,7 +9571,8 @@
       "kind": "output",
       "output": "Hellothere"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:151:11",
@@ -9208,7 +9592,8 @@
       "kind": "output",
       "output": "Hellothere"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:158:13",
@@ -9228,7 +9613,8 @@
       "kind": "output",
       "output": "Hello World!"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:161:13",
@@ -9248,7 +9634,8 @@
       "kind": "output",
       "output": "HelloWorld!"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:164:13",
@@ -9268,7 +9655,8 @@
       "kind": "output",
       "output": "Hello World!"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:167:13",
@@ -9288,7 +9676,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:17:12",
@@ -9308,7 +9697,8 @@
       "kind": "output",
       "output": "abc-3"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:170:13",
@@ -9328,7 +9718,8 @@
       "kind": "output",
       "output": "5"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:173:13",
@@ -9348,7 +9739,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:178:13",
@@ -9368,7 +9760,8 @@
       "kind": "output",
       "output": "Ground control to..."
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:18:50",
@@ -9390,7 +9783,8 @@
       "kind": "output",
       "output": "bara"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:182:13",
@@ -9410,7 +9804,8 @@
       "kind": "output",
       "output": "Ground control to Major Tom."
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:186:13",
@@ -9430,7 +9825,8 @@
       "kind": "output",
       "output": "Ground control, and so on"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:190:13",
@@ -9450,7 +9846,8 @@
       "kind": "output",
       "output": "Ground control to Ma"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:194:13",
@@ -9470,7 +9867,8 @@
       "kind": "output",
       "output": "12345"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:197:13",
@@ -9490,7 +9888,8 @@
       "kind": "output",
       "output": "..."
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:20:20",
@@ -9509,7 +9908,8 @@
     "expected": {
       "kind": "error"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:200:13",
@@ -9529,7 +9929,8 @@
       "kind": "output",
       "output": "12345"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:203:13",
@@ -9549,7 +9950,8 @@
       "kind": "output",
       "output": "12345678901234567890123456789012345678901234567..."
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:208:13",
@@ -9569,7 +9971,8 @@
       "kind": "output",
       "output": "Ground..."
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:212:13",
@@ -9589,7 +9992,8 @@
       "kind": "output",
       "output": "Ground control to..."
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:216:13",
@@ -9609,7 +10013,8 @@
       "kind": "output",
       "output": "Ground control to Major Tom."
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:22:58",
@@ -9629,7 +10034,8 @@
       "kind": "output",
       "output": "falseabc"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:220:13",
@@ -9649,7 +10055,8 @@
       "kind": "output",
       "output": "Ground control to--"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:224:13",
@@ -9669,7 +10076,8 @@
       "kind": "output",
       "output": "Ground control to"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:228:13",
@@ -9689,7 +10097,8 @@
       "kind": "output",
       "output": "1 2 3..."
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:231:13",
@@ -9709,7 +10118,8 @@
       "kind": "output",
       "output": "1 2 3..."
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:234:13",
@@ -9729,7 +10139,8 @@
       "kind": "output",
       "output": "1 2 3 4 5 6 7 8 9 a b c d e f..."
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:239:13",
@@ -9749,7 +10160,8 @@
       "kind": "output",
       "output": "I strained to see the train through the "
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:243:13",
@@ -9769,7 +10181,8 @@
       "kind": "output",
       "output": "I strained to see the train through the  and fog"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:247:13",
@@ -9789,7 +10202,8 @@
       "kind": "output",
       "output": "I strained to see the train through the rain"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:25:40",
@@ -9809,7 +10223,8 @@
       "kind": "output",
       "output": "I am good"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:253:13",
@@ -9829,7 +10244,8 @@
       "kind": "output",
       "output": "Take my protein pills and put your helmet on"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:257:13",
@@ -9849,7 +10265,8 @@
       "kind": "output",
       "output": "Take my protein pills and put my helmet on"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:26:44",
@@ -9869,7 +10286,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:263:13",
@@ -9889,7 +10307,8 @@
     "expected": {
       "kind": "output",
       "output": "a b"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:266:13",
@@ -9909,7 +10328,8 @@
     "expected": {
       "kind": "output",
       "output": "a b c"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:27:56",
@@ -9929,7 +10349,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:271:25",
@@ -9949,7 +10370,8 @@
     "expected": {
       "kind": "output",
       "output": "3"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:275:25",
@@ -9969,7 +10391,8 @@
     "expected": {
       "kind": "output",
       "output": "0"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:279:25",
@@ -9989,7 +10412,8 @@
     "expected": {
       "kind": "output",
       "output": "2"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:28:56",
@@ -10009,7 +10433,8 @@
       "kind": "output",
       "output": "Foo bar"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:283:25",
@@ -10029,7 +10454,8 @@
     "expected": {
       "kind": "output",
       "output": "1"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:287:25",
@@ -10049,7 +10475,8 @@
     "expected": {
       "kind": "output",
       "output": "3"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:29:65",
@@ -10069,7 +10496,8 @@
       "kind": "output",
       "output": " foo bar"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:291:25",
@@ -10089,7 +10517,8 @@
     "expected": {
       "kind": "output",
       "output": "0"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:295:25",
@@ -10109,7 +10538,8 @@
     "expected": {
       "kind": "output",
       "output": "6"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:30:58",
@@ -10129,7 +10559,8 @@
       "kind": "output",
       "output": "Foo bar"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:300:25",
@@ -10149,7 +10580,8 @@
     "expected": {
       "kind": "output",
       "output": "6"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:304:25",
@@ -10169,7 +10601,8 @@
     "expected": {
       "kind": "output",
       "output": "4"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:308:25",
@@ -10189,7 +10622,8 @@
     "expected": {
       "kind": "output",
       "output": "0"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:313:25",
@@ -10209,7 +10643,8 @@
     "expected": {
       "kind": "output",
       "output": "0"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:318:25",
@@ -10229,7 +10664,8 @@
     "expected": {
       "kind": "output",
       "output": "5"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:323:25",
@@ -10249,7 +10685,8 @@
     "expected": {
       "kind": "output",
       "output": "8"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:328:25",
@@ -10269,7 +10706,8 @@
     "expected": {
       "kind": "output",
       "output": "2"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:33:37",
@@ -10289,7 +10727,8 @@
       "kind": "output",
       "output": "- apples\n      - oranges\n      - peaches\n      - carrots\n      - turnips\n      - potatoes\n      "
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:333:25",
@@ -10309,7 +10748,8 @@
     "expected": {
       "kind": "output",
       "output": "12"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:339:25",
@@ -10331,7 +10771,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:344:25",
@@ -10355,7 +10796,8 @@
     "expected": {
       "kind": "output",
       "output": "apple"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:349:25",
@@ -10380,7 +10822,8 @@
     "expected": {
       "kind": "output",
       "output": "apple and banana"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:354:25",
@@ -10406,7 +10849,8 @@
     "expected": {
       "kind": "output",
       "output": "apple, banana, and orange"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:359:25",
@@ -10432,7 +10876,8 @@
     "expected": {
       "kind": "output",
       "output": "apple, banana, or orange"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:364:25",
@@ -10458,7 +10903,8 @@
     "expected": {
       "kind": "output",
       "output": "1, 2, and 3"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:369:25",
@@ -10484,7 +10930,8 @@
     "expected": {
       "kind": "output",
       "output": "apple, 2, and orange"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:374:25",
@@ -10504,7 +10951,8 @@
     "expected": {
       "kind": "output",
       "output": "foo, bar, and baz"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:48:46",
@@ -10524,7 +10972,8 @@
       "kind": "output",
       "output": "- apples\n      - oranges\n      - peaches\n      - carrots\n      - turnips\n      - potatoes\n      - chairs\n      - tables\n      - shelves\n      "
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:69:6",
@@ -10544,7 +10993,8 @@
       "kind": "output",
       "output": "parker moore"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:72:6",
@@ -10564,7 +11014,8 @@
       "kind": "output",
       "output": "apple"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:74:50",
@@ -10584,7 +11035,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:8:12",
@@ -10604,7 +11056,8 @@
       "kind": "output",
       "output": "-3abc"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:80:13",
@@ -10624,7 +11077,8 @@
       "kind": "output",
       "output": "apples"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:84:38",
@@ -10644,7 +11098,8 @@
       "kind": "output",
       "output": "PARKER MOORE"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:85:50",
@@ -10664,7 +11119,8 @@
       "kind": "output",
       "output": ""
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:89:10",
@@ -10684,7 +11140,8 @@
       "kind": "output",
       "output": "So much room for activities!          "
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:9:50",
@@ -10706,7 +11163,8 @@
       "kind": "output",
       "output": "abar"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:90:10",
@@ -10726,7 +11184,8 @@
       "kind": "output",
       "output": "barcoo"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:93:11",
@@ -10746,7 +11205,8 @@
       "kind": "output",
       "output": "liquidmarkup.com/index.html"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/string.spec.ts:98:38",
@@ -10766,7 +11226,8 @@
       "kind": "output",
       "output": "I sted to see the t through the "
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/url.spec.ts:14:19",
@@ -10786,7 +11247,8 @@
     "expected": {
       "kind": "output",
       "output": "john%40liquid.com"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/url.spec.ts:18:19",
@@ -10806,7 +11268,8 @@
     "expected": {
       "kind": "output",
       "output": "Tetsuro+Takara"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/url.spec.ts:25:19",
@@ -10826,7 +11289,8 @@
     "expected": {
       "kind": "output",
       "output": "%21%27%2C%28%29%2A%22%21"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/url.spec.ts:29:19",
@@ -10846,7 +11310,8 @@
     "expected": {
       "kind": "output",
       "output": "foo%2C+bar%3B+baz%3F"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/url.spec.ts:36:19",
@@ -10866,7 +11331,8 @@
     "expected": {
       "kind": "output",
       "output": "https://example.com/?q=foo,%20%5Cbar?"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/url.spec.ts:41:19",
@@ -10888,7 +11354,8 @@
     "expected": {
       "kind": "output",
       "output": "!#$&'()*+,/:;=?@[]"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/url.spec.ts:49:21",
@@ -10908,7 +11375,8 @@
     "expected": {
       "kind": "output",
       "output": "the-config-yml-file"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/url.spec.ts:54:21",
@@ -10928,7 +11396,8 @@
     "expected": {
       "kind": "output",
       "output": "the-_config.yml-file"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/url.spec.ts:59:21",
@@ -10948,7 +11417,8 @@
     "expected": {
       "kind": "output",
       "output": "the-c-nfig-yml-file"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/url.spec.ts:64:21",
@@ -10968,7 +11438,8 @@
     "expected": {
       "kind": "output",
       "output": "the-config-yml-file"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/url.spec.ts:69:21",
@@ -10988,7 +11459,8 @@
     "expected": {
       "kind": "output",
       "output": "the _config.yml file"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/url.spec.ts:7:19",
@@ -11008,7 +11480,8 @@
     "expected": {
       "kind": "output",
       "output": "'Stop!' said Fred"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/url.spec.ts:74:21",
@@ -11028,7 +11501,8 @@
     "expected": {
       "kind": "output",
       "output": "the _config.yml file"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/url.spec.ts:79:21",
@@ -11048,7 +11522,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/url.spec.ts:84:21",
@@ -11068,7 +11543,8 @@
     "expected": {
       "kind": "output",
       "output": "test-string"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/filters/url.spec.ts:89:21",
@@ -11088,7 +11564,8 @@
     "expected": {
       "kind": "output",
       "output": "Test-String"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/delimiter.spec.ts:17:23",
@@ -11111,7 +11588,8 @@
     "expected": {
       "kind": "output",
       "output": "Liquid"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/delimiter.spec.ts:27:23",
@@ -11136,7 +11614,8 @@
     "expected": {
       "kind": "output",
       "output": "foo"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/delimiter.spec.ts:9:23",
@@ -11159,7 +11638,8 @@
     "expected": {
       "kind": "output",
       "output": "foo "
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/dos.spec.ts:12:19",
@@ -11179,7 +11659,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/dos.spec.ts:13:19",
@@ -11200,7 +11681,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/dos.spec.ts:14:19",
@@ -11222,7 +11704,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/dos.spec.ts:32:19",
@@ -11238,7 +11721,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/liquid/dos.spec.ts#L32",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/dos.spec.ts:33:19",
@@ -11259,7 +11743,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/dos.spec.ts:34:19",
@@ -11277,7 +11762,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/liquid/dos.spec.ts#L34",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/dos.spec.ts:39:19",
@@ -11298,7 +11784,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/dos.spec.ts:53:19",
@@ -11320,7 +11807,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/dos.spec.ts:58:19",
@@ -11342,7 +11830,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/dos.spec.ts:79:19",
@@ -11369,7 +11858,8 @@
     "expected": {
       "kind": "output",
       "output": "a a a a a a a a"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/dos.spec.ts:80:19",
@@ -11395,7 +11885,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/keepoutput-opt.spec.ts:13:30",
@@ -11417,7 +11908,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/liquid/keepoutput-opt.spec.ts#L13",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/keepoutput-opt.spec.ts:15:29",
@@ -11439,7 +11931,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/liquid/keepoutput-opt.spec.ts#L15",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/keepoutput-opt.spec.ts:17:23",
@@ -11465,7 +11958,8 @@
     "expected": {
       "kind": "output",
       "output": "test"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/keepoutput-opt.spec.ts:19:31",
@@ -11491,7 +11985,8 @@
     "expected": {
       "kind": "output",
       "output": "test:42"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/keepoutput-opt.spec.ts:30:30",
@@ -11515,7 +12010,8 @@
     "expected": {
       "kind": "output",
       "output": "true"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/keepoutput-opt.spec.ts:32:29",
@@ -11539,7 +12035,8 @@
     "expected": {
       "kind": "output",
       "output": "42"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/keepoutput-opt.spec.ts:34:23",
@@ -11563,7 +12060,8 @@
     "expected": {
       "kind": "output",
       "output": "test"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/keepoutput-opt.spec.ts:36:31",
@@ -11587,7 +12085,8 @@
     "expected": {
       "kind": "output",
       "output": "test:42"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/liquid.spec.ts:253:23",
@@ -11603,7 +12102,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/liquid/liquid.spec.ts#L253",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/liquid.spec.ts:260:23",
@@ -11619,7 +12119,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/liquid/liquid.spec.ts#L260",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/liquid.spec.ts:28:25",
@@ -11639,7 +12140,8 @@
     "expected": {
       "kind": "output",
       "output": "foo"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/liquid.spec.ts:33:25",
@@ -11659,7 +12161,8 @@
     "expected": {
       "kind": "output",
       "output": "Welcome(to]Liquid"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/liquid.spec.ts:39:25",
@@ -11679,7 +12182,8 @@
     "expected": {
       "kind": "output",
       "output": "12"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/liquid.spec.ts:64:19",
@@ -11699,7 +12203,8 @@
     "expected": {
       "kind": "output",
       "output": "foo"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/liquid.spec.ts:69:19",
@@ -11719,7 +12224,8 @@
     "expected": {
       "kind": "output",
       "output": "Welcome(to]Liquid"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/liquid.spec.ts:75:19",
@@ -11739,7 +12245,8 @@
     "expected": {
       "kind": "output",
       "output": "12"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/output-escape.spec.ts:14:23",
@@ -11761,7 +12268,8 @@
     "expected": {
       "kind": "output",
       "output": "&lt;"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/output-escape.spec.ts:22:23",
@@ -11783,7 +12291,8 @@
     "expected": {
       "kind": "output",
       "output": "\"<\""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/output-escape.spec.ts:38:23",
@@ -11805,7 +12314,8 @@
     "expected": {
       "kind": "output",
       "output": "<"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/output-escape.spec.ts:6:23",
@@ -11825,7 +12335,8 @@
     "expected": {
       "kind": "output",
       "output": "<"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/strict.spec.ts:13:23",
@@ -11848,7 +12359,8 @@
     "expected": {
       "kind": "output",
       "output": "beforeafter"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/strict.spec.ts:17:16",
@@ -11867,7 +12379,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/liquid/strict.spec.ts#L17",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/strict.spec.ts:23:18",
@@ -11890,7 +12403,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/strict.spec.ts:32:18",
@@ -11913,7 +12427,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/strict.spec.ts:44:18",
@@ -11934,7 +12449,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/liquid/strict.spec.ts#L44",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/strict.spec.ts:45:25",
@@ -11959,7 +12475,8 @@
     "expected": {
       "kind": "output",
       "output": "beforeafter"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/strict.spec.ts:49:18",
@@ -11980,7 +12497,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/liquid/strict.spec.ts#L49",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/strict.spec.ts:50:25",
@@ -12007,7 +12525,8 @@
     "expected": {
       "kind": "output",
       "output": "bla"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/strict.spec.ts:54:18",
@@ -12028,7 +12547,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/liquid/strict.spec.ts#L54",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/strict.spec.ts:55:25",
@@ -12053,7 +12573,8 @@
     "expected": {
       "kind": "output",
       "output": "beforeXafter"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/strict.spec.ts:59:18",
@@ -12074,7 +12595,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/liquid/strict.spec.ts#L59",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/strict.spec.ts:60:25",
@@ -12099,7 +12621,8 @@
     "expected": {
       "kind": "output",
       "output": "beforeYafter"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/strict.spec.ts:64:18",
@@ -12120,7 +12643,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/liquid/strict.spec.ts#L64",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/strict.spec.ts:65:25",
@@ -12145,7 +12669,8 @@
     "expected": {
       "kind": "output",
       "output": "beforeXafter"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/strict.spec.ts:69:18",
@@ -12166,7 +12691,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/liquid/strict.spec.ts#L69",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/strict.spec.ts:70:25",
@@ -12191,7 +12717,8 @@
     "expected": {
       "kind": "output",
       "output": "a"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/strict.spec.ts:74:18",
@@ -12212,7 +12739,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/liquid/strict.spec.ts#L74",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/strict.spec.ts:75:26",
@@ -12236,7 +12764,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/trimming.spec.ts:14:25",
@@ -12258,7 +12787,8 @@
     "expected": {
       "kind": "output",
       "output": "\tfoo"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/trimming.spec.ts:19:25",
@@ -12283,7 +12813,8 @@
     "expected": {
       "kind": "output",
       "output": "a harttle b"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/trimming.spec.ts:26:25",
@@ -12307,7 +12838,8 @@
     "expected": {
       "kind": "output",
       "output": "harttle "
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/trimming.spec.ts:31:25",
@@ -12331,7 +12863,8 @@
     "expected": {
       "kind": "output",
       "output": " \n \tharttle"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/trimming.spec.ts:36:25",
@@ -12354,7 +12887,8 @@
     "expected": {
       "kind": "output",
       "output": "\t aha \t"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/trimming.spec.ts:44:25",
@@ -12376,7 +12910,8 @@
     "expected": {
       "kind": "output",
       "output": "aharttle"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/trimming.spec.ts:49:25",
@@ -12400,7 +12935,8 @@
     "expected": {
       "kind": "output",
       "output": "\n a \nharttle "
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/trimming.spec.ts:65:25",
@@ -12420,7 +12956,8 @@
     "expected": {
       "kind": "output",
       "output": "Wow, John G. Chalmers-Smith, you have a long name!"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/trimming.spec.ts:79:25",
@@ -12440,7 +12977,8 @@
     "expected": {
       "kind": "output",
       "output": "\n\n  Wow, John G. Chalmers-Smith, you have a long name!\n"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/liquid/trimming.spec.ts:9:25",
@@ -12462,7 +13000,8 @@
     "expected": {
       "kind": "output",
       "output": "foo "
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:1006:21",
@@ -12482,7 +13021,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L1006",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:1032:21",
@@ -12498,7 +13038,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L1032",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:105:21",
@@ -12514,7 +13055,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L105",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:1059:21",
@@ -12534,7 +13076,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L1059",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:1075:21",
@@ -12554,7 +13097,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L1075",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:118:21",
@@ -12570,7 +13114,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L118",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:131:21",
@@ -12586,7 +13131,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L131",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:144:21",
@@ -12602,7 +13148,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L144",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:157:21",
@@ -12618,7 +13165,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L157",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:171:21",
@@ -12634,7 +13182,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L171",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:186:21",
@@ -12650,7 +13199,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L186",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:20:21",
@@ -12666,7 +13216,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L20",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:201:21",
@@ -12682,7 +13233,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L201",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:217:21",
@@ -12698,7 +13250,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L217",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:228:21",
@@ -12714,7 +13267,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L228",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:244:21",
@@ -12730,7 +13284,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L244",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:257:21",
@@ -12746,7 +13301,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L257",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:270:21",
@@ -12762,7 +13318,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L270",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:284:21",
@@ -12778,7 +13335,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L284",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:309:21",
@@ -12794,7 +13352,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L309",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:329:21",
@@ -12810,7 +13369,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L329",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:346:21",
@@ -12826,7 +13386,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L346",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:357:21",
@@ -12842,7 +13403,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L357",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:384:21",
@@ -12858,7 +13420,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L384",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:419:21",
@@ -12874,7 +13437,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L419",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:438:21",
@@ -12890,7 +13454,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L438",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:462:21",
@@ -12906,7 +13471,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L462",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:480:21",
@@ -12922,7 +13488,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L480",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:50:21",
@@ -12938,7 +13505,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L50",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:508:21",
@@ -12954,7 +13522,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L508",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:539:21",
@@ -12970,7 +13539,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L539",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:566:21",
@@ -12990,7 +13560,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L566",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:580:21",
@@ -13010,7 +13581,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L580",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:592:21",
@@ -13030,7 +13602,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L592",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:599:21",
@@ -13050,7 +13623,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L599",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:613:21",
@@ -13070,7 +13644,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L613",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:627:21",
@@ -13090,7 +13665,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L627",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:64:21",
@@ -13106,7 +13682,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L64",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:641:21",
@@ -13126,7 +13703,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L641",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:655:21",
@@ -13146,7 +13724,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L655",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:676:21",
@@ -13166,7 +13745,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L676",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:698:21",
@@ -13187,7 +13767,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L698",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:7:21",
@@ -13203,7 +13784,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L7",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:718:21",
@@ -13223,7 +13805,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L718",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:732:21",
@@ -13243,7 +13826,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L732",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:739:21",
@@ -13263,7 +13847,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L739",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:751:21",
@@ -13283,7 +13868,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L751",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:766:21",
@@ -13303,7 +13889,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L766",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:780:21",
@@ -13323,7 +13910,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L780",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:79:21",
@@ -13339,7 +13927,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L79",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:794:21",
@@ -13359,7 +13948,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L794",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:815:21",
@@ -13379,7 +13969,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L815",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:835:21",
@@ -13399,7 +13990,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L835",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:851:21",
@@ -13419,7 +14011,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L851",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:871:21",
@@ -13439,7 +14032,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L871",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:893:21",
@@ -13459,7 +14053,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L893",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:908:21",
@@ -13479,7 +14074,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L908",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:92:21",
@@ -13495,7 +14091,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L92",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:924:21",
@@ -13515,7 +14112,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L924",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:941:21",
@@ -13531,7 +14129,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L941",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:955:21",
@@ -13551,7 +14150,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L955",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:976:21",
@@ -13572,7 +14172,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L976",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/static_analysis/variables.spec.ts:992:21",
@@ -13588,7 +14189,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/static_analysis/variables.spec.ts#L992",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:105:19",
@@ -13612,7 +14214,8 @@
     "expected": {
       "kind": "output",
       "output": "BAR"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:108:19",
@@ -13640,7 +14243,8 @@
     "expected": {
       "kind": "output",
       "output": "123"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:13:23",
@@ -13660,7 +14264,8 @@
     "expected": {
       "kind": "output",
       "output": "bar"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:18:17",
@@ -13679,7 +14284,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:19:17",
@@ -13698,7 +14304,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:23:23",
@@ -13718,7 +14325,8 @@
     "expected": {
       "kind": "output",
       "output": "10086"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:28:23",
@@ -13738,7 +14346,8 @@
     "expected": {
       "kind": "output",
       "output": "123"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:33:23",
@@ -13758,7 +14367,8 @@
     "expected": {
       "kind": "output",
       "output": "A"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:41:23",
@@ -13778,7 +14388,8 @@
     "expected": {
       "kind": "output",
       "output": "A"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:46:23",
@@ -13798,7 +14409,8 @@
     "expected": {
       "kind": "output",
       "output": "5"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:51:23",
@@ -13818,7 +14430,8 @@
     "expected": {
       "kind": "output",
       "output": "5"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:56:23",
@@ -13838,7 +14451,8 @@
     "expected": {
       "kind": "output",
       "output": "5"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:61:23",
@@ -13858,7 +14472,8 @@
     "expected": {
       "kind": "output",
       "output": "5"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:66:23",
@@ -13878,7 +14493,8 @@
     "expected": {
       "kind": "output",
       "output": "5"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:71:23",
@@ -13898,7 +14514,8 @@
     "expected": {
       "kind": "output",
       "output": "-6"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:76:23",
@@ -13918,7 +14535,8 @@
     "expected": {
       "kind": "output",
       "output": "2"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:82:25",
@@ -13940,7 +14558,8 @@
     "expected": {
       "kind": "output",
       "output": "11"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:87:25",
@@ -13962,7 +14581,8 @@
     "expected": {
       "kind": "output",
       "output": "12"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:9:18",
@@ -13981,7 +14601,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:93:12",
@@ -13999,7 +14620,8 @@
       "url": "https://github.com/harttle/liquidjs/blob/747bdbdbee171c7bab56c597a34f6fa5925b4a58/test/integration/tags/assign.spec.ts#L93",
       "license": "MIT"
     },
-    "suite": "upstream-test"
+    "suite": "upstream-test",
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/assign.spec.ts:99:17",
@@ -14019,7 +14641,8 @@
     "expected": {
       "kind": "output",
       "output": "bar"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/capture.spec.ts:14:23",
@@ -14039,7 +14662,8 @@
     "expected": {
       "kind": "output",
       "output": "A"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/capture.spec.ts:21:23",
@@ -14061,7 +14685,8 @@
     "expected": {
       "kind": "output",
       "output": "10"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/capture.spec.ts:28:18",
@@ -14080,7 +14705,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/capture.spec.ts:34:18",
@@ -14099,7 +14725,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/capture.spec.ts:39:17",
@@ -14119,7 +14746,8 @@
     "expected": {
       "kind": "output",
       "output": "A"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/capture.spec.ts:8:23",
@@ -14139,7 +14767,8 @@
     "expected": {
       "kind": "output",
       "output": "A"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:104:23",
@@ -14159,7 +14788,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:113:19",
@@ -14179,7 +14809,8 @@
     "expected": {
       "kind": "output",
       "output": "show this"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:124:19",
@@ -14199,7 +14830,8 @@
     "expected": {
       "kind": "output",
       "output": "\n      TRUE\n      TRUE\n    "
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:140:21",
@@ -14223,7 +14855,8 @@
     "expected": {
       "kind": "output",
       "output": "active"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:145:21",
@@ -14248,7 +14881,8 @@
     "expected": {
       "kind": "output",
       "output": "match"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:15:23",
@@ -14268,7 +14902,8 @@
     "expected": {
       "kind": "output",
       "output": "foo"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:153:21",
@@ -14291,7 +14926,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:157:21",
@@ -14315,7 +14951,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:20:23",
@@ -14335,7 +14972,8 @@
     "expected": {
       "kind": "output",
       "output": "bar"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:25:23",
@@ -14355,7 +14993,8 @@
     "expected": {
       "kind": "output",
       "output": "bar"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:30:23",
@@ -14375,7 +15014,8 @@
     "expected": {
       "kind": "output",
       "output": "bar"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:37:23",
@@ -14395,7 +15035,8 @@
     "expected": {
       "kind": "output",
       "output": "bar"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:44:23",
@@ -14415,7 +15056,8 @@
     "expected": {
       "kind": "output",
       "output": "d"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:52:19",
@@ -14435,7 +15077,8 @@
     "expected": {
       "kind": "output",
       "output": "foo"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:59:19",
@@ -14455,7 +15098,8 @@
     "expected": {
       "kind": "output",
       "output": "d"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:67:23",
@@ -14475,7 +15119,8 @@
     "expected": {
       "kind": "output",
       "output": "foo"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:75:23",
@@ -14495,7 +15140,8 @@
     "expected": {
       "kind": "output",
       "output": "firstsecond"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:8:18",
@@ -14514,7 +15160,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:83:23",
@@ -14534,7 +15181,8 @@
     "expected": {
       "kind": "output",
       "output": "1 or 2 or 3"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:91:23",
@@ -14554,7 +15202,8 @@
     "expected": {
       "kind": "output",
       "output": "and or or"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/case.spec.ts:95:23",
@@ -14574,7 +15223,8 @@
     "expected": {
       "kind": "output",
       "output": "show this"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/comment.spec.ts:12:23",
@@ -14594,7 +15244,8 @@
     "expected": {
       "kind": "output",
       "output": "My name is  Shopify."
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/comment.spec.ts:17:23",
@@ -14614,7 +15265,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/comment.spec.ts:22:23",
@@ -14634,7 +15286,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/comment.spec.ts:27:23",
@@ -14654,7 +15307,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/comment.spec.ts:33:19",
@@ -14674,7 +15328,8 @@
     "expected": {
       "kind": "output",
       "output": "My name is  Shopify."
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/comment.spec.ts:7:18",
@@ -14693,7 +15348,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/cycle.spec.ts:13:18",
@@ -14712,7 +15368,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/cycle.spec.ts:22:23",
@@ -14734,7 +15391,8 @@
     "expected": {
       "kind": "output",
       "output": "1e1e1"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/cycle.spec.ts:30:23",
@@ -14754,7 +15412,8 @@
     "expected": {
       "kind": "output",
       "output": "112"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/cycle.spec.ts:39:23",
@@ -14776,7 +15435,8 @@
     "expected": {
       "kind": "output",
       "output": "121"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/cycle.spec.ts:44:17",
@@ -14796,7 +15456,8 @@
     "expected": {
       "kind": "output",
       "output": "1231"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/cycle.spec.ts:8:23",
@@ -14816,7 +15477,8 @@
     "expected": {
       "kind": "output",
       "output": "1231"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/decrement.spec.ts:15:23",
@@ -14838,7 +15500,8 @@
     "expected": {
       "kind": "output",
       "output": "987"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/decrement.spec.ts:22:23",
@@ -14858,7 +15521,8 @@
     "expected": {
       "kind": "output",
       "output": "-1-2-3"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/decrement.spec.ts:28:23",
@@ -14878,7 +15542,8 @@
     "expected": {
       "kind": "output",
       "output": "-1-2-3"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/decrement.spec.ts:34:23",
@@ -14898,7 +15563,8 @@
     "expected": {
       "kind": "output",
       "output": "-1-2-3 10"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/decrement.spec.ts:40:23",
@@ -14918,7 +15584,8 @@
     "expected": {
       "kind": "output",
       "output": "-1-2-3 10"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/decrement.spec.ts:46:23",
@@ -14938,7 +15605,8 @@
     "expected": {
       "kind": "output",
       "output": "01100"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/decrement.spec.ts:8:23",
@@ -14958,7 +15626,8 @@
     "expected": {
       "kind": "output",
       "output": "-1-2-3"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/echo.spec.ts:14:23",
@@ -14986,7 +15655,8 @@
     "expected": {
       "kind": "output",
       "output": "Sally"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/echo.spec.ts:20:23",
@@ -15010,7 +15680,8 @@
     "expected": {
       "kind": "output",
       "output": "Hello, SALLY!"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/echo.spec.ts:26:23",
@@ -15030,7 +15701,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/echo.spec.ts:36:23",
@@ -15054,7 +15726,8 @@
     "expected": {
       "kind": "output",
       "output": "Hello, SALLY!"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/echo.spec.ts:43:19",
@@ -15078,7 +15751,8 @@
     "expected": {
       "kind": "output",
       "output": "BAR"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/echo.spec.ts:46:19",
@@ -15102,7 +15776,8 @@
     "expected": {
       "kind": "output",
       "output": "BAR!"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/echo.spec.ts:8:23",
@@ -15122,7 +15797,8 @@
     "expected": {
       "kind": "output",
       "output": "1 1 1.1"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/for.spec.ts:336:25",
@@ -15144,7 +15820,8 @@
     "expected": {
       "kind": "output",
       "output": "876"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/for.spec.ts:434:21",
@@ -15172,7 +15849,8 @@
     "expected": {
       "kind": "output",
       "output": "1 2 3 "
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/for.spec.ts:442:21",
@@ -15199,7 +15877,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:101:25",
@@ -15224,7 +15903,8 @@
     "expected": {
       "kind": "output",
       "output": "no"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:107:25",
@@ -15249,7 +15929,8 @@
     "expected": {
       "kind": "output",
       "output": "no"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:113:25",
@@ -15274,7 +15955,8 @@
     "expected": {
       "kind": "output",
       "output": "no"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:119:25",
@@ -15299,7 +15981,8 @@
     "expected": {
       "kind": "output",
       "output": "no"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:125:25",
@@ -15324,7 +16007,8 @@
     "expected": {
       "kind": "output",
       "output": "no"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:131:25",
@@ -15349,7 +16033,8 @@
     "expected": {
       "kind": "output",
       "output": "no"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:137:25",
@@ -15374,7 +16059,8 @@
     "expected": {
       "kind": "output",
       "output": "no"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:143:25",
@@ -15399,7 +16085,8 @@
     "expected": {
       "kind": "output",
       "output": "no"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:149:17",
@@ -15424,7 +16111,8 @@
     "expected": {
       "kind": "output",
       "output": "true"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:165:17",
@@ -15443,7 +16131,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:169:17",
@@ -15462,7 +16151,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:177:27",
@@ -15486,7 +16176,8 @@
     "expected": {
       "kind": "output",
       "output": "yes"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:182:27",
@@ -15511,7 +16202,8 @@
     "expected": {
       "kind": "output",
       "output": "yes"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:187:27",
@@ -15536,7 +16228,8 @@
     "expected": {
       "kind": "output",
       "output": "yes"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:20:18",
@@ -15560,7 +16253,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:204:27",
@@ -15584,7 +16278,8 @@
     "expected": {
       "kind": "output",
       "output": "long"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:209:27",
@@ -15610,7 +16305,8 @@
     "expected": {
       "kind": "output",
       "output": "long"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:214:27",
@@ -15634,7 +16330,8 @@
     "expected": {
       "kind": "output",
       "output": "match"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:219:21",
@@ -15659,7 +16356,8 @@
     "expected": {
       "kind": "output",
       "output": "yes"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:223:21",
@@ -15683,7 +16381,8 @@
     "expected": {
       "kind": "output",
       "output": "yes"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:227:21",
@@ -15707,7 +16406,8 @@
     "expected": {
       "kind": "output",
       "output": "yes"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:245:21",
@@ -15730,7 +16430,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:25:23",
@@ -15755,7 +16456,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:31:18",
@@ -15779,7 +16481,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:38:25",
@@ -15804,7 +16507,8 @@
     "expected": {
       "kind": "output",
       "output": "2"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:43:25",
@@ -15829,7 +16533,8 @@
     "expected": {
       "kind": "output",
       "output": "a"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:48:25",
@@ -15854,7 +16559,8 @@
     "expected": {
       "kind": "output",
       "output": "a"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:55:25",
@@ -15879,7 +16585,8 @@
     "expected": {
       "kind": "output",
       "output": "no"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:60:25",
@@ -15904,7 +16611,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:65:25",
@@ -15929,7 +16637,8 @@
     "expected": {
       "kind": "output",
       "output": "yes"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:71:25",
@@ -15951,7 +16660,8 @@
     "expected": {
       "kind": "output",
       "output": "XY"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:76:25",
@@ -15971,7 +16681,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:81:25",
@@ -15991,7 +16702,8 @@
     "expected": {
       "kind": "output",
       "output": "success"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/if.spec.ts:86:25",
@@ -16011,7 +16723,8 @@
     "expected": {
       "kind": "output",
       "output": "success"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/increment.spec.ts:15:23",
@@ -16033,7 +16746,8 @@
     "expected": {
       "kind": "output",
       "output": "789"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/increment.spec.ts:22:23",
@@ -16053,7 +16767,8 @@
     "expected": {
       "kind": "output",
       "output": "012"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/increment.spec.ts:28:23",
@@ -16073,7 +16788,8 @@
     "expected": {
       "kind": "output",
       "output": "012"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/increment.spec.ts:34:23",
@@ -16093,7 +16809,8 @@
     "expected": {
       "kind": "output",
       "output": "012 10"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/increment.spec.ts:40:23",
@@ -16113,7 +16830,8 @@
     "expected": {
       "kind": "output",
       "output": "012 10"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/increment.spec.ts:8:23",
@@ -16133,7 +16851,8 @@
     "expected": {
       "kind": "output",
       "output": "012"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/inline-comment.spec.ts:12:23",
@@ -16153,7 +16872,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/inline-comment.spec.ts:17:23",
@@ -16173,7 +16893,8 @@
     "expected": {
       "kind": "output",
       "output": "foo"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/inline-comment.spec.ts:22:23",
@@ -16193,7 +16914,8 @@
     "expected": {
       "kind": "output",
       "output": "BA"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/inline-comment.spec.ts:27:23",
@@ -16213,7 +16935,8 @@
     "expected": {
       "kind": "output",
       "output": "BA"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/inline-comment.spec.ts:32:23",
@@ -16233,7 +16956,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/inline-comment.spec.ts:37:23",
@@ -16253,7 +16977,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/inline-comment.spec.ts:42:23",
@@ -16273,7 +16998,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/inline-comment.spec.ts:52:23",
@@ -16293,7 +17019,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/inline-comment.spec.ts:62:18",
@@ -16312,7 +17039,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/inline-comment.spec.ts:68:19",
@@ -16332,7 +17060,8 @@
     "expected": {
       "kind": "output",
       "output": "My name is  Shopify."
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/inline-comment.spec.ts:7:23",
@@ -16352,7 +17081,8 @@
     "expected": {
       "kind": "output",
       "output": "My name is  Shopify."
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/inline-comment.spec.ts:86:25",
@@ -16372,7 +17102,8 @@
     "expected": {
       "kind": "output",
       "output": "Hello goodbye"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/inline-comment.spec.ts:97:25",
@@ -16392,7 +17123,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/layout.spec.ts:43:23",
@@ -16415,7 +17147,8 @@
     "expected": {
       "kind": "output",
       "output": "AB"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/liquid.spec.ts:17:23",
@@ -16441,7 +17174,8 @@
     "expected": {
       "kind": "output",
       "output": "1#2#3"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/liquid.spec.ts:36:23",
@@ -16467,7 +17201,8 @@
     "expected": {
       "kind": "output",
       "output": "4#8#12#6"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/liquid.spec.ts:42:23",
@@ -16487,7 +17222,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/liquid.spec.ts:54:23",
@@ -16507,7 +17243,8 @@
     "expected": {
       "kind": "output",
       "output": "hello goodbye"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/liquid.spec.ts:69:18",
@@ -16526,7 +17263,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/raw.spec.ts:12:23",
@@ -16546,7 +17284,8 @@
     "expected": {
       "kind": "output",
       "output": "{{ 5 | plus: 6 }} is equal to 11."
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/raw.spec.ts:18:23",
@@ -16566,7 +17305,8 @@
     "expected": {
       "kind": "output",
       "output": "\n{{ foo}} \n"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/raw.spec.ts:22:17",
@@ -16586,7 +17326,8 @@
     "expected": {
       "kind": "output",
       "output": "{{foo}}"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/raw.spec.ts:6:14",
@@ -16605,7 +17346,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/tablerow.spec.ts:100:23",
@@ -16625,7 +17367,8 @@
     "expected": {
       "kind": "output",
       "output": "<tr class=\"row1\"><td class=\"col1\">1</td><td class=\"col2\">2</td></tr><tr class=\"row2\"><td class=\"col1\">3</td></tr>"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/tablerow.spec.ts:107:23",
@@ -16645,7 +17388,8 @@
     "expected": {
       "kind": "output",
       "output": "<tr class=\"row1\"><td class=\"col1\">0123</td><td class=\"col2\">1212</td><td class=\"col3\">2301</td></tr>"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/tablerow.spec.ts:113:23",
@@ -16665,7 +17409,8 @@
     "expected": {
       "kind": "output",
       "output": "<tr class=\"row1\"><td class=\"col1\">true false 3</td><td class=\"col2\">false false 3</td><td class=\"col3\">false true 3</td></tr>"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/tablerow.spec.ts:119:23",
@@ -16685,7 +17430,8 @@
     "expected": {
       "kind": "output",
       "output": "<tr class=\"row1\"><td class=\"col1\">1 0 true false</td><td class=\"col2\">2 1 false false</td><td class=\"col3\">3 2 false true</td></tr>"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/tablerow.spec.ts:126:25",
@@ -16705,7 +17451,8 @@
     "expected": {
       "kind": "output",
       "output": "<tr class=\"row1\"><td class=\"col1\">4</td><td class=\"col2\">5</td></tr>"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/tablerow.spec.ts:132:25",
@@ -16725,7 +17472,8 @@
     "expected": {
       "kind": "output",
       "output": "<tr class=\"row1\"><td class=\"col1\">1</td><td class=\"col2\">2</td></tr>"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/tablerow.spec.ts:138:25",
@@ -16745,7 +17493,8 @@
     "expected": {
       "kind": "output",
       "output": "<tr class=\"row1\"><td class=\"col1\">1</td></tr>"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/tablerow.spec.ts:146:19",
@@ -16765,7 +17514,8 @@
     "expected": {
       "kind": "output",
       "output": "<tr class=\"row1\"><td class=\"col1\">1</td><td class=\"col2\">2</td><td class=\"col3\">3</td></tr>"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/tablerow.spec.ts:152:19",
@@ -16785,7 +17535,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/tablerow.spec.ts:48:23",
@@ -16811,7 +17562,8 @@
     "expected": {
       "kind": "output",
       "output": "<tr class=\"row1\"><td class=\"col1\">a</td><td class=\"col2\">b</td></tr><tr class=\"row2\"><td class=\"col1\">c</td></tr>"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/tablerow.spec.ts:55:23",
@@ -16831,7 +17583,8 @@
     "expected": {
       "kind": "output",
       "output": "<tr class=\"row1\"><td class=\"col1\">1</td><td class=\"col2\">2</td><td class=\"col3\">3</td></tr>"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/tablerow.spec.ts:62:23",
@@ -16851,7 +17604,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/tablerow.spec.ts:69:23",
@@ -16871,7 +17625,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/tablerow.spec.ts:75:18",
@@ -16890,7 +17645,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/tablerow.spec.ts:81:18",
@@ -16909,7 +17665,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/tablerow.spec.ts:9:23",
@@ -16929,7 +17686,8 @@
     "expected": {
       "kind": "output",
       "output": "<tr class=\"row1\"><td class=\"col1\">1</td><td class=\"col2\">2</td><td class=\"col3\">3</td></tr>"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/tablerow.spec.ts:91:23",
@@ -16949,7 +17707,8 @@
     "expected": {
       "kind": "output",
       "output": "<tr class=\"row1\"><td class=\"col1\">1</td><td class=\"col2\">2</td></tr><tr class=\"row2\"><td class=\"col1\">3</td><td class=\"col2\">4</td></tr><tr class=\"row3\"><td class=\"col1\">5</td></tr>"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/unless.spec.ts:10:23",
@@ -16969,7 +17728,8 @@
     "expected": {
       "kind": "output",
       "output": "no"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/unless.spec.ts:15:23",
@@ -16989,7 +17749,8 @@
     "expected": {
       "kind": "output",
       "output": "2"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/unless.spec.ts:20:23",
@@ -17009,7 +17770,8 @@
     "expected": {
       "kind": "output",
       "output": "yes"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/unless.spec.ts:25:18",
@@ -17028,7 +17790,8 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/unless.spec.ts:30:23",
@@ -17048,7 +17811,8 @@
     "expected": {
       "kind": "output",
       "output": "yes"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/unless.spec.ts:35:23",
@@ -17068,7 +17832,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/unless.spec.ts:44:23",
@@ -17090,7 +17855,8 @@
     "expected": {
       "kind": "output",
       "output": "\n      Before wonderland\n      Inside wonderland\n      After wonderland"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/unless.spec.ts:51:23",
@@ -17110,7 +17876,8 @@
     "expected": {
       "kind": "output",
       "output": "show this"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/unless.spec.ts:59:23",
@@ -17130,7 +17897,8 @@
     "expected": {
       "kind": "output",
       "output": ""
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/unless.spec.ts:67:19",
@@ -17150,7 +17918,8 @@
     "expected": {
       "kind": "output",
       "output": "show"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/unless.spec.ts:77:19",
@@ -17170,7 +17939,8 @@
     "expected": {
       "kind": "output",
       "output": "no"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/unless.spec.ts:82:19",
@@ -17190,7 +17960,8 @@
     "expected": {
       "kind": "output",
       "output": "yes"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/unless.spec.ts:91:21",
@@ -17214,7 +17985,8 @@
     "expected": {
       "kind": "output",
       "output": "has content"
-    }
+    },
+    "authority": "liquidjs"
   },
   {
     "id": "liquidjs:test/integration/tags/unless.spec.ts:99:21",
@@ -17237,6 +18009,7 @@
     "suite": "upstream-test",
     "expected": {
       "kind": "error"
-    }
+    },
+    "authority": "liquidjs"
   }
 ]

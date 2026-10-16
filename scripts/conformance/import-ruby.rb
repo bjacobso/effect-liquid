@@ -1,10 +1,11 @@
 # Static Ripper extraction only. Never require or evaluate upstream test files.
 require 'ripper'
 require 'json'
+require 'bigdecimal'
 class Unresolved < StandardError; end
 class Extractor
-  def initialize(text)
-    @text=text; @fixtures=[]; @inventory=[]; @seen={}; @quotes={}; stack=[]
+  def initialize(text, repository = nil)
+    @repository=repository; @text=text; @fixtures=[]; @inventory=[]; @seen={}; @quotes={}; stack=[]
     Ripper.lex(text).each do |pos,event,value,_|
       case event
       when :on_tstring_beg, :on_heredoc_beg then stack << value
@@ -51,8 +52,9 @@ class Extractor
     when :string_content then n[1..-1].map{|part|value(part,env)}.join
     when :@tstring_content then decode(n[1],@quotes[n[2]])
     when :string_concat then value(n[1],env)+value(n[2],env)
-    when :symbol_literal then n[1][1][1]
-    when :@label then n[1][0..-2]
+    when :symbol_literal then n[1][1][1].to_sym
+    when :dot2,:dot3 then Range.new(value(n[1],env),value(n[2],env),n[0]==:dot3)
+    when :@label then n[1][0..-2].to_sym
     when :array then (n[1]||[]).map{|a|value(a,env)}
     when :hash then pairs(n[1] ? n[1][1] : [],env)
     when :bare_assoc_hash then pairs(n[1],env)
@@ -65,13 +67,16 @@ class Extractor
     when :call
       receiver=value(n[1],env);name=n[3][1]
       case name;when 'freeze' then receiver;when 'to_s' then receiver.to_s;when 'strip' then receiver.strip;else raise Unresolved,"Unsupported call: #{name}";end
+    when :method_add_arg,:command
+      c=call(n);raise Unresolved,"Unsupported constructor" unless c && c[0][1]=="BigDecimal"
+      BigDecimal(value(arguments(c[1])[0],env))
     else raise Unresolved,"Unsupported value: #{n[0]}"
     end
   end
   def pairs(items,env)
     (items||[]).each_with_object({}) do |p,out|
       raise Unresolved,'Hash splat or nonliteral association' unless p[0]==:assoc_new
-      key=value(p[1],env);raise Unresolved,'Non-string hash key' unless key.is_a?(String)
+      key=value(p[1],env);raise Unresolved,'Non-string hash key' unless key.is_a?(String) || key.is_a?(Symbol)
       raise Unresolved,'Duplicate hash key' if out.key?(key)
       out[key]=value(p[2],env)
     end
@@ -88,23 +93,47 @@ class Extractor
     elsif n[0]==:method_add_arg && n[1][0]==:fcall then [n[1][1],n[2]]
     end
   end
+  def encode(v, depth = 0)
+    raise Unresolved,"Cyclic or deeply nested host value" if depth > 128
+    case v
+    when Integer then {'$liquid'=>{type:'integer',value:v.to_s}}
+    when Float then {'$liquid'=>{type:'float',value:v.to_s}}
+    when BigDecimal then {'$liquid'=>{type:'decimal',value:v.to_s('F')}}
+    when Symbol then {'$liquid'=>{type:'symbol',value:v.to_s}}
+    when Range then {'$liquid'=>{type:'range',from:encode(v.begin,depth+1),to:encode(v.end,depth+1),exclusive:v.exclude_end?}}
+    when Array then v.map{|x|encode(x,depth+1)}
+    when Hash
+      if v.keys.any?{|k| k.is_a?(Symbol)}
+        {'$liquid'=>{type:'hash',entries:v.map{|k,x|[encode(k,depth+1),encode(x,depth+1)]}}}
+      else v.transform_values{|x|encode(x,depth+1)} end
+    else v
+    end
+  end
   def capture(n,env,forced_reason=nil)
     c=call(n);return unless c && ['assert_template_result','assert_template_result_matches'].include?(c[0][1])
     line,column=c[0][2];key="#{line}:#{column}";return if @seen[key];@seen[key]=true
     base={line:line,column:column,call:c[0][1]}
     begin
       raise Unresolved,forced_reason if forced_reason
-      args=arguments(c[1]);expected=value(args[0],env);source=value(args[1],env);context=args[2] ? value(args[2],env) : {};templates={}
-      if args[3]
-        extra=value(args[3],env)
+      args=arguments(c[1]);expected=value(args[0],env);source=value(args[1],env);third=args[2] ? value(args[2],env) : {}
+      keywords=@repository!='ruby-liquid' && args[2] && args[2][0]==:bare_assoc_hash && third.keys.all?{|k| k.is_a?(Symbol)}
+      context=keywords ? {} : third;templates={};extra_node=args[3] || (args[2] if keywords)
+      if extra_node
+        extra=value(extra_node,env)
+        extra=extra.transform_keys(&:to_s) if extra.is_a?(Hash)
         if extra.is_a?(Hash)
-          raise Unresolved,'Unsupported assertion setup/options' unless (extra.keys-['partials','message']).empty?
+          raise Unresolved,'Unsupported assertion setup/options' unless (extra.keys-['partials','message','error_mode','render_errors']).empty?
           templates=extra['partials']||{}
+          upstream_options={errorMode:extra['error_mode']&.to_s,renderErrors:extra['render_errors']}
+          raise Unresolved,'Inline rendered-error semantics require an adapter' if extra['render_errors']
         elsif !extra.is_a?(String) && !extra.nil? then raise Unresolved,'Unsupported assertion options' end
       end
       raise Unresolved,'Expected output/template must be strings' unless expected.is_a?(String)&&source.is_a?(String)
       raise Unresolved,'Context must be a record' unless context.is_a?(Hash)
-      fixture=base.merge(source:source,context:context,templates:templates,expected:{kind:'output',output:expected},operation:'render')
+      fixture=base.merge(upstreamOptions:upstream_options || {},source:source,context:encode(context),templates:templates,expected:{kind:'output',output:expected},operation:'render')
+      if @repository == 'shopify-liquid'
+        fixture[:globals]=fixture[:context];fixture[:context]={}
+      end
       JSON.generate(fixture) # Reject invalid Unicode/nonfinite values rather than changing them.
       @fixtures << JSON.parse(JSON.generate(fixture));@inventory << base.merge(status:'imported')
     rescue Unresolved,JSON::GeneratorError,JSON::NestingError,KeyError,TypeError,ArgumentError => error
@@ -139,5 +168,5 @@ class Extractor
   end
 end
 input=JSON.parse(STDIN.read)
-output=input.map{|entry|{path:entry['path'],result:Extractor.new(File.read(entry['absolute'])).run}}
+output=input.map{|entry|{path:entry['path'],result:Extractor.new(File.read(entry['absolute']),entry['repository']).run}}
 STDOUT.write(JSON.generate(output))

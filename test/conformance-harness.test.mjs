@@ -11,16 +11,22 @@ describe("conformance harness", () => {
     expect(expectation(output("ok"), { kind: "output", output: "ok" })).toBe("match");
   });
   it("gates golden failures even when engines agree", () => {
-    const fixture = { id: "case", source: "x", expected: { kind: "output", output: "right" } };
+    const fixture = {
+      authority: "ruby",
+      id: "case",
+      source: "x",
+      expected: { kind: "output", output: "right" },
+    };
     const wrong = output("wrong");
     expect(regression(fixture, wrong, wrong, {})).toBe("new-gap");
     const baseline = { case: baselineEntry(fixture, wrong, wrong) };
     expect(regression(fixture, wrong, wrong, baseline)).toBe("known-gap");
-    expect(regression(fixture, output("different"), wrong, baseline)).toBe("changed-gap");
+    expect(regression(fixture, output("different"), wrong, baseline)).toBe("known-gap");
     expect(regression(fixture, output("right"), output("right"), baseline)).toBe("improved");
   });
   it("keeps an expected parse rejection when LiquidJS accepts malformed syntax", () => {
     const fixture = {
+      authority: "ruby",
       id: "parser-errors/if",
       source: "{% if x == %}{% endif %}",
       operation: "parse",
@@ -33,15 +39,19 @@ describe("conformance harness", () => {
       category: "syntax",
       message: "Expected expression",
     };
-    const baseline = { [fixture.id]: baselineEntry(fixture, accepted, rejected) };
     expect(compare(accepted, rejected)).toBe("mismatch");
     expect(expectation(accepted, fixture.expected)).toBe("different");
     expect(expectation(rejected, fixture.expected)).toBe("match");
-    expect(regression(fixture, accepted, rejected, baseline)).toBe("known-gap");
-    expect(regression(fixture, accepted, accepted, baseline)).toBe("changed-gap");
+    expect(regression(fixture, accepted, rejected, {})).toBe("pass");
+    expect(regression(fixture, accepted, accepted, {})).toBe("new-gap");
   });
   it("does not pin time-dependent oracle output for an unsupported configuration", () => {
-    const fixture = { id: "unsupported", source: "{{ d | date: f }}", context: { d: "now" } };
+    const fixture = {
+      authority: "liquidjs",
+      id: "unsupported",
+      source: "{{ d | date: f }}",
+      context: { d: "now" },
+    };
     const unsupported = { kind: "unsupported-configuration", options: ["memoryLimit"] };
     const baseline = { unsupported: baselineEntry(fixture, output("yesterday"), unsupported) };
     expect(regression(fixture, output("today"), unsupported, baseline)).toBe("known-gap");

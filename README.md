@@ -2,7 +2,7 @@
 
 An independent Liquid template engine in TypeScript, built around Effect. Parse templates into a source-located AST, render them, extract variable dependencies, and check them against declared data contracts.
 
-**Status: working development preview.** Core rendering and analysis are implemented; the checker is experimental. The package is not published. [CONFORMANCE.json](./CONFORMANCE.json) inventories the supported subset and remaining gaps against LiquidJS 10.29.0. LiquidJS is a development-only comparison engine, never a runtime dependency.
+**Status: working development preview.** Core rendering and analysis are implemented; the checker is experimental. The package is not published. [CONFORMANCE.json](./CONFORMANCE.json) inventories the supported subset and remaining gaps against LiquidJS 10.29.0. LiquidJS is a development-only comparison engine, never a runtime dependency. Conformance is scored per fixture authority: live LiquidJS for its dialect, upstream Ruby expectations for Ruby; cross-engine agreement is informational. The Phase 1 score increase corrects measurement and fixtures, with no engine changes. See [corpus status](conformance/STATUS.md).
 
 ## Develop
 

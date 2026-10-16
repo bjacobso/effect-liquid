@@ -1,5 +1,6 @@
 [
   {
+    "upstreamOptions": {},
     "source": "{% assign foo = values %}.{{ foo[0] }}.",
     "context": {
       "values": [
@@ -24,11 +25,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% assign foo = values %}.{{ foo[1] }}.",
     "context": {
       "values": [
@@ -53,11 +56,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% assign foo = values | split: \",\" %}.{{ foo[1] }}.",
     "context": {
       "values": "foo,bar,baz"
@@ -78,11 +83,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if true %} {% elsif false %} {% else %} {% endif %}",
     "context": {},
     "templates": {},
@@ -101,11 +108,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% capture 'var' %}test string{% endcapture %}{{var}}",
     "context": {},
     "templates": {},
@@ -124,11 +133,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if containsallshipments == true %} YES {% endif %}",
     "context": {
       "containsallshipments": true
@@ -149,11 +160,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ ary | map:'foo' | map:'bar' }}",
     "context": {
       "ary": [
@@ -190,11 +203,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ \"foo\" | map: \"__id__\" }}",
     "context": {},
     "templates": {},
@@ -213,11 +228,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ \"foo\" | map: \"inspect\" }}",
     "context": {},
     "templates": {},
@@ -236,20 +253,32 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ thing | map: \"foo\" | map: \"bar\" }}",
     "context": {
       "thing": {
         "foo": [
           {
-            "bar": 42
+            "bar": {
+              "$liquid": {
+                "type": "integer",
+                "value": "42"
+              }
+            }
           },
           {
-            "bar": 17
+            "bar": {
+              "$liquid": {
+                "type": "integer",
+                "value": "17"
+              }
+            }
           }
         ]
       }
@@ -270,16 +299,23 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% assign key = 'foo' %}{{ thing | map: key | map: 'bar' }}",
     "context": {
       "thing": {
         "foo": {
-          "bar": 42
+          "bar": {
+            "$liquid": {
+              "type": "integer",
+              "value": "42"
+            }
+          }
         }
       }
     },
@@ -299,11 +335,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ '1 1 1 1' | replace_first: '1', 2 }}",
     "context": {},
     "templates": {},
@@ -322,11 +360,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 'a a a a' | remove_first: 'a ' }}",
     "context": {},
     "templates": {},
@@ -345,11 +385,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 'foo|bar' | remove: '|' }}",
     "context": {},
     "templates": {},
@@ -368,11 +410,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ source | strip }}",
     "context": {
       "source": " ab c  "
@@ -393,11 +437,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ source | strip }}",
     "context": {
       "source": " \tab c  \n \t"
@@ -418,11 +464,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ source | lstrip }}",
     "context": {
       "source": " ab c  "
@@ -443,11 +491,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ source | lstrip }}",
     "context": {
       "source": " \tab c  \n \t"
@@ -468,11 +518,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ source | rstrip }}",
     "context": {
       "source": " ab c  "
@@ -493,11 +545,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ source | rstrip }}",
     "context": {
       "source": " \tab c  \n \t"
@@ -518,11 +572,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ source | strip_newlines }}",
     "context": {
       "source": "a\nb\nc"
@@ -543,11 +599,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ source | strip_newlines }}",
     "context": {
       "source": "a\r\nb\nc"
@@ -568,11 +626,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ source | newline_to_br }}",
     "context": {
       "source": "a\nb\nc"
@@ -593,11 +653,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 1 | plus:1 }}",
     "context": {},
     "templates": {},
@@ -616,11 +678,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ '1' | plus:'1.0' }}",
     "context": {},
     "templates": {},
@@ -639,15 +703,27 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ input | minus:operand }}",
     "context": {
-      "input": 5,
-      "operand": 1
+      "input": {
+        "$liquid": {
+          "type": "integer",
+          "value": "5"
+        }
+      },
+      "operand": {
+        "$liquid": {
+          "type": "integer",
+          "value": "1"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -665,11 +741,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ '4.3' | minus:'2' }}",
     "context": {},
     "templates": {},
@@ -688,11 +766,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 17 | abs }}",
     "context": {},
     "templates": {},
@@ -711,11 +791,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ -17 | abs }}",
     "context": {},
     "templates": {},
@@ -734,11 +816,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ '17' | abs }}",
     "context": {},
     "templates": {},
@@ -757,11 +841,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ '-17' | abs }}",
     "context": {},
     "templates": {},
@@ -780,11 +866,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 0 | abs }}",
     "context": {},
     "templates": {},
@@ -803,11 +891,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ '0' | abs }}",
     "context": {},
     "templates": {},
@@ -826,11 +916,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 17.42 | abs }}",
     "context": {},
     "templates": {},
@@ -849,11 +941,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ -17.42 | abs }}",
     "context": {},
     "templates": {},
@@ -872,11 +966,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ '17.42' | abs }}",
     "context": {},
     "templates": {},
@@ -895,11 +991,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ '-17.42' | abs }}",
     "context": {},
     "templates": {},
@@ -918,11 +1016,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 3 | times:4 }}",
     "context": {},
     "templates": {},
@@ -941,11 +1041,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 'foo' | times:4 }}",
     "context": {},
     "templates": {},
@@ -964,11 +1066,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ '2.1' | times:3 | replace: '.','-' | plus:0}}",
     "context": {},
     "templates": {},
@@ -987,11 +1091,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 0.0725 | times:100 }}",
     "context": {},
     "templates": {},
@@ -1010,11 +1116,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ \"-0.0725\" | times:100 }}",
     "context": {},
     "templates": {},
@@ -1033,11 +1141,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ \"-0.0725\" | times: -100 }}",
     "context": {},
     "templates": {},
@@ -1056,11 +1166,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 12 | divided_by:3 }}",
     "context": {},
     "templates": {},
@@ -1079,11 +1191,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 14 | divided_by:3 }}",
     "context": {},
     "templates": {},
@@ -1102,11 +1216,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 15 | divided_by:3 }}",
     "context": {},
     "templates": {},
@@ -1125,11 +1241,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 2.0 | divided_by:4 }}",
     "context": {},
     "templates": {},
@@ -1148,11 +1266,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 3 | modulo:2 }}",
     "context": {},
     "templates": {},
@@ -1171,14 +1291,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ input | round }}",
     "context": {
-      "input": 4.6
+      "input": {
+        "$liquid": {
+          "type": "float",
+          "value": "4.6"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -1196,11 +1323,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ '4.3' | round }}",
     "context": {},
     "templates": {},
@@ -1219,14 +1348,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ input | round: 2 }}",
     "context": {
-      "input": 4.5612
+      "input": {
+        "$liquid": {
+          "type": "float",
+          "value": "4.5612"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -1244,14 +1380,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ input | ceil }}",
     "context": {
-      "input": 4.6
+      "input": {
+        "$liquid": {
+          "type": "float",
+          "value": "4.6"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -1269,11 +1412,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ '4.3' | ceil }}",
     "context": {},
     "templates": {},
@@ -1292,14 +1437,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ input | floor }}",
     "context": {
-      "input": 4.6
+      "input": {
+        "$liquid": {
+          "type": "float",
+          "value": "4.6"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -1317,11 +1469,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ '4.3' | floor }}",
     "context": {},
     "templates": {},
@@ -1340,11 +1494,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 5 | at_most:4 }}",
     "context": {},
     "templates": {},
@@ -1363,11 +1519,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 5 | at_most:5 }}",
     "context": {},
     "templates": {},
@@ -1386,11 +1544,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 5 | at_most:6 }}",
     "context": {},
     "templates": {},
@@ -1409,11 +1569,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 4.5 | at_most:5 }}",
     "context": {},
     "templates": {},
@@ -1432,11 +1594,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 5 | at_least:4 }}",
     "context": {},
     "templates": {},
@@ -1455,11 +1619,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 5 | at_least:5 }}",
     "context": {},
     "templates": {},
@@ -1478,11 +1644,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 5 | at_least:6 }}",
     "context": {},
     "templates": {},
@@ -1501,11 +1669,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 4.5 | at_least:5 }}",
     "context": {},
     "templates": {},
@@ -1524,11 +1694,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ a | append: 'd'}}",
     "context": {
       "a": "bc",
@@ -1550,11 +1722,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ a | append: b}}",
     "context": {
       "a": "bc",
@@ -1576,11 +1750,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ a | prepend: 'a'}}",
     "context": {
       "a": "bc",
@@ -1602,11 +1778,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ a | prepend: b}}",
     "context": {
       "a": "bc",
@@ -1628,11 +1806,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 'a' | to_number }}",
     "context": {},
     "templates": {},
@@ -1651,11 +1831,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ '' | date: '%D' }}",
     "context": {},
     "templates": {},
@@ -1674,11 +1856,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ 'abc' | date: '%D' }}",
     "context": {},
     "templates": {},
@@ -1697,14 +1881,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% break %}",
     "context": {
-      "i": 1
+      "i": {
+        "$liquid": {
+          "type": "integer",
+          "value": "1"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -1722,11 +1913,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% continue %}",
     "context": {},
     "templates": {},
@@ -1745,24 +1938,76 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for i in array limit:2 %}{{ i }}{%endfor%}",
     "context": {
       "array": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        0
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "4"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "5"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "6"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "7"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "8"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "9"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "0"
+          }
+        }
       ]
     },
     "templates": {},
@@ -1781,24 +2026,76 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for i in array limit:4 %}{{ i }}{%endfor%}",
     "context": {
       "array": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        0
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "4"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "5"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "6"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "7"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "8"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "9"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "0"
+          }
+        }
       ]
     },
     "templates": {},
@@ -1817,24 +2114,76 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for i in array limit:4 offset:2 %}{{ i }}{%endfor%}",
     "context": {
       "array": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        0
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "4"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "5"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "6"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "7"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "8"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "9"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "0"
+          }
+        }
       ]
     },
     "templates": {},
@@ -1853,24 +2202,76 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for i in array limit: 4 offset: 2 %}{{ i }}{%endfor%}",
     "context": {
       "array": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        0
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "4"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "5"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "6"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "7"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "8"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "9"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "0"
+          }
+        }
       ]
     },
     "templates": {},
@@ -1889,27 +2290,89 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for i in array limit: limit offset: offset %}{{ i }}{%endfor%}",
     "context": {
       "array": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        0
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "4"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "5"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "6"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "7"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "8"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "9"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "0"
+          }
+        }
       ],
-      "limit": 2,
-      "offset": 2
+      "limit": {
+        "$liquid": {
+          "type": "integer",
+          "value": "2"
+        }
+      },
+      "offset": {
+        "$liquid": {
+          "type": "integer",
+          "value": "2"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -1927,25 +2390,57 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%}{%for i in item%}{{ i }}{%endfor%}{%endfor%}",
     "context": {
       "array": [
         [
-          1,
-          2
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "2"
+            }
+          }
         ],
         [
-          3,
-          4
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "3"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "4"
+            }
+          }
         ],
         [
-          5,
-          6
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "5"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "6"
+            }
+          }
         ]
       ]
     },
@@ -1965,24 +2460,76 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for i in array offset:7 %}{{ i }}{%endfor%}",
     "context": {
       "array": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        0
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "4"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "5"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "6"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "7"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "8"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "9"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "0"
+          }
+        }
       ]
     },
     "templates": {},
@@ -2001,18 +2548,40 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%} yo {%endfor%}",
     "context": {
       "array": [
-        1,
-        2,
-        3,
-        4
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "4"
+          }
+        }
       ]
     },
     "templates": {},
@@ -2031,16 +2600,28 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%}yo{%endfor%}",
     "context": {
       "array": [
-        1,
-        2
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        }
       ]
     },
     "templates": {},
@@ -2059,25 +2640,77 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      {%for i in array.items limit: 3 %}{{i}}{%endfor%}\n      next\n      {%for i in array.items offset:continue limit: 3 %}{{i}}{%endfor%}\n      next\n      {%for i in array.items offset:continue limit: 3 %}{{i}}{%endfor%}\n",
     "context": {
       "array": {
         "items": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          0
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "2"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "3"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "4"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "5"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "6"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "7"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "8"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "9"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "0"
+            }
+          }
         ]
       }
     },
@@ -2097,15 +2730,22 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%} yo {%endfor%}",
     "context": {
       "array": [
-        1
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        }
       ]
     },
     "templates": {},
@@ -2124,25 +2764,77 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      {%for i in array.items limit:3 %}{{i}}{%endfor%}\n      next\n      {%for i in array.items offset:continue limit:3 %}{{i}}{%endfor%}\n      next\n      {%for i in array.items offset:continue limit:1 %}{{i}}{%endfor%}\n",
     "context": {
       "array": {
         "items": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          0
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "2"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "3"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "4"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "5"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "6"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "7"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "8"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "9"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "0"
+            }
+          }
         ]
       }
     },
@@ -2162,16 +2854,28 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%}{%endfor%}",
     "context": {
       "array": [
-        1,
-        2
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        }
       ]
     },
     "templates": {},
@@ -2190,25 +2894,77 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      {%for i in array.items limit:3 %}{{i}}{%endfor%}\n      next\n      {%for i in array.items offset:continue limit:3 %}{{i}}{%endfor%}\n      next\n      {%for i in array.items offset:continue limit:1000 %}{{i}}{%endfor%}\n",
     "context": {
       "array": {
         "items": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          0
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "2"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "3"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "4"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "5"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "6"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "7"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "8"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "9"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "0"
+            }
+          }
         ]
       }
     },
@@ -2228,25 +2984,77 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for i in array.items limit:3 %}{{i}}{%endfor%}\n      next\n      {%for i in array.items offset:continue limit:3 %}{{i}}{%endfor%}\n      next\n      {%for i in array.items offset:continue limit:3 offset:1000 %}{{i}}{%endfor%}",
     "context": {
       "array": {
         "items": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          0
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "2"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "3"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "4"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "5"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "6"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "7"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "8"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "9"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "0"
+            }
+          }
         ]
       }
     },
@@ -2266,25 +3074,77 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for i in array.items %}{% break %}{% endfor %}",
     "context": {
       "array": {
         "items": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "2"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "3"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "4"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "5"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "6"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "7"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "8"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "9"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "10"
+            }
+          }
         ]
       }
     },
@@ -2304,25 +3164,77 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for i in array.items %}{{ i }}{% break %}{% endfor %}",
     "context": {
       "array": {
         "items": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "2"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "3"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "4"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "5"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "6"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "7"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "8"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "9"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "10"
+            }
+          }
         ]
       }
     },
@@ -2342,25 +3254,77 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for i in array.items %}{% break %}{{ i }}{% endfor %}",
     "context": {
       "array": {
         "items": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "2"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "3"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "4"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "5"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "6"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "7"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "8"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "9"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "10"
+            }
+          }
         ]
       }
     },
@@ -2380,25 +3344,77 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for i in array.items %}{{ i }}{% if i > 3 %}{% break %}{% endif %}{% endfor %}",
     "context": {
       "array": {
         "items": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "2"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "3"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "4"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "5"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "6"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "7"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "8"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "9"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "10"
+            }
+          }
         ]
       }
     },
@@ -2418,25 +3434,57 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for item in array %}{% for i in item %}{% if i == 1 %}{% break %}{% endif %}{{ i }}{% endfor %}{% endfor %}",
     "context": {
       "array": [
         [
-          1,
-          2
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "2"
+            }
+          }
         ],
         [
-          3,
-          4
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "3"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "4"
+            }
+          }
         ],
         [
-          5,
-          6
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "5"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "6"
+            }
+          }
         ]
       ]
     },
@@ -2456,20 +3504,47 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for i in array.items %}{% if i == 9999 %}{% break %}{% endif %}{{ i }}{% endfor %}",
     "context": {
       "array": {
         "items": [
-          1,
-          2,
-          3,
-          4,
-          5
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "2"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "3"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "4"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "5"
+            }
+          }
         ]
       }
     },
@@ -2489,20 +3564,47 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for i in array.items %}{% continue %}{% endfor %}",
     "context": {
       "array": {
         "items": [
-          1,
-          2,
-          3,
-          4,
-          5
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "2"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "3"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "4"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "5"
+            }
+          }
         ]
       }
     },
@@ -2522,20 +3624,47 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for i in array.items %}{{ i }}{% continue %}{% endfor %}",
     "context": {
       "array": {
         "items": [
-          1,
-          2,
-          3,
-          4,
-          5
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "2"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "3"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "4"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "5"
+            }
+          }
         ]
       }
     },
@@ -2555,20 +3684,47 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for i in array.items %}{% continue %}{{ i }}{% endfor %}",
     "context": {
       "array": {
         "items": [
-          1,
-          2,
-          3,
-          4,
-          5
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "2"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "3"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "4"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "5"
+            }
+          }
         ]
       }
     },
@@ -2588,20 +3744,47 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for i in array.items %}{% if i > 3 %}{% continue %}{% endif %}{{ i }}{% endfor %}",
     "context": {
       "array": {
         "items": [
-          1,
-          2,
-          3,
-          4,
-          5
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "2"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "3"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "4"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "5"
+            }
+          }
         ]
       }
     },
@@ -2621,20 +3804,47 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for i in array.items %}{% if i == 3 %}{% continue %}{% else %}{{ i }}{% endif %}{% endfor %}",
     "context": {
       "array": {
         "items": [
-          1,
-          2,
-          3,
-          4,
-          5
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "2"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "3"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "4"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "5"
+            }
+          }
         ]
       }
     },
@@ -2654,25 +3864,57 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for item in array %}{% for i in item %}{% if i == 1 %}{% continue %}{% endif %}{{ i }}{% endfor %}{% endfor %}",
     "context": {
       "array": [
         [
-          1,
-          2
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "2"
+            }
+          }
         ],
         [
-          3,
-          4
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "3"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "4"
+            }
+          }
         ],
         [
-          5,
-          6
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "5"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "6"
+            }
+          }
         ]
       ]
     },
@@ -2692,20 +3934,47 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for i in array.items %}{% if i == 9999 %}{% continue %}{% endif %}{{ i }}{% endfor %}",
     "context": {
       "array": {
         "items": [
-          1,
-          2,
-          3,
-          4,
-          5
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "2"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "3"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "4"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "5"
+            }
+          }
         ]
       }
     },
@@ -2725,11 +3994,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for val in string%}{{val}}{%endfor%}",
     "context": {
       "string": "test string"
@@ -2750,11 +4021,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for val in string limit:1%}{{val}}{%endfor%}",
     "context": {
       "string": "test string"
@@ -2775,11 +4048,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for val in string%}{{forloop.name}}-{{forloop.index}}-{{forloop.length}}-{{forloop.index0}}-{{forloop.rindex}}-{{forloop.rindex0}}-{{forloop.first}}-{{forloop.last}}-{{val}}{%endfor%}",
     "context": {
       "string": "test string"
@@ -2800,23 +4075,55 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for inner in outer %}{% for k in inner %}{{ forloop.parentloop.index }}.{{ forloop.index }} {% endfor %}{% endfor %}",
     "context": {
       "outer": [
         [
-          1,
-          1,
-          1
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          }
         ],
         [
-          1,
-          1,
-          1
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          }
         ]
       ]
     },
@@ -2836,17 +4143,34 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%}\n  yo\n{%endfor%}\n",
     "context": {
       "array": [
-        1,
-        2,
-        3
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        }
       ]
     },
     "templates": {},
@@ -2865,23 +4189,55 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for inner in outer %}{{ forloop.parentloop.index }}.{{ forloop.index }} {% endfor %}",
     "context": {
       "outer": [
         [
-          1,
-          1,
-          1
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          }
         ],
         [
-          1,
-          1,
-          1
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          }
         ]
       ]
     },
@@ -2901,11 +4257,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for a in (1..2) %}o{% for b in empty %}{% endfor %}{% endfor %}",
     "context": {},
     "templates": {},
@@ -2924,11 +4282,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for char in characters %}I WILL NOT BE OUTPUT{% endfor %}",
     "context": {
       "characters": ""
@@ -2949,19 +4309,46 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for       item   in   items %}{{item}}{% endfor %}",
     "context": {
       "items": [
-        1,
-        2,
-        3,
-        4,
-        5
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "4"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "5"
+          }
+        }
       ]
     },
     "templates": {},
@@ -2980,17 +4367,34 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array reversed %}{{item}}{%endfor%}",
     "context": {
       "array": [
-        1,
-        2,
-        3
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        }
       ]
     },
     "templates": {},
@@ -3009,19 +4413,46 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for item in items offset:2 limit:2 %}{{item}}{% endfor %}",
     "context": {
       "items": [
-        1,
-        2,
-        3,
-        4,
-        5
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "4"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "5"
+          }
+        }
       ]
     },
     "templates": {},
@@ -3040,11 +4471,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in (1..3) %} {{item}} {%endfor%}",
     "context": {},
     "templates": {},
@@ -3063,11 +4496,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for item in (a..3) %} {{item}} {% endfor %}",
     "context": {
       "a": "invalid integer"
@@ -3088,14 +4523,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in (1..foobar) %} {{item}} {%endfor%}",
     "context": {
-      "foobar": 3
+      "foobar": {
+        "$liquid": {
+          "type": "integer",
+          "value": "3"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -3113,15 +4555,22 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in (1..foobar.value) %} {{item}} {%endfor%}",
     "context": {
       "foobar": {
-        "value": 3
+        "value": {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        }
       }
     },
     "templates": {},
@@ -3140,17 +4589,34 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%} {{item}} {%endfor%}",
     "context": {
       "array": [
-        1,
-        2,
-        3
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        }
       ]
     },
     "templates": {},
@@ -3169,17 +4635,34 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%}{{item}}{%endfor%}",
     "context": {
       "array": [
-        1,
-        2,
-        3
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        }
       ]
     },
     "templates": {},
@@ -3198,17 +4681,34 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for item in array %}{{item}}{% endfor %}",
     "context": {
       "array": [
-        1,
-        2,
-        3
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        }
       ]
     },
     "templates": {},
@@ -3227,11 +4727,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%}{{item}}{%endfor%}",
     "context": {
       "array": [
@@ -3257,11 +4759,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%}{{item}}{%endfor%}",
     "context": {
       "array": [
@@ -3288,11 +4792,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%}{{item}}{%endfor%}",
     "context": {
       "array": [
@@ -3319,17 +4825,34 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%} {{forloop.index}}/{{forloop.length}} {%endfor%}",
     "context": {
       "array": [
-        1,
-        2,
-        3
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        }
       ]
     },
     "templates": {},
@@ -3348,17 +4871,34 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%} {{forloop.index}} {%endfor%}",
     "context": {
       "array": [
-        1,
-        2,
-        3
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        }
       ]
     },
     "templates": {},
@@ -3377,17 +4917,34 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%} {{forloop.index0}} {%endfor%}",
     "context": {
       "array": [
-        1,
-        2,
-        3
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        }
       ]
     },
     "templates": {},
@@ -3406,17 +4963,34 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%} {{forloop.rindex0}} {%endfor%}",
     "context": {
       "array": [
-        1,
-        2,
-        3
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        }
       ]
     },
     "templates": {},
@@ -3435,17 +5009,34 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%} {{forloop.rindex}} {%endfor%}",
     "context": {
       "array": [
-        1,
-        2,
-        3
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        }
       ]
     },
     "templates": {},
@@ -3464,17 +5055,34 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%} {{forloop.first}} {%endfor%}",
     "context": {
       "array": [
-        1,
-        2,
-        3
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        }
       ]
     },
     "templates": {},
@@ -3493,17 +5101,34 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%} {{forloop.last}} {%endfor%}",
     "context": {
       "array": [
-        1,
-        2,
-        3
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        }
       ]
     },
     "templates": {},
@@ -3522,17 +5147,34 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%}{% if forloop.first %}+{% else %}-{% endif %}{%endfor%}",
     "context": {
       "array": [
-        1,
-        2,
-        3
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        }
       ]
     },
     "templates": {},
@@ -3551,17 +5193,34 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%}+{%else%}-{%endfor%}",
     "context": {
       "array": [
-        1,
-        2,
-        3
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        }
       ]
     },
     "templates": {},
@@ -3580,11 +5239,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%}+{%else%}-{%endfor%}",
     "context": {
       "array": []
@@ -3605,11 +5266,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%}+{%else%}-{%endfor%}",
     "context": {
       "array": null
@@ -3630,11 +5293,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if false %} you suck {% endif %} {% if true %} you rock {% endif %}?",
     "context": {},
     "templates": {},
@@ -3653,11 +5318,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if foo.bar %} NO {% else %} YES {% endif %}",
     "context": {
       "notfoo": {
@@ -3680,11 +5347,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if false %}{% if false %} NO {% endif %}{% endif %}",
     "context": {},
     "templates": {},
@@ -3703,11 +5372,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if false %}{% if true %} NO {% endif %}{% endif %}",
     "context": {},
     "templates": {},
@@ -3726,11 +5397,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if true %}{% if false %} NO {% endif %}{% endif %}",
     "context": {},
     "templates": {},
@@ -3749,11 +5422,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if true %}{% if true %} YES {% endif %}{% endif %}",
     "context": {},
     "templates": {},
@@ -3772,11 +5447,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if true %}{% if true %} YES {% else %} NO {% endif %}{% else %} NO {% endif %}",
     "context": {},
     "templates": {},
@@ -3795,11 +5472,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if true %}{% if false %} NO {% else %} YES {% endif %}{% else %} NO {% endif %}",
     "context": {},
     "templates": {},
@@ -3818,11 +5497,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if false %}{% if true %} NO {% else %} NONO {% endif %}{% else %} YES {% endif %}",
     "context": {},
     "templates": {},
@@ -3841,11 +5522,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if null < 10 %} NO {% endif %}",
     "context": {},
     "templates": {},
@@ -3864,11 +5547,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if null <= 10 %} NO {% endif %}",
     "context": {},
     "templates": {},
@@ -3887,11 +5572,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if null >= 10 %} NO {% endif %}",
     "context": {},
     "templates": {},
@@ -3910,11 +5597,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if null > 10 %} NO {% endif %}",
     "context": {},
     "templates": {},
@@ -3933,11 +5622,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if 10 < null %} NO {% endif %}",
     "context": {},
     "templates": {},
@@ -3956,11 +5647,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if 10 <= null %} NO {% endif %}",
     "context": {},
     "templates": {},
@@ -3979,11 +5672,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if 10 >= null %} NO {% endif %}",
     "context": {},
     "templates": {},
@@ -4002,11 +5697,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if 10 > null %} NO {% endif %}",
     "context": {},
     "templates": {},
@@ -4025,11 +5722,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if 0 == 0 %}0{% elsif 1 == 1%}1{% else %}2{% endif %}",
     "context": {},
     "templates": {},
@@ -4048,11 +5747,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if 0 != 0 %}0{% elsif 1 == 1%}1{% else %}2{% endif %}",
     "context": {},
     "templates": {},
@@ -4071,11 +5772,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if 0 != 0 %}0{% elsif 1 != 1%}1{% else %}2{% endif %}",
     "context": {},
     "templates": {},
@@ -4094,11 +5797,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if false %}if{% elsif true %}elsif{% endif %}",
     "context": {},
     "templates": {},
@@ -4117,11 +5822,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% assign v = false %}{% if v %} YES {% else %} NO {% endif %}",
     "context": {},
     "templates": {},
@@ -4140,11 +5847,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if 'bob' contains 'o' %}yes{% endif %}",
     "context": {},
     "templates": {},
@@ -4163,11 +5872,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if 'bob' contains 'f' %}yes{% else %}no{% endif %}",
     "context": {},
     "templates": {},
@@ -4186,11 +5897,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% assign v = nil %}{% if v == nil %} YES {% else %} NO {% endif %}",
     "context": {},
     "templates": {},
@@ -4209,11 +5922,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if 'gnomeslab-and-or-liquid' contains 'gnomeslab-and-or-liquid' %}yes{% endif %}",
     "context": {},
     "templates": {},
@@ -4232,11 +5947,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if false %} NO {% else %} YES {% endif %}",
     "context": {},
     "templates": {},
@@ -4255,11 +5972,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if true %} YES {% else %} NO {% endif %}",
     "context": {},
     "templates": {},
@@ -4278,11 +5997,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if \"foo\" %} YES {% else %} NO {% endif %}",
     "context": {},
     "templates": {},
@@ -4301,11 +6022,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if var %} YES {% endif %}",
     "context": {
       "var": true
@@ -4326,11 +6049,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if a or b %} YES {% endif %}",
     "context": {
       "a": true,
@@ -4352,11 +6077,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if a or b %} YES {% endif %}",
     "context": {
       "a": true,
@@ -4378,11 +6105,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if a or b %} YES {% endif %}",
     "context": {
       "a": false,
@@ -4404,11 +6133,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if a or b %} YES {% endif %}",
     "context": {
       "a": false,
@@ -4430,11 +6161,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if a or b or c %} YES {% endif %}",
     "context": {
       "a": false,
@@ -4457,11 +6190,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if a or b or c %} YES {% endif %}",
     "context": {
       "a": false,
@@ -4484,11 +6219,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if a == true or b == true %} YES {% endif %}",
     "context": {
       "a": true,
@@ -4510,11 +6247,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if a == true or b == false %} YES {% endif %}",
     "context": {
       "a": true,
@@ -4536,11 +6275,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if a == false or b == false %} YES {% endif %}",
     "context": {
       "a": true,
@@ -4562,15 +6303,22 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if android.name == 'Roy' %}YES{% endif %}",
     "context": {
       "order": {
-        "items_count": 0
+        "items_count": {
+          "$liquid": {
+            "type": "integer",
+            "value": "0"
+          }
+        }
       },
       "android": {
         "name": "Roy"
@@ -4592,15 +6340,22 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if order.items_count == 0 %}YES{% endif %}",
     "context": {
       "order": {
-        "items_count": 0
+        "items_count": {
+          "$liquid": {
+            "type": "integer",
+            "value": "0"
+          }
+        }
       },
       "android": {
         "name": "Roy"
@@ -4622,11 +6377,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if true and true %} YES {% endif %}",
     "context": {},
     "templates": {},
@@ -4645,11 +6402,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if false and true %} YES {% endif %}",
     "context": {},
     "templates": {},
@@ -4668,11 +6427,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if false and true %} YES {% endif %}",
     "context": {},
     "templates": {},
@@ -4691,11 +6452,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if foo.bar %} NO {% endif %}",
     "context": {
       "foo": {}
@@ -4716,11 +6479,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if false %} this text should not go into the output {% endif %} ",
     "context": {},
     "templates": {},
@@ -4739,11 +6504,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if var %} NO {% endif %}",
     "context": {
       "var": false
@@ -4764,11 +6531,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if var %} NO {% endif %}",
     "context": {
       "var": null
@@ -4789,11 +6558,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if foo.bar %} NO {% endif %}",
     "context": {
       "foo": {
@@ -4816,11 +6587,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if foo.bar %} NO {% endif %}",
     "context": {
       "foo": {}
@@ -4841,11 +6614,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if foo.bar %} NO {% endif %}",
     "context": {
       "foo": null
@@ -4866,11 +6641,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if foo.bar %} NO {% endif %}",
     "context": {
       "foo": true
@@ -4891,11 +6668,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if var %} YES {% endif %}",
     "context": {
       "var": "text"
@@ -4916,11 +6695,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if var %} YES {% endif %}",
     "context": {
       "var": true
@@ -4941,11 +6722,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if true %} this text should go into the output {% endif %} ",
     "context": {},
     "templates": {},
@@ -4964,14 +6747,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if var %} YES {% endif %}",
     "context": {
-      "var": 1
+      "var": {
+        "$liquid": {
+          "type": "integer",
+          "value": "1"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -4989,11 +6779,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if var %} YES {% endif %}",
     "context": {
       "var": {}
@@ -5014,11 +6806,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if var %} YES {% endif %}",
     "context": {
       "var": []
@@ -5039,11 +6833,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if \"foo\" %} YES {% endif %}",
     "context": {},
     "templates": {},
@@ -5062,11 +6858,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if foo.bar %} YES {% endif %}",
     "context": {
       "foo": {
@@ -5089,11 +6887,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if foo.bar %} YES {% endif %}",
     "context": {
       "foo": {
@@ -5116,15 +6916,22 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if foo.bar %} YES {% endif %}",
     "context": {
       "foo": {
-        "bar": 1
+        "bar": {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        }
       }
     },
     "templates": {},
@@ -5143,11 +6950,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if foo.bar %} YES {% endif %}",
     "context": {
       "foo": {
@@ -5170,11 +6979,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if foo.bar %} YES {% endif %}",
     "context": {
       "foo": {
@@ -5197,11 +7008,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if var %} NO {% else %} YES {% endif %}",
     "context": {
       "var": false
@@ -5222,11 +7035,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if var %} NO {% else %} YES {% endif %}",
     "context": {
       "var": null
@@ -5247,11 +7062,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if var %} YES {% else %} NO {% endif %}",
     "context": {
       "var": true
@@ -5272,11 +7089,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if \"foo\" %} YES {% else %} NO {% endif %}",
     "context": {
       "var": "text"
@@ -5297,11 +7116,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if foo.bar %} NO {% else %} YES {% endif %}",
     "context": {
       "foo": {
@@ -5324,11 +7145,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if foo.bar %} YES {% else %} NO {% endif %}",
     "context": {
       "foo": {
@@ -5351,11 +7174,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if foo.bar %} YES {% else %} NO {% endif %}",
     "context": {
       "foo": {
@@ -5378,11 +7203,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if foo.bar %} NO {% else %} YES {% endif %}",
     "context": {
       "foo": {
@@ -5405,11 +7232,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if foo.bar %} NO {% else %} YES {% endif %}",
     "context": {
       "foo": {}
@@ -5430,11 +7259,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% include 'locale_variables' echo1: 'test123' %}",
     "context": {},
     "templates": {},
@@ -5453,11 +7284,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% include 'locale_variables' echo1: 'test123', echo2: 'test321' %}",
     "context": {},
     "templates": {},
@@ -5476,11 +7309,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% include 'locale_variables' echo1: echo1, echo2: more_echos.echo2 %}",
     "context": {
       "echo1": "test123",
@@ -5504,11 +7339,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% include 'assignments' %}{{ foo }}",
     "context": {},
     "templates": {},
@@ -5527,11 +7364,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% include 'body' %}",
     "context": {},
     "templates": {},
@@ -5550,11 +7389,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% include 'nested_template' %}",
     "context": {},
     "templates": {},
@@ -5573,11 +7414,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% include 'nested_product_template' with product %}",
     "context": {
       "product": {
@@ -5600,11 +7443,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% include 'nested_product_template' for products %}",
     "context": {
       "products": [
@@ -5632,11 +7477,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% include template %}",
     "context": {
       "template": "Test123"
@@ -5657,11 +7504,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% include template %}",
     "context": {
       "template": "Test321"
@@ -5682,11 +7531,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% include template for product %}",
     "context": {
       "template": "product",
@@ -5710,11 +7561,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if true %}{% include 'foo_if_true' %}{% endif %}",
     "context": {},
     "templates": {},
@@ -5733,11 +7586,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% assign page = 'pick_a_source' %}{% include page %}",
     "context": {},
     "templates": {},
@@ -5756,11 +7611,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% assign page = 'product' %}{% include page %}",
     "context": {
       "product": {
@@ -5783,11 +7640,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% assign page = 'product' %}{% include page for foo %}",
     "context": {
       "foo": {
@@ -5810,11 +7669,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for i in (1..3) %}{{ i }}{% break %}{{ i }}{% endfor %}",
     "context": {},
     "templates": {},
@@ -5833,11 +7694,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for i in (1..3) %}{{ i }}{% include 'break' %}{{ i }}{% endfor %}",
     "context": {},
     "templates": {},
@@ -5856,11 +7719,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% include 'product' with products[0] %}",
     "context": {
       "products": [
@@ -5888,11 +7753,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% include 'product' %}",
     "context": {
       "product": {
@@ -5915,11 +7782,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% include 'product' for products %}",
     "context": {
       "products": [
@@ -5947,14 +7816,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%decrement port %}",
     "context": {
-      "port": 10
+      "port": {
+        "$liquid": {
+          "type": "integer",
+          "value": "10"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -5972,11 +7848,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%decrement port %} {%decrement port%}",
     "context": {},
     "templates": {},
@@ -5995,15 +7873,27 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%increment port %} {%increment starboard%} {%increment port %} {%decrement port%} {%decrement starboard %}",
     "context": {
-      "port": 1,
-      "starboard": 5
+      "port": {
+        "$liquid": {
+          "type": "integer",
+          "value": "1"
+        }
+      },
+      "starboard": {
+        "$liquid": {
+          "type": "integer",
+          "value": "5"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -6021,11 +7911,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%increment port %}",
     "context": {},
     "templates": {},
@@ -6044,11 +7936,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%increment port %} {%increment port%}",
     "context": {},
     "templates": {},
@@ -6067,11 +7961,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%increment port %} {%increment starboard%} {%increment port %} {%increment port%} {%increment starboard %}",
     "context": {},
     "templates": {},
@@ -6090,11 +7986,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% raw %}{{ test }}{% endraw %}",
     "context": {},
     "templates": {},
@@ -6113,11 +8011,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% raw %} Foobar {% invalid {% endraw %}",
     "context": {},
     "templates": {},
@@ -6136,11 +8036,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% raw %} Foobar invalid %} {% endraw %}",
     "context": {},
     "templates": {},
@@ -6159,11 +8061,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% raw %} Foobar {{ invalid {% endraw %}",
     "context": {},
     "templates": {},
@@ -6182,11 +8086,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% raw %} Foobar invalid }} {% endraw %}",
     "context": {},
     "templates": {},
@@ -6205,11 +8111,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% raw %} Foobar {% invalid {% {% endraw {% endraw %}",
     "context": {},
     "templates": {},
@@ -6228,11 +8136,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% raw %} Foobar {% {% {% {% endraw %}",
     "context": {},
     "templates": {},
@@ -6251,11 +8161,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% raw %} test {% raw %} {% {% endraw %}endraw %}",
     "context": {},
     "templates": {},
@@ -6274,11 +8186,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% raw %} Foobar {{ invalid {% endraw %}{{ 1 }}",
     "context": {},
     "templates": {},
@@ -6297,11 +8211,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% raw %}{% comment %} test {% endcomment %}{% endraw %}",
     "context": {},
     "templates": {},
@@ -6320,11 +8236,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "blah",
     "context": {},
     "templates": {},
@@ -6343,14 +8261,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 5 %} hit {% else %} else {% endcase %}",
     "context": {
-      "condition": 5
+      "condition": {
+        "$liquid": {
+          "type": "integer",
+          "value": "5"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -6368,11 +8293,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "<blah>",
     "context": {},
     "templates": {},
@@ -6391,14 +8318,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 5 %} hit {% else %} else {% endcase %}",
     "context": {
-      "condition": 6
+      "condition": {
+        "$liquid": {
+          "type": "integer",
+          "value": "6"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -6416,14 +8350,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %} {% when 5 %} hit {% else %} else {% endcase %}",
     "context": {
-      "condition": 6
+      "condition": {
+        "$liquid": {
+          "type": "integer",
+          "value": "6"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -6441,11 +8382,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "|,.:",
     "context": {},
     "templates": {},
@@ -6464,11 +8407,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case a.size %}{% when 1 %}1{% when 2 %}2{% endcase %}",
     "context": {
       "a": []
@@ -6489,15 +8434,22 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case a.size %}{% when 1 %}1{% when 2 %}2{% endcase %}",
     "context": {
       "a": [
-        1
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        }
       ]
     },
     "templates": {},
@@ -6516,16 +8468,28 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case a.size %}{% when 1 %}1{% when 2 %}2{% endcase %}",
     "context": {
       "a": [
-        1,
-        1
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        }
       ]
     },
     "templates": {},
@@ -6544,17 +8508,34 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case a.size %}{% when 1 %}1{% when 2 %}2{% endcase %}",
     "context": {
       "a": [
-        1,
-        1,
-        1
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        }
       ]
     },
     "templates": {},
@@ -6573,18 +8554,40 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case a.size %}{% when 1 %}1{% when 2 %}2{% endcase %}",
     "context": {
       "a": [
-        1,
-        1,
-        1,
-        1
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        }
       ]
     },
     "templates": {},
@@ -6603,19 +8606,46 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case a.size %}{% when 1 %}1{% when 2 %}2{% endcase %}",
     "context": {
       "a": [
-        1,
-        1,
-        1,
-        1,
-        1
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        }
       ]
     },
     "templates": {},
@@ -6634,11 +8664,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "",
     "context": {},
     "templates": {},
@@ -6657,11 +8689,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case a.size %}{% when 1 %}1{% when 2 %}2{% else %}else{% endcase %}",
     "context": {
       "a": []
@@ -6682,15 +8716,22 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case a.size %}{% when 1 %}1{% when 2 %}2{% else %}else{% endcase %}",
     "context": {
       "a": [
-        1
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        }
       ]
     },
     "templates": {},
@@ -6709,16 +8750,28 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case a.size %}{% when 1 %}1{% when 2 %}2{% else %}else{% endcase %}",
     "context": {
       "a": [
-        1,
-        1
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        }
       ]
     },
     "templates": {},
@@ -6737,17 +8790,34 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case a.size %}{% when 1 %}1{% when 2 %}2{% else %}else{% endcase %}",
     "context": {
       "a": [
-        1,
-        1,
-        1
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        }
       ]
     },
     "templates": {},
@@ -6766,18 +8836,40 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case a.size %}{% when 1 %}1{% when 2 %}2{% else %}else{% endcase %}",
     "context": {
       "a": [
-        1,
-        1,
-        1,
-        1
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        }
       ]
     },
     "templates": {},
@@ -6796,19 +8888,46 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case a.size %}{% when 1 %}1{% when 2 %}2{% else %}else{% endcase %}",
     "context": {
       "a": [
-        1,
-        1,
-        1,
-        1,
-        1
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        }
       ]
     },
     "templates": {},
@@ -6827,11 +8946,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case a.empty? %}{% when true %}true{% when false %}false{% else %}else{% endcase %}",
     "context": {},
     "templates": {},
@@ -6850,11 +8971,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case false %}{% when true %}true{% when false %}false{% else %}else{% endcase %}",
     "context": {},
     "templates": {},
@@ -6873,11 +8996,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case true %}{% when true %}true{% when false %}false{% else %}else{% endcase %}",
     "context": {},
     "templates": {},
@@ -6896,11 +9021,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case NULL %}{% when true %}true{% when false %}false{% else %}else{% endcase %}",
     "context": {},
     "templates": {},
@@ -6919,11 +9046,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "this shouldnt see any transformation either but has multiple lines\n              as you can clearly see here ...",
     "context": {},
     "templates": {},
@@ -6942,14 +9071,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1 or 2 or 3 %} its 1 or 2 or 3 {% when 4 %} its 4 {% endcase %}",
     "context": {
-      "condition": 1
+      "condition": {
+        "$liquid": {
+          "type": "integer",
+          "value": "1"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -6967,14 +9103,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1 or 2 or 3 %} its 1 or 2 or 3 {% when 4 %} its 4 {% endcase %}",
     "context": {
-      "condition": 2
+      "condition": {
+        "$liquid": {
+          "type": "integer",
+          "value": "2"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -6992,14 +9135,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1 or 2 or 3 %} its 1 or 2 or 3 {% when 4 %} its 4 {% endcase %}",
     "context": {
-      "condition": 3
+      "condition": {
+        "$liquid": {
+          "type": "integer",
+          "value": "3"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -7017,14 +9167,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1 or 2 or 3 %} its 1 or 2 or 3 {% when 4 %} its 4 {% endcase %}",
     "context": {
-      "condition": 4
+      "condition": {
+        "$liquid": {
+          "type": "integer",
+          "value": "4"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -7042,14 +9199,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1 or 2 or 3 %} its 1 or 2 or 3 {% when 4 %} its 4 {% endcase %}",
     "context": {
-      "condition": 5
+      "condition": {
+        "$liquid": {
+          "type": "integer",
+          "value": "5"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -7067,14 +9231,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1 or \"string\" or null %} its 1 or 2 or 3 {% when 4 %} its 4 {% endcase %}",
     "context": {
-      "condition": 1
+      "condition": {
+        "$liquid": {
+          "type": "integer",
+          "value": "1"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -7092,11 +9263,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1 or \"string\" or null %} its 1 or 2 or 3 {% when 4 %} its 4 {% endcase %}",
     "context": {
       "condition": "string"
@@ -7117,11 +9290,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1 or \"string\" or null %} its 1 or 2 or 3 {% when 4 %} its 4 {% endcase %}",
     "context": {
       "condition": null
@@ -7142,11 +9317,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1 or \"string\" or null %} its 1 or 2 or 3 {% when 4 %} its 4 {% endcase %}",
     "context": {
       "condition": "something else"
@@ -7167,14 +9344,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1, 2, 3 %} its 1 or 2 or 3 {% when 4 %} its 4 {% endcase %}",
     "context": {
-      "condition": 1
+      "condition": {
+        "$liquid": {
+          "type": "integer",
+          "value": "1"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -7192,14 +9376,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1, 2, 3 %} its 1 or 2 or 3 {% when 4 %} its 4 {% endcase %}",
     "context": {
-      "condition": 2
+      "condition": {
+        "$liquid": {
+          "type": "integer",
+          "value": "2"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -7217,14 +9408,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1, 2, 3 %} its 1 or 2 or 3 {% when 4 %} its 4 {% endcase %}",
     "context": {
-      "condition": 3
+      "condition": {
+        "$liquid": {
+          "type": "integer",
+          "value": "3"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -7242,14 +9440,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1, 2, 3 %} its 1 or 2 or 3 {% when 4 %} its 4 {% endcase %}",
     "context": {
-      "condition": 4
+      "condition": {
+        "$liquid": {
+          "type": "integer",
+          "value": "4"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -7267,14 +9472,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1, 2, 3 %} its 1 or 2 or 3 {% when 4 %} its 4 {% endcase %}",
     "context": {
-      "condition": 5
+      "condition": {
+        "$liquid": {
+          "type": "integer",
+          "value": "5"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -7292,14 +9504,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1, \"string\", null %} its 1 or 2 or 3 {% when 4 %} its 4 {% endcase %}",
     "context": {
-      "condition": 1
+      "condition": {
+        "$liquid": {
+          "type": "integer",
+          "value": "1"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -7317,11 +9536,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1, \"string\", null %} its 1 or 2 or 3 {% when 4 %} its 4 {% endcase %}",
     "context": {
       "condition": "string"
@@ -7342,11 +9563,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "the comment block should be removed {%comment%} be gone.. {%endcomment%} .. right?",
     "context": {},
     "templates": {},
@@ -7365,11 +9588,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1, \"string\", null %} its 1 or 2 or 3 {% when 4 %} its 4 {% endcase %}",
     "context": {
       "condition": null
@@ -7390,11 +9615,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1, \"string\", null %} its 1 or 2 or 3 {% when 4 %} its 4 {% endcase %}",
     "context": {
       "condition": "something else"
@@ -7415,11 +9642,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% assign a = \"variable\"%}{{a}}",
     "context": {},
     "templates": {},
@@ -7438,11 +9667,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "var2:{{var2}} {%assign var2 = var%} var2:{{var2}}",
     "context": {
       "var": "content"
@@ -7463,11 +9694,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% assign a = \"\"%}{{a}}",
     "context": {},
     "templates": {},
@@ -7486,11 +9719,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for i in (1..2) %}{% assign a = \"variable\"%}{% endfor %}{{a}}",
     "context": {},
     "templates": {},
@@ -7509,11 +9744,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%comment%}{%endcomment%}",
     "context": {},
     "templates": {},
@@ -7532,11 +9769,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%cycle \"one\", \"two\"%}",
     "context": {},
     "templates": {},
@@ -7555,11 +9794,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%cycle \"one\", \"two\"%} {%cycle \"one\", \"two\"%}",
     "context": {},
     "templates": {},
@@ -7578,11 +9819,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%cycle \"\", \"two\"%} {%cycle \"\", \"two\"%}",
     "context": {},
     "templates": {},
@@ -7601,11 +9844,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%cycle \"one\", \"two\"%} {%cycle \"one\", \"two\"%} {%cycle \"one\", \"two\"%}",
     "context": {},
     "templates": {},
@@ -7624,11 +9869,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%cycle \"text-align: left\", \"text-align: right\" %} {%cycle \"text-align: left\", \"text-align: right\"%}",
     "context": {},
     "templates": {},
@@ -7647,11 +9894,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%comment%}{% endcomment %}",
     "context": {},
     "templates": {},
@@ -7670,11 +9919,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%cycle 1,2%} {%cycle 1,2%} {%cycle 1,2%} {%cycle 1,2,3%} {%cycle 1,2,3%} {%cycle 1,2,3%} {%cycle 1,2,3%}",
     "context": {},
     "templates": {},
@@ -7693,11 +9944,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%cycle 1: \"one\", \"two\" %} {%cycle 2: \"one\", \"two\" %} {%cycle 1: \"one\", \"two\" %} {%cycle 2: \"one\", \"two\" %} {%cycle 1: \"one\", \"two\" %} {%cycle 2: \"one\", \"two\" %}",
     "context": {},
     "templates": {},
@@ -7716,11 +9969,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% comment %}{%endcomment%}",
     "context": {},
     "templates": {},
@@ -7739,15 +9994,27 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%cycle var1: \"one\", \"two\" %} {%cycle var2: \"one\", \"two\" %} {%cycle var1: \"one\", \"two\" %} {%cycle var2: \"one\", \"two\" %} {%cycle var1: \"one\", \"two\" %} {%cycle var2: \"one\", \"two\" %}",
     "context": {
-      "var1": 1,
-      "var2": 2
+      "var1": {
+        "$liquid": {
+          "type": "integer",
+          "value": "1"
+        }
+      },
+      "var2": {
+        "$liquid": {
+          "type": "integer",
+          "value": "2"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -7765,11 +10032,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% comment %}{% endcomment %}",
     "context": {},
     "templates": {},
@@ -7788,18 +10057,40 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "array has {{ array.size }} elements",
     "context": {
       "array": [
-        1,
-        2,
-        3,
-        4
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "4"
+          }
+        }
       ]
     },
     "templates": {},
@@ -7818,18 +10109,77 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "hash has {{ hash.size }} elements",
     "context": {
       "hash": {
-        "a": 1,
-        "b": 2,
-        "c": 3,
-        "d": 4
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "a"
+                }
+              },
+              {
+                "$liquid": {
+                  "type": "integer",
+                  "value": "1"
+                }
+              }
+            ],
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "b"
+                }
+              },
+              {
+                "$liquid": {
+                  "type": "integer",
+                  "value": "2"
+                }
+              }
+            ],
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "c"
+                }
+              },
+              {
+                "$liquid": {
+                  "type": "integer",
+                  "value": "3"
+                }
+              }
+            ],
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "d"
+                }
+              },
+              {
+                "$liquid": {
+                  "type": "integer",
+                  "value": "4"
+                }
+              }
+            ]
+          ]
+        }
       }
     },
     "templates": {},
@@ -7848,11 +10198,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if true == empty %}?{% endif %}",
     "context": {},
     "templates": {},
@@ -7871,11 +10223,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%comment%}comment{%endcomment%}",
     "context": {},
     "templates": {},
@@ -7894,11 +10248,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if true == null %}?{% endif %}",
     "context": {},
     "templates": {},
@@ -7917,11 +10273,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if empty == true %}?{% endif %}",
     "context": {},
     "templates": {},
@@ -7940,11 +10298,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% if null == true %}?{% endif %}",
     "context": {},
     "templates": {},
@@ -7963,20 +10323,52 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%}{%ifchanged%}{{item}}{% endifchanged %}{%endfor%}",
     "context": {
       "array": [
-        1,
-        1,
-        2,
-        2,
-        3,
-        3
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        }
       ]
     },
     "templates": {},
@@ -7995,11 +10387,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% comment %}comment{% endcomment %}",
     "context": {},
     "templates": {},
@@ -8018,18 +10412,40 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%for item in array%}{%ifchanged%}{{item}}{% endifchanged %}{%endfor%}",
     "context": {
       "array": [
-        1,
-        1,
-        1,
-        1
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        }
       ]
     },
     "templates": {},
@@ -8048,11 +10464,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "0{%\nfor i in (1..3)\n%} {{\ni\n}}{%\nendfor\n%}",
     "context": {},
     "templates": {},
@@ -8071,11 +10489,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% comment %} 1 {% comment %} 2 {% endcomment %} 3 {% endcomment %}",
     "context": {},
     "templates": {},
@@ -8094,11 +10514,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%comment%}{%blabla%}{%endcomment%}",
     "context": {},
     "templates": {},
@@ -8117,11 +10539,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% comment %}{% blabla %}{% endcomment %}",
     "context": {},
     "templates": {},
@@ -8140,11 +10564,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%comment%}{% endif %}{%endcomment%}",
     "context": {},
     "templates": {},
@@ -8163,11 +10589,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% comment %}{% endwhatever %}{% endcomment %}",
     "context": {},
     "templates": {},
@@ -8186,11 +10614,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% comment %}{% raw %} {{%%%%}}  }} { {% endcomment %} {% comment {% endraw %} {% endcomment %}",
     "context": {},
     "templates": {},
@@ -8209,11 +10639,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "foo{%comment%}comment{%endcomment%}bar",
     "context": {},
     "templates": {},
@@ -8232,11 +10664,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "foo{% comment %}comment{% endcomment %}bar",
     "context": {},
     "templates": {},
@@ -8255,11 +10689,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "foo{%comment%} comment {%endcomment%}bar",
     "context": {},
     "templates": {},
@@ -8278,11 +10714,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "foo{% comment %} comment {% endcomment %}bar",
     "context": {},
     "templates": {},
@@ -8301,11 +10739,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "foo {%comment%} {%endcomment%} bar",
     "context": {},
     "templates": {},
@@ -8324,11 +10764,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "foo {%comment%}comment{%endcomment%} bar",
     "context": {},
     "templates": {},
@@ -8347,11 +10789,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "foo {%comment%} comment {%endcomment%} bar",
     "context": {},
     "templates": {},
@@ -8370,11 +10814,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "foo{%comment%}\n                                     {%endcomment%}bar",
     "context": {},
     "templates": {},
@@ -8393,11 +10839,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "a-b:{{a-b}} {%assign a-b = 2 %}a-b:{{a-b}}",
     "context": {
       "a-b": "1"
@@ -8418,11 +10866,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{%assign var2 = var[\"a:b c\"].paged %}var2: {{var2}}",
     "context": {
       "var": {
@@ -8447,11 +10897,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ var2 }}{% capture var2 %}{{ var }} foo {% endcapture %}{{ var2 }}{{ var2 }}",
     "context": {
       "var": "content"
@@ -8472,11 +10924,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "this text should come out of the template without change...",
     "context": {},
     "templates": {},
@@ -8495,14 +10949,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1 %} its 1 {% when 2 %} its 2 {% endcase %}",
     "context": {
-      "condition": 2
+      "condition": {
+        "$liquid": {
+          "type": "integer",
+          "value": "2"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -8520,14 +10981,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1 %} its 1 {% when 2 %} its 2 {% endcase %}",
     "context": {
-      "condition": 1
+      "condition": {
+        "$liquid": {
+          "type": "integer",
+          "value": "1"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -8545,14 +11013,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when 1 %} its 1 {% when 2 %} its 2 {% endcase %}",
     "context": {
-      "condition": 3
+      "condition": {
+        "$liquid": {
+          "type": "integer",
+          "value": "3"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -8570,11 +11045,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when \"string here\" %} hit {% endcase %}",
     "context": {
       "condition": "string here"
@@ -8595,11 +11072,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% case condition %}{% when \"string here\" %} hit {% endcase %}",
     "context": {
       "condition": "bad string here"
@@ -8620,11 +11099,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if var == null %} true {% else %} false {% endif %} ",
     "context": {
       "var": null
@@ -8645,14 +11126,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if var != nil %} true {% else %} false {% endif %} ",
     "context": {
-      "var": 1
+      "var": {
+        "$liquid": {
+          "type": "integer",
+          "value": "1"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -8670,14 +11158,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if var != null %} true {% else %} false {% endif %} ",
     "context": {
-      "var": 1
+      "var": {
+        "$liquid": {
+          "type": "integer",
+          "value": "1"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -8695,11 +11190,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if true != true %} true {% else %} false {% endif %} ",
     "context": {},
     "templates": {},
@@ -8718,11 +11215,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if 0 > 0 %} true {% else %} false {% endif %} ",
     "context": {},
     "templates": {},
@@ -8741,11 +11240,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if 1 > 0 %} true {% else %} false {% endif %} ",
     "context": {},
     "templates": {},
@@ -8764,11 +11265,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if 0 < 1 %} true {% else %} false {% endif %} ",
     "context": {},
     "templates": {},
@@ -8787,11 +11290,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if 0 <= 0 %} true {% else %} false {% endif %} ",
     "context": {},
     "templates": {},
@@ -8810,11 +11315,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if null <= 0 %} true {% else %} false {% endif %} ",
     "context": {},
     "templates": {},
@@ -8833,11 +11340,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if 0 <= null %} true {% else %} false {% endif %} ",
     "context": {},
     "templates": {},
@@ -8856,11 +11365,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if 0 >= 0 %} true {% else %} false {% endif %} ",
     "context": {},
     "templates": {},
@@ -8879,11 +11390,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if 'test' == 'test' %} true {% else %} false {% endif %} ",
     "context": {},
     "templates": {},
@@ -8902,11 +11415,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if 'test' != 'test' %} true {% else %} false {% endif %} ",
     "context": {},
     "templates": {},
@@ -8925,11 +11440,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if var == \"hello there!\" %} true {% else %} false {% endif %} ",
     "context": {
       "var": "hello there!"
@@ -8950,11 +11467,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if \"hello there!\" == var %} true {% else %} false {% endif %} ",
     "context": {
       "var": "hello there!"
@@ -8975,11 +11494,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if var == 'hello there!' %} true {% else %} false {% endif %} ",
     "context": {
       "var": "hello there!"
@@ -9000,11 +11521,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if 'hello there!' == var %} true {% else %} false {% endif %} ",
     "context": {
       "var": "hello there!"
@@ -9025,11 +11548,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if true == true %} true {% else %} false {% endif %} ",
     "context": {},
     "templates": {},
@@ -9048,11 +11573,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if array == empty %} true {% else %} false {% endif %} ",
     "context": {
       "array": []
@@ -9073,17 +11600,34 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if array == empty %} true {% else %} false {% endif %} ",
     "context": {
       "array": [
-        1,
-        2,
-        3
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        }
       ]
     },
     "templates": {},
@@ -9102,11 +11646,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% if var == nil %} true {% else %} false {% endif %} ",
     "context": {
       "var": null
@@ -9127,20 +11673,52 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% tablerow n in numbers cols:3%} {{n}} {% endtablerow %}",
     "context": {
       "numbers": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "4"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "5"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "6"
+          }
+        }
       ]
     },
     "templates": {},
@@ -9159,11 +11737,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% tablerow n in numbers cols:3%} {{n}} {% endtablerow %}",
     "context": {
       "numbers": []
@@ -9184,20 +11764,52 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% tablerow n in numbers cols:5%} {{n}} {% endtablerow %}",
     "context": {
       "numbers": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "4"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "5"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "6"
+          }
+        }
       ]
     },
     "templates": {},
@@ -9216,20 +11828,52 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% tablerow n in numbers cols:2%}{{tablerowloop.col}}{% endtablerow %}",
     "context": {
       "numbers": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "4"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "5"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "6"
+          }
+        }
       ]
     },
     "templates": {},
@@ -9248,21 +11892,53 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% tablerow n in collections.frontpage cols:3%} {{n}} {% endtablerow %}",
     "context": {
       "collections": {
         "frontpage": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "2"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "3"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "4"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "5"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "6"
+            }
+          }
         ]
       }
     },
@@ -9282,21 +11958,53 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% tablerow n in collections['frontpage'] cols:3%} {{n}} {% endtablerow %}",
     "context": {
       "collections": {
         "frontpage": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "1"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "2"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "3"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "4"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "5"
+            }
+          },
+          {
+            "$liquid": {
+              "type": "integer",
+              "value": "6"
+            }
+          }
         ]
       }
     },
@@ -9316,22 +12024,64 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% tablerow n in numbers cols:3 offset:1 limit:6%} {{n}} {% endtablerow %}",
     "context": {
       "numbers": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "0"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "2"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "3"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "4"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "5"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "6"
+          }
+        },
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "7"
+          }
+        }
       ]
     },
     "templates": {},
@@ -9350,11 +12100,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% tablerow char in characters cols:3 %}I WILL NOT BE OUTPUT{% endtablerow %}",
     "context": {
       "characters": ""
@@ -9375,11 +12127,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% unless true %} you suck {% endunless %} {% unless false %} you rock {% endunless %}?",
     "context": {},
     "templates": {},
@@ -9398,11 +12152,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% unless true %} NO {% else %} YES {% endunless %}",
     "context": {},
     "templates": {},
@@ -9421,11 +12177,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% unless false %} YES {% else %} NO {% endunless %}",
     "context": {},
     "templates": {},
@@ -9444,11 +12202,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% unless \"foo\" %} NO {% else %} YES {% endunless %}",
     "context": {},
     "templates": {},
@@ -9467,15 +12227,22 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for i in choices %}{% unless i %}{{ forloop.index }}{% endunless %}{% endfor %}",
     "context": {
       "choices": [
-        1,
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
         null,
         false
       ]
@@ -9496,15 +12263,22 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{% for i in choices %}{% unless i %} {{ forloop.index }} {% else %} TRUE {% endunless %}{% endfor %}",
     "context": {
       "choices": [
-        1,
+        {
+          "$liquid": {
+            "type": "integer",
+            "value": "1"
+          }
+        },
         null,
         false
       ]
@@ -9525,11 +12299,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% unless true %} this text should not go into the output {% endunless %} ",
     "context": {},
     "templates": {},
@@ -9548,11 +12324,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": " {% unless false %} this text should go into the output {% endunless %} ",
     "context": {},
     "templates": {},
@@ -9571,11 +12349,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "<p>{{- 'John' -}}</p>",
     "context": {},
     "templates": {},
@@ -9594,11 +12374,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "<p>{%- if true -%}yes{%- endif -%}</p>",
     "context": {},
     "templates": {},
@@ -9617,11 +12399,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "<p>{%- if false -%}no{%- endif -%}</p>",
     "context": {},
     "templates": {},
@@ -9640,11 +12424,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "<p> {%- if true %} yes {% endif -%} </p>",
     "context": {},
     "templates": {},
@@ -9663,11 +12449,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "<p> {%- if false %} no {% endif -%} </p>",
     "context": {},
     "templates": {},
@@ -9686,11 +12474,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "<p> {% if true -%} yes {%- endif %} </p>",
     "context": {},
     "templates": {},
@@ -9709,11 +12499,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "<p> {% if false -%} no {%- endif %} </p>",
     "context": {},
     "templates": {},
@@ -9732,11 +12524,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "<p> {% if true -%} yes {% endif -%} </p>",
     "context": {},
     "templates": {},
@@ -9755,11 +12549,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "<p> {% if false -%} no {% endif -%} </p>",
     "context": {},
     "templates": {},
@@ -9778,11 +12574,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "<p> {%- if true %} yes {%- endif %} </p>",
     "context": {},
     "templates": {},
@@ -9801,11 +12599,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "<p> {%- if false %} no {%- endif %} </p>",
     "context": {},
     "templates": {},
@@ -9824,11 +12624,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      <div>\n        <p>\n          {{- 'John' }}\n        </p>\n      </div>\n",
     "context": {},
     "templates": {},
@@ -9847,11 +12649,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      <div>\n        <p>\n          {%- if true %}\n          yes\n          {%- endif %}\n        </p>\n      </div>\n",
     "context": {},
     "templates": {},
@@ -9870,11 +12674,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      <div>\n        <p>\n          {%- if false %}\n          no\n          {%- endif %}\n        </p>\n      </div>\n",
     "context": {},
     "templates": {},
@@ -9893,11 +12699,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      <div>\n        <p>\n          {{ 'John' }}\n        </p>\n      </div>\n",
     "context": {},
     "templates": {},
@@ -9916,11 +12724,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      <div>\n        <p>\n          {{ 'John' -}}\n        </p>\n      </div>\n",
     "context": {},
     "templates": {},
@@ -9939,11 +12749,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      <div>\n        <p>\n          {% if true -%}\n          yes\n          {% endif -%}\n        </p>\n      </div>\n",
     "context": {},
     "templates": {},
@@ -9962,11 +12774,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      <div>\n        <p>\n          {% if false -%}\n          no\n          {% endif -%}\n        </p>\n      </div>\n",
     "context": {},
     "templates": {},
@@ -9985,11 +12799,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      <div>\n        <p>\n          {%- if true %}\n          yes\n          {% endif -%}\n        </p>\n      </div>\n",
     "context": {},
     "templates": {},
@@ -10008,11 +12824,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      <div>\n        <p>\n          {%- if false %}\n          no\n          {% endif -%}\n        </p>\n      </div>\n",
     "context": {},
     "templates": {},
@@ -10031,11 +12849,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      <div>\n        <p>\n          {% if true -%}\n          yes\n          {%- endif %}\n        </p>\n      </div>\n",
     "context": {},
     "templates": {},
@@ -10054,11 +12874,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      <div>\n        <p>\n          {{- 'John' -}}\n        </p>\n      </div>\n",
     "context": {},
     "templates": {},
@@ -10077,11 +12899,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      <div>\n        <p>\n          {%- if true -%}\n          yes\n          {%- endif -%}\n        </p>\n      </div>\n",
     "context": {},
     "templates": {},
@@ -10100,11 +12924,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      <div>\n        <p>\n          {%- if false -%}\n          no\n          {%- endif -%}\n        </p>\n      </div>\n",
     "context": {},
     "templates": {},
@@ -10123,11 +12949,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      <div>\n        <p>\n          {{- 'John' -}},\n          {{- '30' -}}\n        </p>\n      </div>\n",
     "context": {},
     "templates": {},
@@ -10146,11 +12974,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      <div>\n        <p>\n\n\n          {{- 'John' -}}\n\n\n        </p>\n      </div>\n",
     "context": {},
     "templates": {},
@@ -10169,11 +12999,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      <div>\n        <p>\n          {%- if true -%}\n          yes\n          {%- endif -%}\n        </p>\n      </div>\n",
     "context": {},
     "templates": {},
@@ -10192,11 +13024,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      <div>\n        <p>\n          {%- if false -%}\n          no\n          {%- endif -%}\n        </p>\n      </div>\n",
     "context": {},
     "templates": {},
@@ -10215,11 +13049,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      <div>\n        <p>\n          {{- 'John' -}}\n          {{- '30' -}}\n        </p>\n        <b>\n          {{ 'John' -}}\n          {{- '30' }}\n        </b>\n        <i>\n          {{- 'John' }}\n          {{ '30' -}}\n        </i>\n      </div>\n",
     "context": {},
     "templates": {},
@@ -10238,11 +13074,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      <div>\n        {%- if true -%}\n          {%- if true -%}\n            <p>\n              {{- 'John' -}}\n            </p>\n          {%- endif -%}\n        {%- endif -%}\n      </div>\n",
     "context": {},
     "templates": {},
@@ -10261,11 +13099,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ \"a\" -}}{{ \"b\" }} c",
     "context": {},
     "templates": {},
@@ -10284,11 +13124,13 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "      <div>\n        <p>\n\n\n          {%- if true -%}\n          yes\n          {%- endif -%}\n\n\n        </p>\n      </div>\n",
     "context": {},
     "templates": {},
@@ -10307,14 +13149,21 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }
   },
   {
+    "upstreamOptions": {},
     "source": "{{ foo }}",
     "context": {
-      "foo": "bar"
+      "foo": {
+        "$liquid": {
+          "type": "symbol",
+          "value": "bar"
+        }
+      }
     },
     "templates": {},
     "expected": {
@@ -10332,6 +13181,7 @@
       "license": "MIT"
     },
     "suite": "upstream-test",
+    "authority": "ruby",
     "options": {
       "strictFilters": false
     }

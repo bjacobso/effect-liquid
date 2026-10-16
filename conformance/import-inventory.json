@@ -2681,8 +2681,8 @@
     "ruby-liquid:imported": 404,
     "ruby-liquid:excluded": 79,
     "ruby-liquid:catalogued": 5,
-    "shopify-liquid:imported": 561,
-    "shopify-liquid:excluded": 315,
+    "shopify-liquid:imported": 563,
+    "shopify-liquid:excluded": 313,
     "shopify-liquid:catalogued": 43,
     "liquid-spec:imported": 4475,
     "liquid-spec:excluded": 3404
@@ -124247,7 +124247,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/blank_test.rb:102:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -124263,7 +124263,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/blank_test.rb:103:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -124311,7 +124311,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/blank_test.rb:38:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -124342,7 +124342,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/blank_test.rb:46:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -124374,7 +124374,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/blank_test.rb:54:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -124390,7 +124390,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/blank_test.rb:58:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -124406,7 +124406,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/blank_test.rb:62:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -124438,7 +124438,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/blank_test.rb:69:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -124454,7 +124454,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/blank_test.rb:73:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -124470,7 +124470,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/blank_test.rb:74:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -125201,7 +125201,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/standard_filter_test.rb:544:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -125247,7 +125247,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/standard_filter_test.rb:551:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -125503,7 +125503,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/standard_filter_test.rb:574:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -125595,7 +125595,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/standard_filter_test.rb:589:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -125642,7 +125642,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/standard_filter_test.rb:598:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -125719,7 +125719,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/standard_filter_test.rb:609:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -125735,7 +125735,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/standard_filter_test.rb:610:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -125797,7 +125797,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/standard_filter_test.rb:620:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -125859,7 +125859,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/standard_filter_test.rb:630:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -125935,7 +125935,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/standard_filter_test.rb:639:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -125951,7 +125951,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/standard_filter_test.rb:640:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -125967,7 +125967,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/standard_filter_test.rb:641:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -126043,7 +126043,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/standard_filter_test.rb:650:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -126059,7 +126059,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/standard_filter_test.rb:651:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -126075,7 +126075,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/standard_filter_test.rb:652:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -126796,7 +126796,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/tags/for_tag_test.rb:366:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -126812,7 +126812,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/tags/for_tag_test.rb:376:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -126828,7 +126828,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/tags/for_tag_test.rb:386:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -126844,7 +126844,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/tags/for_tag_test.rb:397:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -130769,7 +130769,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "ruby-liquid:test/integration/tags/table_row_test.rb:50:4",
       "origin": {
         "repository": "ruby-liquid",
@@ -132297,7 +132297,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/blank_test.rb:112:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -132313,7 +132313,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/blank_test.rb:113:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -132345,7 +132345,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/blank_test.rb:35:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -132376,7 +132376,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/blank_test.rb:43:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -132408,7 +132408,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/blank_test.rb:51:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -132424,7 +132424,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/blank_test.rb:55:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -132440,7 +132440,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/blank_test.rb:59:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -132472,7 +132472,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/blank_test.rb:68:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -132488,7 +132488,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/blank_test.rb:72:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -132504,7 +132504,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/blank_test.rb:73:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -132615,8 +132615,7 @@
       "line": 13,
       "column": 4,
       "call": "assert_template_result",
-      "status": "excluded",
-      "reason": "Unsupported assertion setup/options",
+      "status": "imported",
       "id": "shopify-liquid:test/integration/capture_test.rb:13:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -133399,8 +133398,7 @@
       "line": 371,
       "column": 4,
       "call": "assert_template_result",
-      "status": "excluded",
-      "reason": "Unsupported value: dot2",
+      "status": "imported",
       "id": "shopify-liquid:test/integration/context_test.rb:371:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -133920,7 +133918,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "nesting of 100 is too deep",
+      "reason": "Cyclic or deeply nested host value",
       "id": "shopify-liquid:test/integration/hash_rendering_test.rb:29:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -135137,7 +135135,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/standard_filter_test.rb:504:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -135608,7 +135606,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/standard_filter_test.rb:732:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -135654,7 +135652,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/standard_filter_test.rb:739:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -135910,7 +135908,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/standard_filter_test.rb:762:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -136002,7 +136000,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/standard_filter_test.rb:777:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -136049,7 +136047,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/standard_filter_test.rb:786:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -136126,7 +136124,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/standard_filter_test.rb:797:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -136142,7 +136140,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/standard_filter_test.rb:798:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -136204,7 +136202,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/standard_filter_test.rb:808:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -136266,7 +136264,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/standard_filter_test.rb:818:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -136342,7 +136340,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/standard_filter_test.rb:827:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -136358,7 +136356,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/standard_filter_test.rb:828:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -136374,7 +136372,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/standard_filter_test.rb:829:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -136450,7 +136448,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/standard_filter_test.rb:838:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -136466,7 +136464,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/standard_filter_test.rb:839:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -136482,7 +136480,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/standard_filter_test.rb:840:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -136573,7 +136571,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/standard_filter_test.rb:873:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -136589,7 +136587,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/standard_filter_test.rb:874:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -136620,7 +136618,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/standard_filter_test.rb:885:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -136636,7 +136634,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/standard_filter_test.rb:886:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -137745,7 +137743,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/tags/for_tag_test.rb:424:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -137761,7 +137759,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/tags/for_tag_test.rb:434:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -137777,7 +137775,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/tags/for_tag_test.rb:444:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -137793,7 +137791,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/tags/for_tag_test.rb:455:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -139370,7 +139368,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/tags/include_tag_test.rb:146:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -144203,7 +144201,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/variable_test.rb:19:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -144219,7 +144217,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/variable_test.rb:20:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -144251,7 +144249,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/variable_test.rb:21:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -144267,7 +144265,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/variable_test.rb:22:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -144299,7 +144297,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/variable_test.rb:23:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -144363,7 +144361,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/variable_test.rb:27:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -144395,7 +144393,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/variable_test.rb:28:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -144411,7 +144409,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/variable_test.rb:29:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -144427,7 +144425,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/variable_test.rb:30:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -144443,7 +144441,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/variable_test.rb:31:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -144459,7 +144457,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/variable_test.rb:32:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -144475,7 +144473,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/variable_test.rb:33:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -144491,7 +144489,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/variable_test.rb:35:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -144507,7 +144505,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/variable_test.rb:36:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -144523,7 +144521,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/variable_test.rb:37:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -144539,7 +144537,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/variable_test.rb:39:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -144555,7 +144553,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/variable_test.rb:43:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -144571,7 +144569,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/variable_test.rb:44:4",
       "origin": {
         "repository": "shopify-liquid",
@@ -144587,7 +144585,7 @@
       "column": 4,
       "call": "assert_template_result",
       "status": "excluded",
-      "reason": "Unsupported value: method_add_arg",
+      "reason": "Unsupported constructor",
       "id": "shopify-liquid:test/integration/variable_test.rb:48:4",
       "origin": {
         "repository": "shopify-liquid",

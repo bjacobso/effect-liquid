@@ -3694,5 +3694,26 @@
       "test/robustness.test.ts"
     ],
     "remaining": "Shared include/project cycles, counter seeds, table-row control quirks, and unknown transformation provenance."
+  },
+  "measurement": {
+    "schemaVersion": 2,
+    "authority": {
+      "liquidjs": "Live LiquidJS 10.29.0",
+      "ruby": "Recorded upstream Ruby expectation"
+    },
+    "crossEngine": "informational",
+    "phase": 1,
+    "engineBehaviorChanged": false,
+    "counts": {
+      "ruby": {
+        "pass": 4801,
+        "total": 5444
+      },
+      "liquidjs": {
+        "pass": 848,
+        "total": 854
+      }
+    },
+    "fixtureEncoding": "$liquid tagged integer/float/decimal/symbol/range/hash; separate globals and templates"
   }
 }

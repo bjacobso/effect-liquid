@@ -1,3 +1,4 @@
+import { jsonProjection } from "./encoding.mjs";
 import { createHash } from "node:crypto";
 
 const engineName = process.argv[2];
@@ -39,6 +40,7 @@ if (engineName === "liquidjs") {
     try {
       engine = new Liquid({
         ...fixture.options,
+        globals: jsonProjection(fixture.globals ?? fixture.options?.globals ?? {}),
         templates: { ...fixture.options?.templates, ...fixture.templates },
         cache: false,
       });
@@ -48,7 +50,7 @@ if (engineName === "liquidjs") {
     }
     if (fixture.operation === "parse") return { kind: "parsed" };
     try {
-      return output(await engine.render(document, structuredClone(fixture.context ?? {})));
+      return output(await engine.render(document, jsonProjection(fixture.context ?? {})));
     } catch (e) {
       return failure(e, "render");
     }
@@ -149,13 +151,13 @@ if (engineName === "liquidjs") {
             .filter((key) => options[key] !== undefined)
             .map((key) => [key, options[key]]),
         ),
-        globals: options.globals ?? {},
+        globals: jsonProjection(fixture.globals ?? options.globals ?? {}),
         maxOutputBytes: maxBytes,
       }),
       Loader.memory({ ...options.templates, ...fixture.templates }),
     );
     const result = await Effect.runPromise(
-      Effect.either(Liquid.render(parsed.right, structuredClone(fixture.context ?? {}))).pipe(
+      Effect.either(Liquid.render(parsed.right, jsonProjection(fixture.context ?? {}))).pipe(
         Effect.provide(services),
       ),
     );
