@@ -2,6 +2,7 @@ import { Effect } from "effect";
 import { path } from "./Analyze.js";
 import type { Document, Expression, Node } from "./Ast.js";
 import * as Binding from "./Binding.js";
+import { forDialect } from "./RubyBuiltins.js";
 import { registry as builtins } from "./Builtins.js";
 import type { BuiltinFilterError, Diagnostic } from "./Diagnostic.js";
 import { ParseError } from "./Diagnostic.js";
@@ -26,6 +27,7 @@ export const check = <E = never, R = never>(
   registry: Registry<E | BuiltinFilterError, R> = builtins,
 ): Effect.Effect<CheckResult> =>
   Effect.sync((): CheckResult => {
+    registry = forDialect(registry, document.dialect);
     const expressionTypes: Record<string, T.Type> = Object.create(null);
     const diagnostics: Diagnostic[] = [];
     const reasons = new Set<string>();
@@ -76,6 +78,7 @@ export const check = <E = never, R = never>(
           }
           if (
             t._tag === "Array" ||
+            t._tag === "Range" ||
             t._tag === "Tuple" ||
             t._tag === "String" ||
             (t._tag === "Literal" && typeof t.value === "string")
@@ -83,7 +86,7 @@ export const check = <E = never, R = never>(
             if (key._tag === "Literal" && (key.value === "size" || key.value === "length"))
               return T.number;
             if (key._tag === "Literal" && (key.value === "first" || key.value === "last"))
-              return t._tag === "Array"
+              return t._tag === "Array" || t._tag === "Range"
                 ? T.optional(t.item)
                 : t._tag === "Tuple"
                   ? T.optional(T.union(...t.items))
@@ -97,7 +100,7 @@ export const check = <E = never, R = never>(
               report("InvalidIndex", "Expected numeric index", at);
               return T.unknown;
             }
-            return t._tag === "Array"
+            return t._tag === "Array" || t._tag === "Range"
               ? T.optional(t.item)
               : t._tag === "Tuple"
                 ? T.optional(
@@ -124,7 +127,13 @@ export const check = <E = never, R = never>(
           return type;
         }
         case "Literal":
-          return e.value === null ? T.nil : T.literal(e.value);
+          return e.value === null
+            ? T.nil
+            : document.dialect === "ruby" && typeof e.value === "number"
+              ? e.numericKind === "float"
+                ? T.float
+                : T.integer
+              : T.literal(e.value);
         case "Special":
           return T.unknown;
         case "SelfLookup": {
@@ -166,7 +175,7 @@ export const check = <E = never, R = never>(
         case "Range":
           infer(e.from, env);
           infer(e.to, env);
-          return T.array(T.number);
+          return document.dialect === "ruby" ? T.range() : T.array(T.number);
         case "Not":
           infer(e.value, env, true);
           return T.boolean;
@@ -224,7 +233,7 @@ export const check = <E = never, R = never>(
           if (filter && "expression" in filter) {
             const item = T.union(
               ...T.members(input).map((t) => {
-                if (t._tag === "Array") return t.item;
+                if (t._tag === "Array" || t._tag === "Range") return t.item;
                 if (t._tag === "Tuple") return T.union(...t.items);
                 if (t._tag === "Nil" || t._tag === "Missing") return T.never;
                 if (filter.expression === "group_by") {
@@ -291,7 +300,7 @@ export const check = <E = never, R = never>(
                   ? t.items.length === 1
                     ? t.items[0]!
                     : T.string
-                  : t._tag === "Array"
+                  : t._tag === "Array" || t._tag === "Range"
                     ? T.union(T.string, t.item)
                     : T.unknown,
               ),
@@ -307,7 +316,11 @@ export const check = <E = never, R = never>(
               T.union(
                 ...T.members(input).map((t) => {
                   const item =
-                    t._tag === "Array" ? t.item : t._tag === "Tuple" ? T.union(...t.items) : t;
+                    t._tag === "Array" || t._tag === "Range"
+                      ? t.item
+                      : t._tag === "Tuple"
+                        ? T.union(...t.items)
+                        : t;
                   return keys.reduce((value, key) => property(value, T.literal(key), e.span), item);
                 }),
               ),
@@ -317,7 +330,7 @@ export const check = <E = never, R = never>(
             return T.optional(
               T.union(
                 ...T.members(input).map((t) =>
-                  t._tag === "Array"
+                  t._tag === "Array" || t._tag === "Range"
                     ? t.item
                     : t._tag === "Tuple"
                       ? T.union(...t.items)
@@ -329,6 +342,19 @@ export const check = <E = never, R = never>(
             case "string":
               return T.string;
             case "number":
+              if (document.dialect === "ruby") {
+                if (
+                  ["size", "ceil", "floor"].includes(e.name) ||
+                  (e.name === "round" && !args.length)
+                )
+                  return T.integer;
+                if (
+                  T.members(input).every((t) => t._tag === "Integer") &&
+                  args.every((a) => T.members(a).every((t) => t._tag === "Integer"))
+                )
+                  return T.integer;
+                return T.union(T.integer, T.float);
+              }
               return T.number;
             case "array":
               if (e.name === "split") return T.array(T.string);
@@ -511,7 +537,7 @@ export const check = <E = never, R = never>(
             const initial = Binding.fork(env);
             const item = T.union(
               ...T.members(type).map((t) =>
-                t._tag === "Array"
+                t._tag === "Array" || t._tag === "Range"
                   ? t.item
                   : t._tag === "Tuple"
                     ? T.union(...t.items)

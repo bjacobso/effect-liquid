@@ -3,7 +3,12 @@ import type { Source, Span } from "./Source.js";
 export type Dialect = "liquidjs" | "ruby";
 export type LiteralValue = null | boolean | number | string;
 export type Expression =
-  | { readonly _tag: "Literal"; readonly value: LiteralValue; readonly span: Span }
+  | {
+      readonly _tag: "Literal";
+      readonly numericKind?: "integer" | "float";
+      readonly value: LiteralValue;
+      readonly span: Span;
+    }
   | { readonly _tag: "Special"; readonly value: "empty" | "blank"; readonly span: Span }
   | {
       readonly _tag: "Access";

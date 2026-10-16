@@ -92,6 +92,14 @@ export function yamlCases(text, path, root, inventory = []) {
         // Map keys stay typed until validation; numeric/Ruby keys are never silently stringified.
         const raw = jsonValue(node.toJS(doc, { mapAsMap: true, maxAliasCount: 1000 }));
         const s = { ...defaults, ...raw };
+        const host = (v) =>
+          v &&
+          typeof v === "object" &&
+          Object.entries(v).some(([k, x]) => k.startsWith("instantiate:") || host(x));
+        if (host(s.environment))
+          throw new Error(
+            "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)",
+          );
         const reason = unsupportedOptions(s);
         if (reason) throw new Error(reason);
         if (typeof s.template !== "string") throw new Error("Missing literal template");

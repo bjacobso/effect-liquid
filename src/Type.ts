@@ -1,7 +1,20 @@
 export type Type =
-  | { readonly _tag: "Unknown" | "Never" | "Nil" | "Missing" | "String" | "Number" | "Boolean" }
+  | {
+      readonly _tag:
+        | "Unknown"
+        | "Never"
+        | "Nil"
+        | "Missing"
+        | "String"
+        | "Number"
+        | "Integer"
+        | "Float"
+        | "Decimal"
+        | "Symbol"
+        | "Boolean";
+    }
   | { readonly _tag: "Literal"; readonly value: string | number | boolean }
-  | { readonly _tag: "Array"; readonly item: Type }
+  | { readonly _tag: "Array" | "Range"; readonly item: Type }
   | { readonly _tag: "Tuple"; readonly items: readonly Type[] }
   | {
       readonly _tag: "Record";
@@ -15,6 +28,11 @@ export const nil: Type = { _tag: "Nil" };
 export const missing: Type = { _tag: "Missing" };
 export const string: Type = { _tag: "String" };
 export const number: Type = { _tag: "Number" };
+export const integer: Type = { _tag: "Integer" };
+export const float: Type = { _tag: "Float" };
+export const decimal: Type = { _tag: "Decimal" };
+export const symbol: Type = { _tag: "Symbol" };
+export const range = (item: Type = integer): Type => ({ _tag: "Range", item });
 export const boolean: Type = { _tag: "Boolean" };
 export const literal = (value: string | number | boolean): Type => ({ _tag: "Literal", value });
 export const array = (item: Type): Type => ({ _tag: "Array", item });
@@ -52,7 +70,11 @@ export const present = (type: Type): Type =>
     ),
   );
 export const kind = (type: Type): string =>
-  type._tag === "Literal" ? typeof type.value : type._tag.toLowerCase();
+  type._tag === "Literal"
+    ? typeof type.value
+    : ["Integer", "Float", "Decimal"].includes(type._tag)
+      ? "number"
+      : type._tag.toLowerCase();
 /** Conservative structural assignment: Unknown never proves compatibility. */
 export function assignable(actual: Type, expected: Type, depth = 0): boolean {
   if (depth > 64 || actual._tag === "Unknown" || expected._tag === "Unknown") return false;
@@ -65,6 +87,8 @@ export function assignable(actual: Type, expected: Type, depth = 0): boolean {
     return Object.entries(expected.fields).every(([key, value]) =>
       assignable(actual.fields[key] ?? missing, value, depth + 1),
     );
+  if (expected._tag === "Range" && actual._tag === "Range")
+    return assignable(actual.item, expected.item, depth + 1);
   if (expected._tag === "Array" && actual._tag === "Array")
     return assignable(actual.item, expected.item, depth + 1);
   if (expected._tag === "Array" && actual._tag === "Tuple")
@@ -76,6 +100,15 @@ export function assignable(actual: Type, expected: Type, depth = 0): boolean {
     );
   if (expected._tag === "Literal")
     return actual._tag === "Literal" && actual.value === expected.value;
+  if (["Integer", "Float", "Decimal"].includes(expected._tag))
+    return (
+      actual._tag === expected._tag ||
+      (actual._tag === "Literal" &&
+        typeof actual.value === "number" &&
+        (expected._tag === "Integer"
+          ? Number.isInteger(actual.value)
+          : !Number.isInteger(actual.value)))
+    );
   return kind(actual) === kind(expected);
 }
 export function isType(value: unknown, depth = 0): value is Type {
@@ -87,6 +120,10 @@ export function isType(value: unknown, depth = 0): value is Type {
     case "Nil":
     case "Missing":
     case "String":
+    case "Integer":
+    case "Float":
+    case "Decimal":
+    case "Symbol":
     case "Number":
     case "Boolean":
       return true;
@@ -96,6 +133,7 @@ export function isType(value: unknown, depth = 0): value is Type {
         typeof v.value === "boolean" ||
         (typeof v.value === "number" && Number.isFinite(v.value))
       );
+    case "Range":
     case "Array":
       return isType(v.item, depth + 1);
     case "Tuple":

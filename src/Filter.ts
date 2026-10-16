@@ -15,6 +15,7 @@ export interface DateOptions {
   readonly dateFormat?: string;
 }
 export interface FilterCallContext {
+  readonly dialect?: "liquidjs" | "ruby";
   readonly date?: DateOptions;
   readonly allocationLimit?: number;
   readonly missingArguments: readonly boolean[];
