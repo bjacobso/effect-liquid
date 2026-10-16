@@ -1,5 +1,7 @@
 import { Chunk, Context, Effect, Layer, Option, Stream } from "effect";
 import type { Dialect, Document, Expression, Node } from "./Ast.js";
+import * as Ruby from "./RubyValue.js";
+import { forDialect, sequence as rubySequence } from "./RubyBuiltins.js";
 import { registry as builtins } from "./Builtins.js";
 import {
   BuiltinFilterError,
@@ -129,6 +131,10 @@ function* allocate(state: State, units: number, at: Span): Evaluation<void, neve
 }
 function get(state: State, name: string): Value | undefined {
   for (let i = state.scopes.length - 1; i >= 0; i--) {
+    if (state.dialect === "ruby" && Ruby.tag(state.scopes[i]! as Record<string, Value>)) {
+      const value = Ruby.lookup(state.scopes[i]! as Record<string, Value>, name).value;
+      if (value !== undefined) return value;
+    }
     const property = Object.getOwnPropertyDescriptor(state.scopes[i]!, name);
     if (property) return property.value as Value | undefined;
   }
@@ -152,6 +158,17 @@ function loopInfo(index: number, length: number, name?: string): Record<string, 
     last: index === length - 1,
     length,
   };
+}
+function lookupValue(
+  value: Value | undefined,
+  key: Value | undefined,
+  state: State,
+): Value | undefined {
+  if (state.dialect === "ruby") {
+    const found = Ruby.lookup(value, key);
+    if (found.found) return found.value;
+  }
+  return lookup(value, key);
 }
 function equal(a: Value | undefined, b: Value | undefined): boolean {
   if (a == null && b == null) return true;
@@ -178,19 +195,21 @@ function* evaluate<E, R>(
   yield* tick(state, expression.span);
   switch (expression._tag) {
     case "Literal":
-      return expression.value;
+      return state.dialect === "ruby" && expression.numericKind === "float"
+        ? Ruby.float(expression.value as number)
+        : expression.value;
     case "Special":
       return null;
     case "Access": {
       let value = yield* evaluate(expression.receiver, state, registry);
       for (const segment of expression.segments)
-        value = lookup(value, yield* evaluate(segment, state, registry));
+        value = lookupValue(value, yield* evaluate(segment, state, registry), state);
       return value;
     }
     case "Lookup": {
       let value = get(state, expression.root);
       for (const segment of expression.segments)
-        value = lookup(value, yield* evaluate(segment, state, registry));
+        value = lookupValue(value, yield* evaluate(segment, state, registry), state);
       if (value === undefined && state.config.strictVariables && state.lenientDepth === 0)
         return yield* perform(
           Effect.fail(
@@ -206,7 +225,8 @@ function* evaluate<E, R>(
     case "SelfLookup": {
       const [first, ...rest] = expression.segments;
       let value = get(state, stringify(yield* evaluate(first!, state, registry)));
-      for (const segment of rest) value = lookup(value, yield* evaluate(segment, state, registry));
+      for (const segment of rest)
+        value = lookupValue(value, yield* evaluate(segment, state, registry), state);
       if (value === undefined && state.config.strictVariables && state.lenientDepth === 0)
         return yield* perform(
           Effect.fail(
@@ -222,8 +242,10 @@ function* evaluate<E, R>(
     case "Not":
       return !truthy(yield* evaluate(expression.value, state, registry));
     case "Range": {
-      const from = Number(yield* evaluate(expression.from, state, registry));
-      const to = Number(yield* evaluate(expression.to, state, registry));
+      const start = yield* evaluate(expression.from, state, registry);
+      const finish = yield* evaluate(expression.to, state, registry);
+      const from = state.dialect === "ruby" ? Math.trunc(Ruby.numeric(start)) : Number(start);
+      const to = state.dialect === "ruby" ? Math.trunc(Ruby.numeric(finish)) : Number(finish);
       if (Number.isNaN(from) || Number.isNaN(to)) return [];
       const length = Math.max(0, Math.ceil(to + 1 - from));
       if (!Number.isFinite(length) || length > state.config.maxIterations)
@@ -237,7 +259,9 @@ function* evaluate<E, R>(
           ),
         );
       yield* allocate(state, length, expression.span);
-      return Array.from({ length }, (_, i) => from + i);
+      return state.dialect === "ruby"
+        ? Ruby.range(from, to)
+        : Array.from({ length }, (_, i) => from + i);
     }
     case "Binary": {
       const left = yield* evaluate(expression.left, state, registry);
@@ -257,7 +281,22 @@ function* evaluate<E, R>(
               ? expression.left.value === "empty"
                 ? empty(right)
                 : blank(right)
-              : equal(left, right);
+              : state.dialect === "ruby"
+                ? Ruby.equal(left, right)
+                : equal(left, right);
+      if (state.dialect === "ruby" && [">", "<", ">=", "<="].includes(expression.operator)) {
+        const numeric = Ruby.isNumeric(left) && Ruby.isNumeric(right);
+        if (!numeric && !(typeof left === "string" && typeof right === "string")) return false;
+        const a = numeric ? Ruby.numeric(left) : (left as string),
+          b = numeric ? Ruby.numeric(right) : (right as string);
+        return expression.operator === ">"
+          ? a > b
+          : expression.operator === "<"
+            ? a < b
+            : expression.operator === ">="
+              ? a >= b
+              : a <= b;
+      }
       switch (expression.operator) {
         case "==":
           return eq;
@@ -408,6 +447,7 @@ function* evaluate<E, R>(
         missingArguments,
         nilArguments: expression.args.map((arg) => arg._tag === "Literal" && arg.value === null),
         specialArguments,
+        dialect: state.dialect,
         jekyllWhere: state.config.jekyllWhere,
         date: state.config,
         allocationLimit:
@@ -432,7 +472,9 @@ function* evaluate<E, R>(
             ),
         ),
       );
-      return result === undefined ? undefined : yield* perform(normalize(result, expression.span));
+      return result === undefined
+        ? undefined
+        : yield* perform(normalize(result, expression.span, 100_000, state.dialect));
     }
   }
 }
@@ -509,7 +551,7 @@ function* nodes<E, R>(
           !state.config.outputEscape ||
           (node.expression._tag === "Filter" && node.expression.name === "raw")
         ) {
-          yield* emit(stringify(value));
+          yield* emit(state.dialect === "ruby" ? Ruby.output(value) : stringify(value));
           break;
         }
         const escaped =
@@ -581,7 +623,9 @@ function* nodes<E, R>(
                 ? test.value === "blank"
                   ? blank(value)
                   : empty(value)
-                : equal(value, yield* ev(test));
+                : state.dialect === "ruby"
+                  ? Ruby.equal(value, yield* ev(test))
+                  : equal(value, yield* ev(test));
             if (matched) {
               branchHit = true;
               yield* nodes(branch.body, state, registry);
@@ -594,7 +638,11 @@ function* nodes<E, R>(
       }
       case "For":
       case "TableRow": {
-        let values = enumerable(yield* ev(node.collection));
+        const collection = yield* ev(node.collection);
+        let values =
+          state.dialect === "ruby" && Ruby.tag(collection)?.type === "range"
+            ? rubySequence(collection)
+            : enumerable(collection);
         if (node._tag === "For" && !values.length) {
           yield* nodes(node.otherwise, state, registry);
           break;
@@ -788,7 +836,9 @@ function* nodes<E, R>(
         const items = node.for
           ? node.mode === "include" && collection != null && !isArray(collection)
             ? [collection]
-            : enumerable(collection)
+            : state.dialect === "ruby"
+              ? rubySequence(collection)
+              : enumerable(collection)
           : [null];
         if (!items.length) break;
         const loader = yield* perform(TemplateLoader);
@@ -897,8 +947,8 @@ function initialize(document: Document, context: unknown) {
       return yield* Effect.fail(
         new RenderError({ code: "InvalidOperation", message: "Invalid date options", span: at }),
       );
-    const value = yield* normalize(context, at);
-    const globals = yield* normalize(config.globals, at);
+    const value = yield* normalize(context, at, 100_000, document.dialect);
+    const globals = yield* normalize(config.globals, at, 100_000, document.dialect);
     if (
       !value ||
       typeof value !== "object" ||
@@ -962,7 +1012,7 @@ export function renderStream<E = never, R = never>(
   return Stream.unwrapScoped(
     Effect.gen(function* () {
       const state = yield* initialize(document, context);
-      const iterator = nodes(document.body, state, registry);
+      const iterator = nodes(document.body, state, forDialect(registry, document.dialect));
       yield* Effect.addFinalizer(() =>
         Effect.sync(() => {
           iterator.return();
@@ -1019,7 +1069,7 @@ export function render<E = never, R = never>(
 ) {
   return Effect.gen(function* () {
     const state = yield* initialize(document, context);
-    const iterator = buffer(nodes(document.body, state, registry));
+    const iterator = buffer(nodes(document.body, state, forDialect(registry, document.dialect)));
     return yield* Effect.gen(function* () {
       let input: unknown;
       while (true) {

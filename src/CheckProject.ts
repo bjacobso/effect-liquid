@@ -95,7 +95,7 @@ export const checkProject = <E = never, R = never>(
               dep.iteration?.name === name
                 ? T.union(
                     ...T.members(type).map((member) =>
-                      member._tag === "Array"
+                      member._tag === "Array" || member._tag === "Range"
                         ? member.item
                         : member._tag === "Tuple"
                           ? T.union(...member.items)

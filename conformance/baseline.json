@@ -199,42 +199,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/basics/expressions.yml:180:0": {
-      "fixtureHash": "50753c0686f9a0f41a1e2656c8d55f438723793c415deccbba85532f1f403ec6",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "1445217533e7d4d0cffd9109c4edb60d62a02c0f0de9537be44f5e00d348eb4f"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/expressions.yml:189:0": {
-      "fixtureHash": "fb62251f1aec5590d2638c4cbfc0d3a7c76463c4e08006d62ec20ec39891056a",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "2f69c6cb336df3a6a427476004f7c31418a7e33a5a70aaca582d2271d22bc541"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/expressions.yml:198:0": {
-      "fixtureHash": "7022b2ebbae29fbbf95eb9a69ea78b58ba5233cf68561895cf53933ed09cd5b8",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "96a51f429437063407f5f68f860641e0a20e9467a93bddc414ba4d8feadd8a46"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/expressions.yml:317:0": {
-      "fixtureHash": "ee906d6ad7bb9d55bb91ab4036573f2b0d64aa18ac2910e2502691961ebcb41f",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "f006beeac0403b272ebe28db0f8208bdfb5420a784ef9cadc532c80fbb5213d3"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/basics/expressions.yml:337:0": {
       "fixtureHash": "d8b9308bdf70f8cd3c400a2b178cfd6c0f5eb735aaa9ef0c104cb280b3d04e78",
       "authority": "ruby",
@@ -334,15 +298,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/basics/nested-parameters.yml:296:0": {
-      "fixtureHash": "da1917a7822fe3c927e0d89a7badaede0d6db534f7f6038ff2b20c342800d9d7",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "986d6ccf8083c7f8936815673e4e7810dc522afa3833681e52c9d8d7ca0bfa7a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/basics/nil-handling.yml:240:0": {
       "fixtureHash": "a3e567663ace048183868b52aac2be5fecc0ccf43b3a412e55e4230c06502dc5",
       "authority": "ruby",
@@ -432,15 +387,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/basics/specs.yml:1518:0": {
-      "fixtureHash": "9a553222377efec7e1aec1f29b282dc4a99dde466e10487e1054e1a34d953d42",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "2c7d19bd7992db3638d8ec462014fd3da9121527f6f5cf0df4be33849ffbd477"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/basics/specs.yml:1912:0": {
       "fixtureHash": "2e8f3454ea4e598f4d9753333c330f60bafbacbb39377603ec988e6e84b999eb",
       "authority": "ruby",
@@ -456,15 +402,6 @@
       "effectLiquid": {
         "kind": "output",
         "sha256": "2954e5ad1d771028b4d054d802b5d5c5a8eb0868f3b4dde24477bf1e6b818829"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/specs.yml:716:0": {
-      "fixtureHash": "1a36804da31a89f5ca5e10cca16648ff039e02d7bc4c75c7b88fd5fdf82ca131",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "2b999d97b380fb976224b1263e8f0db2ab58665e392a04c8afb0859cf5b25972"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -699,42 +636,6 @@
       "effectLiquid": {
         "kind": "output",
         "sha256": "f34b1ec79ef5953af642cd68d89b901aea2c792879ce234da4a119a59d7a7f20"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/type-coercion.yml:183:0": {
-      "fixtureHash": "69f5b0c7bf33e0ae7335c900001aefa5766e4e3456488319a7236cbeeeddb162",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "942ca2c26ac3daca02c20446c7a3d01761b94879772c4e15bddb4b1da1602db1"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/basics/type-coercion.yml:20:0": {
-      "fixtureHash": "480744c785c9cb4a79f031b2d357bb1a0664c8de9c15b682c58fe4ca0177dcaf",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "166f829e016f2315a8099e3a8d2dbec6d91572379ff02c760ba4e0335789d47f"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/benchmarks/liquid_tag_programs.yml:87:0": {
-      "fixtureHash": "d5976f8f82d80b486db85a9562dc81ed69793b506d3d670388f7bd487c66446c",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e820edd4e656538195e5bb3c14aa12bd024172060bc3922940d52868ed3aba20"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/array_to_s.yml:1:0": {
-      "fixtureHash": "93e7c766cdf26db3ae762e36cfbb0598f1ca39bbcec2fbb6da153c188a6a0d97",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "5d5e7d0e5f3009db15f493f909c94bc42fc4c0f72ba3f5308f06f67ec4761c9a"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -1060,16 +961,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/comparison_semantics.yml:23:0": {
-      "fixtureHash": "8429be0f4a30b68db26f56cc4afc658c6e6e48b339057740e56c1bd6a35f4786",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "fb5642a8912a446bd56e6be6fcf18913a24b8b681959a9c7b9e00546f181c386"
+        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -1382,15 +1274,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/manual.yml:2:0": {
-      "fixtureHash": "ba93dc823579a0d60f3f902ea95642b0867201d649f336fd9cd77180ebce4df0",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "913da1f8df6f8fd47593840d533ba0458cc9873996bf310460abb495b34c232a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/manual.yml:201:0": {
       "fixtureHash": "16248593d906d780f3dcfae451af748662a7f61c00f852e7eb32494b6d130940",
       "authority": "ruby",
@@ -1472,132 +1355,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/security_drops.yml:1114:0": {
-      "fixtureHash": "2816687ac841d17cf3484cf46ecdc41476fb867ba7510f840d27e7cea1bce9bd",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/security_drops.yml:1124:0": {
-      "fixtureHash": "e9e6b1459585263c1f07bcb41106ee6555c678d161e4be142cda145431db2689",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/security_drops.yml:1161:0": {
-      "fixtureHash": "2413bcdd69c8b2c9c34c7f8f04a2af598bf26b0df606798a42ec88542ae31d03",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e79e418e48623569d75e2a7b09ae88ed9b77b126a445b9ff9dc6989a08efa079"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/security_drops.yml:1171:0": {
-      "fixtureHash": "4ef6b8f956a9752203a18293f1a07d2cc8195f0a23e5b5a1f9c723a8a7147d15",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e79e418e48623569d75e2a7b09ae88ed9b77b126a445b9ff9dc6989a08efa079"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/security_drops.yml:1180:0": {
-      "fixtureHash": "d09299c79f9e066caad213971eebaa289e6ac95603a189c5b9c77d8b9a8981b2",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/security_drops.yml:1246:0": {
-      "fixtureHash": "ad557148324ad187dbed0c46cdc7913c8530610cfeaf51a30836f650ee3c7c71",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/security_drops.yml:406:0": {
-      "fixtureHash": "d58fc4904ccf54249f3cf84588ce9ab4cc18bf0bbb5dbf02e23fca3782c5e5bb",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/security_drops.yml:416:0": {
-      "fixtureHash": "132bcc4451daa26f7bd3be2c0aa2c01dcfb7bdf151bc37da62c9d8bc623172ca",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/security_drops.yml:552:0": {
-      "fixtureHash": "dafa1521d27989d123b5dbd7cb4b4e2e7879bc27d8fb6030f80be291ae5c1c4c",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/security_drops.yml:566:0": {
-      "fixtureHash": "dc52a5d9829dfa82ac3757b418912c60c0adfaf14ee3da382f448aea99aeb375",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/security_drops.yml:622:0": {
-      "fixtureHash": "acd5c093368781cd68162c2713b55b02e7b86aed5aa387930d26781afa72f700",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/security_drops.yml:816:0": {
-      "fixtureHash": "74f6d0ca95db8151be14cadc15dc84cb9d499912a2c856ed665228a68e1dc60e",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/security_drops.yml:840:0": {
-      "fixtureHash": "85a67e5f5acb42d21c59baab629d6daac5c6b4519bbaa79d478a97caf5bf2e61",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "301954937ab400500394f907379f106da1592d4f1e673bced06466635d84c2c9"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/security_drops.yml:849:0": {
-      "fixtureHash": "cc4cf6c1a624a1cd428e8fd8f5bf270be191d75847faaaa3f540d67a9ddae992",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/security_drops.yml:963:0": {
       "fixtureHash": "08832f496e0a51800f1cc02752b497e989748866e640cb91bb39739071098a7a",
       "authority": "ruby",
@@ -1640,33 +1397,6 @@
       "effectLiquid": {
         "kind": "output",
         "sha256": "869f1dfb999a452f497a4cf7f44db2d6ee661f74a9e7e05251bc1420e50672d4"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:1315:0": {
-      "fixtureHash": "df27c5f39889bd1ab57c8716eb89e41ef4311ae1c808c2c0a35a09199adb34cd",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "1445217533e7d4d0cffd9109c4edb60d62a02c0f0de9537be44f5e00d348eb4f"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:1334:0": {
-      "fixtureHash": "9c1974f14aa6774f4070fe4b328eb9364463c86d1e2cd8a0eebae3cde88ce3f1",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "1445217533e7d4d0cffd9109c4edb60d62a02c0f0de9537be44f5e00d348eb4f"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:1342:0": {
-      "fixtureHash": "2e9c0f54f179f6763bc0276a3eaaddbc67923eefb0954eb67244990f7a81aef8",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "166f829e016f2315a8099e3a8d2dbec6d91572379ff02c760ba4e0335789d47f"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -1871,15 +1601,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/specs.yml:1884:0": {
-      "fixtureHash": "97ab304db9cc8a7aabc232185ef63baa1673d858c30cc42d6c7c85cec527b99a",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "55eab4eafa5890579caef1e005f5a43e68bb6d24b838f3bac92ea7639889dc95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/specs.yml:1928:0": {
       "fixtureHash": "0c625f487930b9bf024d6eaa37f05a30403ba6e9b3563995613fc4fd10176e5a",
       "authority": "ruby",
@@ -1916,138 +1637,12 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/specs.yml:2582:0": {
-      "fixtureHash": "e859a27c6c22fe9c608fa211cc51c4bb9a4ae258e08c176f59221e40adb9cd12",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:3010:0": {
-      "fixtureHash": "9e642b3eeed1370e05332f1bc48f7bab3241b8dc6a9f8a071f0464ea1abbed1a",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "a02d840335480809acc67fe4171d749dfab7ff5591bc136a02556611e63640ea"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:3022:0": {
-      "fixtureHash": "76079767fe8f6da135fe1fa74d4b53af1be471a50d5f708ad910ac18384cf1c6",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "41f507d03c69594b57e4a97bf6e81d5792efe47c554cf8a6dd55e475797c6217"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/specs.yml:3034:0": {
       "fixtureHash": "b2ac08dd4778ce5131c996250aa169aab1b165d930ea36eba1fee612c44542a3",
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:3044:0": {
-      "fixtureHash": "b8a61ab999cb8f1ca79043ff192cbede57855042cabd74c3dca55ce0ab387289",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "171e2503a094d2a1a72637826beb279db770f137a9fd1726b3bbc192e099e37d"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:3056:0": {
-      "fixtureHash": "5cbe39f911ef7f14e6f706eb8b19fe1150dfbab49ffa7f4a0876f538c55625f0",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:3068:0": {
-      "fixtureHash": "e283561e51e8f148eba2e1ced9bd015da2e67dedac475d4fe99c4bfcf2263041",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:3080:0": {
-      "fixtureHash": "d2d54d48fa5b205d19140ef5c070a867b42f36a581c0cdd9faae5e889b63d88b",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:3092:0": {
-      "fixtureHash": "ff87d06b1e3f49e53bba27d01a3fc547754d1e91b25e36c1fd7f948b7d021a88",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:3104:0": {
-      "fixtureHash": "fa9902152ea038ac507c115dff83939e9bc2f58d8d5d11e9a7b1e553e690d872",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "bafd4b4711c8d1e14b828788ff3060b402fd7fe780ad9fd75e388fe0582fb5f4"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:3116:0": {
-      "fixtureHash": "e8f052e16f38ef980a0a86c0c5240af0432d9bd6ca5080356f30db417696e1a5",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "1f7bf568ba6d39d66b33f44efc3d4255ebb6e78b71c9d849255f0216558e1bf9"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:3126:0": {
-      "fixtureHash": "384b626ed4be7a59ece5dd07237000c340264af235e7873e56eac7fa77edbdb9",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "5f9f82c6d12a60a75857044bff4ab65266cf163abaec06b6fe8e6aa573edaccc"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:3140:0": {
-      "fixtureHash": "d2e543e5f817c5ef789d79e30e38311dab5e2b10327624ec80b7cea882b21d04",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:3148:0": {
-      "fixtureHash": "2437a1c3e3e6f073c9df36c8030c31fe7e0fe47b54377ed84e9135d94b23b5e1",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:3162:0": {
-      "fixtureHash": "1ba553ec7623f74f4bffec26f1cd038a765a2eba18a24f99649961ddf91530ac",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
+        "sha256": "da4fe281c5b717d13a66f1a769ed9164b1bc4a108f575f70033cd462fb1e5ef7"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2056,16 +1651,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:3197:0": {
-      "fixtureHash": "8eaf5d815034379e0c73b77f05f513c35e553654b798717160ad2fdc2cd24fb8",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
+        "sha256": "eda29102530ba74d5f84ceffc1493333ca6773a365c6141788ae4e6c00d9dd39"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2074,16 +1660,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:3221:0": {
-      "fixtureHash": "665015c0fcadc6fff61a207963af34cb01bd911e833fb22b7055d59265b14142",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
+        "sha256": "5e390d3735f6ba0931706e2972fbd249891309e4cf7fc3f42f1b1043365e110f"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2134,102 +1711,12 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/specs.yml:5418:0": {
-      "fixtureHash": "0da15e876b3321c9dd2b33a31ba8064a3ab7599e214cb014031c45ec2a6e18eb",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "d3e2fe381794f48f52cb35808195d070671f4d1a9c6cc155028e29d94576665b"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/specs.yml:5772:0": {
       "fixtureHash": "994dc213afe2e601b88b8ad8241099c8c80aaf73c63d46e740e8f977383dc718",
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:5879:0": {
-      "fixtureHash": "0cb759b19e01d0188fa9aad7511155286f7d70bea7f3855c605d6bdcfe074c40",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "913da1f8df6f8fd47593840d533ba0458cc9873996bf310460abb495b34c232a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:6107:0": {
-      "fixtureHash": "b78dca53e92c5d113e7ff6e1171afc5519b6542e1af27455f8d4c2a66b68b1e4",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "834f4f0e4b4f4ab6cc4292300d51d3bfd962437c4a7b64216b0f9224f1f7c961"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:6118:0": {
-      "fixtureHash": "c7b177240e55d3f4f0f629283581380c873208d15842abad30f21d9df928d8af",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "9a83ca64ac7d66302488bf7fcbd7af21a277a8068db0d690c61cab34f06af318"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:6140:0": {
-      "fixtureHash": "6bac18ae89dd829914f2ca1cb8ecdfe676c6951b9f5a78d3ed5a70d7a1556c40",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "834f4f0e4b4f4ab6cc4292300d51d3bfd962437c4a7b64216b0f9224f1f7c961"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:6187:0": {
-      "fixtureHash": "7ca2bb82f42d35d550f69f3b4c17741acba862040ac3b3280f0889c01cd3d99a",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "f114838bb37ed92208b5f53550803fff1d3d6071ef118711e812d80268e75d6e"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:6217:0": {
-      "fixtureHash": "aa6b57365fe1f28137412e49391e564a8230c11c561964afcdf2b99053dfc1b3",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:6229:0": {
-      "fixtureHash": "ecbb0d463e148de709f7b61bb43e0c834a0a5471f43a2916125430f83afe8b60",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "f78dc4ba97f1fa3438da74187a48185cb24a0064d419350d68f1230c36b444cf"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:6235:0": {
-      "fixtureHash": "57062f6665e29dc0951d1de8066ac1ad7fdab931988f426aa8f2dee576f5e085",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "1fe11c7ff6d2591de6cda9e769cc48b5bf7f627ad88b83fedd4aa03d1253f555"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/specs.yml:6241:0": {
-      "fixtureHash": "9075d7f6a585384a0ed1a7b931219e12992ada7a2a42b81412b4d7c6a7ce6143",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "1fe11c7ff6d2591de6cda9e769cc48b5bf7f627ad88b83fedd4aa03d1253f555"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2497,15 +1984,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/specs.yml:7780:0": {
-      "fixtureHash": "bc63e21fecd0173717b046859fd4ef9ca8d930b71dd94889fc9e329d993c67ca",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "1445217533e7d4d0cffd9109c4edb60d62a02c0f0de9537be44f5e00d348eb4f"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/specs.yml:789:0": {
       "fixtureHash": "d552300cb37841835362fd139cf3fd73f726cf26419aac4be408526abc8fd369",
       "authority": "ruby",
@@ -2542,7 +2020,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
+        "sha256": "c3ee4eeab17fbc0f577d9d1b8a698c93fe5d3d7b26532d18ad5b46acc0b835aa"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2634,7 +2112,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
+        "sha256": "bbaa971bc41901db6f76aea6ec5f59b97567aa1fcae8b7abc2533f1375bc61be"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2643,7 +2121,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2652,70 +2130,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:1192:0": {
-      "fixtureHash": "7e52a53738018a1c28bedf06862ea911efa869e5861dff1a429a43c7e41af56a",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:1214:0": {
-      "fixtureHash": "0d3e475f9cf329e35271c7e4822f73a05d02f604044eba47641ff1b3eb838b23",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:1361:0": {
-      "fixtureHash": "58fadbcd967b4de1a16b8830d6b692408fc624117e60016caf8d7da327a336bb",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:1427:0": {
-      "fixtureHash": "567b3785eab92bcfd78cd47956799fa36b83c9f15f2d85c157ecd9b0eb6d52e9",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:1466:0": {
-      "fixtureHash": "3ed63e744875e69934a7603a90019143fc5d4eb9ae87dbaec4aaa6b4be7981a5",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "fbef34c612eadb8ad6650f603ee46c4f850147560374bc002d0566c3e7e33dd5"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:1494:0": {
-      "fixtureHash": "c41b84c0d8aaec0b59f47fe7256edc0d9f7addcfdb56503875379f7fb6377f48",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "41f507d03c69594b57e4a97bf6e81d5792efe47c554cf8a6dd55e475797c6217"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:1503:0": {
-      "fixtureHash": "b8efa4da595059782f20edeeaf7b529dfeec7533a4dec2bebc45fed824016ec0",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "8813429be722133a4567893848e0db1d0e4c6ffeb5e129dff6978bb7bf187a76"
+        "sha256": "bbaa971bc41901db6f76aea6ec5f59b97567aa1fcae8b7abc2533f1375bc61be"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2724,7 +2139,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "41f507d03c69594b57e4a97bf6e81d5792efe47c554cf8a6dd55e475797c6217"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2733,7 +2148,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
+        "sha256": "a3729f157813e8272f1f764efb63dbc05e14d6534096126dd54e276e1c513f7d"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2742,16 +2157,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:1581:0": {
-      "fixtureHash": "7e835b0b9201a7b60a9f4ad298d536c1374c3371796573f6cf66054d38e8f3f4",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
+        "sha256": "553e6e7fe641a7c56ae8a70ef83a602933be5ae0c3ff71a03b539bab692e4d69"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2760,7 +2166,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "8813429be722133a4567893848e0db1d0e4c6ffeb5e129dff6978bb7bf187a76"
+        "sha256": "6008bf2388c5714cd54b8edf2617e908d79a4a3d93cc842f2f6d86077a36b393"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2769,7 +2175,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
+        "sha256": "25fb8d90bf7ef57824371971e50739dd0471d1f041a4c20e765c59ecbb82c439"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2778,7 +2184,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
+        "sha256": "553e6e7fe641a7c56ae8a70ef83a602933be5ae0c3ff71a03b539bab692e4d69"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2787,7 +2193,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
+        "sha256": "25fb8d90bf7ef57824371971e50739dd0471d1f041a4c20e765c59ecbb82c439"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2796,7 +2202,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
+        "sha256": "a3729f157813e8272f1f764efb63dbc05e14d6534096126dd54e276e1c513f7d"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2805,43 +2211,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "8813429be722133a4567893848e0db1d0e4c6ffeb5e129dff6978bb7bf187a76"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:18:0": {
-      "fixtureHash": "6ecf8f441060debfe92d6868461dcfaba44e601b0042a9ae404503c29773493b",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e79e418e48623569d75e2a7b09ae88ed9b77b126a445b9ff9dc6989a08efa079"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:1836:0": {
-      "fixtureHash": "d40b4a17eeb371af2aa7061ad5b9a99a26a3cbddf7d0ced0e3d0c0a8aec6c244",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:1895:0": {
-      "fixtureHash": "b6c346404b2e9959ce05395f4e7f6a08758ba232cae28e271f94ec5a742c846e",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:1916:0": {
-      "fixtureHash": "e42648305129df14f7298eb9b9c5158c6e7c3fd5b496eca4cd9a4578972312fa",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "sha256": "6008bf2388c5714cd54b8edf2617e908d79a4a3d93cc842f2f6d86077a36b393"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2850,16 +2220,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:2140:0": {
-      "fixtureHash": "5da13b2a51f478ad9936a9154cc7e601945c32385a9bfbb11cfe493523e5fa6a",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e79e418e48623569d75e2a7b09ae88ed9b77b126a445b9ff9dc6989a08efa079"
+        "sha256": "e291d353199295d297d6e27707efa8cf6739be89184fc81e0780c2dd7a00b739"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2872,21 +2233,12 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:2229:0": {
-      "fixtureHash": "ca567d903e5606bd529587142437c40a263333fb22064c48585f1ef38b506b20",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/standard_filters.yml:2235:0": {
       "fixtureHash": "1a27d08233e8790d11342ece02ef80ae48f0fe4f016b9a93e44b3c16c8e992d6",
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2895,7 +2247,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
+        "sha256": "bd2247c2bd749efc3c6dc4633e21ebf8f12d1102c79282e92d2b6dac0e202c43"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2913,43 +2265,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:2327:0": {
-      "fixtureHash": "7abf7ce4c94137c094750d1fbb80741d992ecb10b6180314095ec25305f78c1f",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:2396:0": {
-      "fixtureHash": "0c2a8f876fa4ce779f567fd59f76320590fb3f8317e23607c832b0b2ab8a2590",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e2a9b257a43b57a61c0a530d54722ee787d662b47c2ad122727b03de4fd61905"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:24:0": {
-      "fixtureHash": "02bc21fcac9408f4209a4cc76614c9264b7c813c98b4a40ee19c2b16391ce9bb",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:244:0": {
-      "fixtureHash": "90a295a30cde3602777622fdd5e7182bcbbd7a7a3de26ff623e3618fa449e24c",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "69dce8eabbede5807d5e1a08843cd2afb74531d92fed29d56dd4fe8d2947172e"
+        "sha256": "320a745c16ed623065124543fb8a0ea4f9d8302d723f41d7034188d5e8c08e0d"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -2958,43 +2274,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:2475:0": {
-      "fixtureHash": "b8a34d8e894080c25e4679f7495328cfbf28c61d0ccee29bb10928a26705f33c",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:2534:0": {
-      "fixtureHash": "420f004aff9e287c9de8d8736939d9461f1e14889912a304119e7a33ea2155d3",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:263:0": {
-      "fixtureHash": "1aa4e71914816f67e7744bd891046fbf5d5f248d3f4e27f9989f8e18090851f0",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "bd28939e5d7bd01f9e501427d36b36922d17c1c96c65a772884cc6ff5d36de2f"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:2720:0": {
-      "fixtureHash": "f3b474feb5917b5c11419ec06573c1ce52fd144b1131f8a0898f79207173a43c",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3003,43 +2283,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:2756:0": {
-      "fixtureHash": "05a733a4ac5095f7a2cfdded829c07419e78ef861b5ae1590888e2d8f4b820df",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "8813429be722133a4567893848e0db1d0e4c6ffeb5e129dff6978bb7bf187a76"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:2782:0": {
-      "fixtureHash": "73a46a0bba736ef2a91b7268152e485f8ca287d9934f865d43a8b7654b4fcf9f",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:2819:0": {
-      "fixtureHash": "6194a3fd244eb21645f8970608b1a96d4f5eedd05df0edb60b8286fd8426f2dc",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:2846:0": {
-      "fixtureHash": "105851cc90d650fc625379447300a3d139fb6bb4f36bff7cb8597b86f5177636",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3048,61 +2292,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:2897:0": {
-      "fixtureHash": "d65e029f74a68f655f9177b9a259c798fa0c1fc8ae594eb4fdbec4b7c9b04756",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "8813429be722133a4567893848e0db1d0e4c6ffeb5e129dff6978bb7bf187a76"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:2920:0": {
-      "fixtureHash": "1e2d42e6eb7a3d47b2a9ce6c50845220fffe51fd85e9f326cfb698dea5e796e5",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:2971:0": {
-      "fixtureHash": "ad5a27cb1e96413bf62ac01206eaf787b02ba6ec01158b78374541a7ff636d07",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:304:0": {
-      "fixtureHash": "64188bfc0107749b3dcc8007aca79e80b5f92eebea62dc13477f55a39f686bfd",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4667a8ef1789cdd0396984de936692ab276c5296070cb3ce3cb22e98efd5eab"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:3125:0": {
-      "fixtureHash": "132b3300b86f8926a7e76451030aba2fc763ca841ea64e9f6ca156466da5479d",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:3134:0": {
-      "fixtureHash": "a0dbb86940f89ee1c47790a446ac112e643095f3ed482a082b767c52c807e663",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3111,16 +2301,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:3235:0": {
-      "fixtureHash": "7b80ba3b46c3cdeb572d6c6022a2f3b4f70274979fc2dbb9fb9b6d7c77149eb3",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3129,7 +2310,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "bd28939e5d7bd01f9e501427d36b36922d17c1c96c65a772884cc6ff5d36de2f"
+        "sha256": "fef0c58558ab377ab2ad8bcaa55ed63e10280a64ae6f02d2b4fd4a1a58299fd2"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3138,16 +2319,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:333:0": {
-      "fixtureHash": "8b23d497e67c5f0b27f373fee9fac9d582acd10e1a8f13f4776e62923cbc0173",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "f8348410b2d8528945f73c2133a048a0eea67009d6f6ea4442bec3ea7f761a82"
+        "sha256": "71f163b5a51f57ea5e852ff3d07c22ab7dedb07c3ee02457c76438e4a0c3d5de"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3160,30 +2332,12 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:3404:0": {
-      "fixtureHash": "8adae5f6046f8ff779f79ad8e80042a628ab051af85be4ab110b9cd79cbd44e9",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e79e418e48623569d75e2a7b09ae88ed9b77b126a445b9ff9dc6989a08efa079"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/standard_filters.yml:3426:0": {
       "fixtureHash": "72cee33d158ee7169cc160805e2e639607a2a77277c8d16e0b07f4cc862348fb",
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:3435:0": {
-      "fixtureHash": "3ab56e25b9fda434e8e35d45a5018d7e76cfa40854ba95249f88453b77794081",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3196,44 +2350,8 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:3510:0": {
-      "fixtureHash": "59f9b487a3aaf2b4945bf8337c6eff5d3015e17938bed75647993ef1f59851de",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:3522:0": {
-      "fixtureHash": "37943afe2f9280af94c51a6f199bf6cae8ba57b39860cca28c90def9f2007ce3",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:3537:0": {
-      "fixtureHash": "d277929e601a759b7aed6bde26a52f68748145a1803ff0c1e1b2d33424033a03",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "8813429be722133a4567893848e0db1d0e4c6ffeb5e129dff6978bb7bf187a76"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/standard_filters.yml:3566:0": {
       "fixtureHash": "50fd10935f4c2160546ac93947d8e0a57557b244249c43883e03f4d2e4df9e14",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:3637:0": {
-      "fixtureHash": "c0ad7861d0d176ee4fd65556a947953550af392e3efa70510b3c9794faa5423b",
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
@@ -3250,15 +2368,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:3667:0": {
-      "fixtureHash": "9f5442434bd918da5e216dea3b754b84871cf808513ba6c190d321ce9c4fb84d",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/standard_filters.yml:3684:0": {
       "fixtureHash": "2c5d9d172c1e09973bd95152cc78947a91deb5c0b77bc3e9e928351a5c39c97e",
       "authority": "ruby",
@@ -3268,48 +2377,12 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:3787:0": {
-      "fixtureHash": "6eed89ea03726c2547f12e36c8105ac0414111f7cb74edf803b09ac421c09c3a",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "c86a548457d309efdd871123e1dbc9a2110e4ad6a6de17703c11f0b2044516bb"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/standard_filters.yml:384:0": {
       "fixtureHash": "6766d027d48a7d79b8df6bda3206cfeba738bad2ae2d98ca13d0ce6df6796343",
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4045:0": {
-      "fixtureHash": "e530a963d667f307ed99455527cdee541319ca2f75e31402acff6636cf64b556",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4061:0": {
-      "fixtureHash": "d5ca2b577a0560325e9bddaa26eeae9e9a102fb956fd42d762436a2d460dde84",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4073:0": {
-      "fixtureHash": "3a83ba04195c5e81e275ad7114918d52122b4c518bbdb592483a50e506b7a4ce",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
+        "sha256": "513d98bf555e7dc08e0c39221754d9ff043fff6771effa279ff09ca20c426ed3"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3318,16 +2391,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4168:0": {
-      "fixtureHash": "7df68d638fd3696d3ff3de75c05e848ece961abe58c810d8a760f22ac3475f9e",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
+        "sha256": "71f163b5a51f57ea5e852ff3d07c22ab7dedb07c3ee02457c76438e4a0c3d5de"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3337,33 +2401,6 @@
       "effectLiquid": {
         "kind": "output",
         "sha256": "9c105a750cd76609b4b27cbdc530b49603f7253a176f15289119178390af0542"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4196:0": {
-      "fixtureHash": "5c044972c43e0c93b68543524db864953b1eca2fc72e6273431dbc1e67be24a8",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "986d6ccf8083c7f8936815673e4e7810dc522afa3833681e52c9d8d7ca0bfa7a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4207:0": {
-      "fixtureHash": "65cc304cb114fdea14c34931e4418a9f085f546e8e068adf0b78d85abdc6cfcb",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "986d6ccf8083c7f8936815673e4e7810dc522afa3833681e52c9d8d7ca0bfa7a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4218:0": {
-      "fixtureHash": "9a690749cd4193a2f0623fbdc3ef6dbc6a0d1a7e17ee1f0cc9b2c479766f5a45",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "67e36534b2af023268d52ba2a6ed63c519e306b1a80fab0e7ec72b5e9951a206"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3381,16 +2418,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4283:0": {
-      "fixtureHash": "dd2e1199cc80057c5e46b47f0c6aa4f8d0c0b8ff943a656b74b0c9c8a9a77598",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "25516454fdee88e0af2fb3e04548d8fe0fc926fb16d9171247df5b5dc570f2ec"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3408,25 +2436,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4342:0": {
-      "fixtureHash": "7e42e71d5b6ae217eeca773df4f785bc5ba89f673b65b400ae22911268ea8e4b",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4348:0": {
-      "fixtureHash": "a0fea97b95d27362bfa9375c356940b02ff6d4608b077e8c77b23afe9dd3e877",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "67e36534b2af023268d52ba2a6ed63c519e306b1a80fab0e7ec72b5e9951a206"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3435,34 +2445,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4411:0": {
-      "fixtureHash": "d560cdf22b3392a6522543b9eb6bd74c074c81155bf6a9605a8ec145be1e4347",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4429:0": {
-      "fixtureHash": "fdbd8077225ad7d6049e7c6af3ad4a0f6816e06a04075c2bf8623e3e761c6667",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4455:0": {
-      "fixtureHash": "04184b46c3045475acb7b781625886516104ba022a5132d4c68785cb7d227736",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
+        "sha256": "bd2247c2bd749efc3c6dc4633e21ebf8f12d1102c79282e92d2b6dac0e202c43"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3471,7 +2454,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
+        "sha256": "bd2247c2bd749efc3c6dc4633e21ebf8f12d1102c79282e92d2b6dac0e202c43"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3484,30 +2467,12 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4609:0": {
-      "fixtureHash": "057d0f7de839af19c56daa1634a4846bae190106425cf277d19a4bf7531c083f",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4634:0": {
-      "fixtureHash": "1b067e3c61f6fbf4514dfcf55a7fac20d710ac9972e7e444f5c356362e7f2e88",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "8813429be722133a4567893848e0db1d0e4c6ffeb5e129dff6978bb7bf187a76"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/standard_filters.yml:4642:0": {
       "fixtureHash": "8a261e9197a9bb001cfcb12c07103ab6887443007de98726aa0f3691338b7dcd",
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3520,39 +2485,12 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4663:0": {
-      "fixtureHash": "41169b5de6062a46c78311a6b654b9ab171630cf9feac0d2109b5aa3fe48af07",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4675:0": {
-      "fixtureHash": "9d9abda203ec7c5d02b3890d20ca8d221733f1523d0ace8d742fc0e2f92b6048",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/standard_filters.yml:4697:0": {
       "fixtureHash": "d4195e256414385e25b169be9be99c0d734dac1eca5d2de486079095aacb5300",
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4706:0": {
-      "fixtureHash": "89cf243da0ad54392ce51a786c72aaf788512ff1ecdd7276b10367e9c305d992",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "8813429be722133a4567893848e0db1d0e4c6ffeb5e129dff6978bb7bf187a76"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3561,16 +2499,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4726:0": {
-      "fixtureHash": "ef03ac0eb4776c9d228def7198126cef56339a9c132af23250d2ebd1b320b0c6",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
+        "sha256": "320a745c16ed623065124543fb8a0ea4f9d8302d723f41d7034188d5e8c08e0d"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3583,24 +2512,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4784:0": {
-      "fixtureHash": "7fef2768006b0038b402ed066e95c56709cdb28c8bab668087d2d3c714529399",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4790:0": {
-      "fixtureHash": "932b918f138166494740db8ad4dcf2f9fc3befd3dc7713c1fede44c09b6aeca6",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/standard_filters.yml:484:0": {
       "fixtureHash": "cd14adb9afbd58c146fba790a5e42998089de263394d72a7a238423ad640bcf7",
       "authority": "ruby",
@@ -3610,30 +2521,12 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4847:0": {
-      "fixtureHash": "8d5d73ed85402cad641f0061c189203123f45ebce32886f64ed8d92142a61d2e",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4881:0": {
-      "fixtureHash": "e8187b31d7aa516928fc01adf9cddc648f675a3fa913a321e39108e82585a1ae",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/standard_filters.yml:4887:0": {
       "fixtureHash": "76a613344e716bdf2387d3277621f53bdcd38ca0b58b3679a4b72cb4ff72fe9e",
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3646,21 +2539,12 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:4944:0": {
-      "fixtureHash": "2253cb7748c07445075928bbf5a55191cc44fc29225749ed1d186b54d51ff07b",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "8813429be722133a4567893848e0db1d0e4c6ffeb5e129dff6978bb7bf187a76"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/standard_filters.yml:498:0": {
       "fixtureHash": "4b5e2566814cfbe85a45dfd4365280c7c24623de580dcd5322c010cca79fbac0",
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3673,48 +2557,12 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5032:0": {
-      "fixtureHash": "23b9f31f4c765d4486ebb40529596fab21225ce266e58448dbc742c24ada7059",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5047:0": {
-      "fixtureHash": "b1e71dc2589b25b2159dbbf88bc29a1a412de411b7eefd717670d3e4ef994c29",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5106:0": {
-      "fixtureHash": "1297f828b6de637d70af76079f08f6ba25cb33ae7d5e7eca7879ea27f28ea8ca",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "8813429be722133a4567893848e0db1d0e4c6ffeb5e129dff6978bb7bf187a76"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/standard_filters.yml:5120:0": {
       "fixtureHash": "968b239907d36862e40e1b5b4b51a6477767625f72852fee6a13ef566675c1a0",
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5129:0": {
-      "fixtureHash": "ad312da52f6feb6c6f9472470d14e4bbeaf8280e1ea8f8264f86b207c3860a0d",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3727,15 +2575,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5163:0": {
-      "fixtureHash": "ddec5fd23a1d0f512ae49ea8255264a4169b5ae44bafffc82358bad2db1e51c7",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/standard_filters.yml:519:0": {
       "fixtureHash": "ba2e0a7643a07ea932fbfc2e8c7ad2fb49cbda69d6676eb78708569ba20a1a1b",
       "authority": "ruby",
@@ -3745,111 +2584,12 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5221:0": {
-      "fixtureHash": "e8091584dca4360d6668eb39e4af7d3fc163e85203ecef0c46138b537ec3395e",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "834f4f0e4b4f4ab6cc4292300d51d3bfd962437c4a7b64216b0f9224f1f7c961"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5230:0": {
-      "fixtureHash": "ecf570393570b28711b50de4fdc1eefdc27ed85fd372ec0f8690b703e3b1f494",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "9a83ca64ac7d66302488bf7fcbd7af21a277a8068db0d690c61cab34f06af318"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5393:0": {
-      "fixtureHash": "d4147ab39a33162692b228fe172a5847955fb6ed0a3fce82de9267426f47e43e",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "f114838bb37ed92208b5f53550803fff1d3d6071ef118711e812d80268e75d6e"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5404:0": {
-      "fixtureHash": "a3e9c0044097da74d89c01b8647cf392a9982b37ddc48171a6c253e45e364740",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e79e418e48623569d75e2a7b09ae88ed9b77b126a445b9ff9dc6989a08efa079"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5431:0": {
-      "fixtureHash": "2c31670b46ec242afb671c6452255a07947a5b310fed0ae1064057308f629c1a",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e79e418e48623569d75e2a7b09ae88ed9b77b126a445b9ff9dc6989a08efa079"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5488:0": {
-      "fixtureHash": "bcd0a41850a9750408cf8a3b46afd56d38f2cc431ead2cb66169e8ec87c48a2d",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "913da1f8df6f8fd47593840d533ba0458cc9873996bf310460abb495b34c232a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5515:0": {
-      "fixtureHash": "580cb82c510ab7d307c75671e5660a9f6f9cdaee2a3930311a45637fbf6c8ac3",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5591:0": {
-      "fixtureHash": "df49440c4dff726abbacf2282154e3c9629509000ee4d87d1fe8c4179fa7dae5",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "834f4f0e4b4f4ab6cc4292300d51d3bfd962437c4a7b64216b0f9224f1f7c961"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5600:0": {
-      "fixtureHash": "f60d6e4d7a9395871411c0438ba08eb4274f00f4cc0a74160aa8720b04646287",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "b56562cb3b04ffaab84c7c17a80bddfe50ffc309200afddca8dc9cf9745d775b"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5615:0": {
-      "fixtureHash": "66d50f6c2a17dd8b6572035c7b4fe779093a649a41c359db3ccf102cfaee7eea",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/standard_filters.yml:562:0": {
       "fixtureHash": "8c720b0728470f04c61ae7c536904d62c9636b7d618a5f8257785c643ccb881c",
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "41f507d03c69594b57e4a97bf6e81d5792efe47c554cf8a6dd55e475797c6217"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5681:0": {
-      "fixtureHash": "47bb5a5278d0eeba8e8082b9b1e087bb3dcf4a972f1d67ad306560a86c0c11b9",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "8813429be722133a4567893848e0db1d0e4c6ffeb5e129dff6978bb7bf187a76"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3858,34 +2598,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5766:0": {
-      "fixtureHash": "9fb81e93aa67996053131a1f3de89ca499e6df09194c31431101cc297bd96588",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5811:0": {
-      "fixtureHash": "093621bbbc35632c86333e4ef890232746cf791e171b11b23fa03afb9eaabd4a",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "8813429be722133a4567893848e0db1d0e4c6ffeb5e129dff6978bb7bf187a76"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5841:0": {
-      "fixtureHash": "254c038202eaa04cb5f2ed778b38d354ae293fcb3402dbbb75bb68d4004f9645",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3894,52 +2607,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5873:0": {
-      "fixtureHash": "2ae6958388f4a09dae5a26daef130fb57cacae96260fbacb263fd62940c7a873",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:5968:0": {
-      "fixtureHash": "8c0927ce226968722588523b0cb4021d8e11d0b62ef24260a106027c712f0187",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:606:0": {
-      "fixtureHash": "51b15afac9ad32b6fcbbe84be925bfdce76038205b4988f02dfe669df422b801",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "41f507d03c69594b57e4a97bf6e81d5792efe47c554cf8a6dd55e475797c6217"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6073:0": {
-      "fixtureHash": "4f8800d9c5341c0a25df97a10494d8278eb19edb31ad8ffaf448c5ea12c9a79c",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6089:0": {
-      "fixtureHash": "0d61325c1880d0737c6272a447931c74df2f1dab8b3492d1f25e96d4bd0f3507",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3948,16 +2616,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6195:0": {
-      "fixtureHash": "78cb964e0a101954e0016733ab10d5bb7d79a400bd0ce5d7f3850c7897139767",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3966,7 +2625,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "67e36534b2af023268d52ba2a6ed63c519e306b1a80fab0e7ec72b5e9951a206"
+        "sha256": "c1ae5def0740c3e0e91cf404a8811f12bbcbea9c08c8ac202b78a12e46688346"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -3975,79 +2634,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "bafd4b4711c8d1e14b828788ff3060b402fd7fe780ad9fd75e388fe0582fb5f4"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6288:0": {
-      "fixtureHash": "c61db61907724388d91e248a186a444fcd9ccdeef562931b58375dbf667a65b1",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "dff5faabd71205d4e439c56c99abd6b320460e9db1c32f1839cbe397452b58b7"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6351:0": {
-      "fixtureHash": "423e7f3d5101806acb48454f010ae0fe517ef187938930781825be8b9d91dff8",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "bafd4b4711c8d1e14b828788ff3060b402fd7fe780ad9fd75e388fe0582fb5f4"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6376:0": {
-      "fixtureHash": "476905fcef0a10aea664a71056b670d314aae90dab390701cd847353c9caf069",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "0ca561bf630a7d0891185a4d368293850ae290b7d80cbc0c199bbe94e9dce178"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6402:0": {
-      "fixtureHash": "09fe96eb88177cb018b97b2562497dfd74b10fadee8177555ae76366b0692e4c",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6438:0": {
-      "fixtureHash": "73f7b035dc0f468cc13d530cfcafb21fdfa7597e45b72dec3fd8cc3af5dc5b0f",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:645:0": {
-      "fixtureHash": "940c30b92e5685e90c3e894b5e95815a7ffe46283fc5f433e0606158f342d33c",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "fbef34c612eadb8ad6650f603ee46c4f850147560374bc002d0566c3e7e33dd5"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6465:0": {
-      "fixtureHash": "7231c86efc0d7155490bf22fe9ec0f9e4b63c40ba2dba08adfe767f74a9a4a1a",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6481:0": {
-      "fixtureHash": "92612389ed68489ac15e53349d0d734312dcb08390b503f9ded9960e8c9ac874",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
+        "sha256": "0983920437c31239f659f064bde312bdc33d85dfa6402b6f819293af4bf95533"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -4056,16 +2643,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6574:0": {
-      "fixtureHash": "1d0fac31fb82e14d5d2a89d7f334245e761fe44f81b8728880ebd9823846cd68",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "8813429be722133a4567893848e0db1d0e4c6ffeb5e129dff6978bb7bf187a76"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -4078,66 +2656,12 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:661:0": {
-      "fixtureHash": "613c09fe6698f2a16dc566535aa93fae43cfb852b72962430c347206c8d7f4b0",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "17868757b20f9ff80e4dae2f87528372739fe7b97ac70c7205d60534460d6443"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6647:0": {
-      "fixtureHash": "cb9e161e23ba1f9c1e72d5e885ec9cc4f36070a11e43c2db0c029af83d787f6b",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6669:0": {
-      "fixtureHash": "7db4e9e9e2542fcc40519358d3692fbb13b7affddffb2962b3699c91ebacba3b",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "1f7bf568ba6d39d66b33f44efc3d4255ebb6e78b71c9d849255f0216558e1bf9"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6676:0": {
-      "fixtureHash": "bab254fdaecfd7af4c703d2c13866cb7ea56c1f47f250e555d3b448038883eb3",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "62b117418c9d2f73fe6c4593cd9fd744f34a3cc5c0e0e6a2a65528fdcde750a4"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:669:0": {
-      "fixtureHash": "9fa7a076b746c85bf1378e6955d8edc0a5df53060051ea58e1b9733bc5368c81",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6713:0": {
-      "fixtureHash": "d7c5e6196afaca72937ccec1982d6515ab52a3449d5ede11478c22f49cba3b24",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "8813429be722133a4567893848e0db1d0e4c6ffeb5e129dff6978bb7bf187a76"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/standard_filters.yml:6739:0": {
       "fixtureHash": "7eddae2ed3e9c4ea968f851302c260b4fdef44714a4dbfab9c20d548b9617d90",
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "1f7bf568ba6d39d66b33f44efc3d4255ebb6e78b71c9d849255f0216558e1bf9"
+        "sha256": "8cf4dc26fff4847383123158f47da39149656c2d2a13d44d6ef313db0e23c054"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -4150,111 +2674,12 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6768:0": {
-      "fixtureHash": "0e56a9dbd12f8be3a9727f4a35f76f0d771f5a52c4c05305e11f027275582705",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "986d6ccf8083c7f8936815673e4e7810dc522afa3833681e52c9d8d7ca0bfa7a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6784:0": {
-      "fixtureHash": "d3aa0d808e206426cb322f98e2f50e32fd5632232e67c206a93e746807f82b11",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6809:0": {
-      "fixtureHash": "35956f49f0617a1a5862ce6e851e3b3563e83b91e6d2e91106c11f6bad4433af",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6825:0": {
-      "fixtureHash": "8f1366772e9dabc4e29afb34123fbbf4d1c925f57175818d5184f71ef5cad07c",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "986d6ccf8083c7f8936815673e4e7810dc522afa3833681e52c9d8d7ca0bfa7a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6840:0": {
-      "fixtureHash": "cb1652c7ae4cc406601a69283394a3a9b8a177b0c072c5f41f1d2294f6cbf36c",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6856:0": {
-      "fixtureHash": "fc8a7abf8aad3266410ef5fdcabc9191683c03e9efb8ee9d98e9037944fc4b3b",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:6884:0": {
-      "fixtureHash": "75a40b981516aefb133e7b20321447c95151234fad9618b60ed619bd1cbb605b",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "986d6ccf8083c7f8936815673e4e7810dc522afa3833681e52c9d8d7ca0bfa7a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:813:0": {
-      "fixtureHash": "dcc1edac168626c05aa836e3f610cd906d0fc03e691f535bab78a0b1e6e4c82d",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e79e418e48623569d75e2a7b09ae88ed9b77b126a445b9ff9dc6989a08efa079"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:876:0": {
-      "fixtureHash": "8c5ef1ea11731a6c243e700311e5a7de8fa4303c3b3bbe5232e9619eb9964466",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/standard_filters.yml:902:0": {
       "fixtureHash": "33a57404d605f1503be2c252cc2c6c851890726b9eab4bf9ed46a6098d1a5616",
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:917:0": {
-      "fixtureHash": "94047cb1839390192a2985bda6c680f4ce7b30b735ed92893ef38b9ef7ee02fe",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:932:0": {
-      "fixtureHash": "b36995a364c538790d626b74ff1d3fa4c63879f8bcbdfc4ca8e93eddac7dbbdb",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "6e1443fc9ca3957147e4a5ad5b45044853fe34cf17bcbc3e8fd137e45512df2e"
+        "sha256": "abcacbb48eec6ba119d909d40f61be43461bd1370c1d22fdff9541d3e992f757"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -4285,39 +2710,12 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "liquid-spec:specs/liquid_ruby/variable_type_filters.yml:130:0": {
-      "fixtureHash": "954f55e3eb1ff2ed27cc8f50a94633d6941bc7f150e7cd73c68d92c86a89df04",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "0686d033f0e773e3bb97ea576fcad85777795479f0aaadf7d1d0660c19f6c167"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/variable_type_filters.yml:175:0": {
       "fixtureHash": "a90b60869ba88f2ba395d75f5a92b8aa2a49537e4183822d74761baffde22c01",
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "844c0964ccf7936355bf47c8f4c81a274486bfed9d756389731ddbae5eab8ad1"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/variable_type_filters.yml:244:0": {
-      "fixtureHash": "75ab42b6881b96cf7b7a213cfaf90abc5b8fdca70d451357ca6503bda22ff1e7",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/variable_type_filters.yml:273:0": {
-      "fixtureHash": "6cfb4ed7106bf4b501d9ae761868a51b1c80fe0561b09879aee1507604e8442e",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "8e284351be7cda33e7267f432b13ce6194ee114b4a2acbb524672bbcf0b6af1e"
+        "sha256": "18635dc33829398f42c2871cf299271c9099937398798122af16cad727d85d9e"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -4362,7 +2760,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "f5639eafc9f128e45937f0e310ac0c88e230d093b1b29db3e1555670881d492c"
+        "sha256": "f4c4a108505c26bf4567778748a38f0b1e360fd53072b9340a6f33d30a44669f"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -4854,25 +3252,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "f62558964f47f63e360852cb33f657f9cc73ece63b1a203641b538473297babe"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/partials/partials.yml:217:0": {
-      "fixtureHash": "a9a9e080f7995b61605d9fbb730f40f4635996fa9b70422118fef479c64635a5",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "b7ce8129083340dcb1795f7ad370d3625fb9578a15ed620eb97ea7042d9c0576"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/partials/partials.yml:707:0": {
-      "fixtureHash": "e8538d2755f846dd209e7aa850dc6f16548985c917fe77d52733955317f19057",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "19ea26b54fbdec440729d45df4449d2066864b7c4644442cebf39d0bb5c1dc56"
+        "sha256": "4a84bd622bac514024a6891fadf387f28fe9bb025f4cc03b655213e3b323247f"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -4983,75 +3363,12 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "ruby-liquid:test/integration/standard_filter_test.rb:542:4": {
-      "fixtureHash": "ad46cdcee3d81f1e593514ed7b67918e413ecd4ac8dfdc9deeeba6246700f033",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "913da1f8df6f8fd47593840d533ba0458cc9873996bf310460abb495b34c232a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "ruby-liquid:test/integration/standard_filter_test.rb:570:4": {
-      "fixtureHash": "4d59ccc46a8a4af9b22c31e27beab013eab4383c1b79731675e04922c813864d",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "ruby-liquid:test/integration/standard_filter_test.rb:571:4": {
-      "fixtureHash": "3c912f179969746085e3657656af7cb346367dca3725350acbb4f09a213bc5a3",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "1fe11c7ff6d2591de6cda9e769cc48b5bf7f627ad88b83fedd4aa03d1253f555"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "ruby-liquid:test/integration/standard_filter_test.rb:572:4": {
-      "fixtureHash": "4172099a7bb896b317d1f9e269a7cd8065f641c054a0b1d8e1a3c469222442e5",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "f78dc4ba97f1fa3438da74187a48185cb24a0064d419350d68f1230c36b444cf"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "ruby-liquid:test/integration/standard_filter_test.rb:573:4": {
-      "fixtureHash": "6010b70529c5a010eba87c69b4cdccad65ee8a272dc1026afc355cc854a74d1a",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "1fe11c7ff6d2591de6cda9e769cc48b5bf7f627ad88b83fedd4aa03d1253f555"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "ruby-liquid:test/integration/standard_filter_test.rb:579:4": {
-      "fixtureHash": "694855ca5357236a83aea0a0f657be699115f7c7e45e6738c241742c765dbab2",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "d3e2fe381794f48f52cb35808195d070671f4d1a9c6cc155028e29d94576665b"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "ruby-liquid:test/integration/tags/for_tag_test.rb:307:4": {
       "fixtureHash": "30ce00995c99f12b502e46b1b3e861ab9a5a171163f69aceeb34dbb33e664a4e",
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
         "sha256": "a1ba96b97b69b2fd28d325a0a685f63b4f5e963561f802905f45de47083ce3cc"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "ruby-liquid:test/integration/tags/for_tag_test.rb:46:4": {
-      "fixtureHash": "fe372ee8803d31972e4ed0e5c3b1ce7939cb7ff8444ae7e64ac7fa2d001daaf8",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -5418,201 +3735,12 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "shopify-liquid:test/integration/context_test.rb:370:4": {
-      "fixtureHash": "572bb8d9f1a081b59b95aee9e9d8bbce0a9a8097fb1333186ebff07a952cc3c0",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "1445217533e7d4d0cffd9109c4edb60d62a02c0f0de9537be44f5e00d348eb4f"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/context_test.rb:374:4": {
-      "fixtureHash": "a2486024b0c133aa180b4082e65b5781007f2fb96a01ea784a000b2ed417fb04",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "1445217533e7d4d0cffd9109c4edb60d62a02c0f0de9537be44f5e00d348eb4f"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/context_test.rb:375:4": {
-      "fixtureHash": "e27d42c73cb16e594f980f561074e9625cb75790efec4d8aa53a39e50d6b1bc4",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "166f829e016f2315a8099e3a8d2dbec6d91572379ff02c760ba4e0335789d47f"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/expression_test.rb:46:4": {
-      "fixtureHash": "836ee002c233df89c0233a97e06a9d7086885762b50710db126f768c35347aac",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "55eab4eafa5890579caef1e005f5a43e68bb6d24b838f3bac92ea7639889dc95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/hash_rendering_test.rb:11:4": {
-      "fixtureHash": "1c5c430216b6d7965f9ad67d56cb9fee239ca3543d4dbfaebdcafc9768de1680",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/hash_rendering_test.rb:15:4": {
-      "fixtureHash": "b953fb160b0add6d28b7975bee32df35ff4e40b91784bf6777ff7b239339c765",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/hash_rendering_test.rb:19:4": {
-      "fixtureHash": "aa51128fdb843b64fe581dfe1dc5680623bdd4a18c60889c7dfc41e6071cbfa5",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/hash_rendering_test.rb:23:4": {
-      "fixtureHash": "181bf0dc07886ed833aeaec54923f89ef6660b7f9bf5e01579731da9f09f5ca8",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/hash_rendering_test.rb:33:4": {
-      "fixtureHash": "e2bda6769f980851b988ebf91664afa90588f7f41442a0c473b629e24df149f7",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "41f507d03c69594b57e4a97bf6e81d5792efe47c554cf8a6dd55e475797c6217"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/hash_rendering_test.rb:37:4": {
-      "fixtureHash": "86b9c7ac50c5c183e3861f45b5b431a05df8c0e84f992c7e25a76f92cfe98184",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "bafd4b4711c8d1e14b828788ff3060b402fd7fe780ad9fd75e388fe0582fb5f4"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/hash_rendering_test.rb:41:4": {
-      "fixtureHash": "132fcd80bf8f72c2c02e1ba2bd713e4d9afd32090ed584f7d17fc5f3eeb4e798",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "shopify-liquid:test/integration/hash_rendering_test.rb:45:4": {
       "fixtureHash": "3217a5a359c0eeb5cd2a652445afe8cac09f5e0a98699ffc61d0ac63fde234ea",
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/hash_rendering_test.rb:49:4": {
-      "fixtureHash": "73105a313851e27379ca7af157c9ef6aa3e738f796c4d79ee87fe526171145d8",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "1f7bf568ba6d39d66b33f44efc3d4255ebb6e78b71c9d849255f0216558e1bf9"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/hash_rendering_test.rb:53:4": {
-      "fixtureHash": "941fad463f0ae6621e17390cb6e5594d91e455b44be1f81b347596997c629705",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/hash_rendering_test.rb:57:4": {
-      "fixtureHash": "320f31f9e51e9703321469b6a757ae51606cf93176a9e6ad968f8ac3e3d2af7a",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/hash_rendering_test.rb:61:4": {
-      "fixtureHash": "ef61359165bd649e1ed8e474476d2135bccbc6dffabbc2f4057a05dc461d9134",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/hash_rendering_test.rb:65:4": {
-      "fixtureHash": "a7ee9485a6db7ec68b87f17b92366005f0a1ab0a1ff68003ffc2b83b51393e5e",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "a02d840335480809acc67fe4171d749dfab7ff5591bc136a02556611e63640ea"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/hash_rendering_test.rb:69:4": {
-      "fixtureHash": "5d76b34176f7f5e38b55b0fb73aad0deae167882abbeea8f1e2e7cafebeba46a",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "171e2503a094d2a1a72637826beb279db770f137a9fd1726b3bbc192e099e37d"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/hash_rendering_test.rb:7:4": {
-      "fixtureHash": "9bdf103ff8f914f4c3aa02c3b2461fcb070c8b8dcd30a33d658582430fccd1ac",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/hash_rendering_test.rb:73:4": {
-      "fixtureHash": "f49af143bfd6cbfcb3b1507b7e79ebe4d0a91a11b6999e69973f1bd107348c08",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/hash_rendering_test.rb:77:4": {
-      "fixtureHash": "b1f0e55ac29b767bef865b551273896615503c70e4ef791efcadb98f596d5ada",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/hash_rendering_test.rb:83:4": {
-      "fixtureHash": "b96d8f8365ea96f5cc10444e098a0cfb4e7af85c58c861f1d5280a35d067d7f1",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "5f9f82c6d12a60a75857044bff4ab65266cf163abaec06b6fe8e6aa573edaccc"
+        "sha256": "da4fe281c5b717d13a66f1a769ed9164b1bc4a108f575f70033cd462fb1e5ef7"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -5699,111 +3827,12 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "shopify-liquid:test/integration/standard_filter_test.rb:1303:4": {
-      "fixtureHash": "1117d162038868dcb2a383f049315f5ee0ee506bfd03345e0751d1fb1741d9c1",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "834f4f0e4b4f4ab6cc4292300d51d3bfd962437c4a7b64216b0f9224f1f7c961"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/standard_filter_test.rb:1309:4": {
-      "fixtureHash": "ab48223584454fd998e59214a5ead29f193aff1f4619a43c2a19ee8b879651d9",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "9a83ca64ac7d66302488bf7fcbd7af21a277a8068db0d690c61cab34f06af318"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/standard_filter_test.rb:1315:4": {
-      "fixtureHash": "8b7e1efa2c3a2d1d7e5f9ac7a176502412c0143f266bf0cd3bcc3ed85296ede4",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "834f4f0e4b4f4ab6cc4292300d51d3bfd962437c4a7b64216b0f9224f1f7c961"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/standard_filter_test.rb:1332:4": {
-      "fixtureHash": "b7e28ca01ae3d2249514422728e46d22c10c36937efeabab183a5ec3c9ddbc75",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "f114838bb37ed92208b5f53550803fff1d3d6071ef118711e812d80268e75d6e"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/standard_filter_test.rb:730:4": {
-      "fixtureHash": "ae83e7a5c44f623996f3bdcffd5f3c2c830e25ffd8e7a168ddb00a2495ae4704",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "913da1f8df6f8fd47593840d533ba0458cc9873996bf310460abb495b34c232a"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/standard_filter_test.rb:758:4": {
-      "fixtureHash": "ef5584c3d3a69d9901990210722746b31cb4be1ec873790b09b0947e101b9dbb",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/standard_filter_test.rb:759:4": {
-      "fixtureHash": "75bce8c29bce1e11c4e01db6a78160dc52fb087c80d945420cd397d133d49600",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "1fe11c7ff6d2591de6cda9e769cc48b5bf7f627ad88b83fedd4aa03d1253f555"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/standard_filter_test.rb:760:4": {
-      "fixtureHash": "159b8be459e392f6848b4ab0fc70ba6c7f8608f37cea4467d658afddfc423968",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "f78dc4ba97f1fa3438da74187a48185cb24a0064d419350d68f1230c36b444cf"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/standard_filter_test.rb:761:4": {
-      "fixtureHash": "3703e41d382c83b85dd30082b6d81e6e14a22026a4d459c6140ccf1a358abdda",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "1fe11c7ff6d2591de6cda9e769cc48b5bf7f627ad88b83fedd4aa03d1253f555"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/standard_filter_test.rb:767:4": {
-      "fixtureHash": "e3f75ac4523a46b16b4facc46b4cf2f4e1a19837f3b5486fef928fda6acf6f75",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "d3e2fe381794f48f52cb35808195d070671f4d1a9c6cc155028e29d94576665b"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "shopify-liquid:test/integration/tags/cycle_tag_test.rb:62:4": {
       "fixtureHash": "f6b67302b4af87fb00f22f129998128ad07f10ee0ebd5c6b0ac9d370c1f0c887",
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
         "sha256": "114037f33f0333e1933e15e2ecef1f5550e42cc1830b84600c5a591d27250ba4"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "shopify-liquid:test/integration/tags/for_tag_test.rb:48:4": {
-      "fixtureHash": "3fb530f9d1ed55677a2d268e34b58f3e2b16b11e5ea4f69e95de2b4b5f76cc0c",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
@@ -5871,15 +3900,6 @@
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },
-    "shopify-liquid:test/integration/template_test.rb:401:4": {
-      "fixtureHash": "125db2e81040c5694be975eb8c24e8cd3639c6c6391543d1bac3252a2fdc3a28",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "1445217533e7d4d0cffd9109c4edb60d62a02c0f0de9537be44f5e00d348eb4f"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "shopify-liquid:test/integration/trim_mode_test.rb:556:4": {
       "fixtureHash": "0eb1bbe5e07793d8b4fc8191ead0ef5703ccedf844961bcf544fcf6611713903",
       "authority": "ruby",
@@ -5923,7 +3943,7 @@
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
-        "sha256": "784a2d15aa47792fa245a5c3af84a5598d54b31cff664bfafd641e91a54f475a"
+        "sha256": "c3ee4eeab17fbc0f577d9d1b8a698c93fe5d3d7b26532d18ad5b46acc0b835aa"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },

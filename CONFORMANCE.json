@@ -3626,7 +3626,8 @@
     "getters": "rejected without invocation",
     "classInstances": "rejected",
     "nonFiniteNumbers": "rejected, including non-finite filter results",
-    "prototypeKeys": "excluded from context normalization"
+    "prototypeKeys": "excluded from context normalization",
+    "rubyEncoding": "Explicit $liquid integer/float/decimal/symbol/range/hash tags; Value constructors; host callbacks deferred"
   },
   "differences": [
     {
@@ -3702,12 +3703,12 @@
       "ruby": "Recorded upstream Ruby expectation"
     },
     "crossEngine": "informational",
-    "phase": 2,
+    "phase": 3,
     "engineBehaviorChanged": false,
     "counts": {
       "ruby": {
-        "pass": 4801,
-        "total": 5444
+        "pass": 4915,
+        "total": 5338
       },
       "liquidjs": {
         "pass": 848,
@@ -3725,7 +3726,10 @@
     "snapshot": "Document; propagated to loaded partials, analysis/checking, render/stream, CLI and typed templates",
     "differences": [
       "include for/with/as",
-      "raw/endraw delimiters"
+      "raw/endraw delimiters",
+      "Ruby typed values and inspect/string coercion",
+      "numeric coercion, arithmetic, division and comparisons",
+      "Range identity and iteration"
     ],
     "tests": [
       "test/partial-bindings.test.ts",

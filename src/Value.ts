@@ -1,4 +1,5 @@
 import { Effect } from "effect";
+import * as Ruby from "./RubyValue.js";
 import { RenderError } from "./Diagnostic.js";
 import type { Span } from "./Source.js";
 export type Value =
@@ -60,6 +61,7 @@ export function normalize(
   input: unknown,
   at: Span,
   maxNodes = 100_000,
+  dialect: "liquidjs" | "ruby" = "liquidjs",
 ): Effect.Effect<Value, RenderError> {
   return Effect.try({
     try: () => {
@@ -139,9 +141,22 @@ export function normalize(
           result = out;
         }
         ancestors.delete(v);
+        if (dialect === "ruby" && Ruby.tag(result)?.type === "integer") {
+          const n = Number(Ruby.tag(result)!.value);
+          if (Number.isSafeInteger(n) && /^[+-]?\d+$/.test(String(Ruby.tag(result)!.value)))
+            return n;
+        }
         return result;
       };
-      return walk(input, 0);
+      const result = walk(input, 0);
+      if (dialect === "ruby") {
+        try {
+          Ruby.validate(result);
+        } catch (error) {
+          throw new RenderError({ code: "InvalidContext", message: String(error), span: at });
+        }
+      }
+      return result;
     },
     catch: (error) => {
       if (error instanceof RenderError) return error;
@@ -149,3 +164,5 @@ export function normalize(
     },
   });
 }
+
+export { float, integer, decimal, symbol, range, hash } from "./RubyValue.js";

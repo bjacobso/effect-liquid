@@ -152,15 +152,23 @@ if (engineName === "liquidjs") {
             .filter((key) => options[key] !== undefined)
             .map((key) => [key, options[key]]),
         ),
-        globals: jsonProjection(fixture.globals ?? options.globals ?? {}),
+        globals:
+          fixture.authority === "ruby"
+            ? (fixture.globals ?? options.globals ?? {})
+            : jsonProjection(fixture.globals ?? options.globals ?? {}),
         maxOutputBytes: maxBytes,
       }),
       Loader.memory({ ...options.templates, ...fixture.templates }),
     );
     const result = await Effect.runPromise(
-      Effect.either(Liquid.render(parsed.right, jsonProjection(fixture.context ?? {}))).pipe(
-        Effect.provide(services),
-      ),
+      Effect.either(
+        Liquid.render(
+          parsed.right,
+          fixture.authority === "ruby"
+            ? (fixture.context ?? {})
+            : jsonProjection(fixture.context ?? {}),
+        ),
+      ).pipe(Effect.provide(services)),
     );
     return result._tag === "Left" ? failure(result.left, "render") : output(result.right);
   };

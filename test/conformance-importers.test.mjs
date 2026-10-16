@@ -72,3 +72,16 @@ it("scores LiquidJS authority independently of a contradictory upstream expectat
   const f = { id: "dialect", authority: "liquidjs", expected: { kind: "error", phase: "parse" } };
   expect(regression(f, { kind: "parsed" }, { kind: "parsed" }, {})).toBe("pass");
 });
+
+it("excludes Ruby host-class descriptors instead of pretending they are records", () => {
+  const inventory = [];
+  expect(
+    yamlCases(
+      'specs:\n- template: "{{ d | size }}"\n  environment: { d: { "instantiate:SecretDrop": {} } }\n  expected: "0"\n',
+      "specs/drop.yml",
+      ".context",
+      inventory,
+    ),
+  ).toEqual([]);
+  expect(inventory[0].reason).toContain("Drop adapter");
+});

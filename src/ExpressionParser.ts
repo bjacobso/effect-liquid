@@ -137,7 +137,12 @@ export class Expressions {
     else if (/^-?\d+(?:\.\d+)?$/.test(w.text)) {
       const value = Number(w.text);
       if (!Number.isFinite(value)) this.fail("Non-finite numeric literal", w.start);
-      result = { _tag: "Literal", value, span: this.position(w.start) };
+      result = {
+        _tag: "Literal",
+        value,
+        ...(w.text.includes(".") ? { numericKind: "float" as const } : {}),
+        span: this.position(w.start),
+      };
     } else if (["nil", "null", "true", "false"].includes(w.text))
       result = {
         _tag: "Literal",

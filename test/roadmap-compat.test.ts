@@ -6,11 +6,16 @@ import * as Render from "../src/Render.js";
 import * as Loader from "../src/TemplateLoader.js";
 import * as T from "../src/Type.js";
 
-const run = (source: string, context: object = {}, templates: Record<string, string> = {}) =>
+const run = (
+  source: string,
+  context: object = {},
+  templates: Record<string, string> = {},
+  dialect: Liquid.Dialect = "ruby",
+) =>
   Effect.runPromise(
-    Effect.flatMap(Liquid.parse(source, { dialect: "ruby" }), (doc) =>
-      Liquid.render(doc, context),
-    ).pipe(Effect.provide(Layer.merge(Render.layer(), Loader.memory(templates)))),
+    Effect.flatMap(Liquid.parse(source, { dialect }), (doc) => Liquid.render(doc, context)).pipe(
+      Effect.provide(Layer.merge(Render.layer(), Loader.memory(templates))),
+    ),
   );
 
 describe("Ruby include bindings", () => {
@@ -98,7 +103,9 @@ it("scans raw inside comments without interpreting ignored expressions or unknow
 it.each(["nil", "xs", "'oops'"])("matches pinned nonnumeric tablerow cols %s", async (cols) => {
   const source = `{% tablerow i in (1..2) cols:${cols} %}{{i}}{% endtablerow %}`;
   const context = { xs: [1, 2] };
-  expect(await run(source, context)).toBe(await new Reference().parseAndRender(source, context));
+  expect(await run(source, context, {}, "liquidjs")).toBe(
+    await new Reference().parseAndRender(source, context),
+  );
 });
 it("matches pinned boolean cycles and distinguishes nil from missing slice length", async () => {
   for (const source of [
@@ -106,7 +113,9 @@ it("matches pinned boolean cycles and distinguishes nil from missing slice lengt
     "{{'abc' | slice: 1, nil}}",
     "{{'abc' | slice: 1, missing}}",
   ])
-    expect(await run(source)).toBe(await new Reference().parseAndRender(source));
+    expect(await run(source, {}, {}, "liquidjs")).toBe(
+      await new Reference().parseAndRender(source),
+    );
 });
 
 it("includes scalar records once and passes their record type to child checking", async () => {

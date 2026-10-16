@@ -2684,8 +2684,8 @@
     "shopify-liquid:imported": 563,
     "shopify-liquid:excluded": 313,
     "shopify-liquid:catalogued": 43,
-    "liquid-spec:imported": 4475,
-    "liquid-spec:excluded": 3404
+    "liquid-spec:imported": 4369,
+    "liquid-spec:excluded": 3510
   },
   "entries": [
     {
@@ -4327,7 +4327,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/drops.yml:114:0",
@@ -4340,7 +4340,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/drops.yml:127:0",
@@ -4353,7 +4353,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/drops.yml:143:0",
@@ -4418,7 +4418,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/drops.yml:191:0",
@@ -4574,7 +4574,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/drops.yml:320:0",
@@ -4626,7 +4626,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/drops.yml:377:0",
@@ -4691,7 +4691,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/drops.yml:436:0",
@@ -4704,7 +4704,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/drops.yml:449:0",
@@ -4717,7 +4717,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/drops.yml:45:0",
@@ -4730,7 +4730,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/drops.yml:58:0",
@@ -4743,7 +4743,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/drops.yml:72:0",
@@ -4756,7 +4756,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/drops.yml:85:0",
@@ -4769,7 +4769,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/dynamic_partials.yml:18:0",
@@ -5523,7 +5523,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Ruby parser mode requires an adapter: lax"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/error-handling.yml:217:0",
@@ -14077,7 +14077,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/truthiness_matrix.yml:166:0",
@@ -14090,7 +14090,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/truthiness_matrix.yml:176:0",
@@ -14103,7 +14103,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/truthiness_matrix.yml:186:0",
@@ -14116,7 +14116,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/truthiness_matrix.yml:19:0",
@@ -14142,7 +14142,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/truthiness_matrix.yml:208:0",
@@ -14155,7 +14155,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/truthiness_matrix.yml:218:0",
@@ -14168,7 +14168,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/truthiness_matrix.yml:228:0",
@@ -14181,7 +14181,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/basics/truthiness_matrix.yml:26:0",
@@ -15975,7 +15975,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Ruby parser mode requires an adapter: :lax"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby_lax/variable_type_filters.yml:156:0",
@@ -16287,7 +16287,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Ruby parser mode requires an adapter: :lax"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby_lax/variable_type_filters.yml:500:0",
@@ -16300,7 +16300,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Ruby parser mode requires an adapter: :lax"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby_lax/variable_type_filters.yml:518:0",
@@ -19888,7 +19888,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Ruby parser mode requires an adapter: strict2,strict"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1018:0",
@@ -19901,7 +19901,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Ruby parser mode requires an adapter: strict2,strict"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1031:0",
@@ -19914,7 +19914,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Ruby parser mode requires an adapter: strict2,strict"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:104:0",
@@ -19926,8 +19926,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L104",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_private_methods"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1044:0",
@@ -19940,7 +19940,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Ruby parser mode requires an adapter: strict2,strict"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1057:0",
@@ -19953,7 +19953,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Ruby parser mode requires an adapter: strict2,strict"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1071:0",
@@ -19966,7 +19966,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Ruby parser mode requires an adapter: strict2,strict"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1084:0",
@@ -19979,7 +19979,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Ruby parser mode requires an adapter: strict2,strict"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1097:0",
@@ -19992,7 +19992,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Ruby parser mode requires an adapter: strict2,strict"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1114:0",
@@ -20004,8 +20004,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L1114",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_to_liquid_hash_exposes_keys"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1124:0",
@@ -20017,8 +20017,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L1124",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_to_liquid_hash_exposes_second_key"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:113:0",
@@ -20030,8 +20030,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L113",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_singleton_methods"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1133:0",
@@ -20043,8 +20043,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L1133",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_to_liquid_hash_blocks_object_methods"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1143:0",
@@ -20056,8 +20056,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L1143",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_to_liquid_hash_blocks_send"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1152:0",
@@ -20069,8 +20069,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L1152",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_to_liquid_hash_blocks_instance_eval"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1161:0",
@@ -20082,8 +20082,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L1161",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_to_liquid_string_size"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1171:0",
@@ -20095,8 +20095,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L1171",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_to_liquid_array_size"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1180:0",
@@ -20108,8 +20108,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L1180",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_to_liquid_array_first"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1189:0",
@@ -20121,8 +20121,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L1189",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_to_liquid_nil_blocks_all"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1199:0",
@@ -20134,8 +20134,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L1199",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_to_liquid_nil_blocks_class"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1212:0",
@@ -20147,8 +20147,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L1212",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_fake_drop_blocks_name"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:122:0",
@@ -20160,8 +20160,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L122",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_singleton_class"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1224:0",
@@ -20173,8 +20173,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L1224",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_fake_drop_blocks_secret"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1233:0",
@@ -20186,8 +20186,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L1233",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_fake_drop_blocks_class"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1246:0",
@@ -20199,8 +20199,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L1246",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_enumerable_drop_allows_defined_method"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1255:0",
@@ -20212,8 +20212,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L1255",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_enumerable_drop_blocks_class"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1264:0",
@@ -20225,8 +20225,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L1264",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_enumerable_drop_blocks_send"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:1273:0",
@@ -20238,8 +20238,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L1273",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_enumerable_drop_blocks_methods"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:131:0",
@@ -20251,8 +20251,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L131",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_respond_to"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:140:0",
@@ -20264,8 +20264,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L140",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_is_a"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:149:0",
@@ -20277,8 +20277,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L149",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_instance_of"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:158:0",
@@ -20290,8 +20290,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L158",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_nil"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:167:0",
@@ -20303,8 +20303,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L167",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_frozen"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:176:0",
@@ -20316,8 +20316,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L176",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_equal"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:185:0",
@@ -20329,8 +20329,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L185",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_eql"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:194:0",
@@ -20342,8 +20342,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L194",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_send"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:204:0",
@@ -20355,8 +20355,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L204",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks___send__"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:213:0",
@@ -20368,8 +20368,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L213",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_public_send"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:222:0",
@@ -20381,8 +20381,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L222",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_instance_eval"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:232:0",
@@ -20394,8 +20394,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L232",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_instance_exec"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:241:0",
@@ -20407,8 +20407,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L241",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_method"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:250:0",
@@ -20420,8 +20420,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L250",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_public_method"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:259:0",
@@ -20433,8 +20433,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L259",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_singleton_method"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:268:0",
@@ -20446,8 +20446,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L268",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_instance_variable_get"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:278:0",
@@ -20459,8 +20459,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L278",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_instance_variable_set"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:287:0",
@@ -20472,8 +20472,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L287",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_instance_variable_defined"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:296:0",
@@ -20485,8 +20485,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L296",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_instance_variables"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:305:0",
@@ -20498,8 +20498,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L305",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_freeze"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:314:0",
@@ -20511,8 +20511,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L314",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_clone"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:323:0",
@@ -20524,8 +20524,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L323",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_dup"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:332:0",
@@ -20537,8 +20537,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L332",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_extend"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:341:0",
@@ -20550,8 +20550,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L341",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_define_singleton_method"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:350:0",
@@ -20563,8 +20563,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L350",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_tap"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:359:0",
@@ -20576,8 +20576,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L359",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_then"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:368:0",
@@ -20589,8 +20589,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L368",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_yield_self"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:37:0",
@@ -20602,8 +20602,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L37",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_class"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:377:0",
@@ -20615,8 +20615,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L377",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_enum_for"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:386:0",
@@ -20628,8 +20628,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L386",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_to_enum"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:395:0",
@@ -20641,8 +20641,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L395",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_display"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:406:0",
@@ -20654,8 +20654,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L406",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_allows_name"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:416:0",
@@ -20667,8 +20667,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L416",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_allows_price"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:425:0",
@@ -20680,8 +20680,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L425",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_secret_ivar_not_exposed"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:438:0",
@@ -20693,8 +20693,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L438",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_internal_state_ivar_not_exposed"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:452:0",
@@ -20706,8 +20706,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L452",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_bracket_blocks_class"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:462:0",
@@ -20719,8 +20719,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L462",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_bracket_blocks_send"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:471:0",
@@ -20732,8 +20732,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L471",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_bracket_blocks___send__"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:480:0",
@@ -20745,8 +20745,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L480",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_bracket_blocks_instance_eval"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:489:0",
@@ -20758,8 +20758,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L489",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_bracket_blocks_instance_variable_get"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:49:0",
@@ -20771,8 +20771,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L49",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_object_id"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:498:0",
@@ -20784,8 +20784,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L498",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_bracket_blocks_instance_variables"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:507:0",
@@ -20797,8 +20797,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L507",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_bracket_blocks_object_id"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:516:0",
@@ -20810,8 +20810,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L516",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_bracket_blocks_methods"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:525:0",
@@ -20823,8 +20823,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L525",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_bracket_blocks_public_send"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:534:0",
@@ -20836,8 +20836,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L534",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_bracket_blocks_method"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:543:0",
@@ -20849,8 +20849,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L543",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_bracket_blocks_singleton_class"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:552:0",
@@ -20862,8 +20862,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L552",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_bracket_allows_whitelisted"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:566:0",
@@ -20875,8 +20875,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L566",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_chain_nested_allows_safe_method"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:576:0",
@@ -20888,8 +20888,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L576",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_chain_nested_blocks_class"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:58:0",
@@ -20901,8 +20901,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L58",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_inspect"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:585:0",
@@ -20914,8 +20914,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L585",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_chain_nested_blocks_send"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:594:0",
@@ -20927,8 +20927,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L594",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_chain_nested_blocks_instance_eval"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:603:0",
@@ -20940,8 +20940,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L603",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_chain_nested_blocks_object_id"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:612:0",
@@ -20953,8 +20953,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L612",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_chain_array_class_blocked"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:622:0",
@@ -20966,8 +20966,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L622",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_chain_safe_method_then_string_method"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:632:0",
@@ -20979,8 +20979,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L632",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_chain_deep_blocks_class"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:646:0",
@@ -20992,8 +20992,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L646",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_if_class_is_falsy"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:656:0",
@@ -21005,8 +21005,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L656",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_if_send_is_falsy"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:665:0",
@@ -21018,8 +21018,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L665",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_if_respond_to_is_falsy"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:67:0",
@@ -21031,8 +21031,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L67",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_to_s"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:674:0",
@@ -21044,8 +21044,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L674",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_if_methods_is_falsy"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:683:0",
@@ -21057,8 +21057,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L683",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_if_instance_variables_is_falsy"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:692:0",
@@ -21070,8 +21070,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L692",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_for_over_methods_yields_nothing"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:702:0",
@@ -21083,8 +21083,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L702",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_for_over_instance_variables_yields_nothing"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:711:0",
@@ -21096,8 +21096,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L711",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_class_equality_is_false"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:720:0",
@@ -21109,8 +21109,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L720",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_methods_contains_is_false"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:729:0",
@@ -21122,8 +21122,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L729",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_methods_size_is_zero"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:739:0",
@@ -21135,8 +21135,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L739",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_instance_variables_size_is_zero"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:752:0",
@@ -21148,8 +21148,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L752",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_assign_class_is_nil"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:761:0",
@@ -21161,8 +21161,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L761",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_assign_send_is_nil"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:77:0",
@@ -21174,8 +21174,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L77",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_hash"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:770:0",
@@ -21187,8 +21187,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L770",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_assign_instance_eval_is_nil"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:779:0",
@@ -21200,8 +21200,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L779",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_assign_object_id_is_nil"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:788:0",
@@ -21213,8 +21213,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L788",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_capture_class_is_empty"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:797:0",
@@ -21226,8 +21226,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L797",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_capture_methods_is_empty"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:806:0",
@@ -21239,8 +21239,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L806",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_map_class_from_drop_array"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:816:0",
@@ -21252,8 +21252,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L816",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_map_name_from_drop_array"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:830:0",
@@ -21265,8 +21265,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L830",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_default_filter_on_blocked_property"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:840:0",
@@ -21278,8 +21278,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L840",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_default_filter_on_allowed_property"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:849:0",
@@ -21291,8 +21291,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L849",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_upcase_on_allowed_property"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:858:0",
@@ -21304,8 +21304,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L858",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_upcase_on_blocked_property"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:86:0",
@@ -21317,8 +21317,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L86",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_methods"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:868:0",
@@ -21330,8 +21330,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L868",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_append_on_blocked_property"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:878:0",
@@ -21343,8 +21343,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L878",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_size_filter_on_drop"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:892:0",
@@ -21460,8 +21460,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/liquid_ruby/security_drops.yml#L95",
         "license": "MIT"
       },
-      "status": "imported",
-      "name": "sec_drop_blocks_public_methods"
+      "status": "excluded",
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/security_drops.yml:956:0",
@@ -21526,7 +21526,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Ruby parser mode requires an adapter: strict2,strict"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:1008:0",
@@ -21955,7 +21955,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:1334:0",
@@ -22865,7 +22865,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:1884:0",
@@ -23762,7 +23762,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:2573:0",
@@ -23931,7 +23931,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:2700:0",
@@ -23957,7 +23957,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:2730:0",
@@ -23970,7 +23970,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:2747:0",
@@ -23983,7 +23983,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:275:0",
@@ -24477,7 +24477,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:3256:0",
@@ -24490,7 +24490,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops, ruby_types"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:3269:0",
@@ -26037,7 +26037,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:4207:0",
@@ -26050,7 +26050,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:4223:0",
@@ -27298,7 +27298,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:4987:0",
@@ -27337,7 +27337,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:5021:0",
@@ -27350,7 +27350,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:5037:0",
@@ -27389,7 +27389,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:5076:0",
@@ -27675,7 +27675,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:5224:0",
@@ -27688,7 +27688,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:523:0",
@@ -27714,7 +27714,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:5248:0",
@@ -27727,7 +27727,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:5260:0",
@@ -27740,7 +27740,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:5272:0",
@@ -27753,7 +27753,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:5284:0",
@@ -27857,7 +27857,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:5340:0",
@@ -27896,7 +27896,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:5364:0",
@@ -27922,7 +27922,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:538:0",
@@ -27961,7 +27961,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:5400:0",
@@ -27974,7 +27974,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:5412:0",
@@ -28026,7 +28026,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:5442:0",
@@ -28104,7 +28104,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:552:0",
@@ -28130,7 +28130,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:5534:0",
@@ -28195,7 +28195,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:5578:0",
@@ -28403,7 +28403,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:5760:0",
@@ -28481,7 +28481,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:58:0",
@@ -28533,7 +28533,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:5836:0",
@@ -28624,7 +28624,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:5897:0",
@@ -28806,7 +28806,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:6017:0",
@@ -28832,7 +28832,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:6037:0",
@@ -28897,7 +28897,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:6072:0",
@@ -29066,7 +29066,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:6211:0",
@@ -29170,7 +29170,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:6259:0",
@@ -30977,7 +30977,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:7354:0",
@@ -32225,7 +32225,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:8373:0",
@@ -32251,7 +32251,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:8397:0",
@@ -32277,7 +32277,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Ruby parser mode requires an adapter: lax,strict"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:8428:0",
@@ -32290,7 +32290,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Ruby parser mode requires an adapter: lax,strict"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:8449:0",
@@ -32433,7 +32433,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:8537:0",
@@ -32446,7 +32446,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:8551:0",
@@ -32459,7 +32459,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:8565:0",
@@ -32472,7 +32472,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:8582:0",
@@ -32485,7 +32485,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:8596:0",
@@ -32498,7 +32498,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:8612:0",
@@ -32511,7 +32511,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:8629:0",
@@ -32524,7 +32524,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:864:0",
@@ -32550,7 +32550,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:8657:0",
@@ -32563,7 +32563,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:8671:0",
@@ -32576,7 +32576,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:8685:0",
@@ -32758,7 +32758,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:8795:0",
@@ -32771,7 +32771,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:8809:0",
@@ -32823,7 +32823,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:8856:0",
@@ -32836,7 +32836,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:887:0",
@@ -32862,7 +32862,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:8884:0",
@@ -32875,7 +32875,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:8898:0",
@@ -32940,7 +32940,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/specs.yml:896:0",
@@ -33525,7 +33525,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:1214:0",
@@ -33733,7 +33733,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:134:0",
@@ -33785,7 +33785,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:1399:0",
@@ -33837,7 +33837,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:1421:0",
@@ -34175,7 +34175,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:161:0",
@@ -34240,7 +34240,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:1646:0",
@@ -34435,7 +34435,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:176:0",
@@ -34552,7 +34552,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:182:0",
@@ -34643,7 +34643,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:1868:0",
@@ -34682,7 +34682,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:1883:0",
@@ -34760,7 +34760,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drop_class_output, ruby_drops, ruby_types"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:1941:0",
@@ -34942,7 +34942,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drop_class_output, ruby_drops, ruby_types"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:2045:0",
@@ -35085,7 +35085,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:2128:0",
@@ -35202,7 +35202,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:2205:0",
@@ -35358,7 +35358,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:2288:0",
@@ -35527,7 +35527,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:2373:0",
@@ -35631,7 +35631,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:2430:0",
@@ -35748,7 +35748,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:2516:0",
@@ -35826,7 +35826,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drop_class_output, ruby_drops, ruby_types"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:257:0",
@@ -36047,7 +36047,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:2679:0",
@@ -36073,7 +36073,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:270:0",
@@ -36320,7 +36320,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:2835:0",
@@ -36424,7 +36424,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:2882:0",
@@ -36515,7 +36515,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:2965:0",
@@ -36580,7 +36580,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:2996:0",
@@ -36918,7 +36918,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:318:0",
@@ -36944,7 +36944,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:3209:0",
@@ -37126,7 +37126,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drop_class_output, ruby_drops, ruby_types"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:3312:0",
@@ -37191,7 +37191,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:3343:0",
@@ -37347,7 +37347,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:3426:0",
@@ -37451,7 +37451,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:3504:0",
@@ -37646,7 +37646,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drop_class_output, ruby_drops, ruby_types"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:36:0",
@@ -37815,7 +37815,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:3684:0",
@@ -38140,7 +38140,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:3911:0",
@@ -38634,7 +38634,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:4247:0",
@@ -38881,7 +38881,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:4399:0",
@@ -38985,7 +38985,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:4479:0",
@@ -39141,7 +39141,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:4588:0",
@@ -39232,7 +39232,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:4634:0",
@@ -39492,7 +39492,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:4772:0",
@@ -39570,7 +39570,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:4835:0",
@@ -39856,7 +39856,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:4977:0",
@@ -39908,7 +39908,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:5020:0",
@@ -40051,7 +40051,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:5106:0",
@@ -40142,7 +40142,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:5154:0",
@@ -40324,7 +40324,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:5251:0",
@@ -40636,7 +40636,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:5488:0",
@@ -40740,7 +40740,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drop_class_output, ruby_drops, ruby_types"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:5556:0",
@@ -40857,7 +40857,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:5631:0",
@@ -41026,7 +41026,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:5711:0",
@@ -41091,7 +41091,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:5766:0",
@@ -41286,7 +41286,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:5908:0",
@@ -41390,7 +41390,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:5962:0",
@@ -41546,7 +41546,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:6047:0",
@@ -41702,7 +41702,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:615:0",
@@ -41728,7 +41728,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:6168:0",
@@ -41819,7 +41819,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:6223:0",
@@ -41871,7 +41871,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:6258:0",
@@ -41962,7 +41962,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drop_class_output, ruby_drops, ruby_types"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:6304:0",
@@ -41975,7 +41975,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:633:0",
@@ -42053,7 +42053,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:6370:0",
@@ -42378,7 +42378,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:6552:0",
@@ -42404,7 +42404,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:6568:0",
@@ -42534,7 +42534,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:6647:0",
@@ -42573,7 +42573,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:6669:0",
@@ -42755,7 +42755,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:6757:0",
@@ -42976,7 +42976,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drop_class_output, ruby_drops, ruby_types"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:739:0",
@@ -43054,7 +43054,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:782:0",
@@ -43171,7 +43171,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:841:0",
@@ -43184,7 +43184,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:870:0",
@@ -43223,7 +43223,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/standard_filters.yml:882:0",
@@ -43587,7 +43587,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/variable_type_filters.yml:175:0",
@@ -43756,7 +43756,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: ruby_drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/variable_type_filters.yml:384:0",
@@ -43769,7 +43769,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Custom host values required: drops"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/liquid_ruby/variable_type_filters.yml:404:0",
@@ -88476,7 +88476,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/shopify_production_recordings/recorded_specs.yml:23148:0",
@@ -88866,7 +88866,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/shopify_production_recordings/recorded_specs.yml:23401:0",
@@ -88892,7 +88892,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/shopify_production_recordings/recorded_specs.yml:2341:0",
@@ -88931,7 +88931,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/shopify_production_recordings/recorded_specs.yml:23434:0",
@@ -89932,7 +89932,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/shopify_production_recordings/recorded_specs.yml:24682:0",
@@ -89945,7 +89945,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/shopify_production_recordings/recorded_specs.yml:24690:0",
@@ -89958,7 +89958,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/shopify_production_recordings/recorded_specs.yml:24698:0",
@@ -89971,7 +89971,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/shopify_production_recordings/recorded_specs.yml:24707:0",
@@ -92168,7 +92168,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/shopify_production_recordings/recorded_specs.yml:26093:0",
@@ -92194,7 +92194,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/shopify_production_recordings/recorded_specs.yml:26106:0",
@@ -92207,7 +92207,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/shopify_production_recordings/recorded_specs.yml:26114:0",
@@ -92428,7 +92428,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/shopify_production_recordings/recorded_specs.yml:26457:0",
@@ -92441,7 +92441,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/shopify_production_recordings/recorded_specs.yml:26467:0",
@@ -96484,7 +96484,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/shopify_production_recordings/recorded_specs.yml:28433:0",
@@ -99552,7 +99552,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/shopify_production_recordings/recorded_specs.yml:4275:0",
@@ -99695,7 +99695,7 @@
         "license": "MIT"
       },
       "status": "excluded",
-      "reason": "Inline rendered-error semantics require an adapter"
+      "reason": "Custom Ruby host class/callback requires a Drop adapter (instantiate descriptor)"
     },
     {
       "id": "liquid-spec:specs/shopify_production_recordings/recorded_specs.yml:4428:0",
