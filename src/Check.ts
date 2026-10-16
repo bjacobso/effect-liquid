@@ -149,6 +149,22 @@ export const check = <E = never, R = never>(
           return T.unknown;
         }
         case "Lookup": {
+          if (
+            document.dialect === "ruby" &&
+            e.root === "self" &&
+            e.segments.length &&
+            !Binding.read(env, "self") &&
+            !(contract._tag === "Record" && Object.hasOwn(contract.fields, "self"))
+          )
+            return inferRaw({ _tag: "SelfLookup", segments: e.segments, span: e.span }, env, guard);
+          if (
+            document.dialect === "ruby" &&
+            e.root === "self" &&
+            !e.segments.length &&
+            !Binding.read(env, "self") &&
+            !(contract._tag === "Record" && Object.hasOwn(contract.fields, "self"))
+          )
+            return unknown("Self scope reference requires a flow summary", e.span);
           const refined = env.locals.get(`@${path(e)}`);
           if (refined) return refined;
           let type =
@@ -271,7 +287,12 @@ export const check = <E = never, R = never>(
             embeddedDepth++;
             try {
               key = infer(
-                embeddedExpression(predicate.value, predicate.span, document.groupedExpressions),
+                embeddedExpression(
+                  predicate.value,
+                  predicate.span,
+                  document.groupedExpressions,
+                  document.dialect,
+                ),
                 next,
               );
             } catch (error) {
@@ -482,6 +503,12 @@ export const check = <E = never, R = never>(
             for (const key of env.locals.keys()) if (key.startsWith("@")) env.locals.delete(key);
             break;
           }
+          case "IfChanged": {
+            const result = body(n.body, env);
+            absorb(result);
+            if (!result.normal) return result;
+            break;
+          }
           case "Capture": {
             const result = body(n.body, env);
             for (const next of [
@@ -514,6 +541,20 @@ export const check = <E = never, R = never>(
             break;
           }
           case "Case": {
+            if (document.dialect === "ruby") {
+              infer(n.expression, env);
+              for (const branch of n.branches) {
+                for (const value of branch.values) infer(value, env);
+                for (let i = 0; i < Math.max(1, branch.values.length); i++) {
+                  const previous = Binding.fork(env),
+                    result = body(branch.body, Binding.fork(env));
+                  absorb(result);
+                  Binding.join(env, [previous, ...(result.normal ? [result.normal] : [])], merge);
+                }
+              }
+              break;
+            }
+
             infer(n.expression, env);
             const branches = n.branches.map((b) => {
               for (const e of b.values) infer(e, env);
@@ -555,6 +596,9 @@ export const check = <E = never, R = never>(
               initial,
               Binding.tagMetadata[n._tag].builtin!,
               T.record({
+                ...(document.dialect === "ruby" && n._tag === "For"
+                  ? { parentloop: Binding.read(env, "forloop") ?? T.nil }
+                  : {}),
                 name: T.string,
                 index: T.number,
                 index0: T.number,
@@ -639,13 +683,19 @@ export const check = <E = never, R = never>(
             body(n.body, env);
             unknown("Layout contract has not been checked", n.span);
             break;
-          case "Partial":
+          case "Partial": {
             infer(n.template, env);
-            for (const e of Object.values(n.args)) infer(e, env);
+            const parameters = Binding.fork(env);
+            for (const [name, e] of Object.entries(n.args))
+              parameters.locals.set(
+                name,
+                infer(e, document.dialect === "ruby" && n.mode === "include" ? parameters : env),
+              );
             if (n.with) infer(n.with.value, env);
             if (n.for) infer(n.for.value, env);
             unknown("Partial contract has not been checked", n.span);
             break;
+          }
           default:
             unknown("Opaque custom tag", (n as Node).span);
         }

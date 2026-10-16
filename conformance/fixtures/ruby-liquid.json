@@ -7268,7 +7268,22 @@
     "upstreamOptions": {},
     "source": "{% include 'locale_variables' echo1: 'test123' %}",
     "context": {},
-    "templates": {},
+    "templates": {
+      "product": "Product: {{ product.title }} ",
+      "locale_variables": "Locale: {{echo1}} {{echo2}}",
+      "variant": "Variant: {{ variant.title }}",
+      "nested_template": "{% include 'header' %} {% include 'body' %} {% include 'footer' %}",
+      "body": "body {% include 'body_detail' %}",
+      "nested_product_template": "Product: {{ nested_product_template.title }} {%include 'details'%} ",
+      "recursively_nested_template": "-{% include 'recursively_nested_template' %}",
+      "pick_a_source": "from TestFileSystem",
+      "assignments": "{% assign foo = 'bar' %}",
+      "break": "{% break %}",
+      "header": "header",
+      "footer": "footer",
+      "body_detail": "body_detail",
+      "details": "details"
+    },
     "expected": {
       "kind": "output",
       "output": "Locale: test123 "
@@ -7293,7 +7308,22 @@
     "upstreamOptions": {},
     "source": "{% include 'locale_variables' echo1: 'test123', echo2: 'test321' %}",
     "context": {},
-    "templates": {},
+    "templates": {
+      "product": "Product: {{ product.title }} ",
+      "locale_variables": "Locale: {{echo1}} {{echo2}}",
+      "variant": "Variant: {{ variant.title }}",
+      "nested_template": "{% include 'header' %} {% include 'body' %} {% include 'footer' %}",
+      "body": "body {% include 'body_detail' %}",
+      "nested_product_template": "Product: {{ nested_product_template.title }} {%include 'details'%} ",
+      "recursively_nested_template": "-{% include 'recursively_nested_template' %}",
+      "pick_a_source": "from TestFileSystem",
+      "assignments": "{% assign foo = 'bar' %}",
+      "break": "{% break %}",
+      "header": "header",
+      "footer": "footer",
+      "body_detail": "body_detail",
+      "details": "details"
+    },
     "expected": {
       "kind": "output",
       "output": "Locale: test123 test321"
@@ -7323,7 +7353,24 @@
         "echo2": "test321"
       }
     },
-    "templates": {},
+    "templates": {
+      "product": "Product: {{ product.title }} ",
+      "locale_variables": "Locale: {{echo1}} {{echo2}}",
+      "variant": "Variant: {{ variant.title }}",
+      "nested_template": "{% include 'header' %} {% include 'body' %} {% include 'footer' %}",
+      "body": "body {% include 'body_detail' %}",
+      "nested_product_template": "Product: {{ nested_product_template.title }} {%include 'details'%} ",
+      "recursively_nested_template": "-{% include 'recursively_nested_template' %}",
+      "pick_a_source": "from TestFileSystem",
+      "assignments": "{% assign foo = 'bar' %}",
+      "break": "{% break %}",
+      "header": "header",
+      "footer": "footer",
+      "body_detail": "body_detail",
+      "details": "details",
+      "test123": "test123",
+      "test321": "test321"
+    },
     "expected": {
       "kind": "output",
       "output": "Locale: test123 test321"
@@ -7348,7 +7395,22 @@
     "upstreamOptions": {},
     "source": "{% include 'assignments' %}{{ foo }}",
     "context": {},
-    "templates": {},
+    "templates": {
+      "product": "Product: {{ product.title }} ",
+      "locale_variables": "Locale: {{echo1}} {{echo2}}",
+      "variant": "Variant: {{ variant.title }}",
+      "nested_template": "{% include 'header' %} {% include 'body' %} {% include 'footer' %}",
+      "body": "body {% include 'body_detail' %}",
+      "nested_product_template": "Product: {{ nested_product_template.title }} {%include 'details'%} ",
+      "recursively_nested_template": "-{% include 'recursively_nested_template' %}",
+      "pick_a_source": "from TestFileSystem",
+      "assignments": "{% assign foo = 'bar' %}",
+      "break": "{% break %}",
+      "header": "header",
+      "footer": "footer",
+      "body_detail": "body_detail",
+      "details": "details"
+    },
     "expected": {
       "kind": "output",
       "output": "bar"
@@ -7373,7 +7435,22 @@
     "upstreamOptions": {},
     "source": "{% include 'body' %}",
     "context": {},
-    "templates": {},
+    "templates": {
+      "product": "Product: {{ product.title }} ",
+      "locale_variables": "Locale: {{echo1}} {{echo2}}",
+      "variant": "Variant: {{ variant.title }}",
+      "nested_template": "{% include 'header' %} {% include 'body' %} {% include 'footer' %}",
+      "body": "body {% include 'body_detail' %}",
+      "nested_product_template": "Product: {{ nested_product_template.title }} {%include 'details'%} ",
+      "recursively_nested_template": "-{% include 'recursively_nested_template' %}",
+      "pick_a_source": "from TestFileSystem",
+      "assignments": "{% assign foo = 'bar' %}",
+      "break": "{% break %}",
+      "header": "header",
+      "footer": "footer",
+      "body_detail": "body_detail",
+      "details": "details"
+    },
     "expected": {
       "kind": "output",
       "output": "body body_detail"
@@ -7398,7 +7475,22 @@
     "upstreamOptions": {},
     "source": "{% include 'nested_template' %}",
     "context": {},
-    "templates": {},
+    "templates": {
+      "product": "Product: {{ product.title }} ",
+      "locale_variables": "Locale: {{echo1}} {{echo2}}",
+      "variant": "Variant: {{ variant.title }}",
+      "nested_template": "{% include 'header' %} {% include 'body' %} {% include 'footer' %}",
+      "body": "body {% include 'body_detail' %}",
+      "nested_product_template": "Product: {{ nested_product_template.title }} {%include 'details'%} ",
+      "recursively_nested_template": "-{% include 'recursively_nested_template' %}",
+      "pick_a_source": "from TestFileSystem",
+      "assignments": "{% assign foo = 'bar' %}",
+      "break": "{% break %}",
+      "header": "header",
+      "footer": "footer",
+      "body_detail": "body_detail",
+      "details": "details"
+    },
     "expected": {
       "kind": "output",
       "output": "header body body_detail footer"
@@ -7427,7 +7519,23 @@
         "title": "Draft 151cm"
       }
     },
-    "templates": {},
+    "templates": {
+      "product": "Product: {{ product.title }} ",
+      "locale_variables": "Locale: {{echo1}} {{echo2}}",
+      "variant": "Variant: {{ variant.title }}",
+      "nested_template": "{% include 'header' %} {% include 'body' %} {% include 'footer' %}",
+      "body": "body {% include 'body_detail' %}",
+      "nested_product_template": "Product: {{ nested_product_template.title }} {%include 'details'%} ",
+      "recursively_nested_template": "-{% include 'recursively_nested_template' %}",
+      "pick_a_source": "from TestFileSystem",
+      "assignments": "{% assign foo = 'bar' %}",
+      "break": "{% break %}",
+      "header": "header",
+      "footer": "footer",
+      "body_detail": "body_detail",
+      "details": "details",
+      "Draft 151cm": "Draft 151cm"
+    },
     "expected": {
       "kind": "output",
       "output": "Product: Draft 151cm details "
@@ -7461,7 +7569,24 @@
         }
       ]
     },
-    "templates": {},
+    "templates": {
+      "product": "Product: {{ product.title }} ",
+      "locale_variables": "Locale: {{echo1}} {{echo2}}",
+      "variant": "Variant: {{ variant.title }}",
+      "nested_template": "{% include 'header' %} {% include 'body' %} {% include 'footer' %}",
+      "body": "body {% include 'body_detail' %}",
+      "nested_product_template": "Product: {{ nested_product_template.title }} {%include 'details'%} ",
+      "recursively_nested_template": "-{% include 'recursively_nested_template' %}",
+      "pick_a_source": "from TestFileSystem",
+      "assignments": "{% assign foo = 'bar' %}",
+      "break": "{% break %}",
+      "header": "header",
+      "footer": "footer",
+      "body_detail": "body_detail",
+      "details": "details",
+      "Draft 151cm": "Draft 151cm",
+      "Element 155cm": "Element 155cm"
+    },
     "expected": {
       "kind": "output",
       "output": "Product: Draft 151cm details Product: Element 155cm details "
@@ -7488,7 +7613,23 @@
     "context": {
       "template": "Test123"
     },
-    "templates": {},
+    "templates": {
+      "product": "Product: {{ product.title }} ",
+      "locale_variables": "Locale: {{echo1}} {{echo2}}",
+      "variant": "Variant: {{ variant.title }}",
+      "nested_template": "{% include 'header' %} {% include 'body' %} {% include 'footer' %}",
+      "body": "body {% include 'body_detail' %}",
+      "nested_product_template": "Product: {{ nested_product_template.title }} {%include 'details'%} ",
+      "recursively_nested_template": "-{% include 'recursively_nested_template' %}",
+      "pick_a_source": "from TestFileSystem",
+      "assignments": "{% assign foo = 'bar' %}",
+      "break": "{% break %}",
+      "header": "header",
+      "footer": "footer",
+      "body_detail": "body_detail",
+      "details": "details",
+      "Test123": "Test123"
+    },
     "expected": {
       "kind": "output",
       "output": "Test123"
@@ -7515,7 +7656,23 @@
     "context": {
       "template": "Test321"
     },
-    "templates": {},
+    "templates": {
+      "product": "Product: {{ product.title }} ",
+      "locale_variables": "Locale: {{echo1}} {{echo2}}",
+      "variant": "Variant: {{ variant.title }}",
+      "nested_template": "{% include 'header' %} {% include 'body' %} {% include 'footer' %}",
+      "body": "body {% include 'body_detail' %}",
+      "nested_product_template": "Product: {{ nested_product_template.title }} {%include 'details'%} ",
+      "recursively_nested_template": "-{% include 'recursively_nested_template' %}",
+      "pick_a_source": "from TestFileSystem",
+      "assignments": "{% assign foo = 'bar' %}",
+      "break": "{% break %}",
+      "header": "header",
+      "footer": "footer",
+      "body_detail": "body_detail",
+      "details": "details",
+      "Test321": "Test321"
+    },
     "expected": {
       "kind": "output",
       "output": "Test321"
@@ -7545,7 +7702,23 @@
         "title": "Draft 151cm"
       }
     },
-    "templates": {},
+    "templates": {
+      "product": "Product: {{ product.title }} ",
+      "locale_variables": "Locale: {{echo1}} {{echo2}}",
+      "variant": "Variant: {{ variant.title }}",
+      "nested_template": "{% include 'header' %} {% include 'body' %} {% include 'footer' %}",
+      "body": "body {% include 'body_detail' %}",
+      "nested_product_template": "Product: {{ nested_product_template.title }} {%include 'details'%} ",
+      "recursively_nested_template": "-{% include 'recursively_nested_template' %}",
+      "pick_a_source": "from TestFileSystem",
+      "assignments": "{% assign foo = 'bar' %}",
+      "break": "{% break %}",
+      "header": "header",
+      "footer": "footer",
+      "body_detail": "body_detail",
+      "details": "details",
+      "Draft 151cm": "Draft 151cm"
+    },
     "expected": {
       "kind": "output",
       "output": "Product: Draft 151cm "
@@ -7570,7 +7743,23 @@
     "upstreamOptions": {},
     "source": "{% if true %}{% include 'foo_if_true' %}{% endif %}",
     "context": {},
-    "templates": {},
+    "templates": {
+      "product": "Product: {{ product.title }} ",
+      "locale_variables": "Locale: {{echo1}} {{echo2}}",
+      "variant": "Variant: {{ variant.title }}",
+      "nested_template": "{% include 'header' %} {% include 'body' %} {% include 'footer' %}",
+      "body": "body {% include 'body_detail' %}",
+      "nested_product_template": "Product: {{ nested_product_template.title }} {%include 'details'%} ",
+      "recursively_nested_template": "-{% include 'recursively_nested_template' %}",
+      "pick_a_source": "from TestFileSystem",
+      "assignments": "{% assign foo = 'bar' %}",
+      "break": "{% break %}",
+      "foo_if_true": "foo_if_true",
+      "header": "header",
+      "footer": "footer",
+      "body_detail": "body_detail",
+      "details": "details"
+    },
     "expected": {
       "kind": "output",
       "output": "foo_if_true"
@@ -7595,7 +7784,22 @@
     "upstreamOptions": {},
     "source": "{% assign page = 'pick_a_source' %}{% include page %}",
     "context": {},
-    "templates": {},
+    "templates": {
+      "product": "Product: {{ product.title }} ",
+      "locale_variables": "Locale: {{echo1}} {{echo2}}",
+      "variant": "Variant: {{ variant.title }}",
+      "nested_template": "{% include 'header' %} {% include 'body' %} {% include 'footer' %}",
+      "body": "body {% include 'body_detail' %}",
+      "nested_product_template": "Product: {{ nested_product_template.title }} {%include 'details'%} ",
+      "recursively_nested_template": "-{% include 'recursively_nested_template' %}",
+      "pick_a_source": "from TestFileSystem",
+      "assignments": "{% assign foo = 'bar' %}",
+      "break": "{% break %}",
+      "header": "header",
+      "footer": "footer",
+      "body_detail": "body_detail",
+      "details": "details"
+    },
     "expected": {
       "kind": "output",
       "output": "from TestFileSystem"
@@ -7624,7 +7828,23 @@
         "title": "Draft 151cm"
       }
     },
-    "templates": {},
+    "templates": {
+      "product": "Product: {{ product.title }} ",
+      "locale_variables": "Locale: {{echo1}} {{echo2}}",
+      "variant": "Variant: {{ variant.title }}",
+      "nested_template": "{% include 'header' %} {% include 'body' %} {% include 'footer' %}",
+      "body": "body {% include 'body_detail' %}",
+      "nested_product_template": "Product: {{ nested_product_template.title }} {%include 'details'%} ",
+      "recursively_nested_template": "-{% include 'recursively_nested_template' %}",
+      "pick_a_source": "from TestFileSystem",
+      "assignments": "{% assign foo = 'bar' %}",
+      "break": "{% break %}",
+      "header": "header",
+      "footer": "footer",
+      "body_detail": "body_detail",
+      "details": "details",
+      "Draft 151cm": "Draft 151cm"
+    },
     "expected": {
       "kind": "output",
       "output": "Product: Draft 151cm "
@@ -7653,7 +7873,23 @@
         "title": "Draft 151cm"
       }
     },
-    "templates": {},
+    "templates": {
+      "product": "Product: {{ product.title }} ",
+      "locale_variables": "Locale: {{echo1}} {{echo2}}",
+      "variant": "Variant: {{ variant.title }}",
+      "nested_template": "{% include 'header' %} {% include 'body' %} {% include 'footer' %}",
+      "body": "body {% include 'body_detail' %}",
+      "nested_product_template": "Product: {{ nested_product_template.title }} {%include 'details'%} ",
+      "recursively_nested_template": "-{% include 'recursively_nested_template' %}",
+      "pick_a_source": "from TestFileSystem",
+      "assignments": "{% assign foo = 'bar' %}",
+      "break": "{% break %}",
+      "header": "header",
+      "footer": "footer",
+      "body_detail": "body_detail",
+      "details": "details",
+      "Draft 151cm": "Draft 151cm"
+    },
     "expected": {
       "kind": "output",
       "output": "Product: Draft 151cm "
@@ -7678,7 +7914,22 @@
     "upstreamOptions": {},
     "source": "{% for i in (1..3) %}{{ i }}{% break %}{{ i }}{% endfor %}",
     "context": {},
-    "templates": {},
+    "templates": {
+      "product": "Product: {{ product.title }} ",
+      "locale_variables": "Locale: {{echo1}} {{echo2}}",
+      "variant": "Variant: {{ variant.title }}",
+      "nested_template": "{% include 'header' %} {% include 'body' %} {% include 'footer' %}",
+      "body": "body {% include 'body_detail' %}",
+      "nested_product_template": "Product: {{ nested_product_template.title }} {%include 'details'%} ",
+      "recursively_nested_template": "-{% include 'recursively_nested_template' %}",
+      "pick_a_source": "from TestFileSystem",
+      "assignments": "{% assign foo = 'bar' %}",
+      "break": "{% break %}",
+      "header": "header",
+      "footer": "footer",
+      "body_detail": "body_detail",
+      "details": "details"
+    },
     "expected": {
       "kind": "output",
       "output": "1"
@@ -7703,7 +7954,22 @@
     "upstreamOptions": {},
     "source": "{% for i in (1..3) %}{{ i }}{% include 'break' %}{{ i }}{% endfor %}",
     "context": {},
-    "templates": {},
+    "templates": {
+      "product": "Product: {{ product.title }} ",
+      "locale_variables": "Locale: {{echo1}} {{echo2}}",
+      "variant": "Variant: {{ variant.title }}",
+      "nested_template": "{% include 'header' %} {% include 'body' %} {% include 'footer' %}",
+      "body": "body {% include 'body_detail' %}",
+      "nested_product_template": "Product: {{ nested_product_template.title }} {%include 'details'%} ",
+      "recursively_nested_template": "-{% include 'recursively_nested_template' %}",
+      "pick_a_source": "from TestFileSystem",
+      "assignments": "{% assign foo = 'bar' %}",
+      "break": "{% break %}",
+      "header": "header",
+      "footer": "footer",
+      "body_detail": "body_detail",
+      "details": "details"
+    },
     "expected": {
       "kind": "output",
       "output": "1"
@@ -7737,7 +8003,24 @@
         }
       ]
     },
-    "templates": {},
+    "templates": {
+      "product": "Product: {{ product.title }} ",
+      "locale_variables": "Locale: {{echo1}} {{echo2}}",
+      "variant": "Variant: {{ variant.title }}",
+      "nested_template": "{% include 'header' %} {% include 'body' %} {% include 'footer' %}",
+      "body": "body {% include 'body_detail' %}",
+      "nested_product_template": "Product: {{ nested_product_template.title }} {%include 'details'%} ",
+      "recursively_nested_template": "-{% include 'recursively_nested_template' %}",
+      "pick_a_source": "from TestFileSystem",
+      "assignments": "{% assign foo = 'bar' %}",
+      "break": "{% break %}",
+      "header": "header",
+      "footer": "footer",
+      "body_detail": "body_detail",
+      "details": "details",
+      "Draft 151cm": "Draft 151cm",
+      "Element 155cm": "Element 155cm"
+    },
     "expected": {
       "kind": "output",
       "output": "Product: Draft 151cm "
@@ -7766,7 +8049,23 @@
         "title": "Draft 151cm"
       }
     },
-    "templates": {},
+    "templates": {
+      "product": "Product: {{ product.title }} ",
+      "locale_variables": "Locale: {{echo1}} {{echo2}}",
+      "variant": "Variant: {{ variant.title }}",
+      "nested_template": "{% include 'header' %} {% include 'body' %} {% include 'footer' %}",
+      "body": "body {% include 'body_detail' %}",
+      "nested_product_template": "Product: {{ nested_product_template.title }} {%include 'details'%} ",
+      "recursively_nested_template": "-{% include 'recursively_nested_template' %}",
+      "pick_a_source": "from TestFileSystem",
+      "assignments": "{% assign foo = 'bar' %}",
+      "break": "{% break %}",
+      "header": "header",
+      "footer": "footer",
+      "body_detail": "body_detail",
+      "details": "details",
+      "Draft 151cm": "Draft 151cm"
+    },
     "expected": {
       "kind": "output",
       "output": "Product: Draft 151cm "
@@ -7800,7 +8099,24 @@
         }
       ]
     },
-    "templates": {},
+    "templates": {
+      "product": "Product: {{ product.title }} ",
+      "locale_variables": "Locale: {{echo1}} {{echo2}}",
+      "variant": "Variant: {{ variant.title }}",
+      "nested_template": "{% include 'header' %} {% include 'body' %} {% include 'footer' %}",
+      "body": "body {% include 'body_detail' %}",
+      "nested_product_template": "Product: {{ nested_product_template.title }} {%include 'details'%} ",
+      "recursively_nested_template": "-{% include 'recursively_nested_template' %}",
+      "pick_a_source": "from TestFileSystem",
+      "assignments": "{% assign foo = 'bar' %}",
+      "break": "{% break %}",
+      "header": "header",
+      "footer": "footer",
+      "body_detail": "body_detail",
+      "details": "details",
+      "Draft 151cm": "Draft 151cm",
+      "Element 155cm": "Element 155cm"
+    },
     "expected": {
       "kind": "output",
       "output": "Product: Draft 151cm Product: Element 155cm "

@@ -20,6 +20,8 @@ export class Expressions {
     readonly token: Token,
     readonly maxDepth: number,
     readonly groupedExpressions = false,
+    readonly dialect: "ruby" | "liquidjs" = "liquidjs",
+    readonly strict2 = false,
   ) {
     const s = token.text;
     let i = 0;
@@ -113,12 +115,24 @@ export class Expressions {
     let attached = true;
     while (this.peek(".") || this.peek("[")) {
       // Whitespace ends the receiver path; still validate ignored suffix syntax.
-      attached &&= this.words[this.pos - 1]?.end === this.words[this.pos]?.start;
+      attached &&=
+        this.dialect === "ruby" || this.words[this.pos - 1]?.end === this.words[this.pos]?.start;
       if (this.take(".")) {
         const key = this.words[this.pos++];
-        if (!key || key.quoted || !property.test(key.text)) this.fail("Expected property");
+        if (
+          !key ||
+          key.quoted ||
+          !property.test(key.text) ||
+          (this.dialect === "ruby" && /^\d/.test(key.text))
+        )
+          this.fail("Expected property");
         if (attached)
-          segments.push({ _tag: "Literal", value: key.text, span: this.position(key.start) });
+          segments.push({
+            _tag: "Literal",
+            lookupKind: "property",
+            value: key.text,
+            span: this.position(key.start),
+          });
       } else {
         this.need("[");
         const key = this.atom();
@@ -163,11 +177,21 @@ export class Expressions {
         result = from;
       }
     } else if (w.text === "[") {
+      if (this.dialect === "ruby" && this.strict2)
+        this.fail("Bare bracket access is not allowed; use self");
       const segments: Expression[] = [this.atom()];
+      if (
+        this.dialect === "ruby" &&
+        segments[0]?._tag === "Literal" &&
+        typeof segments[0].value !== "string"
+      )
+        this.fail("Bare bracket access requires a string or variable");
       this.need("]");
       segments.push(...this.suffix());
       result = { _tag: "SelfLookup", segments, span: this.position(w.start) };
     } else {
+      if (this.dialect === "ruby" && w.text === "contains")
+        this.fail("Reserved operator cannot be a variable", w.start);
       if (!variable.test(w.text)) this.fail("Expected variable or literal", w.start);
       const segments = this.suffix();
       result = { _tag: "Lookup", root: w.text, segments, span: this.position(w.start) };
@@ -175,7 +199,10 @@ export class Expressions {
     if (literalAccess && (result._tag === "Literal" || result._tag === "Special")) {
       const segments = this.suffix();
       if (segments.length)
-        result = { _tag: "Access", receiver: result, segments, span: this.position(w.start) };
+        result =
+          this.dialect === "ruby" && result._tag === "Special"
+            ? { _tag: "Lookup", root: result.value, segments, span: this.position(w.start) }
+            : { _tag: "Access", receiver: result, segments, span: this.position(w.start) };
     }
     this.depth--;
     return result;
@@ -234,7 +261,11 @@ export class Expressions {
   }
 }
 /** Parse an expression string without executing it or rewriting it as a template. */
-export function readExpression(source: Source, groupedExpressions = false): Expression {
+export function readExpression(
+  source: Source,
+  groupedExpressions = false,
+  dialect: "liquidjs" | "ruby" = "liquidjs",
+): Expression {
   if (source.text.length > 1_000_000)
     throw new ParseError({
       message: "Expression source limit exceeded",
@@ -244,6 +275,7 @@ export function readExpression(source: Source, groupedExpressions = false): Expr
     { kind: "output", text: source.text, offset: 0, span: span(source.id, 0, source.text.length) },
     128,
     groupedExpressions,
+    dialect,
   );
   const expression = parser.pipeline(true);
   parser.done();

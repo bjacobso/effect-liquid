@@ -67,6 +67,7 @@ function format(
   instant = date,
   locale = "en-US",
   allocationLimit = 10_000_000,
+  ruby = false,
 ): string {
   const year = date.getUTCFullYear();
   const month = date.getUTCMonth();
@@ -91,6 +92,10 @@ function format(
             : "th";
   const localize = (options: Intl.DateTimeFormatOptions) =>
     new Intl.DateTimeFormat(locale, { ...options, timeZone: "UTC" }).format(date);
+  const thursday = new Date(Date.UTC(year, month, day));
+  thursday.setUTCDate(thursday.getUTCDate() + 4 - (weekday || 7));
+  const isoYear = thursday.getUTCFullYear(),
+    isoWeek = Math.ceil(((thursday.getTime() - Date.UTC(isoYear, 0, 1)) / 86400000 + 1) / 7);
   const codes: Record<string, string> = {
     a: locale === "en-US" ? weekdays[weekday]!.slice(0, 3) : localize({ weekday: "short" }),
     A: locale === "en-US" ? weekdays[weekday]! : localize({ weekday: "long" }),
@@ -127,9 +132,28 @@ function format(
     t: "\t",
     n: "\n",
     "%": "%",
-    c: date.toLocaleString("en-US", { timeZone: "UTC" }),
-    x: date.toLocaleDateString("en-US", { timeZone: "UTC" }),
-    X: date.toLocaleTimeString("en-US", { timeZone: "UTC" }),
+    c: ruby
+      ? `${weekdays[weekday]!.slice(0, 3)} ${months[month]!.slice(0, 3)} ${pad(day, 2, " ")} ${pad(hour)}:${pad(date.getUTCMinutes())}:${pad(date.getUTCSeconds())} ${year}`
+      : date.toLocaleString("en-US", { timeZone: "UTC" }),
+    x: ruby
+      ? `${pad(month + 1)}/${pad(day)}/${String(year).slice(-2)}`
+      : date.toLocaleDateString("en-US", { timeZone: "UTC" }),
+    X: ruby
+      ? `${pad(hour)}:${pad(date.getUTCMinutes())}:${pad(date.getUTCSeconds())}`
+      : date.toLocaleTimeString("en-US", { timeZone: "UTC" }),
+    ...(ruby
+      ? {
+          r: `${pad(hour % 12 || 12)}:${pad(date.getUTCMinutes())}:${pad(date.getUTCSeconds())} ${hour < 12 ? "AM" : "PM"}`,
+          V: pad(isoWeek),
+          G: String(isoYear),
+          g: String(isoYear).slice(-2),
+          R: `${pad(hour)}:${pad(date.getUTCMinutes())}`,
+          T: `${pad(hour)}:${pad(date.getUTCMinutes())}:${pad(date.getUTCSeconds())}`,
+          F: `${year}-${pad(month + 1)}-${pad(day)}`,
+          D: `${pad(month + 1)}/${pad(day)}/${String(year).slice(-2)}`,
+          v: `${pad(day, 2, " ")}-${months[month]!.slice(0, 3)}-${year}`,
+        }
+      : {}),
   };
   return pattern.replace(
     /%([-_0^#:]+)?(\d+)?([EO])?(.)/g,
@@ -182,7 +206,13 @@ function run(
   args: readonly Value[],
   context?: FilterCallContext,
 ): Value {
-  const date = parse(value);
+  if (context?.dialect === "ruby" && name === "date" && (args[0] == null || args[0] === ""))
+    return value;
+  const date = parse(
+    context?.dialect === "ruby" && typeof value === "string" && /^(now|today)$/i.test(value)
+      ? value.toLowerCase()
+      : value,
+  );
   if (!date) return value;
   const options: DateOptions = context?.date ?? {};
   const explicit = name === "date" && args.length > 1 && !context?.missingArguments[1];
@@ -191,7 +221,12 @@ function run(
       ? 0
       : (args[1] ?? options.timezoneOffset)
     : options.timezoneOffset;
-  if (options.preserveTimezones && !explicit && typeof value === "string" && !/^\d+$/.test(value)) {
+  if (
+    (options.preserveTimezones || context?.dialect === "ruby") &&
+    !explicit &&
+    typeof value === "string" &&
+    !/^\d+$/.test(value)
+  ) {
     const zone = /(?:([zZ])|([+-])(\d{2}):?(\d{2}))$/.exec(value);
     timezone = zone?.[1]
       ? 0
@@ -212,6 +247,7 @@ function run(
       date,
       options.locale || "en-US",
       context?.allocationLimit,
+      context?.dialect === "ruby",
     );
   if (name === "date")
     return fmt(

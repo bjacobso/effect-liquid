@@ -85,3 +85,52 @@ it("excludes Ruby host-class descriptors instead of pretending they are records"
   ).toEqual([]);
   expect(inventory[0].reason).toContain("Drop adapter");
 });
+
+it("encodes YAML symbol keys without changing quoted colon-prefixed strings", () => {
+  const [f] = yamlCases(
+    'specs:\n- template: "{{x}}"\n  environment:\n    x:\n      :foo: bar\n      ":literal": value\n  expected: "x"\n',
+    "specs/symbol.yml",
+    ".context",
+  );
+  expect(f.globals.x.$liquid.entries).toEqual([
+    [{ $liquid: { type: "symbol", value: "foo" } }, "bar"],
+    [":literal", "value"],
+  ]);
+});
+
+it.skipIf(!ruby)("extracts static Ruby file-system case tables and literal-name fallbacks", () => {
+  const root = mkdtempSync(join(tmpdir(), "liquid-stub-"));
+  try {
+    const file = join(root, "test.rb");
+    writeFileSync(
+      file,
+      `class TestFileSystem
+ def read_template_file(template_path)
+ case template_path
+ when 'p' then '{{ x }}'
+ else template_path
+ end
+ end
+end
+class Test
+ def setup
+ Liquid::Template.file_system = TestFileSystem.new
+ end
+ def test_static
+ assert_template_result('ok', "{% include 'p' %}{% include 'q' %}", {'x'=>'ok'})
+ end
+end
+`,
+    );
+    const [{ result }] = JSON.parse(
+      execFileSync("ruby", ["scripts/conformance/import-ruby.rb"], {
+        input: JSON.stringify([{ absolute: file, repository: "ruby-liquid" }]),
+        encoding: "utf8",
+      }),
+    );
+    expect(result.fixtures[0].templates.p).toBe("{{ x }}");
+    expect(result.fixtures[0].templates.q).toBe("q");
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});

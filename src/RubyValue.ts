@@ -3,6 +3,14 @@ import type { Value } from "./Value.js";
 export type TaggedValue = {
   readonly $liquid: { readonly [key: string]: Value };
 };
+const selves = new WeakMap<object, readonly Readonly<Record<string, Value | undefined>>[]>();
+export const isSelf = (value: unknown): value is Record<string, Value> =>
+  !!value && typeof value === "object" && selves.has(value);
+export function self(scopes: readonly Readonly<Record<string, Value | undefined>>[]): Value {
+  const value = { $self: true };
+  selves.set(value, scopes);
+  return value;
+}
 export const float = (value: number | string): TaggedValue => ({
   $liquid: { type: "float", value: String(value) },
 });
@@ -63,11 +71,14 @@ export function inspect(value: Value | undefined): string {
 }
 export function toString(value: Value | undefined): string {
   if (value == null) return "";
+  if (isSelf(value)) return "Liquid::SelfDrop";
   const t = tag(value);
   if (t?.type === "integer" || t?.type === "symbol") return String(t.value);
   if (t?.type === "float" || t?.type === "decimal") {
     const n = Number(t.value);
     const s = String(n);
+    if (s.includes("e"))
+      return s.replace(/^(-?\d+)(e)/, "$1.0$2").replace(/e([+-]?)(\d)$/, "e$10$2");
     return Number.isInteger(n) && !s.includes("e") ? `${Object.is(n, -0) ? "-0" : s}.0` : s;
   }
   if (t?.type === "range")
@@ -80,13 +91,57 @@ export const output = (value: Value | undefined): string =>
 export function lookup(
   value: Value | undefined,
   key: Value | undefined,
+  command = true,
 ): { readonly found: boolean; readonly value?: Value } {
-  const t = tag(value);
-  if (!t) return { found: false };
   const name = toString(key);
+  if (["__proto__", "constructor", "prototype"].includes(name)) return { found: true };
+  if (isSelf(value)) {
+    const scopes = selves.get(value)!;
+    for (let i = scopes.length - 1; i >= 0; i--) {
+      const property = Object.getOwnPropertyDescriptor(scopes[i]!, name);
+      if (property) return { found: true, value: property.value as Value };
+    }
+    return { found: true };
+  }
+  const t = tag(value);
+  if (!t) {
+    if (!command && array(value) && typeof key !== "number") return { found: true };
+    if (!command && typeof value === "string" && typeof key === "string")
+      return { found: true, ...(value.includes(key) ? { value: key } : {}) };
+    if (
+      (!command || name === "length") &&
+      (array(value) || typeof value === "string") &&
+      ["size", "length", "first", "last"].includes(name)
+    )
+      return { found: true };
+    if (
+      !command &&
+      value &&
+      typeof value === "object" &&
+      !array(value) &&
+      !Object.hasOwn(value, name)
+    )
+      return { found: true };
+    if (command && name === "size" && typeof value === "number" && Number.isInteger(value))
+      return { found: true, value: 8 };
+    if ((name === "first" || name === "last") && typeof value === "string")
+      return {
+        found: true,
+        value: Array.from(value)[name === "first" ? 0 : Array.from(value).length - 1] ?? null,
+      };
+    if (
+      name === "first" &&
+      value &&
+      typeof value === "object" &&
+      !array(value) &&
+      !Object.hasOwn(value, name)
+    )
+      return { found: true, value: Object.entries(value as Record<string, Value>)[0] ?? null };
+    return { found: false };
+  }
   if (t.type === "hash") {
     const entries = t.entries as readonly (readonly Value[])[];
-    const pair = entries.find(([k]) => toString(k) === name);
+    const pair = entries.find(([k]) => equal(k, key));
     return {
       found: true,
       ...(pair ? { value: pair[1]! } : name === "size" ? { value: entries.length } : {}),
@@ -111,6 +166,7 @@ export function lookup(
 }
 export function equal(a: Value | undefined, b: Value | undefined): boolean {
   if (a == null && b == null) return true;
+  if (isSelf(a) && isSelf(b)) return selves.get(a) === selves.get(b);
   if (isNumeric(a) && isNumeric(b)) return numeric(a) === numeric(b);
   if (array(a) && array(b)) return a.length === b.length && a.every((v, i) => equal(v, b[i]));
   if (tag(a) || tag(b)) return JSON.stringify(a) === JSON.stringify(b);

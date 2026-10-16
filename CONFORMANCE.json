@@ -3703,11 +3703,11 @@
       "ruby": "Recorded upstream Ruby expectation"
     },
     "crossEngine": "informational",
-    "phase": 3,
+    "phase": 4,
     "engineBehaviorChanged": false,
     "counts": {
       "ruby": {
-        "pass": 4915,
+        "pass": 5331,
         "total": 5338
       },
       "liquidjs": {
@@ -3729,12 +3729,41 @@
       "raw/endraw delimiters",
       "Ruby typed values and inspect/string coercion",
       "numeric coercion, arithmetic, division and comparisons",
-      "Range identity and iteration"
+      "Range identity and iteration",
+      "Ruby strict/strict2 grammar and self references",
+      "table rows, blank blocks, counters/cycles, parentloop, render aliases, duplicate case matches",
+      "Ruby standard filters, ISO strftime, doc/ifchanged/nested comments"
     ],
     "tests": [
       "test/partial-bindings.test.ts",
       "test/whitespace-options.test.ts",
       "test/typed-liquid.test.ts"
-    ]
+    ],
+    "rubyOnlyFilters": [
+      "h",
+      "base64_url_safe_encode",
+      "base64_url_safe_decode",
+      "flatten"
+    ],
+    "remaining": [
+      "Ruby host callbacks/Drops",
+      "Ruby lax parsing",
+      "Four fixed-clock expectations (oracle phase)",
+      "One recorded render-for expectation requires oracle confirmation"
+    ],
+    "rubyOnlyTags": {
+      "ifchanged": {
+        "status": "partial",
+        "tests": [
+          "test/ruby-semantics.test.ts"
+        ]
+      },
+      "doc": {
+        "status": "partial",
+        "tests": [
+          "test/parser-compat.test.ts"
+        ]
+      }
+    }
   }
 }

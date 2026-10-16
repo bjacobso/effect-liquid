@@ -92,6 +92,7 @@ export interface TagMetadata {
 const shared: TagMetadata = { expressions: [], bodies: [], scope: "shared", control: "normal" };
 export const tagMetadata: Readonly<Record<import("./Ast.js").Node["_tag"], TagMetadata>> = {
   Text: shared,
+  IfChanged: { ...shared, bodies: ["body"] },
   Output: { ...shared, expressions: ["expression"] },
   Assign: { ...shared, expressions: ["expression"] },
   Counter: shared,

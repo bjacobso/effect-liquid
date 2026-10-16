@@ -5,6 +5,7 @@ export type LiteralValue = null | boolean | number | string;
 export type Expression =
   | {
       readonly _tag: "Literal";
+      readonly lookupKind?: "property";
       readonly numericKind?: "integer" | "float";
       readonly value: LiteralValue;
       readonly span: Span;
@@ -50,6 +51,7 @@ export interface PartialBinding {
   readonly alias?: string;
 }
 export type Node =
+  | { readonly _tag: "IfChanged"; readonly body: readonly Node[]; readonly span: Span }
   | {
       readonly _tag: "Counter";
       readonly name: string;
@@ -64,7 +66,7 @@ export type Node =
       readonly key: string;
       readonly span: Span;
     }
-  | { readonly _tag: "Text"; readonly value: string; readonly span: Span }
+  | { readonly _tag: "Text"; readonly raw?: true; readonly value: string; readonly span: Span }
   | { readonly _tag: "Output"; readonly expression: Expression; readonly span: Span }
   | {
       readonly _tag: "Assign";
@@ -148,6 +150,7 @@ export type Node =
     };
 export interface Document {
   readonly dialect?: Dialect;
+  readonly errorMode?: "strict" | "strict2";
   readonly parseLimit?: number;
   readonly whitespace?: WhitespaceOptions;
   readonly delimiters?: DelimiterOptions;

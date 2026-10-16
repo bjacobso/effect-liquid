@@ -14,6 +14,7 @@ class Templates {
     readonly groupedExpressions = false,
     readonly orderedFilterParameters = false,
     readonly dialect: Dialect = "liquidjs",
+    readonly errorMode: "strict" | "strict2" = "strict",
   ) {}
   tag() {
     const t = this.tokens[this.pos];
@@ -25,7 +26,12 @@ class Templates {
       yield;
       const t = this.tokens[this.pos++]!;
       if (t.kind === "text") {
-        nodes.push({ _tag: "Text", value: t.text, span: t.span });
+        nodes.push({
+          _tag: "Text",
+          ...(t.raw ? { raw: true as const } : {}),
+          value: t.text,
+          span: t.span,
+        });
         continue;
       }
       if (depth > this.maxDepth)
@@ -54,6 +60,7 @@ class Templates {
           this.groupedExpressions,
           this.orderedFilterParameters,
           this.dialect,
+          this.errorMode,
         ).body([], depth + 1, loop);
         for (const node of nested) nodes.push(node);
         continue;
@@ -67,19 +74,30 @@ class Templates {
         continue;
       }
       if (t.kind === "tag" && t.text.trim() === "comment") {
-        while (this.pos < this.tokens.length && this.tag() !== "endcomment") {
+        let nesting = 1;
+        while (this.pos < this.tokens.length && nesting) {
+          const name = this.tag();
           this.pos++;
           yield;
+          if (name === "comment" && this.dialect === "ruby") nesting++;
+          else if (name === "endcomment") nesting--;
         }
-        if (this.pos === this.tokens.length)
-          throw new ParseError({ message: "Unclosed comment", span: t.span });
-        this.pos++;
+        if (nesting) throw new ParseError({ message: "Unclosed comment", span: t.span });
         continue;
       }
-      const e = new Expressions(t, this.maxDepth, this.groupedExpressions);
+      const e = new Expressions(
+        t,
+        this.maxDepth,
+        this.groupedExpressions,
+        this.dialect,
+        this.errorMode === "strict2",
+      );
       if (depth > this.maxDepth) e.fail("Template nesting limit exceeded");
       if (t.kind === "output") {
-        const expression = e.pipeline();
+        const expression: Expression =
+          this.dialect === "ruby" && !e.words.length
+            ? { _tag: "Literal", value: null, span: t.span }
+            : e.pipeline();
         e.done();
         nodes.push({ _tag: "Output", expression, span: t.span });
         continue;
@@ -140,6 +158,8 @@ class Templates {
             this.tokens[this.pos++]!,
             this.maxDepth,
             this.groupedExpressions,
+            this.dialect,
+            this.errorMode === "strict2",
           );
           b.need("elsif");
           const condition = b.condition();
@@ -155,6 +175,8 @@ class Templates {
             this.tokens[this.pos++]!,
             this.maxDepth,
             this.groupedExpressions,
+            this.dialect,
+            this.errorMode === "strict2",
           );
           b.need("else");
           b.done();
@@ -196,6 +218,8 @@ class Templates {
             e.need(":");
             cols = e.atom();
           } else if (tag === "for" && e.take("reversed")) {
+            if (this.dialect === "ruby" && modifiers.length)
+              e.fail("reversed must precede named options");
             reversed = true;
             recordModifier("reversed");
           } else if (e.take("limit")) {
@@ -239,6 +263,8 @@ class Templates {
             this.tokens[this.pos++]!,
             this.maxDepth,
             this.groupedExpressions,
+            this.dialect,
+            this.errorMode === "strict2",
           );
           b.need("else");
           b.done();
@@ -270,11 +296,37 @@ class Templates {
         if (leading.some((n) => n._tag !== "Text" || n.value.trim()))
           e.fail("Only whitespace is allowed before when");
         const branches: { values: Expression[]; body: Node[] }[] = [];
+        if (this.dialect === "ruby") {
+          while (this.tag() === "when" || this.tag() === "else") {
+            const b = new Expressions(
+              this.tokens[this.pos++]!,
+              this.maxDepth,
+              this.groupedExpressions,
+              this.dialect,
+              this.errorMode === "strict2",
+            );
+            const name = b.name(),
+              values: Expression[] = [];
+            if (name === "when") {
+              values.push(b.atom());
+              while (b.take(",") || b.take("or")) values.push(b.atom());
+            }
+            b.done();
+            branches.push({
+              values,
+              body: yield* this.body(["when", "else", "endcase"], depth + 1, loop),
+            });
+          }
+          nodes.push({ _tag: "Case", expression, branches, otherwise: [], span: end("endcase") });
+          continue;
+        }
         while (this.tag() === "when") {
           const b = new Expressions(
             this.tokens[this.pos++]!,
             this.maxDepth,
             this.groupedExpressions,
+            this.dialect,
+            this.errorMode === "strict2",
           );
           b.need("when");
           const values = [b.atom()];
@@ -291,6 +343,8 @@ class Templates {
             this.tokens[this.pos++]!,
             this.maxDepth,
             this.groupedExpressions,
+            this.dialect,
+            this.errorMode === "strict2",
           );
           b.need("else");
           b.done();
@@ -308,6 +362,10 @@ class Templates {
       } else if (tag === "break" || tag === "continue") {
         e.done();
         nodes.push({ _tag: tag === "break" ? "Break" : "Continue", span: t.span });
+      } else if (tag === "ifchanged" && this.dialect === "ruby") {
+        e.done();
+        const body = yield* this.body(["endifchanged"], depth + 1, loop);
+        nodes.push({ _tag: "IfChanged", body, span: end("endifchanged") });
       } else if (tag === "block") {
         const name = e.pos < e.words.length ? e.name() : "";
         e.done();
@@ -334,6 +392,12 @@ class Templates {
         });
       } else if (tag === "render" || tag === "include") {
         const template = e.atom(false);
+        if (
+          this.dialect === "ruby" &&
+          tag === "render" &&
+          (template._tag !== "Literal" || typeof template.value !== "string")
+        )
+          e.fail("Render requires a literal template name");
         const args: Record<string, Expression> = Object.create(null);
         let withBinding: PartialBinding | undefined;
         let forBinding: PartialBinding | undefined;
@@ -420,6 +484,7 @@ export const parse = (
       options.groupedExpressions,
       options.orderedFilterParameters,
       options.dialect,
+      options.errorMode,
     ).body();
     let result: IteratorResult<void, Node[]>;
     do {
@@ -436,10 +501,55 @@ export const parse = (
       });
       if (!result.done) yield* Effect.yieldNow();
     } while (!result.done);
-    const body = result.value;
+    const blank = (body: readonly Node[]): boolean =>
+      body.every((n) =>
+        n._tag === "Text"
+          ? !n.raw && !n.value.trim()
+          : n._tag === "Assign" ||
+            n._tag === "Capture" ||
+            (n._tag === "If" && n.branches.every((b) => blank(b.body)) && blank(n.otherwise)) ||
+            (n._tag === "For" && blank(n.body) && blank(n.otherwise)) ||
+            (n._tag === "Case" && n.branches.every((b) => blank(b.body)) && blank(n.otherwise)),
+      );
+    const suppress = (body: readonly Node[]): Node[] =>
+      body.map((n) => {
+        if (n._tag === "If") {
+          const empty = n.branches.every((b) => blank(b.body)) && blank(n.otherwise);
+          return {
+            ...n,
+            branches: n.branches.map((b) => ({
+              ...b,
+              body: suppress(empty ? b.body.filter((x) => x._tag !== "Text") : b.body),
+            })),
+            otherwise: suppress(empty ? n.otherwise.filter((x) => x._tag !== "Text") : n.otherwise),
+          };
+        }
+        if (n._tag === "Case") {
+          const empty = n.branches.every((b) => blank(b.body)) && blank(n.otherwise);
+          return {
+            ...n,
+            branches: n.branches.map((b) => ({
+              ...b,
+              body: suppress(empty ? b.body.filter((x) => x._tag !== "Text") : b.body),
+            })),
+            otherwise: suppress(empty ? n.otherwise.filter((x) => x._tag !== "Text") : n.otherwise),
+          };
+        }
+        if (n._tag === "For") {
+          const empty = blank(n.body) && blank(n.otherwise);
+          return {
+            ...n,
+            body: suppress(empty ? n.body.filter((x) => x._tag !== "Text") : n.body),
+            otherwise: suppress(empty ? n.otherwise.filter((x) => x._tag !== "Text") : n.otherwise),
+          };
+        }
+        return n;
+      });
+    const body = options.dialect === "ruby" ? suppress(result.value) : result.value;
     return {
       _tag: "Document" as const,
       dialect: options.dialect ?? "liquidjs",
+      ...(options.errorMode ? { errorMode: options.errorMode } : {}),
       ...(options.parseLimit === undefined ? {} : { parseLimit: options.parseLimit }),
       source,
       body,

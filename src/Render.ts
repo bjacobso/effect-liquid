@@ -27,6 +27,7 @@ import {
   type Value,
 } from "./Value.js";
 export interface Config extends DateOptions {
+  readonly counterSeeds?: Readonly<Record<string, number>>;
   readonly memoryLimit?: number | undefined;
   readonly renderLimit?: number | undefined;
   readonly strictVariables: boolean;
@@ -41,6 +42,7 @@ export interface Config extends DateOptions {
   readonly globals: Readonly<Record<string, Value>>;
 }
 export const defaults: Config = {
+  counterSeeds: {},
   strictVariables: false,
   strictFilters: true,
   jekyllWhere: false,
@@ -66,11 +68,14 @@ export const layer = (config: Partial<Config> = {}) =>
   Layer.succeed(RenderConfig, { ...defaults, ...config });
 interface State {
   dialect: Dialect;
+  errorMode: "strict" | "strict2";
   whitespace: WhitespaceOptions & { readonly parseLimit?: number };
   delimiters: DelimiterOptions;
   groupedExpressions: boolean;
   orderedFilterParameters: boolean;
   scopes: Record<string, Value | undefined>[];
+  changed: string | undefined;
+  counters: Map<string, number>;
   cycles: Map<string, number>;
   continuations: Map<string, number>;
   steps: number;
@@ -135,6 +140,8 @@ function get(state: State, name: string): Value | undefined {
       const value = Ruby.lookup(state.scopes[i]! as Record<string, Value>, name).value;
       if (value !== undefined) return value;
     }
+    if (i === 1 && state.dialect === "ruby" && state.counters.has(name))
+      return state.counters.get(name);
     const property = Object.getOwnPropertyDescriptor(state.scopes[i]!, name);
     if (property) return property.value as Value | undefined;
   }
@@ -163,9 +170,10 @@ function lookupValue(
   value: Value | undefined,
   key: Value | undefined,
   state: State,
+  command = true,
 ): Value | undefined {
   if (state.dialect === "ruby") {
-    const found = Ruby.lookup(value, key);
+    const found = Ruby.lookup(value, key, command);
     if (found.found) return found.value;
   }
   return lookup(value, key);
@@ -203,13 +211,54 @@ function* evaluate<E, R>(
     case "Access": {
       let value = yield* evaluate(expression.receiver, state, registry);
       for (const segment of expression.segments)
-        value = lookupValue(value, yield* evaluate(segment, state, registry), state);
+        value =
+          state.dialect === "ruby" &&
+          isArray(value) &&
+          segment._tag === "Literal" &&
+          !segment.lookupKind &&
+          (segment.value === "first" || segment.value === "last")
+            ? undefined
+            : lookupValue(
+                value,
+                yield* evaluate(segment, state, registry),
+                state,
+                segment._tag === "Literal" && segment.lookupKind === "property",
+              );
       return value;
     }
     case "Lookup": {
       let value = get(state, expression.root);
-      for (const segment of expression.segments)
-        value = lookupValue(value, yield* evaluate(segment, state, registry), state);
+      if (
+        state.dialect === "ruby" &&
+        expression.root === "self" &&
+        value === undefined &&
+        expression.segments.length === 0
+      )
+        return Ruby.self(state.scopes);
+      let segments = expression.segments;
+      if (
+        state.dialect === "ruby" &&
+        expression.root === "self" &&
+        value === undefined &&
+        segments.length
+      ) {
+        value = get(state, Ruby.toString(yield* evaluate(segments[0]!, state, registry)));
+        segments = segments.slice(1);
+      }
+      for (const segment of segments)
+        value =
+          state.dialect === "ruby" &&
+          isArray(value) &&
+          segment._tag === "Literal" &&
+          !segment.lookupKind &&
+          (segment.value === "first" || segment.value === "last")
+            ? undefined
+            : lookupValue(
+                value,
+                yield* evaluate(segment, state, registry),
+                state,
+                segment._tag === "Literal" && segment.lookupKind === "property",
+              );
       if (value === undefined && state.config.strictVariables && state.lenientDepth === 0)
         return yield* perform(
           Effect.fail(
@@ -226,7 +275,19 @@ function* evaluate<E, R>(
       const [first, ...rest] = expression.segments;
       let value = get(state, stringify(yield* evaluate(first!, state, registry)));
       for (const segment of rest)
-        value = lookupValue(value, yield* evaluate(segment, state, registry), state);
+        value =
+          state.dialect === "ruby" &&
+          isArray(value) &&
+          segment._tag === "Literal" &&
+          !segment.lookupKind &&
+          (segment.value === "first" || segment.value === "last")
+            ? undefined
+            : lookupValue(
+                value,
+                yield* evaluate(segment, state, registry),
+                state,
+                segment._tag === "Literal" && segment.lookupKind === "property",
+              );
       if (value === undefined && state.config.strictVariables && state.lenientDepth === 0)
         return yield* perform(
           Effect.fail(
@@ -303,6 +364,7 @@ function* evaluate<E, R>(
         case "!=":
           return !eq;
         case "contains":
+          if (state.dialect === "ruby" && right == null) return false;
           return typeof left === "string"
             ? left.includes(stringify(right))
             : isArray(left) && left.some((x) => equal(x, right));
@@ -375,6 +437,7 @@ function* evaluate<E, R>(
                 predicateText,
                 expression.args[1]?.span ?? expression.span,
                 state.groupedExpressions,
+                state.dialect,
               ),
             catch: (cause) => {
               if (cause instanceof ParseError)
@@ -542,6 +605,14 @@ function* nodes<E, R>(
     const ev = (expression: Expression) => evaluate(expression, state, registry);
     const emit = (text: string) => output(text, state, node.span);
     switch (node._tag) {
+      case "IfChanged": {
+        const text = yield* buffer(nodes(node.body, state, registry));
+        if (text !== state.changed) {
+          state.changed = text;
+          yield* emit(text);
+        }
+        break;
+      }
       case "Text":
         yield* emit(node.value);
         break;
@@ -570,18 +641,31 @@ function* nodes<E, R>(
       case "Counter": {
         const environment = state.scopes[1]!;
         const previous = Object.getOwnPropertyDescriptor(environment, node.name)?.value;
-        const current = typeof previous === "number" ? previous : 0;
+        const current =
+          state.dialect === "ruby"
+            ? (state.counters.get(node.name) ?? 0)
+            : typeof previous === "number"
+              ? previous
+              : 0;
+        if (state.dialect === "ruby") state.counters.set(node.name, current + node.direction);
         environment[node.name] = current + node.direction;
         yield* emit(String(node.direction === 1 ? current : current - 1));
         break;
       }
       case "Cycle": {
         const group = node.group ? yield* ev(node.group) : undefined;
-        const key = JSON.stringify([String(group), node.key]);
+        const key =
+          state.dialect === "ruby"
+            ? node.group
+              ? `group:${Ruby.toString(group)}`
+              : node.values.some((v) => v._tag !== "Literal")
+                ? `${node.span.sourceId}:${node.span.start}`
+                : node.key
+            : JSON.stringify([String(group), node.key]);
         const index = state.cycles.get(key) ?? 0;
         state.cycles.set(key, (index + 1) % node.values.length);
         const value = yield* ev(node.values[index]!);
-        yield* emit(value ? stringify(value) : "");
+        yield* emit(state.dialect === "ruby" ? Ruby.output(value) : value ? stringify(value) : "");
         break;
       }
       case "Assign":
@@ -617,6 +701,10 @@ function* nodes<E, R>(
         const value = node.expression._tag === "Special" ? "" : yield* ev(node.expression);
         let branchHit = false;
         for (const branch of node.branches) {
+          if (state.dialect === "ruby" && !branch.values.length) {
+            if (!branchHit) yield* nodes(branch.body, state, registry);
+            continue;
+          }
           for (const test of branch.values) {
             const matched =
               test._tag === "Special"
@@ -629,7 +717,7 @@ function* nodes<E, R>(
             if (matched) {
               branchHit = true;
               yield* nodes(branch.body, state, registry);
-              break;
+              if (state.dialect !== "ruby") break;
             }
           }
         }
@@ -639,6 +727,12 @@ function* nodes<E, R>(
       case "For":
       case "TableRow": {
         const collection = yield* ev(node.collection);
+        if (
+          state.dialect === "ruby" &&
+          node._tag === "TableRow" &&
+          (collection == null || collection === false)
+        )
+          break;
         let values =
           state.dialect === "ruby" && Ruby.tag(collection)?.type === "range"
             ? rubySequence(collection)
@@ -647,21 +741,28 @@ function* nodes<E, R>(
           yield* nodes(node.otherwise, state, registry);
           break;
         }
+        const convert = (v: Value | undefined) =>
+          state.dialect === "ruby" ? Math.trunc(Ruby.numeric(v)) : Number(v);
         const offset =
           node._tag === "For" && node.offsetContinue
             ? (state.continuations.get(node.key) ?? 0)
             : node.offset
-              ? Number(yield* ev(node.offset))
+              ? convert(yield* ev(node.offset))
               : 0;
-        const limit = node.limit ? Number(yield* ev(node.limit)) : values.length;
+        const limit = node.limit ? convert(yield* ev(node.limit)) : values.length;
         if (node._tag === "For") {
           for (const modifier of node.modifiers ?? ["offset", "limit", "reversed"])
             if (modifier === "offset") values = values.slice(offset);
             else if (modifier === "limit") values = values.slice(0, limit);
             else if (node.reversed) values = [...values].reverse();
           state.continuations.set(node.key, offset + values.length);
-        } else values = values.slice(offset, offset + limit);
-        const cols =
+        } else if (!(state.dialect === "ruby" && typeof collection === "string"))
+          values = values.slice(offset, offset + limit);
+        if (state.dialect === "ruby" && node._tag === "TableRow" && !values.length) {
+          yield* emit('<tr class="row1">\n</tr>\n');
+          break;
+        }
+        let cols =
           node._tag === "TableRow" && node.cols
             ? Number(
                 node.cols._tag === "Literal" && node.cols.value === null
@@ -669,6 +770,10 @@ function* nodes<E, R>(
                   : (yield* ev(node.cols)) || values.length,
               )
             : values.length;
+        if (state.dialect === "ruby" && node._tag === "TableRow" && node.cols) {
+          const raw = yield* ev(node.cols);
+          cols = isArray(raw) ? values.length : convert(raw) || Number.MAX_SAFE_INTEGER;
+        }
         for (let index = 0; index < values.length; index++) {
           if (++state.iterations > state.config.maxIterations)
             yield* perform(
@@ -682,10 +787,14 @@ function* nodes<E, R>(
             );
           // Empty bodies still need an interruption boundary during large loops.
           if (state.iterations % 256 === 0) yield* perform(Effect.yieldNow());
+          const parentloop = get(state, "forloop");
           state.scopes.push({
             [node.name]: values[index]!,
             [node._tag === "TableRow" ? "tablerowloop" : "forloop"]: {
               ...loopInfo(index, values.length, node.loopName),
+              ...(state.dialect === "ruby" && node._tag === "For"
+                ? { parentloop: parentloop ?? null }
+                : {}),
               ...(node._tag === "TableRow"
                 ? {
                     row: Math.floor(index / cols) + 1,
@@ -701,17 +810,23 @@ function* nodes<E, R>(
           try {
             if (node._tag === "TableRow")
               yield* emit(
-                (index % cols === 0 ? `<tr class="row${Math.floor(index / cols) + 1}">` : "") +
-                  `<td class="col${(index % cols) + 1}">`,
+                (index % cols === 0
+                  ? `<tr class="row${Math.floor(index / cols) + 1}">${state.dialect === "ruby" && index === 0 ? "\n" : ""}`
+                  : "") + `<td class="col${(index % cols) + 1}">`,
               );
-            yield* nodes(node.body, state, registry, node._tag === "TableRow");
+            yield* nodes(
+              node.body,
+              state,
+              registry,
+              node._tag === "TableRow" && state.dialect !== "ruby",
+            );
             if (node._tag === "TableRow")
               yield* emit(
-                `</td>${(index + 1) % cols === 0 || index === values.length - 1 ? "</tr>" : ""}`,
+                `</td>${(index + 1) % cols === 0 || index === values.length - 1 || (state.dialect === "ruby" && state.control === "break") ? (state.dialect === "ruby" ? "</tr>\n" : "</tr>") : ""}`,
               );
           } finally {
             state.scopes.pop();
-            if (node._tag === "For") {
+            if (node._tag === "For" || state.dialect === "ruby") {
               stopped = state.control === "break";
               state.control = undefined;
             }
@@ -781,6 +896,7 @@ function* nodes<E, R>(
               ...state.whitespace,
               ...state.delimiters,
               dialect: state.dialect,
+              errorMode: state.errorMode,
               groupedExpressions: state.groupedExpressions,
               orderedFilterParameters: state.orderedFilterParameters,
             }),
@@ -822,6 +938,7 @@ function* nodes<E, R>(
               ...state.whitespace,
               ...state.delimiters,
               dialect: state.dialect,
+              errorMode: state.errorMode,
               groupedExpressions: state.groupedExpressions,
               orderedFilterParameters: state.orderedFilterParameters,
             }),
@@ -829,16 +946,26 @@ function* nodes<E, R>(
           name = yield* buffer(nodes(nameDocument.body, state, registry));
         }
         const args: Record<string, Value> = Object.create(null);
-        for (const [key, value] of Object.entries(node.args))
-          args[key] = (yield* ev(value)) ?? null;
+        if (state.dialect === "ruby" && node.mode === "include") state.scopes.push(args);
+        try {
+          for (const [key, value] of Object.entries(node.args))
+            args[key] = (yield* ev(value)) ?? null;
+        } finally {
+          if (state.dialect === "ruby" && node.mode === "include") state.scopes.pop();
+        }
         if (node.with) args[node.with.alias ?? name] = (yield* ev(node.with.value)) ?? null;
         const collection = node.for ? yield* ev(node.for.value) : null;
         const items = node.for
-          ? node.mode === "include" && collection != null && !isArray(collection)
-            ? [collection]
-            : state.dialect === "ruby"
-              ? rubySequence(collection)
-              : enumerable(collection)
+          ? state.dialect === "ruby" &&
+            node.mode === "render" &&
+            !isArray(collection) &&
+            Ruby.tag(collection)?.type !== "range"
+            ? [collection ?? null]
+            : node.mode === "include" && collection != null && !isArray(collection)
+              ? [collection]
+              : state.dialect === "ruby"
+                ? rubySequence(collection)
+                : enumerable(collection)
           : [null];
         if (!items.length) break;
         const loader = yield* perform(TemplateLoader);
@@ -850,18 +977,23 @@ function* nodes<E, R>(
             ...state.whitespace,
             ...state.delimiters,
             dialect: state.dialect,
+            errorMode: state.errorMode,
             groupedExpressions: state.groupedExpressions,
             orderedFilterParameters: state.orderedFilterParameters,
           }),
         );
         const old = state.scopes;
         const oldCycles = state.cycles;
+        const oldCounters = state.counters;
+        const oldChanged = state.changed;
         const oldContinuations = state.continuations;
         const oldControl = state.control;
         state.scopes =
           node.mode === "render" ? [old[0]!, Object.create(null), args] : [...old, args];
         if (node.mode === "render") {
           state.cycles = new Map();
+          state.counters = new Map();
+          state.changed = undefined;
           state.continuations = new Map();
         }
         state.depth++;
@@ -880,9 +1012,21 @@ function* nodes<E, R>(
                 );
               if (state.iterations % 256 === 0) yield* perform(Effect.yieldNow());
               // The pinned oracle binds an omitted for-alias to the literal key "undefined".
-              args[node.for.alias ?? (node.mode === "include" ? name : "undefined")] =
-                items[index]!;
-              if (node.mode === "render") args.forloop = loopInfo(index, items.length);
+              if (state.dialect !== "ruby" || items[index] != null)
+                args[
+                  node.for.alias ??
+                    (node.mode === "include" || state.dialect === "ruby" ? name : "undefined")
+                ] = items[index]!;
+              if (
+                node.mode === "render" &&
+                (state.dialect !== "ruby" ||
+                  isArray(collection) ||
+                  Ruby.tag(collection)?.type === "range")
+              )
+                args.forloop = {
+                  ...loopInfo(index, items.length),
+                  ...(state.dialect === "ruby" ? { parentloop: null } : {}),
+                };
             }
             yield* nodes(document.body, state, registry);
             if (state.control) break;
@@ -890,6 +1034,8 @@ function* nodes<E, R>(
         } finally {
           state.scopes = old;
           state.cycles = oldCycles;
+          state.counters = oldCounters;
+          if (node.mode === "render") state.changed = oldChanged;
           state.continuations = oldContinuations;
           if (node.mode === "render") state.control = oldControl;
           state.depth--;
@@ -947,6 +1093,14 @@ function initialize(document: Document, context: unknown) {
       return yield* Effect.fail(
         new RenderError({ code: "InvalidOperation", message: "Invalid date options", span: at }),
       );
+    if (!Object.values(config.counterSeeds ?? {}).every(Number.isFinite))
+      return yield* Effect.fail(
+        new RenderError({
+          code: "InvalidContext",
+          message: "Counter seeds must be finite numbers",
+          span: at,
+        }),
+      );
     const value = yield* normalize(context, at, 100_000, document.dialect);
     const globals = yield* normalize(config.globals, at, 100_000, document.dialect);
     if (
@@ -970,6 +1124,8 @@ function initialize(document: Document, context: unknown) {
         value as Record<string, Value>,
         Object.create(null),
       ],
+      changed: undefined,
+      counters: new Map(Object.entries(config.counterSeeds ?? {})),
       cycles: new Map(),
       continuations: new Map(),
       steps: 0,
@@ -983,6 +1139,7 @@ function initialize(document: Document, context: unknown) {
       layoutStore: false,
       layoutBlocks: new Map(),
       dialect: document.dialect ?? "liquidjs",
+      errorMode: document.errorMode ?? "strict",
       groupedExpressions: document.groupedExpressions ?? false,
       orderedFilterParameters: document.orderedFilterParameters ?? false,
       whitespace: {

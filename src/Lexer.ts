@@ -3,6 +3,7 @@ import type { Dialect } from "./Ast.js";
 import { ParseError } from "./Diagnostic.js";
 import { type Source, type Span, span } from "./Source.js";
 export interface Token {
+  readonly raw?: true;
   readonly kind: "text" | "output" | "tag";
   readonly text: string;
   readonly offset: number;
@@ -36,6 +37,7 @@ export const delimiterKeys = [
 ] as const;
 export interface ParseOptions extends WhitespaceOptions, DelimiterOptions {
   readonly dialect?: Dialect;
+  readonly errorMode?: "strict" | "strict2";
   readonly groupedExpressions?: boolean;
   readonly orderedFilterParameters?: boolean;
   readonly parseLimit?: number;
@@ -61,6 +63,7 @@ export const lex = (
         new ParseError({ message: "Invalid delimiters", span: span(source.id, 0, 0) }),
       );
     for (const [key, value] of Object.entries(options)) {
+      if (key === "errorMode" && (value === "strict" || value === "strict2")) continue;
       if (key === "dialect" && (value === "ruby" || value === "liquidjs")) continue;
       if (key === "parseLimit" && typeof value === "number" && Number.isFinite(value) && value >= 0)
         continue;
@@ -102,13 +105,16 @@ export const lex = (
     let trimBarrier = false;
     let work = 0;
     let commentStart: number | undefined;
-    const addText = (start: number, end: number) => {
+    let commentName = "comment";
+    let commentDepth = 0;
+    const addText = (start: number, end: number, raw = false) => {
       let value = text.slice(start, end);
       if (trimNext) value = trimRight(value);
       trimNext = false;
       if (value && commentStart === undefined) {
         tokens.push({
           kind: "text",
+          ...(raw ? { raw: true as const } : {}),
           text: value,
           offset: start,
           span: span(source.id, start, end),
@@ -144,7 +150,10 @@ export const lex = (
       }
       if (markedLeft) i++;
       const offset = i;
-      const lineSyntax = kind === "tag" && /^\s*(?:liquid\b|#)/.test(text.slice(offset));
+      const lineSyntax =
+        kind === "tag" &&
+        ((options.dialect === "ruby" && commentStart !== undefined) ||
+          /^\s*(?:liquid\b|#)/.test(text.slice(offset)));
       let quote = "";
       while (i < text.length) {
         if (i % 8192 === 0) yield* Effect.yieldNow();
@@ -169,12 +178,37 @@ export const lex = (
       i += close.length;
       trimNext = trim || !!(kind === "tag" ? options.trimTagRight : options.trimOutputRight);
       const tag = content.trim();
+      if (kind === "tag" && options.dialect === "ruby" && tag === "doc") {
+        const escape = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const pattern = new RegExp(
+          `${escape(tagLeft)}-?\\s*(doc|enddoc)\\b[\\s\\S]*?(-)?${escape(tagRight)}`,
+          "g",
+        );
+        pattern.lastIndex = i;
+        const end = pattern.exec(text);
+        if (!end || end[1] !== "enddoc")
+          return yield* Effect.fail(
+            new ParseError({ message: "Unclosed or nested doc", span: span(source.id, open, i) }),
+          );
+        i = end.index + end[0].length;
+        trimNext = !!end[2] || !!options.trimTagRight;
+        trimBarrier = true;
+        continue;
+      }
       if (kind === "tag" && commentStart !== undefined) {
-        if (!/^\s*[A-Za-z_#][\w-]*/.test(content))
+        if (options.dialect !== "ruby" && !/^\s*[A-Za-z_#][\w-]*/.test(content))
           return yield* Effect.fail(
             new ParseError({ message: "Invalid comment-body tag", span: span(source.id, open, i) }),
           );
-        if (/^endcomment\b/.test(tag)) {
+        if (options.dialect === "ruby" && new RegExp(`^${commentName}\\b`).test(tag)) {
+          commentDepth++;
+          continue;
+        }
+        if (new RegExp(`^end${commentName}\\b`).test(tag)) {
+          if (commentDepth > 0) {
+            commentDepth--;
+            continue;
+          }
           commentStart = undefined;
           trimBarrier = true;
           continue;
@@ -182,10 +216,13 @@ export const lex = (
       }
       if (
         kind === "tag" &&
-        (tag === "comment" || tag.startsWith("comment}")) &&
+        (tag === "comment" ||
+          tag.startsWith("comment}") ||
+          (options.dialect === "ruby" && tag === "doc")) &&
         commentStart === undefined
       ) {
         commentStart = open;
+        commentName = tag === "doc" ? "doc" : "comment";
         trimBarrier = true;
       } else if (kind === "tag" && tag === "raw") {
         const bodyStart = i;
@@ -204,7 +241,7 @@ export const lex = (
           );
         // Ruby accepts marked endraw delimiters. Both engines preserve literal body whitespace.
         trimNext = false;
-        addText(bodyStart, match.index);
+        addText(bodyStart, match.index, true);
         trimNext = !!match[2] || !!options.trimTagRight;
         i = match.index + match[0].length;
         trimBarrier = true;

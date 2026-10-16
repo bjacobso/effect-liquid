@@ -41,7 +41,7 @@ Implemented tags: `layout`/`block`, `assign`, `capture`, `if`/`elsif`/`else`, `u
 
 Pass `{ dialect: "ruby" }` to `Liquid.parse` for Ruby (Shopify) semantics. The default is `"liquidjs"`. Documents snapshot the dialect and pass it to partials, streaming, analysis and project checking. The CLI accepts `--dialect ruby`; typed templates accept `liquid<Context>({ dialect: "ruby" })`. Independent LiquidJS options such as `jekyllWhere` and `lenientIf` retain their meanings.
 
-Ruby includes iterate `for` collections and honor `with/as` aliases. LiquidJS includes render once and interpret bare `for/as` words as boolean named arguments. Ruby accepts hyphen-marked endraw openers and closes only complete endraw tags; LiquidJS rejects marked openers and closes at its earlier endraw candidate. Both preserve literal raw body whitespace. Further Ruby value and filter semantics are tracked in PLAN.md.
+Ruby includes iterate `for` collections and honor `with/as` aliases. LiquidJS includes render once and interpret bare `for/as` words as boolean named arguments. Ruby accepts hyphen-marked endraw openers and closes only complete endraw tags; LiquidJS rejects marked openers and closes at its earlier endraw candidate. Both preserve literal raw body whitespace. Ruby also selects its value model, numeric coercion/division, string/hash inspection, table-row markup, blank-block suppression, counters/cycles, repeated case matches, parent loops, render aliases, self references, strftime and standard filter behavior. Ruby parsing is strict by default; `errorMode: "strict2"` additionally rejects bare brackets. Host callback Drops and Ruby lax parsing remain deferred.
 
 Repeated `else` and `elsif` after `else` are syntax errors for `if`. LiquidJS accepts the same syntax in `unless` and ignores later sections; this parser follows that behavior.
 
@@ -57,13 +57,13 @@ Strings and arrays expose `.length` and `.size`; string lengths count UTF-16 cod
 
 Defaults use Liquid truthiness, permissive missing variables, strict unknown filters, and unescaped output. `Render.layer({ lenientIf: true })` permits missing variables in condition expressions and before `default` in strict mode. `outputEscape` accepts `escape` or `json`; the `raw` filter opts out per output. Use `escape` when HTML escaping is appropriate. Plain records and arrays are accepted; accessors, class instances, cyclic data, and non-finite numbers are rejected. Context data is copied into request-local state.
 
-The preview supports `increment`, `decrement`, and `cycle`. Counters use request-local input state independently of `assign` and `capture`; numeric input values seed counters. `include` shares counter/cycle state, while `render` gets isolated state. Rendering never mutates the caller's context. Cycle output suppresses numeric zero and false, while the string `"0"` renders normally.
+The preview supports `increment`, `decrement`, and `cycle`. Counters use request-local input state independently of `assign` and `capture`; numeric input values seed counters in LiquidJS. Ruby counters start at zero independently of input/assigns, remain visible through the file environment, and accept an explicit `Render.layer({ counterSeeds: { x: 3 } })` environment for host integrations. `include` shares counter/cycle state, while `render` gets isolated state. Rendering never mutates the caller's context. Cycle output suppresses numeric zero and false, while the string `"0"` renders normally.
 
 Collection filters include `group_by`, `sort`, `sort_natural`, `map`, `sum`, `compact`, `concat`, `uniq`, `push`, `pop`, `shift`, `unshift`, `slice`, `where`, `reject`, `find`, `find_index`, and `has`. Scalar/nil coercion, dot-separated property paths, and nonmutating operations are supported. Selectors (`where`, `reject`, `find`, `find_index`, `has`) also accept static bracket keys. `map`, `sort`, and `sum` retain the pinned dotted-path behavior. Selectors support `jekyllWhere` through `Render.layer({ jekyllWhere: true })` and distinguish missing comparison values from explicit nil. Dynamic bracket keys and some Ruby/JavaScript missing-value differences remain compatibility gaps. `slice` preserves JavaScript addition before converting its indices: `"foobar" | slice: "1", "3"` yields `"oobar"`. Its allocation budget uses the resulting slice length. `json` and `to_integer` support typed output comparisons.
 
 `liquid` blocks support newline-separated tags, nested control flow, `echo`, and comments while preserving original source spans. `tablerow` generates row/cell HTML with `cols`, `offset`, `limit`, and scoped `tablerowloop` metadata. Generated markup counts toward the output budget.
 
-`case` renders every matching `when` branch. If none match, it renders the first `else` content; later `else` sections are ignored, matching LiquidJS.
+`case` renders every matching `when` branch. Ruby also renders duplicate matching values within a branch and preserves ordered else/when flow. If none match, it renders the first `else` content; later `else` sections are ignored, matching LiquidJS.
 
 `break` and `continue` stop the current template when used outside a loop. Inside `include`, they can affect a caller loop; `render` isolates them in its child template. In `tablerow`, they stop the remaining cell body while the table markup continues.
 
@@ -76,7 +76,7 @@ Collection filters include `group_by`, `sort`, `sort_natural`, `map`, `sum`, `co
 %}
 ```
 
-Raw blocks inside `liquid`, table-row control-flow quirks, and permissive malformed-syntax compatibility remain gaps.
+Raw blocks inside `liquid` and permissive malformed-syntax compatibility remain gaps. Ruby table rows consume their own break/continue; LiquidJS retains its pinned propagation behavior. Ruby adds `doc`, nested comments and `ifchanged`.
 
 String filters include first/last replacement and removal, custom strip character sets, `truncate`, `truncatewords`, `strip_newlines`, `newline_to_br`, `squish`, `normalize_whitespace`, `number_of_words`, `strip_html`, `escape_once`, and `xml_escape`. Replacement strings are literal; CJK word counting is supported. Truncation and entity handling follow the pinned LiquidJS behavior, including documented conformance differences from Ruby expectations. `assign` preserves missing values; missing truncation counts and suffixes use the filter defaults, while explicit nil remains distinct.
 

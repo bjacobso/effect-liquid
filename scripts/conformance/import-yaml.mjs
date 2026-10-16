@@ -14,9 +14,26 @@ export function encodeYaml(node, doc) {
           value: String(node.source),
         },
       };
-    return node.value;
+    return node.type === "PLAIN" &&
+      typeof node.value === "string" &&
+      /^:[A-Za-z_]\w*$/.test(node.value)
+      ? { $liquid: { type: "symbol", value: node.value.slice(1) } }
+      : node.value;
   }
   if (isSeq(node)) return node.items.map((n) => (n === null ? null : encodeYaml(n, doc)));
+  if (
+    isMap(node) &&
+    node.items.some((p) => p.key.type === "PLAIN" && String(p.key.value).startsWith(":"))
+  )
+    return {
+      $liquid: {
+        type: "hash",
+        entries: node.items.map((p) => [
+          encodeYaml(p.key, doc),
+          p.value === null ? null : encodeYaml(p.value, doc),
+        ]),
+      },
+    };
   if (isMap(node))
     return Object.fromEntries(
       node.items.map((p) => [

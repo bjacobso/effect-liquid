@@ -45762,11 +45762,24 @@
       "my_hash": {
         "numbers": [
           {
-            ":foo": {
-              "$liquid": {
-                "type": "integer",
-                "value": "42"
-              }
+            "$liquid": {
+              "type": "hash",
+              "entries": [
+                [
+                  {
+                    "$liquid": {
+                      "type": "symbol",
+                      "value": "foo"
+                    }
+                  },
+                  {
+                    "$liquid": {
+                      "type": "integer",
+                      "value": "42"
+                    }
+                  }
+                ]
+              ]
             }
           }
         ]
@@ -45846,17 +45859,38 @@
     "context": {},
     "globals": {
       "my_hash": {
-        ":key1": {
-          "$liquid": {
-            "type": "integer",
-            "value": "1"
-          }
-        },
-        ":key2": {
-          "$liquid": {
-            "type": "integer",
-            "value": "2"
-          }
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "key1"
+                }
+              },
+              {
+                "$liquid": {
+                  "type": "integer",
+                  "value": "1"
+                }
+              }
+            ],
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "key2"
+                }
+              },
+              {
+                "$liquid": {
+                  "type": "integer",
+                  "value": "2"
+                }
+              }
+            ]
+          ]
         }
       }
     },
@@ -60021,29 +60055,66 @@
     "context": {},
     "globals": {
       "hash": {
-        ":a": {
-          "$liquid": {
-            "type": "integer",
-            "value": "1"
-          }
-        },
-        ":b": {
-          "$liquid": {
-            "type": "integer",
-            "value": "2"
-          }
-        },
-        ":c": {
-          "$liquid": {
-            "type": "integer",
-            "value": "3"
-          }
-        },
-        ":d": {
-          "$liquid": {
-            "type": "integer",
-            "value": "4"
-          }
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "a"
+                }
+              },
+              {
+                "$liquid": {
+                  "type": "integer",
+                  "value": "1"
+                }
+              }
+            ],
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "b"
+                }
+              },
+              {
+                "$liquid": {
+                  "type": "integer",
+                  "value": "2"
+                }
+              }
+            ],
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "c"
+                }
+              },
+              {
+                "$liquid": {
+                  "type": "integer",
+                  "value": "3"
+                }
+              }
+            ],
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "d"
+                }
+              },
+              {
+                "$liquid": {
+                  "type": "integer",
+                  "value": "4"
+                }
+              }
+            ]
+          ]
         }
       }
     },
@@ -64232,7 +64303,12 @@
     "source": "{{ foo }}",
     "context": {},
     "globals": {
-      "foo": ":bar"
+      "foo": {
+        "$liquid": {
+          "type": "symbol",
+          "value": "bar"
+        }
+      }
     },
     "authority": "ruby",
     "templates": {},
@@ -65574,7 +65650,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -65903,7 +65992,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -67378,7 +67480,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -67455,7 +67570,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -68224,7 +68352,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -69346,7 +69487,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -69753,7 +69907,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -70341,7 +70508,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -71546,7 +71726,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -72045,7 +72238,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -72617,7 +72823,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -73448,7 +73667,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -74684,7 +74916,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -74978,7 +75223,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -75148,17 +75406,38 @@
     "context": {},
     "globals": {
       "a0": {
-        ":a": {
-          "$liquid": {
-            "type": "integer",
-            "value": "1"
-          }
-        },
-        ":b": {
-          "$liquid": {
-            "type": "integer",
-            "value": "2"
-          }
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "a"
+                }
+              },
+              {
+                "$liquid": {
+                  "type": "integer",
+                  "value": "1"
+                }
+              }
+            ],
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "b"
+                }
+              },
+              {
+                "$liquid": {
+                  "type": "integer",
+                  "value": "2"
+                }
+              }
+            ]
+          ]
         }
       }
     },
@@ -75496,7 +75775,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -75809,7 +76101,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -76710,7 +77015,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -78943,17 +79261,38 @@
     "context": {},
     "globals": {
       "a0": {
-        ":a": {
-          "$liquid": {
-            "type": "integer",
-            "value": "1"
-          }
-        },
-        ":b": {
-          "$liquid": {
-            "type": "integer",
-            "value": "2"
-          }
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "a"
+                }
+              },
+              {
+                "$liquid": {
+                  "type": "integer",
+                  "value": "1"
+                }
+              }
+            ],
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "b"
+                }
+              },
+              {
+                "$liquid": {
+                  "type": "integer",
+                  "value": "2"
+                }
+              }
+            ]
+          ]
         }
       }
     },
@@ -79747,7 +80086,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -80140,7 +80492,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -81280,7 +81645,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -81597,7 +81975,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -82458,7 +82849,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -82927,7 +83331,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -83444,7 +83861,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -84325,7 +84755,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -85538,7 +85981,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -85947,7 +86403,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -86630,7 +87099,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -87695,7 +88177,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -88323,7 +88818,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -89389,7 +89897,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -90362,7 +90883,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -90901,7 +91435,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
@@ -91737,7 +92284,20 @@
     "context": {},
     "globals": {
       "a0": {
-        ":foo": "bar"
+        "$liquid": {
+          "type": "hash",
+          "entries": [
+            [
+              {
+                "$liquid": {
+                  "type": "symbol",
+                  "value": "foo"
+                }
+              },
+              "bar"
+            ]
+          ]
+        }
       }
     },
     "authority": "ruby",
