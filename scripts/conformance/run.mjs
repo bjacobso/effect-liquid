@@ -9,6 +9,7 @@ import {
   expectation,
   hasGap,
   regression,
+  score,
 } from "./runner.mjs";
 
 const args = process.argv.slice(2);
@@ -57,6 +58,8 @@ const seen = new Set();
 for (const fixture of all) {
   if (!fixture.id || typeof fixture.source !== "string" || seen.has(fixture.id))
     throw new Error(`Invalid or duplicate fixture: ${fixture.id}`);
+  if (!["ruby", "liquidjs"].includes(fixture.authority))
+    throw new Error(`Missing authority: ${fixture.id}`);
   seen.add(fixture.id);
 }
 const selected = all
@@ -76,6 +79,7 @@ const rightWorker = new EngineWorker("effect-liquid", { timeoutMs });
 const results = [];
 const counts = {};
 const perSuite = {};
+const perDialect = {};
 const gates = {};
 const reportPath = value("--report", "conformance/reports/latest.json");
 const fatal = [];
@@ -83,6 +87,21 @@ try {
   for (const fixture of selected) {
     const [left, right] = await Promise.all([leftWorker.run(fixture), rightWorker.run(fixture)]);
     const comparison = compare(left, right);
+    const authorityScore = score(fixture, left, right);
+    const dialect = (perDialect[fixture.authority] ??= {
+      total: 0,
+      pass: 0,
+      fail: 0,
+      unspecified: 0,
+    });
+    dialect.total++;
+    dialect[
+      authorityScore === "match"
+        ? "pass"
+        : authorityScore === "not-specified"
+          ? "unspecified"
+          : "fail"
+    ]++;
     const gate = regression(fixture, left, right, baseline);
     const suite = fixture.origin?.repository ?? "local";
     counts[comparison] = (counts[comparison] ?? 0) + 1;
@@ -95,6 +114,8 @@ try {
       fatal.push(fixture.id);
     results.push({
       id: fixture.id,
+      authority: fixture.authority,
+      authorityScore,
       origin: fixture.origin,
       source: fixture.source,
       comparison,
@@ -122,6 +143,12 @@ const summary = {
   totalAvailable: all.length,
   counts,
   perSuite,
+  perDialect,
+  authority: {
+    pass: Object.values(perDialect).reduce((n, d) => n + d.pass, 0),
+    fail: Object.values(perDialect).reduce((n, d) => n + d.fail, 0),
+    unspecified: Object.values(perDialect).reduce((n, d) => n + d.unspecified, 0),
+  },
   gates,
   workerFailures: fatal.length,
   staleBaselineCases: stale,
@@ -131,7 +158,7 @@ const summary = {
   },
 };
 const report = {
-  schemaVersion: 1,
+  schemaVersion: 2,
   createdAt: new Date().toISOString(),
   engines: { liquidjs: installed.version, effectLiquid: readJSON("package.json").version },
   runtime: {
@@ -152,6 +179,14 @@ const markdown = [
   "# Conformance report",
   "",
   `Cases: ${summary.total} of ${summary.totalAvailable}. This is a compatibility report, not a full-parity claim.`,
+  "",
+  "| Authority dialect | Pass | Fail | Unspecified | Total |",
+  "| --- | ---: | ---: | ---: | ---: |",
+  ...Object.entries(perDialect).map(
+    ([name, d]) => `| ${name} | ${d.pass} | ${d.fail} | ${d.unspecified} | ${d.total} |`,
+  ),
+  "",
+  "Cross-engine agreement (informational):",
   "",
   "| Suite | Same output | Both parse | Same error category/phase | Different |",
   "| --- | ---: | ---: | ---: | ---: |",
@@ -179,7 +214,7 @@ if (updating) {
     );
   writeFileSync(
     baselinePath,
-    `${JSON.stringify({ schemaVersion: 1, pins, cases: nextBaseline }, null, 2)}\n`,
+    `${JSON.stringify({ schemaVersion: 2, pins, cases: nextBaseline }, null, 2)}\n`,
   );
 }
 console.log(JSON.stringify(summary, null, 2));

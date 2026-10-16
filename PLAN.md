@@ -150,3 +150,14 @@ Revisit architecture only when a milestone exposes a concrete constraint. Keep f
 ## Imported conformance follow-up
 
 The differential harness now imports pinned static examples from LiquidJS, Deepin ruby-liquid, Shopify Liquid, and Shopify liquid-spec. Preserve explicit exclusions for host-dependent cases; add adapters with importer tests. Use `pnpm conformance:check` to prevent changes to known outcomes, and reduce the recorded compatibility gaps feature by feature. Full strict conformance remains unfinished. Timing comparisons are deferred.
+
+## M8 — Ruby dialect and authority conformance
+
+- [x] Phase 1: authority scoring, per-dialect reports/baseline, static environments, partial extraction, lossless fixture encoding and importer regression tests.
+- [ ] Phase 2: document-snapshotted dialect across parsing, rendering, streams, project analysis, checking, CLI and typed templates; move Ruby owner choices behind it.
+- [ ] Phase 3: Ruby Integer/Float/decimal, Range/symbol values, stringification, arithmetic and checker types; measure LiquidJS hot path.
+- [ ] Phase 4: Ruby tags, filters, strict parsing, plain-data drop behavior; explicitly defer host callbacks.
+- [ ] Phase 5: pinned live Ruby oracle and bounded seedable generative differential testing.
+- [ ] Phase 6: separate optional PR for permissive LiquidJS parsing with conservative analysis/checking.
+
+Each phase is a separately validated stacked PR above `liquidjs-mismatch-fixes`. `keepOutputType` stays deferred.

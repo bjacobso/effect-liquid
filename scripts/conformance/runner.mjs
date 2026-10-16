@@ -151,7 +151,8 @@ export function signature(result) {
 export function baselineEntry(fixture, left, right) {
   return {
     fixtureHash: hash(fixture),
-    liquidjs: signature(left),
+    authority: fixture.authority,
+    ...(fixture.authority === "liquidjs" ? { liquidjs: signature(left) } : {}),
     effectLiquid: signature(right),
     reason:
       right.kind === "unsupported-configuration"
@@ -161,12 +162,13 @@ export function baselineEntry(fixture, left, right) {
           : "Known imported compatibility gap; inspect the linked upstream case",
   };
 }
+export function score(fixture, left, right) {
+  if (fixture.authority === "ruby") return expectation(right, fixture.expected);
+  if (fixture.authority !== "liquidjs") throw new Error(`Missing authority: ${fixture.id}`);
+  return compare(left, right) === "mismatch" ? "different" : "match";
+}
 export function hasGap(fixture, left, right) {
-  return (
-    compare(left, right) === "mismatch" ||
-    expectation(left, fixture.expected) === "different" ||
-    expectation(right, fixture.expected) === "different"
-  );
+  return score(fixture, left, right) !== "match";
 }
 export function regression(fixture, left, right, baseline) {
   const entry = baseline?.[fixture.id];
@@ -174,9 +176,10 @@ export function regression(fixture, left, right, baseline) {
   if (!entry) return "new-gap";
   const actual = baselineEntry(fixture, left, right);
   const oracleMatches =
-    right.kind === "unsupported-configuration" && entry.effectLiquid.kind === right.kind
+    fixture.authority === "ruby" ||
+    (right.kind === "unsupported-configuration" && entry.effectLiquid.kind === right.kind
       ? entry.liquidjs.kind === actual.liquidjs.kind
-      : JSON.stringify(entry.liquidjs) === JSON.stringify(actual.liquidjs);
+      : JSON.stringify(entry.liquidjs) === JSON.stringify(actual.liquidjs));
   return entry.fixtureHash === actual.fixtureHash &&
     oracleMatches &&
     JSON.stringify(entry.effectLiquid) === JSON.stringify(actual.effectLiquid)

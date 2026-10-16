@@ -174,7 +174,7 @@ Benchmark cold parsing, warm rendering, local/project analysis, checking, peak m
 
 ### Executable upstream corpus
 
-The correctness harness in `scripts/conformance/` compares pinned LiquidJS and effect-liquid in isolated workers using the generated `conformance/fixtures/` corpus. It checks exact output and normalized error category/phase, independently evaluates upstream expectations, and gates new or changed gaps against an explicit baseline. Imported source provenance, licenses, and non-executable candidate reasons are retained. Ruby tests supply expectations rather than live Ruby execution. Timing comparison is deferred; see `conformance/README.md` for the implemented contract and limits.
+The correctness harness in `scripts/conformance/` compares pinned LiquidJS and effect-liquid in isolated workers using the generated `conformance/fixtures/` corpus. It scores each fixture by its explicit authority: live pinned LiquidJS for `liquidjs`, upstream output/error expectations for `ruby`. Exact output and normalized LiquidJS error category/phase are compared; cross-engine agreement is informational. Reports include per-dialect and overall pass/fail/unspecified counts, and gate new or changed authority gaps against an explicit baseline. Unspecified expectations never count as passes. Imported source provenance, licenses, and non-executable candidate reasons are retained. Ruby tests supply expectations rather than live Ruby execution. Timing comparison is deferred; see `conformance/README.md` for the implemented contract and limits.
 
 ### Counter, cycle, and collection-filter expansion
 
