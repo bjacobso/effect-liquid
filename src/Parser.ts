@@ -1,5 +1,5 @@
 import { Effect } from "effect";
-import type { Document, Expression, Node, PartialBinding } from "./Ast.js";
+import type { Dialect, Document, Expression, Node, PartialBinding } from "./Ast.js";
 import { ParseError } from "./Diagnostic.js";
 import { Expressions } from "./ExpressionParser.js";
 import { delimiterKeys, lex, type ParseOptions, type Token, whitespaceKeys } from "./Lexer.js";
@@ -13,6 +13,7 @@ class Templates {
     readonly budget: { remaining: number },
     readonly groupedExpressions = false,
     readonly orderedFilterParameters = false,
+    readonly dialect: Dialect = "liquidjs",
   ) {}
   tag() {
     const t = this.tokens[this.pos];
@@ -52,6 +53,7 @@ class Templates {
           this.budget,
           this.groupedExpressions,
           this.orderedFilterParameters,
+          this.dialect,
         ).body([], depth + 1, loop);
         for (const node of nested) nodes.push(node);
         continue;
@@ -338,7 +340,13 @@ class Templates {
         while (e.pos < e.words.length) {
           e.take(",");
           const name = e.name();
-          if ((name === "with" || name === "for") && !e.peek(":")) {
+          if (
+            tag === "include" &&
+            this.dialect === "liquidjs" &&
+            !(name === "with" && !withBinding && Object.keys(args).length === 0 && !e.peek(":"))
+          ) {
+            args[name] = e.take(":") ? e.atom() : { _tag: "Literal", value: true, span: t.span };
+          } else if ((name === "with" || name === "for") && !e.peek(":")) {
             let value: Expression;
             try {
               value = e.atom();
@@ -363,7 +371,8 @@ class Templates {
                 e.fail("Expected ':'");
               throw error;
             }
-            const alias = e.take("as") ? e.name() : undefined;
+            const alias =
+              (tag !== "include" || this.dialect === "ruby") && e.take("as") ? e.name() : undefined;
             const binding = { value, ...(alias ? { alias } : {}) };
             if (name === "with") {
               if (withBinding) e.fail("Duplicate with binding");
@@ -410,6 +419,7 @@ export const parse = (
       },
       options.groupedExpressions,
       options.orderedFilterParameters,
+      options.dialect,
     ).body();
     let result: IteratorResult<void, Node[]>;
     do {
@@ -429,6 +439,7 @@ export const parse = (
     const body = result.value;
     return {
       _tag: "Document" as const,
+      dialect: options.dialect ?? "liquidjs",
       ...(options.parseLimit === undefined ? {} : { parseLimit: options.parseLimit }),
       source,
       body,

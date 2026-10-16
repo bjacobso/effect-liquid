@@ -9,6 +9,7 @@ import * as Loader from "../src/TemplateLoader.js";
 const fixtures = JSON.parse(readFileSync("conformance/fixtures/local.json", "utf8")) as Array<{
   id: string;
   source: string;
+  authority: "ruby" | "liquidjs";
   context?: Record<string, unknown>;
   templates?: Record<string, string>;
 }>;
@@ -27,7 +28,10 @@ describe("LiquidJS 10.29.0 original conformance fixtures", () => {
       const templates = fixture.templates ?? {};
       const output = await Effect.runPromise(
         Effect.gen(function* () {
-          return yield* Liquid.render(yield* Liquid.parse(fixture.source), context);
+          return yield* Liquid.render(
+            yield* Liquid.parse(fixture.source, { dialect: fixture.authority }),
+            context,
+          );
         }).pipe(Effect.provide(Layer.merge(Render.layer(), Loader.memory(templates)))),
       );
       if (fixture.id === "local:raw-trim") {

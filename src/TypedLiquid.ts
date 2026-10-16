@@ -63,10 +63,13 @@ export class Expression<T> implements Fragment {
 
 /** A template whose render input is checked by TypeScript. */
 export class Template<Context extends object> {
-  constructor(readonly source: string) {}
+  constructor(
+    readonly source: string,
+    readonly options: ParseOptions = {},
+  ) {}
 
   parse(options?: ParseOptions) {
-    return Parser.parse(this.source, options);
+    return Parser.parse(this.source, { ...this.options, ...options });
   }
 
   render(context: Context, options?: ParseOptions) {
@@ -79,7 +82,7 @@ export class Template<Context extends object> {
 }
 
 /** Build Liquid templates with typed external paths and expression holes. */
-export function liquid<Context extends object>() {
+export function liquid<Context extends object>(options: ParseOptions = {}) {
   return {
     path<P extends Paths<Context>>(path: P): Expression<PathValue<Context, P>> {
       return Expression.path<PathValue<Context, P>>(path);
@@ -91,7 +94,7 @@ export function liquid<Context extends object>() {
           throw new TypeError("Liquid template holes must be typed expressions");
         source += fragments[i]!.source + (strings[i + 1] ?? "");
       }
-      return new Template<Context>(source);
+      return new Template<Context>(source, { ...options });
     },
   };
 }

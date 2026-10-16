@@ -163,3 +163,41 @@ it("treats prototype-named aliases as own data in dependency maps", async () => 
   expect(Object.hasOwn(args, "__proto__")).toBe(true);
   expect(await run(source, { user: { name: "Ada" } }, { p: "{{__proto__.name}}" })).toBe("Ada");
 });
+
+it("snapshots include dialect semantics for render, analysis, and project checking", async () => {
+  const source = "{% include 'p' for items as item %}";
+  const templates = { p: "{{for}}/{{items}}/{{as}}/{{item}}" };
+  const context = { items: ["a", "b"] };
+  const js = await Effect.runPromise(Liquid.parse(source));
+  const ruby = await Effect.runPromise(Liquid.parse(source, { dialect: "ruby" }));
+  const services = Layer.merge(Render.layer(), Loader.memory(templates));
+  expect(await Effect.runPromise(Liquid.render(js, context).pipe(Effect.provide(services)))).toBe(
+    "true/true/true/true",
+  );
+  expect(await Effect.runPromise(Liquid.render(ruby, context).pipe(Effect.provide(services)))).toBe(
+    "/ab//a/ab//b",
+  );
+  expect((await Effect.runPromise(Liquid.analyze(js))).externalRoots).toEqual([]);
+  expect((await Effect.runPromise(Liquid.analyze(ruby))).externalRoots).toEqual(["items"]);
+  const child = Loader.memory({ p: "{% include 'q' for items as item %}", q: "{{item}}" });
+  const parent = "{% render 'p', items: items %}";
+  for (const dialect of ["ruby", "liquidjs"] as const) {
+    const doc = await Effect.runPromise(Liquid.parse(parent, { dialect }));
+    const result = await Effect.runPromise(
+      Liquid.render(doc, context).pipe(Effect.provide(Layer.merge(Render.layer(), child))),
+    );
+    expect(result).toBe(dialect === "ruby" ? "ab" : "true");
+    expect(
+      (await Effect.runPromise(Liquid.analyzeProject(doc).pipe(Effect.provide(child)))).coverage,
+    ).toBe("partial");
+    expect(
+      (
+        await Effect.runPromise(
+          Liquid.checkProject(doc, Type.record({ items: Type.array(Type.string) })).pipe(
+            Effect.provide(child),
+          ),
+        )
+      ).coverage,
+    ).toBe("partial");
+  }
+});

@@ -109,6 +109,7 @@ if (engineName === "liquidjs") {
     const parsed = await Effect.runPromise(
       Effect.either(
         Liquid.parse(fixture.source, {
+          dialect: fixture.authority,
           groupedExpressions: options.groupedExpressions ?? false,
           orderedFilterParameters: options.orderedFilterParameters ?? false,
           ...Object.fromEntries(

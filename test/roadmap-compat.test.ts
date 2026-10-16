@@ -8,9 +8,9 @@ import * as T from "../src/Type.js";
 
 const run = (source: string, context: object = {}, templates: Record<string, string> = {}) =>
   Effect.runPromise(
-    Effect.flatMap(Liquid.parse(source), (doc) => Liquid.render(doc, context)).pipe(
-      Effect.provide(Layer.merge(Render.layer(), Loader.memory(templates))),
-    ),
+    Effect.flatMap(Liquid.parse(source, { dialect: "ruby" }), (doc) =>
+      Liquid.render(doc, context),
+    ).pipe(Effect.provide(Layer.merge(Render.layer(), Loader.memory(templates)))),
   );
 
 describe("Ruby include bindings", () => {
@@ -48,7 +48,9 @@ describe("Ruby include bindings", () => {
     ).toBe("a");
   });
   it("maps aliases to element paths and checks child argument types without inventing include forloop", async () => {
-    const doc = await Effect.runPromise(Liquid.parse("{% include 'p' for items as item %}"));
+    const doc = await Effect.runPromise(
+      Liquid.parse("{% include 'p' for items as item %}", { dialect: "ruby" }),
+    );
     const loader = Loader.memory({ p: "{{item.name}}/{{forloop.index}}" });
     const analysis = await Effect.runPromise(
       Liquid.analyzeProject(doc).pipe(Effect.provide(loader)),
@@ -76,14 +78,18 @@ it.each([
   "{% comment %}{% raw %}hello{% endcomment %}",
   "{% comment %}this is {{{ not }}} valid{{ liquid{% endcomment %}",
 ])("lexically rejects a malformed comment body: %s", async (source) => {
-  expect(await Effect.runPromise(Effect.isFailure(Liquid.parse(source)))).toBe(true);
+  expect(await Effect.runPromise(Effect.isFailure(Liquid.parse(source, { dialect: "ruby" })))).toBe(
+    true,
+  );
   expect(() => new Reference().parse(source)).toThrow();
 });
 it("scans raw inside comments without interpreting ignored expressions or unknown tags", async () => {
   const source =
     "{% comment %}{% raw %}{% endcomment %}{{ignored}}{% endraw %}{% unknown x %}{% endcomment %}OK";
   expect(await run(source)).toBe("OK");
-  const analysis = await Effect.runPromise(Effect.flatMap(Liquid.parse(source), Liquid.analyze));
+  const analysis = await Effect.runPromise(
+    Effect.flatMap(Liquid.parse(source, { dialect: "ruby" }), Liquid.analyze),
+  );
   expect(analysis.occurrences).toEqual([]);
   expect(
     await Effect.runPromise(Effect.isFailure(Liquid.parse(source, { maxSourceLength: 10 }))),
@@ -114,7 +120,7 @@ it("includes scalar records once and passes their record type to child checking"
       { product: "{{product.title}}" },
     ),
   ).toBe("Widget");
-  const doc = await Effect.runPromise(Liquid.parse(source));
+  const doc = await Effect.runPromise(Liquid.parse(source, { dialect: "ruby" }));
   const checked = await Effect.runPromise(
     Liquid.checkProject(doc, T.record({ product: T.record({ title: T.string }) }), {
       mode: "compatibility",
