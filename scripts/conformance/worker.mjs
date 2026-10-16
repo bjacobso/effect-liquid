@@ -110,6 +110,9 @@ if (engineName === "liquidjs") {
       Effect.either(
         Liquid.parse(fixture.source, {
           dialect: fixture.authority,
+          ...(fixture.authority === "ruby" && fixture.upstreamOptions?.errorMode === "strict2"
+            ? { errorMode: "strict2" }
+            : {}),
           groupedExpressions: options.groupedExpressions ?? false,
           orderedFilterParameters: options.orderedFilterParameters ?? false,
           ...Object.fromEntries(
@@ -135,6 +138,15 @@ if (engineName === "liquidjs") {
     if (fixture.operation === "parse") return { kind: "parsed" };
     const services = Layer.merge(
       Render.layer({
+        ...(fixture.origin?.repository === "ruby-liquid"
+          ? {
+              counterSeeds: Object.fromEntries(
+                Object.entries(jsonProjection(fixture.context ?? {})).filter(
+                  ([, v]) => typeof v === "number",
+                ),
+              ),
+            }
+          : {}),
         strictFilters: options.strictFilters ?? false,
         strictVariables: options.strictVariables ?? false,
         jekyllWhere: options.jekyllWhere ?? false,
@@ -158,7 +170,12 @@ if (engineName === "liquidjs") {
             : jsonProjection(fixture.globals ?? options.globals ?? {}),
         maxOutputBytes: maxBytes,
       }),
-      Loader.memory({ ...options.templates, ...fixture.templates }),
+      Loader.memory(
+        { ...options.templates, ...fixture.templates },
+        fixture.origin?.repository === "liquid-spec"
+          ? { extension: ".liquid", caseSensitive: false }
+          : {},
+      ),
     );
     const result = await Effect.runPromise(
       Effect.either(

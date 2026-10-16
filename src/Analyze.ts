@@ -1,6 +1,7 @@
 import { Effect } from "effect";
 import type { Document, Expression, Node } from "./Ast.js";
 import * as Binding from "./Binding.js";
+import { forDialect } from "./RubyBuiltins.js";
 import { registry as builtins } from "./Builtins.js";
 import type { Diagnostic } from "./Diagnostic.js";
 import { type BuiltinFilterError, ParseError } from "./Diagnostic.js";
@@ -94,6 +95,7 @@ export const analyze = <E, R>(
   registry: Registry<E | BuiltinFilterError, R> = builtins,
 ): Effect.Effect<Analysis> =>
   Effect.sync((): Analysis => {
+    registry = forDialect(registry, document.dialect);
     const occurrences: Occurrence[] = [];
     const bindings: Declaration[] = [];
     const dependencies: Dependency[] = [];
@@ -173,6 +175,24 @@ export const analyze = <E, R>(
           break;
         }
         case "Lookup": {
+          if (
+            document.dialect === "ruby" &&
+            e.root === "self" &&
+            e.segments.length &&
+            !Binding.read(env, "self")
+          ) {
+            expression({ _tag: "SelfLookup", segments: e.segments, span: e.span }, env, control);
+            break;
+          }
+          if (
+            document.dialect === "ruby" &&
+            e.root === "self" &&
+            !e.segments.length &&
+            !Binding.read(env, "self")
+          ) {
+            reasons.push("Self scope reference requires a flow summary");
+            break;
+          }
           const slot = Binding.read(env, e.root);
           const key = `${e.span.start}:${e.span.end}:${path(e)}:${control.join("/")}`;
           const previousIndex = reads.get(key);
@@ -226,7 +246,12 @@ export const analyze = <E, R>(
               embeddedDepth++;
               try {
                 expression(
-                  embeddedExpression(predicate.value, predicate.span, document.groupedExpressions),
+                  embeddedExpression(
+                    predicate.value,
+                    predicate.span,
+                    document.groupedExpressions,
+                    document.dialect,
+                  ),
                   next,
                   [...control, `filter:${e.span.start}`],
                 );
@@ -286,14 +311,16 @@ export const analyze = <E, R>(
             break;
           case "Counter": {
             // A numeric caller input seeds the register even if an assignment shadows it.
-            expression(
-              { _tag: "Lookup", root: n.name, segments: [], span: n.nameSpan },
-              Binding.make(),
-              control,
-            );
+            if (document.dialect !== "ruby")
+              expression(
+                { _tag: "Lookup", root: n.name, segments: [], span: n.nameSpan },
+                Binding.make(),
+                control,
+              );
             const slot = declare(n.name, "counter", n.span);
             if (!env.values.has(n.name)) env.values.set(n.name, slot);
-            reasons.push(`Counter seed dependencies are conservative at ${n.span.start}`);
+            if (document.dialect !== "ruby")
+              reasons.push(`Counter seed dependencies are conservative at ${n.span.start}`);
             break;
           }
           case "Cycle":
@@ -308,6 +335,12 @@ export const analyze = <E, R>(
               declare(n.name, "assign", n.span, provenance(n.expression, env)),
             );
             break;
+          case "IfChanged": {
+            const result = body(n.body, env, control);
+            absorb(result);
+            if (!result.normal) return result;
+            break;
+          }
           case "Capture": {
             const result = body(n.body, env, control);
             for (const next of [
@@ -335,6 +368,20 @@ export const analyze = <E, R>(
             break;
           }
           case "Case": {
+            if (document.dialect === "ruby") {
+              expression(n.expression, env, control);
+              for (const branch of n.branches) {
+                for (const value of branch.values) expression(value, env, control);
+                for (let i = 0; i < Math.max(1, branch.values.length); i++) {
+                  const previous = Binding.fork(env),
+                    result = body(branch.body, Binding.fork(env), control);
+                  absorb(result);
+                  Binding.join(env, [previous, ...(result.normal ? [result.normal] : [])], merge);
+                }
+              }
+              break;
+            }
+
             expression(n.expression, env, control);
             const branches = n.branches.map((b, i) => {
               for (const e of b.values) expression(e, env, control);
@@ -433,7 +480,12 @@ export const analyze = <E, R>(
           }
           case "Partial": {
             expression(n.template, env, control);
-            for (const e of Object.values(n.args)) expression(e, env, control);
+            const parameters = Binding.fork(env);
+            for (const [name, e] of Object.entries(n.args)) {
+              const scope = document.dialect === "ruby" && n.mode === "include" ? parameters : env;
+              expression(e, scope, control);
+              parameters.locals.set(name, declare(name, "assign", e.span, provenance(e, scope)));
+            }
             if (n.with) expression(n.with.value, env, control);
             if (n.for) expression(n.for.value, env, control);
             const target =
@@ -448,7 +500,10 @@ export const analyze = <E, R>(
             const iteration = n.for
               ? {
                   name:
-                    n.for.alias ?? (n.mode === "include" ? (target ?? "undefined") : "undefined"),
+                    n.for.alias ??
+                    (n.mode === "include" || document.dialect === "ruby"
+                      ? (target ?? "undefined")
+                      : "undefined"),
                   collection: n.for.value,
                 }
               : undefined;

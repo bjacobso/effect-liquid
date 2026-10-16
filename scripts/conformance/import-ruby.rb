@@ -117,19 +117,25 @@ class Extractor
       raise Unresolved,forced_reason if forced_reason
       args=arguments(c[1]);expected=value(args[0],env);source=value(args[1],env);third=args[2] ? value(args[2],env) : {}
       keywords=@repository!='ruby-liquid' && args[2] && args[2][0]==:bare_assoc_hash && third.keys.all?{|k| k.is_a?(Symbol)}
-      context=keywords ? {} : third;templates={};extra_node=args[3] || (args[2] if keywords)
+      context=keywords ? {} : third;templates=(@stub_templates || {}).dup;extra_node=args[3] || (args[2] if keywords)
       if extra_node
         extra=value(extra_node,env)
         extra=extra.transform_keys(&:to_s) if extra.is_a?(Hash)
         if extra.is_a?(Hash)
           raise Unresolved,'Unsupported assertion setup/options' unless (extra.keys-['partials','message','error_mode','render_errors']).empty?
-          templates=extra['partials']||{}
+          templates.merge!(extra['partials']||{})
           upstream_options={errorMode:extra['error_mode']&.to_s,renderErrors:extra['render_errors']}
           raise Unresolved,'Inline rendered-error semantics require an adapter' if extra['render_errors']
         elsif !extra.is_a?(String) && !extra.nil? then raise Unresolved,'Unsupported assertion options' end
       end
       raise Unresolved,'Expected output/template must be strings' unless expected.is_a?(String)&&source.is_a?(String)
       raise Unresolved,'Context must be a record' unless context.is_a?(Hash)
+      if @stub_fallback
+        texts=[source,*templates.values]
+        texts.each{|text|text.scan(/\{%\s*(?:include|render)\s+['"]([^'"]+)['"]/).each{|name|templates[name[0]] ||= name[0]}}
+        walk_values=lambda{|v|if v.is_a?(Hash);v.each_value{|x|walk_values.call(x)};elsif v.is_a?(Array);v.each{|x|walk_values.call(x)};elsif v.is_a?(String);templates[v] ||= v;end}
+        walk_values.call(context)
+      end
       fixture=base.merge(upstreamOptions:upstream_options || {},source:source,context:encode(context),templates:templates,expected:{kind:'output',output:expected},operation:'render')
       if @repository == 'shopify-liquid'
         fixture[:globals]=fixture[:context];fixture[:context]={}
@@ -158,6 +164,26 @@ class Extractor
   def run
     tree=Ripper.sexp(@text)
     return {fixtures:[],inventory:[{line:1,column:0,status:'excluded',reason:'Ruby syntax unsupported by installed Ripper'}]} unless tree
+    @stub_templates={}
+    if @repository=='ruby-liquid' && @text.include?('Liquid::Template.file_system = TestFileSystem.new')
+      walk(tree) do |n|
+        next unless n[0]==:class && n[1][0]==:const_ref && n[1][1][1]=='TestFileSystem'
+        walk(n) do |method|
+          next unless method[0]==:def && method[1][1]=='read_template_file'
+          branch=method[3][1]&.first
+          next unless branch && branch[0]==:case
+          arm=branch[2]
+          while arm && arm[0]==:when
+            begin
+              template=value(arm[2]&.last,{})
+              arm[1].each{|key|name=value(key,{});@stub_templates[name]=template if name.is_a?(String)&&template.is_a?(String)}
+            rescue Unresolved;end
+            arm=arm[3]
+          end
+          @stub_fallback=arm && arm[0]==:else && arm[1]&.first&.dig(0)==:var_ref
+        end
+      end
+    end
     walk(tree) do |n|
       if n[0]==:def && n[1][1].start_with?('test_')
         statements(n[3][1],{})

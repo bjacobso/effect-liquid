@@ -76,6 +76,7 @@ export function normalize(
             span: at,
           });
         if (v === undefined || v === null) return null;
+        if (dialect === "ruby" && Ruby.isSelf(v)) return v;
         if (typeof v === "string") {
           characters += v.length;
           if (characters > 10_000_000)

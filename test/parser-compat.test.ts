@@ -85,3 +85,40 @@ it.each([
   expect((await Effect.runPromise(Liquid.analyze(doc))).externalRoots).toEqual([]);
   expect((await Effect.runPromise(Liquid.check(doc, Type.record({})))).diagnostics).toEqual([]);
 });
+
+it.each(["{{ x.123 }}", "{% for x in contains %}{% endfor %}", "{{ [0] }}"])(
+  "rejects Ruby malformed expressions: %s",
+  async (source) => {
+    expect(
+      await Effect.runPromise(Effect.isFailure(Liquid.parse(source, { dialect: "ruby" }))),
+    ).toBe(true);
+  },
+);
+it("supports strict2 bare-bracket rejection with partial propagation", async () => {
+  expect(
+    await Effect.runPromise(
+      Effect.isFailure(Liquid.parse("{{['x']}}", { dialect: "ruby", errorMode: "strict2" })),
+    ),
+  ).toBe(true);
+  expect(
+    await Effect.runPromise(
+      Effect.isFailure(Liquid.parse("{{self['x']}}", { dialect: "ruby", errorMode: "strict2" })),
+    ),
+  ).toBe(false);
+});
+
+it("skips Ruby doc blocks and requires nested comments to close", async () => {
+  const d = await Effect.runPromise(
+    Liquid.parse("{% doc %}{{ignored}}{% enddoc %}OK", { dialect: "ruby" }),
+  );
+  expect(await Effect.runPromise(Liquid.render(d, {}).pipe(Effect.provide(Liquid.layer)))).toBe(
+    "OK",
+  );
+  expect(
+    await Effect.runPromise(
+      Effect.isFailure(
+        Liquid.parse("{% comment %}{% comment %}inner{% endcomment %}", { dialect: "ruby" }),
+      ),
+    ),
+  ).toBe(true);
+});

@@ -56,3 +56,12 @@ describe("date filters", () => {
       expect(result.left).toMatchObject({ _tag: "FilterFailure", name: "date" });
   });
 });
+
+it("uses Ruby ISO week and 24-hour strftime formats", async () => {
+  const d = await Effect.runPromise(Liquid.parse("{{d|date:'%G-%V %X %F'}}", { dialect: "ruby" }));
+  expect(
+    await Effect.runPromise(
+      Liquid.render(d, { d: "2021-01-01T14:30:45Z" }).pipe(Effect.provide(Liquid.layer)),
+    ),
+  ).toBe("2020-53 14:30:45 2021-01-01");
+});

@@ -69,6 +69,7 @@ export const analyzeProject = <E = never, R = never>(
             ...doc.whitespace,
             ...doc.delimiters,
             dialect: doc.dialect ?? "liquidjs",
+            ...(doc.errorMode ? { errorMode: doc.errorMode } : {}),
             groupedExpressions: doc.groupedExpressions ?? false,
             orderedFilterParameters: doc.orderedFilterParameters ?? false,
           });
