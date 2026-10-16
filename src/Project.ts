@@ -68,6 +68,7 @@ export const analyzeProject = <E = never, R = never>(
             ...(doc.parseLimit === undefined ? {} : { parseLimit: doc.parseLimit }),
             ...doc.whitespace,
             ...doc.delimiters,
+            dialect: doc.dialect ?? "liquidjs",
             groupedExpressions: doc.groupedExpressions ?? false,
             orderedFilterParameters: doc.orderedFilterParameters ?? false,
           });

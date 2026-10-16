@@ -3635,7 +3635,7 @@
     },
     {
       "feature": "raw trim delimiters",
-      "behavior": "Uses Ruby raw delimiters: accepts trimmed endraw, preserves literal body whitespace, and closes at a complete endraw tag rather than an earlier malformed opener.",
+      "behavior": "Dialect-specific: Ruby accepts marked endraw openers and closes at complete tags; LiquidJS uses its pinned delimiter behavior.",
       "tests": [
         "test/conformance.test.ts",
         "test/roadmap-compat.test.ts"
@@ -3662,7 +3662,7 @@
     },
     {
       "feature": "include iteration and aliases",
-      "behavior": "Ruby include for loops (scalar records render once) and with/as aliases; implicit item name is the evaluated template name, and forloop is inherited. LiquidJS 10.29.0 instead treats for/as words as boolean hash arguments and renders once.",
+      "behavior": "Ruby dialect iterates include for and honors with/as. Default LiquidJS renders once with boolean bare hash arguments.",
       "tests": [
         "test/roadmap-compat.test.ts"
       ]
@@ -3702,7 +3702,7 @@
       "ruby": "Recorded upstream Ruby expectation"
     },
     "crossEngine": "informational",
-    "phase": 1,
+    "phase": 2,
     "engineBehaviorChanged": false,
     "counts": {
       "ruby": {
@@ -3715,5 +3715,22 @@
       }
     },
     "fixtureEncoding": "$liquid tagged integer/float/decimal/symbol/range/hash; separate globals and templates"
+  },
+  "dialects": {
+    "default": "liquidjs",
+    "supported": [
+      "liquidjs",
+      "ruby"
+    ],
+    "snapshot": "Document; propagated to loaded partials, analysis/checking, render/stream, CLI and typed templates",
+    "differences": [
+      "include for/with/as",
+      "raw/endraw delimiters"
+    ],
+    "tests": [
+      "test/partial-bindings.test.ts",
+      "test/whitespace-options.test.ts",
+      "test/typed-liquid.test.ts"
+    ]
   }
 }

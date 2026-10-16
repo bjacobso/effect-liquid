@@ -59,3 +59,20 @@ function typeChecks() {
   greeting.render({ user: { name: "Ada", active: true } });
 }
 void typeChecks;
+
+it("snapshots dialect options on typed templates", async () => {
+  const options = { dialect: "ruby" as const };
+  const Ruby = liquid<Context>(options);
+  const template = Ruby.template`{% raw %}x{%- endraw %}`;
+  expect((await Effect.runPromise(template.parse())).dialect).toBe("ruby");
+  expect(
+    await Effect.runPromise(
+      template
+        .render({ user: { name: "Ada", active: true }, products: [] })
+        .pipe(Effect.provide(Liquid.layer)),
+    ),
+  ).toBe("x");
+  expect(await Effect.runPromise(Effect.isFailure(template.parse({ dialect: "liquidjs" })))).toBe(
+    true,
+  );
+});

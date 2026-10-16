@@ -5,7 +5,7 @@ import * as Liquid from "./Liquid.js";
 import { isType } from "./Type.js";
 
 const usage =
-  "Usage: effect-liquid <parse|analyze|render|check> <file|-> [--context file.json] [--contract file.json]\nOutputs JSON; exit 0 success, 1 findings/failure, 2 usage error.";
+  "Usage: effect-liquid <parse|analyze|render|check> <file|-> [--context file.json] [--contract file.json] [--dialect liquidjs|ruby]\nOutputs JSON; exit 0 success, 1 findings/failure, 2 usage error.";
 const args = process.argv.slice(2);
 if (args.includes("--help")) {
   process.stdout.write(`${usage}\n`);
@@ -17,13 +17,18 @@ if (
   !["parse", "analyze", "render", "check"].includes(command) ||
   !file ||
   flags.length % 2 !== 0 ||
-  flags.some((f, i) => i % 2 === 0 && !["--context", "--contract"].includes(f))
+  flags.some((f, i) => i % 2 === 0 && !["--context", "--contract", "--dialect"].includes(f))
 ) {
   process.stderr.write(`${usage}\n`);
   process.exit(2);
 }
 const options = new Map<string, string>();
 for (let i = 0; i < flags.length; i += 2) options.set(flags[i]!, flags[i + 1]!);
+const dialect = options.get("--dialect") ?? "liquidjs";
+if (dialect !== "liquidjs" && dialect !== "ruby") {
+  process.stderr.write(`${usage}\n`);
+  process.exit(2);
+}
 const read = (name: string) =>
   Effect.tryPromise({
     try: () => readFile(name, "utf8"),
@@ -50,7 +55,7 @@ const input =
     : read(file);
 const program = Effect.gen(function* () {
   const text = yield* input;
-  const document = yield* Liquid.parse({ id: file, text });
+  const document = yield* Liquid.parse({ id: file, text }, { dialect });
   switch (command) {
     case "parse":
       return document;

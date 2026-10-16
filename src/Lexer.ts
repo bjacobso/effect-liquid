@@ -1,4 +1,5 @@
 import { Effect } from "effect";
+import type { Dialect } from "./Ast.js";
 import { ParseError } from "./Diagnostic.js";
 import { type Source, type Span, span } from "./Source.js";
 export interface Token {
@@ -34,6 +35,7 @@ export const delimiterKeys = [
   "outputDelimiterRight",
 ] as const;
 export interface ParseOptions extends WhitespaceOptions, DelimiterOptions {
+  readonly dialect?: Dialect;
   readonly groupedExpressions?: boolean;
   readonly orderedFilterParameters?: boolean;
   readonly parseLimit?: number;
@@ -59,6 +61,7 @@ export const lex = (
         new ParseError({ message: "Invalid delimiters", span: span(source.id, 0, 0) }),
       );
     for (const [key, value] of Object.entries(options)) {
+      if (key === "dialect" && (value === "ruby" || value === "liquidjs")) continue;
       if (key === "parseLimit" && typeof value === "number" && Number.isFinite(value) && value >= 0)
         continue;
       if (
@@ -188,7 +191,9 @@ export const lex = (
         const bodyStart = i;
         const escapeRegex = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
         const endPattern = new RegExp(
-          `${escapeRegex(tagLeft)}(-)?\\s*endraw\\s*(-)?${escapeRegex(tagRight)}`,
+          options.dialect === "ruby"
+            ? `${escapeRegex(tagLeft)}(-)?\\s*endraw\\s*(-)?${escapeRegex(tagRight)}`
+            : `${escapeRegex(tagLeft)}()\\s*endraw\\b[\\s\\S]*?(-)?${escapeRegex(tagRight)}`,
           "g",
         );
         endPattern.lastIndex = i;

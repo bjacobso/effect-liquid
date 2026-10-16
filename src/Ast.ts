@@ -1,5 +1,6 @@
 import type { DelimiterOptions, WhitespaceOptions } from "./Lexer.js";
 import type { Source, Span } from "./Source.js";
+export type Dialect = "liquidjs" | "ruby";
 export type LiteralValue = null | boolean | number | string;
 export type Expression =
   | { readonly _tag: "Literal"; readonly value: LiteralValue; readonly span: Span }
@@ -141,6 +142,7 @@ export type Node =
       readonly span: Span;
     };
 export interface Document {
+  readonly dialect?: Dialect;
   readonly parseLimit?: number;
   readonly whitespace?: WhitespaceOptions;
   readonly delimiters?: DelimiterOptions;

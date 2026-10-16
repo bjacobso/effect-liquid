@@ -97,3 +97,18 @@ it("rejects non-boolean whitespace options with a typed parse error", async () =
   expect(result._tag).toBe("Left");
   if (result._tag === "Left") expect(result.left._tag).toBe("ParseError");
 });
+
+it("selects raw/endraw behavior by document dialect", async () => {
+  const marked = "> {%- raw -%} inner {%- endraw -%} <";
+  expect(await Effect.runPromise(Effect.isFailure(Liquid.parse(marked)))).toBe(true);
+  const ruby = await Effect.runPromise(Liquid.parse(marked, { dialect: "ruby" }));
+  expect(ruby.dialect).toBe("ruby");
+  expect(await Effect.runPromise(Liquid.render(ruby, {}).pipe(Effect.provide(Liquid.layer)))).toBe(
+    "> inner <",
+  );
+  const early = "{% raw %} Foobar {% invalid {% {% endraw {% endraw %}";
+  const js = await Effect.runPromise(Liquid.parse(early));
+  expect(await Effect.runPromise(Liquid.render(js, {}).pipe(Effect.provide(Liquid.layer)))).toBe(
+    await new Reference().parseAndRender(early),
+  );
+});

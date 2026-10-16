@@ -1,5 +1,5 @@
 import { Chunk, Context, Effect, Layer, Option, Stream } from "effect";
-import type { Document, Expression, Node } from "./Ast.js";
+import type { Dialect, Document, Expression, Node } from "./Ast.js";
 import { registry as builtins } from "./Builtins.js";
 import {
   BuiltinFilterError,
@@ -63,6 +63,7 @@ export class RenderConfig extends Context.Tag("effect-liquid/RenderConfig")<
 export const layer = (config: Partial<Config> = {}) =>
   Layer.succeed(RenderConfig, { ...defaults, ...config });
 interface State {
+  dialect: Dialect;
   whitespace: WhitespaceOptions & { readonly parseLimit?: number };
   delimiters: DelimiterOptions;
   groupedExpressions: boolean;
@@ -731,6 +732,7 @@ function* nodes<E, R>(
             parse(source, {
               ...state.whitespace,
               ...state.delimiters,
+              dialect: state.dialect,
               groupedExpressions: state.groupedExpressions,
               orderedFilterParameters: state.orderedFilterParameters,
             }),
@@ -771,6 +773,7 @@ function* nodes<E, R>(
             parse(name, {
               ...state.whitespace,
               ...state.delimiters,
+              dialect: state.dialect,
               groupedExpressions: state.groupedExpressions,
               orderedFilterParameters: state.orderedFilterParameters,
             }),
@@ -796,6 +799,7 @@ function* nodes<E, R>(
           parse(source, {
             ...state.whitespace,
             ...state.delimiters,
+            dialect: state.dialect,
             groupedExpressions: state.groupedExpressions,
             orderedFilterParameters: state.orderedFilterParameters,
           }),
@@ -928,6 +932,7 @@ function initialize(document: Document, context: unknown) {
       lenientDepth: 0,
       layoutStore: false,
       layoutBlocks: new Map(),
+      dialect: document.dialect ?? "liquidjs",
       groupedExpressions: document.groupedExpressions ?? false,
       orderedFilterParameters: document.orderedFilterParameters ?? false,
       whitespace: {
