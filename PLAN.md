@@ -77,6 +77,7 @@ Exit: multi-file rendering and analysis agree about scopes. A changed child inva
 - [x] Implement `increment`, `decrement`, and `cycle`, including partial scope isolation, stream replay, analysis, and checker support.
 - [x] Implement `liquid` blocks, inline comments, and `tablerow`, preserving source offsets and integrating streaming budgets, analysis, and checking.
 - [x] Implement `offset:continue`, loop cursor scope/isolation, and pinned slicing/empty-collection behavior.
+- [x] Add opt-in ordered loop modifiers with document snapshots, partial propagation, and shared analysis/checker cardinality rules.
 - [ ] Complete remaining `liquid`/`tablerow` syntax and control-flow quirks; implement `layout`/`block`.
 - [x] Add the initial collection-filter batch: sorting, mapping, summing, compacting, concatenation, uniqueness, sequence operations, slicing, property matching/searching; validate coercion and nonmutation.
 - [x] Add collection expression variants, static bracket keys for selector filters, predicate resource accounting, and literal predicate analysis/checking.
