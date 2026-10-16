@@ -1,12 +1,12 @@
 import { Effect } from "effect";
 import { BuiltinFilterError } from "./Diagnostic.js";
-import type { Filter, Signature } from "./Filter.js";
+import type { Filter, FilterCallContext, Signature } from "./Filter.js";
 import { isArray, stringify, type Value } from "./Value.js";
 
 const entries: [string, Filter<BuiltinFilterError>][] = [];
 const define = (
   name: string,
-  run: (value: Value, args: readonly Value[]) => Value,
+  run: (value: Value, args: readonly Value[], context?: FilterCallContext) => Value,
   minArgs = 0,
   maxArgs = minArgs,
   output: Signature["output"] = "string",
@@ -15,7 +15,7 @@ const define = (
     name,
     {
       signature: { input: "any", output, minArgs, maxArgs },
-      run: (value, args) => Effect.sync(() => run(value, args)),
+      run: (value, args, _named, context) => Effect.sync(() => run(value, args, context)),
     },
   ]);
 };
@@ -135,23 +135,23 @@ const numeric = (value: Value | undefined) =>
   );
 define(
   "truncate",
-  (value, args) => {
+  (value, args, context) => {
     const source = stringify(value);
-    const length = args.length ? numeric(args[0]) : 50;
-    const suffix = args.length > 1 ? stringify(args[1]) : "...";
+    const length = args.length && !context?.missingArguments[0] ? numeric(args[0]) : 50;
+    const suffix = args.length > 1 && !context?.missingArguments[1] ? stringify(args[1]) : "...";
     return source.length <= length ? value : source.substring(0, length - suffix.length) + suffix;
   },
   0,
   2,
   "unknown",
 );
-text(
+define(
   "truncatewords",
-  (value, args) => {
-    let count = args.length ? numeric(args[0]) : 15;
+  (value, args, context) => {
+    let count = args.length && !context?.missingArguments[0] ? numeric(args[0]) : 15;
     if (count <= 0) count = 1;
-    const suffix = args.length > 1 ? stringify(args[1]) : "...";
-    const words = value.split(/\s+/);
+    const suffix = args.length > 1 && !context?.missingArguments[1] ? stringify(args[1]) : "...";
+    const words = stringify(value).split(/\s+/);
     return words.slice(0, count).join(" ") + (words.length >= count ? suffix : "");
   },
   0,

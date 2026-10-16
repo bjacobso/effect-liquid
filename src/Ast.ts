@@ -101,6 +101,7 @@ export type Node =
       readonly limit?: Expression;
       readonly offset?: Expression;
       readonly reversed: boolean;
+      readonly modifiers?: readonly ("offset" | "limit" | "reversed")[];
       readonly body: readonly Node[];
       readonly otherwise: readonly Node[];
       readonly span: Span;
@@ -144,6 +145,7 @@ export interface Document {
   readonly whitespace?: WhitespaceOptions;
   readonly delimiters?: DelimiterOptions;
   readonly groupedExpressions?: boolean;
+  readonly orderedFilterParameters?: boolean;
   readonly _tag: "Document";
   readonly source: Source;
   readonly body: readonly Node[];

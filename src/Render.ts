@@ -66,7 +66,8 @@ interface State {
   whitespace: WhitespaceOptions & { readonly parseLimit?: number };
   delimiters: DelimiterOptions;
   groupedExpressions: boolean;
-  scopes: Record<string, Value>[];
+  orderedFilterParameters: boolean;
+  scopes: Record<string, Value | undefined>[];
   cycles: Map<string, number>;
   continuations: Map<string, number>;
   steps: number;
@@ -127,10 +128,8 @@ function* allocate(state: State, units: number, at: Span): Evaluation<void, neve
 }
 function get(state: State, name: string): Value | undefined {
   for (let i = state.scopes.length - 1; i >= 0; i--) {
-    const value = Object.getOwnPropertyDescriptor(state.scopes[i]!, name)?.value as
-      | Value
-      | undefined;
-    if (value !== undefined) return value;
+    const property = Object.getOwnPropertyDescriptor(state.scopes[i]!, name);
+    if (property) return property.value as Value | undefined;
   }
   return undefined;
 }
@@ -539,11 +538,11 @@ function* nodes<E, R>(
         const index = state.cycles.get(key) ?? 0;
         state.cycles.set(key, (index + 1) % node.values.length);
         const value = yield* ev(node.values[index]!);
-        yield* emit(value === false ? "" : stringify(value));
+        yield* emit(value ? stringify(value) : "");
         break;
       }
       case "Assign":
-        state.scopes[2]![node.name] = (yield* ev(node.expression)) ?? null;
+        state.scopes[2]![node.name] = yield* ev(node.expression);
         break;
       case "Capture":
         state.scopes[2]![node.name] = yield* buffer(nodes(node.body, state, registry));
@@ -606,12 +605,13 @@ function* nodes<E, R>(
               ? Number(yield* ev(node.offset))
               : 0;
         const limit = node.limit ? Number(yield* ev(node.limit)) : values.length;
-        values =
-          node._tag === "For"
-            ? values.slice(offset).slice(0, limit)
-            : values.slice(offset, offset + limit);
-        if (node._tag === "For") state.continuations.set(node.key, offset + values.length);
-        if (node._tag === "For" && node.reversed) values = [...values].reverse();
+        if (node._tag === "For") {
+          for (const modifier of node.modifiers ?? ["offset", "limit", "reversed"])
+            if (modifier === "offset") values = values.slice(offset);
+            else if (modifier === "limit") values = values.slice(0, limit);
+            else if (node.reversed) values = [...values].reverse();
+          state.continuations.set(node.key, offset + values.length);
+        } else values = values.slice(offset, offset + limit);
         const cols =
           node._tag === "TableRow" && node.cols
             ? Number(
@@ -732,6 +732,7 @@ function* nodes<E, R>(
               ...state.whitespace,
               ...state.delimiters,
               groupedExpressions: state.groupedExpressions,
+              orderedFilterParameters: state.orderedFilterParameters,
             }),
           );
           state.scopes.push(args);
@@ -771,6 +772,7 @@ function* nodes<E, R>(
               ...state.whitespace,
               ...state.delimiters,
               groupedExpressions: state.groupedExpressions,
+              orderedFilterParameters: state.orderedFilterParameters,
             }),
           );
           name = yield* buffer(nodes(nameDocument.body, state, registry));
@@ -795,6 +797,7 @@ function* nodes<E, R>(
             ...state.whitespace,
             ...state.delimiters,
             groupedExpressions: state.groupedExpressions,
+            orderedFilterParameters: state.orderedFilterParameters,
           }),
         );
         const old = state.scopes;
@@ -926,6 +929,7 @@ function initialize(document: Document, context: unknown) {
       layoutStore: false,
       layoutBlocks: new Map(),
       groupedExpressions: document.groupedExpressions ?? false,
+      orderedFilterParameters: document.orderedFilterParameters ?? false,
       whitespace: {
         ...document.whitespace,
         ...(document.parseLimit === undefined ? {} : { parseLimit: document.parseLimit }),

@@ -12,6 +12,7 @@ class Templates {
     readonly maxDepth: number,
     readonly budget: { remaining: number },
     readonly groupedExpressions = false,
+    readonly orderedFilterParameters = false,
   ) {}
   tag() {
     const t = this.tokens[this.pos];
@@ -50,12 +51,13 @@ class Templates {
           this.maxDepth,
           this.budget,
           this.groupedExpressions,
+          this.orderedFilterParameters,
         ).body([], depth + 1, loop);
         for (const node of nested) nodes.push(node);
         continue;
       }
       if (t.kind === "tag" && t.text.trimStart().startsWith("#")) {
-        if (/\n\s*[^#\s]/.test(t.text))
+        if (/\n\s*[^#\s]/.test(t.text.trimStart().slice(1).trim()))
           throw new ParseError({
             message: "Every inline comment line must start with #",
             span: t.span,
@@ -179,6 +181,10 @@ class Templates {
         let reversed = false;
         let offsetContinue = false;
         let cols: Expression | undefined;
+        const modifiers: ("offset" | "limit" | "reversed")[] = [];
+        const recordModifier = (name: (typeof modifiers)[number]) => {
+          if (!modifiers.includes(name)) modifiers.push(name);
+        };
         while (e.pos < e.words.length) {
           if (e.take(",")) {
             if (e.pos === e.words.length || e.peek(",")) e.fail("Unsupported loop option");
@@ -189,12 +195,15 @@ class Templates {
             cols = e.atom();
           } else if (tag === "for" && e.take("reversed")) {
             reversed = true;
+            recordModifier("reversed");
           } else if (e.take("limit")) {
             e.need(":");
             limit = e.atom();
+            recordModifier("limit");
           } else if (e.take("offset")) {
             e.need(":");
             offset = e.atom();
+            recordModifier("offset");
             if (
               offset._tag === "Lookup" &&
               offset.root === "continue" &&
@@ -247,6 +256,7 @@ class Templates {
           ...(limit ? { limit } : {}),
           ...(offset ? { offset } : {}),
           reversed,
+          ...(this.orderedFilterParameters ? { modifiers } : {}),
           body,
           otherwise,
           span: end("endfor"),
@@ -399,6 +409,7 @@ export const parse = (
         remaining: (options.maxTokens ?? 100_000) - tokens.length,
       },
       options.groupedExpressions,
+      options.orderedFilterParameters,
     ).body();
     let result: IteratorResult<void, Node[]>;
     do {
@@ -422,6 +433,7 @@ export const parse = (
       source,
       body,
       ...(options.groupedExpressions ? { groupedExpressions: true } : {}),
+      ...(options.orderedFilterParameters ? { orderedFilterParameters: true } : {}),
       ...(delimiterKeys.some((key) => options[key] !== undefined)
         ? {
             delimiters: Object.fromEntries(

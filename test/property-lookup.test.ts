@@ -116,3 +116,25 @@ it("preserves syntactic dependencies for virtual properties", async () => {
     "record.size",
   ]);
 });
+
+it.each(["test . test", "test .test", "test [key]", "test.test [key]"])(
+  "ends a receiver path at whitespace in %s",
+  async (expression) => {
+    const source = `{{ ${expression} | json }}`;
+    const context = { test: { test: "worked" }, key: "test" };
+    expect(await run(source, context)).toBe(await new Reference().parseAndRender(source, context));
+    const doc = await Effect.runPromise(Liquid.parse(source));
+    const analysis = await Effect.runPromise(Liquid.analyze(doc));
+    expect(analysis.externalPaths).toEqual([
+      expression.startsWith("test.test") ? "test.test" : "test",
+    ]);
+    const checked = await Effect.runPromise(
+      Liquid.check(doc, Type.record({ test: Type.record({ test: Type.string }) })),
+    );
+    expect(checked.diagnostics).toEqual([]);
+  },
+);
+
+it("allows whitespace after a property dot", async () => {
+  expect(await run("{{ test. test }}", { test: { test: "worked" } })).toBe("worked");
+});

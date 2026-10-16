@@ -2,7 +2,7 @@ import { writeFileSync } from "node:fs";
 import { Liquid } from "liquidjs";
 import { registry } from "../dist/Builtins.js";
 
-const reference = new Liquid({ timezoneOffset: 0 });
+const reference = new Liquid({ timezoneOffset: 0, orderedFilterParameters: true });
 const tags = new Set([
   "assign",
   "layout",
@@ -32,6 +32,7 @@ const implementedOptions = new Set([
   "globals",
   "ownPropertyOnly",
   "groupedExpressions",
+  "orderedFilterParameters",
   "trimTagLeft",
   "trimTagRight",
   "trimOutputLeft",
@@ -123,7 +124,8 @@ const manifest = {
       "Literals, ranges, comparisons, contains, not, right-associated and/or, filter pipelines; opt-in parenthesized conditions and pipelines",
     partials:
       "Literal or variable template names, interpolated quoted filenames, with/for/as bindings, and comma-separated named arguments.",
-    loops: "limit, numeric offset, reversed, else, and offset:continue",
+    loops:
+      "limit, numeric offset, reversed, else, and offset:continue; orderedFilterParameters applies modifiers in source order",
   },
   hostValues: {
     plainRecords: "supported with own data properties only",

@@ -72,6 +72,7 @@ if (engineName === "liquidjs") {
     "templates",
     "cache",
     "groupedExpressions",
+    "orderedFilterParameters",
     "trimTagLeft",
     "trimTagRight",
     "trimOutputLeft",
@@ -107,6 +108,7 @@ if (engineName === "liquidjs") {
       Effect.either(
         Liquid.parse(fixture.source, {
           groupedExpressions: options.groupedExpressions ?? false,
+          orderedFilterParameters: options.orderedFilterParameters ?? false,
           ...Object.fromEntries(
             [
               "trimTagLeft",

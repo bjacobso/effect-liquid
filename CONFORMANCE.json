@@ -158,7 +158,8 @@
         "test/layout.test.ts",
         "test/parser-compat.test.ts",
         "test/roadmap-compat.test.ts"
-      ]
+      ],
+      "behavior": "Scans complete delimiters and ignores stray closing-brace suffix text after the comment tag name; malformed body delimiters still fail bounded lexical validation."
     },
     "include": {
       "status": "partial",
@@ -300,7 +301,8 @@
         "test/layout.test.ts",
         "test/parser-compat.test.ts",
         "test/roadmap-compat.test.ts"
-      ]
+      ],
+      "behavior": "Suppresses JavaScript falsey candidates, including numeric zero; string zero still renders."
     },
     "if": {
       "status": "partial",
@@ -610,7 +612,8 @@
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
         "test/parser-compat.test.ts"
-      ]
+      ],
+      "behavior": "Trims leading/trailing argument whitespace before validating subsequent comment lines."
     }
   },
   "filters": {
@@ -1649,7 +1652,8 @@
         "test/layout.test.ts",
         "test/parser-compat.test.ts",
         "test/roadmap-compat.test.ts"
-      ]
+      ],
+      "behavior": "Preserves JavaScript addition/coercion for start and length, including numeric-string concatenation; allocation accounting uses the resulting bounded slice length."
     },
     "where": {
       "status": "partial",
@@ -2665,7 +2669,8 @@
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
         "test/parser-compat.test.ts"
-      ]
+      ],
+      "behavior": "Missing count/suffix arguments use defaults, including missing values preserved through assign; explicit nil remains distinct."
     },
     "truncatewords": {
       "status": "partial",
@@ -2693,7 +2698,8 @@
         "test/interpolated-partials.test.ts",
         "test/layout.test.ts",
         "test/parser-compat.test.ts"
-      ]
+      ],
+      "behavior": "Missing count/suffix arguments use defaults, including missing values preserved through assign; explicit nil remains distinct."
     },
     "normalize_whitespace": {
       "status": "partial",
@@ -3074,7 +3080,8 @@
       "status": "deferred"
     },
     "jekyllInclude": {
-      "status": "deferred"
+      "status": "deferred",
+      "rationale": "Deferred: requires static/unquoted filename grammar, equals-separated arguments in an include namespace, and matching project analysis/checker contracts. The imported parse-only case remains explicitly unsupported."
     },
     "keyValueSeparator": {
       "status": "deferred"
@@ -3597,14 +3604,21 @@
         "test/date-options.test.ts"
       ],
       "behavior": "Numeric minute offset or IANA timezone; explicit filter arguments override configuration."
+    },
+    "orderedFilterParameters": {
+      "status": "partial",
+      "tests": [
+        "test/render-options.test.ts"
+      ],
+      "behavior": "Parse option snapshots for-loop modifier order (offset, limit, reversed) in the AST and propagates to partial rendering, project analysis, and checking. Default remains offset, limit, reversed."
     }
   },
   "syntax": {
     "identifiers": "ASCII letter/underscore followed by word characters or hyphens",
-    "lookups": "Variable-rooted and bare context bracket access; computed lookup indices; direct literal receiver access; sequence length/size and record size fallback",
+    "lookups": "Variable-rooted and bare context bracket access; computed lookup indices; direct literal receiver access; sequence length/size and record size fallback; whitespace before a dot/bracket ends the receiver path, while whitespace after a dot is allowed",
     "expressions": "Literals, ranges, comparisons, contains, not, right-associated and/or, filter pipelines; opt-in parenthesized conditions and pipelines",
     "partials": "Literal or variable template names, interpolated quoted filenames, with/for/as bindings, and comma-separated named arguments.",
-    "loops": "limit, numeric offset, reversed, else, and offset:continue"
+    "loops": "limit, numeric offset, reversed, else, and offset:continue; orderedFilterParameters applies modifiers in source order"
   },
   "hostValues": {
     "plainRecords": "supported with own data properties only",

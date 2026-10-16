@@ -35,6 +35,7 @@ export const delimiterKeys = [
 ] as const;
 export interface ParseOptions extends WhitespaceOptions, DelimiterOptions {
   readonly groupedExpressions?: boolean;
+  readonly orderedFilterParameters?: boolean;
   readonly parseLimit?: number;
   readonly maxSourceLength?: number;
   readonly maxTokens?: number;
@@ -60,7 +61,10 @@ export const lex = (
     for (const [key, value] of Object.entries(options)) {
       if (key === "parseLimit" && typeof value === "number" && Number.isFinite(value) && value >= 0)
         continue;
-      if (["groupedExpressions", ...whitespaceKeys].includes(key) && typeof value === "boolean")
+      if (
+        ["groupedExpressions", "orderedFilterParameters", ...whitespaceKeys].includes(key) &&
+        typeof value === "boolean"
+      )
         continue;
       if (
         delimiterKeys.includes(key as (typeof delimiterKeys)[number]) &&
@@ -173,7 +177,11 @@ export const lex = (
           continue;
         }
       }
-      if (kind === "tag" && tag === "comment" && commentStart === undefined) {
+      if (
+        kind === "tag" &&
+        (tag === "comment" || tag.startsWith("comment}")) &&
+        commentStart === undefined
+      ) {
         commentStart = open;
         trimBarrier = true;
       } else if (kind === "tag" && tag === "raw") {

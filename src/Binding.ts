@@ -155,14 +155,21 @@ export function loopShape(node: Extract<import("./Ast.js").Node, { _tag: "For" |
   }
   const empty = length === undefined || length === 0;
   if (length !== undefined) {
-    if (node.offset?._tag === "Literal") {
-      const offset = Math.trunc(Number(node.offset.value)) || 0;
-      length = offset < 0 ? Math.min(length, -offset) : Math.max(0, length - offset);
-    } else if (node.offset || (node._tag === "For" && node.offsetContinue)) length = undefined;
-    if (length !== undefined && node.limit?._tag === "Literal") {
-      const limit = Math.trunc(Number(node.limit.value)) || 0;
-      length = limit < 0 ? Math.max(0, length + limit) : Math.min(length, limit);
-    } else if (node.limit) length = undefined;
+    for (const modifier of node._tag === "For"
+      ? (node.modifiers ?? ["offset", "limit"])
+      : ["offset", "limit"]) {
+      if (modifier === "offset") {
+        if (length !== undefined && node.offset?._tag === "Literal") {
+          const offset = Math.trunc(Number(node.offset.value)) || 0;
+          length = offset < 0 ? Math.min(length, -offset) : Math.max(0, length - offset);
+        } else if (node.offset || (node._tag === "For" && node.offsetContinue)) length = undefined;
+      } else if (modifier === "limit") {
+        if (length !== undefined && node.limit?._tag === "Literal") {
+          const limit = Math.trunc(Number(node.limit.value)) || 0;
+          length = limit < 0 ? Math.max(0, length + limit) : Math.min(length, limit);
+        } else if (node.limit) length = undefined;
+      }
+    }
   }
   return {
     body: length === undefined || length > 0,

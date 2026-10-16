@@ -69,6 +69,7 @@ export const analyzeProject = <E = never, R = never>(
             ...doc.whitespace,
             ...doc.delimiters,
             groupedExpressions: doc.groupedExpressions ?? false,
+            orderedFilterParameters: doc.orderedFilterParameters ?? false,
           });
           const childAnalysis = yield* analyze(child, registry);
           const childResolve = (p: string): readonly string[] => {

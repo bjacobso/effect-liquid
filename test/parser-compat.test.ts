@@ -74,3 +74,14 @@ it.each([
   expect(Either.isLeft(result)).toBe(true);
   if (Either.isLeft(result)) expect(result.left._tag).toBe("ParseError");
 });
+
+it.each([
+  "{%comment}{% assign a = 1 %}{%endcomment}{% endif %}",
+  "{% #\n{{ foo }}\n %}",
+  "{% #\nfirst line\n# second line\n %}",
+])("ignores comment content in %s", async (source) => {
+  expect(await run(source, {})).toBe(await new Reference().parseAndRender(source));
+  const doc = await Effect.runPromise(Liquid.parse(source));
+  expect((await Effect.runPromise(Liquid.analyze(doc))).externalRoots).toEqual([]);
+  expect((await Effect.runPromise(Liquid.check(doc, Type.record({})))).diagnostics).toEqual([]);
+});
