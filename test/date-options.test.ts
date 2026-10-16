@@ -154,3 +154,12 @@ it("rejects invalid finite-limit/date options with typed failures", async () => 
     true,
   );
 });
+
+it("accounts for slice output after string argument coercion", async () => {
+  const context = { value: "foobar" };
+  expect(await run("{{ value | slice: 0, 1 }}", { memoryLimit: 1 }, context)).toBe("f");
+  expect(await run("{{ value | slice: '1', '3' }}", { memoryLimit: 5 }, context)).toBe("oobar");
+  await expect(run("{{ value | slice: '1', '3' }}", { memoryLimit: 4 }, context)).rejects.toThrow(
+    "Memory allocation limit exceeded",
+  );
+});

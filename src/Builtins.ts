@@ -191,21 +191,35 @@ define("pop", { input: "any", output: "array", minArgs: 0, maxArgs: 0 }, (v) =>
 define("shift", { input: "any", output: "array", minArgs: 0, maxArgs: 0 }, (v) =>
   array(v).slice(1),
 );
+function sliceBounds(
+  size: number,
+  args: readonly Value[],
+  context?: FilterCallContext,
+): readonly [number, number] {
+  const primitive = (item: Value | undefined) =>
+    item != null && typeof item === "object" ? hostString(item) : item;
+  // Preserve JavaScript addition before converting indices: numeric strings concatenate.
+  const add = (left: ReturnType<typeof primitive>, right: ReturnType<typeof primitive>) =>
+    typeof left === "string" || typeof right === "string"
+      ? String(left) + String(right)
+      : Number(left) + Number(right);
+  let start = context?.missingArguments[0] ? undefined : primitive(args[0]);
+  const length = args.length < 2 || context?.missingArguments[1] ? 1 : primitive(args[1]);
+  if (Number(start) < 0) start = add(size, start);
+  if (Number(start) < 0 || Number(length) < 0) return [0, 0];
+  const index = (value: number) => {
+    const integer = Math.trunc(value) || 0;
+    return integer < 0 ? Math.max(size + integer, 0) : Math.min(integer, size);
+  };
+  return [index(Number(start)), index(Number(add(start, length)))];
+}
 define(
   "slice",
   { input: "any", output: "unknown", minArgs: 1, maxArgs: 2 },
   (v, a, _n, context) => {
     if (v === null) return [];
     const value = isArray(v) ? v : stringify(v);
-    let start = Math.trunc(numeric(a[0])) || 0;
-    const length =
-      a.length < 2 || context?.missingArguments[1] ? 1 : Math.trunc(numeric(a[1])) || 0;
-    if (start < 0) start += value.length;
-    return start < 0 || length < 0
-      ? isArray(value)
-        ? []
-        : ""
-      : value.slice(start, start + length);
+    return value.slice(...sliceBounds(value.length, a, context));
   },
 );
 for (const name of ["where", "reject", "find", "find_index", "has"] as const)
@@ -310,7 +324,12 @@ const allocatingArrays = new Set([
 ]);
 const lengthOf = (value: Value | undefined): number =>
   isArray(value) ? value.length : value == null ? 0 : 1;
-function allocation(name: string, value: Value, args: readonly Value[]): number {
+function allocation(
+  name: string,
+  value: Value,
+  args: readonly Value[],
+  context?: FilterCallContext,
+): number {
   if (allocatingArrays.has(name)) {
     const size = lengthOf(value);
     return name === "concat"
@@ -319,11 +338,14 @@ function allocation(name: string, value: Value, args: readonly Value[]): number 
         ? size + args.length
         : size;
   }
-  if (name === "slice")
-    return Math.min(
+  if (name === "slice") {
+    const [start, end] = sliceBounds(
       isArray(value) ? value.length : stringify(value).length,
-      args.length < 2 || args[1] == null ? 1 : Math.max(0, numeric(args[1])),
+      args,
+      context,
     );
+    return Math.max(0, end - start);
+  }
   const text = stringify(value);
   if (name === "split") return text.length;
   if (name === "replace") {
@@ -363,7 +385,8 @@ export const registry: Registry<BuiltinFilterError> = {
           : {
               allocation:
                 filter.allocation ??
-                ((value: Value, args: readonly Value[]) => allocation(name, value, args)),
+                ((value: Value, args: readonly Value[], context: FilterCallContext) =>
+                  allocation(name, value, args, context)),
             }),
         analysis: {
           provenance: preserveProvenance.has(name)

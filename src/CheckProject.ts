@@ -77,6 +77,7 @@ export const checkProject = <E = never, R = never>(
             ...(doc.parseLimit === undefined ? {} : { parseLimit: doc.parseLimit }),
             ...doc.whitespace,
             groupedExpressions: doc.groupedExpressions ?? false,
+            orderedFilterParameters: doc.orderedFilterParameters ?? false,
           });
           if (dep.mode === "include") {
             incomplete("Shared include contract requires a flow summary", doc);

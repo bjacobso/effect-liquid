@@ -227,3 +227,27 @@ describe("array filters", () => {
     expect(values).toEqual([1, 2, 3]);
   });
 });
+
+it.each([0, 0.0, false, true, "", "0"])("matches cycle output for %s", async (value) => {
+  const source = "{% case nil %}{% when nil, nil %}{% cycle value %}{% endcase %}";
+  expect(await run(source, { value })).toBe(
+    await new Reference().parseAndRender(source, { value }),
+  );
+});
+
+it.each([
+  ["1", "3"],
+  [-2, 1],
+  ["-2", 1],
+  [1, "2"],
+  [null, 2],
+  [1.5, 1.5],
+  ["bad", 1],
+  [[1], [2]],
+])("preserves slice argument coercion for %s and %s", async (start, length) => {
+  const source = "{{ value | slice: start, length | json }}";
+  for (const value of ["foobar", [0, 1, 2, 3, 4, 5]]) {
+    const context = { value, start, length };
+    expect(await run(source, context)).toBe(await new Reference().parseAndRender(source, context));
+  }
+});

@@ -103,3 +103,22 @@ describe("string filter compatibility", () => {
     expect(result.diagnostics).toEqual([]);
   });
 });
+
+it.each(["truncate: 5", "truncatewords: 1"])(
+  "defaults missing %s suffixes while preserving explicit nil",
+  async (filter) => {
+    const source = `{% assign suffix = missing %}{{ text | ${filter}, suffix }}|{{ text | ${filter}, nil }}`;
+    const context = { text: "alpha beta gamma", suffix: "caller" };
+    expect(await run(source, context)).toBe(await new Reference().parseAndRender(source, context));
+    const doc = await Effect.runPromise(Liquid.parse(source));
+    expect((await Effect.runPromise(Liquid.analyze(doc))).externalRoots).toEqual([
+      "missing",
+      "text",
+    ]);
+    const checked = await Effect.runPromise(
+      Liquid.check(doc, Type.record({ missing: Type.missing, text: Type.string })),
+    );
+    const suffixStart = source.indexOf(", suffix") + 2;
+    expect(checked.expressionTypes[`${suffixStart}:${suffixStart + 6}`]).toEqual(Type.missing);
+  },
+);

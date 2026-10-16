@@ -110,14 +110,19 @@ export class Expressions {
   }
   suffix(): Expression[] {
     const segments: Expression[] = [];
+    let attached = true;
     while (this.peek(".") || this.peek("[")) {
+      // Whitespace ends the receiver path; still validate ignored suffix syntax.
+      attached &&= this.words[this.pos - 1]?.end === this.words[this.pos]?.start;
       if (this.take(".")) {
         const key = this.words[this.pos++];
         if (!key || key.quoted || !property.test(key.text)) this.fail("Expected property");
-        segments.push({ _tag: "Literal", value: key.text, span: this.position(key.start) });
+        if (attached)
+          segments.push({ _tag: "Literal", value: key.text, span: this.position(key.start) });
       } else {
         this.need("[");
-        segments.push(this.atom());
+        const key = this.atom();
+        if (attached) segments.push(key);
         this.need("]");
       }
     }
