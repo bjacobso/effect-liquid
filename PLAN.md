@@ -157,7 +157,7 @@ The differential harness now imports pinned static examples from LiquidJS, Deepi
 - [x] Phase 2: document-snapshotted dialect across parsing, rendering, streams, project analysis, checking, CLI and typed templates; move Ruby owner choices behind it.
 - [x] Phase 3: Ruby Integer/Float/decimal, Range/symbol values, stringification, arithmetic and checker types; measure LiquidJS hot path.
 - [x] Phase 4: Ruby tags, filters, strict parsing, plain-data drop behavior; explicitly defer host callbacks.
-- [ ] Phase 5: pinned live Ruby oracle and bounded seedable generative differential testing.
+- [x] Phase 5: pinned live Ruby oracle and bounded seedable generative differential testing.
 - [ ] Phase 6: separate optional PR for permissive LiquidJS parsing with conservative analysis/checking.
 
 Each phase is a separately validated stacked PR above `liquidjs-mismatch-fixes`. `keepOutputType` stays deferred.

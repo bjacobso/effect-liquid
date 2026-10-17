@@ -136,7 +136,10 @@ export const tagMetadata: Readonly<Record<import("./Ast.js").Node["_tag"], TagMe
 };
 
 /** Known empty/single collections avoid speculative back edges and impossible else paths. */
-export function loopShape(node: Extract<import("./Ast.js").Node, { _tag: "For" | "TableRow" }>): {
+export function loopShape(
+  node: Extract<import("./Ast.js").Node, { _tag: "For" | "TableRow" }>,
+  dialect?: "ruby" | "liquidjs",
+): {
   readonly body: boolean;
   readonly empty: boolean;
   readonly repeat: boolean;
@@ -154,7 +157,7 @@ export function loopShape(node: Extract<import("./Ast.js").Node, { _tag: "For" |
       to = Number(collection.to.value);
     length = Number.isNaN(from) || Number.isNaN(to) ? 0 : Math.max(0, Math.ceil(to + 1 - from));
   }
-  const empty = length === undefined || length === 0;
+  let empty = length === undefined || length === 0;
   if (length !== undefined) {
     for (const modifier of node._tag === "For"
       ? (node.modifiers ?? ["offset", "limit"])
@@ -172,6 +175,7 @@ export function loopShape(node: Extract<import("./Ast.js").Node, { _tag: "For" |
       }
     }
   }
+  if (dialect === "ruby") empty = length === undefined || length === 0;
   return {
     body: length === undefined || length > 0,
     empty,

@@ -140,6 +140,10 @@ export function yamlCases(text, path, root, inventory = []) {
         result.push({
           ...base,
           source: s.template,
+          ...(/\|\s*date\b/.test(s.template) &&
+          /(?:now|today)/i.test(s.template + JSON.stringify(globals))
+            ? { clock: "2024-01-01T00:01:58Z" }
+            : {}),
           context,
           globals,
           authority: "ruby",
@@ -152,7 +156,7 @@ export function yamlCases(text, path, root, inventory = []) {
           features: s.features ?? [],
           complexity: s.complexity ?? null,
           upstreamOptions: {
-            errorMode: s.error_mode ?? "strict",
+            errorMode: String(s.error_mode ?? "strict").replace(/^:/, ""),
             renderErrors: s.render_errors ?? false,
           },
         });

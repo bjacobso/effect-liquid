@@ -32,6 +32,7 @@ const allowed = new Set([
   "--limit",
   "--timeout-ms",
   "--report",
+  "--update-ruby-expectations",
 ]);
 for (let i = 0; i < args.length; i++) {
   if (!allowed.has(args[i])) throw new Error(`Unknown argument: ${args[i]}`);
@@ -76,6 +77,11 @@ const updating = args.includes("--update-baseline");
 const nextBaseline = {};
 const leftWorker = new EngineWorker("liquidjs", { timeoutMs });
 const rightWorker = new EngineWorker("effect-liquid", { timeoutMs });
+const rubyWorker = new EngineWorker("ruby", { timeoutMs });
+const oracleExpectations = {};
+const recordedRuby = existsSync("conformance/ruby-expectations.json")
+  ? readJSON("conformance/ruby-expectations.json").cases
+  : {};
 const results = [];
 const counts = {};
 const perSuite = {};
@@ -85,7 +91,37 @@ const reportPath = value("--report", "conformance/reports/latest.json");
 const fatal = [];
 try {
   for (const fixture of selected) {
-    const [left, right] = await Promise.all([leftWorker.run(fixture), rightWorker.run(fixture)]);
+    const [left, right, ruby] = await Promise.all([
+      leftWorker.run(fixture),
+      rightWorker.run(fixture),
+      rubyWorker.run(fixture),
+    ]);
+    if (!fixture.expected && ["output", "error", "parsed"].includes(ruby.kind))
+      oracleExpectations[fixture.id] = {
+        fixtureHash: hash(fixture),
+        expected:
+          ruby.kind === "output"
+            ? ruby.truncated
+              ? { kind: "output", sha256: ruby.sha256 }
+              : { kind: "output", output: ruby.output }
+            : ruby.kind === "parsed"
+              ? { kind: "parsed" }
+              : { kind: "error", phase: ruby.phase },
+      };
+    if (!fixture.expected && ruby.kind === "unsupported-configuration")
+      oracleExpectations[fixture.id] = {
+        fixtureHash: hash(fixture),
+        unsupported: ruby.options,
+        reason: "LiquidJS-specific execution option has no Ruby counterpart",
+      };
+    const supplemental = recordedRuby[fixture.id];
+    const rubySupplementalExpectation = !supplemental
+      ? "not-specified"
+      : supplemental.fixtureHash !== hash(fixture)
+        ? "stale-fixture"
+        : supplemental.unsupported
+          ? "unsupported-configuration"
+          : expectation(ruby, supplemental.expected);
     const comparison = compare(left, right);
     const authorityScore = score(fixture, left, right);
     const dialect = (perDialect[fixture.authority] ??= {
@@ -110,7 +146,9 @@ try {
     gates[gate] = (gates[gate] ?? 0) + 1;
     if (hasGap(fixture, left, right))
       nextBaseline[fixture.id] = baselineEntry(fixture, left, right);
-    if ([left, right].some((r) => ["worker-error", "worker-crash", "timeout"].includes(r.kind)))
+    if (
+      [left, right, ruby].some((r) => ["worker-error", "worker-crash", "timeout"].includes(r.kind))
+    )
       fatal.push(fixture.id);
     results.push({
       id: fixture.id,
@@ -124,6 +162,10 @@ try {
         liquidjs: expectation(left, fixture.expected),
         effectLiquid: expectation(right, fixture.expected),
       },
+      rubySupplementalExpectation,
+      ruby,
+      rubyRecordedExpectation:
+        fixture.authority === "ruby" ? expectation(ruby, fixture.expected) : "not-applicable",
       liquidjs: left,
       effectLiquid: right,
     });
@@ -133,6 +175,7 @@ try {
 } finally {
   leftWorker.close();
   rightWorker.close();
+  rubyWorker.close();
 }
 const stale =
   !args.includes("--suite") && !args.includes("--filter") && !args.includes("--limit")
@@ -141,6 +184,17 @@ const stale =
 const summary = {
   total: selected.length,
   totalAvailable: all.length,
+  rubyRecorded: {
+    match: results.filter((r) => r.rubyRecordedExpectation === "match").length,
+    different: results.filter((r) => r.rubyRecordedExpectation === "different").length,
+  },
+  rubyFilledUnspecified: Object.values(oracleExpectations).filter((x) => x.expected).length,
+  rubyUnspecifiedUnsupported: Object.values(oracleExpectations).filter((x) => x.unsupported).length,
+  rubySupplemental: {
+    match: results.filter((r) => r.rubySupplementalExpectation === "match").length,
+    different: results.filter((r) => r.rubySupplementalExpectation === "different").length,
+    stale: results.filter((r) => r.rubySupplementalExpectation === "stale-fixture").length,
+  },
   counts,
   perSuite,
   perDialect,
@@ -160,7 +214,11 @@ const summary = {
 const report = {
   schemaVersion: 2,
   createdAt: new Date().toISOString(),
-  engines: { liquidjs: installed.version, effectLiquid: readJSON("package.json").version },
+  engines: {
+    ruby: pins["shopify-liquid"],
+    liquidjs: installed.version,
+    effectLiquid: readJSON("package.json").version,
+  },
   runtime: {
     node: process.version,
     platform: process.platform,
@@ -215,6 +273,14 @@ if (updating) {
   writeFileSync(
     baselinePath,
     `${JSON.stringify({ schemaVersion: 2, pins, cases: nextBaseline }, null, 2)}\n`,
+  );
+}
+if (args.includes("--update-ruby-expectations")) {
+  if (fatal.length || selected.length !== all.length)
+    throw new Error("Ruby expectation updates require a complete successful run");
+  writeFileSync(
+    "conformance/ruby-expectations.json",
+    JSON.stringify({ pins, cases: oracleExpectations }, null, 2) + "\n",
   );
 }
 console.log(JSON.stringify(summary, null, 2));

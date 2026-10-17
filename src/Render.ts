@@ -756,6 +756,10 @@ function* nodes<E, R>(
             else if (modifier === "limit") values = values.slice(0, limit);
             else if (node.reversed) values = [...values].reverse();
           state.continuations.set(node.key, offset + values.length);
+          if (state.dialect === "ruby" && !values.length) {
+            yield* nodes(node.otherwise, state, registry);
+            break;
+          }
         } else if (!(state.dialect === "ruby" && typeof collection === "string"))
           values = values.slice(offset, offset + limit);
         if (state.dialect === "ruby" && node._tag === "TableRow" && !values.length) {

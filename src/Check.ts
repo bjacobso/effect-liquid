@@ -618,7 +618,7 @@ export const check = <E = never, R = never>(
                   : { parentloop: T.missing }),
               }),
             );
-            const shape = Binding.loopShape(n);
+            const shape = Binding.loopShape(n, document.dialect);
             const single =
               !shape.repeat && shape.body ? body(n.body, Binding.fork(initial)) : undefined;
             const result = !shape.body

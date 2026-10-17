@@ -28,48 +28,12 @@
     }
   },
   "cases": {
-    "liquid-spec:specs/basics/date-filters.yml:78:0": {
-      "fixtureHash": "32a5fc9f3265dd354d423f0b0b8356b484364c5cfe1b110e74d988009a15894f",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "037792ce06d379098dc3b87e8c762fd0fb1f7871d040f5441b702856d3ccadf6"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
     "liquid-spec:specs/liquid_ruby/manual.yml:388:0": {
       "fixtureHash": "e05910212852b10c7289f287a10e2d64cdd3f10413799bc385042881fa0c685c",
       "authority": "ruby",
       "effectLiquid": {
         "kind": "output",
         "sha256": "0534e7ee87253b417daf96bd123a215634b1237c895f4e68f894f301e9f9e40e"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:1041:0": {
-      "fixtureHash": "aad27e2e6651d16dbad5561803fad9dbe32302b599b649fa25cdc61aed0668eb",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "178e1210d9b785724521135865bd828166bbc7a6e3f341d6e1e146554ae9ae93"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:1083:0": {
-      "fixtureHash": "bf75d378aa08c95dbe67df997fede11458cf8f4bced9d1bd3ffb7fa87b492fa2",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "178e1210d9b785724521135865bd828166bbc7a6e3f341d6e1e146554ae9ae93"
-      },
-      "reason": "Known imported compatibility gap; inspect the linked upstream case"
-    },
-    "liquid-spec:specs/liquid_ruby/standard_filters.yml:1111:0": {
-      "fixtureHash": "77c677bacb28966af9d3a245840addf1da4c700a90f80a656ef300995e4275fc",
-      "authority": "ruby",
-      "effectLiquid": {
-        "kind": "output",
-        "sha256": "178e1210d9b785724521135865bd828166bbc7a6e3f341d6e1e146554ae9ae93"
       },
       "reason": "Known imported compatibility gap; inspect the linked upstream case"
     },

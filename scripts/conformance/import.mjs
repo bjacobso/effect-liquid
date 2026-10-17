@@ -106,7 +106,7 @@ for (const [repo, pin] of Object.entries(pins)) {
   }
   for (let index = fixtures.length - 1; index >= 0; index--) {
     const fixture = fixtures[index];
-    if (/['"](?:now|today)['"]\s*\|\s*date|\|\s*sample\b/.test(fixture.source)) {
+    if (!fixture.clock && /['"](?:now|today)['"]\s*\|\s*date|\|\s*sample\b/.test(fixture.source)) {
       const entry = inventory.find((entry) => entry.id === fixture.id);
       if (entry) {
         entry.status = "excluded";

@@ -3703,19 +3703,29 @@
       "ruby": "Recorded upstream Ruby expectation"
     },
     "crossEngine": "informational",
-    "phase": 4,
+    "phase": 5,
     "engineBehaviorChanged": false,
     "counts": {
       "ruby": {
-        "pass": 5331,
-        "total": 5338
+        "pass": 5339,
+        "total": 5342
       },
       "liquidjs": {
         "pass": 848,
         "total": 854
       }
     },
-    "fixtureEncoding": "$liquid tagged integer/float/decimal/symbol/range/hash; separate globals and templates"
+    "fixtureEncoding": "$liquid tagged integer/float/decimal/symbol/range/hash; separate globals and templates",
+    "liveRuby": {
+      "commit": "3bdbd4ac2fabc4b70ce759dd40616bb03bc34bac",
+      "confirmed": {
+        "match": 5341,
+        "different": 1
+      },
+      "supplementalResults": 177,
+      "unsupportedSupplementalMappings": 4,
+      "originalUnspecifiedLocalExpectations": 2
+    }
   },
   "dialects": {
     "default": "liquidjs",
@@ -3747,9 +3757,8 @@
     ],
     "remaining": [
       "Ruby host callbacks/Drops",
-      "Ruby lax parsing",
-      "Four fixed-clock expectations (oracle phase)",
-      "One recorded render-for expectation requires oracle confirmation"
+      "Two explicitly lax Shopify assertions",
+      "One recorded render-for expectation disagrees with pinned Ruby"
     ],
     "rubyOnlyTags": {
       "ifchanged": {

@@ -414,7 +414,7 @@ export const analyze = <E, R>(
             );
             const loopName = Binding.tagMetadata[n._tag].builtin!;
             initial.locals.set(loopName, declare(loopName, "builtin", n.span));
-            const shape = Binding.loopShape(n);
+            const shape = Binding.loopShape(n, document.dialect);
             const transfer = (next: Binding.Flow<Slot>) =>
               body(n.body, next, [...control, `for:${n.span.start}`]);
             const single =
