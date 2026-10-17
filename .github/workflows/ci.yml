@@ -43,6 +43,15 @@ jobs:
           node-version: ${{ matrix.node }}
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - uses: ruby/setup-ruby@651ff0d62c5c79bed6d53ec518387aae20e72c1a
+        if: matrix.node == 24
+        with:
+          ruby-version: "3.2"
+      - name: Install pinned Ruby oracle
+        if: matrix.node == 24
+        run: |
+          pnpm conformance:fetch
+          pnpm conformance:ruby:setup
       - name: Build and test
         run: pnpm test
       - name: Check conformance
