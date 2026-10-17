@@ -3,8 +3,10 @@ import type { Source, Span } from "./Source.js";
 export type Dialect = "liquidjs" | "ruby";
 export type LiteralValue = null | boolean | number | string;
 export type Expression =
+  | { readonly _tag: "Sequence"; readonly values: readonly Expression[]; readonly span: Span }
   | {
       readonly _tag: "Literal";
+      readonly missing?: true;
       readonly lookupKind?: "property";
       readonly numericKind?: "integer" | "float";
       readonly value: LiteralValue;
@@ -149,6 +151,7 @@ export type Node =
       readonly span: Span;
     };
 export interface Document {
+  readonly recovered?: true;
   readonly dialect?: Dialect;
   readonly errorMode?: "strict" | "strict2";
   readonly parseLimit?: number;

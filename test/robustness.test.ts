@@ -90,7 +90,9 @@ it("rejects duplicate named arguments explicitly", async () => {
     '{% render "p", x: a, x: b %}',
     "{{ x | default: y, allow_false: a, allow_false: b }}",
   ]) {
-    const result = await Effect.runPromise(Effect.either(Liquid.parse(source)));
+    const result = await Effect.runPromise(
+      Effect.either(Liquid.parse(source, { dialect: "ruby" })),
+    );
     expect(Either.isLeft(result)).toBe(true);
   }
 });

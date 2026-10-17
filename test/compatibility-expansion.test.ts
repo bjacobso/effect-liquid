@@ -54,7 +54,9 @@ describe("counter and cycle compatibility", () => {
   it.each(["{% cycle %}", '{% cycle "group": %}', "{% increment %}", '{% decrement "n" %}'])(
     "rejects malformed state tag %s",
     async (source) => {
-      expect(await Effect.runPromise(Effect.isFailure(Liquid.parse(source)))).toBe(true);
+      expect(
+        await Effect.runPromise(Effect.isFailure(Liquid.parse(source, { dialect: "ruby" }))),
+      ).toBe(true);
     },
   );
   it("extracts cycle inputs and recognizes counter bindings without erasing assignments", async () => {
@@ -94,11 +96,15 @@ describe("tag argument compatibility", () => {
     const context = { items: [1, 2, 3, 4] };
     expect(await run(source, context)).toBe(await new Reference().parseAndRender(source, context));
     expect(
-      await Effect.runPromise(Effect.isFailure(Liquid.parse("{% for i in items, %}{% endfor %}"))),
+      await Effect.runPromise(
+        Effect.isFailure(Liquid.parse("{% for i in items, %}{% endfor %}", { dialect: "ruby" })),
+      ),
     ).toBe(true);
     expect(
       await Effect.runPromise(
-        Effect.isFailure(Liquid.parse("{% for i in items,, limit: 2 %}{% endfor %}")),
+        Effect.isFailure(
+          Liquid.parse("{% for i in items,, limit: 2 %}{% endfor %}", { dialect: "ruby" }),
+        ),
       ),
     ).toBe(true);
   });
@@ -107,7 +113,9 @@ describe("tag argument compatibility", () => {
     expect(await run(source)).toBe(await new Reference().parseAndRender(source));
   });
   it.each(["{{ - }}", "{% assign 42 = 5 %}"])("rejects malformed expression %s", async (source) => {
-    expect(await Effect.runPromise(Effect.isFailure(Liquid.parse(source)))).toBe(true);
+    expect(
+      await Effect.runPromise(Effect.isFailure(Liquid.parse(source, { dialect: "ruby" }))),
+    ).toBe(true);
   });
 });
 

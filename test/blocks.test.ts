@@ -51,7 +51,9 @@ echo 'ok'
     const read = result.occurrences[0]!;
     expect(source.slice(read.span.start, read.span.end)).toBe("user.name");
     const invalid = "{% liquid\n echo value |\n%}";
-    const failure = await Effect.runPromise(Effect.flip(Liquid.parse(invalid)));
+    const failure = await Effect.runPromise(
+      Effect.flip(Liquid.parse(invalid, { dialect: "ruby" })),
+    );
     expect(failure.span.start).toBe(invalid.indexOf("|") + 1);
   });
   it.each([
@@ -60,7 +62,9 @@ echo 'ok'
     '{% liquid\n echo "unfinished\n%}',
     "{% # first\n second %}",
   ])("rejects malformed block %s", async (source) => {
-    expect(await Effect.runPromise(Effect.isFailure(Liquid.parse(source)))).toBe(true);
+    expect(
+      await Effect.runPromise(Effect.isFailure(Liquid.parse(source, { dialect: "ruby" }))),
+    ).toBe(true);
   });
   it("enforces expansion token and nesting limits", async () => {
     const source = "{% liquid\necho 1\necho 2\necho 3\n%}";

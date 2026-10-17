@@ -39,3 +39,14 @@ it("checks JSON filter results as strings", async () => {
   );
   expect(result.diagnostics).toEqual([]);
 });
+
+it("coerces plain-data cycle groups with JavaScript array and record spelling", async () => {
+  const source = "{% cycle a: 'x', 'y' %}{% cycle b: 'x', 'y' %}";
+  for (const context of [
+    { a: {}, b: "[object Object]" },
+    { a: [1, [2, null], {}], b: "1,2,,[object Object]" },
+  ])
+    expect(await run(source, context)).toBe(
+      await new Reference().parseAndRender(source, structuredClone(context)),
+    );
+});

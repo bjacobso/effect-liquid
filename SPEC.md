@@ -76,7 +76,7 @@ Use a stateful lexer and a hand-written parser. Recognize delimiters, quotes, tr
 
 AST nodes are readonly tagged unions with spans. Expressions cover literals, variable access, ranges, conditions, and filter pipelines. A lookup stores a root and ordered property, numeric-index, or computed-expression segments. Nodes store syntax, not executable closures or engine instances. Preserve raw text needed for accurate diagnostics; lossless formatting and a separate concrete syntax tree are deferred.
 
-Parsing MUST consume the entire construct, reject malformed nesting and unknown tags, and return a located failure. Initial parsing is fail-fast. Later editor recovery returns an explicitly incomplete document that rendering rejects. Limit source length, token count, and nesting before allocations or recursion become unbounded.
+Ruby parsing MUST consume the entire construct, reject malformed nesting and unknown tags, and return a located failure. LiquidJS first uses the same bounded parser, then retries recognized malformed syntax under its pinned compatibility rules. Successful recovery sets Document.recovered; rendering accepts that document, while analysis/checking MUST report partial coverage and strict checking MUST fail certification. This compatibility recovery is distinct from deferred editor recovery. Both paths enforce source, token and nesting limits and reject unknown tags.
 
 ## 6. Runtime semantics
 
@@ -263,3 +263,5 @@ Ruby filter coercion includes symbols, HTML quoting, empty-pattern replacements,
 ### Ruby for-else slicing
 
 In Ruby, for-else selects else when offset/limit slicing leaves an empty sequence. LiquidJS tests emptiness before slicing. The shared loop-shape transfer takes the document dialect so analysis/checking visit the same possible bodies. A seed-42 differential fixture and static-flow test cover the zero-limit boundary.
+
+LiquidJS compatibility recovery covers the imported parser-error corpus, preserving native expression-stack evaluation, omitted operands, tag hash defaults and ignored suffixes. Sequence expressions retain all evaluated operands and their reads, returning the first stack value. Missing operands remain distinct from explicit nil and input null. Recovered documents propagate partial coverage through project traversal; literal dependency loading retains the document dialect. Ruby never enters the recovery path.

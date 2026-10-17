@@ -75,6 +75,8 @@ export function path(e: Expression): string {
           )
           .join("")
       );
+    case "Sequence":
+      return e.values.map(path).join(" ");
     case "Literal":
       return JSON.stringify(e.value);
     case "Special":
@@ -100,7 +102,9 @@ export const analyze = <E, R>(
     const bindings: Declaration[] = [];
     const dependencies: Dependency[] = [];
     const diagnostics: Diagnostic[] = [];
-    const reasons: string[] = [];
+    const reasons: string[] = document.recovered
+      ? ["Permissive syntax has partial static coverage"]
+      : [];
     let embeddedDepth = 0;
     let flowWork = 0;
     const declarations = new Map<string, Slot>();
@@ -156,6 +160,9 @@ export const analyze = <E, R>(
       control: readonly string[],
     ): void => {
       switch (e._tag) {
+        case "Sequence":
+          for (const value of e.values) expression(value, env, control);
+          break;
         case "Access":
           expression(e.receiver, env, control);
           for (const segment of e.segments) expression(segment, env, control);

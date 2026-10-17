@@ -183,6 +183,25 @@ function equal(a: Value | undefined, b: Value | undefined): boolean {
   if (isArray(a) && isArray(b)) return a.length === b.length && a.every((v, i) => equal(v, b[i]));
   return a === b;
 }
+function cycleGroup(value: Value | undefined): string {
+  return isArray(value)
+    ? value.map((v) => (v == null ? "" : cycleGroup(v))).join(",")
+    : value !== null && typeof value === "object"
+      ? "[object Object]"
+      : String(value);
+}
+function liquidjsEqual(
+  a: Expression,
+  b: Expression,
+  left: Value | undefined,
+  right: Value | undefined,
+): boolean {
+  // Omitted operands are undefined; explicit nil retains NullDrop equality.
+  const nil = (e: Expression) => e._tag === "Literal" && e.value === null && !e.missing;
+  if (a._tag === "Literal" && a.missing) return nil(b) || left === right;
+  if (b._tag === "Literal" && b.missing) return nil(a) || left === right;
+  return equal(left, right);
+}
 function* evaluateLenient<E, R>(
   expression: Expression,
   state: State,
@@ -202,10 +221,20 @@ function* evaluate<E, R>(
 ): Evaluation<Value | undefined, E, R> {
   yield* tick(state, expression.span);
   switch (expression._tag) {
+    case "Sequence": {
+      let first: Value | undefined;
+      for (let i = 0; i < expression.values.length; i++) {
+        const value = yield* evaluate(expression.values[i]!, state, registry);
+        if (i === 0) first = value;
+      }
+      return first;
+    }
     case "Literal":
-      return state.dialect === "ruby" && expression.numericKind === "float"
-        ? Ruby.float(expression.value as number)
-        : expression.value;
+      return expression.missing
+        ? undefined
+        : state.dialect === "ruby" && expression.numericKind === "float"
+          ? Ruby.float(expression.value as number)
+          : expression.value;
     case "Special":
       return null;
     case "Access": {
@@ -344,7 +373,7 @@ function* evaluate<E, R>(
                 : blank(right)
               : state.dialect === "ruby"
                 ? Ruby.equal(left, right)
-                : equal(left, right);
+                : liquidjsEqual(expression.left, expression.right, left, right);
       if (state.dialect === "ruby" && [">", "<", ">=", "<="].includes(expression.operator)) {
         const numeric = Ruby.isNumeric(left) && Ruby.isNumeric(right);
         if (!numeric && !(typeof left === "string" && typeof right === "string")) return false;
@@ -661,7 +690,7 @@ function* nodes<E, R>(
               : node.values.some((v) => v._tag !== "Literal")
                 ? `${node.span.sourceId}:${node.span.start}`
                 : node.key
-            : JSON.stringify([String(group), node.key]);
+            : JSON.stringify([cycleGroup(group), node.key]);
         const index = state.cycles.get(key) ?? 0;
         state.cycles.set(key, (index + 1) % node.values.length);
         const value = yield* ev(node.values[index]!);

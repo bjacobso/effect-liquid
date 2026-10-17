@@ -13,6 +13,8 @@ export function embeddedExpression(
   const visit = (expression: Expression): Expression => {
     const base = { ...expression, span: at };
     switch (expression._tag) {
+      case "Sequence":
+        return { ...base, _tag: "Sequence", values: expression.values.map(visit) };
       case "Access":
         return {
           ...base,
