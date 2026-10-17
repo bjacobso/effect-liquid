@@ -48,6 +48,7 @@ export interface ParseOptions extends WhitespaceOptions, DelimiterOptions {
 export const lex = (
   source: Source,
   options: ParseOptions = {},
+  recover = false,
 ): Effect.Effect<readonly Token[], ParseError> =>
   Effect.gen(function* () {
     const text = source.text;
@@ -152,7 +153,8 @@ export const lex = (
       const offset = i;
       const lineSyntax =
         kind === "tag" &&
-        ((options.dialect === "ruby" && commentStart !== undefined) ||
+        ((recover && options.dialect !== "ruby") ||
+          (options.dialect === "ruby" && commentStart !== undefined) ||
           /^\s*(?:liquid\b|#)/.test(text.slice(offset)));
       let quote = "";
       while (i < text.length) {
@@ -224,7 +226,7 @@ export const lex = (
         commentStart = open;
         commentName = tag === "doc" ? "doc" : "comment";
         trimBarrier = true;
-      } else if (kind === "tag" && tag === "raw") {
+      } else if (kind === "tag" && (tag === "raw" || (recover && /^raw\s/.test(tag)))) {
         const bodyStart = i;
         const escapeRegex = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
         const endPattern = new RegExp(

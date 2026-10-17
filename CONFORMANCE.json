@@ -3648,7 +3648,7 @@
     },
     {
       "feature": "duplicate named arguments",
-      "behavior": "Rejected rather than silently overwriting an earlier expression."
+      "behavior": "Ruby rejects duplicates; LiquidJS compatibility recovery overwrites earlier values like the pinned engine, with partial static coverage."
     },
     {
       "feature": "sentence filter non-array inputs",
@@ -3703,8 +3703,8 @@
       "ruby": "Recorded upstream Ruby expectation"
     },
     "crossEngine": "informational",
-    "phase": 5,
-    "engineBehaviorChanged": false,
+    "phase": 6,
+    "engineBehaviorChanged": true,
     "counts": {
       "ruby": {
         "pass": 5339,
@@ -3742,12 +3742,14 @@
       "Range identity and iteration",
       "Ruby strict/strict2 grammar and self references",
       "table rows, blank blocks, counters/cycles, parentloop, render aliases, duplicate case matches",
-      "Ruby standard filters, ISO strftime, doc/ifchanged/nested comments"
+      "Ruby standard filters, ISO strftime, doc/ifchanged/nested comments",
+      "LiquidJS permissive compatibility recovery; Ruby strict rejection"
     ],
     "tests": [
       "test/partial-bindings.test.ts",
       "test/whitespace-options.test.ts",
-      "test/typed-liquid.test.ts"
+      "test/typed-liquid.test.ts",
+      "test/permissive-parser.test.ts"
     ],
     "rubyOnlyFilters": [
       "h",
@@ -3773,6 +3775,15 @@
           "test/parser-compat.test.ts"
         ]
       }
+    },
+    "liquidjsRecovery": {
+      "status": "partial",
+      "recoveredParserErrorCases": 913,
+      "acceptedParserErrorCases": 977,
+      "coverage": "Recovered documents and their project traversal report partial coverage; strict checking cannot certify them.",
+      "tests": [
+        "test/permissive-parser.test.ts"
+      ]
     }
   }
 }

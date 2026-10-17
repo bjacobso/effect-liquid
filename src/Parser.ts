@@ -15,6 +15,7 @@ class Templates {
     readonly orderedFilterParameters = false,
     readonly dialect: Dialect = "liquidjs",
     readonly errorMode: "strict" | "strict2" = "strict",
+    readonly recover = false,
   ) {}
   tag() {
     const t = this.tokens[this.pos];
@@ -61,6 +62,7 @@ class Templates {
           this.orderedFilterParameters,
           this.dialect,
           this.errorMode,
+          this.recover,
         ).body([], depth + 1, loop);
         for (const node of nested) nodes.push(node);
         continue;
@@ -91,13 +93,14 @@ class Templates {
         this.groupedExpressions,
         this.dialect,
         this.errorMode === "strict2",
+        this.recover,
       );
       if (depth > this.maxDepth) e.fail("Template nesting limit exceeded");
       if (t.kind === "output") {
         const expression: Expression =
           this.dialect === "ruby" && !e.words.length
             ? { _tag: "Literal", value: null, span: t.span }
-            : e.pipeline();
+            : e.pipeline(this.recover);
         e.done();
         nodes.push({ _tag: "Output", expression, span: t.span });
         continue;
@@ -105,12 +108,24 @@ class Templates {
       const tag = e.name();
       const end = (name: string) => {
         const close = this.tokens[this.pos++];
-        if (!close || close.text.trim() !== name) e.fail(`Expected ${name}`);
+        if (
+          !close ||
+          (this.recover && ["endcapture", "endcase"].includes(name)
+            ? close.text.trim().split(/\s/)[0] !== name
+            : close.text.trim() !== name)
+        )
+          e.fail(`Expected ${name}`);
         return { ...t.span, end: close!.span.end };
       };
       if (tag === "increment" || tag === "decrement") {
         const start = e.words[e.pos]?.start ?? t.text.length;
-        const name = e.name();
+        const name =
+          this.recover &&
+          (!e.words[e.pos] ||
+            e.words[e.pos]!.quoted ||
+            !/^[\p{L}\p{M}\p{N}_?-]+$/u.test(e.words[e.pos]!.text))
+            ? ""
+            : e.name();
         e.done();
         nodes.push({
           _tag: "Counter",
@@ -120,6 +135,34 @@ class Templates {
           span: t.span,
         });
       } else if (tag === "cycle") {
+        if (this.recover) {
+          let group: Expression | undefined;
+          const values: Expression[] = [];
+          const can = () => {
+            const w = e.words[e.pos];
+            return (
+              !!w &&
+              (w.quoted || /^[\p{L}\p{M}\p{N}_?-]+$/u.test(w.text) || ["(", "["].includes(w.text))
+            );
+          };
+          if (can()) {
+            const first = e.atom();
+            if (e.take(":")) group = first;
+            else values.push(first);
+          }
+          while (e.pos < e.words.length) {
+            if (can()) values.push(e.atom());
+            while (e.pos < e.words.length && !e.peek(",")) e.pos++;
+            e.take(",");
+          }
+          if (!values.length) e.fail("Empty cycle candidates");
+          const key = values
+            .map((value) => t.text.slice(value.span.start - t.offset, value.span.end - t.offset))
+            .join(",");
+          nodes.push({ _tag: "Cycle", ...(group ? { group } : {}), values, key, span: t.span });
+          continue;
+        }
+
         const first = e.atom();
         const group = e.take(":") ? first : undefined;
         const values = group ? [e.atom()] : [first];
@@ -132,12 +175,12 @@ class Templates {
       } else if (tag === "assign") {
         const name = e.bindingName();
         e.need("=");
-        const expression = e.pipeline();
+        const expression = e.pipeline(this.recover);
         e.done();
         nodes.push({ _tag: "Assign", name, expression, span: t.span });
       } else if (tag === "echo") {
         if (e.pos < e.words.length) {
-          const expression = e.pipeline();
+          const expression = e.pipeline(this.recover);
           e.done();
           nodes.push({ _tag: "Output", expression, span: t.span });
         }
@@ -147,7 +190,7 @@ class Templates {
         const body = yield* this.body(["endcapture"], depth + 1, loop);
         nodes.push({ _tag: "Capture", name, body, span: end("endcapture") });
       } else if (tag === "if" || tag === "unless") {
-        let condition = e.condition();
+        let condition = this.recover ? e.pipeline(true) : e.condition();
         e.done();
         if (tag === "unless") condition = { _tag: "Not", value: condition, span: condition.span };
         const branches = [
@@ -160,9 +203,10 @@ class Templates {
             this.groupedExpressions,
             this.dialect,
             this.errorMode === "strict2",
+            this.recover,
           );
           b.need("elsif");
-          const condition = b.condition();
+          const condition = this.recover ? b.pipeline(true) : b.condition();
           b.done();
           branches.push({
             condition,
@@ -177,9 +221,10 @@ class Templates {
             this.groupedExpressions,
             this.dialect,
             this.errorMode === "strict2",
+            this.recover,
           );
           b.need("else");
-          b.done();
+          b.done(true);
           otherwise = yield* this.body(["elsif", "else", `end${tag}`], depth + 1, loop);
           if (tag === "unless") {
             while (this.tag() === "else" || this.tag() === "elsif") {
@@ -199,6 +244,14 @@ class Templates {
       } else if (tag === "for" || tag === "tablerow") {
         const name = e.name();
         e.need("in");
+        if (
+          this.recover &&
+          (!e.words[e.pos] ||
+            (!e.words[e.pos]!.quoted &&
+              !/^[\p{L}\p{M}\p{N}_?-]+$/u.test(e.words[e.pos]!.text) &&
+              !["(", "["].includes(e.words[e.pos]!.text)))
+        )
+          e.fail("Expected loop collection");
         const collection = e.atom();
         let limit: Expression | undefined;
         let offset: Expression | undefined;
@@ -211,12 +264,20 @@ class Templates {
         };
         while (e.pos < e.words.length) {
           if (e.take(",")) {
-            if (e.pos === e.words.length || e.peek(",")) e.fail("Unsupported loop option");
+            if (e.pos === e.words.length || e.peek(",")) {
+              if (this.recover) {
+                e.pos = e.words.length;
+                break;
+              }
+              e.fail("Unsupported loop option");
+            }
             continue;
           }
           if (tag === "tablerow" && e.take("cols")) {
             e.need(":");
-            cols = e.atom();
+            cols = this.recover
+              ? (e.optionalValue() ?? { _tag: "Literal", value: true, span: t.span })
+              : e.atom();
           } else if (tag === "for" && e.take("reversed")) {
             if (this.dialect === "ruby" && modifiers.length)
               e.fail("reversed must precede named options");
@@ -224,11 +285,15 @@ class Templates {
             recordModifier("reversed");
           } else if (e.take("limit")) {
             e.need(":");
-            limit = e.atom();
+            limit = this.recover
+              ? (e.optionalValue() ?? { _tag: "Literal", value: true, span: t.span })
+              : e.atom();
             recordModifier("limit");
           } else if (e.take("offset")) {
             e.need(":");
-            offset = e.atom();
+            offset = this.recover
+              ? (e.optionalValue() ?? { _tag: "Literal", value: true, span: t.span })
+              : e.atom();
             recordModifier("offset");
             if (
               offset._tag === "Lookup" &&
@@ -239,6 +304,17 @@ class Templates {
               offsetContinue = true;
               offset = undefined;
             } else offsetContinue = false;
+          } else if (this.recover) {
+            if (
+              !e.words[e.pos] ||
+              e.words[e.pos]!.quoted ||
+              !/^[\p{L}\p{M}\p{N}_?-]+$/u.test(e.words[e.pos]!.text)
+            ) {
+              e.pos = e.words.length;
+              break;
+            }
+            e.name();
+            if (e.take(":")) e.atom();
           } else e.fail("Unsupported loop option");
         }
         if (tag === "tablerow") {
@@ -265,9 +341,10 @@ class Templates {
             this.groupedExpressions,
             this.dialect,
             this.errorMode === "strict2",
+            this.recover,
           );
           b.need("else");
-          b.done();
+          b.done(true);
           otherwise = yield* this.body(["endfor"], depth + 1, true);
         }
         const collectionText = t.text.slice(
@@ -290,10 +367,10 @@ class Templates {
           span: end("endfor"),
         });
       } else if (tag === "case") {
-        const expression = e.atom();
+        const expression = this.recover ? e.pipeline(true) : e.atom();
         e.done();
         const leading = yield* this.body(["when", "else", "endcase"], depth + 1, loop);
-        if (leading.some((n) => n._tag !== "Text" || n.value.trim()))
+        if (!this.recover && leading.some((n) => n._tag !== "Text" || n.value.trim()))
           e.fail("Only whitespace is allowed before when");
         const branches: { values: Expression[]; body: Node[] }[] = [];
         if (this.dialect === "ruby") {
@@ -304,6 +381,7 @@ class Templates {
               this.groupedExpressions,
               this.dialect,
               this.errorMode === "strict2",
+              this.recover,
             );
             const name = b.name(),
               values: Expression[] = [];
@@ -327,10 +405,14 @@ class Templates {
             this.groupedExpressions,
             this.dialect,
             this.errorMode === "strict2",
+            this.recover,
           );
           b.need("when");
-          const values = [b.atom()];
-          while (b.take(",") || b.take("or")) values.push(b.atom());
+          const values = this.recover && b.pos === b.words.length ? [] : [b.atom()];
+          while (b.take(",") || b.take("or")) {
+            if (this.recover && b.pos === b.words.length) break;
+            values.push(b.atom());
+          }
           b.done();
           branches.push({
             values,
@@ -345,6 +427,7 @@ class Templates {
             this.groupedExpressions,
             this.dialect,
             this.errorMode === "strict2",
+            this.recover,
           );
           b.need("else");
           b.done();
@@ -378,7 +461,8 @@ class Templates {
           e.take(",");
           const name = e.name();
           e.need(":");
-          if (Object.hasOwn(args, name)) e.fail(`Duplicate layout argument: ${name}`);
+          if (!this.recover && Object.hasOwn(args, name))
+            e.fail(`Duplicate layout argument: ${name}`);
           args[name] = e.atom();
         }
         e.done();
@@ -391,6 +475,7 @@ class Templates {
           span: span(t.span.sourceId, t.span.start, body.at(-1)?.span.end ?? t.span.end),
         });
       } else if (tag === "render" || tag === "include") {
+        if (this.recover && !e.words[e.pos]) e.fail("Expected template name");
         const template = e.atom(false);
         if (
           this.dialect === "ruby" &&
@@ -403,17 +488,39 @@ class Templates {
         let forBinding: PartialBinding | undefined;
         while (e.pos < e.words.length) {
           e.take(",");
+          if (
+            this.recover &&
+            (!e.words[e.pos] ||
+              e.words[e.pos]!.quoted ||
+              !/^[\p{L}\p{M}\p{N}_?-]+$/u.test(e.words[e.pos]!.text))
+          ) {
+            e.pos = e.words.length;
+            break;
+          }
           const name = e.name();
           if (
             tag === "include" &&
             this.dialect === "liquidjs" &&
             !(name === "with" && !withBinding && Object.keys(args).length === 0 && !e.peek(":"))
           ) {
-            args[name] = e.take(":") ? e.atom() : { _tag: "Literal", value: true, span: t.span };
+            args[name] = e.take(":")
+              ? this.recover
+                ? (e.optionalValue() ?? { _tag: "Literal", value: true, span: t.span })
+                : e.atom()
+              : { _tag: "Literal", value: true, span: t.span };
           } else if ((name === "with" || name === "for") && !e.peek(":")) {
             let value: Expression;
+            if (this.recover && !e.words[e.pos]) {
+              args[name] = { _tag: "Literal", value: true, span: t.span };
+              continue;
+            }
             try {
-              value = e.atom();
+              const candidate = this.recover ? e.optionalValue() : e.atom();
+              if (!candidate) {
+                args[name] = { _tag: "Literal", value: true, span: t.span };
+                continue;
+              }
+              value = candidate;
               if (
                 tag === "include" &&
                 name === "for" &&
@@ -439,16 +546,23 @@ class Templates {
               (tag !== "include" || this.dialect === "ruby") && e.take("as") ? e.name() : undefined;
             const binding = { value, ...(alias ? { alias } : {}) };
             if (name === "with") {
-              if (withBinding) e.fail("Duplicate with binding");
+              if (!this.recover && withBinding) e.fail("Duplicate with binding");
               withBinding = binding;
             } else {
-              if (forBinding) e.fail("Duplicate for binding");
+              if (!this.recover && forBinding) e.fail("Duplicate for binding");
               forBinding = binding;
             }
           } else {
-            e.need(":");
-            if (Object.hasOwn(args, name)) e.fail(`Duplicate partial argument: ${name}`);
-            args[name] = e.atom();
+            if (this.recover && !e.take(":")) {
+              args[name] = { _tag: "Literal", value: true, span: t.span };
+              continue;
+            }
+            if (!this.recover) e.need(":");
+            if (!this.recover && Object.hasOwn(args, name))
+              e.fail(`Duplicate partial argument: ${name}`);
+            args[name] = this.recover
+              ? (e.optionalValue() ?? { _tag: "Literal", value: true, span: t.span })
+              : e.atom();
           }
         }
         e.done();
@@ -468,13 +582,14 @@ class Templates {
     return nodes;
   }
 }
-export const parse = (
+const parseSyntax = (
   input: string | Source,
   options: ParseOptions = {},
+  recover = false,
 ): Effect.Effect<Document, ParseError> =>
   Effect.gen(function* () {
     const source = typeof input === "string" ? make(input) : input;
-    const tokens = yield* lex(source, options);
+    const tokens = yield* lex(source, options, recover);
     const iterator = new Templates(
       tokens,
       Math.min(options.maxDepth ?? 128, 256),
@@ -485,6 +600,7 @@ export const parse = (
       options.orderedFilterParameters,
       options.dialect,
       options.errorMode,
+      recover,
     ).body();
     let result: IteratorResult<void, Node[]>;
     do {
@@ -548,6 +664,7 @@ export const parse = (
     const body = options.dialect === "ruby" ? suppress(result.value) : result.value;
     return {
       _tag: "Document" as const,
+      ...(recover ? { recovered: true as const } : {}),
       dialect: options.dialect ?? "liquidjs",
       ...(options.errorMode ? { errorMode: options.errorMode } : {}),
       ...(options.parseLimit === undefined ? {} : { parseLimit: options.parseLimit }),
@@ -576,3 +693,15 @@ export const parse = (
     };
   }).pipe(Effect.withSpan("liquid.parse"));
 export type { ParseOptions } from "./Lexer.js";
+
+export const parse = (
+  input: string | Source,
+  options: ParseOptions = {},
+): Effect.Effect<Document, ParseError> =>
+  parseSyntax(input, options).pipe(
+    Effect.catchAll((error) =>
+      options.dialect === "ruby" || /limit|Unsupported tag/.test(error.message)
+        ? Effect.fail(error)
+        : parseSyntax(input, options, true),
+    ),
+  );

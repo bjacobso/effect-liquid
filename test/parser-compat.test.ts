@@ -23,7 +23,9 @@ describe("bare bracket context lookup", () => {
   });
   it("classifies malformed raw and comment tags as syntax errors", async () => {
     for (const source of ["{% raw foo %}content", "{% comment foo %}content"]) {
-      const result = await Effect.runPromise(Effect.either(Liquid.parse(source)));
+      const result = await Effect.runPromise(
+        Effect.either(Liquid.parse(source, { dialect: "ruby" })),
+      );
       expect(Either.isLeft(result) && result.left._tag).toBe("ParseError");
       if (Either.isLeft(result)) expect(result.left.message).toContain("Invalid");
     }
@@ -63,14 +65,14 @@ it.each(["else", "elsif true"])("ignores later unless %s sections", async (extra
 });
 
 // These Shopify liquid-spec parser_errors fixtures require rejection. LiquidJS 10.29.0
-// accepts them, but matching that permissiveness would make invalid templates pass validation.
+// accepts them; the Ruby profile retains strict rejection and recovery has partial static coverage.
 it.each([
   ["assign", "{% assign 42 = x %}"],
   ["if", "{% if x == %}{% endif %}"],
   ["cycle", "{% cycle x , , > %}"],
 ] as const)("rejects malformed %s syntax that LiquidJS parses", async (_tag, source) => {
   expect(() => new Reference().parse(source)).not.toThrow();
-  const result = await Effect.runPromise(Effect.either(Liquid.parse(source)));
+  const result = await Effect.runPromise(Effect.either(Liquid.parse(source, { dialect: "ruby" })));
   expect(Either.isLeft(result)).toBe(true);
   if (Either.isLeft(result)) expect(result.left._tag).toBe("ParseError");
 });

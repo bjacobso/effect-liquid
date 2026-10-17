@@ -52,7 +52,9 @@ it("keeps the syntax opt-in and rejects malformed or excessive nesting with type
     await expect(Effect.runPromise(Liquid.parse(source))).rejects.toThrow("Expected '..'");
   expect(await Effect.runPromise(Liquid.parse("{{ (1..3) }}"))).toBeDefined();
   for (const source of ["{{ () }}", "{{ (x }}", "{{ (x)) }}", "{{ (1..) }}"])
-    await expect(Effect.runPromise(parse(source))).rejects.toThrow();
+    await expect(
+      Effect.runPromise(Liquid.parse(source, { groupedExpressions: true, dialect: "ruby" })),
+    ).rejects.toThrow();
   await expect(
     Effect.runPromise(
       Liquid.parse(`{{ ${"(".repeat(30)}true${")".repeat(30)} }}`, {

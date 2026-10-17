@@ -22,6 +22,7 @@ export class Expressions {
     readonly groupedExpressions = false,
     readonly dialect: "ruby" | "liquidjs" = "liquidjs",
     readonly strict2 = false,
+    readonly recover = false,
   ) {
     const s = token.text;
     let i = 0;
@@ -39,7 +40,11 @@ export class Expressions {
           if (s[i] === "\\" && (s[i + 1] === ch || s[i + 1] === "\\")) i++;
           value += s[i++]!;
         }
-        if (i === s.length) this.fail("Unclosed string", start);
+        if (i === s.length) {
+          if (!this.recover) this.fail("Unclosed string", start);
+          value = value.trimEnd().slice(0, -1);
+          i--;
+        }
         i++;
         this.words.push({ text: value, start, end: i, quoted: true });
         continue;
@@ -57,7 +62,10 @@ export class Expressions {
       }
       const number = /^-?\d+(?:\.(?!\.)\d+)?/.exec(s.slice(i));
       if (number && !s[i + number[0].length]?.match(/[\p{L}\p{M}\p{N}_-]/u)) i += number[0].length;
-      else while (i < s.length && !/[\s[\]().,:|=<>]/.test(s[i]!)) i++;
+      else if (this.recover) {
+        const word = /^[\p{L}\p{M}\p{N}_?-]+/u.exec(s.slice(i));
+        i += word ? word[0].length : 1;
+      } else while (i < s.length && !/[\s[\]().,:|=<>]/.test(s[i]!)) i++;
       if (i === start) this.fail("Unexpected character", i);
       this.words.push({ text: s.slice(start, i), start, end: i });
     }
@@ -87,10 +95,12 @@ export class Expressions {
   }
   name() {
     const w = this.words[this.pos++];
+    if (this.recover && w && !w.quoted && /^[\p{L}\p{M}\p{N}_?-]+$/u.test(w.text)) return w.text;
     if (!w || w.quoted || !identifier.test(w.text)) this.fail("Expected identifier", w?.start);
     return w.text;
   }
   bindingName() {
+    if (this.recover) return this.name();
     const w = this.words[this.pos++];
     if (
       !w ||
@@ -100,7 +110,11 @@ export class Expressions {
       this.fail("Expected identifier", w?.start);
     return w.text;
   }
-  done() {
+  done(strict = false) {
+    if (this.recover && !strict) {
+      this.pos = this.words.length;
+      return;
+    }
     if (this.pos !== this.words.length) this.fail(`Unexpected '${this.words[this.pos]!.text}'`);
   }
   position(start: number) {
@@ -115,10 +129,15 @@ export class Expressions {
     let attached = true;
     while (this.peek(".") || this.peek("[")) {
       // Whitespace ends the receiver path; still validate ignored suffix syntax.
+      if (this.recover && this.words[this.pos - 1]?.end !== this.words[this.pos]?.start) break;
       attached &&=
         this.dialect === "ruby" || this.words[this.pos - 1]?.end === this.words[this.pos]?.start;
       if (this.take(".")) {
         const key = this.words[this.pos++];
+        if (this.recover && (!key || key.quoted || !property.test(key.text))) {
+          if (key) this.pos--;
+          break;
+        }
         if (
           !key ||
           key.quoted ||
@@ -135,17 +154,42 @@ export class Expressions {
           });
       } else {
         this.need("[");
-        const key = this.atom();
+        const key: Expression =
+          this.recover && (this.peek("]") || this.peek(",") || this.peek(")"))
+            ? { _tag: "Literal", value: "", span: this.position(this.words[this.pos]!.start) }
+            : this.atom();
         if (attached) segments.push(key);
+        if (this.recover) {
+          while (this.pos < this.words.length && !this.peek("]")) this.pos++;
+        }
         this.need("]");
       }
     }
     return segments;
   }
+  optionalValue(): Expression | undefined {
+    const word = this.words[this.pos];
+    if (!word) return undefined;
+    if (this.peek(".")) {
+      this.pos++;
+      return undefined;
+    }
+    return word.quoted ||
+      /^[\p{L}\p{M}\p{N}_?-]+$/u.test(word.text) ||
+      ["(", "["].includes(word.text)
+      ? this.atom()
+      : undefined;
+  }
   atom(literalAccess = true): Expression {
     if (++this.depth > this.maxDepth) this.fail("Expression nesting limit exceeded");
     const w = this.words[this.pos++];
-    if (!w) this.fail("Expected expression");
+    if (!w) {
+      if (this.recover) {
+        this.depth--;
+        return { _tag: "Literal", value: null, span: this.position(this.token.text.length) };
+      }
+      this.fail("Expected expression");
+    }
     let result: Expression;
     if (w.quoted) result = { _tag: "Literal", value: w.text, span: this.position(w.start) };
     else if (/^-?\d+(?:\.\d+)?$/.test(w.text)) {
@@ -179,7 +223,14 @@ export class Expressions {
     } else if (w.text === "[") {
       if (this.dialect === "ruby" && this.strict2)
         this.fail("Bare bracket access is not allowed; use self");
-      const segments: Expression[] = [this.atom()];
+      const segments: Expression[] = [
+        this.recover && (this.peek(",") || this.peek("]"))
+          ? { _tag: "Literal", value: "", span: this.position(w.start) }
+          : this.atom(),
+      ];
+      if (this.recover) {
+        while (this.pos < this.words.length && !this.peek("]")) this.pos++;
+      }
       if (
         this.dialect === "ruby" &&
         segments[0]?._tag === "Literal" &&
@@ -192,7 +243,9 @@ export class Expressions {
     } else {
       if (this.dialect === "ruby" && w.text === "contains")
         this.fail("Reserved operator cannot be a variable", w.start);
-      if (!variable.test(w.text)) this.fail("Expected variable or literal", w.start);
+      if (!variable.test(w.text) && !(this.recover && /^[\p{L}\p{M}\p{N}_?-]+$/u.test(w.text))) {
+        this.fail("Expected variable or literal", w.start);
+      }
       const segments = this.suffix();
       result = { _tag: "Lookup", root: w.text, segments, span: this.position(w.start) };
     }
@@ -210,6 +263,18 @@ export class Expressions {
   condition(): Expression {
     if (++this.depth > this.maxDepth) this.fail("Expression nesting limit exceeded");
     let left: Expression;
+    if (this.recover && (this.peek("and") || this.peek("or"))) {
+      const op = this.words[this.pos++]!.text;
+      const right = this.condition();
+      this.depth--;
+      return {
+        _tag: "Binary",
+        operator: op,
+        left: { _tag: "Literal", value: null, span: right.span },
+        right,
+        span: right.span,
+      };
+    }
     if (this.take("not")) {
       const start = this.words[this.pos - 1]!.start;
       left = { _tag: "Not", value: this.comparison(), span: this.position(start) };
@@ -223,28 +288,129 @@ export class Expressions {
     return left;
   }
   comparison(): Expression {
-    let left = this.atom();
-    if (["==", "!=", ">", "<", ">=", "<=", "contains"].some((x) => this.peek(x))) {
+    let left: Expression =
+      this.recover && ["==", "!=", ">", "<", ">=", "<=", "contains"].some((op) => this.peek(op))
+        ? { _tag: "Literal", value: null, span: this.position(this.words[this.pos]?.start ?? 0) }
+        : this.atom();
+    while (["==", "!=", ">", "<", ">=", "<=", "contains"].some((x) => this.peek(x))) {
       const operator = this.words[this.pos++]!.text;
-      const right = this.atom();
+      const right = this.recover
+        ? (this.optionalValue() ?? {
+            _tag: "Literal" as const,
+            value: null,
+            span: this.position(this.token.text.length),
+          })
+        : this.atom();
       left = { _tag: "Binary", operator, left, right, span: { ...left.span, end: right.span.end } };
+      if (!this.recover) break;
     }
     return left;
   }
+  // LiquidJS can leave several values on its expression stack. Evaluate each
+  // stack result, returning the first, while retaining reads for static coverage.
+  looseExpression(): Expression {
+    const values: Expression[] = [],
+      operators: string[] = [];
+    const start = this.words[this.pos]?.start ?? this.token.text.length;
+    const priority = (op: string) => (op === "not" ? 3 : op === "and" || op === "or" ? 1 : 2);
+    const nil = (): Expression => ({
+      _tag: "Literal",
+      value: null,
+      missing: true,
+      span: this.position(start),
+    });
+    const apply = () => {
+      const op = operators.pop()!,
+        right = values.pop() ?? nil();
+      if (op === "not") values.push({ _tag: "Not", value: right, span: this.position(start) });
+      else
+        values.push({
+          _tag: "Binary",
+          operator: op,
+          left: values.pop() ?? nil(),
+          right,
+          span: this.position(start),
+        });
+    };
+    let work = 0;
+    while (this.pos < this.words.length && !this.peek("|") && !this.peek(")")) {
+      if (++work > this.maxDepth) this.fail("Expression nesting limit exceeded");
+      const word = this.words[this.pos]!;
+      if (
+        !word.quoted &&
+        ["not", "and", "or", "contains", "==", "!=", ">", "<", ">=", "<="].includes(word.text)
+      ) {
+        this.pos++;
+        while (operators.length && priority(operators.at(-1)!) > priority(word.text)) apply();
+        operators.push(word.text);
+      } else {
+        const before = this.pos,
+          value = this.optionalValue();
+        if (value) values.push(value);
+        else if (this.pos === before) break;
+      }
+    }
+    if (!values.length && !operators.length) this.fail("Empty value expression");
+    while (operators.length) apply();
+    return values.length === 1
+      ? values[0]!
+      : { _tag: "Sequence", values, span: this.position(start) };
+  }
   pipeline(condition = false): Expression {
-    let input = condition ? this.condition() : this.atom();
+    if (this.recover && this.pos >= this.words.length) this.fail("Empty value expression");
+    let input = this.recover ? this.looseExpression() : condition ? this.condition() : this.atom();
+    if (this.recover && this.pos < this.words.length && !this.peek("|") && !this.peek(")"))
+      this.fail("Unexpected expression suffix");
     let filters = 0;
     while (this.take("|")) {
       if (++filters > this.maxDepth) this.fail("Filter nesting limit exceeded");
+      if (this.recover && this.pos === this.words.length) break;
       const name = this.name();
+      if (
+        this.recover &&
+        this.pos < this.words.length &&
+        !this.peek(":") &&
+        !this.peek("|") &&
+        !this.peek(")")
+      )
+        this.fail("Expected colon after filter name");
       const args: Expression[] = [];
       const named: Record<string, Expression> = Object.create(null);
-      if (this.take(":") && this.pos < this.words.length && !this.peek("|"))
+      if (this.recover && this.take(":")) {
+        const optional = (): Expression | undefined => {
+          const w = this.words[this.pos];
+          if (!w) return undefined;
+          if (this.peek(".")) {
+            this.pos++;
+            return undefined;
+          }
+          return w.quoted || /^[\p{L}\p{M}\p{N}_?-]+$/u.test(w.text) || ["(", "["].includes(w.text)
+            ? this.atom()
+            : undefined;
+        };
         do {
           if (this.words[this.pos + 1]?.text === ":" && !this.words[this.pos]?.quoted) {
             const key = this.name();
             this.need(":");
-            if (Object.hasOwn(named, key)) this.fail(`Duplicate filter argument: ${key}`);
+            named[key] = optional() ?? {
+              _tag: "Literal",
+              value: null,
+              span: this.position(this.token.text.length),
+            };
+          } else {
+            const value = optional();
+            if (value) args.push(value);
+          }
+          if (this.pos < this.words.length && !this.peek(",") && !this.peek("|") && !this.peek(")"))
+            this.fail("Unexpected filter argument suffix");
+        } while (this.take(",") && this.pos < this.words.length && !this.peek("|"));
+      } else if (this.take(":") && this.pos < this.words.length && !this.peek("|"))
+        do {
+          if (this.words[this.pos + 1]?.text === ":" && !this.words[this.pos]?.quoted) {
+            const key = this.name();
+            this.need(":");
+            if (!this.recover && Object.hasOwn(named, key))
+              this.fail(`Duplicate filter argument: ${key}`);
             named[key] = this.atom();
           } else args.push(this.atom());
         } while (this.take(",") && this.pos < this.words.length && !this.peek("|"));

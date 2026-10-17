@@ -119,7 +119,9 @@ describe("partial bindings", () => {
     '{% render "p" for items as %}',
     '{% render "p" with one with two %}',
   ])("rejects malformed or unsupported binding %s", async (source) => {
-    expect(await Effect.runPromise(Effect.isFailure(Liquid.parse(source)))).toBe(true);
+    expect(
+      await Effect.runPromise(Effect.isFailure(Liquid.parse(source, { dialect: "ruby" }))),
+    ).toBe(true);
   });
 });
 

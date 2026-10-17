@@ -43,6 +43,8 @@ Pass `{ dialect: "ruby" }` to `Liquid.parse` for Ruby (Shopify) semantics. The d
 
 Ruby includes iterate `for` collections and honor `with/as` aliases. LiquidJS includes render once and interpret bare `for/as` words as boolean named arguments. Ruby accepts hyphen-marked endraw openers and closes only complete endraw tags; LiquidJS rejects marked openers and closes at its earlier endraw candidate. Both preserve literal raw body whitespace. Ruby also selects its value model, numeric coercion/division, string/hash inspection, table-row markup, blank-block suppression, counters/cycles, repeated case matches, parent loops, render aliases, self references, strftime and standard filter behavior. The pinned Shopify gem confirms the Ruby corpus in a separate process; `pnpm conformance:fuzz --seed 42 --cases 100` runs bounded differential generation outside the default checks. Ruby parsing is strict by default; `errorMode: "strict2"` additionally rejects bare brackets. Host callback Drops and Ruby lax parsing remain deferred.
 
+LiquidJS parsing recovers the malformed syntax accepted by the pinned engine, including optional hash values, numeric binding names, incomplete receiver paths and expression stacks. Recovered documents render normally but have `recovered: true`; analysis/checking report partial coverage, and strict checking cannot certify them. Ruby uses the strict parser without this recovery. Source/token/depth limits and unknown-tag rejection remain in force.
+
 Repeated `else` and `elsif` after `else` are syntax errors for `if`. LiquidJS accepts the same syntax in `unless` and ignores later sections; this parser follows that behavior.
 
 Pass `{ groupedExpressions: true }` to `Liquid.parse` to enable parenthesized conditions and filter pipelines, such as `{% if (name | upcase) == "BAR" %}` and `{% for i in (1..(items | size)) %}`. Grouping is disabled by default; ordinary ranges remain supported. The document records the enabled syntax so rendering, loaded partials, embedded filter predicates, project analysis, and typechecking use the same rules. Ungrouped `and`/`or` conditions retain Liquid's right-associative evaluation.
@@ -76,7 +78,7 @@ Collection filters include `group_by`, `sort`, `sort_natural`, `map`, `sum`, `co
 %}
 ```
 
-Raw blocks inside `liquid` and permissive malformed-syntax compatibility remain gaps. Ruby table rows consume their own break/continue; LiquidJS retains its pinned propagation behavior. Ruby adds `doc`, nested comments and `ifchanged`.
+Raw blocks inside `liquid` remain a gap. Ruby table rows consume their own break/continue; LiquidJS retains its pinned propagation behavior. Ruby adds `doc`, nested comments and `ifchanged`.
 
 String filters include first/last replacement and removal, custom strip character sets, `truncate`, `truncatewords`, `strip_newlines`, `newline_to_br`, `squish`, `normalize_whitespace`, `number_of_words`, `strip_html`, `escape_once`, and `xml_escape`. Replacement strings are literal; CJK word counting is supported. Truncation and entity handling follow the pinned LiquidJS behavior, including documented conformance differences from Ruby expectations. `assign` preserves missing values; missing truncation counts and suffixes use the filter defaults, while explicit nil remains distinct.
 

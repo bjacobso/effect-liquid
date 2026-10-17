@@ -1,6 +1,6 @@
 # Parser compatibility gaps
 
-The pinned LiquidJS parser and the Ruby expectations in `liquid-spec` disagree on many malformed templates. The harness keeps both outcomes visible. A parse-only fixture can match LiquidJS and still remain a known gap against its Ruby expectation.
+The pinned LiquidJS parser and the Ruby expectations in `liquid-spec` disagree on many malformed templates. The harness keeps both outcomes visible. Each fixture is now scored only in its authority dialect; cross-engine disagreements are informational. Historical counts below describe the earlier dual-agreement harness.
 
 The pre-roadmap report had 923 mismatches from `specs/parser_errors`: in 921, LiquidJS parses and effect-liquid rejects with a syntax error; in two comment cases, LiquidJS rejected and effect-liquid parsed. The largest parse-versus-error groups are include (123), render (109), cycle (92), unless (81), if (80), assign (66), echo (63), for (62), table row (61), and output variables (55). These counts describe parser permissiveness, not necessarily valid render behavior.
 
@@ -15,3 +15,5 @@ The remaining-mismatch audit preserves all 920 current parse-only intentional re
 Phase 2 makes these owner choices dialect-specific: Ruby keeps its include/raw behavior and the default LiquidJS profile uses the pinned include/hash and raw scanning rules. Conformance executes each fixture in its authority dialect; cross-engine parser disagreements no longer lower the Ruby score. Permissive LiquidJS grammar remains a separate Phase 6.
 
 Phase 4 resolves the remaining strict Ruby expression errors (numeric dotted fields, reserved contains roots, bare numeric roots and strict2 bare brackets), nested comments and doc grammar. Ruby parsing stays strict; two imported explicitly-lax assertions remain recorded gaps. LiquidJS recovery is reserved for the optional final phase.
+
+Phase 6 implements bounded LiquidJS recovery for all 913 current formerly-rejected/native-accepted parser-error cases. Across the full imported parser-error corpus, acceptance matches LiquidJS exactly (977 accepted, including 64 already supported). Recovered rendering matches output or failure across eight input shapes. Ruby strict2 rejects every case in that corpus. Recovery is recorded on the document; analysis and checking mark it partial, including loaded partials, and strict checking cannot certify it. Unknown tags, resource limits and native rejection boundaries stay rejected. Ruby lax parsing remains deferred independently.

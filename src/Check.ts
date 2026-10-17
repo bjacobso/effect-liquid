@@ -120,6 +120,10 @@ export const check = <E = never, R = never>(
       );
     const inferRaw = (e: Expression, env: Binding.Flow<T.Type>, guard = false): T.Type => {
       switch (e._tag) {
+        case "Sequence": {
+          const values = e.values.map((v) => infer(v, env));
+          return values[0] ?? T.nil;
+        }
         case "Access": {
           let type = infer(e.receiver, env);
           for (const segment of e.segments)
@@ -702,6 +706,12 @@ export const check = <E = never, R = never>(
       }
       return { normal: env, breaks, continues };
     };
+    if (document.recovered)
+      unknown("Permissive syntax has partial static coverage", {
+        sourceId: document.source.id,
+        start: 0,
+        end: document.source.text.length,
+      });
     body(document.body, Binding.make());
     const sorted = [
       ...new Map(diagnostics.map((d) => [`${d.code}:${d.span.start}:${d.message}`, d])).values(),
