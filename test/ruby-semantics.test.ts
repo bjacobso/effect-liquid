@@ -141,3 +141,11 @@ it("distinguishes command properties from Ruby bracket lookups", async () => {
   ).toBe("1//h/5/8");
   expect(await run("{% include 'p' a:1,b:a %}", {}, { p: "{{a}}-{{b}}" })).toBe("1-1");
 });
+
+it("selects Ruby for-else after slicing to an empty sequence and shares that flow with checking", async () => {
+  const source = "{% for x in (1..3) limit:0 %}{{body}}{% else %}{{fallback}}{% endfor %}";
+  expect(await run(source, { fallback: "yes" })).toBe("yes");
+  const d = await Effect.runPromise(L.parse(source, { dialect: "ruby" }));
+  expect((await Effect.runPromise(L.analyze(d))).externalRoots).toEqual(["fallback"]);
+  expect((await Effect.runPromise(L.check(d, T.record({ fallback: T.string })))).passed).toBe(true);
+});

@@ -55,6 +55,13 @@ if (engineName === "liquidjs") {
       return failure(e, "render");
     }
   };
+} else if (engineName === "ruby") {
+  const { rubyEngine } = await import("./ruby-bridge.mjs");
+  const run = await rubyEngine();
+  execute = async (fixture) => {
+    const result = await run(fixture);
+    return result.kind === "error" ? failure(result, result.phase) : result;
+  };
 } else if (engineName === "effect-liquid") {
   const { Effect, Layer } = await import("effect");
   const Liquid = await import("../../dist/Liquid.js");
@@ -190,7 +197,19 @@ if (engineName === "liquidjs") {
     return result._tag === "Left" ? failure(result.left, "render") : output(result.right);
   };
 } else throw new Error(`Unknown engine: ${engineName}`);
+const SystemDate = Date;
 process.on("message", async (message) => {
+  if (message.fixture.clock) {
+    const instant = SystemDate.parse(message.fixture.clock);
+    globalThis.Date = class extends SystemDate {
+      constructor(...args) {
+        super(...(args.length ? args : [instant]));
+      }
+      static now() {
+        return instant;
+      }
+    };
+  }
   try {
     const result = await execute(message.fixture);
     if (result.kind === "output") {
@@ -209,6 +228,8 @@ process.on("message", async (message) => {
       id: message.id,
       result: { kind: "worker-error", message: String(error).slice(0, 2000) },
     });
+  } finally {
+    globalThis.Date = SystemDate;
   }
 });
 process.send?.({ ready: true });

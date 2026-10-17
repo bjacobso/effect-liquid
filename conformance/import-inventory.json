@@ -2684,8 +2684,8 @@
     "shopify-liquid:imported": 563,
     "shopify-liquid:excluded": 313,
     "shopify-liquid:catalogued": 43,
-    "liquid-spec:imported": 4369,
-    "liquid-spec:excluded": 3510
+    "liquid-spec:imported": 4372,
+    "liquid-spec:excluded": 3507
   },
   "entries": [
     {
@@ -4063,9 +4063,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/basics/date-filters.yml#L58",
         "license": "MIT"
       },
-      "status": "excluded",
-      "name": "date_now_keyword",
-      "reason": "Requires a shared fixed clock or random-source adapter"
+      "status": "imported",
+      "name": "date_now_keyword"
     },
     {
       "id": "liquid-spec:specs/basics/date-filters.yml:582:0",
@@ -4129,9 +4128,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/basics/date-filters.yml#L614",
         "license": "MIT"
       },
-      "status": "excluded",
-      "name": "date_now_with_complex_format",
-      "reason": "Requires a shared fixed clock or random-source adapter"
+      "status": "imported",
+      "name": "date_now_with_complex_format"
     },
     {
       "id": "liquid-spec:specs/basics/date-filters.yml:623:0",
@@ -4234,9 +4232,8 @@
         "url": "https://github.com/Shopify/liquid-spec/blob/8a308cb199a7d4e635ae399797560875732c8839/specs/basics/date-filters.yml#L68",
         "license": "MIT"
       },
-      "status": "excluded",
-      "name": "date_today_keyword",
-      "reason": "Requires a shared fixed clock or random-source adapter"
+      "status": "imported",
+      "name": "date_today_keyword"
     },
     {
       "id": "liquid-spec:specs/basics/date-filters.yml:685:0",

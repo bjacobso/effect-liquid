@@ -116,7 +116,9 @@
     "conformance:strict": "pnpm conformance --strict",
     "conformance:baseline": "pnpm conformance --update-baseline",
     "conformance:fetch": "node scripts/conformance/fetch.mjs",
-    "conformance:import": "node scripts/conformance/import.mjs"
+    "conformance:import": "node scripts/conformance/import.mjs",
+    "conformance:ruby:setup": "node scripts/conformance/setup-ruby.mjs",
+    "conformance:fuzz": "pnpm build && node scripts/conformance/fuzz.mjs"
   },
   "dependencies": {
     "@effect/platform": "0.97.2"

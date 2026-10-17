@@ -122,9 +122,10 @@ export function expectation(result, expected) {
   if (!expected) return "not-specified";
   if (expected.kind === "output")
     return result.kind === "output" &&
-      result.sha256 === hash(Buffer.from(expected.output, "utf16le"))
+      result.sha256 === (expected.sha256 ?? hash(Buffer.from(expected.output, "utf16le")))
       ? "match"
       : "different";
+  if (expected.kind === "parsed") return result.kind === "parsed" ? "match" : "different";
   if (expected.kind === "error")
     return result.kind === "error" && (!expected.phase || result.phase === expected.phase)
       ? "match"

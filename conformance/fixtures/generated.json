@@ -1,0 +1,44 @@
+[
+  {
+    "id": "generated:ruby:e047dfcfeace2aa2",
+    "authority": "ruby",
+    "source": "{% for item in xs limit:0 %}{{item}}/{{ ' c ' | truncate: 4 | plus: 2 }}{% else %}empty{% endfor %}{{x}}",
+    "context": {
+      "x": 0,
+      "y": {
+        "$liquid": {
+          "type": "float",
+          "value": "2.0"
+        }
+      },
+      "xs": [
+        3,
+        3,
+        1,
+        2
+      ]
+    },
+    "globals": {
+      "shop": "S"
+    },
+    "templates": {
+      "p": "{{item}}/{{shop}};"
+    },
+    "options": {
+      "strictFilters": true
+    },
+    "operation": "render",
+    "origin": {
+      "repository": "local",
+      "path": "scripts/conformance/generate.mjs"
+    },
+    "generator": {
+      "seed": 42,
+      "index": 77
+    },
+    "expected": {
+      "kind": "output",
+      "output": "empty0"
+    }
+  }
+]
